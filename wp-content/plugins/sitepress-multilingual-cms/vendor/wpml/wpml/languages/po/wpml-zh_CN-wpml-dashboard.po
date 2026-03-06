@@ -1,0 +1,1513 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-18T16:02:11+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: wpml\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Untranslated strings that I encounter on front-end while logged in"
+msgstr "登录后在前端遇到的未翻译字符串"
+
+msgid "Untranslated strings that all front-end users encounter"
+msgstr "所有前端用户遇到的未翻译字符串"
+
+msgid "Disable auto-registration of strings"
+msgstr "禁用字符串自动注册"
+
+msgid "Plugins"
+msgstr "插件"
+
+msgid "Themes"
+msgstr "主题"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "Other"
+msgstr "其他"
+
+msgid "We cancelled %1$d of %2$d items, but %3$d failed. Please reload the page and try again."
+msgstr "我们取消了 %2$d 个项目中的 %1$d 个，但 %3$d 失败了。请重新加载页面再试。"
+
+msgid "We resent %1$d of %2$d items, but %3$d failed. Please reload the page and try again."
+msgstr "我们重新发送了 %2$d 个项目中的 %1$d 个，但 %3$d 失败了。请重新加载页面再试。"
+
+msgid "Error in fetching default translation batch name"
+msgstr "获取默认翻译批次名称时出错"
+
+msgid "Error in fetching translation editor type."
+msgstr "获取翻译编辑器类型时出错。"
+
+msgid "Error in fetching untranslated types count"
+msgstr "获取未翻译类型计数时出错"
+
+msgid "Error in fetching remote translation service data."
+msgstr "获取远程翻译服务数据时出错。"
+
+msgid "Validation failed"
+msgstr "验证失败"
+
+msgid "Translation jobs couldn’t be canceled"
+msgstr "翻译作业无法取消"
+
+msgid "Reload the page and try again."
+msgstr "重新加载页面并重试。"
+
+msgid "All unfinished translation jobs were canceled"
+msgstr "所有未完成的翻译作业均已取消"
+
+msgid "Please wait until download finishes"
+msgstr "请等待下载完成"
+
+msgid "You need to wait 5 minutes after the last check"
+msgstr "上次检查后您需要等待 5 分钟"
+
+msgid "Check status and get translations"
+msgstr "检查状态并获取翻译"
+
+msgid "Status: "
+msgstr "状态： "
+
+msgid "Downloaded jobs: "
+msgstr "已下载作业： "
+
+msgid "Cancelled jobs: "
+msgstr "已取消作业： "
+
+msgid "none of your translation jobs have been completed"
+msgstr "您的翻译作业均未完成"
+
+msgid "Checking translation jobs status. Please don't close this page!"
+msgstr "正在检查翻译作业状态。请勿关闭此页面！"
+
+msgid " have been sent to remote translators"
+msgstr " 已发送给远程翻译人员"
+
+msgid " has been sent to remote translators"
+msgstr " 已发送给远程翻译人员"
+
+msgid "Last check: Never"
+msgstr "上次检查：从不"
+
+msgid "Filtering is disabled to show all selected items. "
+msgstr "筛选已禁用，以显示所有选定项目。 "
+
+msgid "Apply filters"
+msgstr "应用筛选器"
+
+msgid "%d item selected"
+msgid_plural "%d items selected"
+msgstr[0] "已选择 %d 个项目"
+
+msgid "(%d words to translate)"
+msgstr "（%d 个词待翻译）"
+
+msgid "%s item not showing."
+msgid_plural "%s items not showing."
+msgstr[0] "未显示 %s 个项目。"
+
+msgid "Show all selected items"
+msgstr "显示所有选定项目"
+
+msgid "Translate your content"
+msgstr "翻译您的内容"
+
+msgid "Unselect all"
+msgstr "取消全选"
+
+msgid "Source Language:"
+msgstr "源语言："
+
+msgid "translated to:"
+msgstr "翻译为："
+
+msgid "Filter"
+msgstr "筛选"
+
+msgid "You are about to change the source language filter from %s to %s"
+msgstr "您即将把源语言筛选器从 %s 更改为 %s"
+
+msgid "Updating the source language filter will clear the items you've selected for translation. Are you sure you want to continue?"
+msgstr "更新源语言筛选器将清除您已选择用于翻译的项目。您确定要继续吗？"
+
+msgid "Change source language"
+msgstr "更改源语言"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Filter by publication status"
+msgstr "按发布状态筛选"
+
+msgid "All Statuses"
+msgstr "所有状态"
+
+msgid "All languages"
+msgstr "所有语言"
+
+msgid "All translation statuses"
+msgstr "所有翻译状态"
+
+msgid "Not completed"
+msgstr "未完成"
+
+msgid "Needs updating"
+msgstr "需要更新"
+
+msgid "Translation in progress"
+msgstr "翻译进行中"
+
+msgid "Translation complete"
+msgstr "翻译完成"
+
+msgid "Filter by translation status"
+msgstr "按翻译状态筛选"
+
+msgid "Global Filter"
+msgstr "全局筛选器"
+
+msgid "Parent:"
+msgstr "父级："
+
+msgid "Search parent by title"
+msgstr "按标题搜索父级"
+
+msgid "Search by term title in %s"
+msgstr "在 %s 中按术语标题搜索"
+
+msgid "All taxonomies"
+msgstr "所有分类法"
+
+msgid "Loading"
+msgstr "正在加载"
+
+msgid "Taxonomy Term:"
+msgstr "分类法术语："
+
+msgid "Loading terms"
+msgstr "正在加载术语"
+
+msgid "No terms found"
+msgstr "未找到任何术语"
+
+msgid "Filter by:"
+msgstr "筛选依据："
+
+msgid "Title"
+msgstr "标题"
+
+msgid "Automatic translation paused — payment required to continue."
+msgstr "自动翻译已暂停 — 需要付款才能继续。"
+
+msgid "You have %1s%2s prepaid translation credit in your WPML account%3s. Assign these credits to this site to resume automatic translation"
+msgid_plural "You have %1s%2s prepaid translation credits in your WPML account%3s. Assign these credits to this site to resume automatic translation"
+msgstr[0] "您的 WPML 账户中有 %1s%2s 预付翻译积分%3s。将这些积分分配给此网站以恢复自动翻译"
+
+msgid "Not enough credits to continue automatic translation. Add more credits to resume."
+msgstr "积分不足，无法继续自动翻译。请添加更多积分以恢复。"
+
+msgid "Pay now"
+msgstr "立即付款"
+
+msgid "Get more credits"
+msgstr "获取更多积分"
+
+msgid "Assign credits"
+msgstr "分配积分"
+
+msgid "View"
+msgstr "查看"
+
+msgid "Edit"
+msgstr "编辑"
+
+msgid "Edit note for the translators"
+msgstr "编辑给翻译人员的备注"
+
+msgid "Add note for the translators"
+msgstr "添加给翻译人员的备注"
+
+msgid "This page is set to be %1$stranslated manually%2$s using the WordPress Editor"
+msgstr "此页面设置为使用 WordPress 编辑器%1$s手动翻译%2$s"
+
+msgid "Select %s"
+msgstr "选择 %s"
+
+msgid "(no title)"
+msgstr "（无标题）"
+
+msgid "Image"
+msgstr "图片"
+
+msgid "Date / Status"
+msgstr "日期/状态"
+
+msgid "Loading items..."
+msgstr "正在加载项目..."
+
+msgid "%1$d %2$s selected"
+msgstr "已选择 %1$d %2$s"
+
+msgid "items"
+msgstr "项目"
+
+msgid "Filtering is disabled to show all selected items"
+msgstr "筛选已禁用，以显示所有选定项目"
+
+msgid "Apply filter"
+msgstr "应用筛选器"
+
+msgid "%1$d %2$s not showing"
+msgstr "%1$d %2$s 未显示"
+
+msgid "Show selected items"
+msgstr "显示选定项目"
+
+msgid " / page"
+msgstr " / 页"
+
+msgid "Previous"
+msgstr "上一页"
+
+msgid "Next"
+msgstr "下一页"
+
+msgid "Your site's content is too vast for a single translation batch. Use filters to reduce the selection, then \"select all\"."
+msgstr "您的网站内容过于庞大，无法进行单批翻译。请使用筛选器缩小选择范围，然后 “全选”。"
+
+msgid "The current filter captures too much content. Narrow it down to enable \"select all\" for translation."
+msgstr "当前筛选器捕获的内容过多。请缩小范围以启用 “全选” 进行翻译。"
+
+msgid "Select All"
+msgstr "全选"
+
+msgid "All %d items matching criteria are selected"
+msgstr "已选择所有 %d 个符合条件的项目"
+
+msgid "All %d items in this section are selected"
+msgstr "已选择此部分中的所有 %d 个项目"
+
+msgid "You have too many items to send for translation at once. Apply a filter to narrow down the items to enable this option."
+msgstr "您一次性发送翻译的项目过多。请应用筛选器缩小项目范围以启用此选项。"
+
+msgid "Clear selection"
+msgstr "清除选择"
+
+msgid "Select all items that match this search"
+msgstr "选择所有符合此搜索条件的项"
+
+msgid "Loading..."
+msgstr "正在加载..."
+
+msgid "Select all %ss"
+msgstr "选择所有 %s"
+
+msgid "Save note"
+msgstr "保存备注"
+
+msgid "The following target languages do not support automatic translation: %s. <a>Map to known languages</a> to enable automatic translation."
+msgstr "以下目标语言不支持自动翻译：%s。<a>映射到已知语言</a>以启用自动翻译。"
+
+msgid "The site's default language %s doesn't support automatic translation."
+msgstr "网站的默认语言 %s 不支持自动翻译。"
+
+msgid "Some sections are hidden due to current filter settings or because they have no items. <show_all>Show all translation statuses</show_all>"
+msgstr "由于当前筛选器设置或没有项目，某些部分被隐藏。<show_all>显示所有翻译状态</show_all>"
+
+msgid "Step 1"
+msgstr "步骤 1"
+
+msgid "Select items for translation"
+msgstr "选择要翻译的项目"
+
+msgid "Clear filters"
+msgstr "清除筛选器"
+
+msgid "strings"
+msgstr "字符串"
+
+msgid "WPML didn't find any %s matching your criteria."
+msgstr "WPML 未找到任何符合您条件的 %s。"
+
+msgid "You have too many items selected to use this feature. Deselect some of the items to enable it."
+msgstr "您选择的项目过多，无法使用此功能。请取消选择部分项目以启用此功能。"
+
+msgid "Show strings in:"
+msgstr "显示字符串于："
+
+msgid "Display Columns"
+msgstr "显示列"
+
+msgid "Close modal"
+msgstr "关闭模态框"
+
+msgid "Select visible columns"
+msgstr "选择可见列"
+
+msgid "String"
+msgstr "字符串"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "Domain"
+msgstr "域"
+
+msgid "Source"
+msgstr "来源"
+
+msgid "Type"
+msgstr "类型"
+
+msgid "Apply"
+msgstr "应用"
+
+msgid "All domains"
+msgstr "所有域"
+
+msgid "All sources"
+msgstr "所有来源"
+
+msgid "Frontend (viewed)"
+msgstr "前端（已查看）"
+
+msgid "Backend (viewed)"
+msgstr "后端（已查看）"
+
+msgid "Unknown"
+msgstr "未知"
+
+msgid "Search string or a name"
+msgstr "搜索字符串或名称"
+
+msgid "All Translation Priorities"
+msgstr "所有翻译优先级"
+
+msgid "This filter is available only if source is set to \"Frontend\" or \"Backend\"."
+msgstr "此筛选器仅在源设置为 “前端” 或 “后端” 时可用。"
+
+msgid "front-end"
+msgstr "前端"
+
+msgid "back-end"
+msgstr "后端"
+
+msgid "viewed"
+msgstr "已查看"
+
+msgid "Strings in the theme and plugins"
+msgstr "主题和插件中的字符串"
+
+msgid "Translate front-end texts you can customize from the WordPress admin like footer text, copyright notices, plugin options and settings, time format, widget texts, and more."
+msgstr "翻译您可以在 WordPress 管理员中自定义的前端文本，例如页脚文本、版权声明、插件选项和设置、时间格式、小部件文本等。"
+
+msgid "Translating Strings From Admin and Settings"
+msgstr "翻译管理员和设置中的字符串"
+
+msgid "Translate texts in admin screens"
+msgstr "翻译管理员屏幕中的文本"
+
+msgid "Translate User Meta Information"
+msgstr "翻译用户元信息"
+
+msgid "Making User Meta Information Translatable"
+msgstr "使用户元信息可翻译"
+
+msgid "Translate user profile strings"
+msgstr "翻译用户个人资料字符串"
+
+msgid "You need to visit translations on your site's front-end (<a/>) and WPML will identify all untranslated strings and list them here. "
+msgstr "您需要访问您网站前端 (<a/>) 的翻译，WPML 将识别所有未翻译的字符串并在此处列出。 "
+
+msgid "hide details"
+msgstr "隐藏详情"
+
+msgid "more details"
+msgstr "更多详情"
+
+msgid "Still can't find the strings you're looking to translate? Add more strings for translation."
+msgstr "仍然找不到您要翻译的字符串？添加更多字符串进行翻译。"
+
+msgid "Not seeing strings that you are looking for?"
+msgstr "没有看到您要查找的字符串？"
+
+msgid "Enable the autoregistration setting."
+msgstr "启用自动注册设置。"
+
+msgid "Visit translations on the site's frontend for WPML to see which strings are missing translations. Visiting one language is enough: %s."
+msgstr "访问 WPML 网站前端的翻译，查看缺少翻译的字符串。访问一种语言即可：%s。"
+
+msgid "Alternatively, you can register strings manually."
+msgstr "或者，您可以手动注册字符串。"
+
+msgid "Translate Everything translates only those strings which are registered in English language"
+msgstr "“全部翻译”仅翻译以英文注册的字符串"
+
+msgid "Most strings from your plugins and theme are in English, so we’re showing them alongside your default language. Use the <b>Source Language</b> filter to view strings in a specific language."
+msgstr "您的插件和主题中的大多数字符串都是英文的，因此我们将它们与您的默认语言一起显示。使用<b>源语言</b>筛选器查看特定语言的字符串。"
+
+msgid "You’re using <b>%s</b> to cache your site, which may prevent WPML from automatically registering new strings. To fix this, clear your page cache, then visit your translated pages again on the frontend to detect new strings."
+msgstr "您正在使用<b>%s</b>缓存您的网站，这可能会阻止 WPML 自动注册新字符串。要解决此问题，请清除页面缓存，然后再次访问前端的翻译页面以检测新字符串。"
+
+msgid "WPML can detect strings that appear on the site and list them here. This feature helps you identify the strings that actually appear on the site and translate them. To see here only the strings that actually appear on the site, you need to enable this feature."
+msgstr "WPML 可以检测网站上出现的字符串并在此处列出。此功能可帮助您识别实际出现在网站上的字符串并进行翻译。要在此处仅查看实际出现在网站上的字符串，您需要启用此功能。"
+
+msgid "WPML detects strings that appear on the site and lists them here. This feature helps you identify the strings that actually appear on the site and translate them. To see here all the strings in the site, you need to disable this feature."
+msgstr "WPML 检测网站上出现的字符串并在此处列出。此功能可帮助您识别实际出现在网站上的字符串并进行翻译。要在此处查看网站中的所有字符串，您需要禁用此功能。"
+
+msgid "Detect untranslated strings"
+msgstr "检测未翻译的字符串"
+
+msgid "WPML can detect untranslated strings and automatically register them for translation. This happens in real time as you or your visitors browse your website."
+msgstr "WPML 可以检测未翻译的字符串并自动注册它们进行翻译。这会在您或您的访问者浏览您的网站时实时发生。"
+
+msgid "Automatically register untranslated strings"
+msgstr "自动注册未翻译的字符串"
+
+msgid "Learn how to use auto-registration"
+msgstr "了解如何使用自动注册"
+
+msgid "recommended"
+msgstr "推荐"
+
+msgid "Also register strings from the website's back-end"
+msgstr "同时注册网站后端的字符串"
+
+msgid "Save settings"
+msgstr "保存设置"
+
+msgid "Request failed because of the network error"
+msgstr "请求因网络错误而失败"
+
+msgid "Try again"
+msgstr "重试"
+
+msgid "Enabled"
+msgstr "已启用"
+
+msgid "Disabled"
+msgstr "已禁用"
+
+msgid "Modify"
+msgstr "修改"
+
+msgid "You can only translate %1$s from the site's default language (%2$s)."
+msgstr "您只能从网站的默认语言 (%2$s) 翻译 %1$s。"
+
+msgid "%1sCheck pricing%2s."
+msgstr "%1s查看定价%2s。"
+
+msgid "The current site content costs %1$sapproximately €%2$s%3$s to translate."
+msgstr "当前网站内容翻译费用约为 %1$s€%2$s%3$s。"
+
+msgid "The selected content costs %1$sapproximately €%2$s%3$s to translate."
+msgstr "所选内容翻译费用约为 %1$s€%2$s%3$s。"
+
+msgid "Pay-As-You-Go"
+msgstr "现收现付"
+
+msgid "Activate Pay-As-You-Go to translate automatically with monthly billing."
+msgstr "激活现收现付，按月计费自动翻译。"
+
+msgid "Activate Pay-As-You-Go"
+msgstr "激活现收现付"
+
+msgid "Already using Pay-As-You-Go on another site?"
+msgstr "已在其他网站上使用现收现付？"
+
+msgid "Connect this site to it"
+msgstr "将此网站连接到它"
+
+msgid "Buy and assign credits"
+msgstr "购买并分配积分"
+
+msgid "Buy a %1$sprepaid package%2$s with at least %3$s%4$s credits%5$s and assign them to this site."
+msgstr "购买至少包含 %3$s%4$s 积分%5$s 的 %1$s预付套餐%2$s，并将其分配给此网站。"
+
+msgid "This amount will cover translation of all your current content."
+msgstr "此金额将涵盖您所有当前内容的翻译。"
+
+msgid "Assign at least %1$s%2$s credits%3$s to this site to continue."
+msgstr "至少分配 %1$s%2$s 积分%3$s 到此网站以继续。"
+
+msgid "Assign credits from your WPML account and buy an additional %1$sprepaid package%2$s with at least %3$s%4$s credits%5$s credits to cover the remaining amount."
+msgstr "从您的 WPML 账户分配积分，并购买至少包含 %3$s%4$s 积分%5$s 的额外 %1$s预付套餐%2$s，以支付剩余金额。"
+
+msgid "Prepaid credits"
+msgstr "预付积分"
+
+msgid "There are %1$s%2$s available on your WPML account.%3$s"
+msgstr "您的 WPML 账户中有 %1$s%2$s 可用积分。%3$s"
+
+msgid "(Only the WPML account owner can do this.)"
+msgstr "（只有 WPML 账户所有者才能执行此操作。）"
+
+msgid "Checking for new credits..."
+msgstr "正在检查新积分..."
+
+msgid "Still not enough credits. Refresh again in %d seconds."
+msgstr "积分仍然不足。请在 %d 秒后再次刷新。"
+
+msgid "Already assigned?"
+msgstr "已分配？"
+
+msgid "Refresh"
+msgstr "刷新"
+
+msgid "Connection Error. Please wait a minute and reload this page. If the problem continues, please contact WPML support."
+msgstr "连接错误。请稍等片刻并重新加载此页面。如果问题仍然存在，请联系 WPML 支持。"
+
+msgid "Pay-As-You-Go activated"
+msgstr "现收现付已激活"
+
+msgid "You can now continue translating your content automatically."
+msgstr "您现在可以继续自动翻译您的内容。"
+
+msgid "%s credits assigned to this site."
+msgstr "已向此网站分配 %s 积分。"
+
+msgid "You don’t have enough credits to translate this content."
+msgstr "您的积分不足以翻译此内容。"
+
+msgid "You have %s credits — %s more are needed to translate this content"
+msgstr "您有 %s 积分 — 翻译此内容还需要 %s 积分"
+
+msgid "You’re missing %s credits for the translation jobs in progress — %s are needed in total"
+msgstr "您正在进行的翻译作业缺少 %s 积分 — 总共需要 %s 积分"
+
+msgid "Summary:"
+msgstr "摘要："
+
+msgid "Credit"
+msgid_plural "Credits"
+msgstr[0] "积分"
+
+msgid "€%1$s approximately"
+msgstr "大约 €%1$s"
+
+msgid "Pricing"
+msgstr "定价"
+
+msgid "Your Automatic Translation Credits"
+msgstr "您的自动翻译积分"
+
+msgid "To proceed with translation, activate Pay-As-You-Go or assign prepaid credits."
+msgstr "要继续翻译，请激活现收现付或分配预付积分。"
+
+msgid "Leave existing translations as they are"
+msgstr "保留现有翻译不变"
+
+msgid "Overwrite existing translations"
+msgstr "覆盖现有翻译"
+
+msgid "Some of the content you want to translate is already translated"
+msgstr "您要翻译的部分内容已翻译"
+
+msgid "What do you want to do with the content that's already translated?"
+msgstr "您想如何处理已翻译的内容？"
+
+msgid "Suggested deadline:"
+msgstr "建议截止日期："
+
+msgid "Set a batch name and deadline"
+msgstr "设置批次名称和截止日期"
+
+msgid "You can assign a custom name to this batch for easy tracking and suggest a deadline to clarify the priority for translators."
+msgstr "您可以为该批次分配自定义名称以便于跟踪，并建议截止日期以明确翻译人员的优先级。"
+
+msgid "Batch name:"
+msgstr "批次名称："
+
+msgid "Default translation engine: "
+msgstr "默认翻译引擎： "
+
+msgid "Change"
+msgstr "更改"
+
+msgid "Failed to load engines"
+msgstr "加载引擎失败"
+
+msgid "No engines enabled"
+msgstr "未启用任何引擎"
+
+msgid "In order to assign yourself as translator, you first need to <add_yourself>add yourself as %s translator</add_yourself> to the site.<br/> Add yourself as %s translator and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "要将自己指定为翻译人员，您首先需要<add_yourself>将自己添加为 %s 翻译人员</add_yourself>到网站。<br/>将自己添加为 %s 翻译人员，然后点击<check_again>再次检查</check_again>或选择其他翻译选项。"
+
+msgid "In order to assign yourself as translator, you first need to <add_yourself>add yourself as %s to %s translator</add_yourself> to the site.<br/> Add yourself as %s to %s translator and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "要将自己指定为翻译人员，您首先需要<add_yourself>将自己添加为 %s 到 %s 翻译人员</add_yourself>到网站。<br/>将自己添加为 %s 到 %s 翻译人员，然后点击<check_again>再次检查</check_again>或选择其他翻译选项。"
+
+msgid "Checking"
+msgstr "正在检查"
+
+msgid "In order to assign a translation service, you first need to <activate_ts>activate a translation service</activate_ts>.<br/>Activate a translation service and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "要分配翻译服务，您首先需要<activate_ts>激活翻译服务</activate_ts>。<br/>激活翻译服务，然后点击<check_again>再次检查</check_again>或选择其他翻译选项。"
+
+msgid " Checking "
+msgstr " 正在检查 "
+
+msgid "In order to translate automatically, you first need to <enable_ate>enable WPML's Advanced Translation Editor</enable_ate>.<br/>Enable the Advanced Translation Editor and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "要自动翻译，您首先需要<enable_ate>启用 WPML 的高级翻译编辑器</enable_ate>。<br/>启用高级翻译编辑器，然后点击<check_again>再次检查</check_again>或选择其他翻译选项。"
+
+msgid "Selected content was translated using the Classic Translation Editor and can't be sent for automatic translation. To allow this, enable \"Use also for old translations\" in <wpmlSettingLink>WPML Settings</wpmlSettingLink> page."
+msgstr "选定内容已使用经典翻译编辑器翻译，无法发送进行自动翻译。要允许此操作，请在<wpmlSettingLink>WPML 设置</wpmlSettingLink>页面中启用 “也用于旧翻译”。"
+
+msgid "Some of the selected content was translated using the Classic Translation Editor and can't be sent for automatic translation. To allow this, enable \"Use also for old translations\" in <wpmlSettingLink>WPML Settings</wpmlSettingLink> page."
+msgstr "部分选定内容已使用经典翻译编辑器翻译，无法发送进行自动翻译。要允许此操作，请在<wpmlSettingLink>WPML 设置</wpmlSettingLink>页面中启用 “也用于旧翻译”。"
+
+msgid ""
+"Any existing content (translations) will be overwritten when creating duplicates.\n"
+"When duplicating content, please first duplicate parent pages to maintain the site's hierarchy."
+msgstr "创建副本时，任何现有内容（翻译）都将被覆盖。\n复制内容时，请先复制父页面以维护网站的层次结构。"
+
+msgid "Some of the selected content is already being translated. This will cancel any in-progress translations."
+msgstr "部分选定内容已在翻译中。这将取消任何正在进行的翻译。"
+
+msgid "The selected items were translated using the WordPress Editor and will be overwritten with automatic translations."
+msgstr "选定项目已使用 WordPress 编辑器翻译，并将被自动翻译覆盖。"
+
+msgid "Some of the selected content was translated using the WordPress Editor and will be overwritten."
+msgstr "部分选定内容已使用 WordPress 编辑器翻译，并将被覆盖。"
+
+msgid "In order to assign to a translator, you first need to <add_translators>add %s translators</add_translators> to the site.<br/> Add %s translators and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "要分配给翻译人员，您首先需要<add_translators>将 %s 翻译人员</add_translators>添加到网站。<br/>添加 %s 翻译人员，然后点击<check_again>再次检查</check_again>或选择其他翻译选项。"
+
+msgid "In order to assign to a translator, you first need to <add_translators>add %s to %s translators</add_translators> to the site.<br/> Add %s to %s translators and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "要分配给翻译人员，您首先需要<add_translators>将 %s 到 %s 翻译人员</add_translators>添加到网站。<br/>添加 %s 到 %s 翻译人员，然后点击<check_again>再次检查</check_again>或选择其他翻译选项。"
+
+msgid "Your site doesn't have any reviewers for %s. This means that you’re the only person who can review these translations."
+msgstr "您的网站没有 %s 的任何审阅者。这意味着您是唯一可以审阅这些翻译的人。"
+
+msgid "Your site doesn't have any reviewers yet. This means that you’re the only person who can review translations."
+msgstr "您的网站还没有任何审阅者。这意味着您是唯一可以审阅翻译的人。"
+
+msgid "If you want other people to review the translations, go to <a>WPML → Translation Dashboard → Translators</a> and add translators. They will be able to both review and translate content for you."
+msgstr "如果您希望其他人审阅翻译，请转到<a>WPML → 翻译仪表板 → 翻译人员</a>并添加翻译人员。他们将能够为您审阅和翻译内容。"
+
+msgid "Automatic translation is blocked - payment required"
+msgstr "自动翻译已阻止 - 需要付款"
+
+msgid "We couldn’t process your payment. Click “Pay now” to retry and resume automatic translation."
+msgstr "我们无法处理您的付款。点击 “立即付款” 重试并恢复自动翻译。"
+
+msgid "WPML does not support duplicating strings. Your selection to duplicate strings to %1$s will be ignored if you proceed with the translation."
+msgstr "WPML 不支持复制字符串。如果您继续翻译，您选择将字符串复制到 %1$s 将被忽略。"
+
+msgid "WPML does not support duplicating %1$s elements. Your selection to duplicate elements to %2$s will be ignored if you proceed with the translation."
+msgstr "WPML 不支持复制 %1$s 元素。如果您继续翻译，您选择将元素复制到 %2$s 将被忽略。"
+
+msgid "WPML does not support duplicating %1$s elements and strings. Your selection to duplicate elements and strings to %2$s will be ignored if you proceed with the translation."
+msgstr "WPML 不支持复制 %1$s 元素和字符串。如果您继续翻译，您选择将元素和字符串复制到 %2$s 将被忽略。"
+
+msgid "WPML does not support duplicating strings."
+msgstr "WPML 不支持复制字符串。"
+
+msgid "WPML does not support duplicating %1$s elements."
+msgstr "WPML 不支持复制 %1$s 元素。"
+
+msgid "WPML does not support duplicating %1$s elements and strings."
+msgstr "WPML 不支持复制 %1$s 元素和字符串。"
+
+msgid "Finish setting up %s on your site"
+msgstr "完成在您的网站上设置 %s"
+
+msgid "You need to authenticate %s to send them content for translation.<br/>Visit the <a>Translators tab</a> to finish the setup and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "您需要验证 %s 才能将内容发送给他们进行翻译。<br/>访问<a>翻译人员选项卡</a>以完成设置，然后点击<check_again>再次检查</check_again>或选择其他翻译选项。"
+
+msgid "You selected multiple translation methods for content across different languages:"
+msgstr "您为不同语言的内容选择了多种翻译方法："
+
+msgid "Sent for translation"
+msgstr "已发送翻译"
+
+msgid "Sending for translation failed"
+msgstr "发送翻译失败"
+
+msgid "Ok"
+msgstr "确定"
+
+msgid "<s>1 item</s> is being translated automatically."
+msgid_plural "<s>%d items</s> are being translated automatically."
+msgstr[0] "<s>%d 个项目</s>正在自动翻译。"
+
+msgid "You can track their progress at the top of the page."
+msgstr "您可以在页面顶部跟踪它们的进度。"
+
+msgid "From now on, WPML will automatically translate new content on your site."
+msgstr "从现在开始，WPML 将自动翻译您网站上的新内容。"
+
+msgid "This number might vary because you enabled the Translate Everything Automatically Mode."
+msgstr "此数字可能会有所不同，因为您已启用“自动翻译所有内容”模式。"
+
+msgid "From now on, WPML will automatically translate your site's content."
+msgstr "从现在起，WPML 将自动翻译您网站的内容。"
+
+msgid "Automatic translations summary"
+msgstr "自动翻译摘要"
+
+msgid "Some of the content that you selected for translation includes fields that are encoded. Translators will not be able to work on this kind of content, so we removed it from the job."
+msgstr "您选择翻译的部分内容包含编码字段。译员无法处理此类内容，因此我们已将其从任务中移除。"
+
+msgid "To fix this problem, please contact our support team and describe this issue."
+msgstr "要解决此问题，请联系我们的支持团队并描述此问题。"
+
+msgid "WPML cannot send some fo the content to translation"
+msgstr "WPML 无法发送部分内容进行翻译"
+
+msgid "Open support ticket"
+msgstr "打开支持工单"
+
+msgid "<s>1 item</s> has been successfully assigned to you! To check its status, please go to <s>WPML → Translations</s>. <translations_queue/>"
+msgid_plural "<s>%d items</s> have been successfully assigned to you! For status updates, please go to <s>WPML → Translations</s>. <translations_queue/>"
+msgstr[0] "<s>%d 个项目</s>已成功分配给您！有关状态更新，请转到 <s>WPML → 翻译</s>。<translations_queue/>"
+
+msgid "Currently logged in translator summary"
+msgstr "当前登录译员摘要"
+
+msgid "Go to Translations"
+msgstr "前往翻译"
+
+msgid "<s>1 item</s> has been duplicated."
+msgid_plural "<s>%d items</s> have been duplicated."
+msgstr[0] "<s>%d 个项目</s>已复制。"
+
+msgid "Duplication summary"
+msgstr "重复摘要"
+
+msgid "There was a problem sending your content for translation."
+msgstr "发送内容进行翻译时出现问题。"
+
+msgid "Please try again in a few minutes. If the issue persists, please contact our support."
+msgstr "请在几分钟后重试。如果问题仍然存在，请联系我们的支持。"
+
+msgid "See technical details"
+msgstr "查看技术详情"
+
+msgid "Hide technical details"
+msgstr "隐藏技术详情"
+
+msgid "Some of the selected strings are already registered or translated into %s. Since their source language matches the target language, they cannot be retranslated."
+msgstr "部分选定字符串已注册或已翻译成 %s。由于其源语言与目标语言匹配，因此无法重新翻译。"
+
+msgid "Some of the selected content has already been translated from %s to %s and cannot be re-translated from %s to %s."
+msgstr "部分选定内容已从 %s 翻译成 %s，无法从 %s 重新翻译成 %s。"
+
+msgid "Content already translated"
+msgstr "内容已翻译"
+
+msgid "Some content couldn't be sent to translation."
+msgstr "部分内容无法发送进行翻译。"
+
+msgid "WPML did not create translations for some languages because of the following reasons:"
+msgstr "WPML 未为某些语言创建翻译，原因如下："
+
+msgid "<s>1 item</s> has been successfully sent to translators!"
+msgid_plural "<s>%d items</s> have been successfully sent to translators!"
+msgstr[0] "<s>%d 个项目</s>已成功发送给译员！"
+
+msgid "Local translations summary"
+msgstr "本地翻译摘要"
+
+msgid "You can check their status in WPML → Translation"
+msgstr "您可以在 WPML → 翻译 中查看其状态"
+
+msgid "Continue to %s"
+msgstr "继续到 %s"
+
+msgid "We were unable to send the following batches for professional translation:"
+msgstr "我们无法发送以下批次进行专业翻译："
+
+msgid "<p><a><s>Contact WPML support for help</s></a></p>"
+msgstr "<p><a><s>联系 WPML 支持以获取帮助</s></a></p>"
+
+msgid "Translation Service"
+msgstr "翻译服务"
+
+msgid "sending for professional translation.."
+msgstr "正在发送进行专业翻译.."
+
+msgid "<s>%d item</s> is being sent for translation to %s. Please continue to their site to start the translation."
+msgid_plural "<s>%d items</s> are being sent for translation to %s. Please continue to their site to start the translation."
+msgstr[0] "<s>%d 个项目</s>正在发送给 %s 进行翻译。请继续访问他们的网站以开始翻译。"
+
+msgid "Translation service translations summary"
+msgstr "翻译服务翻译摘要"
+
+msgid "One or more assigned translators are invalid. The translator may have been removed or their language permissions changed.<br/> Review your settings on the <translators_page>Translators page</translators_page>."
+msgstr "一个或多个已分配的译员无效。译员可能已被移除或其语言权限已更改。<br/> 请在<translators_page>译员页面</translators_page>上查看您的设置。"
+
+msgid "The selected translation service is no longer valid. It may have been changed, unauthenticated, or deactivated.<br/> Review your settings on the <translators_page>Translators page</translators_page>."
+msgstr "选定的翻译服务不再有效。它可能已被更改、未经验证或已停用。<br/> 请在<translators_page>译员页面</translators_page>上查看您的设置。"
+
+msgid "Currently selected translation editor doesn't support automatic translation. You must enable the Advanced Translation Editor to send content for automatic translation.<br/> Check your settings on the <wpml_settings>WPML settings page</wpml_settings>."
+msgstr "当前选定的翻译编辑器不支持自动翻译。您必须启用高级翻译编辑器才能发送内容进行自动翻译。<br/> 请在<wpml_settings>WPML 设置页面</wpml_settings>上检查您的设置。"
+
+msgid "Validation error happened during send to translation."
+msgstr "发送翻译时发生验证错误。"
+
+msgid "Translate and Duplicate"
+msgstr "翻译并复制"
+
+msgid "Duplicate"
+msgstr "复制"
+
+msgid "Translate content"
+msgstr "翻译内容"
+
+msgid "Please choose one of the available payment options."
+msgstr "请选择一个可用的付款选项。"
+
+msgid "Selected content is already translated"
+msgstr "选定内容已翻译"
+
+msgid "Please select a review mode"
+msgstr "请选择审阅模式"
+
+msgid "Assign local translator or choose another option"
+msgstr "分配本地译员或选择其他选项"
+
+msgid "Assign yourself or choose another option"
+msgstr "分配给自己或选择其他选项"
+
+msgid "Activate translation service or choose another option"
+msgstr "激活翻译服务或选择其他选项"
+
+msgid "Activate ATE or choose another option"
+msgstr "激活 ATE 或选择其他选项"
+
+msgid "Authenticate translation service or choose another option"
+msgstr "验证翻译服务或选择其他选项"
+
+msgid "Please provide context to enable translation"
+msgstr "请提供上下文以启用翻译"
+
+msgid "Please keep this page open while WPML sends your content for translation. If you leave now, the remaining items won't be sent."
+msgstr "WPML 发送您的内容进行翻译时，请保持此页面打开。如果您现在离开，剩余的项目将不会发送。"
+
+msgid "Sending content to translation"
+msgstr "正在发送内容进行翻译"
+
+msgid "<s>%s</s> cannot process more than <s>%d</s> jobs in a single batch. WPML will automatically split your jobs into separate batches to ensure an error-free delivery to <s>%s</s>. <br/><br/> Do you want to proceed?"
+msgstr "<s>%s</s> 在单个批次中无法处理超过 <s>%d</s> 个任务。WPML 将自动将您的任务拆分为单独的批次，以确保无错误地交付给 <s>%s</s>。<br/><br/> 您要继续吗？"
+
+msgid "WPML will send jobs to %s in separate batches"
+msgstr "WPML 将分批发送任务到 %s"
+
+msgid "Yes, send jobs in separate batches"
+msgstr "是，分批发送任务"
+
+msgid "No, I will split jobs myself"
+msgstr "否，我将自行拆分任务"
+
+msgid "This will translate only your future content"
+msgstr "这将仅翻译您未来的内容"
+
+msgid "This will translate your entire site"
+msgstr "这将翻译您的整个网站"
+
+msgid "Translate everything automatically from now on, without asking me."
+msgstr "从现在起自动翻译所有内容，无需询问我。"
+
+msgid "Loading options to translate the content"
+msgstr "正在加载翻译内容的选项"
+
+msgid "What content do you want to translate?"
+msgstr "您要翻译什么内容？"
+
+msgid "Translate my entire site"
+msgstr "翻译我的整个网站"
+
+msgid "WPML will translate all of your site's content, including:"
+msgstr "WPML 将翻译您网站的所有内容，包括："
+
+msgid "Any existing content that hasn’t been translated yet"
+msgstr "任何尚未翻译的现有内容"
+
+msgid "All new content you create in the future"
+msgstr "您将来创建的所有新内容"
+
+msgid "Translate only future content"
+msgstr "仅翻译未来内容"
+
+msgid "WPML will translate only the content you create after enabling this translation mode."
+msgstr "WPML 将仅翻译您在此翻译模式启用后创建的内容。"
+
+msgid "Existing untranslated content on your side will not be translated."
+msgstr "您网站上现有的未翻译内容将不会被翻译。"
+
+msgid "WPML Settings"
+msgstr "WPML 设置"
+
+msgid "Some of your content was translated using the Classic Translation Editor. These translations won’t be included in Translate Everything Automatically."
+msgstr "您的部分内容是使用经典翻译编辑器翻译的。这些翻译将不包含在“自动翻译所有内容”中。"
+
+msgid "To include them, enable \"Use also for old translations\" in <wpmlSettingLink/>."
+msgstr "要包含它们，请在 <wpmlSettingLink/> 中启用 “也用于旧翻译”。"
+
+msgid "Some of your content was translated using the WordPress Editor. These translations won’t be included in Translate Everything Automatically."
+msgstr "您的部分内容是使用 WordPress 编辑器翻译的。这些翻译将不包含在“自动翻译所有内容”中。"
+
+msgid "Some of your content was translated using the Classic Translation Editor or WordPress Editor. These translations won’t be included in Translate Everything Automatically."
+msgstr "您的部分内容是使用经典翻译编辑器或 WordPress 编辑器翻译的。这些翻译将不包含在“自动翻译所有内容”中。"
+
+msgid "To include Classic Editor translations, enable \"Use also for old translations\" in <wpmlSettingLink/>."
+msgstr "要包含经典编辑器翻译，请在 <wpmlSettingLink/> 中启用 “也用于旧翻译”。"
+
+msgid "Existing content"
+msgstr "现有内容"
+
+msgid "You selected to translate strings that are in %s. Only these strings will be translated to %s."
+msgstr "您选择翻译 %s 中的字符串。只有这些字符串将被翻译成 %s。"
+
+msgid "You selected to translate strings that are in %s and %s. Only these strings will be translated to %s."
+msgstr "您选择翻译 %s 和 %s 中的字符串。只有这些字符串将被翻译成 %s。"
+
+msgid "Source language"
+msgstr "源语言"
+
+msgid "Target language"
+msgstr "目标语言"
+
+msgid "Words to translate"
+msgstr "要翻译的词语"
+
+msgid "Credits needed"
+msgstr "所需积分"
+
+msgid "Automatic translation is not supported for %s."
+msgstr "%s 不支持自动翻译。"
+
+msgid "The selected translation engines do not support %s."
+msgstr "选定的翻译引擎不支持 %s。"
+
+msgid "%1sTotal Credits:%2s %3s"
+msgstr "%1s总积分：%2s %3s"
+
+msgid "Translation service additional options"
+msgstr "翻译服务附加选项"
+
+msgid "Fetching translation service data..."
+msgstr "正在获取翻译服务数据..."
+
+msgid "-"
+msgstr "-"
+
+msgid "Translate automatically"
+msgstr "自动翻译"
+
+msgid "Translate myself"
+msgstr "自行翻译"
+
+msgid "Assign a translator"
+msgstr "分配译员"
+
+msgid "Assign translation service"
+msgstr "分配翻译服务"
+
+msgid "Do nothing"
+msgstr "不执行任何操作"
+
+msgid "Please choose"
+msgstr "请选择"
+
+msgid "Choose a translator"
+msgstr "选择译员"
+
+msgid "First available"
+msgstr "第一个可用"
+
+msgid "(Me)"
+msgstr "(我)"
+
+msgid "Step 2"
+msgstr "步骤 2"
+
+msgid "Calculating..."
+msgstr "正在计算..."
+
+msgid "Refining estimation... about %1$d minute remaining"
+msgid_plural "Refining estimation... about %1$d minutes remaining"
+msgstr[0] "正在优化估算... 剩余约 %1$d 分钟"
+
+msgid "Refining estimation... %d second remaining"
+msgid_plural "Refining estimation... %d seconds remaining"
+msgstr[0] "正在优化估算... 剩余 %d 秒"
+
+msgid "Estimated cost:"
+msgstr "预计费用："
+
+msgid "Current estimated cost:"
+msgstr "当前预计费用："
+
+msgid "Changing translation engine and recalculating estimate..."
+msgstr "正在更改翻译引擎并重新计算估算..."
+
+msgid "%s credits"
+msgstr "%s 积分"
+
+msgid "€%1$s"
+msgstr "€%1$s"
+
+msgid "All content is already translated. New and edited content will be translated automatically."
+msgstr "所有内容均已翻译。新建和编辑的内容将自动翻译。"
+
+msgid "%1$s and %2$s"
+msgstr "%1$s 和 %2$s"
+
+msgid "in other types"
+msgstr "在其他类型中"
+
+msgid "Hide what will be translated"
+msgstr "隐藏将要翻译的内容"
+
+msgid "Show what will be translated"
+msgstr "显示将要翻译的内容"
+
+msgid "Calculation complete"
+msgstr "计算完成"
+
+msgid "%d of %d analyzed"
+msgstr "已分析 %d 个中的 %d 个"
+
+msgid "Automatic translations completed"
+msgstr "自动翻译已完成"
+
+msgid "<s>1 translation</s> has been successfully translated automatically"
+msgid_plural "<s>%d translations</s> have been successfully translated automatically"
+msgstr[0] "<s>%d 个翻译</s>已成功自动翻译"
+
+msgid "Automatic jobs in progress"
+msgstr "自动任务正在进行中"
+
+msgid "<s>%d automatic translation</s> is in progress"
+msgid_plural "<s>%d automatic translations</s> are in progress"
+msgstr[0] "<s>%d 个自动翻译</s>正在进行中"
+
+msgid "Remaining time: <s>Less than 1 minute</s>"
+msgstr "剩余时间：<s>不到 1 分钟</s>"
+
+msgid "Remaining time: <s>%d minute</s>"
+msgid_plural "Remaining time: <s>%d minutes</s>"
+msgstr[0] "剩余时间：<s>%d 分钟</s>"
+
+msgid "Your default language, %s, must be mapped to a supported language in order to use automatic translation"
+msgstr "您的默认语言 %s 必须映射到受支持的语言才能使用自动翻译"
+
+msgid "Map the language"
+msgstr "映射语言"
+
+msgid "%d translations "
+msgstr "%d 翻译 "
+
+msgid "%d translation "
+msgstr "%d 翻译 "
+
+msgid "this includes translations from Translate Everything Automatically"
+msgstr "这包括来自“自动翻译所有内容”的翻译"
+
+msgid "are waiting for your review"
+msgstr "正在等待您的审阅"
+
+msgid "is waiting for your review"
+msgstr "正在等待您的审阅"
+
+msgid "Review Translations"
+msgstr "审阅翻译"
+
+msgid "Translate existing content"
+msgstr "翻译现有内容"
+
+msgid "Translate now"
+msgstr "立即翻译"
+
+msgid "Starting with version 4.7, WPML will also automatically translate texts (strings) coming from %s."
+msgstr "从 4.7 版本开始，WPML 还将自动翻译来自 %s 的文本（字符串）。"
+
+msgid "WPML will not translate existing texts of this type but any new ones you create will be automatically translated. If you prefer, you can <button />."
+msgstr "WPML 不会翻译此类型的现有文本，但您创建的任何新文本都将自动翻译。如果您愿意，可以<button />。"
+
+msgid "Starting with version 4.7, WPML will also automatically translate:"
+msgstr "从 4.7 版本开始，WPML 还将自动翻译："
+
+msgid "Content set to \"use translation if available or fallback to default language\": %s."
+msgstr "内容设置为 “如果可用则使用翻译或回退到默认语言”：%s。"
+
+msgid "Texts (strings) coming from: %s."
+msgstr "来自以下位置的文本（字符串）：%s。"
+
+msgid "WPML will not translate existing content for these post types and texts but any new content you create will be automatically translated. If you prefer, you can start <button />."
+msgstr "WPML 不会翻译这些文章类型和文本的现有内容，但您创建的任何新内容都将自动翻译。如果您愿意，可以开始<button />。"
+
+msgid "WPML will not translate existing content for these post types but any new content you create will be automatically translated. If you prefer, you can start <button />."
+msgstr "WPML 不会翻译这些文章类型的现有内容，但您创建的任何新内容都将自动翻译。如果您愿意，可以开始<button />。"
+
+msgid "start translating existing content now"
+msgstr "立即开始翻译现有内容"
+
+msgid "The following target languages do not support automatic translations: %s"
+msgstr "以下目标语言不支持自动翻译：%s"
+
+msgid "To enable automatic translation map them to known languages."
+msgstr "要启用自动翻译，请将它们映射到已知语言。"
+
+msgid "Map to known languages"
+msgstr "映射到已知语言"
+
+msgid "Copied!"
+msgstr "已复制！"
+
+msgid "Copy All"
+msgstr "全部复制"
+
+msgid "Error type"
+msgstr "错误类型"
+
+msgid "Error Message"
+msgstr "错误消息"
+
+msgid "Job ID"
+msgstr "作业 ID"
+
+msgid "ATE Job ID"
+msgstr "ATE 作业 ID"
+
+msgid "Original ID"
+msgstr "原始 ID"
+
+msgid "Element ID"
+msgstr "元素 ID"
+
+msgid "Copy to clipboard"
+msgstr "复制到剪贴板"
+
+msgid "Hide errors details"
+msgstr "隐藏错误详情"
+
+msgid "Show errors details"
+msgstr "显示错误详情"
+
+msgid "https://wpml.org/forums/forum/english-support/"
+msgstr "https://wpml.org/forums/forum/english-support/"
+
+msgid "<strong>%d item</strong> couldn't be completed due to an unexpected error. Try resending it for translation. If the issue continues, <a>contact WPML support</a>."
+msgid_plural "<strong>%d items</strong> couldn't be completed due to an unexpected error. Try resending them for translation. If the issue continues, <a>contact WPML support</a>."
+msgstr[0] "由于意外错误，<strong>%d 个项目</strong>未能完成。请尝试重新发送它们进行翻译。如果问题仍然存在，请<a>联系 WPML 支持</a>。"
+
+msgid "Cancelling %d/%d..."
+msgstr "正在取消 %d/%d..."
+
+msgid "Cancelling..."
+msgstr "正在取消..."
+
+msgid "Discard jobs"
+msgstr "放弃作业"
+
+msgid "Resending %d/%d..."
+msgstr "正在重新发送 %d/%d..."
+
+msgid "Resending..."
+msgstr "正在重新发送..."
+
+msgid "Resend"
+msgstr "重新发送"
+
+msgid "We recommend staying on this page to monitor progress and respond to any issues if they occur. You can leave this page, but you should remain within your WordPress admin area."
+msgstr "我们建议您停留在本页面，以监控进度并在出现任何问题时进行响应。您可以离开本页面，但应留在 WordPress 管理区域内。"
+
+msgid "Translation status"
+msgstr "翻译状态"
+
+msgid "Before translating with PTC, please provide context about your website and target audience (one-time thing)."
+msgstr "在使用 PTC 翻译之前，请提供有关您的网站和目标受众的上下文（一次性）。"
+
+msgid "Provide Context"
+msgstr "提供上下文"
+
+msgid "Default language does not support automatic translations."
+msgstr "默认语言不支持自动翻译。"
+
+msgid "You must enable ATE to activate Translate Everything Automatically."
+msgstr "您必须启用 ATE 才能激活“自动翻译所有内容”。"
+
+msgid "Select payment method"
+msgstr "选择付款方式"
+
+msgid "Credits assigned"
+msgstr "已分配积分"
+
+msgid "You’re all set."
+msgstr "一切就绪。"
+
+msgid "Click Translate Everything Automatically to start translating your entire site."
+msgstr "点击“自动翻译所有内容”以开始翻译您的整个网站。"
+
+msgid "Content to translate"
+msgstr "要翻译的内容"
+
+msgid "Publishing method"
+msgstr "发布方法"
+
+msgid "Payment method"
+msgstr "付款方式"
+
+msgid "Enable Translate Everything Automatically"
+msgstr "启用自动翻译所有内容"
+
+msgid "Go back"
+msgstr "返回"
+
+msgid "Continue"
+msgstr "继续"
+
+msgid "Calculating credits for translating existing content. Please wait..."
+msgstr "正在计算翻译现有内容所需的积分。请稍候..."
+
+msgid "Set Up Translate Everything Automatically"
+msgstr "自动设置全部翻译"
+
+msgid "WPML will translate your content into %d languages"
+msgstr "WPML 会将您的内容翻译成 %d 种语言"
+
+msgid "You can start using Translate Everything Automatically after sending some content for translation. We recommend that you review these translations and make sure that they are good before translating your entire site's content."
+msgstr "您可以在发送一些内容进行翻译后开始使用“自动翻译所有内容”。我们建议您在翻译整个网站内容之前，先审阅这些翻译并确保其质量良好。"
+
+msgid "Translate Everything Automatically - disabled"
+msgstr "自动翻译所有内容 - 已禁用"
+
+msgid "Translate Everything Automatically"
+msgstr "自动翻译所有内容"
+
+msgid "Automatically translate all %s content to %s."
+msgstr "将所有 %s 内容自动翻译为 %s。"
+
+msgid "Translate Everything Automatically - pausing"
+msgstr "自动翻译所有内容 - 正在暂停"
+
+msgid "Translate Everything Automatically is pausing"
+msgstr "自动翻译所有内容正在暂停"
+
+msgid "Translate Everything Automatically - paused"
+msgstr "自动翻译所有内容 - 已暂停"
+
+msgid "%d translation left in the queue. Preparing more content for translation."
+msgid_plural "%d translations left in the queue. Preparing more content for translation."
+msgstr[0] "队列中还剩 %d 个翻译。正在准备更多内容进行翻译。"
+
+msgid "Preparing content for translation..."
+msgstr "正在准备翻译内容..."
+
+msgid "%d translation left in the queue..."
+msgid_plural "%d translations left in the queue..."
+msgstr[0] "队列中还剩 %d 个翻译..."
+
+msgid "Translate Everything Automatically has finished translating your content. There are no pending translations in the queue."
+msgstr "自动翻译所有内容已完成翻译。队列中没有待处理的翻译。"
+
+msgid "Some items were translated using the Classic Translation Editor and cannot be sent for automatic translation. Please select these items and choose the option to translate them yourself."
+msgstr "部分项目是使用经典翻译编辑器翻译的，无法发送进行自动翻译。请选择这些项目并选择自行翻译的选项。"
+
+msgid "Translate Everything Automatically - enabled"
+msgstr "自动翻译所有内容 - 已启用"
+
+msgid "Translate Everything Automatically is enabled"
+msgstr "自动翻译所有内容已启用"
+
+msgid "As you create new content or edit existing content, WPML will automatically translate it, but only from %s to %s."
+msgstr "当您创建新内容或编辑现有内容时，WPML 将自动翻译，但仅从 %s 到 %s。"
+
+msgid "Translate Everything Automatically is paused — payment required"
+msgstr "自动翻译所有内容已暂停 — 需要付款"
+
+msgid "Automatic translation is paused — payment required"
+msgstr "自动翻译已暂停 — 需要付款"
+
+msgid "Automatic translation - payment required"
+msgstr "自动翻译 - 需要付款"
+
+msgid "We couldn’t process payment for your completed translations. Click “Pay now” to retry and continue using automatic translation."
+msgstr "我们无法处理您已完成翻译的付款。点击 “立即付款” 重试并继续使用自动翻译。"
+
+msgid "Cancel translation"
+msgstr "取消翻译"
+
+msgid "Translate Everything Automatically is paused — not enough credits"
+msgstr "自动翻译所有内容已暂停 — 积分不足"
+
+msgid "Automatic translation is paused — not enough credits"
+msgstr "自动翻译已暂停 — 积分不足"
+
+msgid "Translation will resume automatically after you assign more credits."
+msgstr "分配更多积分后，翻译将自动恢复。"
+
+msgid "This item needs a translation update but can't be translated automatically because it was translated with the Classic Translation Editor."
+msgstr "此项目需要翻译更新，但无法自动翻译，因为它已使用经典翻译编辑器翻译。"
+
+msgid "This item needs update. Please, select the item and send for translation."
+msgstr "此项目需要更新。请选择该项目并发送进行翻译。"
+
+msgid "Translations completed with the Classic Translation Editor cannot be sent for automatic translation"
+msgstr "使用经典翻译编辑器完成的翻译无法发送进行自动翻译"
+
+msgid "automatic translation"
+msgstr "自动翻译"
+
+msgid "unassigned"
+msgstr "未分配"
+
+msgid "not translated"
+msgstr "未翻译"
+
+msgid "waiting for translator"
+msgstr "等待译员"
+
+msgid "in progress"
+msgstr "进行中"
+
+msgid "needs update"
+msgstr "需要更新"
+
+msgid "duplicate"
+msgstr "重复"
+
+msgid "complete"
+msgstr "完成"
+
+msgid "needs review"
+msgstr "需要审阅"
+
+msgid "preparing for translation"
+msgstr "正在准备翻译"
+
+msgid "needs attention"
+msgstr "需要注意"
+
+msgid "translation error"
+msgstr "翻译错误"
+
+msgid "This item was translated using the WordPress Editor. Switching to the WPML's Translation Editor will overwrite the existing translation."
+msgstr "此项目是使用 WordPress 编辑器翻译的。切换到 WPML 的翻译编辑器将覆盖现有翻译。"
+
+msgid "This item needs a translation update but was previously translated using the WordPress Editor. Using the WPML's Translation Editor will overwrite the existing translation."
+msgstr "此项目需要翻译更新，但之前是使用 WordPress 编辑器翻译的。使用 WPML 的翻译编辑器将覆盖现有翻译。"
+
+msgid "This item hasn't been translated yet and is set to use the WordPress Editor."
+msgstr "此项目尚未翻译，并设置为使用 WordPress 编辑器。"
+
+msgid "%1$s: %2$s%3$s"
+msgstr "%1$s：%2$s%3$s"
+
+msgid "Could not fetch engines data"
+msgstr "无法获取引擎数据"
+
+msgid "Error in fetching currently logged in translator"
+msgstr "获取当前登录译员时出错"
+
+msgid "Error in fetching local translators"
+msgstr "获取本地译员时出错"
+
+msgid "Published"
+msgstr "已发布"
+
+msgid "Draft"
+msgstr "草稿"
+
+msgid "Trash"
+msgstr "垃圾箱"
+
+msgid "Pending"
+msgstr "待处理"
+
+msgid "Private"
+msgstr "私人"
+
+msgid "Future"
+msgstr "未来"
+
+msgid "Auto Draft"
+msgstr "自动草稿"
+
+msgid "External"
+msgstr "外部"
+
+msgid "Collapse"
+msgstr "折叠"
+
+msgid "Expand"
+msgstr "展开"
+
+msgid "Select an item"
+msgstr "选择一个项目"
+
+msgid "Open dropdown"
+msgstr "打开下拉菜单"
+
+msgid "Reset"
+msgstr "重置"
+
+msgid "Search"
+msgstr "搜索"
+
+msgid "No items found"
+msgstr "未找到项目"
+
+msgid "OFF"
+msgstr "关"
+
+msgid "ON"
+msgstr "开"
+
+msgid "%1$s Flag"
+msgstr "%1$s 标志"
+
+msgid "- Select a review mode -"
+msgstr "- 选择审阅模式 -"
+
+msgid "What would you like to do when WPML finishes translating your content automatically?"
+msgstr "WPML 自动翻译完您的内容后，您希望如何处理？"
+
+msgid "What would you like to do after WPML finishes translating your content automatically?"
+msgstr "WPML 自动翻译完您的内容后，您希望如何处理？"
+
+msgid "Publish without review"
+msgstr "不经审阅发布"
+
+msgid "Recommended with PTC"
+msgstr "PTC 推荐"
+
+msgid "PTC provides Better Than Human Translations that rarely need improvements, so you can confidently skip the review process. For other translation engines, a human review is recommended to confirm accuracy."
+msgstr "PTC 提供优于人工的翻译，很少需要改进，因此您可以放心地跳过审阅过程。对于其他翻译引擎，建议进行人工审阅以确认准确性。"
+
+msgid "WPML publishes translations immediately, skipping the review process."
+msgstr "WPML 立即发布翻译，跳过审阅过程。"
+
+msgid "Wait for review"
+msgstr "等待审阅"
+
+msgid "Recommended with DeepL, Google and Microsoft"
+msgstr "推荐与 DeepL、Google 和 Microsoft 配合使用"
+
+msgid "DeepL, Google, and Microsoft deliver great translations, but we recommend a human review to confirm they are correct. PTC provides Better Than Human Translations that understand context, so you can confidently skip the review process."
+msgstr "DeepL、Google 和 Microsoft 提供出色的翻译，但我们建议进行人工审阅以确认其准确性。PTC 提供优于人工的翻译，能够理解上下文，因此您可以放心地跳过审阅过程。"
+
+msgid "WPML keeps translations unpublished, so you can review them first."
+msgstr "WPML 保持翻译未发布，以便您可以先审阅它们。"
+
+msgid "Your translators review and approve translations before publishing."
+msgstr "您的译员在发布前审阅并批准翻译。"
+
+msgid "Publish and mark for review"
+msgstr "发布并标记为待审阅"
+
+msgid "WPML publishes translations immediately but flags them for you to check at your convenience."
+msgstr "WPML 立即发布翻译，但会将其标记，以便您在方便时进行检查。"
+
+msgid "WPML publishes translations immediately but flags them for translators to review later."
+msgstr "WPML 会立即发布译文，但会将其标记为供译员稍后审阅。"

@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  min-height:100%;
+  font-size: 62.5%;
+}
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-s);
+  font-weight: var(--fw-regular);
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-secondary);
+  height: 100%;
+  &.menu-open {
+	  overflow: hidden;
+  }
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  margin-bottom: var(--spacing-small);
+  font-family: "EscrowBannerCond";
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: condensed;
+}
+
+.comp{
+  font-family: "EscrowComp";
+  font-style: normal;
+  font-stretch: extra-condensed;
+  font-weight: 600;
+}
+
+h1,.h1 {
+  font-size: var(--fs-huge);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+h2,.h2 {
+  font-size: var(--fs-xxxl);
+  font-weight: var(--fw-light);
+}
+
+h3,.h3 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-light);
+}
+
+h4,.h4 {
+  font-size: var(--fs-xs);
+}
+
+h5 {
+  font-size: var(--fs-s);
+}
+
+h6 {
+  font-size: var(--fs-s);
+}
+
+p {
+  font-size: var(--fs-m);
+  margin-bottom: var(--sp-m);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+.otgs-development-site-front-end {
+  display: none;
+}
+
+.post-thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+}
+
+.entry-content img {
+  max-width: 100%;
+  height: auto;
+}

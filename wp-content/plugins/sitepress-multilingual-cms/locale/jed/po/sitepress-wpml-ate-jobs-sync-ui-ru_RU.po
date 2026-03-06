@@ -1,0 +1,293 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: src/js/ate/AutoTranslate.js:21
+msgid "Sending for translation"
+msgstr "Отправка на перевод"
+
+#: src/js/ate/TranslationDashboardJobsActions.js:23
+msgid ""
+"This content is being automatically translated. If you want to do something "
+"different with it cancel translation jobs first."
+msgstr "Этот контент переводится автоматически. Если вы хотите сделать с ним что-то другое, сначала отмените задачи перевода."
+
+#: src/js/ate/enable/init.js:53
+msgid "Connecting to WPML’s Advanced Translation Editor"
+msgstr "Подключение к расширенному редактору переводов WPML"
+
+#: src/js/ate/enable/init.js:67
+msgid "Try again"
+msgstr "Повторить"
+
+#: src/js/ate/review/init.js:17
+msgid "You don't have the rights to review this language"
+msgstr "У вас нет прав для проверки этого языка"
+
+#: src/js/ate/status-bar/components/AteJobsStatus.js:33
+msgid "translations"
+msgstr "переводы"
+
+#: src/js/ate/status-bar/components/AteJobsStatus.js:34
+msgid "left in the queue"
+msgstr "осталось в очереди"
+
+#: src/js/ate/status-bar/components/AteJobsStatus.js:43
+msgid "Translation on hold"
+msgstr "Перевод приостановлен"
+
+#: src/js/ate/status-bar/components/AteJobsStatus.js:45
+#: src/js/ate/status-bar/components/constants.js:16
+msgid "No translations in the queue"
+msgstr "В очереди нет переводов"
+
+#: src/js/ate/status-bar/components/AteJobsStatus.js:50
+msgid "%d translations left"
+msgstr "Осталось %d переводов"
+
+#: src/js/ate/status-bar/components/StatusBar/Notifications.js:38
+msgid "%d min remaining"
+msgstr "Осталось %d мин"
+
+#: src/js/ate/status-bar/components/StatusBar/Notifications.js:39
+msgid "less than 1 min remaining"
+msgstr "Осталось меньше 1 мин"
+
+#: src/js/ate/status-bar/components/constants.js:105
+#. %d is replaced by the number of jobs to review.
+msgid "%d translation waiting for review"
+msgid_plural "%d translations waiting for review"
+msgstr[0] "%d перевод ожидает проверки"
+msgstr[1] "%d перевода ожидают проверки"
+msgstr[2] "%d переводов ожидают проверки"
+
+#: src/js/ate/status-bar/components/constants.js:119
+msgid "Translate Everything Automatically has unresolved jobs"
+msgstr "Автоматический перевод всего имеет невыполненные задания"
+
+#: src/js/ate/status-bar/components/constants.js:121
+msgid "Automatic translation has unresolved jobs"
+msgstr "Автоматический перевод имеет невыполненные задания"
+
+#: src/js/ate/status-bar/components/constants.js:126
+#. %d is replaced by the number of unsolvable jobs.
+msgid "%d job couldn't be completed. Go to Translation Dashboard to review and resolve."
+msgid_plural "%d jobs couldn't be completed. Go to Translation Dashboard to review and resolve."
+msgstr[0] "Не удалось выполнить %d задание. Перейдите в Панель управления переводами для просмотра и решения."
+msgstr[1] "Не удалось выполнить %d задания. Перейдите в Панель управления переводами для просмотра и решения."
+msgstr[2] "Не удалось выполнить %d заданий. Перейдите в Панель управления переводами для просмотра и решения."
+
+#: src/js/ate/status-bar/components/constants.js:14
+#: src/js/ate/translate-everything/components/Status/index.js:50
+msgid "Automatic translation status"
+msgstr "Статус автоматического перевода"
+
+#: src/js/ate/status-bar/components/constants.js:18
+msgid "Translate Everything Automatically"
+msgstr "Перевести всё автоматически"
+
+#: src/js/ate/status-bar/components/constants.js:20
+msgid "Translate Everything Automatically is active"
+msgstr "Функция «Перевести всё автоматически» активна"
+
+#: src/js/ate/status-bar/components/constants.js:24
+msgid "Translate Everything Automatically is paused — payment required"
+msgstr "Функция «Перевести всё автоматически» приостановлена — требуется оплата"
+
+#: src/js/ate/status-bar/components/constants.js:26
+msgid "Automatic translation is paused — payment required"
+msgstr "Автоматический перевод приостановлен — требуется оплата"
+
+#: src/js/ate/status-bar/components/constants.js:28
+msgid ""
+"We couldn’t process your payment. Click “Pay now” to complete the "
+"transaction and resume automatic translation."
+msgstr "Не удалось обработать ваш платёж. Нажмите «Оплатить сейчас», чтобы завершить транзакцию и возобновить автоматический перевод."
+
+#: src/js/ate/status-bar/components/constants.js:32
+msgid "Translate Everything automatically is paused - not enough credits"
+msgstr "Функция «Перевести всё автоматически» приостановлена — недостаточно кредитов"
+
+#: src/js/ate/status-bar/components/constants.js:34
+msgid "Automatic translation is paused — not enough credits"
+msgstr "Автоматический перевод приостановлен — недостаточно кредитов"
+
+#: src/js/ate/status-bar/components/constants.js:36
+msgid "Translation will resume automatically once you assign more credits."
+msgstr "Перевод возобновится автоматически, как только вы назначите больше кредитов."
+
+#: src/js/ate/status-bar/components/constants.js:38
+msgid "You have %s prepaid translation credit in your WPML account. Assign these credits to this site to resume automatic translation"
+msgid_plural "You have %s prepaid translation credits in your WPML account. Assign these credits to this site to resume automatic translation"
+msgstr[0] "У вас есть %s предоплаченный кредит для перевода в вашей учётной записи WPML. Назначьте эти кредиты этому сайту, чтобы возобновить автоматический перевод"
+msgstr[1] "У вас есть %s предоплаченных кредита для перевода в вашей учётной записи WPML. Назначьте эти кредиты этому сайту, чтобы возобновить автоматический перевод"
+msgstr[2] "У вас есть %s предоплаченных кредитов для перевода в вашей учётной записи WPML. Назначьте эти кредиты этому сайту, чтобы возобновить автоматический перевод"
+
+#: src/js/ate/status-bar/components/constants.js:72
+#: src/js/ate/status-bar/components/sending/index.js:10
+msgid "Preparing content for translation"
+msgstr "Подготовка контента для перевода"
+
+#: src/js/ate/status-bar/components/constants.js:74
+#: src/js/ate/status-bar/components/sending/index.js:9
+msgid "Preparing more content for translation"
+msgstr "Подготовка дополнительного контента для перевода"
+
+#: src/js/ate/status-bar/components/constants.js:77
+#. %s is replaced by the name of the language.
+msgid ""
+"Your default language, %s, must be mapped to a supported language in order "
+"to use automatic translation."
+msgstr "Ваш язык по умолчанию, %s, должен быть сопоставлен с поддерживаемым языком, чтобы использовать автоматический перевод."
+
+#: src/js/ate/status-bar/components/constants.js:85
+#. %s is replaced by the language(s) name.
+msgid "Your language, %s, must be mapped to a supported language in order to use automatic translation."
+msgid_plural "The following languages on your site must be mapped to a supported language in order to use automatic translation: %s"
+msgstr[0] "Ваш язык, %s, должен быть сопоставлен с поддерживаемым языком, чтобы использовать автоматический перевод."
+msgstr[1] "Следующие языки на вашем сайте должны быть сопоставлены с поддерживаемым языком, чтобы использовать автоматический перевод: %s"
+msgstr[2] "Следующие языки на вашем сайте должны быть сопоставлены с поддерживаемым языком, чтобы использовать автоматический перевод: %s"
+
+#: src/js/ate/status-bar/components/constants.js:95
+msgid ""
+"Content in those languages: %s, cannot be automatically translated unless "
+"you map them to a language that's different from the default."
+msgstr "Контент на этих языках: %s, не может быть автоматически переведён, если вы не сопоставите их с языком, отличным от языка по умолчанию."
+
+#: src/js/ate/status-bar/components/credit/index.js:100
+msgid "Account credits used"
+msgstr "Использовано кредитов аккаунта"
+
+#: src/js/ate/status-bar/components/credit/index.js:110
+msgid ""
+"Once you’ve used all your prepaid credits, we’ll invoice you for any "
+"additional credits you use after the end of the month"
+msgstr "После того как вы используете все свои предоплаченные кредиты, мы выставим вам счёт за любые дополнительные кредиты, которые вы используете после окончания месяца"
+
+#: src/js/ate/status-bar/components/credit/index.js:115
+msgid "Payment limit:"
+msgstr "Лимит оплаты:"
+
+#: src/js/ate/status-bar/components/credit/index.js:116
+msgid "%s credits"
+msgstr "%s кредитов"
+
+#: src/js/ate/status-bar/components/credit/index.js:119
+msgid "Credits used:"
+msgstr "Использовано кредитов:"
+
+#: src/js/ate/status-bar/components/credit/index.js:123
+msgid "Credits left:"
+msgstr "Осталось кредитов:"
+
+#: src/js/ate/status-bar/components/credit/index.js:133
+msgid ""
+"The number of credit you will receive an invoice for at the end of the "
+"month. View your pay-as-you-go details in your site’s automatic translation "
+"settings."
+msgstr "Количество кредитов, за которые вы получите счёт в конце месяца. Просмотрите свои данные об оплате по факту использования в настройках автоматического перевода вашего сайта."
+
+#: src/js/ate/status-bar/components/credit/index.js:139
+msgid "Calculating"
+msgstr "Расчёт"
+
+#: src/js/ate/status-bar/components/credit/index.js:59
+msgid "Remaining prepaid credits that are assigned to this site on WPML.org."
+msgstr "Оставшиеся предоплаченные кредиты, назначенные этому сайту на WPML.org."
+
+#: src/js/ate/status-bar/components/credit/index.js:73
+msgid "Prepaid credits left"
+msgstr "Осталось предоплаченных кредитов"
+
+#: src/js/ate/status-bar/components/credit/index.js:99
+msgid "Pay-as-you-go credits used"
+msgstr "Использовано кредитов по факту использования"
+
+#: src/js/ate/status-bar/components/minimum-requirements/MinimumRequirementsNotification.js:25
+msgid "Your site doesn't meet WPML's minimum requirements"
+msgstr "Ваш сайт не соответствует минимальным требованиям WPML"
+
+#: src/js/ate/status-bar/components/minimum-requirements/MinimumRequirementsNotification.js:31
+msgid "Fix it"
+msgstr "Исправить"
+
+#: src/js/ate/status-bar/model/notification-center-action-presets.js:17
+msgid "Stop"
+msgstr "Остановить"
+
+#: src/js/ate/status-bar/model/notification-center-action-presets.js:26
+#: src/js/ate/status-icons/StatusUpdater.js:133
+msgid "Pay now"
+msgstr "Оплатить сейчас"
+
+#: src/js/ate/status-bar/model/notification-center-action-presets.js:34
+#: src/js/ate/status-icons/StatusUpdater.js:134
+msgid "Get more credits"
+msgstr "Получить больше кредитов"
+
+#: src/js/ate/status-bar/model/notification-center-action-presets.js:42
+msgid "Assign credits"
+msgstr "Назначить кредиты"
+
+#: src/js/ate/status-bar/model/notification-center-action-presets.js:50
+msgid "Go to Translation Jobs"
+msgstr "Перейти к заданиям перевода"
+
+#: src/js/ate/status-bar/model/notification-center-action-presets.js:8
+msgid "Resume"
+msgstr "Возобновить"
+
+#: src/js/ate/status-icons/StatusUpdater.js:159
+msgid ""
+"This translation couldn't be completed due to an unexpected error. Please "
+"try resending it."
+msgstr "Этот перевод не удалось завершить из-за непредвиденной ошибки. Пожалуйста, попробуйте отправить его повторно."
+
+#: src/js/ate/status-icons/StatusUpdater.js:80
+msgid "Refreshing translation status"
+msgstr "Обновление статуса перевода"
+
+#: src/js/ate/translate-everything/components/ManualTranslationStatus/index.js:26
+msgid ""
+"Read more about how to translate your content in the <a>Getting Started "
+"Guide</a>"
+msgstr "Подробнее о том, как переводить контент, читайте в <a>Руководстве по началу работы</a>"
+
+#: src/js/ate/translate-everything/components/ManualTranslationStatus/index.js:36
+msgid "Let's Start Translating!"
+msgstr "Начнём переводить!"
+
+#: src/js/ate/translate-everything/components/ManualTranslationStatus/index.js:38
+msgid ""
+"Choose your content from the Translation Dashboard below and create your "
+"first translation job!"
+msgstr "Выберите свой контент на панели управления переводами ниже и создайте свою первую задачу перевода!"
+
+#: src/js/ate/translate-everything/components/Status/index.js:105
+msgid ""
+"Change your <a>automatic translation settings</a> (in-progress translation "
+"jobs will be completed with the current settings)."
+msgstr "Измените свои <a>настройки автоматического перевода</a> (незавершённые задачи перевода будут выполнены с текущими настройками)."
+
+#: src/js/ate/translate-everything/components/Status/index.js:115
+msgid "Read more about translating your site automatically."
+msgstr "Подробнее об автоматическом переводе вашего сайта."
+
+#: src/js/ate/translate-everything/components/Status/index.js:49
+msgid "Your site is being automatically translated!"
+msgstr "Ваш сайт переводится автоматически!"
+
+#: src/js/ate/translate-everything/components/Status/index.js:58
+msgid "Calculating..."
+msgstr "Расчёт..."
+
+#: src/js/ate/translate-everything/components/Status/index.js:88
+msgid "Do not close WP admin!"
+msgstr "Не закрывайте админку WP!"
+
+#: src/js/ate/translate-everything/components/Status/index.js:96
+msgid "The number of translations"
+msgstr "Количество переводов"

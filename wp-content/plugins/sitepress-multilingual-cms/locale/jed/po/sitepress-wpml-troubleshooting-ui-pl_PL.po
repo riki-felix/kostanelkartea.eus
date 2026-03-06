@@ -1,0 +1,143 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: pl_PL\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: src/js/troubleshooting/cancelJobs/CancelJobs.js:17
+msgid "Preparing..."
+msgstr "Przygotowywanie..."
+
+#: src/js/troubleshooting/cancelJobs/CancelJobs.js:77
+msgid "All jobs have been cancelled"
+msgstr "Wszystkie zadania zostały anulowane"
+
+#: src/js/troubleshooting/cancelJobs/CancelJobs.js:79
+msgid "There is no more jobs to cancel"
+msgstr "Brak zadań do anulowania"
+
+#: src/js/troubleshooting/cancelJobs/CancelJobs.js:82
+msgid "The jobs cancellation has failed"
+msgstr "Anulowanie zadań nie powiodło się"
+
+#: src/js/troubleshooting/cancelJobs/CancelJobs.js:88
+msgid "Cancel in-progress automatic jobs"
+msgstr "Anuluj automatyczne zadania w toku"
+
+#: src/js/troubleshooting/lsTemplates/UpdateDomain.js:31
+msgid "Domain name has been updated"
+msgstr "Nazwa domeny została zaktualizowana"
+
+#: src/js/troubleshooting/lsTemplates/UpdateDomain.js:33
+msgid "Domain name update has been failed"
+msgstr "Aktualizacja nazwy domeny nie powiodła się"
+
+#: src/js/troubleshooting/lsTemplates/UpdateDomain.js:41
+msgid "Update domain name in language switcher settings"
+msgstr "Zaktualizuj nazwę domeny w ustawieniach przełącznika języka"
+
+#: src/js/troubleshooting/optimizeDbTables/components/DiskSpaceDisclaimerAlert.js:7
+msgid "Disclaimer: MySQL Disk Space"
+msgstr "Zastrzeżenie: Miejsce na dysku MySQL"
+
+#: src/js/troubleshooting/optimizeDbTables/components/DiskSpaceDisclaimerAlert.js:8
+msgid ""
+"Cleaning and compressing the wp_icl_translate and wp_icl_translation_status "
+"tables reduces its data size, but does not automatically free up disk space "
+"in MySQL. To reclaim disk space, a table rebuild is required—a risky "
+"operation not performed automatically by this tool."
+msgstr "Czyszczenie i kompresowanie tabel wp_icl_translate i wp_icl_translation_status zmniejsza ich rozmiar danych, ale nie zwalnia automatycznie miejsca na dysku w MySQL. Aby odzyskać miejsce na dysku, wymagana jest przebudowa tabeli — ryzykowna operacja, która nie jest wykonywana automatycznie przez to narzędzie."
+
+#: src/js/troubleshooting/optimizeDbTables/components/OptimizeDbTables.js:38
+msgid "Optimize translation tables"
+msgstr "Optymalizuj tabele tłumaczeń"
+
+#: src/js/troubleshooting/optimizeDbTables/components/OptimizeDbTables.js:47
+msgid "Previous State Migration"
+msgstr "Migracja poprzedniego stanu"
+
+#: src/js/troubleshooting/optimizeDbTables/components/OptimizeDbTables.js:58
+msgid "Translation Elements Migration"
+msgstr "Migracja elementów tłumaczenia"
+
+#: src/js/troubleshooting/optimizeDbTables/components/OptimizeDbTables.js:64
+msgid "Processed"
+msgstr "Przetworzono"
+
+#: src/js/troubleshooting/optimizeDbTables/components/OptimizeDbTables.js:72
+msgid "Error"
+msgstr "Błąd"
+
+#: src/js/troubleshooting/optimizeDbTables/components/OptimizeDbTables.js:82
+msgid "Success"
+msgstr "Sukces"
+
+#: src/js/troubleshooting/optimizeDbTables/components/OptimizeDbTables.js:83
+msgid "Database tables optimization completed successfully."
+msgstr "Optymalizacja tabel bazy danych zakończona pomyślnie."
+
+#: src/js/troubleshooting/optimizeDbTables/components/ResourceWarningAlert.js:7
+msgid "Warning"
+msgstr "Ostrzeżenie"
+
+#: src/js/troubleshooting/optimizeDbTables/components/ResourceWarningAlert.js:8
+msgid ""
+"This process is resource-intensive and may take a significant amount of "
+"time. It is recommended to run this optimization during periods of low "
+"traffic."
+msgstr "Ten proces jest zasobochłonny i może zająć znaczną ilość czasu. Zaleca się przeprowadzanie tej optymalizacji w okresach niskiego ruchu."
+
+#: src/js/troubleshooting/optimizeDbTables/index.js:16
+msgid "Database Tables Optimization"
+msgstr "Optymalizacja tabel bazy danych"
+
+#: src/js/troubleshooting/refreshLicense/RefreshLicense.js:14
+msgid "Refresh license data to recognise license update"
+msgstr "Odśwież dane licencji, aby rozpoznać aktualizację licencji"
+
+#: src/js/troubleshooting/refreshLicense/useRefreshLicense.js:36
+msgid "WPML License has been refreshed"
+msgstr "Licencja WPML została odświeżona"
+
+#: src/js/troubleshooting/retryStuckJobs/RetryStuckJobs.js:11
+msgid "Translate Everything Automatically is not active."
+msgstr "Funkcja „Tłumacz wszystko automatycznie” nie jest aktywna."
+
+#: src/js/troubleshooting/retryStuckJobs/RetryStuckJobs.js:49
+msgid "Retry stuck automatic translations"
+msgstr "Ponów zawieszone tłumaczenia automatyczne"
+
+#: src/js/troubleshooting/retryStuckJobs/RetryStuckJobs.js:54
+msgid ""
+"Resends translation jobs that couldn't be processed due to a temporary "
+"issue while Translate Everything Automatically was active."
+msgstr "Ponownie wysyła zadania tłumaczenia, które nie mogły zostać przetworzone z powodu tymczasowego problemu, gdy funkcja „Tłumacz wszystko automatycznie” była aktywna."
+
+#: src/js/troubleshooting/retryStuckJobs/Utils/getStatusMessage.js:10
+msgid "Checking for stuck translation jobs..."
+msgstr "Sprawdzanie zawieszonych zadań tłumaczenia..."
+
+#: src/js/troubleshooting/retryStuckJobs/Utils/getStatusMessage.js:13
+msgid "Processing... %s stuck translation found so far"
+msgid_plural "Processing... %s stuck translations found so far"
+msgstr[0] "Przetwarzanie... znaleziono %s zawieszone tłumaczenie"
+msgstr[1] "Przetwarzanie... znaleziono %s zawieszone tłumaczenia"
+msgstr[2] "Przetwarzanie... znaleziono %s zawieszonych tłumaczeń"
+
+#: src/js/troubleshooting/retryStuckJobs/Utils/getStatusMessage.js:25
+msgid ""
+"Something went wrong while checking for stuck translation jobs. Please "
+"<a>contact WPML support</a>."
+msgstr "Coś poszło nie tak podczas sprawdzania zawieszonych zadań tłumaczenia. Prosimy o <a>kontakt z pomocą techniczną WPML</a>."
+
+#: src/js/troubleshooting/retryStuckJobs/Utils/getStatusMessage.js:37
+msgid "No stuck translation jobs found."
+msgstr "Nie znaleziono zawieszonych zadań tłumaczenia."
+
+#: src/js/troubleshooting/retryStuckJobs/Utils/getStatusMessage.js:41
+msgid "%s stuck translation job found. WPML will translate it automatically in the background.\nYou can check the progress in the Translation Dashboard."
+msgid_plural "%s stuck translation jobs found. WPML will translate them automatically in the background.\nYou can check their progress in the Translation Dashboard."
+msgstr[0] "Znaleziono %s zawieszone zadanie tłumaczenia. WPML przetłumaczy je automatycznie w tle.\nPostęp można sprawdzić w panelu tłumaczeń."
+msgstr[1] "Znaleziono %s zawieszone zadania tłumaczenia. WPML przetłumaczy je automatycznie w tle.\nPostęp można sprawdzić w panelu tłumaczeń."
+msgstr[2] "Znaleziono %s zawieszonych zadań tłumaczenia. WPML przetłumaczy je automatycznie w tle.\nPostęp można sprawdzić w panelu tłumaczeń."

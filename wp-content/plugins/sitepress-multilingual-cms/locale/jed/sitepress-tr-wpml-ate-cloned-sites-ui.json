@@ -1,0 +1,207 @@
+{
+   "domain": "messages",
+   "locale_data": {
+      "messages": {
+         "": {
+            "domain": "messages",
+            "plural_forms": "nplurals=2; plural=(n > 1);",
+            "lang": "tr_TR"
+         },
+         "Close": [
+            "Kapat"
+         ],
+         "Please take a screenshot of this message and report this issue to <a>WPML support</a>.": [
+            "Lütfen bu mesajın ekran görüntüsünü alın ve bu sorunu <a>WPML desteğine</a> bildirin."
+         ],
+         "WPML has automatically unregistered your site as part of this wizard. After you close it, you’ll see a prompt to register the site again. This is expected, your content and translations are safe.": [
+            "WPML, bu sihirbazın bir parçası olarak sitenizin kaydını otomatik olarak sildi. Kapattıktan sonra, siteyi tekrar kaydetmeniz için bir istem göreceksiniz. Bu beklenen bir durumdur, içeriğiniz ve çevirileriniz güvendedir."
+         ],
+         "You’re all set": [
+            "Hazırsınız"
+         ],
+         "This site is a copy of the original site %s and it doesn’t currently have any automatic translation credits.": [
+            "Bu site, orijinal site %s'nın bir kopyasıdır ve şu anda otomatik çeviri kredisi bulunmamaktadır."
+         ],
+         "If you’d like to use automatic translation here in the future, you can either <a1>add credits</a1> or <a2>share them from the original site</a2>.": [
+            "Gelecekte burada otomatik çeviri kullanmak isterseniz, <a1>kredi ekleyebilir</a1> veya <a2>bunları orijinal siteden paylaşabilirsiniz</a2>."
+         ],
+         "There was an error checking for credits to share. Please take a screenshot of this message and report it in <a>WPML support</a>.": [
+            "Paylaşılacak krediler kontrol edilirken bir hata oluştu. Lütfen bu mesajın ekran görüntüsünü alın ve <a>WPML desteğine</a> bildirin."
+         ],
+         "To link %s and %s so they share automatic translation credits, follow these steps:": [
+            "%s ve %s'yı otomatik çeviri kredilerini paylaşmaları için bağlamak üzere şu adımları izleyin:"
+         ],
+         "Open <a>this link</a> to access the original site’s admin area. (You can’t access this screen by visiting %s directly.)": [
+            "Orijinal sitenin yönetici alanına erişmek için <a>bu bağlantıyı</a> açın. (%s adresini doğrudan ziyaret ederek bu ekrana erişemezsiniz.)"
+         ],
+         "Click <b>Copy migration code</b> on that page.": [
+            "O sayfada <b>Taşıma kodunu kopyala</b>'ya tıklayın."
+         ],
+         "Paste the code below to complete the connection.": [
+            "Bağlantıyı tamamlamak için kodu aşağıya yapıştırın."
+         ],
+         "Migration code": [
+            "Taşıma kodu"
+         ],
+         "Continue": [
+            "Devam et"
+         ],
+         "Go back": [
+            "Geri dön"
+         ],
+         "Connect Automatic Translation Credits": [
+            "Otomatik çeviri kredilerini bağla"
+         ],
+         "WPML was unable to copy your site's translations, translation memory, and glossary to this new URL.": [
+            "WPML, sitenizin çevirilerini, çeviri belleğini ve sözlüğünü bu yeni URL'ye kopyalayamadı."
+         ],
+         "Error with copying translation information to new URL": [
+            "Çeviri bilgilerini yeni URL'ye kopyalama hatası"
+         ],
+         "This site and its copy on %s are now sharing automatic translation credits.": [
+            "Bu site ve %s üzerindeki kopyası artık otomatik çeviri kredilerini paylaşıyor."
+         ],
+         "Any credits you add to one site will be available on both. If you stop using this site, your credits will remain safe.": [
+            "Bir siteye eklediğiniz tüm krediler her ikisinde de kullanılabilir olacaktır. Bu siteyi kullanmayı bırakırsanız, kredileriniz güvende kalacaktır."
+         ],
+         "WPML was unable to connect your old and new URLs to share automatic translation credits.": [
+            "WPML, eski ve yeni URL'lerinizi otomatik çeviri kredilerini paylaşmak üzere bağlayamadı."
+         ],
+         "Error with sharing automatic translation credits": [
+            "Otomatik çeviri kredilerini paylaşma hatası"
+         ],
+         "The site on %s has %d credits for automatic translation. Do you want to share these credits with this new site %s?": [
+            "%s adresindeki sitede otomatik çeviri için %d kredi bulunmaktadır. Bu kredileri bu yeni site %s ile paylaşmak ister misiniz?"
+         ],
+         "The site on %s has a pay-as-you-go subscription for automatic translation. Do you want to share these credits between %s and this new location (%s)?": [
+            "%s adresindeki sitede otomatik çeviri için kullandıkça öde aboneliği bulunmaktadır. Bu kredileri %s ve bu yeni konum (%s) arasında paylaşmak ister misiniz?"
+         ],
+         "Yes (recommended)": [
+            "Evet (önerilir)"
+         ],
+         "In the next step, you’ll approve the use of same credits on both sites.": [
+            "Bir sonraki adımda, aynı kredilerin her iki sitede de kullanılmasına onay vereceksiniz."
+         ],
+         "No": [
+            "Hayır"
+         ],
+         "You’ll need to assign new credits or set up pay-as-you-go.": [
+            "Yeni krediler atamanız veya kullandıkça öde sistemini kurmanız gerekecek."
+         ],
+         "What happens when you share credits between sites?": [
+            "Siteler arasında kredi paylaştığınızda ne olur?"
+         ],
+         "Translation credits for this site": [
+            "Bu site için çeviri kredileri"
+         ],
+         "WPML detected a change in your site's URL": [
+            "WPML sitenizin URL'sinde bir değişiklik algıladı"
+         ],
+         "You can now continue translating content on this site as usual.": [
+            "Artık bu sitede içeriği her zamanki gibi çevirmeye devam edebilirsiniz."
+         ],
+         "Just a reminder: there shouldn’t be another copy of this site running at %s. If there is, automatic translation won’t work correctly on that site.": [
+            "Sadece bir hatırlatma: %s adresinde bu sitenin başka bir kopyası çalışmamalıdır. Eğer varsa, otomatik çeviri o sitede doğru çalışmayacaktır."
+         ],
+         "You indicated that the original site at %s is no longer active. This means:": [
+            "%s adresindeki orijinal sitenin artık etkin olmadığını belirttiniz. Bu şu anlama gelir:"
+         ],
+         "Automatic translation will no longer work on the old site": [
+            "Otomatik çeviri eski sitede artık çalışmayacak"
+         ],
+         "Accessing the old site may trigger warnings on this site": [
+            "Eski siteye erişmek bu sitede uyarıları tetikleyebilir"
+         ],
+         "Please confirm:": [
+            "Lütfen onaylayın:"
+         ],
+         "I understand and confirm that <b>%s</b> is no longer in use.": [
+            "<b>%s</b> adresinin artık kullanılmadığını anlıyor ve onaylıyorum."
+         ],
+         "Back": [
+            "Geri"
+         ],
+         "Please Confirm": [
+            "Lütfen onaylayın"
+         ],
+         "WPML was unable to update our records with your new URL.": [
+            "WPML, kayıtlarımızı yeni URL'nizle güncelleyemedi."
+         ],
+         "Error with moving translation information to new URL": [
+            "Çeviri bilgilerini yeni URL'ye taşıma hatası"
+         ],
+         "It looks like this site was previously at %s and is now running on %s.": [
+            "Görünüşe göre bu site daha önce %s adresindeydi ve şimdi %s adresinde çalışıyor."
+         ],
+         "Is the original site still available at %s?": [
+            "Orijinal site hala %s adresinde mevcut mu?"
+         ],
+         "Yes": [
+            "Evet"
+         ],
+         "The original site is still running and this is just a copy of the original site": [
+            "Orijinal site hala çalışıyor ve bu sadece orijinal sitenin bir kopyası"
+         ],
+         "I moved the site to this new address and this is now the main site": [
+            "Siteyi bu yeni adrese taşıdım ve burası artık ana site"
+         ],
+         "WPML Detected a New Site Address": [
+            "WPML yeni bir site adresi algıladı"
+         ],
+         "How to manage translations when migrating from development to production": [
+            "Geliştirmeden üretime geçiş yaparken çeviriler nasıl yönetilir"
+         ],
+         "Looks like this site is a copy of a different site, or moved to a different URL. Please contact your translation manager to update Translation Management plugin configuration.": [
+            "Görünüşe göre bu site farklı bir sitenin kopyası veya farklı bir URL'ye taşınmış. Lütfen Çeviri Yönetimi eklentisi yapılandırmasını güncellemek için çeviri yöneticinizle iletişime geçin."
+         ],
+         "Site Moved or Copied - Action Required": [
+            "Site taşındı veya kopyalandı - işlem gerekli"
+         ],
+         "You or someone else moved this site to %s. Please keep in mind that:": [
+            "Siz veya başka biri bu siteyi %s adresine taşıdı. Lütfen şunu unutmayın:"
+         ],
+         "Translations that you do at %s will not appear on this site.": [
+            "%s adresinde yaptığınız çeviriler bu sitede görünmeyecektir."
+         ],
+         "You cannot edit translations on this site.": [
+            "Bu sitedeki çevirileri düzenleyemezsiniz."
+         ],
+         "The site at %s is using the same credits for automatic translation as this site.": [
+            "%s adresindeki site, bu siteyle aynı otomatik çeviri kredilerini kullanıyor."
+         ],
+         "If you didn't intend to move this site to %s, you can <a>indicate that this site should be at %s</a>.": [
+            "Bu siteyi %s adresine taşımak istemediyseniz, <a>bu sitenin %s adresinde olması gerektiğini belirtebilirsiniz</a>."
+         ],
+         "This site has moved to a new location": [
+            "Bu site yeni bir konuma taşındı"
+         ],
+         "If you prefer not to move this site, you can <a>mark it as a copy</a> and enable automatic translation for it.": [
+            "Bu siteyi taşımamayı tercih ederseniz, <a>onu bir kopya olarak işaretleyebilir</a> ve otomatik çeviriyi etkinleştirebilirsiniz."
+         ],
+         "Moving the site back here will mean that you will be able to translate on this domain again, but you will not be able to update translations at %s.": [
+            "Siteyi buraya geri taşımak, bu alanda tekrar çeviri yapabileceğiniz anlamına gelir, ancak %s adresindeki çevirileri güncelleyemezsiniz."
+         ],
+         "Yes - move back here": [
+            "Evet - buraya geri taşı"
+         ],
+         "No - keep the site on %s": [
+            "Hayır - siteyi %s adresinde tut"
+         ],
+         "Are you sure that this site should run on %s and not %s?": [
+            "Bu sitenin %s adresinde değil, %s adresinde çalışması gerektiğinden emin misiniz?"
+         ],
+         "WPML noticed that your site is being accessed from a different domain or URL.": [
+            "WPML, sitenize farklı bir alan adından veya URL'den erişildiğini fark etti."
+         ],
+         "To make sure everything continues working correctly, including automatic translation and site registration, we need to verify and update your site settings.": [
+            "Otomatik çeviri ve site kaydı dahil her şeyin doğru çalışmaya devam ettiğinden emin olmak için site ayarlarınızı doğrulamamız ve güncellememiz gerekiyor."
+         ],
+         "This will only take a moment.": [
+            "Bu sadece bir an sürecek."
+         ],
+         "Start Migration": [
+            "Taşımayı başlat"
+         ]
+      }
+   }
+}

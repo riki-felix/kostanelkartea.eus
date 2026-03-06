@@ -1,0 +1,84 @@
+/* CSS Reset & Base Styles */
+:root {
+  /* Color Base */
+  --color-light:     #F6F4E7;
+  --color-accent:    #af9a01;
+  --color-primary:   #167840;
+  --color-secondary: #D1CFC4;
+  
+  /* Color Scale */
+--cp-100: #B8CEBC;   /* verde muy claro */
+  --cp-200: #8CAF94;   /* verde claro */
+  --cp-300: #61906C;   /* verde medio-claro */
+  --cp-400: #3D6F4A;   /* verde medio */
+  --cp-500: #1F4D2E;   /* verde medio-oscuro */
+  --cp-600: #0D3820;   /* verde oscuro */
+  --cp-700: #012615;   /* referencia */
+  --cp-800: #00160C;   /* casi negro verdoso */
+  
+  --cs-700: #C1BFA9;
+
+  /* Color Scale */
+  .bg-100{background-color: var(--cp-100);}
+  .bg-200{background-color: var(--cp-200);}
+  .bg-300{background-color: var(--cp-300);}
+  .bg-400{background-color: var(--cp-400);}
+  .bg-500{background-color: var(--cp-500);}
+  .bg-600{background-color: var(--cp-600);}
+  .bg-700{background-color: var(--cp-700);}
+  .bg-800{background-color: var(--cp-800);}
+  .bg-light{background-color: var(--color-light);}
+  .accent {color: var(--color-accent);}
+  
+  /* Color semantics */
+  --color-text:         var(--cp-700);
+  --color-background:   var(--cp-700);
+  --color-text-link:    var(--color-primary);
+
+  /* Typography */
+  --font-body: "Inter",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  --font-heading: "EscrowBannerCond",serif;
+  --font-brand: "EscrowComp",serif;
+  --fs-xs: 1.4rem;
+  --fs-s: 1.6rem;
+  --fs-m: 2.0rem;
+  --fs-l: 2.6rem;
+  --fs-xl: 3.0rem;
+  --fs-xxl: 3.0rem;
+  --fs-xxxl: 3.6rem;
+  --fs-huge: 4.6rem;
+  @media (min-width: 750px) {
+    --fs-xl: 3.0rem;
+    --fs-xxl: 4.0rem;
+    --fs-xxxl: 6.0rem;
+    --fs-huge: 10.0rem;
+  }
+  --fw-light: 100;
+  --fw-regular: 350;
+  --fw-bold: 700;
+  
+  /* Typography */
+  --sp-xxs: 0.4rem;
+  --sp-xs: 0.8rem;
+  --sp-s: 1.2rem;
+  --sp-m: 1.6rem;
+  --sp-l: 2.4rem;
+  --sp-xl: 3.2rem;
+  --sp-xxl: 4.0rem;
+  --sp-huge: 5.6rem;
+  --sp-super: 14.0rem;
+  
+  /* Viewport */
+  --page-width: 100%;
+  --page-reading: 100%;
+  --page-margin: 2.0rem;
+  
+  /* Border */
+  --border-rounded: 999px;
+  @media (min-width: 750px) {
+    /* Viewport */
+    --page-width: 120.0rem;
+    --page-reading: 70.0rem;
+    --page-margin: 4.0rem;
+  }
+}

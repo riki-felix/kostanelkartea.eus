@@ -1,0 +1,1530 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-18T16:02:11+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: wpml\n"
+"Language: nl_NL\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Untranslated strings that I encounter on front-end while logged in"
+msgstr "Onvertaalde strings die ik tegenkom op de front-end terwijl ik ben ingelogd"
+
+msgid "Untranslated strings that all front-end users encounter"
+msgstr "Onvertaalde strings die alle front-end gebruikers tegenkomen"
+
+msgid "Disable auto-registration of strings"
+msgstr "Automatische registratie van strings uitschakelen"
+
+msgid "Plugins"
+msgstr "Plugins"
+
+msgid "Themes"
+msgstr "Thema's"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "Other"
+msgstr "Overig"
+
+msgid "We cancelled %1$d of %2$d items, but %3$d failed. Please reload the page and try again."
+msgstr "We hebben %1$d van %2$d items geannuleerd, maar %3$d is mislukt. Laad de pagina opnieuw en probeer het nogmaals."
+
+msgid "We resent %1$d of %2$d items, but %3$d failed. Please reload the page and try again."
+msgstr "We hebben %1$d van %2$d items opnieuw verzonden, maar %3$d is mislukt. Laad de pagina opnieuw en probeer het nogmaals."
+
+msgid "Error in fetching default translation batch name"
+msgstr "Fout bij het ophalen van de standaard batchnaam voor vertalingen"
+
+msgid "Error in fetching translation editor type."
+msgstr "Fout bij het ophalen van het type vertaalbewerker."
+
+msgid "Error in fetching untranslated types count"
+msgstr "Fout bij het ophalen van het aantal onvertaalde typen"
+
+msgid "Error in fetching remote translation service data."
+msgstr "Fout bij het ophalen van gegevens van de externe vertaalservice."
+
+msgid "Validation failed"
+msgstr "Validatie mislukt"
+
+msgid "Translation jobs couldn’t be canceled"
+msgstr "Vertaaltaken konden niet worden geannuleerd"
+
+msgid "Reload the page and try again."
+msgstr "Ververs de pagina en probeer het opnieuw."
+
+msgid "All unfinished translation jobs were canceled"
+msgstr "Alle onvoltooide vertaaltaken zijn geannuleerd"
+
+msgid "Please wait until download finishes"
+msgstr "Wacht tot het downloaden is voltooid"
+
+msgid "You need to wait 5 minutes after the last check"
+msgstr "U moet 5 minuten wachten na de laatste controle"
+
+msgid "Check status and get translations"
+msgstr "Controleer de status en ontvang vertalingen"
+
+msgid "Status: "
+msgstr "Status: "
+
+msgid "Downloaded jobs: "
+msgstr "Gedownloade taken: "
+
+msgid "Cancelled jobs: "
+msgstr "Geannuleerde taken: "
+
+msgid "none of your translation jobs have been completed"
+msgstr "geen van uw vertaaltaken is voltooid"
+
+msgid "Checking translation jobs status. Please don't close this page!"
+msgstr "Status van vertaaltaken controleren. Sluit deze pagina niet!"
+
+msgid " have been sent to remote translators"
+msgstr " zijn verzonden naar externe vertalers"
+
+msgid " has been sent to remote translators"
+msgstr " is verzonden naar externe vertalers"
+
+msgid "Last check: Never"
+msgstr "Laatste controle: Nooit"
+
+msgid "Filtering is disabled to show all selected items. "
+msgstr "Filteren is uitgeschakeld om alle geselecteerde items te tonen. "
+
+msgid "Apply filters"
+msgstr "Filters toepassen"
+
+msgid "%d item selected"
+msgid_plural "%d items selected"
+msgstr[0] "%d item geselecteerd"
+msgstr[1] "%d items geselecteerd"
+
+msgid "(%d words to translate)"
+msgstr "(%d woorden om te vertalen)"
+
+msgid "%s item not showing."
+msgid_plural "%s items not showing."
+msgstr[0] "%s item wordt niet weergegeven."
+msgstr[1] "%s items worden niet weergegeven."
+
+msgid "Show all selected items"
+msgstr "Toon alle geselecteerde items"
+
+msgid "Translate your content"
+msgstr "Vertaal uw inhoud"
+
+msgid "Unselect all"
+msgstr "Alles deselecteren"
+
+msgid "Source Language:"
+msgstr "Brontaal:"
+
+msgid "translated to:"
+msgstr "vertaald naar:"
+
+msgid "Filter"
+msgstr "Filter"
+
+msgid "You are about to change the source language filter from %s to %s"
+msgstr "U staat op het punt het brontaalfilter te wijzigen van %s naar %s"
+
+msgid "Updating the source language filter will clear the items you've selected for translation. Are you sure you want to continue?"
+msgstr "Het bijwerken van het brontaalfilter wist de items die u voor vertaling hebt geselecteerd. Weet u zeker dat u wilt doorgaan?"
+
+msgid "Change source language"
+msgstr "Brontaal wijzigen"
+
+msgid "Cancel"
+msgstr "Annuleren"
+
+msgid "Filter by publication status"
+msgstr "Filteren op publicatiestatus"
+
+msgid "All Statuses"
+msgstr "Alle statussen"
+
+msgid "All languages"
+msgstr "Alle talen"
+
+msgid "All translation statuses"
+msgstr "Alle vertaalstatussen"
+
+msgid "Not completed"
+msgstr "Niet voltooid"
+
+msgid "Needs updating"
+msgstr "Moet worden bijgewerkt"
+
+msgid "Translation in progress"
+msgstr "Vertaling bezig"
+
+msgid "Translation complete"
+msgstr "Vertaling voltooid"
+
+msgid "Filter by translation status"
+msgstr "Filteren op vertaalstatus"
+
+msgid "Global Filter"
+msgstr "Globaal filter"
+
+msgid "Parent:"
+msgstr "Bovenliggend:"
+
+msgid "Search parent by title"
+msgstr "Bovenliggend zoeken op titel"
+
+msgid "Search by term title in %s"
+msgstr "Zoeken op termtitel in %s"
+
+msgid "All taxonomies"
+msgstr "Alle taxonomieën"
+
+msgid "Loading"
+msgstr "Laden"
+
+msgid "Taxonomy Term:"
+msgstr "Taxonomie term:"
+
+msgid "Loading terms"
+msgstr "Termen laden"
+
+msgid "No terms found"
+msgstr "Geen termen gevonden"
+
+msgid "Filter by:"
+msgstr "Filteren op:"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Automatic translation paused — payment required to continue."
+msgstr "Automatische vertaling gepauzeerd — betaling vereist om door te gaan."
+
+msgid "You have %1s%2s prepaid translation credit in your WPML account%3s. Assign these credits to this site to resume automatic translation"
+msgid_plural "You have %1s%2s prepaid translation credits in your WPML account%3s. Assign these credits to this site to resume automatic translation"
+msgstr[0] "U heeft %1s%2s prepaid vertaaltegoed in uw WPML-account%3s. Wijs deze tegoeden toe aan deze site om de automatische vertaling te hervatten"
+msgstr[1] "U heeft %1s%2s prepaid vertaaltegoeden in uw WPML-account%3s. Wijs deze tegoeden toe aan deze site om de automatische vertaling te hervatten"
+
+msgid "Not enough credits to continue automatic translation. Add more credits to resume."
+msgstr "Niet genoeg tegoeden om de automatische vertaling voort te zetten. Voeg meer tegoeden toe om te hervatten."
+
+msgid "Pay now"
+msgstr "Nu betalen"
+
+msgid "Get more credits"
+msgstr "Meer tegoeden krijgen"
+
+msgid "Assign credits"
+msgstr "Tegoeden toewijzen"
+
+msgid "View"
+msgstr "Bekijken"
+
+msgid "Edit"
+msgstr "Bewerken"
+
+msgid "Edit note for the translators"
+msgstr "Notitie voor de vertalers bewerken"
+
+msgid "Add note for the translators"
+msgstr "Notitie voor de vertalers toevoegen"
+
+msgid "This page is set to be %1$stranslated manually%2$s using the WordPress Editor"
+msgstr "Deze pagina is ingesteld om %1$shandmatig vertaald%2$s te worden met de WordPress Editor"
+
+msgid "Select %s"
+msgstr "Selecteer %s"
+
+msgid "(no title)"
+msgstr "(geen titel)"
+
+msgid "Image"
+msgstr "Afbeelding"
+
+msgid "Date / Status"
+msgstr "Datum / status"
+
+msgid "Loading items..."
+msgstr "Items laden..."
+
+msgid "%1$d %2$s selected"
+msgstr "%1$d %2$s geselecteerd"
+
+msgid "items"
+msgstr "items"
+
+msgid "Filtering is disabled to show all selected items"
+msgstr "Filteren is uitgeschakeld om alle geselecteerde items te tonen"
+
+msgid "Apply filter"
+msgstr "Filter toepassen"
+
+msgid "%1$d %2$s not showing"
+msgstr "%1$d %2$s niet getoond"
+
+msgid "Show selected items"
+msgstr "Geselecteerde items tonen"
+
+msgid " / page"
+msgstr " / pagina"
+
+msgid "Previous"
+msgstr "Vorige"
+
+msgid "Next"
+msgstr "Volgende"
+
+msgid "Your site's content is too vast for a single translation batch. Use filters to reduce the selection, then \"select all\"."
+msgstr "De inhoud van uw site is te uitgebreid voor één vertaalbatch. Gebruik filters om de selectie te verkleinen en “selecteer alles”."
+
+msgid "The current filter captures too much content. Narrow it down to enable \"select all\" for translation."
+msgstr "Het huidige filter omvat te veel inhoud. Beperk het om “alles selecteren” voor vertaling mogelijk te maken."
+
+msgid "Select All"
+msgstr "Alles selecteren"
+
+msgid "All %d items matching criteria are selected"
+msgstr "Alle %d items die aan de criteria voldoen, zijn geselecteerd"
+
+msgid "All %d items in this section are selected"
+msgstr "Alle %d items in deze sectie zijn geselecteerd"
+
+msgid "You have too many items to send for translation at once. Apply a filter to narrow down the items to enable this option."
+msgstr "U hebt te veel items geselecteerd om in één keer voor vertaling te verzenden. Pas een filter toe om de items te beperken en deze optie in te schakelen."
+
+msgid "Clear selection"
+msgstr "Selectie wissen"
+
+msgid "Select all items that match this search"
+msgstr "Selecteer alle items die overeenkomen met deze zoekopdracht"
+
+msgid "Loading..."
+msgstr "Laden..."
+
+msgid "Select all %ss"
+msgstr "Selecteer alle %ss"
+
+msgid "Save note"
+msgstr "Notitie opslaan"
+
+msgid "The following target languages do not support automatic translation: %s. <a>Map to known languages</a> to enable automatic translation."
+msgstr "De volgende doeltalen ondersteunen geen automatische vertaling: %s. <a>Koppel aan bekende talen</a> om automatische vertaling in te schakelen."
+
+msgid "The site's default language %s doesn't support automatic translation."
+msgstr "De standaardtaal van de site %s ondersteunt geen automatische vertaling."
+
+msgid "Some sections are hidden due to current filter settings or because they have no items. <show_all>Show all translation statuses</show_all>"
+msgstr "Sommige secties zijn verborgen vanwege de huidige filterinstellingen of omdat ze geen items bevatten. <show_all>Toon alle vertaalstatussen</show_all>"
+
+msgid "Step 1"
+msgstr "Stap 1"
+
+msgid "Select items for translation"
+msgstr "Items selecteren voor vertaling"
+
+msgid "Clear filters"
+msgstr "Filters wissen"
+
+msgid "strings"
+msgstr "strings"
+
+msgid "WPML didn't find any %s matching your criteria."
+msgstr "WPML heeft geen %s gevonden die overeenkomen met uw criteria."
+
+msgid "You have too many items selected to use this feature. Deselect some of the items to enable it."
+msgstr "U hebt te veel items geselecteerd om deze functie te gebruiken. Deselecteer enkele items om deze in te schakelen."
+
+msgid "Show strings in:"
+msgstr "Strings tonen in:"
+
+msgid "Display Columns"
+msgstr "Kolommen weergeven"
+
+msgid "Close modal"
+msgstr "Modaal sluiten"
+
+msgid "Select visible columns"
+msgstr "Zichtbare kolommen selecteren"
+
+msgid "String"
+msgstr "String"
+
+msgid "Name"
+msgstr "Naam"
+
+msgid "Domain"
+msgstr "Domein"
+
+msgid "Source"
+msgstr "Bron"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Apply"
+msgstr "Toepassen"
+
+msgid "All domains"
+msgstr "Alle domeinen"
+
+msgid "All sources"
+msgstr "Alle bronnen"
+
+msgid "Frontend (viewed)"
+msgstr "Frontend (bekeken)"
+
+msgid "Backend (viewed)"
+msgstr "Backend (bekeken)"
+
+msgid "Unknown"
+msgstr "Onbekend"
+
+msgid "Search string or a name"
+msgstr "String of naam zoeken"
+
+msgid "All Translation Priorities"
+msgstr "Alle vertaalprioriteiten"
+
+msgid "This filter is available only if source is set to \"Frontend\" or \"Backend\"."
+msgstr "Dit filter is alleen beschikbaar als de bron is ingesteld op “Frontend” of “Backend”."
+
+msgid "front-end"
+msgstr "front-end"
+
+msgid "back-end"
+msgstr "back-end"
+
+msgid "viewed"
+msgstr "bekeken"
+
+msgid "Strings in the theme and plugins"
+msgstr "Strings in het thema en plugins"
+
+msgid "Translate front-end texts you can customize from the WordPress admin like footer text, copyright notices, plugin options and settings, time format, widget texts, and more."
+msgstr "Vertaal front-end teksten die u kunt aanpassen vanuit de WordPress-admin, zoals footertekst, copyrightmeldingen, pluginopties en -instellingen, tijdformaat, widgetteksten en meer."
+
+msgid "Translating Strings From Admin and Settings"
+msgstr "Strings vertalen vanuit admin en instellingen"
+
+msgid "Translate texts in admin screens"
+msgstr "Teksten vertalen in admin-schermen"
+
+msgid "Translate User Meta Information"
+msgstr "Gebruikersmeta-informatie vertalen"
+
+msgid "Making User Meta Information Translatable"
+msgstr "Gebruikersmeta-informatie vertaalbaar maken"
+
+msgid "Translate user profile strings"
+msgstr "Gebruikersprofielstrings vertalen"
+
+msgid "You need to visit translations on your site's front-end (<a/>) and WPML will identify all untranslated strings and list them here. "
+msgstr "U moet vertalingen bezoeken op de front-end van uw site (<a/>) en WPML zal alle onvertaalde strings identificeren en hier weergeven. "
+
+msgid "hide details"
+msgstr "details verbergen"
+
+msgid "more details"
+msgstr "meer details"
+
+msgid "Still can't find the strings you're looking to translate? Add more strings for translation."
+msgstr "Kunt u de strings die u wilt vertalen nog steeds niet vinden? Voeg meer strings toe voor vertaling."
+
+msgid "Not seeing strings that you are looking for?"
+msgstr "Ziet u de strings die u zoekt niet?"
+
+msgid "Enable the autoregistration setting."
+msgstr "Schakel de autoregistratie-instelling in."
+
+msgid "Visit translations on the site's frontend for WPML to see which strings are missing translations. Visiting one language is enough: %s."
+msgstr "Bezoek vertalingen op de frontend van de site voor WPML om te zien welke strings ontbrekende vertalingen hebben. Eén taal bezoeken is voldoende: %s."
+
+msgid "Alternatively, you can register strings manually."
+msgstr "U kunt strings ook handmatig registreren."
+
+msgid "Translate Everything translates only those strings which are registered in English language"
+msgstr "Alles vertalen vertaalt alleen die strings die in het Engels zijn geregistreerd"
+
+msgid "Most strings from your plugins and theme are in English, so we’re showing them alongside your default language. Use the <b>Source Language</b> filter to view strings in a specific language."
+msgstr "De meeste strings van uw plugins en thema zijn in het Engels, dus we tonen ze naast uw standaardtaal. Gebruik het filter <b>Brontaal</b> om strings in een specifieke taal te bekijken."
+
+msgid "You’re using <b>%s</b> to cache your site, which may prevent WPML from automatically registering new strings. To fix this, clear your page cache, then visit your translated pages again on the frontend to detect new strings."
+msgstr "U gebruikt <b>%s</b> om uw site te cachen, wat kan voorkomen dat WPML nieuwe strings automatisch registreert. Om dit op te lossen, leegt u uw paginacache en bezoekt u uw vertaalde pagina's opnieuw op de frontend om nieuwe strings te detecteren."
+
+msgid "WPML can detect strings that appear on the site and list them here. This feature helps you identify the strings that actually appear on the site and translate them. To see here only the strings that actually appear on the site, you need to enable this feature."
+msgstr "WPML kan strings detecteren die op de site verschijnen en deze hier weergeven. Deze functie helpt u de strings te identificeren die daadwerkelijk op de site verschijnen en deze te vertalen. Om hier alleen de strings te zien die daadwerkelijk op de site verschijnen, moet u deze functie inschakelen."
+
+msgid "WPML detects strings that appear on the site and lists them here. This feature helps you identify the strings that actually appear on the site and translate them. To see here all the strings in the site, you need to disable this feature."
+msgstr "WPML detecteert strings die op de site verschijnen en geeft deze hier weer. Deze functie helpt u de strings te identificeren die daadwerkelijk op de site verschijnen en deze te vertalen. Om hier alle strings op de site te zien, moet u deze functie uitschakelen."
+
+msgid "Detect untranslated strings"
+msgstr "Onvertaalde strings detecteren"
+
+msgid "WPML can detect untranslated strings and automatically register them for translation. This happens in real time as you or your visitors browse your website."
+msgstr "WPML kan onvertaalde strings detecteren en deze automatisch registreren voor vertaling. Dit gebeurt in realtime terwijl u of uw bezoekers uw website bekijken."
+
+msgid "Automatically register untranslated strings"
+msgstr "Onvertaalde strings automatisch registreren"
+
+msgid "Learn how to use auto-registration"
+msgstr "Leer hoe u automatische registratie gebruikt"
+
+msgid "recommended"
+msgstr "aanbevolen"
+
+msgid "Also register strings from the website's back-end"
+msgstr "Ook strings van de back-end van de website registreren"
+
+msgid "Save settings"
+msgstr "Instellingen opslaan"
+
+msgid "Request failed because of the network error"
+msgstr "Verzoek mislukt vanwege netwerkfout"
+
+msgid "Try again"
+msgstr "Opnieuw proberen"
+
+msgid "Enabled"
+msgstr "Ingeschakeld"
+
+msgid "Disabled"
+msgstr "Uitgeschakeld"
+
+msgid "Modify"
+msgstr "Wijzigen"
+
+msgid "You can only translate %1$s from the site's default language (%2$s)."
+msgstr "U kunt alleen %1$s vertalen vanuit de standaardtaal van de site (%2$s)."
+
+msgid "%1sCheck pricing%2s."
+msgstr "%1sBekijk prijzen%2s."
+
+msgid "The current site content costs %1$sapproximately €%2$s%3$s to translate."
+msgstr "De vertaling van de huidige site-inhoud kost %1$songeveer €%2$s%3$s."
+
+msgid "The selected content costs %1$sapproximately €%2$s%3$s to translate."
+msgstr "De vertaling van de geselecteerde inhoud kost %1$songeveer €%2$s%3$s."
+
+msgid "Pay-As-You-Go"
+msgstr "Pay-As-You-Go"
+
+msgid "Activate Pay-As-You-Go to translate automatically with monthly billing."
+msgstr "Activeer Pay-As-You-Go om automatisch te vertalen met maandelijkse facturering."
+
+msgid "Activate Pay-As-You-Go"
+msgstr "Pay-As-You-Go activeren"
+
+msgid "Already using Pay-As-You-Go on another site?"
+msgstr "Gebruikt u Pay-As-You-Go al op een andere site?"
+
+msgid "Connect this site to it"
+msgstr "Deze site eraan koppelen"
+
+msgid "Buy and assign credits"
+msgstr "Tegoeden kopen en toewijzen"
+
+msgid "Buy a %1$sprepaid package%2$s with at least %3$s%4$s credits%5$s and assign them to this site."
+msgstr "Koop een %1$sprepaidpakket%2$s met ten minste %3$s%4$s tegoeden%5$s en wijs deze toe aan deze site."
+
+msgid "This amount will cover translation of all your current content."
+msgstr "Dit bedrag dekt de vertaling van al uw huidige inhoud."
+
+msgid "Assign at least %1$s%2$s credits%3$s to this site to continue."
+msgstr "Wijs ten minste %1$s%2$s tegoeden%3$s toe aan deze site om door te gaan."
+
+msgid "Assign credits from your WPML account and buy an additional %1$sprepaid package%2$s with at least %3$s%4$s credits%5$s credits to cover the remaining amount."
+msgstr "Wijs tegoeden toe vanuit uw WPML-account en koop een aanvullend %1$sprepaidpakket%2$s met ten minste %3$s%4$s tegoeden%5$s om het resterende bedrag te dekken."
+
+msgid "Prepaid credits"
+msgstr "Prepaid tegoeden"
+
+msgid "There are %1$s%2$s available on your WPML account.%3$s"
+msgstr "Er zijn %1$s%2$s beschikbaar op uw WPML-account.%3$s"
+
+msgid "(Only the WPML account owner can do this.)"
+msgstr "(Alleen de eigenaar van het WPML-account kan dit doen.)"
+
+msgid "Checking for new credits..."
+msgstr "Controleren op nieuwe tegoeden..."
+
+msgid "Still not enough credits. Refresh again in %d seconds."
+msgstr "Nog steeds niet genoeg tegoeden. Ververs opnieuw over %d seconden."
+
+msgid "Already assigned?"
+msgstr "Al toegewezen?"
+
+msgid "Refresh"
+msgstr "Vernieuwen"
+
+msgid "Connection Error. Please wait a minute and reload this page. If the problem continues, please contact WPML support."
+msgstr "Verbindingsfout. Wacht een minuut en laad deze pagina opnieuw. Als het probleem aanhoudt, neem dan contact op met de WPML-ondersteuning."
+
+msgid "Pay-As-You-Go activated"
+msgstr "Pay-As-You-Go geactiveerd"
+
+msgid "You can now continue translating your content automatically."
+msgstr "U kunt nu doorgaan met het automatisch vertalen van uw inhoud."
+
+msgid "%s credits assigned to this site."
+msgstr "%s tegoeden toegewezen aan deze site."
+
+msgid "You don’t have enough credits to translate this content."
+msgstr "U heeft niet genoeg tegoeden om deze inhoud te vertalen."
+
+msgid "You have %s credits — %s more are needed to translate this content"
+msgstr "U heeft %s tegoeden — %s meer zijn nodig om deze inhoud te vertalen"
+
+msgid "You’re missing %s credits for the translation jobs in progress — %s are needed in total"
+msgstr "U mist %s tegoeden voor de lopende vertaaltaken — %s zijn in totaal nodig"
+
+msgid "Summary:"
+msgstr "Samenvatting:"
+
+msgid "Credit"
+msgid_plural "Credits"
+msgstr[0] "Tegoed"
+msgstr[1] "Tegoeden"
+
+msgid "€%1$s approximately"
+msgstr "€%1$s ongeveer"
+
+msgid "Pricing"
+msgstr "Prijzen"
+
+msgid "Your Automatic Translation Credits"
+msgstr "Uw automatische vertaalcredits"
+
+msgid "To proceed with translation, activate Pay-As-You-Go or assign prepaid credits."
+msgstr "Om door te gaan met vertalen, activeert u Pay-As-You-Go of wijst u prepaid tegoeden toe."
+
+msgid "Leave existing translations as they are"
+msgstr "Bestaande vertalingen laten zoals ze zijn"
+
+msgid "Overwrite existing translations"
+msgstr "Bestaande vertalingen overschrijven"
+
+msgid "Some of the content you want to translate is already translated"
+msgstr "Een deel van de inhoud die u wilt vertalen, is al vertaald"
+
+msgid "What do you want to do with the content that's already translated?"
+msgstr "Wat wilt u doen met de inhoud die al is vertaald?"
+
+msgid "Suggested deadline:"
+msgstr "Voorgestelde deadline:"
+
+msgid "Set a batch name and deadline"
+msgstr "Een batchnaam en deadline instellen"
+
+msgid "You can assign a custom name to this batch for easy tracking and suggest a deadline to clarify the priority for translators."
+msgstr "U kunt deze batch een aangepaste naam geven voor eenvoudige tracking en een deadline voorstellen om de prioriteit voor vertalers te verduidelijken."
+
+msgid "Batch name:"
+msgstr "Batchnaam:"
+
+msgid "Default translation engine: "
+msgstr "Standaard vertaalengine: "
+
+msgid "Change"
+msgstr "Wijzigen"
+
+msgid "Failed to load engines"
+msgstr "Engines konden niet worden geladen"
+
+msgid "No engines enabled"
+msgstr "Geen engines ingeschakeld"
+
+msgid "In order to assign yourself as translator, you first need to <add_yourself>add yourself as %s translator</add_yourself> to the site.<br/> Add yourself as %s translator and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Om uzelf als vertaler toe te wijzen, moet u uzelf eerst <add_yourself>toevoegen als %s vertaler</add_yourself> aan de site.<br/> Voeg uzelf toe als %s vertaler en klik op <check_again>opnieuw controleren</check_again> of kies een andere vertaaloptie."
+
+msgid "In order to assign yourself as translator, you first need to <add_yourself>add yourself as %s to %s translator</add_yourself> to the site.<br/> Add yourself as %s to %s translator and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Om uzelf als vertaler toe te wijzen, moet u uzelf eerst <add_yourself>toevoegen als %s aan %s vertaler</add_yourself> aan de site.<br/> Voeg uzelf toe als %s aan %s vertaler en klik op <check_again>opnieuw controleren</check_again> of kies een andere vertaaloptie."
+
+msgid "Checking"
+msgstr "Controleren"
+
+msgid "In order to assign a translation service, you first need to <activate_ts>activate a translation service</activate_ts>.<br/>Activate a translation service and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Om een vertaalservice toe te wijzen, moet u eerst <activate_ts>een vertaalservice activeren</activate_ts>.<br/>Activeer een vertaalservice en klik op <check_again>opnieuw controleren</check_again> of kies een andere vertaaloptie."
+
+msgid " Checking "
+msgstr " Controleren "
+
+msgid "In order to translate automatically, you first need to <enable_ate>enable WPML's Advanced Translation Editor</enable_ate>.<br/>Enable the Advanced Translation Editor and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Om automatisch te vertalen, moet u eerst <enable_ate>WPML's Geavanceerde Vertaaleditor inschakelen</enable_ate>.<br/>Schakel de Geavanceerde Vertaaleditor in en klik op <check_again>opnieuw controleren</check_again> of kies een andere vertaaloptie."
+
+msgid "Selected content was translated using the Classic Translation Editor and can't be sent for automatic translation. To allow this, enable \"Use also for old translations\" in <wpmlSettingLink>WPML Settings</wpmlSettingLink> page."
+msgstr "Geselecteerde inhoud is vertaald met de Klassieke Vertaaleditor en kan niet worden verzonden voor automatische vertaling. Om dit toe te staan, schakelt u “Ook gebruiken voor oude vertalingen” in op de pagina <wpmlSettingLink>WPML-instellingen</wpmlSettingLink>."
+
+msgid "Some of the selected content was translated using the Classic Translation Editor and can't be sent for automatic translation. To allow this, enable \"Use also for old translations\" in <wpmlSettingLink>WPML Settings</wpmlSettingLink> page."
+msgstr "Een deel van de geselecteerde inhoud is vertaald met de Klassieke Vertaaleditor en kan niet worden verzonden voor automatische vertaling. Om dit toe te staan, schakelt u “Ook gebruiken voor oude vertalingen” in op de pagina <wpmlSettingLink>WPML-instellingen</wpmlSettingLink>."
+
+msgid ""
+"Any existing content (translations) will be overwritten when creating duplicates.\n"
+"When duplicating content, please first duplicate parent pages to maintain the site's hierarchy."
+msgstr "Bestaande inhoud (vertalingen) wordt overschreven bij het maken van duplicaten.\nBij het dupliceren van inhoud, dupliceer eerst bovenliggende pagina's om de hiërarchie van de site te behouden."
+
+msgid "Some of the selected content is already being translated. This will cancel any in-progress translations."
+msgstr "Een deel van de geselecteerde inhoud wordt al vertaald. Dit annuleert alle lopende vertalingen."
+
+msgid "The selected items were translated using the WordPress Editor and will be overwritten with automatic translations."
+msgstr "De geselecteerde items zijn vertaald met de WordPress Editor en worden overschreven met automatische vertalingen."
+
+msgid "Some of the selected content was translated using the WordPress Editor and will be overwritten."
+msgstr "Een deel van de geselecteerde inhoud is vertaald met de WordPress Editor en wordt overschreven."
+
+msgid "In order to assign to a translator, you first need to <add_translators>add %s translators</add_translators> to the site.<br/> Add %s translators and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Om toe te wijzen aan een vertaler, moet u eerst <add_translators>%s vertalers</add_translators> aan de site toevoegen.<br/> Voeg %s vertalers toe en klik op <check_again>opnieuw controleren</check_again> of kies een andere vertaaloptie."
+
+msgid "In order to assign to a translator, you first need to <add_translators>add %s to %s translators</add_translators> to the site.<br/> Add %s to %s translators and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Om toe te wijzen aan een vertaler, moet u eerst <add_translators>%s aan %s vertalers</add_translators> aan de site toevoegen.<br/> Voeg %s aan %s vertalers toe en klik op <check_again>opnieuw controleren</check_again> of kies een andere vertaaloptie."
+
+msgid "Your site doesn't have any reviewers for %s. This means that you’re the only person who can review these translations."
+msgstr "Uw site heeft geen beoordelaars voor %s. Dit betekent dat u de enige persoon bent die deze vertalingen kan beoordelen."
+
+msgid "Your site doesn't have any reviewers yet. This means that you’re the only person who can review translations."
+msgstr "Uw site heeft nog geen beoordelaars. Dit betekent dat u de enige persoon bent die vertalingen kan beoordelen."
+
+msgid "If you want other people to review the translations, go to <a>WPML → Translation Dashboard → Translators</a> and add translators. They will be able to both review and translate content for you."
+msgstr "Als u wilt dat andere mensen de vertalingen beoordelen, ga dan naar <a>WPML → Vertaaldashboard → Vertalers</a> en voeg vertalers toe. Zij kunnen dan zowel inhoud voor u beoordelen als vertalen."
+
+msgid "Automatic translation is blocked - payment required"
+msgstr "Automatische vertaling geblokkeerd - betaling vereist"
+
+msgid "We couldn’t process your payment. Click “Pay now” to retry and resume automatic translation."
+msgstr "We konden uw betaling niet verwerken. Klik op “Nu betalen” om het opnieuw te proberen en de automatische vertaling te hervatten."
+
+msgid "WPML does not support duplicating strings. Your selection to duplicate strings to %1$s will be ignored if you proceed with the translation."
+msgstr "WPML ondersteunt het dupliceren van strings niet. Uw selectie om strings naar %1$s te dupliceren wordt genegeerd als u doorgaat met de vertaling."
+
+msgid "WPML does not support duplicating %1$s elements. Your selection to duplicate elements to %2$s will be ignored if you proceed with the translation."
+msgstr "WPML ondersteunt het dupliceren van %1$s elementen niet. Uw selectie om elementen naar %2$s te dupliceren wordt genegeerd als u doorgaat met de vertaling."
+
+msgid "WPML does not support duplicating %1$s elements and strings. Your selection to duplicate elements and strings to %2$s will be ignored if you proceed with the translation."
+msgstr "WPML ondersteunt het dupliceren van %1$s elementen en strings niet. Uw selectie om elementen en strings naar %2$s te dupliceren wordt genegeerd als u doorgaat met de vertaling."
+
+msgid "WPML does not support duplicating strings."
+msgstr "WPML ondersteunt het dupliceren van strings niet."
+
+msgid "WPML does not support duplicating %1$s elements."
+msgstr "WPML ondersteunt het dupliceren van %1$s elementen niet."
+
+msgid "WPML does not support duplicating %1$s elements and strings."
+msgstr "WPML ondersteunt het dupliceren van %1$s elementen en strings niet."
+
+msgid "Finish setting up %s on your site"
+msgstr "Voltooi de installatie van %s op uw site"
+
+msgid "You need to authenticate %s to send them content for translation.<br/>Visit the <a>Translators tab</a> to finish the setup and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "U moet %s authenticeren om inhoud voor vertaling te verzenden.<br/>Bezoek het <a>tabblad Vertalers</a> om de installatie te voltooien en klik op <check_again>opnieuw controleren</check_again> of kies een andere vertaaloptie."
+
+msgid "You selected multiple translation methods for content across different languages:"
+msgstr "U hebt meerdere vertaalmethoden geselecteerd voor inhoud in verschillende talen:"
+
+msgid "Sent for translation"
+msgstr "Verzonden voor vertaling"
+
+msgid "Sending for translation failed"
+msgstr "Verzenden voor vertaling mislukt"
+
+msgid "Ok"
+msgstr "Ok"
+
+msgid "<s>1 item</s> is being translated automatically."
+msgid_plural "<s>%d items</s> are being translated automatically."
+msgstr[0] "<s>1 item</s> wordt automatisch vertaald."
+msgstr[1] "<s>%d items</s> worden automatisch vertaald."
+
+msgid "You can track their progress at the top of the page."
+msgstr "U kunt de voortgang bovenaan de pagina volgen."
+
+msgid "From now on, WPML will automatically translate new content on your site."
+msgstr "Vanaf nu vertaalt WPML nieuwe inhoud op uw site automatisch."
+
+msgid "This number might vary because you enabled the Translate Everything Automatically Mode."
+msgstr "Dit aantal kan variëren omdat u de modus “Alles automatisch vertalen” hebt ingeschakeld."
+
+msgid "From now on, WPML will automatically translate your site's content."
+msgstr "Vanaf nu vertaalt WPML de inhoud van uw site automatisch."
+
+msgid "Automatic translations summary"
+msgstr "Samenvatting automatische vertalingen"
+
+msgid "Some of the content that you selected for translation includes fields that are encoded. Translators will not be able to work on this kind of content, so we removed it from the job."
+msgstr "Een deel van de inhoud die u voor vertaling hebt geselecteerd, bevat gecodeerde velden. Vertalers kunnen dit soort inhoud niet bewerken, dus hebben we het uit de taak verwijderd."
+
+msgid "To fix this problem, please contact our support team and describe this issue."
+msgstr "Neem contact op met ons ondersteuningsteam en beschrijf dit probleem om dit op te lossen."
+
+msgid "WPML cannot send some fo the content to translation"
+msgstr "WPML kan een deel van de inhoud niet ter vertaling aanbieden"
+
+msgid "Open support ticket"
+msgstr "Open ondersteuningsticket"
+
+msgid "<s>1 item</s> has been successfully assigned to you! To check its status, please go to <s>WPML → Translations</s>. <translations_queue/>"
+msgid_plural "<s>%d items</s> have been successfully assigned to you! For status updates, please go to <s>WPML → Translations</s>. <translations_queue/>"
+msgstr[0] "<s>1 item</s> is succesvol aan u toegewezen! Ga naar <s>WPML → Vertalingen</s> om de status te controleren. <translations_queue/>"
+msgstr[1] "<s>%d items</s> zijn succesvol aan u toegewezen! Ga voor statusupdates naar <s>WPML → Vertalingen</s>. <translations_queue/>"
+
+msgid "Currently logged in translator summary"
+msgstr "Samenvatting van de momenteel ingelogde vertaler"
+
+msgid "Go to Translations"
+msgstr "Ga naar vertalingen"
+
+msgid "<s>1 item</s> has been duplicated."
+msgid_plural "<s>%d items</s> have been duplicated."
+msgstr[0] "<s>1 item</s> is gedupliceerd."
+msgstr[1] "<s>%d items</s> zijn gedupliceerd."
+
+msgid "Duplication summary"
+msgstr "Duplicatieoverzicht"
+
+msgid "There was a problem sending your content for translation."
+msgstr "Er is een probleem opgetreden bij het verzenden van uw inhoud voor vertaling."
+
+msgid "Please try again in a few minutes. If the issue persists, please contact our support."
+msgstr "Probeer het over een paar minuten opnieuw. Als het probleem aanhoudt, neem dan contact op met onze ondersteuning."
+
+msgid "See technical details"
+msgstr "Technische details bekijken"
+
+msgid "Hide technical details"
+msgstr "Technische details verbergen"
+
+msgid "Some of the selected strings are already registered or translated into %s. Since their source language matches the target language, they cannot be retranslated."
+msgstr "Sommige van de geselecteerde strings zijn al geregistreerd of vertaald naar %s. Aangezien hun brontaal overeenkomt met de doeltaal, kunnen ze niet opnieuw worden vertaald."
+
+msgid "Some of the selected content has already been translated from %s to %s and cannot be re-translated from %s to %s."
+msgstr "Een deel van de geselecteerde inhoud is al vertaald van %s naar %s en kan niet opnieuw worden vertaald van %s naar %s."
+
+msgid "Content already translated"
+msgstr "Inhoud al vertaald"
+
+msgid "Some content couldn't be sent to translation."
+msgstr "Sommige inhoud kon niet ter vertaling worden aangeboden."
+
+msgid "WPML did not create translations for some languages because of the following reasons:"
+msgstr "WPML heeft voor sommige talen geen vertalingen gemaakt om de volgende redenen:"
+
+msgid "<s>1 item</s> has been successfully sent to translators!"
+msgid_plural "<s>%d items</s> have been successfully sent to translators!"
+msgstr[0] "<s>1 item</s> is succesvol naar vertalers verzonden!"
+msgstr[1] "<s>%d items</s> zijn succesvol naar vertalers verzonden!"
+
+msgid "Local translations summary"
+msgstr "Samenvatting lokale vertalingen"
+
+msgid "You can check their status in WPML → Translation"
+msgstr "U kunt hun status controleren in WPML → Vertaling"
+
+msgid "Continue to %s"
+msgstr "Doorgaan naar %s"
+
+msgid "We were unable to send the following batches for professional translation:"
+msgstr "We konden de volgende batches niet verzenden voor professionele vertaling:"
+
+msgid "<p><a><s>Contact WPML support for help</s></a></p>"
+msgstr "<p><a><s>Neem contact op met de WPML-ondersteuning voor hulp</s></a></p>"
+
+msgid "Translation Service"
+msgstr "Vertaalservice"
+
+msgid "sending for professional translation.."
+msgstr "verzenden voor professionele vertaling.."
+
+msgid "<s>%d item</s> is being sent for translation to %s. Please continue to their site to start the translation."
+msgid_plural "<s>%d items</s> are being sent for translation to %s. Please continue to their site to start the translation."
+msgstr[0] "<s>%d item</s> wordt ter vertaling naar %s verzonden. Ga verder naar hun site om de vertaling te starten."
+msgstr[1] "<s>%d items</s> worden ter vertaling naar %s verzonden. Ga verder naar hun site om de vertaling te starten."
+
+msgid "Translation service translations summary"
+msgstr "Samenvatting vertalingen van vertaalservice"
+
+msgid "One or more assigned translators are invalid. The translator may have been removed or their language permissions changed.<br/> Review your settings on the <translators_page>Translators page</translators_page>."
+msgstr "Een of meer toegewezen vertalers zijn ongeldig. De vertaler is mogelijk verwijderd of hun taalrechten zijn gewijzigd.<br/> Controleer uw instellingen op de <translators_page>Vertalerspagina</translators_page>."
+
+msgid "The selected translation service is no longer valid. It may have been changed, unauthenticated, or deactivated.<br/> Review your settings on the <translators_page>Translators page</translators_page>."
+msgstr "De geselecteerde vertaalservice is niet langer geldig. Deze is mogelijk gewijzigd, niet-geauthenticeerd of gedeactiveerd.<br/> Controleer uw instellingen op de <translators_page>Vertalerspagina</translators_page>."
+
+msgid "Currently selected translation editor doesn't support automatic translation. You must enable the Advanced Translation Editor to send content for automatic translation.<br/> Check your settings on the <wpml_settings>WPML settings page</wpml_settings>."
+msgstr "De momenteel geselecteerde vertaal-editor ondersteunt geen automatische vertaling. U moet de Geavanceerde Vertaal-editor inschakelen om inhoud voor automatische vertaling te verzenden.<br/> Controleer uw instellingen op de <wpml_settings>WPML-instellingenpagina</wpml_settings>."
+
+msgid "Validation error happened during send to translation."
+msgstr "Validatiefout opgetreden tijdens verzenden voor vertaling."
+
+msgid "Translate and Duplicate"
+msgstr "Vertalen en dupliceren"
+
+msgid "Duplicate"
+msgstr "Dupliceren"
+
+msgid "Translate content"
+msgstr "Inhoud vertalen"
+
+msgid "Please choose one of the available payment options."
+msgstr "Kies een van de beschikbare betaalopties."
+
+msgid "Selected content is already translated"
+msgstr "Geselecteerde inhoud is al vertaald"
+
+msgid "Please select a review mode"
+msgstr "Selecteer een beoordelingsmodus"
+
+msgid "Assign local translator or choose another option"
+msgstr "Wijs een lokale vertaler toe of kies een andere optie"
+
+msgid "Assign yourself or choose another option"
+msgstr "Wijs uzelf toe of kies een andere optie"
+
+msgid "Activate translation service or choose another option"
+msgstr "Activeer vertaalservice of kies een andere optie"
+
+msgid "Activate ATE or choose another option"
+msgstr "Activeer ATE of kies een andere optie"
+
+msgid "Authenticate translation service or choose another option"
+msgstr "Authenticeer vertaalservice of kies een andere optie"
+
+msgid "Please provide context to enable translation"
+msgstr "Geef context op om vertaling mogelijk te maken"
+
+msgid "Please keep this page open while WPML sends your content for translation. If you leave now, the remaining items won't be sent."
+msgstr "Houd deze pagina open terwijl WPML uw inhoud ter vertaling verzendt. Als u nu weggaat, worden de resterende items niet verzonden."
+
+msgid "Sending content to translation"
+msgstr "Inhoud verzenden voor vertaling"
+
+msgid "<s>%s</s> cannot process more than <s>%d</s> jobs in a single batch. WPML will automatically split your jobs into separate batches to ensure an error-free delivery to <s>%s</s>. <br/><br/> Do you want to proceed?"
+msgstr "<s>%s</s> kan niet meer dan <s>%d</s> taken in één batch verwerken. WPML splitst uw taken automatisch in afzonderlijke batches om een foutloze levering aan <s>%s</s> te garanderen. <br/><br/> Wilt u doorgaan?"
+
+msgid "WPML will send jobs to %s in separate batches"
+msgstr "WPML stuurt taken naar %s in afzonderlijke batches"
+
+msgid "Yes, send jobs in separate batches"
+msgstr "Ja, stuur taken in afzonderlijke batches"
+
+msgid "No, I will split jobs myself"
+msgstr "Nee, ik splits de taken zelf"
+
+msgid "This will translate only your future content"
+msgstr "Dit vertaalt alleen uw toekomstige inhoud"
+
+msgid "This will translate your entire site"
+msgstr "Dit vertaalt uw hele site"
+
+msgid "Translate everything automatically from now on, without asking me."
+msgstr "Vertaal alles automatisch vanaf nu, zonder mij te vragen."
+
+msgid "Loading options to translate the content"
+msgstr "Opties laden om de inhoud te vertalen"
+
+msgid "What content do you want to translate?"
+msgstr "Welke inhoud wilt u vertalen?"
+
+msgid "Translate my entire site"
+msgstr "Vertaal mijn hele site"
+
+msgid "WPML will translate all of your site's content, including:"
+msgstr "WPML vertaalt alle inhoud van uw site, inclusief:"
+
+msgid "Any existing content that hasn’t been translated yet"
+msgstr "Alle bestaande inhoud die nog niet is vertaald"
+
+msgid "All new content you create in the future"
+msgstr "Alle nieuwe inhoud die u in de toekomst maakt"
+
+msgid "Translate only future content"
+msgstr "Vertaal alleen toekomstige inhoud"
+
+msgid "WPML will translate only the content you create after enabling this translation mode."
+msgstr "WPML vertaalt alleen de inhoud die u maakt nadat u deze vertaalmodus hebt ingeschakeld."
+
+msgid "Existing untranslated content on your side will not be translated."
+msgstr "Bestaande onvertaalde inhoud aan uw kant wordt niet vertaald."
+
+msgid "WPML Settings"
+msgstr "WPML-instellingen"
+
+msgid "Some of your content was translated using the Classic Translation Editor. These translations won’t be included in Translate Everything Automatically."
+msgstr "Een deel van uw inhoud is vertaald met de Klassieke Vertaal-editor. Deze vertalingen worden niet opgenomen in “Alles automatisch vertalen”."
+
+msgid "To include them, enable \"Use also for old translations\" in <wpmlSettingLink/>."
+msgstr "Om ze op te nemen, schakelt u “Ook gebruiken voor oude vertalingen” in <wpmlSettingLink/> in."
+
+msgid "Some of your content was translated using the WordPress Editor. These translations won’t be included in Translate Everything Automatically."
+msgstr "Een deel van uw inhoud is vertaald met de WordPress-editor. Deze vertalingen worden niet opgenomen in “Alles automatisch vertalen”."
+
+msgid "Some of your content was translated using the Classic Translation Editor or WordPress Editor. These translations won’t be included in Translate Everything Automatically."
+msgstr "Een deel van uw inhoud is vertaald met de Klassieke Vertaal-editor of WordPress-editor. Deze vertalingen worden niet opgenomen in “Alles automatisch vertalen”."
+
+msgid "To include Classic Editor translations, enable \"Use also for old translations\" in <wpmlSettingLink/>."
+msgstr "Om vertalingen van de Klassieke Editor op te nemen, schakelt u “Ook gebruiken voor oude vertalingen” in <wpmlSettingLink/> in."
+
+msgid "Existing content"
+msgstr "Bestaande inhoud"
+
+msgid "You selected to translate strings that are in %s. Only these strings will be translated to %s."
+msgstr "U hebt geselecteerd om strings te vertalen die in %s zijn. Alleen deze strings worden vertaald naar %s."
+
+msgid "You selected to translate strings that are in %s and %s. Only these strings will be translated to %s."
+msgstr "U hebt geselecteerd om strings te vertalen die in %s en %s zijn. Alleen deze strings worden vertaald naar %s."
+
+msgid "Source language"
+msgstr "Brontaal"
+
+msgid "Target language"
+msgstr "Doeltaal"
+
+msgid "Words to translate"
+msgstr "Woorden om te vertalen"
+
+msgid "Credits needed"
+msgstr "Benodigde credits"
+
+msgid "Automatic translation is not supported for %s."
+msgstr "Automatische vertaling wordt niet ondersteund voor %s."
+
+msgid "The selected translation engines do not support %s."
+msgstr "De geselecteerde vertaalengines ondersteunen %s niet."
+
+msgid "%1sTotal Credits:%2s %3s"
+msgstr "%1sTotaal tegoeden:%2s %3s"
+
+msgid "Translation service additional options"
+msgstr "Aanvullende opties voor vertaalservice"
+
+msgid "Fetching translation service data..."
+msgstr "Vertaalservicegegevens ophalen..."
+
+msgid "-"
+msgstr "-"
+
+msgid "Translate automatically"
+msgstr "Automatisch vertalen"
+
+msgid "Translate myself"
+msgstr "Zelf vertalen"
+
+msgid "Assign a translator"
+msgstr "Vertaler toewijzen"
+
+msgid "Assign translation service"
+msgstr "Vertaalservice toewijzen"
+
+msgid "Do nothing"
+msgstr "Niets doen"
+
+msgid "Please choose"
+msgstr "Kies alstublieft"
+
+msgid "Choose a translator"
+msgstr "Kies een vertaler"
+
+msgid "First available"
+msgstr "Eerst beschikbare"
+
+msgid "(Me)"
+msgstr "(ik)"
+
+msgid "Step 2"
+msgstr "Stap 2"
+
+msgid "Calculating..."
+msgstr "Berekenen..."
+
+msgid "Refining estimation... about %1$d minute remaining"
+msgid_plural "Refining estimation... about %1$d minutes remaining"
+msgstr[0] "Schatting verfijnen... ongeveer %1$d minuut resterend"
+msgstr[1] "Schatting verfijnen... ongeveer %1$d minuten resterend"
+
+msgid "Refining estimation... %d second remaining"
+msgid_plural "Refining estimation... %d seconds remaining"
+msgstr[0] "Schatting verfijnen... %d seconde resterend"
+msgstr[1] "Schatting verfijnen... %d seconden resterend"
+
+msgid "Estimated cost:"
+msgstr "Geschatte kosten:"
+
+msgid "Current estimated cost:"
+msgstr "Huidige geschatte kosten:"
+
+msgid "Changing translation engine and recalculating estimate..."
+msgstr "Vertaalengine wijzigen en schatting opnieuw berekenen..."
+
+msgid "%s credits"
+msgstr "%s tegoeden"
+
+msgid "€%1$s"
+msgstr "€%1$s"
+
+msgid "All content is already translated. New and edited content will be translated automatically."
+msgstr "Alle inhoud is al vertaald. Nieuwe en bewerkte inhoud wordt automatisch vertaald."
+
+msgid "%1$s and %2$s"
+msgstr "%1$s en %2$s"
+
+msgid "in other types"
+msgstr "in andere typen"
+
+msgid "Hide what will be translated"
+msgstr "Verbergen wat vertaald zal worden"
+
+msgid "Show what will be translated"
+msgstr "Tonen wat vertaald zal worden"
+
+msgid "Calculation complete"
+msgstr "Berekening voltooid"
+
+msgid "%d of %d analyzed"
+msgstr "%d van %d geanalyseerd"
+
+msgid "Automatic translations completed"
+msgstr "Automatische vertalingen voltooid"
+
+msgid "<s>1 translation</s> has been successfully translated automatically"
+msgid_plural "<s>%d translations</s> have been successfully translated automatically"
+msgstr[0] "<s>1 vertaling</s> is succesvol automatisch vertaald"
+msgstr[1] "<s>%d vertalingen</s> zijn succesvol automatisch vertaald"
+
+msgid "Automatic jobs in progress"
+msgstr "Automatische taken in uitvoering"
+
+msgid "<s>%d automatic translation</s> is in progress"
+msgid_plural "<s>%d automatic translations</s> are in progress"
+msgstr[0] "<s>%d automatische vertaling</s> is bezig"
+msgstr[1] "<s>%d automatische vertalingen</s> zijn bezig"
+
+msgid "Remaining time: <s>Less than 1 minute</s>"
+msgstr "Resterende tijd: <s>Minder dan 1 minuut</s>"
+
+msgid "Remaining time: <s>%d minute</s>"
+msgid_plural "Remaining time: <s>%d minutes</s>"
+msgstr[0] "Resterende tijd: <s>%d minuut</s>"
+msgstr[1] "Resterende tijd: <s>%d minuten</s>"
+
+msgid "Your default language, %s, must be mapped to a supported language in order to use automatic translation"
+msgstr "Uw standaardtaal, %s, moet worden toegewezen aan een ondersteunde taal om automatische vertaling te kunnen gebruiken"
+
+msgid "Map the language"
+msgstr "Taal toewijzen"
+
+msgid "%d translations "
+msgstr "%d vertalingen "
+
+msgid "%d translation "
+msgstr "%d vertaling "
+
+msgid "this includes translations from Translate Everything Automatically"
+msgstr "dit omvat vertalingen van “Alles automatisch vertalen”"
+
+msgid "are waiting for your review"
+msgstr "wachten op uw beoordeling"
+
+msgid "is waiting for your review"
+msgstr "wacht op uw beoordeling"
+
+msgid "Review Translations"
+msgstr "Vertalingen beoordelen"
+
+msgid "Translate existing content"
+msgstr "Bestaande inhoud vertalen"
+
+msgid "Translate now"
+msgstr "Nu vertalen"
+
+msgid "Starting with version 4.7, WPML will also automatically translate texts (strings) coming from %s."
+msgstr "Vanaf versie 4.7 vertaalt WPML ook automatisch teksten (strings) afkomstig van %s."
+
+msgid "WPML will not translate existing texts of this type but any new ones you create will be automatically translated. If you prefer, you can <button />."
+msgstr "WPML vertaalt geen bestaande teksten van dit type, maar alle nieuwe teksten die u maakt, worden automatisch vertaald. Als u wilt, kunt u <button />."
+
+msgid "Starting with version 4.7, WPML will also automatically translate:"
+msgstr "Vanaf versie 4.7 vertaalt WPML ook automatisch:"
+
+msgid "Content set to \"use translation if available or fallback to default language\": %s."
+msgstr "Inhoud ingesteld op “gebruik vertaling indien beschikbaar of val terug op standaardtaal”: %s."
+
+msgid "Texts (strings) coming from: %s."
+msgstr "Teksten (strings) afkomstig van: %s."
+
+msgid "WPML will not translate existing content for these post types and texts but any new content you create will be automatically translated. If you prefer, you can start <button />."
+msgstr "WPML vertaalt geen bestaande inhoud voor deze posttypes en teksten, maar alle nieuwe inhoud die u maakt, wordt automatisch vertaald. Als u wilt, kunt u <button /> starten."
+
+msgid "WPML will not translate existing content for these post types but any new content you create will be automatically translated. If you prefer, you can start <button />."
+msgstr "WPML vertaalt geen bestaande inhoud voor deze posttypes, maar alle nieuwe inhoud die u maakt, wordt automatisch vertaald. Als u wilt, kunt u <button /> starten."
+
+msgid "start translating existing content now"
+msgstr "begin nu met het vertalen van bestaande inhoud"
+
+msgid "The following target languages do not support automatic translations: %s"
+msgstr "De volgende doeltalen ondersteunen geen automatische vertalingen: %s"
+
+msgid "To enable automatic translation map them to known languages."
+msgstr "Om automatische vertaling in te schakelen, moet u ze toewijzen aan bekende talen."
+
+msgid "Map to known languages"
+msgstr "Toewijzen aan bekende talen"
+
+msgid "Copied!"
+msgstr "Gekopieerd!"
+
+msgid "Copy All"
+msgstr "Alles kopiëren"
+
+msgid "Error type"
+msgstr "Fouttype"
+
+msgid "Error Message"
+msgstr "Foutmelding"
+
+msgid "Job ID"
+msgstr "Taak-ID"
+
+msgid "ATE Job ID"
+msgstr "ATE taak-ID"
+
+msgid "Original ID"
+msgstr "Originele ID"
+
+msgid "Element ID"
+msgstr "Element-ID"
+
+msgid "Copy to clipboard"
+msgstr "Kopiëren naar klembord"
+
+msgid "Hide errors details"
+msgstr "Foutdetails verbergen"
+
+msgid "Show errors details"
+msgstr "Foutdetails tonen"
+
+msgid "https://wpml.org/forums/forum/english-support/"
+msgstr "https://wpml.org/forums/forum/english-support/"
+
+msgid "<strong>%d item</strong> couldn't be completed due to an unexpected error. Try resending it for translation. If the issue continues, <a>contact WPML support</a>."
+msgid_plural "<strong>%d items</strong> couldn't be completed due to an unexpected error. Try resending them for translation. If the issue continues, <a>contact WPML support</a>."
+msgstr[0] "<strong>%d item</strong> kon niet worden voltooid vanwege een onverwachte fout. Probeer het opnieuw te verzenden voor vertaling. Als het probleem aanhoudt, <a>neem dan contact op met de WPML-ondersteuning</a>."
+msgstr[1] "<strong>%d items</strong> konden niet worden voltooid vanwege een onverwachte fout. Probeer ze opnieuw te verzenden voor vertaling. Als het probleem aanhoudt, <a>neem dan contact op met de WPML-ondersteuning</a>."
+
+msgid "Cancelling %d/%d..."
+msgstr "Annuleren %d/%d..."
+
+msgid "Cancelling..."
+msgstr "Annuleren..."
+
+msgid "Discard jobs"
+msgstr "Taken verwijderen"
+
+msgid "Resending %d/%d..."
+msgstr "Opnieuw verzenden %d/%d..."
+
+msgid "Resending..."
+msgstr "Opnieuw verzenden..."
+
+msgid "Resend"
+msgstr "Opnieuw verzenden"
+
+msgid "We recommend staying on this page to monitor progress and respond to any issues if they occur. You can leave this page, but you should remain within your WordPress admin area."
+msgstr "We raden aan op deze pagina te blijven om de voortgang te volgen en eventuele problemen op te lossen. U kunt deze pagina verlaten, maar u moet wel binnen uw WordPress-beheergebied blijven."
+
+msgid "Translation status"
+msgstr "Vertaalstatus"
+
+msgid "Before translating with PTC, please provide context about your website and target audience (one-time thing)."
+msgstr "Voordat u met PTC vertaalt, moet u context geven over uw website en doelgroep (eenmalig)."
+
+msgid "Provide Context"
+msgstr "Context geven"
+
+msgid "Default language does not support automatic translations."
+msgstr "Standaardtaal ondersteunt geen automatische vertalingen."
+
+msgid "You must enable ATE to activate Translate Everything Automatically."
+msgstr "U moet ATE inschakelen om “Alles automatisch vertalen” te activeren."
+
+msgid "Select payment method"
+msgstr "Betaalmethode selecteren"
+
+msgid "Credits assigned"
+msgstr "Tegoeden toegewezen"
+
+msgid "You’re all set."
+msgstr "U bent helemaal klaar."
+
+msgid "Click Translate Everything Automatically to start translating your entire site."
+msgstr "Klik op Alles automatisch vertalen om uw hele site te vertalen."
+
+msgid "Content to translate"
+msgstr "Inhoud om te vertalen"
+
+msgid "Publishing method"
+msgstr "Publicatiemethode"
+
+msgid "Payment method"
+msgstr "Betaalmethode"
+
+msgid "Enable Translate Everything Automatically"
+msgstr "Alles automatisch vertalen inschakelen"
+
+msgid "Go back"
+msgstr "Terug"
+
+msgid "Continue"
+msgstr "Doorgaan"
+
+msgid "Calculating credits for translating existing content. Please wait..."
+msgstr "Tegoeden berekenen voor het vertalen van bestaande inhoud. Even geduld alstublieft..."
+
+msgid "Set Up Translate Everything Automatically"
+msgstr "Alles automatisch vertalen instellen"
+
+msgid "WPML will translate your content into %d languages"
+msgstr "WPML vertaalt uw inhoud naar %d talen"
+
+msgid "You can start using Translate Everything Automatically after sending some content for translation. We recommend that you review these translations and make sure that they are good before translating your entire site's content."
+msgstr "U kunt “Alles automatisch vertalen” gaan gebruiken nadat u inhoud ter vertaling hebt aangeboden. We raden u aan deze vertalingen te controleren en ervoor te zorgen dat ze goed zijn voordat u de inhoud van uw hele site vertaalt."
+
+msgid "Translate Everything Automatically - disabled"
+msgstr "Alles automatisch vertalen - uitgeschakeld"
+
+msgid "Translate Everything Automatically"
+msgstr "Alles automatisch vertalen"
+
+msgid "Automatically translate all %s content to %s."
+msgstr "Vertaal alle %s inhoud automatisch naar %s."
+
+msgid "Translate Everything Automatically - pausing"
+msgstr "Alles automatisch vertalen - pauzeren"
+
+msgid "Translate Everything Automatically is pausing"
+msgstr "Alles automatisch vertalen wordt gepauzeerd"
+
+msgid "Translate Everything Automatically - paused"
+msgstr "Alles automatisch vertalen - gepauzeerd"
+
+msgid "%d translation left in the queue. Preparing more content for translation."
+msgid_plural "%d translations left in the queue. Preparing more content for translation."
+msgstr[0] "%d vertaling over in de wachtrij. Meer inhoud wordt voorbereid voor vertaling."
+msgstr[1] "%d vertalingen over in de wachtrij. Meer inhoud wordt voorbereid voor vertaling."
+
+msgid "Preparing content for translation..."
+msgstr "Inhoud voorbereiden voor vertaling..."
+
+msgid "%d translation left in the queue..."
+msgid_plural "%d translations left in the queue..."
+msgstr[0] "%d vertaling over in de wachtrij..."
+msgstr[1] "%d vertalingen over in de wachtrij..."
+
+msgid "Translate Everything Automatically has finished translating your content. There are no pending translations in the queue."
+msgstr "Alles automatisch vertalen is klaar met het vertalen van uw inhoud. Er staan geen vertalingen meer in de wachtrij."
+
+msgid "Some items were translated using the Classic Translation Editor and cannot be sent for automatic translation. Please select these items and choose the option to translate them yourself."
+msgstr "Sommige items zijn vertaald met de Klassieke Vertaal-editor en kunnen niet automatisch worden vertaald. Selecteer deze items en kies de optie om ze zelf te vertalen."
+
+msgid "Translate Everything Automatically - enabled"
+msgstr "Alles automatisch vertalen - ingeschakeld"
+
+msgid "Translate Everything Automatically is enabled"
+msgstr "Alles automatisch vertalen is ingeschakeld"
+
+msgid "As you create new content or edit existing content, WPML will automatically translate it, but only from %s to %s."
+msgstr "Wanneer u nieuwe inhoud maakt of bestaande inhoud bewerkt, vertaalt WPML deze automatisch, maar alleen van %s naar %s."
+
+msgid "Translate Everything Automatically is paused — payment required"
+msgstr "Alles automatisch vertalen is gepauzeerd — betaling vereist"
+
+msgid "Automatic translation is paused — payment required"
+msgstr "Automatische vertaling is gepauzeerd — betaling vereist"
+
+msgid "Automatic translation - payment required"
+msgstr "Automatische vertaling - betaling vereist"
+
+msgid "We couldn’t process payment for your completed translations. Click “Pay now” to retry and continue using automatic translation."
+msgstr "We konden de betaling voor uw voltooide vertalingen niet verwerken. Klik op “Nu betalen” om het opnieuw te proberen en de automatische vertaling te blijven gebruiken."
+
+msgid "Cancel translation"
+msgstr "Vertaling annuleren"
+
+msgid "Translate Everything Automatically is paused — not enough credits"
+msgstr "Alles automatisch vertalen is gepauzeerd — niet genoeg tegoeden"
+
+msgid "Automatic translation is paused — not enough credits"
+msgstr "Automatische vertaling is gepauzeerd — niet genoeg tegoeden"
+
+msgid "Translation will resume automatically after you assign more credits."
+msgstr "De vertaling wordt automatisch hervat nadat u meer tegoeden heeft toegewezen."
+
+msgid "This item needs a translation update but can't be translated automatically because it was translated with the Classic Translation Editor."
+msgstr "Dit item heeft een vertaalupdate nodig, maar kan niet automatisch worden vertaald omdat het is vertaald met de Klassieke Vertaal-editor."
+
+msgid "This item needs update. Please, select the item and send for translation."
+msgstr "Dit item moet worden bijgewerkt. Selecteer het item en stuur het ter vertaling."
+
+msgid "Translations completed with the Classic Translation Editor cannot be sent for automatic translation"
+msgstr "Vertalingen die met de Klassieke Vertaal-editor zijn voltooid, kunnen niet automatisch worden vertaald"
+
+msgid "automatic translation"
+msgstr "automatische vertaling"
+
+msgid "unassigned"
+msgstr "niet toegewezen"
+
+msgid "not translated"
+msgstr "niet vertaald"
+
+msgid "waiting for translator"
+msgstr "wacht op vertaler"
+
+msgid "in progress"
+msgstr "bezig"
+
+msgid "needs update"
+msgstr "moet worden bijgewerkt"
+
+msgid "duplicate"
+msgstr "duplicaat"
+
+msgid "complete"
+msgstr "voltooid"
+
+msgid "needs review"
+msgstr "moet worden beoordeeld"
+
+msgid "preparing for translation"
+msgstr "voorbereiden voor vertaling"
+
+msgid "needs attention"
+msgstr "vereist aandacht"
+
+msgid "translation error"
+msgstr "vertaalfout"
+
+msgid "This item was translated using the WordPress Editor. Switching to the WPML's Translation Editor will overwrite the existing translation."
+msgstr "Dit item is vertaald met de WordPress-editor. Overschakelen naar de WPML Vertaal-editor zal de bestaande vertaling overschrijven."
+
+msgid "This item needs a translation update but was previously translated using the WordPress Editor. Using the WPML's Translation Editor will overwrite the existing translation."
+msgstr "Dit item heeft een vertaalupdate nodig, maar is eerder vertaald met de WordPress-editor. Het gebruik van de WPML Vertaal-editor zal de bestaande vertaling overschrijven."
+
+msgid "This item hasn't been translated yet and is set to use the WordPress Editor."
+msgstr "Dit item is nog niet vertaald en is ingesteld om de WordPress-editor te gebruiken."
+
+msgid "%1$s: %2$s%3$s"
+msgstr "%1$s: %2$s%3$s"
+
+msgid "Could not fetch engines data"
+msgstr "Kon geen enginegegevens ophalen"
+
+msgid "Error in fetching currently logged in translator"
+msgstr "Fout bij het ophalen van de momenteel ingelogde vertaler"
+
+msgid "Error in fetching local translators"
+msgstr "Fout bij het ophalen van lokale vertalers"
+
+msgid "Published"
+msgstr "Gepubliceerd"
+
+msgid "Draft"
+msgstr "Concept"
+
+msgid "Trash"
+msgstr "Prullenbak"
+
+msgid "Pending"
+msgstr "In afwachting"
+
+msgid "Private"
+msgstr "Privé"
+
+msgid "Future"
+msgstr "Toekomstig"
+
+msgid "Auto Draft"
+msgstr "Automatisch concept"
+
+msgid "External"
+msgstr "Extern"
+
+msgid "Collapse"
+msgstr "Invouwen"
+
+msgid "Expand"
+msgstr "Uitvouwen"
+
+msgid "Select an item"
+msgstr "Selecteer een item"
+
+msgid "Open dropdown"
+msgstr "Dropdown openen"
+
+msgid "Reset"
+msgstr "Resetten"
+
+msgid "Search"
+msgstr "Zoeken"
+
+msgid "No items found"
+msgstr "Geen items gevonden"
+
+msgid "OFF"
+msgstr "UIT"
+
+msgid "ON"
+msgstr "AAN"
+
+msgid "%1$s Flag"
+msgstr "%1$s vlag"
+
+msgid "- Select a review mode -"
+msgstr "- Selecteer een beoordelingsmodus -"
+
+msgid "What would you like to do when WPML finishes translating your content automatically?"
+msgstr "Wat wilt u doen wanneer WPML klaar is met het automatisch vertalen van uw inhoud?"
+
+msgid "What would you like to do after WPML finishes translating your content automatically?"
+msgstr "Wat wilt u doen nadat WPML klaar is met het automatisch vertalen van uw inhoud?"
+
+msgid "Publish without review"
+msgstr "Publiceren zonder beoordeling"
+
+msgid "Recommended with PTC"
+msgstr "Aanbevolen met PTC"
+
+msgid "PTC provides Better Than Human Translations that rarely need improvements, so you can confidently skip the review process. For other translation engines, a human review is recommended to confirm accuracy."
+msgstr "PTC levert betere dan menselijke vertalingen die zelden verbeteringen nodig hebben, zodat u het beoordelingsproces met vertrouwen kunt overslaan. Voor andere vertaalengines wordt een menselijke beoordeling aanbevolen om de nauwkeurigheid te bevestigen."
+
+msgid "WPML publishes translations immediately, skipping the review process."
+msgstr "WPML publiceert vertalingen onmiddellijk, waarbij het beoordelingsproces wordt overgeslagen."
+
+msgid "Wait for review"
+msgstr "Wachten op beoordeling"
+
+msgid "Recommended with DeepL, Google and Microsoft"
+msgstr "Aanbevolen met DeepL, Google en Microsoft"
+
+msgid "DeepL, Google, and Microsoft deliver great translations, but we recommend a human review to confirm they are correct. PTC provides Better Than Human Translations that understand context, so you can confidently skip the review process."
+msgstr "DeepL, Google en Microsoft leveren geweldige vertalingen, maar we raden een menselijke beoordeling aan om te bevestigen dat ze correct zijn. PTC levert betere dan menselijke vertalingen die context begrijpen, zodat u het beoordelingsproces met vertrouwen kunt overslaan."
+
+msgid "WPML keeps translations unpublished, so you can review them first."
+msgstr "WPML houdt vertalingen ongepubliceerd, zodat u ze eerst kunt beoordelen."
+
+msgid "Your translators review and approve translations before publishing."
+msgstr "Uw vertalers beoordelen en keuren vertalingen goed voordat ze worden gepubliceerd."
+
+msgid "Publish and mark for review"
+msgstr "Publiceren en markeren voor beoordeling"
+
+msgid "WPML publishes translations immediately but flags them for you to check at your convenience."
+msgstr "WPML publiceert vertalingen onmiddellijk, maar markeert ze zodat u ze op uw gemak kunt controleren."
+
+msgid "WPML publishes translations immediately but flags them for translators to review later."
+msgstr "WPML publiceert vertalingen onmiddellijk, maar markeert ze voor latere beoordeling door vertalers."

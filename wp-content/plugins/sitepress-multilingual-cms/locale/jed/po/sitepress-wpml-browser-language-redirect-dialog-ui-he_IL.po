@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: he_IL\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/js/browser-language-redirect-dialog/texts.js:11
+msgid "How Browser Language Redirect Affects Google Indexing"
+msgstr "כיצד הפניית שפת הדפדפן משפיעה על אינדוקס גוגל"
+
+#: src/js/browser-language-redirect-dialog/texts.js:12
+msgid "Documentation"
+msgstr "תיעוד"
+
+#: src/js/browser-language-redirect-dialog/texts.js:3
+msgid "Browser redirect affects Google indexing and search results"
+msgstr "הפניית דפדפן משפיעה על אינדוקס גוגל ועל תוצאות החיפוש"
+
+#: src/js/browser-language-redirect-dialog/texts.js:4
+msgid "Got it, activate anyway"
+msgstr "הבנתי, הפעל בכל זאת"
+
+#: src/js/browser-language-redirect-dialog/texts.js:5
+msgid "Cancel"
+msgstr "ביטול"
+
+#: src/js/browser-language-redirect-dialog/texts.js:7
+msgid ""
+"When you redirect visitors based on their language, you also redirect "
+"Google. Google wants to see your site exactly like visitors see it, "
+"including any redirects that you apply."
+msgstr "כאשר אתה מפנה מבקרים על בסיס השפה שלהם, אתה מפנה גם את גוגל. גוגל רוצה לראות את האתר שלך בדיוק כפי שהמבקרים רואים אותו, כולל כל ההפניות שאתה מיישם."
+
+#: src/js/browser-language-redirect-dialog/texts.js:8
+msgid ""
+"It is OK to redirect visitors based on their language, but you need to "
+"realize that this feature affects SEO."
+msgstr "מותר להפנות מבקרים על בסיס השפה שלהם, אך עליך להבין שתכונה זו משפיעה על SEO."
+
+#: src/js/browser-language-redirect-dialog/texts.js:9
+msgid "Before proceeding, we recommend that you read these two pages:"
+msgstr "לפני שתמשיך, אנו ממליצים לקרוא את שני העמודים הבאים:"

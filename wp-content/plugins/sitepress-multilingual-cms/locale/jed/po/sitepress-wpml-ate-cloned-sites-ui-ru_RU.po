@@ -1,0 +1,318 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: src/js/ate-cloned-sites/components/CloseButton.js:15
+msgid "Close"
+msgstr "Закрыть"
+
+#: src/js/ate-cloned-sites/components/ContactSupport.js:9
+msgid ""
+"Please take a screenshot of this message and report this issue to <a>WPML "
+"support</a>."
+msgstr "Пожалуйста, сделайте скриншот этого сообщения и сообщите о проблеме в <a>поддержку WPML</a>."
+
+#: src/js/ate-cloned-sites/components/UnregistrationInfo.js:7
+msgid ""
+"WPML has automatically unregistered your site as part of this wizard. After "
+"you close it, you’ll see a prompt to register the site again. This is "
+"expected, your content and translations are safe."
+msgstr "WPML автоматически отменил регистрацию вашего сайта в рамках этого мастера. После его закрытия вы увидите запрос на повторную регистрацию сайта. Это ожидаемо, ваш контент и переводы в безопасности."
+
+#: src/js/ate-cloned-sites/steps/CopyCompleted.js:10
+#: src/js/ate-cloned-sites/steps/CopyWithCreditsCompleted.js:9
+#: src/js/ate-cloned-sites/steps/MoveCompleted.js:10
+msgid "You’re all set"
+msgstr "Все готово"
+
+#: src/js/ate-cloned-sites/steps/CopyCompleted.js:23
+msgid ""
+"This site is a copy of the original site %s and it doesn’t currently have "
+"any automatic translation credits."
+msgstr "Этот сайт является копией оригинального сайта %s и в настоящее время не имеет кредитов для автоматического перевода."
+
+#: src/js/ate-cloned-sites/steps/CopyCompleted.js:33
+msgid ""
+"If you’d like to use automatic translation here in the future, you can "
+"either <a1>add credits</a1> or <a2>share them from the original site</a2>."
+msgstr "Если вы хотите использовать автоматический перевод здесь в будущем, вы можете либо <a1>добавить кредиты</a1>, либо <a2>поделиться ими с оригинального сайта</a2>."
+
+#: src/js/ate-cloned-sites/steps/CopyCompleted.js:52
+msgid ""
+"There was an error checking for credits to share. Please take a screenshot "
+"of this message and report it in <a>WPML support</a>."
+msgstr "Произошла ошибка при проверке доступных кредитов для совместного использования. Пожалуйста, сделайте скриншот этого сообщения и сообщите о ней в <a>поддержку WPML</a>."
+
+#: src/js/ate-cloned-sites/steps/CopyCredits.js:36
+msgid ""
+"To link %s and %s so they share automatic translation credits, follow these "
+"steps:"
+msgstr "Чтобы связать %s и %s для совместного использования кредитов автоматического перевода, выполните следующие действия:"
+
+#: src/js/ate-cloned-sites/steps/CopyCredits.js:47
+msgid ""
+"Open <a>this link</a> to access the original site’s admin area. (You can’t "
+"access this screen by visiting %s directly.)"
+msgstr "Откройте <a>эту ссылку</a>, чтобы получить доступ к административной области оригинального сайта. (Вы не сможете получить доступ к этому экрану, посетив %s напрямую.)"
+
+#: src/js/ate-cloned-sites/steps/CopyCredits.js:59
+msgid "Click <b>Copy migration code</b> on that page."
+msgstr "Нажмите <b>Копировать код миграции</b> на этой странице."
+
+#: src/js/ate-cloned-sites/steps/CopyCredits.js:68
+msgid "Paste the code below to complete the connection."
+msgstr "Вставьте код ниже, чтобы завершить подключение."
+
+#: src/js/ate-cloned-sites/steps/CopyCredits.js:77
+msgid "Migration code"
+msgstr "Код миграции"
+
+#: src/js/ate-cloned-sites/steps/CopyCredits.js:79
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:84
+#: src/js/ate-cloned-sites/steps/MoveConfirmation.js:75
+#: src/js/ate-cloned-sites/steps/MoveOrCopy.js:76
+msgid "Continue"
+msgstr "Продолжить"
+
+#: src/js/ate-cloned-sites/steps/CopyCredits.js:82
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:95
+msgid "Go back"
+msgstr "Назад"
+
+#: src/js/ate-cloned-sites/steps/CopyCredits.js:9
+msgid "Connect Automatic Translation Credits"
+msgstr "Подключить кредиты автоматического перевода"
+
+#: src/js/ate-cloned-sites/steps/CopyError.js:15
+msgid ""
+"WPML was unable to copy your site's translations, translation memory, and "
+"glossary to this new URL."
+msgstr "WPML не удалось скопировать переводы вашего сайта, память переводов и глоссарий на этот новый URL."
+
+#: src/js/ate-cloned-sites/steps/CopyError.js:7
+msgid "Error with copying translation information to new URL"
+msgstr "Ошибка при копировании информации о переводе на новый URL"
+
+#: src/js/ate-cloned-sites/steps/CopyWithCreditsCompleted.js:12
+msgid "This site and its copy on %s are now sharing automatic translation credits."
+msgstr "Этот сайт и его копия на %s теперь используют одни и те же кредиты для автоматического перевода."
+
+#: src/js/ate-cloned-sites/steps/CopyWithCreditsCompleted.js:30
+msgid ""
+"Any credits you add to one site will be available on both. If you stop "
+"using this site, your credits will remain safe."
+msgstr "Любые кредиты, которые вы добавляете на один сайт, будут доступны на обоих. Если вы перестанете использовать этот сайт, ваши кредиты останутся в безопасности."
+
+#: src/js/ate-cloned-sites/steps/CopyWithCreditsError.js:15
+msgid ""
+"WPML was unable to connect your old and new URLs to share automatic "
+"translation credits."
+msgstr "WPML не удалось связать ваши старые и новые URL-адреса для совместного использования кредитов автоматического перевода."
+
+#: src/js/ate-cloned-sites/steps/CopyWithCreditsError.js:7
+msgid "Error with sharing automatic translation credits"
+msgstr "Ошибка при совместном использовании кредитов автоматического перевода"
+
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:12
+msgid ""
+"The site on %s has %d credits for automatic translation. Do you want to "
+"share these credits with this new site %s?"
+msgstr "На сайте %s есть %d кредитов для автоматического перевода. Вы хотите поделиться этими кредитами с этим новым сайтом %s?"
+
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:19
+msgid ""
+"The site on %s has a pay-as-you-go subscription for automatic translation. "
+"Do you want to share these credits between %s and this new location (%s)?"
+msgstr "На сайте %s есть подписка «Оплата по факту использования» для автоматического перевода. Вы хотите поделиться этими кредитами между %s и этим новым местоположением (%s)?"
+
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:66
+msgid "Yes (recommended)"
+msgstr "Да (рекомендуется)"
+
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:68
+msgid "In the next step, you’ll approve the use of same credits on both sites."
+msgstr "На следующем шаге вы одобрите использование одних и тех же кредитов на обоих сайтах."
+
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:71
+#: src/js/ate-cloned-sites/steps/MoveOrCopy.js:61
+msgid "No"
+msgstr "Нет"
+
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:73
+msgid "You’ll need to assign new credits or set up pay-as-you-go."
+msgstr "Вам нужно будет назначить новые кредиты или настроить оплату по факту использования."
+
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:87
+msgid "What happens when you share credits between sites?"
+msgstr "Что происходит, когда вы делитесь кредитами между сайтами?"
+
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:9
+msgid "Translation credits for this site"
+msgstr "Кредиты на перевод для этого сайта"
+
+#: src/js/ate-cloned-sites/steps/Initial.js:7
+msgid "WPML detected a change in your site's URL"
+msgstr "WPML обнаружил изменение URL-адреса вашего сайта"
+
+#: src/js/ate-cloned-sites/steps/MoveCompleted.js:21
+msgid "You can now continue translating content on this site as usual."
+msgstr "Теперь вы можете продолжать переводить контент на этом сайте как обычно."
+
+#: src/js/ate-cloned-sites/steps/MoveCompleted.js:32
+msgid ""
+"Just a reminder: there shouldn’t be another copy of this site running at "
+"%s. If there is, automatic translation won’t work correctly on that site."
+msgstr "Напоминаем: на %s не должно быть другой копии этого сайта. Если она есть, автоматический перевод на этом сайте не будет работать корректно."
+
+#: src/js/ate-cloned-sites/steps/MoveConfirmation.js:33
+msgid "You indicated that the original site at %s is no longer active. This means:"
+msgstr "Вы указали, что оригинальный сайт на %s больше не активен. Это означает:"
+
+#: src/js/ate-cloned-sites/steps/MoveConfirmation.js:37
+msgid "Automatic translation will no longer work on the old site"
+msgstr "Автоматический перевод больше не будет работать на старом сайте"
+
+#: src/js/ate-cloned-sites/steps/MoveConfirmation.js:40
+msgid "Accessing the old site may trigger warnings on this site"
+msgstr "Доступ к старому сайту может вызвать предупреждения на этом сайте"
+
+#: src/js/ate-cloned-sites/steps/MoveConfirmation.js:50
+msgid "Please confirm:"
+msgstr "Пожалуйста, подтвердите:"
+
+#: src/js/ate-cloned-sites/steps/MoveConfirmation.js:61
+msgid "I understand and confirm that <b>%s</b> is no longer in use."
+msgstr "Я понимаю и подтверждаю, что <b>%s</b> больше не используется."
+
+#: src/js/ate-cloned-sites/steps/MoveConfirmation.js:78
+msgid "Back"
+msgstr "Назад"
+
+#: src/js/ate-cloned-sites/steps/MoveConfirmation.js:9
+msgid "Please Confirm"
+msgstr "Пожалуйста, подтвердите"
+
+#: src/js/ate-cloned-sites/steps/MoveError.js:16
+msgid "WPML was unable to update our records with your new URL."
+msgstr "WPML не удалось обновить наши записи с вашим новым URL."
+
+#: src/js/ate-cloned-sites/steps/MoveError.js:7
+msgid "Error with moving translation information to new URL"
+msgstr "Ошибка при перемещении информации о переводе на новый URL"
+
+#: src/js/ate-cloned-sites/steps/MoveOrCopy.js:34
+msgid "It looks like this site was previously at %s and is now running on %s."
+msgstr "Похоже, этот сайт ранее находился на %s и теперь работает на %s."
+
+#: src/js/ate-cloned-sites/steps/MoveOrCopy.js:42
+msgid "Is the original site still available at %s?"
+msgstr "Оригинальный сайт все еще доступен на %s?"
+
+#: src/js/ate-cloned-sites/steps/MoveOrCopy.js:54
+msgid "Yes"
+msgstr "Да"
+
+#: src/js/ate-cloned-sites/steps/MoveOrCopy.js:57
+msgid ""
+"The original site is still running and this is just a copy of the original "
+"site"
+msgstr "Оригинальный сайт все еще работает, и это просто копия оригинального сайта"
+
+#: src/js/ate-cloned-sites/steps/MoveOrCopy.js:64
+msgid "I moved the site to this new address and this is now the main site"
+msgstr "Я переместил сайт на этот новый адрес, и теперь это основной сайт"
+
+#: src/js/ate-cloned-sites/steps/MoveOrCopy.js:8
+msgid "WPML Detected a New Site Address"
+msgstr "WPML обнаружил новый адрес сайта"
+
+#: src/js/ate-cloned-sites/steps/MoveOrCopy.js:80
+msgid "How to manage translations when migrating from development to production"
+msgstr "Как управлять переводами при миграции из разработки в производство"
+
+#: src/js/ate-cloned-sites/steps/NoAdmin.js:11
+msgid ""
+"Looks like this site is a copy of a different site, or moved to a different "
+"URL. Please contact your translation manager to update Translation "
+"Management plugin configuration."
+msgstr "Похоже, этот сайт является копией другого сайта или был перемещен на другой URL. Пожалуйста, свяжитесь с вашим менеджером по переводам, чтобы обновить конфигурацию плагина Translation Management."
+
+#: src/js/ate-cloned-sites/steps/NoAdmin.js:5
+msgid "Site Moved or Copied - Action Required"
+msgstr "Сайт перемещен или скопирован — требуется действие"
+
+#: src/js/ate-cloned-sites/steps/RevertMove.js:36
+msgid "You or someone else moved this site to %s. Please keep in mind that:"
+msgstr "Вы или кто-то другой переместили этот сайт на %s. Пожалуйста, имейте в виду, что:"
+
+#: src/js/ate-cloned-sites/steps/RevertMove.js:50
+msgid "Translations that you do at %s will not appear on this site."
+msgstr "Переводы, которые вы делаете на %s, не будут отображаться на этом сайте."
+
+#: src/js/ate-cloned-sites/steps/RevertMove.js:56
+msgid "You cannot edit translations on this site."
+msgstr "Вы не можете редактировать переводы на этом сайте."
+
+#: src/js/ate-cloned-sites/steps/RevertMove.js:67
+msgid ""
+"The site at %s is using the same credits for automatic translation as this "
+"site."
+msgstr "Сайт на %s использует те же кредиты для автоматического перевода, что и этот сайт."
+
+#: src/js/ate-cloned-sites/steps/RevertMove.js:76
+msgid ""
+"If you didn't intend to move this site to %s, you can <a>indicate that this "
+"site should be at %s</a>."
+msgstr "Если вы не собирались перемещать этот сайт на %s, вы можете <a>указать, что этот сайт должен быть на %s</a>."
+
+#: src/js/ate-cloned-sites/steps/RevertMove.js:9
+msgid "This site has moved to a new location"
+msgstr "Этот сайт перемещен на новое место"
+
+#: src/js/ate-cloned-sites/steps/RevertMove.js:96
+msgid ""
+"If you prefer not to move this site, you can <a>mark it as a copy</a> and "
+"enable automatic translation for it."
+msgstr "Если вы предпочитаете не перемещать этот сайт, вы можете <a>отметить его как копию</a> и включить для него автоматический перевод."
+
+#: src/js/ate-cloned-sites/steps/RevertMoveConfirm.js:38
+msgid ""
+"Moving the site back here will mean that you will be able to translate on "
+"this domain again, but you will not be able to update translations at %s."
+msgstr "Перемещение сайта обратно сюда будет означать, что вы снова сможете переводить на этом домене, но не сможете обновлять переводы на %s."
+
+#: src/js/ate-cloned-sites/steps/RevertMoveConfirm.js:50
+msgid "Yes - move back here"
+msgstr "Да — переместить обратно сюда"
+
+#: src/js/ate-cloned-sites/steps/RevertMoveConfirm.js:56
+msgid "No - keep the site on %s"
+msgstr "Нет — оставить сайт на %s"
+
+#: src/js/ate-cloned-sites/steps/RevertMoveConfirm.js:9
+msgid "Are you sure that this site should run on %s and not %s?"
+msgstr "Вы уверены, что этот сайт должен работать на %s, а не на %s?"
+
+#: src/js/ate-cloned-sites/steps/initial/MigrationSection.js:16
+msgid ""
+"WPML noticed that your site is being accessed from a different domain or "
+"URL."
+msgstr "WPML заметил, что ваш сайт доступен с другого домена или URL."
+
+#: src/js/ate-cloned-sites/steps/initial/MigrationSection.js:21
+msgid ""
+"To make sure everything continues working correctly, including automatic "
+"translation and site registration, we need to verify and update your site "
+"settings."
+msgstr "Чтобы убедиться, что все продолжает работать правильно, включая автоматический перевод и регистрацию сайта, нам необходимо проверить и обновить настройки вашего сайта."
+
+#: src/js/ate-cloned-sites/steps/initial/MigrationSection.js:26
+msgid "This will only take a moment."
+msgstr "Это займет всего минуту."
+
+#: src/js/ate-cloned-sites/steps/initial/MigrationSection.js:36
+msgid "Start Migration"
+msgstr "Начать миграцию"

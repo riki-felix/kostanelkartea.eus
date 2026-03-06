@@ -1,0 +1,318 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: sv_SE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/js/ate-cloned-sites/components/CloseButton.js:15
+msgid "Close"
+msgstr "Stäng"
+
+#: src/js/ate-cloned-sites/components/ContactSupport.js:9
+msgid ""
+"Please take a screenshot of this message and report this issue to <a>WPML "
+"support</a>."
+msgstr "Ta en skärmdump av det här meddelandet och rapportera problemet till <a>WPML-supporten</a>."
+
+#: src/js/ate-cloned-sites/components/UnregistrationInfo.js:7
+msgid ""
+"WPML has automatically unregistered your site as part of this wizard. After "
+"you close it, you’ll see a prompt to register the site again. This is "
+"expected, your content and translations are safe."
+msgstr "WPML har automatiskt avregistrerat din webbplats som en del av den här guiden. När du stänger den kommer du att se en uppmaning att registrera webbplatsen igen. Detta är förväntat, ditt innehåll och dina översättningar är säkra."
+
+#: src/js/ate-cloned-sites/steps/CopyCompleted.js:10
+#: src/js/ate-cloned-sites/steps/CopyWithCreditsCompleted.js:9
+#: src/js/ate-cloned-sites/steps/MoveCompleted.js:10
+msgid "You’re all set"
+msgstr "Allt är klart"
+
+#: src/js/ate-cloned-sites/steps/CopyCompleted.js:23
+msgid ""
+"This site is a copy of the original site %s and it doesn’t currently have "
+"any automatic translation credits."
+msgstr "Den här webbplatsen är en kopia av den ursprungliga webbplatsen %s och den har för närvarande inga krediter för automatisk översättning."
+
+#: src/js/ate-cloned-sites/steps/CopyCompleted.js:33
+msgid ""
+"If you’d like to use automatic translation here in the future, you can "
+"either <a1>add credits</a1> or <a2>share them from the original site</a2>."
+msgstr "Om du vill använda automatisk översättning här i framtiden kan du antingen <a1>lägga till krediter</a1> eller <a2>dela dem från den ursprungliga webbplatsen</a2>."
+
+#: src/js/ate-cloned-sites/steps/CopyCompleted.js:52
+msgid ""
+"There was an error checking for credits to share. Please take a screenshot "
+"of this message and report it in <a>WPML support</a>."
+msgstr "Det uppstod ett fel vid kontroll av krediter att dela. Ta en skärmdump av det här meddelandet och rapportera det till <a>WPML-supporten</a>."
+
+#: src/js/ate-cloned-sites/steps/CopyCredits.js:36
+msgid ""
+"To link %s and %s so they share automatic translation credits, follow these "
+"steps:"
+msgstr "För att länka %s och %s så att de delar krediter för automatisk översättning, följ dessa steg:"
+
+#: src/js/ate-cloned-sites/steps/CopyCredits.js:47
+msgid ""
+"Open <a>this link</a> to access the original site’s admin area. (You can’t "
+"access this screen by visiting %s directly.)"
+msgstr "Öppna <a>den här länken</a> för att komma åt den ursprungliga webbplatsens adminområde. (Du kan inte komma åt den här skärmen genom att besöka %s direkt.)"
+
+#: src/js/ate-cloned-sites/steps/CopyCredits.js:59
+msgid "Click <b>Copy migration code</b> on that page."
+msgstr "Klicka på <b>Kopiera migreringskod</b> på den sidan."
+
+#: src/js/ate-cloned-sites/steps/CopyCredits.js:68
+msgid "Paste the code below to complete the connection."
+msgstr "Klistra in koden nedan för att slutföra anslutningen."
+
+#: src/js/ate-cloned-sites/steps/CopyCredits.js:77
+msgid "Migration code"
+msgstr "Migreringskod"
+
+#: src/js/ate-cloned-sites/steps/CopyCredits.js:79
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:84
+#: src/js/ate-cloned-sites/steps/MoveConfirmation.js:75
+#: src/js/ate-cloned-sites/steps/MoveOrCopy.js:76
+msgid "Continue"
+msgstr "Fortsätt"
+
+#: src/js/ate-cloned-sites/steps/CopyCredits.js:82
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:95
+msgid "Go back"
+msgstr "Gå tillbaka"
+
+#: src/js/ate-cloned-sites/steps/CopyCredits.js:9
+msgid "Connect Automatic Translation Credits"
+msgstr "Anslut krediter för automatisk översättning"
+
+#: src/js/ate-cloned-sites/steps/CopyError.js:15
+msgid ""
+"WPML was unable to copy your site's translations, translation memory, and "
+"glossary to this new URL."
+msgstr "WPML kunde inte kopiera din webbplats översättningar, översättningsminne och ordlista till denna nya URL."
+
+#: src/js/ate-cloned-sites/steps/CopyError.js:7
+msgid "Error with copying translation information to new URL"
+msgstr "Fel vid kopiering av översättningsinformation till ny URL"
+
+#: src/js/ate-cloned-sites/steps/CopyWithCreditsCompleted.js:12
+msgid "This site and its copy on %s are now sharing automatic translation credits."
+msgstr "Den här webbplatsen och dess kopia på %s delar nu krediter för automatisk översättning."
+
+#: src/js/ate-cloned-sites/steps/CopyWithCreditsCompleted.js:30
+msgid ""
+"Any credits you add to one site will be available on both. If you stop "
+"using this site, your credits will remain safe."
+msgstr "Alla krediter du lägger till på en webbplats kommer att vara tillgängliga på båda. Om du slutar använda den här webbplatsen kommer dina krediter att förbli säkra."
+
+#: src/js/ate-cloned-sites/steps/CopyWithCreditsError.js:15
+msgid ""
+"WPML was unable to connect your old and new URLs to share automatic "
+"translation credits."
+msgstr "WPML kunde inte koppla ihop dina gamla och nya URL:er för att dela krediter för automatisk översättning."
+
+#: src/js/ate-cloned-sites/steps/CopyWithCreditsError.js:7
+msgid "Error with sharing automatic translation credits"
+msgstr "Fel vid delning av krediter för automatisk översättning"
+
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:12
+msgid ""
+"The site on %s has %d credits for automatic translation. Do you want to "
+"share these credits with this new site %s?"
+msgstr "Webbplatsen på %s har %d krediter för automatisk översättning. Vill du dela dessa krediter med den här nya webbplatsen %s?"
+
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:19
+msgid ""
+"The site on %s has a pay-as-you-go subscription for automatic translation. "
+"Do you want to share these credits between %s and this new location (%s)?"
+msgstr "Webbplatsen på %s har en betala-per-användning-prenumeration för automatisk översättning. Vill du dela dessa krediter mellan %s och den här nya platsen (%s)?"
+
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:66
+msgid "Yes (recommended)"
+msgstr "Ja (rekommenderas)"
+
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:68
+msgid "In the next step, you’ll approve the use of same credits on both sites."
+msgstr "I nästa steg godkänner du användningen av samma krediter på båda webbplatserna."
+
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:71
+#: src/js/ate-cloned-sites/steps/MoveOrCopy.js:61
+msgid "No"
+msgstr "Nej"
+
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:73
+msgid "You’ll need to assign new credits or set up pay-as-you-go."
+msgstr "Du måste tilldela nya krediter eller ställa in betala-per-användning."
+
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:87
+msgid "What happens when you share credits between sites?"
+msgstr "Vad händer när du delar krediter mellan webbplatser?"
+
+#: src/js/ate-cloned-sites/steps/CreditDecision.js:9
+msgid "Translation credits for this site"
+msgstr "Översättningskrediter för den här webbplatsen"
+
+#: src/js/ate-cloned-sites/steps/Initial.js:7
+msgid "WPML detected a change in your site's URL"
+msgstr "WPML upptäckte en ändring i din webbplats URL"
+
+#: src/js/ate-cloned-sites/steps/MoveCompleted.js:21
+msgid "You can now continue translating content on this site as usual."
+msgstr "Du kan nu fortsätta översätta innehåll på den här webbplatsen som vanligt."
+
+#: src/js/ate-cloned-sites/steps/MoveCompleted.js:32
+msgid ""
+"Just a reminder: there shouldn’t be another copy of this site running at "
+"%s. If there is, automatic translation won’t work correctly on that site."
+msgstr "Bara en påminnelse: det bör inte finnas en annan kopia av den här webbplatsen som körs på %s. Om det finns det kommer automatisk översättning inte att fungera korrekt på den webbplatsen."
+
+#: src/js/ate-cloned-sites/steps/MoveConfirmation.js:33
+msgid "You indicated that the original site at %s is no longer active. This means:"
+msgstr "Du angav att den ursprungliga webbplatsen på %s inte längre är aktiv. Detta innebär:"
+
+#: src/js/ate-cloned-sites/steps/MoveConfirmation.js:37
+msgid "Automatic translation will no longer work on the old site"
+msgstr "Automatisk översättning kommer inte längre att fungera på den gamla webbplatsen"
+
+#: src/js/ate-cloned-sites/steps/MoveConfirmation.js:40
+msgid "Accessing the old site may trigger warnings on this site"
+msgstr "Att komma åt den gamla webbplatsen kan utlösa varningar på den här webbplatsen"
+
+#: src/js/ate-cloned-sites/steps/MoveConfirmation.js:50
+msgid "Please confirm:"
+msgstr "Vänligen bekräfta:"
+
+#: src/js/ate-cloned-sites/steps/MoveConfirmation.js:61
+msgid "I understand and confirm that <b>%s</b> is no longer in use."
+msgstr "Jag förstår och bekräftar att <b>%s</b> inte längre används."
+
+#: src/js/ate-cloned-sites/steps/MoveConfirmation.js:78
+msgid "Back"
+msgstr "Tillbaka"
+
+#: src/js/ate-cloned-sites/steps/MoveConfirmation.js:9
+msgid "Please Confirm"
+msgstr "Vänligen bekräfta"
+
+#: src/js/ate-cloned-sites/steps/MoveError.js:16
+msgid "WPML was unable to update our records with your new URL."
+msgstr "WPML kunde inte uppdatera våra register med din nya URL."
+
+#: src/js/ate-cloned-sites/steps/MoveError.js:7
+msgid "Error with moving translation information to new URL"
+msgstr "Fel vid flytt av översättningsinformation till ny URL"
+
+#: src/js/ate-cloned-sites/steps/MoveOrCopy.js:34
+msgid "It looks like this site was previously at %s and is now running on %s."
+msgstr "Det verkar som att den här webbplatsen tidigare fanns på %s och nu körs på %s."
+
+#: src/js/ate-cloned-sites/steps/MoveOrCopy.js:42
+msgid "Is the original site still available at %s?"
+msgstr "Är den ursprungliga webbplatsen fortfarande tillgänglig på %s?"
+
+#: src/js/ate-cloned-sites/steps/MoveOrCopy.js:54
+msgid "Yes"
+msgstr "Ja"
+
+#: src/js/ate-cloned-sites/steps/MoveOrCopy.js:57
+msgid ""
+"The original site is still running and this is just a copy of the original "
+"site"
+msgstr "Den ursprungliga webbplatsen körs fortfarande och detta är bara en kopia av den ursprungliga webbplatsen"
+
+#: src/js/ate-cloned-sites/steps/MoveOrCopy.js:64
+msgid "I moved the site to this new address and this is now the main site"
+msgstr "Jag flyttade webbplatsen till den här nya adressen och detta är nu huvudwebbplatsen"
+
+#: src/js/ate-cloned-sites/steps/MoveOrCopy.js:8
+msgid "WPML Detected a New Site Address"
+msgstr "WPML upptäckte en ny webbplatsadress"
+
+#: src/js/ate-cloned-sites/steps/MoveOrCopy.js:80
+msgid "How to manage translations when migrating from development to production"
+msgstr "Hur man hanterar översättningar vid migrering från utveckling till produktion"
+
+#: src/js/ate-cloned-sites/steps/NoAdmin.js:11
+msgid ""
+"Looks like this site is a copy of a different site, or moved to a different "
+"URL. Please contact your translation manager to update Translation "
+"Management plugin configuration."
+msgstr "Det verkar som att den här webbplatsen är en kopia av en annan webbplats, eller flyttades till en annan URL. Kontakta din översättningsansvarige för att uppdatera konfigurationen av tillägget Translation Management."
+
+#: src/js/ate-cloned-sites/steps/NoAdmin.js:5
+msgid "Site Moved or Copied - Action Required"
+msgstr "Webbplats flyttad eller kopierad – åtgärd krävs"
+
+#: src/js/ate-cloned-sites/steps/RevertMove.js:36
+msgid "You or someone else moved this site to %s. Please keep in mind that:"
+msgstr "Du eller någon annan flyttade den här webbplatsen till %s. Tänk på att:"
+
+#: src/js/ate-cloned-sites/steps/RevertMove.js:50
+msgid "Translations that you do at %s will not appear on this site."
+msgstr "Översättningar som du gör på %s kommer inte att visas på den här webbplatsen."
+
+#: src/js/ate-cloned-sites/steps/RevertMove.js:56
+msgid "You cannot edit translations on this site."
+msgstr "Du kan inte redigera översättningar på den här webbplatsen."
+
+#: src/js/ate-cloned-sites/steps/RevertMove.js:67
+msgid ""
+"The site at %s is using the same credits for automatic translation as this "
+"site."
+msgstr "Webbplatsen på %s använder samma krediter för automatisk översättning som den här webbplatsen."
+
+#: src/js/ate-cloned-sites/steps/RevertMove.js:76
+msgid ""
+"If you didn't intend to move this site to %s, you can <a>indicate that this "
+"site should be at %s</a>."
+msgstr "Om du inte avsåg att flytta den här webbplatsen till %s kan du <a>ange att den här webbplatsen ska vara på %s</a>."
+
+#: src/js/ate-cloned-sites/steps/RevertMove.js:9
+msgid "This site has moved to a new location"
+msgstr "Den här webbplatsen har flyttats till en ny plats"
+
+#: src/js/ate-cloned-sites/steps/RevertMove.js:96
+msgid ""
+"If you prefer not to move this site, you can <a>mark it as a copy</a> and "
+"enable automatic translation for it."
+msgstr "Om du föredrar att inte flytta den här webbplatsen kan du <a>markera den som en kopia</a> och aktivera automatisk översättning för den."
+
+#: src/js/ate-cloned-sites/steps/RevertMoveConfirm.js:38
+msgid ""
+"Moving the site back here will mean that you will be able to translate on "
+"this domain again, but you will not be able to update translations at %s."
+msgstr "Att flytta tillbaka webbplatsen hit innebär att du kommer att kunna översätta på den här domänen igen, men du kommer inte att kunna uppdatera översättningar på %s."
+
+#: src/js/ate-cloned-sites/steps/RevertMoveConfirm.js:50
+msgid "Yes - move back here"
+msgstr "Ja – flytta tillbaka hit"
+
+#: src/js/ate-cloned-sites/steps/RevertMoveConfirm.js:56
+msgid "No - keep the site on %s"
+msgstr "Nej – behåll webbplatsen på %s"
+
+#: src/js/ate-cloned-sites/steps/RevertMoveConfirm.js:9
+msgid "Are you sure that this site should run on %s and not %s?"
+msgstr "Är du säker på att den här webbplatsen ska köras på %s och inte %s?"
+
+#: src/js/ate-cloned-sites/steps/initial/MigrationSection.js:16
+msgid ""
+"WPML noticed that your site is being accessed from a different domain or "
+"URL."
+msgstr "WPML märkte att din webbplats nås från en annan domän eller URL."
+
+#: src/js/ate-cloned-sites/steps/initial/MigrationSection.js:21
+msgid ""
+"To make sure everything continues working correctly, including automatic "
+"translation and site registration, we need to verify and update your site "
+"settings."
+msgstr "För att säkerställa att allt fortsätter att fungera korrekt, inklusive automatisk översättning och webbplatsregistrering, måste vi verifiera och uppdatera dina webbplatsinställningar."
+
+#: src/js/ate-cloned-sites/steps/initial/MigrationSection.js:26
+msgid "This will only take a moment."
+msgstr "Detta tar bara ett ögonblick."
+
+#: src/js/ate-cloned-sites/steps/initial/MigrationSection.js:36
+msgid "Start Migration"
+msgstr "Starta migrering"

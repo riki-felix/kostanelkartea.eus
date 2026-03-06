@@ -1,0 +1,298 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: src/js/components/translation/TranslationMethod.js:115
+msgid "Your pending automatic translations will be canceled."
+msgstr "Bekleyen otomatik çevirileriniz iptal edilecektir."
+
+#: src/js/components/translation/TranslationMethod.js:119
+msgid "Save"
+msgstr "Kaydet"
+
+#: src/js/components/translation/TranslationMethod.js:125
+msgid "Go to the <a>Translation Management Dashboard</a> to translate your content."
+msgstr "İçeriğinizi çevirmek için <a>Çeviri Yönetimi Panosu</a>'na gidin."
+
+#: src/js/components/translation/TranslationMethod.js:142
+msgid "Review the translations before publishing"
+msgstr "Yayınlamadan önce çevirileri gözden geçirin"
+
+#: src/js/components/translation/TranslationMethod.js:143
+msgid "Publish translations and review them later"
+msgstr "Çevirileri yayınlayın ve daha sonra gözden geçirin"
+
+#: src/js/components/translation/TranslationMethod.js:144
+msgid "Publish translations without reviewing"
+msgstr "Çevirileri gözden geçirmeden yayınlayın"
+
+#: src/js/components/translation/TranslationMethod.js:69
+msgid "Translate Everything"
+msgstr "Her şeyi çevir"
+
+#: src/js/components/translation/TranslationMethod.js:71
+msgid "WPML will automatically translate content that you publish or update"
+msgstr "WPML, yayınladığınız veya güncellediğiniz içeriği otomatik olarak çevirecektir"
+
+#: src/js/components/translation/TranslationMethod.js:74
+msgid "How do you want to translate this site?"
+msgstr "Bu siteyi nasıl çevirmek istersiniz?"
+
+#: src/js/components/translation/TranslationMethod.js:97
+msgid "Translate Some"
+msgstr "Bazılarını çevir"
+
+#: src/js/components/translation/TranslationMethod.js:99
+msgid "I want to choose which content to translate"
+msgstr "Hangi içeriği çevireceğimi seçmek istiyorum"
+
+#: src/js/translationDashboard/sending-to-translation/components/AllLanguages.js:25
+msgid "All Languages"
+msgstr "Tüm diller"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:17
+msgid "Overwrite existing translations"
+msgstr "Mevcut çevirilerin üzerine yaz"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:24
+msgid "Some of the content you want to translate is already translated"
+msgstr "Çevirmek istediğiniz içeriğin bir kısmı zaten çevrilmiş"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:30
+msgid "What do you want to do with the content that’s already translated?"
+msgstr "Zaten çevrilmiş içerikle ne yapmak istersiniz?"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:39
+msgid "Leave existing translations as is"
+msgstr "Mevcut çevirileri olduğu gibi bırak"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:64
+msgid "You chose to review translations before publishing."
+msgstr "Yayınlamadan önce çevirileri gözden geçirmeyi seçtiniz."
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:65
+msgid ""
+"If you retranslate content that's already published, the changes will be "
+"applied directly to live pages or posts."
+msgstr "Zaten yayınlanmış içeriği yeniden çevirirseniz, değişiklikler doğrudan canlı sayfalara veya gönderilere uygulanacaktır."
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:82
+msgid ""
+"This also updates the translation memory for your site. Read more about <a "
+"href=\"%s\" target=\"_blank\" >translation memory</a>"
+msgstr "Bu aynı zamanda sitenizin çeviri belleğini de günceller. <a href=\"%s\" target=\"_blank\" >Çeviri belleği</a> hakkında daha fazla bilgi edinin"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:89
+msgid ""
+"Allows you to re-translate your content and update the translation memory "
+"for your site. Read more about <a href=\"%s\" target=\"_blank\" "
+">translation memory</a>"
+msgstr "İçeriğinizi yeniden çevirmenize ve sitenizin çeviri belleğini güncellemenize olanak tanır. <a href=\"%s\" target=\"_blank\" >Çeviri belleği</a> hakkında daha fazla bilgi edinin"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:96
+msgid ""
+"Allows your translators to re-translate your content and update the "
+"translation memory for your site. Read more about <a href=\"%s\" "
+"target=\"_blank\" >translation memory</a>"
+msgstr "Çevirmenlerinizin içeriğinizi yeniden çevirmesine ve sitenizin çeviri belleğini güncellemesine olanak tanır. <a href=\"%s\" target=\"_blank\" >Çeviri belleği</a> hakkında daha fazla bilgi edinin"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:98
+msgid ""
+"HINT: You can add a Note for translators in the table above with special "
+"instructions."
+msgstr "İPUCU: Yukarıdaki tabloya çevirmenler için özel talimatlar içeren bir Not ekleyebilirsiniz."
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToTranslate.js:31
+msgid "Translate automatically"
+msgstr "Otomatik çevir"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToTranslate.js:37
+msgid "How do you want to translate?"
+msgstr "Nasıl çevirmek istersiniz?"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToTranslate.js:55
+msgid "Assign to a translator"
+msgstr "Bir çevirmene ata"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToTranslate.js:55
+msgid "Translate myself"
+msgstr "Kendim çevir"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToTranslate.js:60
+msgid "You do not need translation credits to translate content yourself."
+msgstr "İçeriği kendiniz çevirmek için çeviri kredilerine ihtiyacınız yoktur."
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToTranslate.js:87
+msgid ""
+"You can only automatically translate content from your site's default "
+"language (English), to your site's other languages. Deselect content in "
+"your site's secondary languages to proceed."
+msgstr "İçeriği yalnızca sitenizin varsayılan dilinden (İngilizce) sitenizin diğer dillerine otomatik olarak çevirebilirsiniz. Devam etmek için sitenizin ikincil dillerindeki içeriğin seçimini kaldırın."
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToTranslate.js:92
+#. %s is the name of the default language. </a>
+msgid ""
+"You can only automatically translate content from your primary language "
+"(%s) to other languages. Use the language switcher at the top of this page "
+"to switch to %s."
+msgstr "İçeriği yalnızca birincil diliniz olan (%s)'ten diğer dillere otomatik olarak çevirebilirsiniz. %s'ya geçmek için bu sayfanın üst kısmındaki dil değiştiriciyi kullanın."
+
+#: src/js/translationDashboard/sending-to-translation/components/LanguageRow.js:49
+msgid ""
+"Selected content includes items that were originally created in this "
+"language. Deselect these items to proceed."
+msgstr "Seçilen içerik, orijinal olarak bu dilde oluşturulmuş öğeleri içerir. Devam etmek için bu öğelerin seçimini kaldırın."
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:100
+msgid "Add to Translation Queue"
+msgstr "Çeviri kuyruğuna ekle"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:17
+msgid "Select a post or page to translate"
+msgstr "Çevirmek için bir gönderi veya sayfa seçin"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:18
+msgid "Translate or duplicate content to at least one language"
+msgstr "İçeriği en az bir dile çevir veya çoğalt"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:19
+msgid "Choose how you want to translate your content"
+msgstr "İçeriğinizi nasıl çevirmek istediğinizi seçin"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:20
+msgid "Selected content is already translated"
+msgstr "Seçilen içerik zaten çevrilmiş"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:21
+msgid ""
+"Selected content includes items in a language other than your site's "
+"default language."
+msgstr "Seçilen içerik, sitenizin varsayılan dili dışındaki bir dilde öğeler içerir."
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:74
+msgid "Choose at least one translation action"
+msgstr "En az bir çeviri eylemi seçin"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:78
+msgid "Duplicate"
+msgstr "Çoğalt"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:88
+msgid "Start translating and duplicating"
+msgstr "Çevirmeye ve çoğaltmaya başla"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:90
+msgid "Add to Translation Basket and duplicate"
+msgstr "Çeviri Sepetine ekle ve çoğalt"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:92
+msgid "Add to Translation Queue and duplicate"
+msgstr "Çeviri Kuyruğuna ekle ve çoğalt"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:96
+msgid "Start translating"
+msgstr "Çevirmeye başla"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:98
+msgid "Add to Translation Basket"
+msgstr "Çeviri sepetine ekle"
+
+#: src/js/translationDashboard/sending-to-translation/components/TranslationReviewModal.js:37
+msgid "One more thing..."
+msgstr "Bir şey daha..."
+
+#: src/js/translationDashboard/sending-to-translation/components/TranslationReviewModal.js:40
+msgid ""
+"What would you like to do when your content has finished translating "
+"automatically?"
+msgstr "İçeriğiniz otomatik olarak çevrildikten sonra ne yapmak istersiniz?"
+
+#: src/js/translationDashboard/sending-to-translation/components/TranslationReviewModal.js:51
+msgid "Save settings"
+msgstr "Ayarları kaydet"
+
+#: src/js/translationDashboard/sending-to-translation/components/TranslationReviewModal.js:61
+msgid ""
+"This setting will apply to all future automatic translations. You can "
+"change this anytime in WPML → Settings."
+msgstr "Bu ayar, gelecekteki tüm otomatik çeviriler için geçerli olacaktır. Bunu istediğiniz zaman WPML → Ayarlar bölümünden değiştirebilirsiniz."
+
+#: src/js/translationDashboard/sending-to-translation/model/store.js:19
+msgid "Translate"
+msgstr "Çevir"
+
+#: src/js/translationDashboard/sending-to-translation/model/store.js:24
+msgid "Duplicate content"
+msgstr "İçeriği çoğalt"
+
+#: src/js/translationDashboard/sending-to-translation/model/store.js:29
+msgid "Do nothing"
+msgstr "Hiçbir şey yapma"
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:11
+msgid "You need credits to use automatic translation."
+msgstr "Otomatik çeviri kullanmak için kredilere ihtiyacınız var."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:113
+msgid "Finish setting up %s on your site"
+msgstr "Sitenizde %s kurulumunu tamamlayın"
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:117
+msgid ""
+"You need to authenticate %s to send them content for translation. Visit the "
+"%s to finish the setup."
+msgstr "Çeviri için içerik göndermek üzere %s'yı doğrulamanız gerekiyor. Kurulumu tamamlamak için %s'yı ziyaret edin."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:14
+msgid ""
+"Connection Error. Please wait a minute and reload this page. If the problem "
+"continues, please <a>contact WPML support</a>."
+msgstr "Bağlantı Hatası. Lütfen bir dakika bekleyin ve bu sayfayı yeniden yükleyin. Sorun devam ederse, lütfen <a>WPML desteğiyle iletişime geçin</a>."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:143
+msgid "Add a translator to use %s."
+msgstr "%s'yı kullanmak için bir çevirmen ekleyin."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:147
+msgid ""
+"To send content to %s for translation, go to the %s to add a translator on "
+"your site."
+msgstr "Çeviri için %s'ya içerik göndermek için, sitenize bir çevirmen eklemek üzere %s'ya gidin."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:179
+msgid ""
+"Your selected automatic translation engines do not support the following "
+"language(s): %s. Read more about <a>choosing a translation engine</a>."
+msgstr "Seçtiğiniz otomatik çeviri motorları aşağıdaki dilleri desteklemiyor: %s. <a>Çeviri motoru seçme</a> hakkında daha fazla bilgi edinin."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:211
+msgid ""
+"Some of the selected content is already being translated. This will cancel "
+"any in-progress translations."
+msgstr "Seçilen içeriğin bir kısmı zaten çevriliyor. Bu, devam eden tüm çevirileri iptal edecektir."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:44
+msgid ""
+"Any existing content (translations) will be overwritten when creating "
+"duplicates."
+msgstr "Çoğaltmalar oluşturulurken mevcut içerik (çeviriler) üzerine yazılacaktır."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:45
+msgid ""
+"When duplicating content, please first duplicate parent pages to maintain "
+"the site's hierarchy."
+msgstr "İçeriği çoğaltırken, sitenin hiyerarşisini korumak için lütfen önce üst sayfaları çoğaltın."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:68
+msgid ""
+"To assign content to a translator, first <a href=\"%s\" "
+"target=\"_blank\">add a translator</a> or <a href=\"%s\" "
+"target=\"_blank\">connect to a translation service</a>."
+msgstr "İçeriği bir çevirmene atamak için önce <a href=\"%s\" target=\"_blank\">bir çevirmen ekleyin</a> veya <a href=\"%s\" target=\"_blank\">bir çeviri hizmetine bağlanın</a>."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:94
+msgid "Translators Tab"
+msgstr "Çevirmenler sekmesi"

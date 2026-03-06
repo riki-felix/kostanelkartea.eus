@@ -1,0 +1,413 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/js/components/language/LanguagePairs.js:57
+msgid "From:"
+msgstr "Từ:"
+
+#: src/js/components/language/LanguagePairs.js:69
+msgid "--Choose language--"
+msgstr "--Chọn ngôn ngữ--"
+
+#: src/js/components/language/LanguagePairs.js:81
+msgid "to:"
+msgstr "đến:"
+
+#: src/js/components/language/LanguagePairs.js:93
+msgid "Select %s"
+msgstr "Chọn %s"
+
+#: src/js/components/language/SelectLanguagePairs.js:39
+msgid "Set language pair(s) for Translator %s:"
+msgstr "Đặt cặp ngôn ngữ cho Trình dịch %s:"
+
+#: src/js/components/language/SelectLanguagePairs.js:69
+msgid "+ Add more language pairs for this translator"
+msgstr "+ Thêm cặp ngôn ngữ cho trình dịch này"
+
+#: src/js/components/roles/CreateUser.js:100
+msgid "First Name"
+msgstr "Tên"
+
+#: src/js/components/roles/CreateUser.js:101
+msgid "Last Name"
+msgstr "Họ"
+
+#: src/js/components/roles/CreateUser.js:105
+msgid "Role"
+msgstr "Vai trò"
+
+#: src/js/components/roles/CreateUser.js:138
+msgid "(required)"
+msgstr "(bắt buộc)"
+
+#: src/js/components/roles/CreateUser.js:214
+msgid "Select a role for the user"
+msgstr "Chọn vai trò cho người dùng"
+
+#: src/js/components/roles/CreateUser.js:46
+msgid ""
+"Make sure that you have provided a correct email address e.g. "
+"name@domain.com"
+msgstr "Hãy đảm bảo rằng bạn đã cung cấp địa chỉ email chính xác, ví dụ: name@domain.com"
+
+#: src/js/components/roles/CreateUser.js:64
+msgid "This field is required"
+msgstr "Trường này là bắt buộc"
+
+#: src/js/components/roles/CreateUser.js:84
+msgid "A translator can be any WordPress role."
+msgstr "Một người dịch có thể là bất kỳ vai trò WordPress nào."
+
+#: src/js/components/roles/CreateUser.js:98
+msgid "Username"
+msgstr "Tên người dùng"
+
+#: src/js/components/roles/CreateUser.js:99
+msgid "Email"
+msgstr "Email"
+
+#: src/js/components/roles/ExistingUserSelect.js:46
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: src/js/components/translation-managers/AddManagerDialog.js:117
+#: src/js/components/translators/AddTranslatorDialog.js:151
+#: src/js/components/translators/EditLanguagesDialog.js:73
+#: src/js/setup/components/Steps/AddLanguagesModal.js:496
+msgid "Cancel"
+msgstr "Hủy"
+
+#: src/js/components/translation-managers/AddManagerDialog.js:122
+msgid "Add Translation Manager"
+msgstr "Thêm trình quản lý dịch"
+
+#: src/js/components/translation-managers/AddManagerDialog.js:47
+msgid "user"
+msgstr "người dùng"
+
+#: src/js/components/translation-managers/AddManagerDialog.js:47
+msgid "Editor"
+msgstr "Biên tập viên"
+
+#: src/js/components/translation-managers/AddManagerDialog.js:71
+msgid "Select an existing %s and set as Translation Manager"
+msgstr "Chọn một %s hiện có và đặt làm Trình quản lý dịch"
+
+#: src/js/components/translation-managers/AddManagerDialog.js:96
+msgid "Create a new %s and set as Translation Manager"
+msgstr "Tạo một %s mới và đặt làm Trình quản lý dịch"
+
+#: src/js/components/translation-managers/ManagerSection.js:27
+msgid "Add a Translation Manager"
+msgstr "Thêm trình quản lý dịch"
+
+#: src/js/components/translators/AddTranslatorDialog.js:101
+msgid "Select an existing user and set as Translator"
+msgstr "Chọn một người dùng hiện có và đặt làm Người dịch"
+
+#: src/js/components/translators/AddTranslatorDialog.js:124
+msgid "Create a new user and set as Translator"
+msgstr "Tạo người dùng mới và đặt làm Người dịch"
+
+#: src/js/components/translators/AddTranslatorDialog.js:141
+msgid "Set language pair(s)"
+msgstr "Đặt cặp ngôn ngữ"
+
+#: src/js/components/translators/AddTranslatorDialog.js:156
+msgid "Previous"
+msgstr "Trước"
+
+#: src/js/components/translators/AddTranslatorDialog.js:159
+#: src/js/components/translators/EditLanguagesDialog.js:78
+msgid "Save"
+msgstr "Lưu"
+
+#: src/js/components/translators/AddTranslatorDialog.js:65
+#: src/js/components/translators/UserSection.js:45
+msgid "Add a Translator"
+msgstr "Thêm người dịch"
+
+#: src/js/components/translators/EditLanguagesDialog.js:55
+msgid "Edit language pair(s) for translator"
+msgstr "Chỉnh sửa cặp ngôn ngữ cho người dịch"
+
+#: src/js/components/translators/TranslatorsTable.js:136
+#: src/js/setup/components/Steps/AddLanguagesModal.js:346
+msgid "Name"
+msgstr "Tên"
+
+#: src/js/components/translators/TranslatorsTable.js:148
+msgid "Language Pairs"
+msgstr "Cặp ngôn ngữ"
+
+#: src/js/components/translators/TranslatorsTable.js:152
+msgid "You can translate to and from all languages"
+msgstr "Bạn có thể dịch sang và từ tất cả các ngôn ngữ"
+
+#: src/js/components/translators/TranslatorsTable.js:59
+msgid "Edit language pair(s)"
+msgstr "Chỉnh sửa cặp ngôn ngữ"
+
+#: src/js/components/translators/TranslatorsTable.js:62
+msgid "Delete language pair(s)"
+msgstr "Xóa cặp ngôn ngữ"
+
+#: src/js/setup/components/Steps/AddLanguages/Flag.js:48
+msgid "%s file upload failed."
+msgstr "Tải lên tệp %s không thành công."
+
+#: src/js/setup/components/Steps/AddLanguages/Flag.js:69
+msgid "Flag"
+msgstr "Cờ"
+
+#: src/js/setup/components/Steps/AddLanguages/Flag.js:87
+msgid "Flag file"
+msgstr "Tệp cờ"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:160
+msgid ""
+"You just added  language. Next, select it as the site's default language or "
+"a translation language."
+msgstr "Bạn vừa thêm ngôn ngữ. Tiếp theo, chọn ngôn ngữ đó làm ngôn ngữ mặc định của trang web hoặc ngôn ngữ dịch."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:162
+msgid "Language added"
+msgstr "Đã thêm ngôn ngữ"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:192
+msgid "The value \"%s\" already exists"
+msgstr "Giá trị “%s” đã tồn tại"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:215
+msgid "Add a new language"
+msgstr "Thêm ngôn ngữ mới"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:224
+msgid ""
+"Create a country-specific language by choosing the general language from "
+"the list below. Then, choose the country it should be localized for."
+msgstr "Tạo ngôn ngữ dành riêng cho quốc gia bằng cách chọn ngôn ngữ chung từ danh sách bên dưới. Sau đó, chọn quốc gia mà ngôn ngữ đó sẽ được bản địa hóa."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:229
+msgid ""
+"By choosing a combination that already exists in the database, WPML can "
+"help fill out the necessary fields. Read more about "
+"<AddingACustomLanguageLink />."
+msgstr "Bằng cách chọn một sự kết hợp đã tồn tại trong cơ sở dữ liệu, WPML có thể giúp điền vào các trường cần thiết. Đọc thêm về <AddingACustomLanguageLink />."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:242
+msgid "Cannot find?"
+msgstr "Không tìm thấy?"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:244
+msgid "Click here"
+msgstr "Nhấp vào đây"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:300
+msgid ""
+"The wrong format. It may contain only small letters and \"-\". E.g: \"fr\" "
+", \"pt-br\", \"zh-hans\""
+msgstr "Định dạng sai. Nó chỉ có thể chứa các chữ cái nhỏ và “-”. Ví dụ: “fr”, “pt-br”, “zh-hans”"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:308
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:331
+msgid "Location"
+msgstr "Vị trí"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:360
+msgid "Code"
+msgstr "Mã"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:374
+msgid "The language will not be supported by automatic translations"
+msgstr "Ngôn ngữ sẽ không được hỗ trợ bởi bản dịch tự động"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:392
+msgid "Language mapping"
+msgstr "Ánh xạ ngôn ngữ"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:404
+msgid "Don't map this language"
+msgstr "Không ánh xạ ngôn ngữ này"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:418
+msgid "Default locale"
+msgstr "Ngôn ngữ mặc định"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:423
+msgid ""
+"The wrong format. It may contain only small letters and \"_\". E.g: \"de\" "
+", \"de_DE\", \"zh_Hant_TW\""
+msgstr "Định dạng sai. Nó chỉ có thể chứa các chữ cái nhỏ và “_”. Ví dụ: “de”, “de_DE”, “zh_Hant_TW”"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:435
+msgid "hreflang"
+msgstr "hreflang"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:449
+msgid "Encode url?"
+msgstr "Mã hóa URL?"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:45
+msgid "Flags must be:"
+msgstr "Cờ phải là:"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:453
+msgid "NO"
+msgstr "KHÔNG"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:454
+msgid "YES"
+msgstr "CÓ"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:460
+msgid " (required)"
+msgstr " (bắt buộc)"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:483
+msgid "Please fill in the field"
+msgstr "Vui lòng điền vào trường"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:49
+msgid "PNG, SVG, or JPG files"
+msgstr "Tệp PNG, SVG hoặc JPG"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:501
+msgid "Save language"
+msgstr "Lưu ngôn ngữ"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:52
+msgid "18 x 12 pixels"
+msgstr "18 x 12 pixel"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:55
+msgid "Read more about "
+msgstr "Đọc thêm về "
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:60
+msgid ""
+"The name of your language as it will appear on your site's language "
+"switcher."
+msgstr "Tên ngôn ngữ của bạn sẽ xuất hiện trên bộ chuyển đổi ngôn ngữ của trang web."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:61
+msgid ""
+"A unique value that identifies the language in the database and URL. Once "
+"saved, the language code cannot be changed."
+msgstr "Một giá trị duy nhất xác định ngôn ngữ trong cơ sở dữ liệu và URL. Sau khi lưu, mã ngôn ngữ không thể thay đổi."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:62
+msgid ""
+"If your custom language is similar to an existing language, you can use the "
+"existing language's spellcheck and automatic translation. For example, if "
+"your custom language is Swiss-German, you can map to German as the language "
+"to use for spellcheck and automatic translation. If you don't map your "
+"custom language to an existing language, spellcheck and automatic "
+"translation features will be unavailable in that language."
+msgstr "Nếu ngôn ngữ tùy chỉnh của bạn tương tự như một ngôn ngữ hiện có, bạn có thể sử dụng tính năng kiểm tra chính tả và dịch tự động của ngôn ngữ hiện có. Ví dụ: nếu ngôn ngữ tùy chỉnh của bạn là tiếng Đức-Thụy Sĩ, bạn có thể ánh xạ sang tiếng Đức làm ngôn ngữ để sử dụng cho tính năng kiểm tra chính tả và dịch tự động. Nếu bạn không ánh xạ ngôn ngữ tùy chỉnh của mình sang một ngôn ngữ hiện có, các tính năng kiểm tra chính tả và dịch tự động sẽ không khả dụng trong ngôn ngữ đó."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:66
+msgid ""
+"The value WPML checks when loading translations from MO and PO files. The "
+"default locale is included in the filenames in your /wp-content/languages/ "
+"folder in your WordPress setup."
+msgstr "Giá trị WPML kiểm tra khi tải bản dịch từ các tệp MO và PO. Ngôn ngữ mặc định được bao gồm trong tên tệp trong thư mục /wp-content/languages/ trong thiết lập WordPress của bạn."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:69
+msgid ""
+"Google uses the hreflang attribute to direct users to sites in their "
+"relevant language and location. Examples:"
+msgstr "Google sử dụng thuộc tính hreflang để hướng người dùng đến các trang web bằng ngôn ngữ và vị trí liên quan của họ. Ví dụ:"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:71
+msgid "All English-speaking users: en"
+msgstr "Tất cả người dùng nói tiếng Anh: en"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:72
+msgid "English for UK users: en-gb"
+msgstr "Tiếng Anh cho người dùng Vương quốc Anh: en-gb"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:73
+msgid "English for US users: en-us"
+msgstr "Tiếng Anh cho người dùng Hoa Kỳ: en-us"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:81
+msgid ""
+"Determines if URLs in this language are encoded or use ASCII characters (if "
+"unsure, leave it as \"No\")."
+msgstr "Xác định xem URL trong ngôn ngữ này có được mã hóa hay sử dụng ký tự ASCII (nếu không chắc chắn, hãy để là “Không”)."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:98
+msgid "adding a custom language"
+msgstr "thêm ngôn ngữ tùy chỉnh"
+
+#: src/js/setup/components/Steps/Languages.js:110
+msgid "What are the languages of your site?"
+msgstr "Ngôn ngữ trang web của bạn là gì?"
+
+#: src/js/setup/components/Steps/Languages.js:120
+msgid "Default language"
+msgstr "Ngôn ngữ mặc định"
+
+#: src/js/setup/components/Steps/Languages.js:122
+msgid "What is the current language of your website?"
+msgstr "Ngôn ngữ hiện tại của trang web của bạn là gì?"
+
+#: src/js/setup/components/Steps/Languages.js:133
+msgid "Translation languages"
+msgstr "Ngôn ngữ dịch"
+
+#: src/js/setup/components/Steps/Languages.js:135
+msgid "Which languages do you want to translate your site into?"
+msgstr "Bạn muốn dịch trang web của mình sang những ngôn ngữ nào?"
+
+#: src/js/setup/components/Steps/Languages.js:149
+msgid "If you cannot find languages that you need in the list,"
+msgstr "Nếu bạn không thể tìm thấy ngôn ngữ mình cần trong danh sách,"
+
+#: src/js/setup/components/Steps/Languages.js:150
+msgid "create a custom language"
+msgstr "tạo ngôn ngữ tùy chỉnh"
+
+#: src/js/translation-roles-ui/components/Managers.js:12
+msgid ""
+"You can add a dedicated person to oversee everything translation-related on "
+"your site. %sTranslation Managers%s can add new local translators or "
+"professional translation services, create and assign translation jobs, "
+"review completed translations, and change translation-related settings."
+msgstr "Bạn có thể thêm một người chuyên trách để giám sát mọi thứ liên quan đến dịch thuật trên trang web của mình. %sTrình quản lý dịch%s có thể thêm người dịch địa phương mới hoặc dịch vụ dịch thuật chuyên nghiệp, tạo và chỉ định công việc dịch thuật, xem xét các bản dịch đã hoàn thành và thay đổi cài đặt liên quan đến dịch thuật."
+
+#: src/js/translation-roles-ui/components/Managers.js:22
+msgid "Translation Managers"
+msgstr "Trình quản lý dịch"
+
+#: src/js/translation-roles-ui/components/Managers.js:25
+msgid ""
+"Note: All Administrators are automatically given Translation Manager "
+"privileges."
+msgstr "Lưu ý: Tất cả Quản trị viên đều tự động được cấp đặc quyền Trình quản lý dịch."
+
+#: src/js/translation-roles-ui/components/Users.js:14
+msgid ""
+"%sLocal translators%s are users of your site that can log in and add, edit, "
+"and review your site's translations. Add a translator and their associated "
+"translation pairs to assign them translation jobs."
+msgstr "%sNgười dịch địa phương%s là người dùng trang web của bạn có thể đăng nhập và thêm, chỉnh sửa, xem xét các bản dịch của trang web. Thêm người dịch và các cặp dịch liên quan của họ để chỉ định công việc dịch thuật cho họ."
+
+#: src/js/translation-roles-ui/components/Users.js:23
+msgid ""
+"You can %shire an experienced translator%s to review your automatic "
+"translations for perfect quality."
+msgstr "Bạn có thể %sthuê một người dịch có kinh nghiệm%s để xem xét các bản dịch tự động của bạn nhằm đạt chất lượng hoàn hảo."
+
+#: src/js/translation-roles-ui/components/Users.js:33
+msgid "Translators"
+msgstr "Người dịch"

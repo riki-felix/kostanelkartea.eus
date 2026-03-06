@@ -1,0 +1,413 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: src/js/components/language/LanguagePairs.js:57
+msgid "From:"
+msgstr "Kimden:"
+
+#: src/js/components/language/LanguagePairs.js:69
+msgid "--Choose language--"
+msgstr "--Dil seçin--"
+
+#: src/js/components/language/LanguagePairs.js:81
+msgid "to:"
+msgstr "Kime:"
+
+#: src/js/components/language/LanguagePairs.js:93
+msgid "Select %s"
+msgstr "%s seçin"
+
+#: src/js/components/language/SelectLanguagePairs.js:39
+msgid "Set language pair(s) for Translator %s:"
+msgstr "Çevirmen %s için dil çift(ler)ini ayarlayın:"
+
+#: src/js/components/language/SelectLanguagePairs.js:69
+msgid "+ Add more language pairs for this translator"
+msgstr "Bu çevirmen için daha fazla dil çifti ekle"
+
+#: src/js/components/roles/CreateUser.js:100
+msgid "First Name"
+msgstr "Ad"
+
+#: src/js/components/roles/CreateUser.js:101
+msgid "Last Name"
+msgstr "Soyad"
+
+#: src/js/components/roles/CreateUser.js:105
+msgid "Role"
+msgstr "Rol"
+
+#: src/js/components/roles/CreateUser.js:138
+msgid "(required)"
+msgstr "(gerekli)"
+
+#: src/js/components/roles/CreateUser.js:214
+msgid "Select a role for the user"
+msgstr "Kullanıcı için bir rol seçin"
+
+#: src/js/components/roles/CreateUser.js:46
+msgid ""
+"Make sure that you have provided a correct email address e.g. "
+"name@domain.com"
+msgstr "Lütfen doğru bir e-posta adresi girdiğinizden emin olun, örn: name@domain.com"
+
+#: src/js/components/roles/CreateUser.js:64
+msgid "This field is required"
+msgstr "Bu alan zorunludur"
+
+#: src/js/components/roles/CreateUser.js:84
+msgid "A translator can be any WordPress role."
+msgstr "Bir çevirmen herhangi bir WordPress rolü olabilir."
+
+#: src/js/components/roles/CreateUser.js:98
+msgid "Username"
+msgstr "Kullanıcı adı"
+
+#: src/js/components/roles/CreateUser.js:99
+msgid "Email"
+msgstr "E-posta"
+
+#: src/js/components/roles/ExistingUserSelect.js:46
+msgid "Search"
+msgstr "Ara"
+
+#: src/js/components/translation-managers/AddManagerDialog.js:117
+#: src/js/components/translators/AddTranslatorDialog.js:151
+#: src/js/components/translators/EditLanguagesDialog.js:73
+#: src/js/setup/components/Steps/AddLanguagesModal.js:496
+msgid "Cancel"
+msgstr "İptal"
+
+#: src/js/components/translation-managers/AddManagerDialog.js:122
+msgid "Add Translation Manager"
+msgstr "Çeviri yöneticisi ekle"
+
+#: src/js/components/translation-managers/AddManagerDialog.js:47
+msgid "user"
+msgstr "kullanıcı"
+
+#: src/js/components/translation-managers/AddManagerDialog.js:47
+msgid "Editor"
+msgstr "Editör"
+
+#: src/js/components/translation-managers/AddManagerDialog.js:71
+msgid "Select an existing %s and set as Translation Manager"
+msgstr "Mevcut bir %s seçin ve Çeviri Yöneticisi olarak ayarlayın"
+
+#: src/js/components/translation-managers/AddManagerDialog.js:96
+msgid "Create a new %s and set as Translation Manager"
+msgstr "Yeni bir %s oluşturun ve Çeviri Yöneticisi olarak ayarlayın"
+
+#: src/js/components/translation-managers/ManagerSection.js:27
+msgid "Add a Translation Manager"
+msgstr "Bir çeviri yöneticisi ekle"
+
+#: src/js/components/translators/AddTranslatorDialog.js:101
+msgid "Select an existing user and set as Translator"
+msgstr "Mevcut bir kullanıcıyı seçin ve Çevirmen olarak ayarlayın"
+
+#: src/js/components/translators/AddTranslatorDialog.js:124
+msgid "Create a new user and set as Translator"
+msgstr "Yeni bir kullanıcı oluşturun ve Çevirmen olarak ayarlayın"
+
+#: src/js/components/translators/AddTranslatorDialog.js:141
+msgid "Set language pair(s)"
+msgstr "Dil çift(ler)ini ayarla"
+
+#: src/js/components/translators/AddTranslatorDialog.js:156
+msgid "Previous"
+msgstr "Önceki"
+
+#: src/js/components/translators/AddTranslatorDialog.js:159
+#: src/js/components/translators/EditLanguagesDialog.js:78
+msgid "Save"
+msgstr "Kaydet"
+
+#: src/js/components/translators/AddTranslatorDialog.js:65
+#: src/js/components/translators/UserSection.js:45
+msgid "Add a Translator"
+msgstr "Bir çevirmen ekle"
+
+#: src/js/components/translators/EditLanguagesDialog.js:55
+msgid "Edit language pair(s) for translator"
+msgstr "Çevirmen için dil çift(ler)ini düzenle"
+
+#: src/js/components/translators/TranslatorsTable.js:136
+#: src/js/setup/components/Steps/AddLanguagesModal.js:346
+msgid "Name"
+msgstr "Ad"
+
+#: src/js/components/translators/TranslatorsTable.js:148
+msgid "Language Pairs"
+msgstr "Dil çiftleri"
+
+#: src/js/components/translators/TranslatorsTable.js:152
+msgid "You can translate to and from all languages"
+msgstr "Tüm dillerden ve tüm dillere çeviri yapabilirsiniz"
+
+#: src/js/components/translators/TranslatorsTable.js:59
+msgid "Edit language pair(s)"
+msgstr "Dil çift(ler)ini düzenle"
+
+#: src/js/components/translators/TranslatorsTable.js:62
+msgid "Delete language pair(s)"
+msgstr "Dil çift(ler)ini sil"
+
+#: src/js/setup/components/Steps/AddLanguages/Flag.js:48
+msgid "%s file upload failed."
+msgstr "%s dosya yüklemesi başarısız oldu."
+
+#: src/js/setup/components/Steps/AddLanguages/Flag.js:69
+msgid "Flag"
+msgstr "Bayrak"
+
+#: src/js/setup/components/Steps/AddLanguages/Flag.js:87
+msgid "Flag file"
+msgstr "Bayrak dosyası"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:160
+msgid ""
+"You just added  language. Next, select it as the site's default language or "
+"a translation language."
+msgstr "Bir dil eklediniz. Şimdi, onu sitenin varsayılan dili veya bir çeviri dili olarak seçin."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:162
+msgid "Language added"
+msgstr "Dil eklendi"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:192
+msgid "The value \"%s\" already exists"
+msgstr "“%s” değeri zaten mevcut"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:215
+msgid "Add a new language"
+msgstr "Yeni bir dil ekle"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:224
+msgid ""
+"Create a country-specific language by choosing the general language from "
+"the list below. Then, choose the country it should be localized for."
+msgstr "Aşağıdaki listeden genel dili seçerek ülkeye özgü bir dil oluşturun. Ardından, yerelleştirileceği ülkeyi seçin."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:229
+msgid ""
+"By choosing a combination that already exists in the database, WPML can "
+"help fill out the necessary fields. Read more about "
+"<AddingACustomLanguageLink />."
+msgstr "Veritabanında zaten var olan bir kombinasyonu seçerek, WPML gerekli alanları doldurmanıza yardımcı olabilir. <AddingACustomLanguageLink /> hakkında daha fazla bilgi edinin."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:242
+msgid "Cannot find?"
+msgstr "Bulamıyor musunuz?"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:244
+msgid "Click here"
+msgstr "Buraya tıklayın"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:300
+msgid ""
+"The wrong format. It may contain only small letters and \"-\". E.g: \"fr\" "
+", \"pt-br\", \"zh-hans\""
+msgstr "Yanlış format. Yalnızca küçük harfler ve “-” içerebilir. Örn: “fr”, “pt-br”, “zh-hans”"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:308
+msgid "Language"
+msgstr "Dil"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:331
+msgid "Location"
+msgstr "Konum"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:360
+msgid "Code"
+msgstr "Kod"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:374
+msgid "The language will not be supported by automatic translations"
+msgstr "Dil, otomatik çeviriler tarafından desteklenmeyecektir"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:392
+msgid "Language mapping"
+msgstr "Dil eşleme"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:404
+msgid "Don't map this language"
+msgstr "Bu dili eşleme"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:418
+msgid "Default locale"
+msgstr "Varsayılan yerel ayar"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:423
+msgid ""
+"The wrong format. It may contain only small letters and \"_\". E.g: \"de\" "
+", \"de_DE\", \"zh_Hant_TW\""
+msgstr "Yanlış format. Yalnızca küçük harfler ve “_” içerebilir. Örn: “de”, “de_DE”, “zh_Hant_TW”"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:435
+msgid "hreflang"
+msgstr "hreflang"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:449
+msgid "Encode url?"
+msgstr "URL'yi kodla?"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:45
+msgid "Flags must be:"
+msgstr "Bayraklar şunlar olmalıdır:"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:453
+msgid "NO"
+msgstr "HAYIR"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:454
+msgid "YES"
+msgstr "EVET"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:460
+msgid " (required)"
+msgstr " (gerekli)"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:483
+msgid "Please fill in the field"
+msgstr "Lütfen alanı doldurun"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:49
+msgid "PNG, SVG, or JPG files"
+msgstr "PNG, SVG veya JPG dosyaları"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:501
+msgid "Save language"
+msgstr "Dili kaydet"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:52
+msgid "18 x 12 pixels"
+msgstr "18 x 12 piksel"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:55
+msgid "Read more about "
+msgstr "Daha fazla oku "
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:60
+msgid ""
+"The name of your language as it will appear on your site's language "
+"switcher."
+msgstr "Sitenizin dil değiştiricisinde görünecek dilinizin adı."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:61
+msgid ""
+"A unique value that identifies the language in the database and URL. Once "
+"saved, the language code cannot be changed."
+msgstr "Dili veritabanında ve URL'de tanımlayan benzersiz bir değer. Kaydedildikten sonra dil kodu değiştirilemez."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:62
+msgid ""
+"If your custom language is similar to an existing language, you can use the "
+"existing language's spellcheck and automatic translation. For example, if "
+"your custom language is Swiss-German, you can map to German as the language "
+"to use for spellcheck and automatic translation. If you don't map your "
+"custom language to an existing language, spellcheck and automatic "
+"translation features will be unavailable in that language."
+msgstr "Özel diliniz mevcut bir dile benziyorsa, mevcut dilin yazım denetimi ve otomatik çevirisini kullanabilirsiniz. Örneğin, özel diliniz İsviçre Almancası ise, yazım denetimi ve otomatik çeviri için kullanılacak dil olarak Almanca'ya eşleyebilirsiniz. Özel dilinizi mevcut bir dile eşlemezseniz, yazım denetimi ve otomatik çeviri özellikleri o dilde kullanılamaz."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:66
+msgid ""
+"The value WPML checks when loading translations from MO and PO files. The "
+"default locale is included in the filenames in your /wp-content/languages/ "
+"folder in your WordPress setup."
+msgstr "WPML'nin MO ve PO dosyalarından çevirileri yüklerken kontrol ettiği değer. Varsayılan yerel ayar, WordPress kurulumunuzdaki /wp-content/languages/ klasörünüzdeki dosya adlarına dahildir."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:69
+msgid ""
+"Google uses the hreflang attribute to direct users to sites in their "
+"relevant language and location. Examples:"
+msgstr "Google, kullanıcıları ilgili dil ve konumdaki sitelere yönlendirmek için hreflang özelliğini kullanır. Örnekler:"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:71
+msgid "All English-speaking users: en"
+msgstr "Tüm İngilizce konuşan kullanıcılar: en"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:72
+msgid "English for UK users: en-gb"
+msgstr "Birleşik Krallık kullanıcıları için İngilizce: en-gb"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:73
+msgid "English for US users: en-us"
+msgstr "ABD kullanıcıları için İngilizce: en-us"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:81
+msgid ""
+"Determines if URLs in this language are encoded or use ASCII characters (if "
+"unsure, leave it as \"No\")."
+msgstr "Bu dildeki URL'lerin kodlanıp kodlanmadığını veya ASCII karakterleri kullanıp kullanmadığını belirler (emin değilseniz, “Hayır” olarak bırakın)."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:98
+msgid "adding a custom language"
+msgstr "özel bir dil ekleme"
+
+#: src/js/setup/components/Steps/Languages.js:110
+msgid "What are the languages of your site?"
+msgstr "Sitenizin dilleri nelerdir?"
+
+#: src/js/setup/components/Steps/Languages.js:120
+msgid "Default language"
+msgstr "Varsayılan dil"
+
+#: src/js/setup/components/Steps/Languages.js:122
+msgid "What is the current language of your website?"
+msgstr "Web sitenizin mevcut dili nedir?"
+
+#: src/js/setup/components/Steps/Languages.js:133
+msgid "Translation languages"
+msgstr "Çeviri dilleri"
+
+#: src/js/setup/components/Steps/Languages.js:135
+msgid "Which languages do you want to translate your site into?"
+msgstr "Sitenizi hangi dillere çevirmek istiyorsunuz?"
+
+#: src/js/setup/components/Steps/Languages.js:149
+msgid "If you cannot find languages that you need in the list,"
+msgstr "Listede ihtiyacınız olan dilleri bulamıyorsanız,"
+
+#: src/js/setup/components/Steps/Languages.js:150
+msgid "create a custom language"
+msgstr "özel bir dil oluşturun"
+
+#: src/js/translation-roles-ui/components/Managers.js:12
+msgid ""
+"You can add a dedicated person to oversee everything translation-related on "
+"your site. %sTranslation Managers%s can add new local translators or "
+"professional translation services, create and assign translation jobs, "
+"review completed translations, and change translation-related settings."
+msgstr "Sitenizdeki çeviriyle ilgili her şeyi denetlemek için özel bir kişi atayabilirsiniz. %sÇeviri Yöneticileri%s yeni yerel çevirmenler veya profesyonel çeviri hizmetleri ekleyebilir, çeviri işleri oluşturup atayabilir, tamamlanmış çevirileri inceleyebilir ve çeviriyle ilgili ayarları değiştirebilir."
+
+#: src/js/translation-roles-ui/components/Managers.js:22
+msgid "Translation Managers"
+msgstr "Çeviri yöneticileri"
+
+#: src/js/translation-roles-ui/components/Managers.js:25
+msgid ""
+"Note: All Administrators are automatically given Translation Manager "
+"privileges."
+msgstr "Not: Tüm Yöneticilere otomatik olarak Çeviri Yöneticisi ayrıcalıkları verilir."
+
+#: src/js/translation-roles-ui/components/Users.js:14
+msgid ""
+"%sLocal translators%s are users of your site that can log in and add, edit, "
+"and review your site's translations. Add a translator and their associated "
+"translation pairs to assign them translation jobs."
+msgstr "%sYerel çevirmenler%s, sitenizin çevirilerini oturum açıp ekleyebilen, düzenleyebilen ve inceleyebilen kullanıcılarıdır. Çeviri işleri atamak için bir çevirmen ve ilgili çeviri çiftlerini ekleyin."
+
+#: src/js/translation-roles-ui/components/Users.js:23
+msgid ""
+"You can %shire an experienced translator%s to review your automatic "
+"translations for perfect quality."
+msgstr "Otomatik çevirilerinizin mükemmel kalitede olmasını sağlamak için %sdeneyimli bir çevirmen kiralayabilirsiniz%s."
+
+#: src/js/translation-roles-ui/components/Users.js:33
+msgid "Translators"
+msgstr "Çevirmenler"

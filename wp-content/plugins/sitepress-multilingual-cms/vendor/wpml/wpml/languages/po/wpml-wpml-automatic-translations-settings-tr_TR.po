@@ -1,0 +1,90 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-18T16:02:15+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: wpml\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Could not fetch engines data"
+msgstr "Motor verileri alınamadı"
+
+msgid "Could not save settings"
+msgstr "Ayarlar kaydedilemedi"
+
+msgid "Automatic translation"
+msgstr "Otomatik çeviri"
+
+msgid "Saving..."
+msgstr "Kaydediliyor..."
+
+msgid "Save settings"
+msgstr "Ayarları kaydet"
+
+msgid "Settings saved"
+msgstr "Ayarlar kaydedildi"
+
+msgid "Some error occurred"
+msgstr "Bir hata oluştu"
+
+msgid "AI Translation"
+msgstr "Yapay zeka çevirisi"
+
+msgid "Don't translate drafts. Only translate when I publish content."
+msgstr "Taslakları çevirme. Yalnızca içeriği yayınladığımda çevir."
+
+msgid "Translate drafts as I save them (consumes a bit more translation credits)."
+msgstr "Taslakları kaydettiğimde çevir (biraz daha fazla çeviri kredisi tüketir)."
+
+msgid "Do you want to translate drafts automatically?"
+msgstr "Taslakları otomatik olarak çevirmek ister misiniz?"
+
+msgid "This feature is only available when you enable \"Translate Everything Automatically\" from the %sTranslation Dashboard%s."
+msgstr "Bu özellik yalnızca %sÇeviri Panosu%s’ndan “Her Şeyi Otomatik Çevir” seçeneğini etkinleştirdiğinizde kullanılabilir."
+
+msgid "What would you like to do after WPML finishes translating your content automatically?"
+msgstr "WPML içeriğinizi otomatik olarak çevirmeyi bitirdikten sonra ne yapmak istersiniz?"
+
+msgid "Publish without review"
+msgstr "İncelemeden yayınla"
+
+msgid "Recommended with PTC"
+msgstr "PTC ile önerilir"
+
+msgid "PTC provides Better Than Human Translations that rarely need improvements, so you can confidently skip the review process. For other translation engines, a human review is recommended to confirm accuracy."
+msgstr "PTC, nadiren iyileştirme gerektiren İnsan Çevirilerinden Daha İyi Çeviriler sunar, böylece inceleme sürecini güvenle atlayabilirsiniz. Diğer çeviri motorları için doğruluğu teyit etmek amacıyla insan incelemesi önerilir."
+
+msgid "WPML publishes translations immediately, skipping the review process."
+msgstr "WPML çevirileri hemen yayınlar, inceleme sürecini atlar."
+
+msgid "Wait for review"
+msgstr "İnceleme bekle"
+
+msgid "Recommended with DeepL, Google and Microsoft"
+msgstr "DeepL, Google ve Microsoft ile önerilir"
+
+msgid "DeepL, Google, and Microsoft deliver great translations, but we recommend a human review to confirm they are correct. PTC provides Better Than Human Translations that understand context, so you can confidently skip the review process."
+msgstr "DeepL, Google ve Microsoft harika çeviriler sunar, ancak doğru olduklarını teyit etmek için insan incelemesi öneririz. PTC, bağlamı anlayan İnsan Çevirilerinden Daha İyi Çeviriler sunar, böylece inceleme sürecini güvenle atlayabilirsiniz."
+
+msgid "WPML keeps translations unpublished, so you can review them first."
+msgstr "WPML çevirileri yayınlanmamış olarak tutar, böylece önce siz inceleyebilirsiniz."
+
+msgid "Your translators review and approve translations before publishing."
+msgstr "Çevirmenleriniz yayınlamadan önce çevirileri inceler ve onaylar."
+
+msgid "Publish and mark for review"
+msgstr "Yayınla ve inceleme için işaretle"
+
+msgid "WPML publishes translations immediately but flags them for you to check at your convenience."
+msgstr "WPML çevirileri hemen yayınlar ancak uygun olduğunuzda kontrol etmeniz için işaretler."
+
+msgid "WPML publishes translations immediately but flags them for translators to review later."
+msgstr "WPML çevirileri hemen yayınlar ancak çevirmenlerin daha sonra incelemesi için işaretler."

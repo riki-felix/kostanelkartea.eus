@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: ko_KR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/js/wpmlLanguageSettings/DefaultFlagsFormat/Section.js:30
+msgid "Choose the image file type for flags"
+msgstr "깃발에 사용할 이미지 파일 형식 선택"
+
+#: src/js/wpmlLanguageSettings/DefaultFlagsFormat/Section.js:32
+msgid ""
+"This option affects only the built-in WPML flags, not the custom uploaded "
+"ones."
+msgstr "이 옵션은 내장된 WPML 깃발에만 영향을 미치며, 사용자 지정으로 업로드된 깃발에는 영향을 미치지 않습니다."
+
+#: src/js/wpmlLanguageSettings/DefaultFlagsFormat/Section.js:46
+msgid "%s format"
+msgstr "%s 형식"
+
+#: src/js/wpmlLanguageSettings/DefaultFlagsFormat/Section.js:63
+msgid "Save"
+msgstr "저장"
+
+#: src/js/wpmlLanguageSettings/DefaultFlagsFormat/hooks/useSave.js:20
+msgid "The new format has been saved."
+msgstr "새 형식이 저장되었습니다."
+
+#: src/js/wpmlLanguageSettings/DefaultFlagsFormat/hooks/useSave.js:25
+msgid "Failed to save the new format"
+msgstr "새 형식 저장 실패"

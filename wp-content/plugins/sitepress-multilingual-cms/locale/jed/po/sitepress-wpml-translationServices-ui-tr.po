@@ -1,0 +1,68 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: src/js/translationServices/components/AuthorizeModal.js:22
+msgid "Connect this site to your %s account"
+msgstr "Bu siteyi %s hesabınıza bağlayın"
+
+#: src/js/translationServices/components/AuthorizeModal.js:45
+msgid "Error"
+msgstr "Hata"
+
+#: src/js/translationServices/components/AuthorizeModal.js:57
+msgid "« Use a different Translation Service"
+msgstr "« Farklı bir Çeviri Hizmeti kullanın"
+
+#: src/js/translationServices/components/AuthorizeModal.js:62
+msgid "Authenticate"
+msgstr "Kimlik Doğrula"
+
+#: src/js/translationServices/components/Connect.js:22
+msgid ""
+"Visit <link_to_service /> to request an API Token. This token allows WPML "
+"to connect to <service_name /> to send and receive jobs."
+msgstr "API Anahtarı talep etmek için <link_to_service /> adresini ziyaret edin. Bu anahtar, WPML'in işleri gönderip alması için <service_name /> ile bağlantı kurmasını sağlar."
+
+#: src/js/translationServices/components/SearchForm.js:10
+msgid "Search translation services"
+msgstr "Çeviri hizmetlerini ara"
+
+#: src/js/translationServices/components/SearchForm.js:12
+msgid "Search"
+msgstr "Ara"
+
+#: src/js/translationServices/components/Sections.js:16
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: src/js/translationServices/components/Sections.js:42
+msgid ""
+"It’s not currently possible to connect a translation service when WPML is "
+"set to translate your site’s content automatically. To use a translation "
+"service, please change your translation mode on the <LinkToSettingsPage /> "
+"page."
+msgstr "WPML sitenizin içeriğini otomatik olarak çevirecek şekilde ayarlandığında bir çeviri hizmeti bağlamak şu anda mümkün değildir. Bir çeviri hizmeti kullanmak için lütfen <LinkToSettingsPage /> sayfasındaki çeviri modunuzu değiştirin."
+
+#: src/js/translationServices/components/ServicesList.js:41
+msgid "Documentation"
+msgstr "Belgeler"
+
+#: src/js/translationServices/components/ServicesList.js:57
+msgid "Activate"
+msgstr "Etkinleştir"
+
+#: src/js/translationServices/components/ServicesList.js:69
+msgid "Name"
+msgstr "Ad"
+
+#: src/js/translationServices/components/ServicesList.js:74
+msgid "Description"
+msgstr "Açıklama"
+
+#: src/js/translationServices/components/ServicesList.js:81
+msgid "Ranking"
+msgstr "Sıralama"

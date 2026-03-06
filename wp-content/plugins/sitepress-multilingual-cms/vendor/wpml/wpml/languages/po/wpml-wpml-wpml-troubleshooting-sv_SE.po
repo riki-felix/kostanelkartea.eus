@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-18T16:02:19+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: wpml\n"
+"Language: sv_SE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Alias Domain"
+msgstr "Aliasdomän"
+
+msgid "If you didn't change your main domain and only logged in through an alias domain, you can register it here. WPML will then use the original domain for API communication with AMS."
+msgstr "Om du inte ändrade din huvudsakliga domän och bara loggade in via en aliasdomän kan du registrera den här. WPML kommer då att använda den ursprungliga domänen för API-kommunikation med AMS."
+
+msgid "Something went wrong. Please try again."
+msgstr "Något gick fel. Försök igen."
+
+msgid "Registering..."
+msgstr "Registrerar..."
+
+msgid "Register current domain as alias"
+msgstr "Registrera aktuell domän som alias"
+
+msgid "The current domain has been registered as an alias domain."
+msgstr "Den aktuella domänen har registrerats som en aliasdomän."
+
+msgid "Current alias domains:"
+msgstr "Aktuella aliasdomäner:"
+
+msgid "This will remove all registered alias domains. If you are accessing this site through an alias domain, the migration banner will appear again."
+msgstr "Detta kommer att ta bort alla registrerade aliasdomäner. Om du kommer åt den här webbplatsen via en aliasdomän kommer migreringsbannern att visas igen."
+
+msgid "Resetting..."
+msgstr "Återställer..."
+
+msgid "Reset alias domains"
+msgstr "Återställ aliasdomäner"
+
+msgid "Alias domains have been reset."
+msgstr "Aliasdomäner har återställts."
+
+msgid "PostHog Integration"
+msgstr "PostHog-integration"
+
+msgid "PostHog is running on your site"
+msgstr "PostHog körs på din webbplats"
+
+msgid "Enable PostHog to help us improve our product"
+msgstr "Aktivera PostHog för att hjälpa oss att förbättra vår produkt"
+
+msgid "your PostHog session ID is: "
+msgstr "ditt PostHog-sessions-ID är: "

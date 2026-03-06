@@ -1,0 +1,367 @@
+/* Navigation */
+.main-navigation {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-s);
+  max-width: var(--page-width);
+  position: fixed;
+	top: 2.5rem;
+  z-index: 12;
+  padding: 0 var(--page-margin);
+  width: 100%;
+  @media (min-width: 750px) {
+  	z-index: 9;
+	left: 50%;
+	transform: translate(-50%);
+	padding: 0;
+	  
+  }
+}
+// .main-navigation.visible {
+  // visibility: visible;
+  // opacity: 1;
+// }
+.actions {
+	display: none;	
+	@media (min-width: 750px) {
+		display: flex;
+		flex-flow: row nowrap;
+		gap: var(--sp-s);
+		margin-left: auto;
+		.button-cta {
+			display: block;	
+		}
+	}
+}
+.menu-toggle {
+  display: inline-flex;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: var(--sp-xs) var(--sp-s);
+  color: var(--color-text);
+  background-color: var(--color-light);
+  border-radius: var(--border-rounded);
+  font-size: var(--fs-s);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1%;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+  &:hover {
+    background-color: var(--cp-600);
+    color: var(--color-accent);
+  }
+}
+.nav-kicker {
+	text-transform: uppercase;
+	display: inline-block;
+	font-size: var(--fs-xs);
+	margin-top: var(--sp-xl);
+}
+.menu-panel {
+  display: flex;
+  flex-flow: column nowrap;
+  overflow-y: scroll;
+  gap: 0;
+  margin: 0;
+  padding: var(--sp-xl) var(--sp-m);
+  background-color: var(--cp-700);
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  max-width: 50.0rem;
+  height: 100vh;
+  color: var(--color-secondary);
+  transition: all .4s ease;
+  z-index: 999999;
+  .menu-toggle {
+	  align-self: self-start;
+  }
+  &.toggled {
+	left:0;
+  }
+}
+.primary-menu {
+	margin-top: var(--sp-huge);
+}
+
+.primary-menu,
+.cities-menu {
+  list-style: none;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--sp-xs);
+}
+.menu-panel li a {
+  padding: 0;
+  display: block;
+  color: var(--color-secondary);
+  font-family: var(--font-heading);
+  font-size: 4.6rem;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0;;
+}
+
+.primary-menu li a:hover {
+  color: var(--color-primary);
+}
+
+.main-cta {
+	border-top-left-radius: 2.0rem;
+	border-top-right-radius: 2.0rem;
+	color: var(--color-light);
+	position: fixed;
+		bottom:0;
+		left: 0;
+		right: 0;
+	background-color: var(--cp-700);
+	overflow: hidden;
+	padding: var(--sp-xl) var(--page-margin) var(--sp-m) var(--page-margin);
+	text-align: center;
+	z-index: 999999;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-l);
+	.contact-cta {
+		display: block;
+		margin: var(--sp-s) 0;
+		a {
+			color: var(--color-light);	
+		}
+		small {
+			display: block;
+			text-transform: uppercase;
+			opacity: 0.5;
+			color: var(--color-secondary);
+		}
+		@media (min-width: 750px) {
+			display: none;
+		}
+	}
+	@media (min-width: 750px) {
+		display: none;
+	}
+}
+
+/* WPML Language Switcher */
+.wpml-ls-statics-shortcode_actions {
+  position: relative;
+  
+  ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  }
+  
+  a {
+	text-decoration: none;
+  }
+}
+
+.wpml-ls-legacy-dropdown-click {
+  position: relative;
+  z-index: 1000;
+  
+  > ul > li {
+	position: relative;
+  }
+}
+
+/* Toggle button (current language) - Match menu-toggle style */
+.js-wpml-ls-item-toggle,
+.wpml-ls-item-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-xs);
+  background: var(--color-light);
+  border: none;
+  cursor: pointer;
+  padding: var(--sp-xs) var(--sp-s);
+  color: var(--color-text);
+  border-radius: var(--border-rounded);
+  font-size: var(--fs-s);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  
+  &:hover {
+    background-color: var(--cp-600);
+    color: var(--color-accent);
+  }
+  
+  &:focus-visible {
+	outline: 2px solid var(--color-primary);
+	outline-offset: 2px;
+  }
+  
+  /* Chevron icon */
+  &::after {
+	content: '';
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid currentColor;
+	transition: transform 0.3s ease;
+  }
+  
+  /* Rotate chevron when open */
+  .wpml-ls-opened & {
+	&::after {
+	  transform: rotate(180deg);
+	}
+  }
+}
+
+/* Dropdown submenu */
+.js-wpml-ls-sub-menu,
+.wpml-ls-sub-menu {
+  position: absolute;
+  top: calc(100% + var(--sp-xs));
+  left: 0;
+  min-width: 100%;
+  background: var(--color-light);
+  border-radius: var(--sp-xs);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, 
+			  transform 0.3s ease, 
+			  visibility 0.3s ease;
+  max-width: 200px;
+  
+  /* Show when parent is opened */
+  .wpml-ls-opened & {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+  }
+  
+  /* Dropdown items */
+  li {
+	a {
+	  display: block;
+	  padding: var(--sp-xxs) var(--sp-m);
+	  color: var(--color-text);
+	  font-size: var(--fs-s);
+	  font-weight: var(--fw-bold);
+	  transition: background-color 0.2s ease;
+  	  text-transform: uppercase;
+	  
+	  &:hover,
+	  &:focus {
+		background: var(--cs-700);
+		color: var(--color-primary);
+	  }
+	  
+	  &:focus-visible {
+		outline: 2px solid var(--color-primary);
+		outline-offset: -2px;
+	  }
+	}
+	
+	/* First item radius */
+	&:first-child a {
+	  border-radius: var(--sp-xs) var(--sp-xs) 0 0;
+	}
+	
+	/* Last item radius */
+	&:last-child a {
+	  border-radius: 0 0 var(--sp-xs) var(--sp-xs);
+	}
+	
+	/* Single item radius */
+	&:only-child a {
+	  border-radius: var(--sp-xs);
+	}
+  }
+}
+
+/* Hide current language from submenu */
+.wpml-ls-current-language {
+  .wpml-ls-sub-menu & {
+	display: none;
+  }
+}
+
+/* Responsive adjustments */
+@media (min-width: 750px) {
+  .js-wpml-ls-sub-menu,
+  .wpml-ls-sub-menu {
+	max-width: 250px;
+  }
+}
+
+/* Ensure dropdown shows above fixed parent */
+.site-header {
+  .wpml-ls-statics-shortcode_actions {
+	z-index: 1002;
+  }
+}
+
+/* Right-aligned dropdown variant */
+.wpml-ls-legacy-dropdown-click--right {
+  .js-wpml-ls-sub-menu,
+  .wpml-ls-sub-menu {
+	left: auto;
+	right: 0;
+  }
+}
+
+/* Mobile specific */
+@media (max-width: 749px) {
+  .js-wpml-ls-sub-menu,
+  .wpml-ls-sub-menu {
+	left: auto;
+	right: 0;
+	transform-origin: top right;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .js-wpml-ls-item-toggle,
+  .wpml-ls-item-toggle,
+  .js-wpml-ls-sub-menu,
+  .wpml-ls-sub-menu {
+	transition: none;
+  }
+}
+.button-whatsapp {
+  background-color: var(--cp-700);
+  color: var(--color-light);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 999px;
+  padding: var(--sp-xs);
+  gap: var(--sp-xs);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  &:after {
+    content: "";
+    background: url("../img/wa_icon.svg");
+    display:block;
+    height: 2.8rem;
+    width: 2.8rem;
+    background-repeat: no-repeat;
+    background-size: contain
+  }
+  .contact-cta & {
+    justify-content: center;
+    background-color: var(--cp-600);
+    justify-self: center;
+  }
+}

@@ -1,0 +1,1547 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-18T16:02:11+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: wpml\n"
+"Language: pl_PL\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "Untranslated strings that I encounter on front-end while logged in"
+msgstr "Nietłumaczone ciągi znaków, które napotykam na front-endzie po zalogowaniu"
+
+msgid "Untranslated strings that all front-end users encounter"
+msgstr "Nietłumaczone ciągi znaków, które napotykają wszyscy użytkownicy front-endu"
+
+msgid "Disable auto-registration of strings"
+msgstr "Wyłącz automatyczną rejestrację ciągów znaków"
+
+msgid "Plugins"
+msgstr "Wtyczki"
+
+msgid "Themes"
+msgstr "Motywy"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "Other"
+msgstr "Inne"
+
+msgid "We cancelled %1$d of %2$d items, but %3$d failed. Please reload the page and try again."
+msgstr "Anulowaliśmy %1$d z %2$d pozycji, ale %3$d nie powiodło się. Odśwież stronę i spróbuj ponownie."
+
+msgid "We resent %1$d of %2$d items, but %3$d failed. Please reload the page and try again."
+msgstr "Ponownie wysłaliśmy %1$d z %2$d pozycji, ale %3$d nie powiodło się. Odśwież stronę i spróbuj ponownie."
+
+msgid "Error in fetching default translation batch name"
+msgstr "Błąd podczas pobierania domyślnej nazwy partii tłumaczeń"
+
+msgid "Error in fetching translation editor type."
+msgstr "Błąd podczas pobierania typu edytora tłumaczeń."
+
+msgid "Error in fetching untranslated types count"
+msgstr "Błąd podczas pobierania liczby nieprzetłumaczonych typów"
+
+msgid "Error in fetching remote translation service data."
+msgstr "Błąd podczas pobierania danych zdalnej usługi tłumaczeniowej."
+
+msgid "Validation failed"
+msgstr "Walidacja nie powiodła się"
+
+msgid "Translation jobs couldn’t be canceled"
+msgstr "Nie udało się anulować zadań tłumaczenia"
+
+msgid "Reload the page and try again."
+msgstr "Odśwież stronę i spróbuj ponownie."
+
+msgid "All unfinished translation jobs were canceled"
+msgstr "Wszystkie niedokończone zadania tłumaczenia zostały anulowane"
+
+msgid "Please wait until download finishes"
+msgstr "Proszę czekać na zakończenie pobierania"
+
+msgid "You need to wait 5 minutes after the last check"
+msgstr "Musisz poczekać 5 minut po ostatnim sprawdzeniu"
+
+msgid "Check status and get translations"
+msgstr "Sprawdź status i pobierz tłumaczenia"
+
+msgid "Status: "
+msgstr "Status: "
+
+msgid "Downloaded jobs: "
+msgstr "Pobrane zadania: "
+
+msgid "Cancelled jobs: "
+msgstr "Anulowane zadania: "
+
+msgid "none of your translation jobs have been completed"
+msgstr "żadne z Twoich zadań tłumaczeniowych nie zostało ukończone"
+
+msgid "Checking translation jobs status. Please don't close this page!"
+msgstr "Sprawdzanie statusu zadań tłumaczeniowych. Proszę nie zamykać tej strony!"
+
+msgid " have been sent to remote translators"
+msgstr " zostały wysłane do zdalnych tłumaczy"
+
+msgid " has been sent to remote translators"
+msgstr " został wysłany do zdalnych tłumaczy"
+
+msgid "Last check: Never"
+msgstr "Ostatnie sprawdzenie: Nigdy"
+
+msgid "Filtering is disabled to show all selected items. "
+msgstr "Filtrowanie jest wyłączone, aby pokazać wszystkie wybrane elementy. "
+
+msgid "Apply filters"
+msgstr "Zastosuj filtry"
+
+msgid "%d item selected"
+msgid_plural "%d items selected"
+msgstr[0] "Wybrano %d element"
+msgstr[1] "Wybrano %d elementy"
+msgstr[2] "Wybrano %d elementów"
+
+msgid "(%d words to translate)"
+msgstr "(%d słów do przetłumaczenia)"
+
+msgid "%s item not showing."
+msgid_plural "%s items not showing."
+msgstr[0] "Nie wyświetla się %s element."
+msgstr[1] "Nie wyświetlają się %s elementy."
+msgstr[2] "Nie wyświetla się %s elementów."
+
+msgid "Show all selected items"
+msgstr "Pokaż wszystkie wybrane elementy"
+
+msgid "Translate your content"
+msgstr "Przetłumacz swoją treść"
+
+msgid "Unselect all"
+msgstr "Odznacz wszystko"
+
+msgid "Source Language:"
+msgstr "Język źródłowy:"
+
+msgid "translated to:"
+msgstr "przetłumaczone na:"
+
+msgid "Filter"
+msgstr "Filtruj"
+
+msgid "You are about to change the source language filter from %s to %s"
+msgstr "Zamierzasz zmienić filtr języka źródłowego z %s na %s"
+
+msgid "Updating the source language filter will clear the items you've selected for translation. Are you sure you want to continue?"
+msgstr "Aktualizacja filtra języka źródłowego spowoduje usunięcie wybranych elementów do tłumaczenia. Czy na pewno chcesz kontynuować?"
+
+msgid "Change source language"
+msgstr "Zmień język źródłowy"
+
+msgid "Cancel"
+msgstr "Anuluj"
+
+msgid "Filter by publication status"
+msgstr "Filtruj według statusu publikacji"
+
+msgid "All Statuses"
+msgstr "Wszystkie statusy"
+
+msgid "All languages"
+msgstr "Wszystkie języki"
+
+msgid "All translation statuses"
+msgstr "Wszystkie statusy tłumaczeń"
+
+msgid "Not completed"
+msgstr "Nieukończone"
+
+msgid "Needs updating"
+msgstr "Wymaga aktualizacji"
+
+msgid "Translation in progress"
+msgstr "Tłumaczenie w toku"
+
+msgid "Translation complete"
+msgstr "Tłumaczenie zakończone"
+
+msgid "Filter by translation status"
+msgstr "Filtruj według statusu tłumaczenia"
+
+msgid "Global Filter"
+msgstr "Filtr globalny"
+
+msgid "Parent:"
+msgstr "Rodzic:"
+
+msgid "Search parent by title"
+msgstr "Szukaj rodzica według tytułu"
+
+msgid "Search by term title in %s"
+msgstr "Szukaj według tytułu terminu w %s"
+
+msgid "All taxonomies"
+msgstr "Wszystkie taksonomie"
+
+msgid "Loading"
+msgstr "Ładowanie"
+
+msgid "Taxonomy Term:"
+msgstr "Termin taksonomii:"
+
+msgid "Loading terms"
+msgstr "Ładowanie terminów"
+
+msgid "No terms found"
+msgstr "Nie znaleziono terminów"
+
+msgid "Filter by:"
+msgstr "Filtruj według:"
+
+msgid "Title"
+msgstr "Tytuł"
+
+msgid "Automatic translation paused — payment required to continue."
+msgstr "Automatyczne tłumaczenie wstrzymane — wymagana płatność, aby kontynuować."
+
+msgid "You have %1s%2s prepaid translation credit in your WPML account%3s. Assign these credits to this site to resume automatic translation"
+msgid_plural "You have %1s%2s prepaid translation credits in your WPML account%3s. Assign these credits to this site to resume automatic translation"
+msgstr[0] "Masz %1s%2s przedpłacony kredyt tłumaczeniowy na koncie WPML%3s. Przypisz te kredyty do tej strony, aby wznowić automatyczne tłumaczenie"
+msgstr[1] "Masz %1s%2s przedpłacone kredyty tłumaczeniowe na koncie WPML%3s. Przypisz te kredyty do tej strony, aby wznowić automatyczne tłumaczenie"
+msgstr[2] "Masz %1s%2s przedpłaconych kredytów tłumaczeniowych na koncie WPML%3s. Przypisz te kredyty do tej strony, aby wznowić automatyczne tłumaczenie"
+
+msgid "Not enough credits to continue automatic translation. Add more credits to resume."
+msgstr "Niewystarczająca liczba kredytów, aby kontynuować automatyczne tłumaczenie. Dodaj więcej kredytów, aby wznowić."
+
+msgid "Pay now"
+msgstr "Zapłać teraz"
+
+msgid "Get more credits"
+msgstr "Zdobądź więcej kredytów"
+
+msgid "Assign credits"
+msgstr "Przypisz kredyty"
+
+msgid "View"
+msgstr "Widok"
+
+msgid "Edit"
+msgstr "Edytuj"
+
+msgid "Edit note for the translators"
+msgstr "Edytuj notatkę dla tłumaczy"
+
+msgid "Add note for the translators"
+msgstr "Dodaj notatkę dla tłumaczy"
+
+msgid "This page is set to be %1$stranslated manually%2$s using the WordPress Editor"
+msgstr "Ta strona jest ustawiona na %1$sręczne tłumaczenie%2$s za pomocą edytora WordPress"
+
+msgid "Select %s"
+msgstr "Wybierz %s"
+
+msgid "(no title)"
+msgstr "(bez tytułu)"
+
+msgid "Image"
+msgstr "Obraz"
+
+msgid "Date / Status"
+msgstr "Data / status"
+
+msgid "Loading items..."
+msgstr "Ładowanie elementów..."
+
+msgid "%1$d %2$s selected"
+msgstr "Wybrano %1$d %2$s"
+
+msgid "items"
+msgstr "elementów"
+
+msgid "Filtering is disabled to show all selected items"
+msgstr "Filtrowanie jest wyłączone, aby pokazać wszystkie wybrane elementy"
+
+msgid "Apply filter"
+msgstr "Zastosuj filtr"
+
+msgid "%1$d %2$s not showing"
+msgstr "Nie pokazano %1$d %2$s"
+
+msgid "Show selected items"
+msgstr "Pokaż wybrane elementy"
+
+msgid " / page"
+msgstr " / strona"
+
+msgid "Previous"
+msgstr "Poprzedni"
+
+msgid "Next"
+msgstr "Następny"
+
+msgid "Your site's content is too vast for a single translation batch. Use filters to reduce the selection, then \"select all\"."
+msgstr "Zawartość Twojej witryny jest zbyt obszerna dla pojedynczej partii tłumaczeń. Użyj filtrów, aby zmniejszyć wybór, a następnie „wybierz wszystko”."
+
+msgid "The current filter captures too much content. Narrow it down to enable \"select all\" for translation."
+msgstr "Obecny filtr obejmuje zbyt wiele treści. Zwęż go, aby włączyć „wybierz wszystko” do tłumaczenia."
+
+msgid "Select All"
+msgstr "Zaznacz wszystko"
+
+msgid "All %d items matching criteria are selected"
+msgstr "Wszystkie %d elementy spełniające kryteria są zaznaczone"
+
+msgid "All %d items in this section are selected"
+msgstr "Wszystkie %d elementy w tej sekcji są zaznaczone"
+
+msgid "You have too many items to send for translation at once. Apply a filter to narrow down the items to enable this option."
+msgstr "Masz zbyt wiele elementów do wysłania do tłumaczenia naraz. Zastosuj filtr, aby zawęzić elementy i włączyć tę opcję."
+
+msgid "Clear selection"
+msgstr "Wyczyść zaznaczenie"
+
+msgid "Select all items that match this search"
+msgstr "Zaznacz wszystkie elementy pasujące do tego wyszukiwania"
+
+msgid "Loading..."
+msgstr "Ładowanie..."
+
+msgid "Select all %ss"
+msgstr "Zaznacz wszystkie %s"
+
+msgid "Save note"
+msgstr "Zapisz notatkę"
+
+msgid "The following target languages do not support automatic translation: %s. <a>Map to known languages</a> to enable automatic translation."
+msgstr "Następujące języki docelowe nie obsługują automatycznego tłumaczenia: %s. <a>Mapuj na znane języki</a>, aby włączyć automatyczne tłumaczenie."
+
+msgid "The site's default language %s doesn't support automatic translation."
+msgstr "Domyślny język witryny %s nie obsługuje automatycznego tłumaczenia."
+
+msgid "Some sections are hidden due to current filter settings or because they have no items. <show_all>Show all translation statuses</show_all>"
+msgstr "Niektóre sekcje są ukryte z powodu bieżących ustawień filtra lub braku elementów. <show_all>Pokaż wszystkie statusy tłumaczeń</show_all>"
+
+msgid "Step 1"
+msgstr "Krok 1"
+
+msgid "Select items for translation"
+msgstr "Wybierz elementy do tłumaczenia"
+
+msgid "Clear filters"
+msgstr "Wyczyść filtry"
+
+msgid "strings"
+msgstr "ciągi znaków"
+
+msgid "WPML didn't find any %s matching your criteria."
+msgstr "WPML nie znalazł żadnych %s pasujących do Twoich kryteriów."
+
+msgid "You have too many items selected to use this feature. Deselect some of the items to enable it."
+msgstr "Masz zbyt wiele wybranych elementów, aby użyć tej funkcji. Odznacz niektóre elementy, aby ją włączyć."
+
+msgid "Show strings in:"
+msgstr "Pokaż ciągi znaków w:"
+
+msgid "Display Columns"
+msgstr "Wyświetl kolumny"
+
+msgid "Close modal"
+msgstr "Zamknij okno modalne"
+
+msgid "Select visible columns"
+msgstr "Wybierz widoczne kolumny"
+
+msgid "String"
+msgstr "Ciąg znaków"
+
+msgid "Name"
+msgstr "Nazwa"
+
+msgid "Domain"
+msgstr "Domena"
+
+msgid "Source"
+msgstr "Źródło"
+
+msgid "Type"
+msgstr "Typ"
+
+msgid "Apply"
+msgstr "Zastosuj"
+
+msgid "All domains"
+msgstr "Wszystkie domeny"
+
+msgid "All sources"
+msgstr "Wszystkie źródła"
+
+msgid "Frontend (viewed)"
+msgstr "Front-end (wyświetlony)"
+
+msgid "Backend (viewed)"
+msgstr "Back-end (wyświetlony)"
+
+msgid "Unknown"
+msgstr "Nieznany"
+
+msgid "Search string or a name"
+msgstr "Wyszukaj ciąg znaków lub nazwę"
+
+msgid "All Translation Priorities"
+msgstr "Wszystkie priorytety tłumaczeń"
+
+msgid "This filter is available only if source is set to \"Frontend\" or \"Backend\"."
+msgstr "Ten filtr jest dostępny tylko, jeśli źródło jest ustawione na „Front-end” lub „Back-end”."
+
+msgid "front-end"
+msgstr "front-end"
+
+msgid "back-end"
+msgstr "back-end"
+
+msgid "viewed"
+msgstr "wyświetlony"
+
+msgid "Strings in the theme and plugins"
+msgstr "Ciągi znaków w motywie i wtyczkach"
+
+msgid "Translate front-end texts you can customize from the WordPress admin like footer text, copyright notices, plugin options and settings, time format, widget texts, and more."
+msgstr "Tłumacz teksty front-endowe, które możesz dostosować z panelu administracyjnego WordPress, takie jak tekst stopki, informacje o prawach autorskich, opcje i ustawienia wtyczek, format czasu, teksty widżetów i wiele innych."
+
+msgid "Translating Strings From Admin and Settings"
+msgstr "Tłumaczenie ciągów znaków z panelu administracyjnego i ustawień"
+
+msgid "Translate texts in admin screens"
+msgstr "Tłumacz teksty na ekranach administracyjnych"
+
+msgid "Translate User Meta Information"
+msgstr "Tłumacz metainformacje użytkownika"
+
+msgid "Making User Meta Information Translatable"
+msgstr "Udostępnianie metainformacji użytkownika do tłumaczenia"
+
+msgid "Translate user profile strings"
+msgstr "Tłumacz ciągi znaków profilu użytkownika"
+
+msgid "You need to visit translations on your site's front-end (<a/>) and WPML will identify all untranslated strings and list them here. "
+msgstr "Musisz odwiedzić tłumaczenia na front-endzie swojej witryny (<a/>), a WPML zidentyfikuje wszystkie nieprzetłumaczone ciągi znaków i wyświetli je tutaj. "
+
+msgid "hide details"
+msgstr "ukryj szczegóły"
+
+msgid "more details"
+msgstr "więcej szczegółów"
+
+msgid "Still can't find the strings you're looking to translate? Add more strings for translation."
+msgstr "Nadal nie możesz znaleźć ciągów znaków, które chcesz przetłumaczyć? Dodaj więcej ciągów znaków do tłumaczenia."
+
+msgid "Not seeing strings that you are looking for?"
+msgstr "Nie widzisz ciągów znaków, których szukasz?"
+
+msgid "Enable the autoregistration setting."
+msgstr "Włącz ustawienie automatycznej rejestracji."
+
+msgid "Visit translations on the site's frontend for WPML to see which strings are missing translations. Visiting one language is enough: %s."
+msgstr "Odwiedź tłumaczenia na frontendzie witryny dla WPML, aby zobaczyć, których ciągów brakuje. Wystarczy odwiedzić jeden język: %s."
+
+msgid "Alternatively, you can register strings manually."
+msgstr "Alternatywnie, możesz zarejestrować ciągi znaków ręcznie."
+
+msgid "Translate Everything translates only those strings which are registered in English language"
+msgstr "Tłumacz wszystko tłumaczy tylko te ciągi znaków, które są zarejestrowane w języku angielskim"
+
+msgid "Most strings from your plugins and theme are in English, so we’re showing them alongside your default language. Use the <b>Source Language</b> filter to view strings in a specific language."
+msgstr "Większość ciągów znaków z Twoich wtyczek i motywu jest w języku angielskim, dlatego pokazujemy je obok Twojego domyślnego języka. Użyj filtra <b>Język źródłowy</b>, aby wyświetlić ciągi znaków w określonym języku."
+
+msgid "You’re using <b>%s</b> to cache your site, which may prevent WPML from automatically registering new strings. To fix this, clear your page cache, then visit your translated pages again on the frontend to detect new strings."
+msgstr "Używasz <b>%s</b> do buforowania swojej witryny, co może uniemożliwić WPML automatyczną rejestrację nowych ciągów znaków. Aby to naprawić, wyczyść pamięć podręczną strony, a następnie ponownie odwiedź przetłumaczone strony na front-endzie, aby wykryć nowe ciągi znaków."
+
+msgid "WPML can detect strings that appear on the site and list them here. This feature helps you identify the strings that actually appear on the site and translate them. To see here only the strings that actually appear on the site, you need to enable this feature."
+msgstr "WPML może wykrywać ciągi znaków, które pojawiają się na stronie i wyświetlać je tutaj. Ta funkcja pomaga zidentyfikować ciągi znaków, które faktycznie pojawiają się na stronie i przetłumaczyć je. Aby widzieć tutaj tylko ciągi znaków, które faktycznie pojawiają się na stronie, musisz włączyć tę funkcję."
+
+msgid "WPML detects strings that appear on the site and lists them here. This feature helps you identify the strings that actually appear on the site and translate them. To see here all the strings in the site, you need to disable this feature."
+msgstr "WPML wykrywa ciągi znaków, które pojawiają się na stronie i wyświetla je tutaj. Ta funkcja pomaga zidentyfikować ciągi znaków, które faktycznie pojawiają się na stronie i przetłumaczyć je. Aby widzieć tutaj wszystkie ciągi znaków na stronie, musisz wyłączyć tę funkcję."
+
+msgid "Detect untranslated strings"
+msgstr "Wykryj nieprzetłumaczone ciągi znaków"
+
+msgid "WPML can detect untranslated strings and automatically register them for translation. This happens in real time as you or your visitors browse your website."
+msgstr "WPML może wykrywać nieprzetłumaczone ciągi znaków i automatycznie rejestrować je do tłumaczenia. Dzieje się to w czasie rzeczywistym, gdy Ty lub Twoi odwiedzający przeglądacie swoją witrynę."
+
+msgid "Automatically register untranslated strings"
+msgstr "Automatycznie rejestruj nieprzetłumaczone ciągi znaków"
+
+msgid "Learn how to use auto-registration"
+msgstr "Dowiedz się, jak korzystać z automatycznej rejestracji"
+
+msgid "recommended"
+msgstr "zalecane"
+
+msgid "Also register strings from the website's back-end"
+msgstr "Rejestruj również ciągi znaków z back-endu witryny"
+
+msgid "Save settings"
+msgstr "Zapisz ustawienia"
+
+msgid "Request failed because of the network error"
+msgstr "Żądanie nie powiodło się z powodu błędu sieci"
+
+msgid "Try again"
+msgstr "Spróbuj ponownie"
+
+msgid "Enabled"
+msgstr "Włączone"
+
+msgid "Disabled"
+msgstr "Wyłączone"
+
+msgid "Modify"
+msgstr "Modyfikuj"
+
+msgid "You can only translate %1$s from the site's default language (%2$s)."
+msgstr "Możesz tłumaczyć tylko %1$s z domyślnego języka witryny (%2$s)."
+
+msgid "%1sCheck pricing%2s."
+msgstr "%1sSprawdź cennik%2s."
+
+msgid "The current site content costs %1$sapproximately €%2$s%3$s to translate."
+msgstr "Tłumaczenie bieżącej zawartości strony kosztuje %1$sokoło %2$s €%3$s."
+
+msgid "The selected content costs %1$sapproximately €%2$s%3$s to translate."
+msgstr "Tłumaczenie wybranej zawartości kosztuje %1$sokoło %2$s €%3$s."
+
+msgid "Pay-As-You-Go"
+msgstr "Pay-As-You-Go"
+
+msgid "Activate Pay-As-You-Go to translate automatically with monthly billing."
+msgstr "Aktywuj Pay-As-You-Go, aby tłumaczyć automatycznie z miesięcznym rozliczaniem."
+
+msgid "Activate Pay-As-You-Go"
+msgstr "Aktywuj Pay-As-You-Go"
+
+msgid "Already using Pay-As-You-Go on another site?"
+msgstr "Korzystasz już z Pay-As-You-Go na innej stronie?"
+
+msgid "Connect this site to it"
+msgstr "Połącz tę stronę z nim"
+
+msgid "Buy and assign credits"
+msgstr "Kup i przypisz kredyty"
+
+msgid "Buy a %1$sprepaid package%2$s with at least %3$s%4$s credits%5$s and assign them to this site."
+msgstr "Kup %1$spakiet przedpłacony%2$s z co najmniej %3$s%4$s kredytami%5$s i przypisz je do tej strony."
+
+msgid "This amount will cover translation of all your current content."
+msgstr "Ta kwota pokryje tłumaczenie całej Twojej bieżącej zawartości."
+
+msgid "Assign at least %1$s%2$s credits%3$s to this site to continue."
+msgstr "Przypisz co najmniej %1$s%2$s kredytów%3$s do tej strony, aby kontynuować."
+
+msgid "Assign credits from your WPML account and buy an additional %1$sprepaid package%2$s with at least %3$s%4$s credits%5$s credits to cover the remaining amount."
+msgstr "Przypisz kredyty z konta WPML i kup dodatkowy %1$spakiet przedpłacony%2$s z co najmniej %3$s%4$s kredytami%5$s, aby pokryć pozostałą kwotę."
+
+msgid "Prepaid credits"
+msgstr "Kredyty przedpłacone"
+
+msgid "There are %1$s%2$s available on your WPML account.%3$s"
+msgstr "Na Twoim koncie WPML dostępnych jest %1$s%2$s.%3$s"
+
+msgid "(Only the WPML account owner can do this.)"
+msgstr "(Może to zrobić tylko właściciel konta WPML.)"
+
+msgid "Checking for new credits..."
+msgstr "Sprawdzanie nowych kredytów..."
+
+msgid "Still not enough credits. Refresh again in %d seconds."
+msgstr "Nadal za mało kredytów. Odśwież ponownie za %d sekund."
+
+msgid "Already assigned?"
+msgstr "Już przypisane?"
+
+msgid "Refresh"
+msgstr "Odśwież"
+
+msgid "Connection Error. Please wait a minute and reload this page. If the problem continues, please contact WPML support."
+msgstr "Błąd połączenia. Proszę poczekać minutę i odświeżyć tę stronę. Jeśli problem będzie się powtarzał, skontaktuj się z pomocą techniczną WPML."
+
+msgid "Pay-As-You-Go activated"
+msgstr "Pay-As-You-Go aktywowane"
+
+msgid "You can now continue translating your content automatically."
+msgstr "Możesz teraz kontynuować automatyczne tłumaczenie swoich treści."
+
+msgid "%s credits assigned to this site."
+msgstr "Do tej strony przypisano %s kredytów."
+
+msgid "You don’t have enough credits to translate this content."
+msgstr "Nie masz wystarczającej liczby kredytów, aby przetłumaczyć tę treść."
+
+msgid "You have %s credits — %s more are needed to translate this content"
+msgstr "Masz %s kredytów — potrzeba jeszcze %s, aby przetłumaczyć tę treść"
+
+msgid "You’re missing %s credits for the translation jobs in progress — %s are needed in total"
+msgstr "Brakuje Ci %s kredytów do trwających zadań tłumaczenia — łącznie potrzeba %s"
+
+msgid "Summary:"
+msgstr "Podsumowanie:"
+
+msgid "Credit"
+msgid_plural "Credits"
+msgstr[0] "Kredyt"
+msgstr[1] "Kredyty"
+msgstr[2] "Kredyty"
+
+msgid "€%1$s approximately"
+msgstr "około %1$s €"
+
+msgid "Pricing"
+msgstr "Cennik"
+
+msgid "Your Automatic Translation Credits"
+msgstr "Twoje kredyty na automatyczne tłumaczenie"
+
+msgid "To proceed with translation, activate Pay-As-You-Go or assign prepaid credits."
+msgstr "Aby kontynuować tłumaczenie, aktywuj Pay-As-You-Go lub przypisz przedpłacone kredyty."
+
+msgid "Leave existing translations as they are"
+msgstr "Pozostaw istniejące tłumaczenia bez zmian"
+
+msgid "Overwrite existing translations"
+msgstr "Nadpisz istniejące tłumaczenia"
+
+msgid "Some of the content you want to translate is already translated"
+msgstr "Część treści, którą chcesz przetłumaczyć, jest już przetłumaczona"
+
+msgid "What do you want to do with the content that's already translated?"
+msgstr "Co chcesz zrobić z treścią, która jest już przetłumaczona?"
+
+msgid "Suggested deadline:"
+msgstr "Sugerowany termin:"
+
+msgid "Set a batch name and deadline"
+msgstr "Ustaw nazwę partii i termin"
+
+msgid "You can assign a custom name to this batch for easy tracking and suggest a deadline to clarify the priority for translators."
+msgstr "Możesz przypisać niestandardową nazwę tej partii dla łatwego śledzenia i zasugerować termin, aby wyjaśnić priorytet dla tłumaczy."
+
+msgid "Batch name:"
+msgstr "Nazwa partii:"
+
+msgid "Default translation engine: "
+msgstr "Domyślny silnik tłumaczeniowy: "
+
+msgid "Change"
+msgstr "Zmień"
+
+msgid "Failed to load engines"
+msgstr "Nie udało się załadować silników"
+
+msgid "No engines enabled"
+msgstr "Brak włączonych silników"
+
+msgid "In order to assign yourself as translator, you first need to <add_yourself>add yourself as %s translator</add_yourself> to the site.<br/> Add yourself as %s translator and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Aby przypisać się jako tłumacz, musisz najpierw <add_yourself>dodać się jako tłumacz %s</add_yourself> do witryny.<br/> Dodaj się jako tłumacz %s i kliknij <check_again>sprawdź ponownie</check_again> lub wybierz inną opcję tłumaczenia."
+
+msgid "In order to assign yourself as translator, you first need to <add_yourself>add yourself as %s to %s translator</add_yourself> to the site.<br/> Add yourself as %s to %s translator and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Aby przypisać się jako tłumacz, musisz najpierw <add_yourself>dodać się jako tłumacz %s na %s</add_yourself> do witryny.<br/> Dodaj się jako tłumacz %s na %s i kliknij <check_again>sprawdź ponownie</check_again> lub wybierz inną opcję tłumaczenia."
+
+msgid "Checking"
+msgstr "Sprawdzanie"
+
+msgid "In order to assign a translation service, you first need to <activate_ts>activate a translation service</activate_ts>.<br/>Activate a translation service and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Aby przypisać usługę tłumaczeniową, musisz najpierw <activate_ts>aktywować usługę tłumaczeniową</activate_ts>.<br/>Aktywuj usługę tłumaczeniową i kliknij <check_again>sprawdź ponownie</check_again> lub wybierz inną opcję tłumaczenia."
+
+msgid " Checking "
+msgstr " Sprawdzanie "
+
+msgid "In order to translate automatically, you first need to <enable_ate>enable WPML's Advanced Translation Editor</enable_ate>.<br/>Enable the Advanced Translation Editor and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Aby tłumaczyć automatycznie, musisz najpierw <enable_ate>włączyć Zaawansowany Edytor Tłumaczeń WPML</enable_ate>.<br/>Włącz Zaawansowany Edytor Tłumaczeń i kliknij <check_again>sprawdź ponownie</check_again> lub wybierz inną opcję tłumaczenia."
+
+msgid "Selected content was translated using the Classic Translation Editor and can't be sent for automatic translation. To allow this, enable \"Use also for old translations\" in <wpmlSettingLink>WPML Settings</wpmlSettingLink> page."
+msgstr "Wybrana treść została przetłumaczona za pomocą Klasycznego Edytora Tłumaczeń i nie może zostać wysłana do automatycznego tłumaczenia. Aby to umożliwić, włącz „Używaj również dla starych tłumaczeń” na stronie <wpmlSettingLink>Ustawienia WPML</wpmlSettingLink>."
+
+msgid "Some of the selected content was translated using the Classic Translation Editor and can't be sent for automatic translation. To allow this, enable \"Use also for old translations\" in <wpmlSettingLink>WPML Settings</wpmlSettingLink> page."
+msgstr "Część wybranej treści została przetłumaczona za pomocą Klasycznego Edytora Tłumaczeń i nie może zostać wysłana do automatycznego tłumaczenia. Aby to umożliwić, włącz „Używaj również dla starych tłumaczeń” na stronie <wpmlSettingLink>Ustawienia WPML</wpmlSettingLink>."
+
+msgid ""
+"Any existing content (translations) will be overwritten when creating duplicates.\n"
+"When duplicating content, please first duplicate parent pages to maintain the site's hierarchy."
+msgstr "Wszelkie istniejące treści (tłumaczenia) zostaną nadpisane podczas tworzenia duplikatów.\nPodczas duplikowania treści, najpierw zduplikuj strony nadrzędne, aby zachować hierarchię witryny."
+
+msgid "Some of the selected content is already being translated. This will cancel any in-progress translations."
+msgstr "Część wybranej treści jest już tłumaczona. Spowoduje to anulowanie wszelkich trwających tłumaczeń."
+
+msgid "The selected items were translated using the WordPress Editor and will be overwritten with automatic translations."
+msgstr "Wybrane elementy zostały przetłumaczone za pomocą Edytora WordPress i zostaną nadpisane automatycznymi tłumaczeniami."
+
+msgid "Some of the selected content was translated using the WordPress Editor and will be overwritten."
+msgstr "Część wybranej treści została przetłumaczona za pomocą Edytora WordPress i zostanie nadpisana."
+
+msgid "In order to assign to a translator, you first need to <add_translators>add %s translators</add_translators> to the site.<br/> Add %s translators and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Aby przypisać tłumacza, musisz najpierw <add_translators>dodać tłumaczy %s</add_translators> do witryny.<br/> Dodaj tłumaczy %s i kliknij <check_again>sprawdź ponownie</check_again> lub wybierz inną opcję tłumaczenia."
+
+msgid "In order to assign to a translator, you first need to <add_translators>add %s to %s translators</add_translators> to the site.<br/> Add %s to %s translators and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Aby przypisać tłumacza, musisz najpierw <add_translators>dodać tłumaczy %s na %s</add_translators> do witryny.<br/> Dodaj tłumaczy %s na %s i kliknij <check_again>sprawdź ponownie</check_again> lub wybierz inną opcję tłumaczenia."
+
+msgid "Your site doesn't have any reviewers for %s. This means that you’re the only person who can review these translations."
+msgstr "Twoja witryna nie ma żadnych recenzentów dla %s. Oznacza to, że jesteś jedyną osobą, która może recenzować te tłumaczenia."
+
+msgid "Your site doesn't have any reviewers yet. This means that you’re the only person who can review translations."
+msgstr "Twoja witryna nie ma jeszcze żadnych recenzentów. Oznacza to, że jesteś jedyną osobą, która może recenzować tłumaczenia."
+
+msgid "If you want other people to review the translations, go to <a>WPML → Translation Dashboard → Translators</a> and add translators. They will be able to both review and translate content for you."
+msgstr "Jeśli chcesz, aby inne osoby recenzowały tłumaczenia, przejdź do <a>WPML → Panel tłumaczeń → Tłumacze</a> i dodaj tłumaczy. Będą oni mogli zarówno recenzować, jak i tłumaczyć treści dla Ciebie."
+
+msgid "Automatic translation is blocked - payment required"
+msgstr "Automatyczne tłumaczenie zablokowane — wymagana płatność"
+
+msgid "We couldn’t process your payment. Click “Pay now” to retry and resume automatic translation."
+msgstr "Nie udało się przetworzyć płatności. Kliknij „Zapłać teraz”, aby spróbować ponownie i wznowić automatyczne tłumaczenie."
+
+msgid "WPML does not support duplicating strings. Your selection to duplicate strings to %1$s will be ignored if you proceed with the translation."
+msgstr "WPML nie obsługuje duplikowania ciągów znaków. Twój wybór duplikowania ciągów znaków do %1$s zostanie zignorowany, jeśli przejdziesz do tłumaczenia."
+
+msgid "WPML does not support duplicating %1$s elements. Your selection to duplicate elements to %2$s will be ignored if you proceed with the translation."
+msgstr "WPML nie obsługuje duplikowania elementów %1$s. Twój wybór duplikowania elementów do %2$s zostanie zignorowany, jeśli przejdziesz do tłumaczenia."
+
+msgid "WPML does not support duplicating %1$s elements and strings. Your selection to duplicate elements and strings to %2$s will be ignored if you proceed with the translation."
+msgstr "WPML nie obsługuje duplikowania elementów i ciągów znaków %1$s. Twój wybór duplikowania elementów i ciągów znaków do %2$s zostanie zignorowany, jeśli przejdziesz do tłumaczenia."
+
+msgid "WPML does not support duplicating strings."
+msgstr "WPML nie obsługuje duplikowania ciągów znaków."
+
+msgid "WPML does not support duplicating %1$s elements."
+msgstr "WPML nie obsługuje duplikowania elementów %1$s."
+
+msgid "WPML does not support duplicating %1$s elements and strings."
+msgstr "WPML nie obsługuje duplikowania elementów i ciągów znaków %1$s."
+
+msgid "Finish setting up %s on your site"
+msgstr "Zakończ konfigurację %s na swojej witrynie"
+
+msgid "You need to authenticate %s to send them content for translation.<br/>Visit the <a>Translators tab</a> to finish the setup and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Musisz uwierzytelnić %s, aby wysłać im treści do tłumaczenia.<br/>Odwiedź <a>zakładkę Tłumacze</a>, aby zakończyć konfigurację i kliknij <check_again>sprawdź ponownie</check_again> lub wybierz inną opcję tłumaczenia."
+
+msgid "You selected multiple translation methods for content across different languages:"
+msgstr "Wybrano wiele metod tłumaczenia treści w różnych językach:"
+
+msgid "Sent for translation"
+msgstr "Wysłano do tłumaczenia"
+
+msgid "Sending for translation failed"
+msgstr "Wysłanie do tłumaczenia nie powiodło się"
+
+msgid "Ok"
+msgstr "OK"
+
+msgid "<s>1 item</s> is being translated automatically."
+msgid_plural "<s>%d items</s> are being translated automatically."
+msgstr[0] "<s>1 element</s> jest tłumaczony automatycznie."
+msgstr[1] "<s>%d elementy</s> są tłumaczone automatycznie."
+msgstr[2] "<s>%d elementów</s> jest tłumaczonych automatycznie."
+
+msgid "You can track their progress at the top of the page."
+msgstr "Możesz śledzić ich postęp na górze strony."
+
+msgid "From now on, WPML will automatically translate new content on your site."
+msgstr "Od teraz WPML będzie automatycznie tłumaczyć nowe treści na Twojej witrynie."
+
+msgid "This number might vary because you enabled the Translate Everything Automatically Mode."
+msgstr "Ta liczba może się różnić, ponieważ włączono tryb Automatycznego Tłumaczenia Wszystkiego."
+
+msgid "From now on, WPML will automatically translate your site's content."
+msgstr "Od teraz WPML będzie automatycznie tłumaczyć zawartość Twojej witryny."
+
+msgid "Automatic translations summary"
+msgstr "Podsumowanie tłumaczeń automatycznych"
+
+msgid "Some of the content that you selected for translation includes fields that are encoded. Translators will not be able to work on this kind of content, so we removed it from the job."
+msgstr "Niektóre treści wybrane do tłumaczenia zawierają pola zakodowane. Tłumacze nie będą mogli pracować nad tego rodzaju treścią, dlatego usunęliśmy ją z zadania."
+
+msgid "To fix this problem, please contact our support team and describe this issue."
+msgstr "Aby rozwiązać ten problem, skontaktuj się z naszym zespołem wsparcia i opisz problem."
+
+msgid "WPML cannot send some fo the content to translation"
+msgstr "WPML nie może wysłać niektórych treści do tłumaczenia"
+
+msgid "Open support ticket"
+msgstr "Otwórz zgłoszenie do pomocy technicznej"
+
+msgid "<s>1 item</s> has been successfully assigned to you! To check its status, please go to <s>WPML → Translations</s>. <translations_queue/>"
+msgid_plural "<s>%d items</s> have been successfully assigned to you! For status updates, please go to <s>WPML → Translations</s>. <translations_queue/>"
+msgstr[0] "<s>1 element</s> został pomyślnie przypisany! Aby sprawdzić jego status, przejdź do <s>WPML → Tłumaczenia</s>. <translations_queue/>"
+msgstr[1] "<s>%d elementy</s> zostały pomyślnie przypisane! Aby sprawdzić status, przejdź do <s>WPML → Tłumaczenia</s>. <translations_queue/>"
+msgstr[2] "<s>%d elementów</s> zostało pomyślnie przypisanych! Aby sprawdzić status, przejdź do <s>WPML → Tłumaczenia</s>. <translations_queue/>"
+
+msgid "Currently logged in translator summary"
+msgstr "Podsumowanie aktualnie zalogowanego tłumacza"
+
+msgid "Go to Translations"
+msgstr "Przejdź do tłumaczeń"
+
+msgid "<s>1 item</s> has been duplicated."
+msgid_plural "<s>%d items</s> have been duplicated."
+msgstr[0] "<s>1 element</s> został zduplikowany."
+msgstr[1] "<s>%d elementy</s> zostały zduplikowane."
+msgstr[2] "<s>%d elementów</s> zostało zduplikowanych."
+
+msgid "Duplication summary"
+msgstr "Podsumowanie duplikacji"
+
+msgid "There was a problem sending your content for translation."
+msgstr "Wystąpił problem z wysłaniem treści do tłumaczenia."
+
+msgid "Please try again in a few minutes. If the issue persists, please contact our support."
+msgstr "Spróbuj ponownie za kilka minut. Jeśli problem będzie się powtarzał, skontaktuj się z naszym wsparciem."
+
+msgid "See technical details"
+msgstr "Zobacz szczegóły techniczne"
+
+msgid "Hide technical details"
+msgstr "Ukryj szczegóły techniczne"
+
+msgid "Some of the selected strings are already registered or translated into %s. Since their source language matches the target language, they cannot be retranslated."
+msgstr "Niektóre z wybranych ciągów są już zarejestrowane lub przetłumaczone na %s. Ponieważ ich język źródłowy odpowiada językowi docelowemu, nie mogą zostać ponownie przetłumaczone."
+
+msgid "Some of the selected content has already been translated from %s to %s and cannot be re-translated from %s to %s."
+msgstr "Niektóre z wybranych treści zostały już przetłumaczone z %s na %s i nie mogą zostać ponownie przetłumaczone z %s na %s."
+
+msgid "Content already translated"
+msgstr "Treść już przetłumaczona"
+
+msgid "Some content couldn't be sent to translation."
+msgstr "Niektórych treści nie udało się wysłać do tłumaczenia."
+
+msgid "WPML did not create translations for some languages because of the following reasons:"
+msgstr "WPML nie utworzył tłumaczeń dla niektórych języków z następujących powodów:"
+
+msgid "<s>1 item</s> has been successfully sent to translators!"
+msgid_plural "<s>%d items</s> have been successfully sent to translators!"
+msgstr[0] "<s>1 element</s> został pomyślnie wysłany do tłumaczy!"
+msgstr[1] "<s>%d elementy</s> zostały pomyślnie wysłane do tłumaczy!"
+msgstr[2] "<s>%d elementów</s> zostało pomyślnie wysłanych do tłumaczy!"
+
+msgid "Local translations summary"
+msgstr "Podsumowanie tłumaczeń lokalnych"
+
+msgid "You can check their status in WPML → Translation"
+msgstr "Ich status możesz sprawdzić w WPML → Tłumaczenie"
+
+msgid "Continue to %s"
+msgstr "Kontynuuj do %s"
+
+msgid "We were unable to send the following batches for professional translation:"
+msgstr "Nie udało nam się wysłać następujących partii do profesjonalnego tłumaczenia:"
+
+msgid "<p><a><s>Contact WPML support for help</s></a></p>"
+msgstr "<p><a><s>Skontaktuj się z pomocą techniczną WPML</s></a></p>"
+
+msgid "Translation Service"
+msgstr "Usługa tłumaczeniowa"
+
+msgid "sending for professional translation.."
+msgstr "wysyłanie do profesjonalnego tłumaczenia.."
+
+msgid "<s>%d item</s> is being sent for translation to %s. Please continue to their site to start the translation."
+msgid_plural "<s>%d items</s> are being sent for translation to %s. Please continue to their site to start the translation."
+msgstr[0] "<s>%d element</s> jest wysyłany do tłumaczenia do %s. Przejdź na ich stronę, aby rozpocząć tłumaczenie."
+msgstr[1] "<s>%d elementy</s> są wysyłane do tłumaczenia do %s. Przejdź na ich stronę, aby rozpocząć tłumaczenie."
+msgstr[2] "<s>%d elementów</s> jest wysyłanych do tłumaczenia do %s. Przejdź na ich stronę, aby rozpocząć tłumaczenie."
+
+msgid "Translation service translations summary"
+msgstr "Podsumowanie tłumaczeń usługi tłumaczeniowej"
+
+msgid "One or more assigned translators are invalid. The translator may have been removed or their language permissions changed.<br/> Review your settings on the <translators_page>Translators page</translators_page>."
+msgstr "Jeden lub więcej przypisanych tłumaczy jest nieprawidłowych. Tłumacz mógł zostać usunięty lub zmieniono jego uprawnienia językowe.<br/> Przejrzyj swoje ustawienia na <translators_page>stronie Tłumacze</translators_page>."
+
+msgid "The selected translation service is no longer valid. It may have been changed, unauthenticated, or deactivated.<br/> Review your settings on the <translators_page>Translators page</translators_page>."
+msgstr "Wybrana usługa tłumaczeniowa jest już nieprawidłowa. Mogła zostać zmieniona, nieuwierzytelniona lub dezaktywowana.<br/> Przejrzyj swoje ustawienia na <translators_page>stronie Tłumacze</translators_page>."
+
+msgid "Currently selected translation editor doesn't support automatic translation. You must enable the Advanced Translation Editor to send content for automatic translation.<br/> Check your settings on the <wpml_settings>WPML settings page</wpml_settings>."
+msgstr "Aktualnie wybrany edytor tłumaczeń nie obsługuje tłumaczenia automatycznego. Musisz włączyć Zaawansowany Edytor Tłumaczeń, aby wysyłać treści do tłumaczenia automatycznego.<br/> Sprawdź swoje ustawienia na <wpml_settings>stronie ustawień WPML</wpml_settings>."
+
+msgid "Validation error happened during send to translation."
+msgstr "Wystąpił błąd walidacji podczas wysyłania do tłumaczenia."
+
+msgid "Translate and Duplicate"
+msgstr "Tłumacz i duplikuj"
+
+msgid "Duplicate"
+msgstr "Duplikuj"
+
+msgid "Translate content"
+msgstr "Przetłumacz treść"
+
+msgid "Please choose one of the available payment options."
+msgstr "Wybierz jedną z dostępnych opcji płatności."
+
+msgid "Selected content is already translated"
+msgstr "Wybrane treści są już przetłumaczone"
+
+msgid "Please select a review mode"
+msgstr "Wybierz tryb recenzji"
+
+msgid "Assign local translator or choose another option"
+msgstr "Przypisz lokalnego tłumacza lub wybierz inną opcję"
+
+msgid "Assign yourself or choose another option"
+msgstr "Przypisz siebie lub wybierz inną opcję"
+
+msgid "Activate translation service or choose another option"
+msgstr "Aktywuj usługę tłumaczeniową lub wybierz inną opcję"
+
+msgid "Activate ATE or choose another option"
+msgstr "Aktywuj ATE lub wybierz inną opcję"
+
+msgid "Authenticate translation service or choose another option"
+msgstr "Uwierzytelnij usługę tłumaczeniową lub wybierz inną opcję"
+
+msgid "Please provide context to enable translation"
+msgstr "Podaj kontekst, aby umożliwić tłumaczenie"
+
+msgid "Please keep this page open while WPML sends your content for translation. If you leave now, the remaining items won't be sent."
+msgstr "Proszę pozostawić tę stronę otwartą, podczas gdy WPML wysyła Twoje treści do tłumaczenia. Jeśli teraz opuścisz stronę, pozostałe elementy nie zostaną wysłane."
+
+msgid "Sending content to translation"
+msgstr "Wysyłanie treści do tłumaczenia"
+
+msgid "<s>%s</s> cannot process more than <s>%d</s> jobs in a single batch. WPML will automatically split your jobs into separate batches to ensure an error-free delivery to <s>%s</s>. <br/><br/> Do you want to proceed?"
+msgstr "<s>%s</s> nie może przetworzyć więcej niż <s>%d</s> zadań w jednej partii. WPML automatycznie podzieli Twoje zadania na osobne partie, aby zapewnić bezbłędne dostarczenie do <s>%s</s>. <br/><br/> Czy chcesz kontynuować?"
+
+msgid "WPML will send jobs to %s in separate batches"
+msgstr "WPML wyśle zadania do %s w osobnych partiach"
+
+msgid "Yes, send jobs in separate batches"
+msgstr "Tak, wyślij zadania w osobnych partiach"
+
+msgid "No, I will split jobs myself"
+msgstr "Nie, sam podzielę zadania"
+
+msgid "This will translate only your future content"
+msgstr "Spowoduje to przetłumaczenie tylko przyszłych treści"
+
+msgid "This will translate your entire site"
+msgstr "Spowoduje to przetłumaczenie całej Twojej witryny"
+
+msgid "Translate everything automatically from now on, without asking me."
+msgstr "Tłumacz wszystko automatycznie od teraz, bez pytania."
+
+msgid "Loading options to translate the content"
+msgstr "Ładowanie opcji tłumaczenia treści"
+
+msgid "What content do you want to translate?"
+msgstr "Jakie treści chcesz przetłumaczyć?"
+
+msgid "Translate my entire site"
+msgstr "Przetłumacz całą moją witrynę"
+
+msgid "WPML will translate all of your site's content, including:"
+msgstr "WPML przetłumaczy całą zawartość Twojej witryny, w tym:"
+
+msgid "Any existing content that hasn’t been translated yet"
+msgstr "Wszelkie istniejące treści, które nie zostały jeszcze przetłumaczone"
+
+msgid "All new content you create in the future"
+msgstr "Wszystkie nowe treści, które utworzysz w przyszłości"
+
+msgid "Translate only future content"
+msgstr "Tłumacz tylko przyszłe treści"
+
+msgid "WPML will translate only the content you create after enabling this translation mode."
+msgstr "WPML przetłumaczy tylko treści, które utworzysz po włączeniu tego trybu tłumaczenia."
+
+msgid "Existing untranslated content on your side will not be translated."
+msgstr "Istniejące nieprzetłumaczone treści w Twojej witrynie nie zostaną przetłumaczone."
+
+msgid "WPML Settings"
+msgstr "Ustawienia WPML"
+
+msgid "Some of your content was translated using the Classic Translation Editor. These translations won’t be included in Translate Everything Automatically."
+msgstr "Część treści została przetłumaczona przy użyciu Klasycznego Edytora Tłumaczeń. Te tłumaczenia nie zostaną uwzględnione w Automatycznym Tłumaczeniu Wszystkiego."
+
+msgid "To include them, enable \"Use also for old translations\" in <wpmlSettingLink/>."
+msgstr "Aby je uwzględnić, włącz „Użyj również dla starych tłumaczeń” w <wpmlSettingLink/>."
+
+msgid "Some of your content was translated using the WordPress Editor. These translations won’t be included in Translate Everything Automatically."
+msgstr "Część treści została przetłumaczona przy użyciu Edytora WordPress. Te tłumaczenia nie zostaną uwzględnione w Automatycznym Tłumaczeniu Wszystkiego."
+
+msgid "Some of your content was translated using the Classic Translation Editor or WordPress Editor. These translations won’t be included in Translate Everything Automatically."
+msgstr "Część treści została przetłumaczona przy użyciu Klasycznego Edytora Tłumaczeń lub Edytora WordPress. Te tłumaczenia nie zostaną uwzględnione w Automatycznym Tłumaczeniu Wszystkiego."
+
+msgid "To include Classic Editor translations, enable \"Use also for old translations\" in <wpmlSettingLink/>."
+msgstr "Aby uwzględnić tłumaczenia z Klasycznego Edytora, włącz „Użyj również dla starych tłumaczeń” w <wpmlSettingLink/>."
+
+msgid "Existing content"
+msgstr "Istniejące treści"
+
+msgid "You selected to translate strings that are in %s. Only these strings will be translated to %s."
+msgstr "Wybrano tłumaczenie ciągów znaków w %s. Tylko te ciągi zostaną przetłumaczone na %s."
+
+msgid "You selected to translate strings that are in %s and %s. Only these strings will be translated to %s."
+msgstr "Wybrano tłumaczenie ciągów znaków w %s i %s. Tylko te ciągi zostaną przetłumaczone na %s."
+
+msgid "Source language"
+msgstr "Język źródłowy"
+
+msgid "Target language"
+msgstr "Język docelowy"
+
+msgid "Words to translate"
+msgstr "Słowa do przetłumaczenia"
+
+msgid "Credits needed"
+msgstr "Wymagane kredyty"
+
+msgid "Automatic translation is not supported for %s."
+msgstr "Tłumaczenie automatyczne nie jest obsługiwane dla %s."
+
+msgid "The selected translation engines do not support %s."
+msgstr "Wybrane silniki tłumaczeniowe nie obsługują %s."
+
+msgid "%1sTotal Credits:%2s %3s"
+msgstr "%1sŁącznie kredytów:%2s %3s"
+
+msgid "Translation service additional options"
+msgstr "Dodatkowe opcje usługi tłumaczeniowej"
+
+msgid "Fetching translation service data..."
+msgstr "Pobieranie danych usługi tłumaczeniowej..."
+
+msgid "-"
+msgstr "-"
+
+msgid "Translate automatically"
+msgstr "Tłumacz automatycznie"
+
+msgid "Translate myself"
+msgstr "Tłumacz samodzielnie"
+
+msgid "Assign a translator"
+msgstr "Przypisz tłumacza"
+
+msgid "Assign translation service"
+msgstr "Przypisz usługę tłumaczeniową"
+
+msgid "Do nothing"
+msgstr "Nic nie rób"
+
+msgid "Please choose"
+msgstr "Proszę wybrać"
+
+msgid "Choose a translator"
+msgstr "Wybierz tłumacza"
+
+msgid "First available"
+msgstr "Pierwszy dostępny"
+
+msgid "(Me)"
+msgstr "(ja)"
+
+msgid "Step 2"
+msgstr "Krok 2"
+
+msgid "Calculating..."
+msgstr "Obliczanie..."
+
+msgid "Refining estimation... about %1$d minute remaining"
+msgid_plural "Refining estimation... about %1$d minutes remaining"
+msgstr[0] "Doprecyzowywanie szacunków... pozostała około %1$d minuta"
+msgstr[1] "Doprecyzowywanie szacunków... pozostały około %1$d minuty"
+msgstr[2] "Doprecyzowywanie szacunków... pozostało około %1$d minut"
+
+msgid "Refining estimation... %d second remaining"
+msgid_plural "Refining estimation... %d seconds remaining"
+msgstr[0] "Doprecyzowywanie szacunków... pozostała %d sekunda"
+msgstr[1] "Doprecyzowywanie szacunków... pozostały %d sekundy"
+msgstr[2] "Doprecyzowywanie szacunków... pozostało %d sekund"
+
+msgid "Estimated cost:"
+msgstr "Szacowany koszt:"
+
+msgid "Current estimated cost:"
+msgstr "Aktualny szacowany koszt:"
+
+msgid "Changing translation engine and recalculating estimate..."
+msgstr "Zmiana silnika tłumaczenia i ponowne przeliczanie szacunków..."
+
+msgid "%s credits"
+msgstr "%s kredytów"
+
+msgid "€%1$s"
+msgstr "%1$s €"
+
+msgid "All content is already translated. New and edited content will be translated automatically."
+msgstr "Cała zawartość jest już przetłumaczona. Nowa i edytowana zawartość zostanie przetłumaczona automatycznie."
+
+msgid "%1$s and %2$s"
+msgstr "%1$s i %2$s"
+
+msgid "in other types"
+msgstr "w innych typach"
+
+msgid "Hide what will be translated"
+msgstr "Ukryj, co zostanie przetłumaczone"
+
+msgid "Show what will be translated"
+msgstr "Pokaż, co zostanie przetłumaczone"
+
+msgid "Calculation complete"
+msgstr "Obliczenia zakończone"
+
+msgid "%d of %d analyzed"
+msgstr "%d z %d przeanalizowano"
+
+msgid "Automatic translations completed"
+msgstr "Tłumaczenia automatyczne zakończone"
+
+msgid "<s>1 translation</s> has been successfully translated automatically"
+msgid_plural "<s>%d translations</s> have been successfully translated automatically"
+msgstr[0] "<s>1 tłumaczenie</s> zostało pomyślnie przetłumaczone automatycznie"
+msgstr[1] "<s>%d tłumaczenia</s> zostały pomyślnie przetłumaczone automatycznie"
+msgstr[2] "<s>%d tłumaczeń</s> zostało pomyślnie przetłumaczonych automatycznie"
+
+msgid "Automatic jobs in progress"
+msgstr "Zadania automatyczne w toku"
+
+msgid "<s>%d automatic translation</s> is in progress"
+msgid_plural "<s>%d automatic translations</s> are in progress"
+msgstr[0] "Trwa <s>%d automatyczne tłumaczenie</s>"
+msgstr[1] "Trwają <s>%d automatyczne tłumaczenia</s>"
+msgstr[2] "Trwają <s>%d automatyczne tłumaczenia</s>"
+
+msgid "Remaining time: <s>Less than 1 minute</s>"
+msgstr "Pozostały czas: <s>Mniej niż 1 minuta</s>"
+
+msgid "Remaining time: <s>%d minute</s>"
+msgid_plural "Remaining time: <s>%d minutes</s>"
+msgstr[0] "Pozostały czas: <s>%d minuta</s>"
+msgstr[1] "Pozostały czas: <s>%d minuty</s>"
+msgstr[2] "Pozostały czas: <s>%d minut</s>"
+
+msgid "Your default language, %s, must be mapped to a supported language in order to use automatic translation"
+msgstr "Twój domyślny język, %s, musi być przypisany do obsługiwanego języka, aby móc korzystać z tłumaczenia automatycznego."
+
+msgid "Map the language"
+msgstr "Przypisz język"
+
+msgid "%d translations "
+msgstr "%d tłumaczeń "
+
+msgid "%d translation "
+msgstr "%d tłumaczenie "
+
+msgid "this includes translations from Translate Everything Automatically"
+msgstr "obejmuje to tłumaczenia z Automatycznego Tłumaczenia Wszystkiego"
+
+msgid "are waiting for your review"
+msgstr "czekają na Twoją recenzję"
+
+msgid "is waiting for your review"
+msgstr "czeka na Twoją recenzję"
+
+msgid "Review Translations"
+msgstr "Przejrzyj tłumaczenia"
+
+msgid "Translate existing content"
+msgstr "Przetłumacz istniejące treści"
+
+msgid "Translate now"
+msgstr "Tłumacz teraz"
+
+msgid "Starting with version 4.7, WPML will also automatically translate texts (strings) coming from %s."
+msgstr "Począwszy od wersji 4.7, WPML będzie również automatycznie tłumaczyć teksty (ciągi znaków) pochodzące z %s."
+
+msgid "WPML will not translate existing texts of this type but any new ones you create will be automatically translated. If you prefer, you can <button />."
+msgstr "WPML nie przetłumaczy istniejących tekstów tego typu, ale wszystkie nowe, które utworzysz, zostaną automatycznie przetłumaczone. Jeśli wolisz, możesz <button />."
+
+msgid "Starting with version 4.7, WPML will also automatically translate:"
+msgstr "Począwszy od wersji 4.7, WPML będzie również automatycznie tłumaczyć:"
+
+msgid "Content set to \"use translation if available or fallback to default language\": %s."
+msgstr "Treści ustawione na „użyj tłumaczenia, jeśli dostępne, lub wróć do języka domyślnego”: %s."
+
+msgid "Texts (strings) coming from: %s."
+msgstr "Teksty (ciągi znaków) pochodzące z: %s."
+
+msgid "WPML will not translate existing content for these post types and texts but any new content you create will be automatically translated. If you prefer, you can start <button />."
+msgstr "WPML nie przetłumaczy istniejących treści dla tych typów postów i tekstów, ale wszystkie nowe treści, które utworzysz, zostaną automatycznie przetłumaczone. Jeśli wolisz, możesz rozpocząć <button />."
+
+msgid "WPML will not translate existing content for these post types but any new content you create will be automatically translated. If you prefer, you can start <button />."
+msgstr "WPML nie przetłumaczy istniejących treści dla tych typów postów, ale wszystkie nowe treści, które utworzysz, zostaną automatycznie przetłumaczone. Jeśli wolisz, możesz rozpocząć <button />."
+
+msgid "start translating existing content now"
+msgstr "rozpocznij tłumaczenie istniejących treści teraz"
+
+msgid "The following target languages do not support automatic translations: %s"
+msgstr "Następujące języki docelowe nie obsługują tłumaczeń automatycznych: %s"
+
+msgid "To enable automatic translation map them to known languages."
+msgstr "Aby włączyć tłumaczenie automatyczne, przypisz je do znanych języków."
+
+msgid "Map to known languages"
+msgstr "Przypisz do znanych języków"
+
+msgid "Copied!"
+msgstr "Skopiowano!"
+
+msgid "Copy All"
+msgstr "Kopiuj wszystko"
+
+msgid "Error type"
+msgstr "Typ błędu"
+
+msgid "Error Message"
+msgstr "Komunikat o błędzie"
+
+msgid "Job ID"
+msgstr "ID zadania"
+
+msgid "ATE Job ID"
+msgstr "ID zadania ATE"
+
+msgid "Original ID"
+msgstr "Oryginalny ID"
+
+msgid "Element ID"
+msgstr "ID elementu"
+
+msgid "Copy to clipboard"
+msgstr "Kopiuj do schowka"
+
+msgid "Hide errors details"
+msgstr "Ukryj szczegóły błędów"
+
+msgid "Show errors details"
+msgstr "Pokaż szczegóły błędów"
+
+msgid "https://wpml.org/forums/forum/english-support/"
+msgstr "https://wpml.org/forums/forum/english-support/"
+
+msgid "<strong>%d item</strong> couldn't be completed due to an unexpected error. Try resending it for translation. If the issue continues, <a>contact WPML support</a>."
+msgid_plural "<strong>%d items</strong> couldn't be completed due to an unexpected error. Try resending them for translation. If the issue continues, <a>contact WPML support</a>."
+msgstr[0] "<strong>%d element</strong> nie mógł zostać ukończony z powodu nieoczekiwanego błędu. Spróbuj wysłać go ponownie do tłumaczenia. Jeśli problem będzie się powtarzał, <a>skontaktuj się z pomocą techniczną WPML</a>."
+msgstr[1] "<strong>%d elementy</strong> nie mogły zostać ukończone z powodu nieoczekiwanego błędu. Spróbuj wysłać je ponownie do tłumaczenia. Jeśli problem będzie się powtarzał, <a>skontaktuj się z pomocą techniczną WPML</a>."
+msgstr[2] "<strong>%d elementów</strong> nie mogło zostać ukończonych z powodu nieoczekiwanego błędu. Spróbuj wysłać je ponownie do tłumaczenia. Jeśli problem będzie się powtarzał, <a>skontaktuj się z pomocą techniczną WPML</a>."
+
+msgid "Cancelling %d/%d..."
+msgstr "Anulowanie %d/%d..."
+
+msgid "Cancelling..."
+msgstr "Anulowanie..."
+
+msgid "Discard jobs"
+msgstr "Odrzuć zadania"
+
+msgid "Resending %d/%d..."
+msgstr "Ponowne wysyłanie %d/%d..."
+
+msgid "Resending..."
+msgstr "Ponowne wysyłanie..."
+
+msgid "Resend"
+msgstr "Wyślij ponownie"
+
+msgid "We recommend staying on this page to monitor progress and respond to any issues if they occur. You can leave this page, but you should remain within your WordPress admin area."
+msgstr "Zalecamy pozostanie na tej stronie, aby monitorować postępy i reagować na ewentualne problemy. Możesz opuścić tę stronę, ale powinieneś pozostać w obszarze administracyjnym WordPressa."
+
+msgid "Translation status"
+msgstr "Status tłumaczenia"
+
+msgid "Before translating with PTC, please provide context about your website and target audience (one-time thing)."
+msgstr "Przed tłumaczeniem za pomocą PTC, podaj kontekst swojej witryny i grupy docelowej (jednorazowo)."
+
+msgid "Provide Context"
+msgstr "Podaj kontekst"
+
+msgid "Default language does not support automatic translations."
+msgstr "Domyślny język nie obsługuje tłumaczeń automatycznych."
+
+msgid "You must enable ATE to activate Translate Everything Automatically."
+msgstr "Musisz włączyć ATE, aby aktywować Automatyczne Tłumaczenie Wszystkiego."
+
+msgid "Select payment method"
+msgstr "Wybierz metodę płatności"
+
+msgid "Credits assigned"
+msgstr "Kredyty przypisane"
+
+msgid "You’re all set."
+msgstr "Wszystko gotowe."
+
+msgid "Click Translate Everything Automatically to start translating your entire site."
+msgstr "Kliknij Przetłumacz wszystko automatycznie, aby rozpocząć tłumaczenie całej witryny."
+
+msgid "Content to translate"
+msgstr "Treść do przetłumaczenia"
+
+msgid "Publishing method"
+msgstr "Metoda publikacji"
+
+msgid "Payment method"
+msgstr "Metoda płatności"
+
+msgid "Enable Translate Everything Automatically"
+msgstr "Włącz automatyczne tłumaczenie wszystkiego"
+
+msgid "Go back"
+msgstr "Wróć"
+
+msgid "Continue"
+msgstr "Kontynuuj"
+
+msgid "Calculating credits for translating existing content. Please wait..."
+msgstr "Obliczanie kredytów na tłumaczenie istniejących treści. Proszę czekać..."
+
+msgid "Set Up Translate Everything Automatically"
+msgstr "Skonfiguruj automatyczne tłumaczenie wszystkiego"
+
+msgid "WPML will translate your content into %d languages"
+msgstr "WPML przetłumaczy Twoje treści na %d języków"
+
+msgid "You can start using Translate Everything Automatically after sending some content for translation. We recommend that you review these translations and make sure that they are good before translating your entire site's content."
+msgstr "Możesz zacząć korzystać z Automatycznego Tłumaczenia Wszystkiego po wysłaniu części treści do tłumaczenia. Zalecamy, abyś przejrzał te tłumaczenia i upewnił się, że są dobre, zanim przetłumaczysz całą zawartość swojej witryny."
+
+msgid "Translate Everything Automatically - disabled"
+msgstr "Tłumacz wszystko automatycznie – wyłączone"
+
+msgid "Translate Everything Automatically"
+msgstr "Tłumacz wszystko automatycznie"
+
+msgid "Automatically translate all %s content to %s."
+msgstr "Automatycznie przetłumacz całą zawartość %s na %s."
+
+msgid "Translate Everything Automatically - pausing"
+msgstr "Tłumacz wszystko automatycznie – wstrzymywanie"
+
+msgid "Translate Everything Automatically is pausing"
+msgstr "Tłumacz wszystko automatycznie jest wstrzymane"
+
+msgid "Translate Everything Automatically - paused"
+msgstr "Tłumacz wszystko automatycznie – wstrzymane"
+
+msgid "%d translation left in the queue. Preparing more content for translation."
+msgid_plural "%d translations left in the queue. Preparing more content for translation."
+msgstr[0] "Pozostało %d tłumaczenie w kolejce. Przygotowywanie kolejnych treści do tłumaczenia."
+msgstr[1] "Pozostały %d tłumaczenia w kolejce. Przygotowywanie kolejnych treści do tłumaczenia."
+msgstr[2] "Pozostało %d tłumaczeń w kolejce. Przygotowywanie kolejnych treści do tłumaczenia."
+
+msgid "Preparing content for translation..."
+msgstr "Przygotowywanie treści do tłumaczenia..."
+
+msgid "%d translation left in the queue..."
+msgid_plural "%d translations left in the queue..."
+msgstr[0] "Pozostało %d tłumaczenie w kolejce..."
+msgstr[1] "Pozostały %d tłumaczenia w kolejce..."
+msgstr[2] "Pozostało %d tłumaczeń w kolejce..."
+
+msgid "Translate Everything Automatically has finished translating your content. There are no pending translations in the queue."
+msgstr "Tłumacz wszystko automatycznie zakończyło tłumaczenie Twoich treści. W kolejce nie ma żadnych oczekujących tłumaczeń."
+
+msgid "Some items were translated using the Classic Translation Editor and cannot be sent for automatic translation. Please select these items and choose the option to translate them yourself."
+msgstr "Niektóre elementy zostały przetłumaczone za pomocą Klasycznego Edytora Tłumaczeń i nie mogą zostać wysłane do tłumaczenia automatycznego. Wybierz te elementy i wybierz opcję samodzielnego ich przetłumaczenia."
+
+msgid "Translate Everything Automatically - enabled"
+msgstr "Tłumacz wszystko automatycznie – włączone"
+
+msgid "Translate Everything Automatically is enabled"
+msgstr "Tłumacz wszystko automatycznie jest włączone"
+
+msgid "As you create new content or edit existing content, WPML will automatically translate it, but only from %s to %s."
+msgstr "Gdy będziesz tworzyć nowe treści lub edytować istniejące, WPML automatycznie je przetłumaczy, ale tylko z %s na %s."
+
+msgid "Translate Everything Automatically is paused — payment required"
+msgstr "Automatyczne tłumaczenie wszystkiego wstrzymane — wymagana płatność"
+
+msgid "Automatic translation is paused — payment required"
+msgstr "Automatyczne tłumaczenie wstrzymane — wymagana płatność"
+
+msgid "Automatic translation - payment required"
+msgstr "Automatyczne tłumaczenie — wymagana płatność"
+
+msgid "We couldn’t process payment for your completed translations. Click “Pay now” to retry and continue using automatic translation."
+msgstr "Nie udało się przetworzyć płatności za ukończone tłumaczenia. Kliknij „Zapłać teraz”, aby spróbować ponownie i kontynuować korzystanie z automatycznego tłumaczenia."
+
+msgid "Cancel translation"
+msgstr "Anuluj tłumaczenie"
+
+msgid "Translate Everything Automatically is paused — not enough credits"
+msgstr "Automatyczne tłumaczenie wszystkiego wstrzymane — niewystarczająca liczba kredytów"
+
+msgid "Automatic translation is paused — not enough credits"
+msgstr "Automatyczne tłumaczenie wstrzymane — niewystarczająca liczba kredytów"
+
+msgid "Translation will resume automatically after you assign more credits."
+msgstr "Tłumaczenie zostanie wznowione automatycznie po przypisaniu większej liczby kredytów."
+
+msgid "This item needs a translation update but can't be translated automatically because it was translated with the Classic Translation Editor."
+msgstr "Ten element wymaga aktualizacji tłumaczenia, ale nie może być przetłumaczony automatycznie, ponieważ został przetłumaczony za pomocą Klasycznego Edytora Tłumaczeń."
+
+msgid "This item needs update. Please, select the item and send for translation."
+msgstr "Ten element wymaga aktualizacji. Proszę wybrać element i wysłać do tłumaczenia."
+
+msgid "Translations completed with the Classic Translation Editor cannot be sent for automatic translation"
+msgstr "Tłumaczenia wykonane za pomocą Klasycznego Edytora Tłumaczeń nie mogą być wysyłane do tłumaczenia automatycznego."
+
+msgid "automatic translation"
+msgstr "tłumaczenie automatyczne"
+
+msgid "unassigned"
+msgstr "nieprzypisane"
+
+msgid "not translated"
+msgstr "nieprzetłumaczone"
+
+msgid "waiting for translator"
+msgstr "oczekuje na tłumacza"
+
+msgid "in progress"
+msgstr "w toku"
+
+msgid "needs update"
+msgstr "wymaga aktualizacji"
+
+msgid "duplicate"
+msgstr "duplikat"
+
+msgid "complete"
+msgstr "ukończone"
+
+msgid "needs review"
+msgstr "wymaga recenzji"
+
+msgid "preparing for translation"
+msgstr "przygotowywanie do tłumaczenia"
+
+msgid "needs attention"
+msgstr "wymaga uwagi"
+
+msgid "translation error"
+msgstr "błąd tłumaczenia"
+
+msgid "This item was translated using the WordPress Editor. Switching to the WPML's Translation Editor will overwrite the existing translation."
+msgstr "Ten element został przetłumaczony za pomocą Edytora WordPress. Przełączenie na Edytor Tłumaczeń WPML nadpisze istniejące tłumaczenie."
+
+msgid "This item needs a translation update but was previously translated using the WordPress Editor. Using the WPML's Translation Editor will overwrite the existing translation."
+msgstr "Ten element wymaga aktualizacji tłumaczenia, ale został wcześniej przetłumaczony za pomocą Edytora WordPress. Użycie Edytora Tłumaczeń WPML nadpisze istniejące tłumaczenie."
+
+msgid "This item hasn't been translated yet and is set to use the WordPress Editor."
+msgstr "Ten element nie został jeszcze przetłumaczony i jest ustawiony na użycie Edytora WordPress."
+
+msgid "%1$s: %2$s%3$s"
+msgstr "%1$s: %2$s%3$s"
+
+msgid "Could not fetch engines data"
+msgstr "Nie udało się pobrać danych silników"
+
+msgid "Error in fetching currently logged in translator"
+msgstr "Błąd podczas pobierania aktualnie zalogowanego tłumacza"
+
+msgid "Error in fetching local translators"
+msgstr "Błąd podczas pobierania lokalnych tłumaczy"
+
+msgid "Published"
+msgstr "Opublikowane"
+
+msgid "Draft"
+msgstr "Szkic"
+
+msgid "Trash"
+msgstr "Kosz"
+
+msgid "Pending"
+msgstr "Oczekujące"
+
+msgid "Private"
+msgstr "Prywatne"
+
+msgid "Future"
+msgstr "Przyszłe"
+
+msgid "Auto Draft"
+msgstr "Automatyczny szkic"
+
+msgid "External"
+msgstr "Zewnętrzne"
+
+msgid "Collapse"
+msgstr "Zwiń"
+
+msgid "Expand"
+msgstr "Rozwiń"
+
+msgid "Select an item"
+msgstr "Wybierz element"
+
+msgid "Open dropdown"
+msgstr "Otwórz rozwijane menu"
+
+msgid "Reset"
+msgstr "Resetuj"
+
+msgid "Search"
+msgstr "Szukaj"
+
+msgid "No items found"
+msgstr "Nie znaleziono elementów"
+
+msgid "OFF"
+msgstr "WYŁ."
+
+msgid "ON"
+msgstr "WŁ."
+
+msgid "%1$s Flag"
+msgstr "Flaga %1$s"
+
+msgid "- Select a review mode -"
+msgstr "- Wybierz tryb recenzji -"
+
+msgid "What would you like to do when WPML finishes translating your content automatically?"
+msgstr "Co chcesz zrobić, gdy WPML zakończy automatyczne tłumaczenie Twoich treści?"
+
+msgid "What would you like to do after WPML finishes translating your content automatically?"
+msgstr "Co chcesz zrobić po tym, jak WPML zakończy automatyczne tłumaczenie Twoich treści?"
+
+msgid "Publish without review"
+msgstr "Opublikuj bez recenzji"
+
+msgid "Recommended with PTC"
+msgstr "Zalecane z PTC"
+
+msgid "PTC provides Better Than Human Translations that rarely need improvements, so you can confidently skip the review process. For other translation engines, a human review is recommended to confirm accuracy."
+msgstr "PTC zapewnia tłumaczenia lepsze niż ludzkie, które rzadko wymagają poprawek, więc możesz śmiało pominąć proces recenzji. W przypadku innych silników tłumaczeniowych zaleca się recenzję przez człowieka w celu potwierdzenia dokładności."
+
+msgid "WPML publishes translations immediately, skipping the review process."
+msgstr "WPML publikuje tłumaczenia natychmiast, pomijając proces recenzji."
+
+msgid "Wait for review"
+msgstr "Czekaj na recenzję"
+
+msgid "Recommended with DeepL, Google and Microsoft"
+msgstr "Zalecane z DeepL, Google i Microsoft"
+
+msgid "DeepL, Google, and Microsoft deliver great translations, but we recommend a human review to confirm they are correct. PTC provides Better Than Human Translations that understand context, so you can confidently skip the review process."
+msgstr "DeepL, Google i Microsoft dostarczają świetne tłumaczenia, ale zalecamy recenzję przez człowieka, aby potwierdzić ich poprawność. PTC zapewnia tłumaczenia lepsze niż ludzkie, które rozumieją kontekst, więc możesz śmiało pominąć proces recenzji."
+
+msgid "WPML keeps translations unpublished, so you can review them first."
+msgstr "WPML utrzymuje tłumaczenia nieopublikowane, abyś mógł je najpierw przejrzeć."
+
+msgid "Your translators review and approve translations before publishing."
+msgstr "Twoi tłumacze przeglądają i zatwierdzają tłumaczenia przed publikacją."
+
+msgid "Publish and mark for review"
+msgstr "Opublikuj i oznacz do recenzji"
+
+msgid "WPML publishes translations immediately but flags them for you to check at your convenience."
+msgstr "WPML publikuje tłumaczenia natychmiast, ale oznacza je, abyś mógł je sprawdzić w dogodnym dla siebie czasie."
+
+msgid "WPML publishes translations immediately but flags them for translators to review later."
+msgstr "WPML publikuje tłumaczenia natychmiast, ale oznacza je do późniejszego przeglądu przez tłumaczy."

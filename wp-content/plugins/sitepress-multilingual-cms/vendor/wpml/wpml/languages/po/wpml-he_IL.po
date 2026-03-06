@@ -1,0 +1,235 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-18T16:02:20+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: wpml\n"
+"Language: he_IL\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/config-admin-pages.php:144
+msgid "Translation Dashboard"
+msgstr "לוח מחוונים של תרגום"
+
+#: src/config-admin-pages.php:341
+msgid "Automatic translation settings"
+msgstr "הגדרות תרגום אוטומטי"
+
+#: src/config-admin-pages.php:383
+msgid "WPML Setup"
+msgstr "הגדרת WPML"
+
+#: src/config-admin-pages.php:412
+msgid "WPML Support"
+msgstr "תמיכת WPML"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/DatabaseVersionRequirement.php:27
+msgid "Database Version"
+msgstr "גרסת מסד נתונים"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/DatabaseVersionRequirement.php:36
+msgid "Your %sMySQL%s version must be at least %s. Alternatively, you can use %sMariaDb%s version %s or higher."
+msgstr "גרסת ה-%sMySQL%s שלך חייבת להיות לפחות %s. לחלופין, באפשרותך להשתמש בגרסת %sMariaDb%s %s או גבוהה יותר."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/DatabaseVersionRequirement.php:53
+msgid "Contact your hosting provider to upgrade MySQL %s or higher."
+msgstr "צור קשר עם ספק האירוח שלך כדי לשדרג את MySQL לגרסה %s או גבוהה יותר."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/EvalFunctionRequirement.php:31
+msgid "PHP eval() Function"
+msgstr "פונקציית PHP eval()"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/EvalFunctionRequirement.php:39
+msgid "The PHP eval() function is disabled by the Suhosin extension. WPML requires this function when Suhosin is enabled."
+msgstr "פונקציית PHP eval() מושבתת על ידי הרחבת Suhosin. WPML דורש פונקציה זו כאשר Suhosin מופעל."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/EvalFunctionRequirement.php:47
+msgid "Contact your hosting provider to enable the eval() function in the Suhosin configuration or disable the Suhosin extension."
+msgstr "צור קשר עם ספק האירוח שלך כדי להפעיל את פונקציית eval() בתצורת Suhosin או להשבית את הרחבת Suhosin."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/LibXmlVersionRequirement.php:31
+msgid "libxml PHP Module"
+msgstr "מודול PHP libxml"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/LibXmlVersionRequirement.php:40
+msgid "WPML requires libxml PHP Module version %s or higher to process XML correctly using SimpleXML."
+msgstr "WPML דורש מודול PHP libxml בגרסה %s או גבוהה יותר כדי לעבד XML כהלכה באמצעות SimpleXML."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/LibXmlVersionRequirement.php:49
+msgid "Contact your hosting provider to upgrade the libxml PHP Module."
+msgstr "צור קשר עם ספק האירוח שלך כדי לשדרג את מודול PHP libxml."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/MbstringExtensionRequirement.php:30
+msgid "Multibyte String Extension"
+msgstr "הרחבת מחרוזת מרובת בתים"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/MbstringExtensionRequirement.php:39
+msgid "The %sMultibyte String extension%s is required to handle non-Latin character sets in WPML."
+msgstr "הרחבת ה-%sMultibyte String%s נדרשת לטיפול בערכות תווים שאינן לטיניות ב-WPML."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/MbstringExtensionRequirement.php:49
+msgid "Contact your hosting provider to install the Multibyte String (mbstring) PHP extension."
+msgstr "צור קשר עם ספק האירוח שלך כדי להתקין את הרחבת PHP Multibyte String (mbstring)."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/MemoryLimitRequirement.php:55
+msgid "Memory limit"
+msgstr "מגבלת זיכרון"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/MemoryLimitRequirement.php:65
+msgid "Your PHP memory limit is currently %s.  WPML requires at least %s to function properly."
+msgstr "מגבלת זיכרון ה-PHP שלך היא כרגע %s. WPML דורש לפחות %s כדי לתפקד כהלכה."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/MemoryLimitRequirement.php:80
+msgid "To increase the memory limit, add this to the top of your %swp-config.php%s file:"
+msgstr "כדי להגדיל את מגבלת הזיכרון, הוסף זאת לחלק העליון של קובץ ה-%swp-config.php%s שלך:"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/PHPVersionRequirement.php:25
+msgid "PHP Version"
+msgstr "גרסת PHP"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/PHPVersionRequirement.php:34
+msgid "Your PHP version is outdated. WPML requires at least %s."
+msgstr "גרסת ה-PHP שלך מיושנת. WPML דורש לפחות %s."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/PHPVersionRequirement.php:44
+msgid "Contact your hosting provider to upgrade PHP to version %s or higher."
+msgstr "צור קשר עם ספק האירוח שלך כדי לשדרג את PHP לגרסה %s או גבוהה יותר."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/RestEnabledRequirement.php:31
+msgid "WordPress REST API"
+msgstr "WordPress REST API"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/RestEnabledRequirement.php:41
+msgid "The WordPress REST API must be enabled for WPML to work correctly."
+msgstr "יש להפעיל את ה-WordPress REST API כדי ש-WPML יעבוד כהלכה."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/RestEnabledRequirement.php:49
+msgid "The REST API test endpoint %s is not responding correctly."
+msgstr "נקודת הקצה של בדיקת ה-REST API %s אינה מגיבה כהלכה."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/RestEnabledRequirement.php:58
+msgid "<strong>Common causes:</strong>"
+msgstr "<strong>סיבות נפוצות:</strong>"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/RestEnabledRequirement.php:65
+msgid "• A security or firewall plugin is blocking REST API requests<br>• The REST API has been disabled via the <code>rest_enabled</code> filter<br>• Server configuration (Apache/Nginx) is interfering with query parameters<br>• Custom rewrite rules are conflicting with WordPress routing"
+msgstr "• תוסף אבטחה או חומת אש חוסם בקשות REST API<br>• ה-REST API הושבת באמצעות המסנן <code>rest_enabled</code><br>• תצורת שרת (Apache/Nginx) מפריעה לפרמטרי שאילתה<br>• כללי שכתוב מותאמים אישית מתנגשים עם ניתוב וורדפרס"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/RestEnabledRequirement.php:79
+msgid "<strong>Troubleshooting:</strong> Try accessing %s directly in your browser. It should return a JSON response with <code>\"status\":\"valid\"</code> and <code>\"get_parameters\":\"valid\"</code>."
+msgstr "<strong>פתרון בעיות:</strong> נסה לגשת ל-%s ישירות בדפדפן שלך. הוא אמור להחזיר תגובת JSON עם <code>\"status\":\"valid\"</code> ו-<code>\"get_parameters\":\"valid\"</code>."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/RestEnabledRequirement.php:87
+msgid "the test endpoint"
+msgstr "נקודת הקצה של הבדיקה"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/SimpleXMLExtensionRequirement.php:31
+msgid "SimpleXML Extension"
+msgstr "הרחבת SimpleXML"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/SimpleXMLExtensionRequirement.php:40
+msgid "The %sSimpleXML extension%s is required to use %sXLIFF files%s in WPML. The libxml PHP Module must also be version 2.7.8 or higher."
+msgstr "הרחבת ה-%sSimpleXML%s נדרשת כדי להשתמש ב-%sקבצי XLIFF%s ב-WPML. מודול PHP libxml חייב להיות גם בגרסה 2.7.8 או גבוהה יותר."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/SimpleXMLExtensionRequirement.php:55
+msgid "Contact your hosting provider to install the SimpleXML PHP extension."
+msgstr "צור קשר עם ספק האירוח שלך כדי להתקין את הרחבת PHP SimpleXML."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/StackSizeRequirement.php:39
+msgid "PHP Stack Size"
+msgstr "גודל מחסנית PHP"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/StackSizeRequirement.php:48
+msgid "WPML requires at least %s KB of PHP stack size on PHP 8.3 or higher."
+msgstr "WPML דורש לפחות %s KB של גודל מחסנית PHP ב-PHP 8.3 או גבוהה יותר."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/StackSizeRequirement.php:58
+msgid "Add this to your %sphp.ini%s and restart your web server to set the required stack size:"
+msgstr "הוסף זאת לקובץ ה-%sphp.ini%s שלך והפעל מחדש את שרת האינטרנט שלך כדי להגדיר את גודל המחסנית הנדרש:"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/WordPressVersionRequirement.php:30
+msgid "WordPress Version"
+msgstr "גרסת וורדפרס"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/WordPressVersionRequirement.php:39
+msgid "Your WordPress version is outdated. WPML requires at least %s. "
+msgstr "גרסת הוורדפרס שלך מיושנת. WPML דורש לפחות %s. "
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/WordPressVersionRequirement.php:50
+msgid "Please update your WordPress installation to version %s or higher."
+msgstr "אנא עדכן את התקנת הוורדפרס שלך לגרסה %s או גבוהה יותר."
+
+#: src/Core/Component/Translation/Application/Service/Dto/SendToTranslationDto.php:147
+msgid "Language pairs cannot be empty"
+msgstr "זוגות שפות אינם יכולים להיות ריקים"
+
+#: src/Core/Component/Translation/Application/Service/Dto/SendToTranslationDto.php:156
+msgid "Batch name cannot be empty"
+msgstr "שם אצווה אינו יכול להיות ריק"
+
+#: src/Core/Component/Translation/Application/Service/Dto/SendToTranslationDto.php:160
+msgid "Source language code cannot be empty"
+msgstr "קוד שפת מקור אינו יכול להיות ריק"
+
+#: src/Core/Component/Translation/Application/Service/Dto/SendToTranslationDto.php:167
+msgid ""
+"Posts, packages and strings cannot be empty.\n"
+"          At least one of those elements must be specified."
+msgstr "פוסטים, חבילות ומחרוזות אינם יכולים להיות ריקים.\n          יש לציין לפחות אחד מהאלמנטים הללו."
+
+#: src/Legacy/Component/ATE/Application/Query/Account.php:23
+msgid "Error getting credits"
+msgstr "שגיאה בקבלת קרדיטים"
+
+#: src/Legacy/Component/ATE/Application/Query/Account.php:46
+msgid "Error getting account balances"
+msgstr "שגיאה בקבלת יתרות חשבון"
+
+#: src/Legacy/Component/ATE/Application/Query/Glossary.php:26
+msgid "Error getting glossary data"
+msgstr "שגיאה בקבלת נתוני מילון מונחים"
+
+#: src/Legacy/Component/ATE/Application/Service/EnginesService.php:148
+msgid "Error fetching translation engines"
+msgstr "שגיאה באחזור מנועי תרגום"
+
+#: src/Legacy/Component/ATE/Application/Service/EnginesService.php:171
+msgid "Error fetching available formalities"
+msgstr "שגיאה באחזור רמות פורמליות זמינות"
+
+#: src/Legacy/Component/Translation/Sender/ErrorMapper/ErrorMapper.php:36
+msgid "The jobs could not be created."
+msgstr "לא ניתן היה ליצור את המשימות."
+
+#: src/Legacy/Component/Translation/Sender/ErrorMapper/TranslationServiceUnavailable.php:34
+msgid "The translation service \"%s\" is not accepting new translation jobs at this moment. Please contact the service support for more information and assistance."
+msgstr "שירות התרגום \"%s\" אינו מקבל משימות תרגום חדשות כרגע. אנא צור קשר עם תמיכת השירות לקבלת מידע וסיוע נוספים."
+
+#: src/Legacy/Component/Translation/Sender/ErrorMapper/TranslationServiceUnavailable.php:45
+msgid "The translation service is not accepting new translation jobs at this moment. Please contact the service support for more information and assistance."
+msgstr "שירות התרגום אינו מקבל משימות תרגום חדשות כרגע. אנא צור קשר עם תמיכת השירות לקבלת מידע וסיוע נוספים."
+
+#: src/Legacy/Component/Translation/Sender/ErrorMapper/UnsupportedLanguagesInTranslationService.php:43
+msgid "The selected translation service doesn't support the following languages: %s"
+msgstr "שירות התרגום שנבחר אינו תומך בשפות הבאות: %s"
+
+#: src/UserInterface/Web/Core/Component/Dashboard/Application/DashboardController.php:318
+#: src/UserInterface/Web/Core/Component/Dashboard/Application/DashboardController.php:319
+#: src/UserInterface/Web/Core/Component/Dashboard/Application/DashboardController.php:320
+msgid "Other texts (Strings)"
+msgstr "טקסטים אחרים (מחרוזות)"
+
+#: src/UserInterface/Web/Core/Component/Dashboard/Application/Endpoint/SendToTranslation/SendToTranslationController.php:49
+msgid "The request data for SendToTranslation is not valid: %s"
+msgstr "נתוני הבקשה עבור SendToTranslation אינם חוקיים: %s"
+
+#: src/UserInterface/Web/Core/Component/Dashboard/Application/Endpoint/TranslateEverything/EnableController.php:45
+msgid "In order to translate automatically, you first need to enable WPML's Advanced Translation Editor"
+msgstr "כדי לתרגם באופן אוטומטי, עליך להפעיל תחילה את עורך התרגום המתקדם של WPML"

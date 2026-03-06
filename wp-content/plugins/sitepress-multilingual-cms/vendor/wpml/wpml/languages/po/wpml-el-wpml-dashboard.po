@@ -1,0 +1,1530 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-18T16:02:11+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: wpml\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Untranslated strings that I encounter on front-end while logged in"
+msgstr "Μη μεταφρασμένες συμβολοσειρές που συναντώ στο frontend ενώ είμαι συνδεδεμένος"
+
+msgid "Untranslated strings that all front-end users encounter"
+msgstr "Μη μεταφρασμένες συμβολοσειρές που συναντούν όλοι οι χρήστες του frontend"
+
+msgid "Disable auto-registration of strings"
+msgstr "Απενεργοποίηση αυτόματης καταχώρισης συμβολοσειρών"
+
+msgid "Plugins"
+msgstr "Πρόσθετα"
+
+msgid "Themes"
+msgstr "Θέματα"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "Other"
+msgstr "Άλλο"
+
+msgid "We cancelled %1$d of %2$d items, but %3$d failed. Please reload the page and try again."
+msgstr "Ακυρώσαμε %1$d από %2$d στοιχεία, αλλά %3$d απέτυχαν. Παρακαλούμε ανανεώστε τη σελίδα και δοκιμάστε ξανά."
+
+msgid "We resent %1$d of %2$d items, but %3$d failed. Please reload the page and try again."
+msgstr "Στείλαμε ξανά %1$d από %2$d στοιχεία, αλλά %3$d απέτυχαν. Παρακαλούμε ανανεώστε τη σελίδα και δοκιμάστε ξανά."
+
+msgid "Error in fetching default translation batch name"
+msgstr "Σφάλμα κατά την ανάκτηση του προεπιλεγμένου ονόματος παρτίδας μετάφρασης"
+
+msgid "Error in fetching translation editor type."
+msgstr "Σφάλμα κατά την ανάκτηση του τύπου επεξεργαστή μετάφρασης."
+
+msgid "Error in fetching untranslated types count"
+msgstr "Σφάλμα κατά την ανάκτηση του αριθμού μη μεταφρασμένων τύπων"
+
+msgid "Error in fetching remote translation service data."
+msgstr "Σφάλμα κατά την ανάκτηση δεδομένων απομακρυσμένης υπηρεσίας μετάφρασης."
+
+msgid "Validation failed"
+msgstr "Η επικύρωση απέτυχε"
+
+msgid "Translation jobs couldn’t be canceled"
+msgstr "Οι εργασίες μετάφρασης δεν μπόρεσαν να ακυρωθούν"
+
+msgid "Reload the page and try again."
+msgstr "Ανανεώστε τη σελίδα και δοκιμάστε ξανά."
+
+msgid "All unfinished translation jobs were canceled"
+msgstr "Όλες οι ημιτελείς εργασίες μετάφρασης ακυρώθηκαν"
+
+msgid "Please wait until download finishes"
+msgstr "Παρακαλώ περιμένετε μέχρι να ολοκληρωθεί η λήψη"
+
+msgid "You need to wait 5 minutes after the last check"
+msgstr "Πρέπει να περιμένετε 5 λεπτά μετά τον τελευταίο έλεγχο"
+
+msgid "Check status and get translations"
+msgstr "Έλεγχος κατάστασης και λήψη μεταφράσεων"
+
+msgid "Status: "
+msgstr "Κατάσταση: "
+
+msgid "Downloaded jobs: "
+msgstr "Ληφθείσες εργασίες: "
+
+msgid "Cancelled jobs: "
+msgstr "Ακυρωμένες εργασίες: "
+
+msgid "none of your translation jobs have been completed"
+msgstr "καμία από τις εργασίες μετάφρασής σας δεν έχει ολοκληρωθεί"
+
+msgid "Checking translation jobs status. Please don't close this page!"
+msgstr "Έλεγχος κατάστασης εργασιών μετάφρασης. Παρακαλώ μην κλείσετε αυτή τη σελίδα!"
+
+msgid " have been sent to remote translators"
+msgstr " έχουν σταλεί σε απομακρυσμένους μεταφραστές"
+
+msgid " has been sent to remote translators"
+msgstr " έχει σταλεί σε απομακρυσμένους μεταφραστές"
+
+msgid "Last check: Never"
+msgstr "Τελευταίος έλεγχος: Ποτέ"
+
+msgid "Filtering is disabled to show all selected items. "
+msgstr "Το φιλτράρισμα είναι απενεργοποιημένο για να εμφανίζονται όλα τα επιλεγμένα στοιχεία. "
+
+msgid "Apply filters"
+msgstr "Εφαρμογή φίλτρων"
+
+msgid "%d item selected"
+msgid_plural "%d items selected"
+msgstr[0] "%d επιλεγμένο στοιχείο"
+msgstr[1] "%d επιλεγμένα στοιχεία"
+
+msgid "(%d words to translate)"
+msgstr "(%d λέξεις προς μετάφραση)"
+
+msgid "%s item not showing."
+msgid_plural "%s items not showing."
+msgstr[0] "%s στοιχείο δεν εμφανίζεται."
+msgstr[1] "%s στοιχεία δεν εμφανίζονται."
+
+msgid "Show all selected items"
+msgstr "Εμφάνιση όλων των επιλεγμένων στοιχείων"
+
+msgid "Translate your content"
+msgstr "Μεταφράστε το περιεχόμενό σας"
+
+msgid "Unselect all"
+msgstr "Αποεπιλογή όλων"
+
+msgid "Source Language:"
+msgstr "Γλώσσα πηγής:"
+
+msgid "translated to:"
+msgstr "μεταφράστηκε σε:"
+
+msgid "Filter"
+msgstr "Φίλτρο"
+
+msgid "You are about to change the source language filter from %s to %s"
+msgstr "Πρόκειται να αλλάξετε το φίλτρο γλώσσας πηγής από %s σε %s"
+
+msgid "Updating the source language filter will clear the items you've selected for translation. Are you sure you want to continue?"
+msgstr "Η ενημέρωση του φίλτρου γλώσσας πηγής θα διαγράψει τα στοιχεία που έχετε επιλέξει για μετάφραση. Είστε σίγουροι ότι θέλετε να συνεχίσετε;"
+
+msgid "Change source language"
+msgstr "Αλλαγή γλώσσας πηγής"
+
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+msgid "Filter by publication status"
+msgstr "Φιλτράρισμα κατά κατάσταση δημοσίευσης"
+
+msgid "All Statuses"
+msgstr "Όλες οι καταστάσεις"
+
+msgid "All languages"
+msgstr "Όλες οι γλώσσες"
+
+msgid "All translation statuses"
+msgstr "Όλες οι καταστάσεις μετάφρασης"
+
+msgid "Not completed"
+msgstr "Μη ολοκληρωμένο"
+
+msgid "Needs updating"
+msgstr "Χρειάζεται ενημέρωση"
+
+msgid "Translation in progress"
+msgstr "Μετάφραση σε εξέλιξη"
+
+msgid "Translation complete"
+msgstr "Μετάφραση ολοκληρώθηκε"
+
+msgid "Filter by translation status"
+msgstr "Φιλτράρισμα κατά κατάσταση μετάφρασης"
+
+msgid "Global Filter"
+msgstr "Καθολικό φίλτρο"
+
+msgid "Parent:"
+msgstr "Γονέας:"
+
+msgid "Search parent by title"
+msgstr "Αναζήτηση γονέα κατά τίτλο"
+
+msgid "Search by term title in %s"
+msgstr "Αναζήτηση κατά τίτλο όρου σε %s"
+
+msgid "All taxonomies"
+msgstr "Όλες οι ταξινομίες"
+
+msgid "Loading"
+msgstr "Φόρτωση"
+
+msgid "Taxonomy Term:"
+msgstr "Όρος ταξινομίας:"
+
+msgid "Loading terms"
+msgstr "Φόρτωση όρων"
+
+msgid "No terms found"
+msgstr "Δεν βρέθηκαν όροι"
+
+msgid "Filter by:"
+msgstr "Φιλτράρισμα κατά:"
+
+msgid "Title"
+msgstr "Τίτλος"
+
+msgid "Automatic translation paused — payment required to continue."
+msgstr "Η αυτόματη μετάφραση τέθηκε σε παύση — απαιτείται πληρωμή για να συνεχιστεί."
+
+msgid "You have %1s%2s prepaid translation credit in your WPML account%3s. Assign these credits to this site to resume automatic translation"
+msgid_plural "You have %1s%2s prepaid translation credits in your WPML account%3s. Assign these credits to this site to resume automatic translation"
+msgstr[0] "Έχετε %1s%2s προπληρωμένη πίστωση μετάφρασης στον λογαριασμό σας στο WPML%3s. Αναθέστε αυτές τις πιστώσεις σε αυτόν τον ιστότοπο για να συνεχίσετε την αυτόματη μετάφραση"
+msgstr[1] "Έχετε %1s%2s προπληρωμένες πιστώσεις μετάφρασης στον λογαριασμό σας στο WPML%3s. Αναθέστε αυτές τις πιστώσεις σε αυτόν τον ιστότοπο για να συνεχίσετε την αυτόματη μετάφραση"
+
+msgid "Not enough credits to continue automatic translation. Add more credits to resume."
+msgstr "Δεν υπάρχουν αρκετές πιστώσεις για να συνεχιστεί η αυτόματη μετάφραση. Προσθέστε περισσότερες πιστώσεις για να συνεχίσετε."
+
+msgid "Pay now"
+msgstr "Πληρώστε τώρα"
+
+msgid "Get more credits"
+msgstr "Αποκτήστε περισσότερες πιστώσεις"
+
+msgid "Assign credits"
+msgstr "Ανάθεση πιστώσεων"
+
+msgid "View"
+msgstr "Προβολή"
+
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+msgid "Edit note for the translators"
+msgstr "Επεξεργασία σημείωσης για τους μεταφραστές"
+
+msgid "Add note for the translators"
+msgstr "Προσθήκη σημείωσης για τους μεταφραστές"
+
+msgid "This page is set to be %1$stranslated manually%2$s using the WordPress Editor"
+msgstr "Αυτή η σελίδα έχει οριστεί να μεταφράζεται %1$sχειροκίνητα%2$s χρησιμοποιώντας τον επεξεργαστή του WordPress"
+
+msgid "Select %s"
+msgstr "Επιλέξτε %s"
+
+msgid "(no title)"
+msgstr "(χωρίς τίτλο)"
+
+msgid "Image"
+msgstr "Εικόνα"
+
+msgid "Date / Status"
+msgstr "Ημερομηνία / κατάσταση"
+
+msgid "Loading items..."
+msgstr "Φόρτωση στοιχείων..."
+
+msgid "%1$d %2$s selected"
+msgstr "%1$d %2$s επιλεγμένα"
+
+msgid "items"
+msgstr "στοιχεία"
+
+msgid "Filtering is disabled to show all selected items"
+msgstr "Το φιλτράρισμα είναι απενεργοποιημένο για να εμφανίζονται όλα τα επιλεγμένα στοιχεία"
+
+msgid "Apply filter"
+msgstr "Εφαρμογή φίλτρου"
+
+msgid "%1$d %2$s not showing"
+msgstr "%1$d %2$s δεν εμφανίζονται"
+
+msgid "Show selected items"
+msgstr "Εμφάνιση επιλεγμένων στοιχείων"
+
+msgid " / page"
+msgstr " / σελίδα"
+
+msgid "Previous"
+msgstr "Προηγούμενο"
+
+msgid "Next"
+msgstr "Επόμενο"
+
+msgid "Your site's content is too vast for a single translation batch. Use filters to reduce the selection, then \"select all\"."
+msgstr "Το περιεχόμενο του ιστότοπού σας είναι πολύ μεγάλο για μία μόνο παρτίδα μετάφρασης. Χρησιμοποιήστε φίλτρα για να μειώσετε την επιλογή και, στη συνέχεια, “επιλέξτε όλα”."
+
+msgid "The current filter captures too much content. Narrow it down to enable \"select all\" for translation."
+msgstr "Το τρέχον φίλτρο καταγράφει υπερβολικά πολύ περιεχόμενο. Περιορίστε το για να ενεργοποιήσετε την επιλογή “επιλογή όλων” για μετάφραση."
+
+msgid "Select All"
+msgstr "Επιλογή όλων"
+
+msgid "All %d items matching criteria are selected"
+msgstr "Έχουν επιλεγεί όλα τα %d στοιχεία που ταιριάζουν με τα κριτήρια"
+
+msgid "All %d items in this section are selected"
+msgstr "Έχουν επιλεγεί όλα τα %d στοιχεία σε αυτήν την ενότητα"
+
+msgid "You have too many items to send for translation at once. Apply a filter to narrow down the items to enable this option."
+msgstr "Έχετε επιλέξει πάρα πολλά στοιχεία για αποστολή προς μετάφραση ταυτόχρονα. Εφαρμόστε ένα φίλτρο για να περιορίσετε τα στοιχεία ώστε να ενεργοποιηθεί αυτή η επιλογή."
+
+msgid "Clear selection"
+msgstr "Εκκαθάριση επιλογής"
+
+msgid "Select all items that match this search"
+msgstr "Επιλέξτε όλα τα στοιχεία που ταιριάζουν με αυτήν την αναζήτηση"
+
+msgid "Loading..."
+msgstr "Φόρτωση..."
+
+msgid "Select all %ss"
+msgstr "Επιλέξτε όλα τα %s"
+
+msgid "Save note"
+msgstr "Αποθήκευση σημείωσης"
+
+msgid "The following target languages do not support automatic translation: %s. <a>Map to known languages</a> to enable automatic translation."
+msgstr "Οι ακόλουθες γλώσσες-στόχοι δεν υποστηρίζουν αυτόματη μετάφραση: %s. <a>Αντιστοίχιση σε γνωστές γλώσσες</a> για να ενεργοποιηθεί η αυτόματη μετάφραση."
+
+msgid "The site's default language %s doesn't support automatic translation."
+msgstr "Η προεπιλεγμένη γλώσσα του ιστότοπου %s δεν υποστηρίζει αυτόματη μετάφραση."
+
+msgid "Some sections are hidden due to current filter settings or because they have no items. <show_all>Show all translation statuses</show_all>"
+msgstr "Ορισμένες ενότητες είναι κρυφές λόγω των τρεχουσών ρυθμίσεων φίλτρου ή επειδή δεν έχουν στοιχεία. <show_all>Εμφάνιση όλων των καταστάσεων μετάφρασης</show_all>"
+
+msgid "Step 1"
+msgstr "Βήμα 1"
+
+msgid "Select items for translation"
+msgstr "Επιλέξτε στοιχεία για μετάφραση"
+
+msgid "Clear filters"
+msgstr "Εκκαθάριση φίλτρων"
+
+msgid "strings"
+msgstr "συμβολοσειρές"
+
+msgid "WPML didn't find any %s matching your criteria."
+msgstr "Το WPML δεν βρήκε κανένα %s που να ταιριάζει με τα κριτήριά σας."
+
+msgid "You have too many items selected to use this feature. Deselect some of the items to enable it."
+msgstr "Έχετε επιλέξει πάρα πολλά στοιχεία για να χρησιμοποιήσετε αυτή τη λειτουργία. Αποεπιλέξτε ορισμένα από τα στοιχεία για να την ενεργοποιήσετε."
+
+msgid "Show strings in:"
+msgstr "Εμφάνιση συμβολοσειρών σε:"
+
+msgid "Display Columns"
+msgstr "Εμφάνιση στηλών"
+
+msgid "Close modal"
+msgstr "Κλείσιμο παραθύρου"
+
+msgid "Select visible columns"
+msgstr "Επιλέξτε ορατές στήλες"
+
+msgid "String"
+msgstr "Συμβολοσειρά"
+
+msgid "Name"
+msgstr "Όνομα"
+
+msgid "Domain"
+msgstr "Τομέας"
+
+msgid "Source"
+msgstr "Πηγή"
+
+msgid "Type"
+msgstr "Τύπος"
+
+msgid "Apply"
+msgstr "Εφαρμογή"
+
+msgid "All domains"
+msgstr "Όλοι οι τομείς"
+
+msgid "All sources"
+msgstr "Όλες οι πηγές"
+
+msgid "Frontend (viewed)"
+msgstr "Frontend (προβλήθηκε)"
+
+msgid "Backend (viewed)"
+msgstr "Backend (προβλήθηκε)"
+
+msgid "Unknown"
+msgstr "Άγνωστο"
+
+msgid "Search string or a name"
+msgstr "Αναζήτηση συμβολοσειράς ή ονόματος"
+
+msgid "All Translation Priorities"
+msgstr "Όλες οι προτεραιότητες μετάφρασης"
+
+msgid "This filter is available only if source is set to \"Frontend\" or \"Backend\"."
+msgstr "Αυτό το φίλτρο είναι διαθέσιμο μόνο εάν η πηγή έχει οριστεί σε “Frontend” ή “Backend”."
+
+msgid "front-end"
+msgstr "frontend"
+
+msgid "back-end"
+msgstr "backend"
+
+msgid "viewed"
+msgstr "προβλήθηκε"
+
+msgid "Strings in the theme and plugins"
+msgstr "Συμβολοσειρές στο θέμα και στα πρόσθετα"
+
+msgid "Translate front-end texts you can customize from the WordPress admin like footer text, copyright notices, plugin options and settings, time format, widget texts, and more."
+msgstr "Μεταφράστε κείμενα frontend που μπορείτε να προσαρμόσετε από το διαχειριστικό του WordPress, όπως κείμενο υποσέλιδου, ειδοποιήσεις πνευματικών δικαιωμάτων, επιλογές και ρυθμίσεις πρόσθετων, μορφή ώρας, κείμενα widget και άλλα."
+
+msgid "Translating Strings From Admin and Settings"
+msgstr "Μετάφραση συμβολοσειρών από το διαχειριστικό και τις ρυθμίσεις"
+
+msgid "Translate texts in admin screens"
+msgstr "Μεταφράστε κείμενα στις οθόνες διαχείρισης"
+
+msgid "Translate User Meta Information"
+msgstr "Μεταφράστε πληροφορίες μεταδεδομένων χρήστη"
+
+msgid "Making User Meta Information Translatable"
+msgstr "Κάνοντας τις πληροφορίες μεταδεδομένων χρήστη μεταφράσιμες"
+
+msgid "Translate user profile strings"
+msgstr "Μεταφράστε συμβολοσειρές προφίλ χρήστη"
+
+msgid "You need to visit translations on your site's front-end (<a/>) and WPML will identify all untranslated strings and list them here. "
+msgstr "Πρέπει να επισκεφθείτε τις μεταφράσεις στο frontend του ιστότοπού σας (<a/>) και το WPML θα εντοπίσει όλες τις μη μεταφρασμένες συμβολοσειρές και θα τις παραθέσει εδώ. "
+
+msgid "hide details"
+msgstr "απόκρυψη λεπτομερειών"
+
+msgid "more details"
+msgstr "περισσότερες λεπτομέρειες"
+
+msgid "Still can't find the strings you're looking to translate? Add more strings for translation."
+msgstr "Ακόμα δεν μπορείτε να βρείτε τις συμβολοσειρές που θέλετε να μεταφράσετε; Προσθέστε περισσότερες συμβολοσειρές για μετάφραση."
+
+msgid "Not seeing strings that you are looking for?"
+msgstr "Δεν βλέπετε τις συμβολοσειρές που ψάχνετε;"
+
+msgid "Enable the autoregistration setting."
+msgstr "Ενεργοποιήστε τη ρύθμιση αυτόματης καταχώρισης."
+
+msgid "Visit translations on the site's frontend for WPML to see which strings are missing translations. Visiting one language is enough: %s."
+msgstr "Επισκεφθείτε τις μεταφράσεις στο frontend του ιστότοπου για το WPML για να δείτε ποιες συμβολοσειρές λείπουν μεταφράσεις. Η επίσκεψη σε μία γλώσσα είναι αρκετή: %s."
+
+msgid "Alternatively, you can register strings manually."
+msgstr "Εναλλακτικά, μπορείτε να καταχωρίσετε συμβολοσειρές χειροκίνητα."
+
+msgid "Translate Everything translates only those strings which are registered in English language"
+msgstr "Το Translate Everything μεταφράζει μόνο τις συμβολοσειρές που είναι καταχωρισμένες στην αγγλική γλώσσα"
+
+msgid "Most strings from your plugins and theme are in English, so we’re showing them alongside your default language. Use the <b>Source Language</b> filter to view strings in a specific language."
+msgstr "Οι περισσότερες συμβολοσειρές από τα πρόσθετα και το θέμα σας είναι στα Αγγλικά, οπότε τις εμφανίζουμε μαζί με την προεπιλεγμένη γλώσσα σας. Χρησιμοποιήστε το φίλτρο <b>Γλώσσα Πηγής</b> για να δείτε συμβολοσειρές σε μια συγκεκριμένη γλώσσα."
+
+msgid "You’re using <b>%s</b> to cache your site, which may prevent WPML from automatically registering new strings. To fix this, clear your page cache, then visit your translated pages again on the frontend to detect new strings."
+msgstr "Χρησιμοποιείτε το <b>%s</b> για την προσωρινή αποθήκευση του ιστότοπού σας, κάτι που μπορεί να εμποδίσει το WPML να καταχωρίσει αυτόματα νέες συμβολοσειρές. Για να το διορθώσετε, εκκαθαρίστε την προσωρινή μνήμη της σελίδας σας και, στη συνέχεια, επισκεφθείτε ξανά τις μεταφρασμένες σελίδες σας στο frontend για να εντοπίσετε νέες συμβολοσειρές."
+
+msgid "WPML can detect strings that appear on the site and list them here. This feature helps you identify the strings that actually appear on the site and translate them. To see here only the strings that actually appear on the site, you need to enable this feature."
+msgstr "Το WPML μπορεί να εντοπίσει συμβολοσειρές που εμφανίζονται στον ιστότοπο και να τις παραθέσει εδώ. Αυτή η λειτουργία σας βοηθά να αναγνωρίσετε τις συμβολοσειρές που εμφανίζονται πραγματικά στον ιστότοπο και να τις μεταφράσετε. Για να δείτε εδώ μόνο τις συμβολοσειρές που εμφανίζονται πραγματικά στον ιστότοπο, πρέπει να ενεργοποιήσετε αυτή τη λειτουργία."
+
+msgid "WPML detects strings that appear on the site and lists them here. This feature helps you identify the strings that actually appear on the site and translate them. To see here all the strings in the site, you need to disable this feature."
+msgstr "Το WPML εντοπίζει συμβολοσειρές που εμφανίζονται στον ιστότοπο και τις παραθέτει εδώ. Αυτή η λειτουργία σας βοηθά να αναγνωρίσετε τις συμβολοσειρές που εμφανίζονται πραγματικά στον ιστότοπο και να τις μεταφράσετε. Για να δείτε εδώ όλες τις συμβολοσειρές στον ιστότοπο, πρέπει να απενεργοποιήσετε αυτή τη λειτουργία."
+
+msgid "Detect untranslated strings"
+msgstr "Εντοπισμός μη μεταφρασμένων συμβολοσειρών"
+
+msgid "WPML can detect untranslated strings and automatically register them for translation. This happens in real time as you or your visitors browse your website."
+msgstr "Το WPML μπορεί να εντοπίσει μη μεταφρασμένες συμβολοσειρές και να τις καταχωρίσει αυτόματα για μετάφραση. Αυτό συμβαίνει σε πραγματικό χρόνο καθώς εσείς ή οι επισκέπτες σας περιηγείστε στον ιστότοπό σας."
+
+msgid "Automatically register untranslated strings"
+msgstr "Αυτόματη καταχώριση μη μεταφρασμένων συμβολοσειρών"
+
+msgid "Learn how to use auto-registration"
+msgstr "Μάθετε πώς να χρησιμοποιείτε την αυτόματη καταχώριση"
+
+msgid "recommended"
+msgstr "συνιστάται"
+
+msgid "Also register strings from the website's back-end"
+msgstr "Καταχωρίστε επίσης συμβολοσειρές από το backend του ιστότοπου"
+
+msgid "Save settings"
+msgstr "Αποθήκευση ρυθμίσεων"
+
+msgid "Request failed because of the network error"
+msgstr "Η αίτηση απέτυχε λόγω σφάλματος δικτύου"
+
+msgid "Try again"
+msgstr "Προσπαθήστε ξανά"
+
+msgid "Enabled"
+msgstr "Ενεργοποιημένο"
+
+msgid "Disabled"
+msgstr "Απενεργοποιημένο"
+
+msgid "Modify"
+msgstr "Τροποποίηση"
+
+msgid "You can only translate %1$s from the site's default language (%2$s)."
+msgstr "Μπορείτε να μεταφράσετε μόνο %1$s από την προεπιλεγμένη γλώσσα του ιστότοπου (%2$s)."
+
+msgid "%1sCheck pricing%2s."
+msgstr "%1sΕλέγξτε την τιμολόγηση%2s."
+
+msgid "The current site content costs %1$sapproximately €%2$s%3$s to translate."
+msgstr "Το τρέχον περιεχόμενο του ιστότοπου κοστίζει %1$sπερίπου %2$s€%3$s για μετάφραση."
+
+msgid "The selected content costs %1$sapproximately €%2$s%3$s to translate."
+msgstr "Το επιλεγμένο περιεχόμενο κοστίζει %1$sπερίπου %2$s€%3$s για μετάφραση."
+
+msgid "Pay-As-You-Go"
+msgstr "Pay-As-You-Go"
+
+msgid "Activate Pay-As-You-Go to translate automatically with monthly billing."
+msgstr "Ενεργοποιήστε το Pay-As-You-Go για αυτόματη μετάφραση με μηνιαία χρέωση."
+
+msgid "Activate Pay-As-You-Go"
+msgstr "Ενεργοποίηση Pay-As-You-Go"
+
+msgid "Already using Pay-As-You-Go on another site?"
+msgstr "Χρησιμοποιείτε ήδη το Pay-As-You-Go σε άλλο ιστότοπο;"
+
+msgid "Connect this site to it"
+msgstr "Συνδέστε αυτόν τον ιστότοπο σε αυτό"
+
+msgid "Buy and assign credits"
+msgstr "Αγορά και ανάθεση πιστώσεων"
+
+msgid "Buy a %1$sprepaid package%2$s with at least %3$s%4$s credits%5$s and assign them to this site."
+msgstr "Αγοράστε ένα %1$sπροπληρωμένο πακέτο%2$s με τουλάχιστον %3$s%4$s πιστώσεις%5$s και αναθέστε τις σε αυτόν τον ιστότοπο."
+
+msgid "This amount will cover translation of all your current content."
+msgstr "Αυτό το ποσό θα καλύψει τη μετάφραση όλου του τρέχοντος περιεχομένου σας."
+
+msgid "Assign at least %1$s%2$s credits%3$s to this site to continue."
+msgstr "Αναθέστε τουλάχιστον %1$s%2$s πιστώσεις%3$s σε αυτόν τον ιστότοπο για να συνεχίσετε."
+
+msgid "Assign credits from your WPML account and buy an additional %1$sprepaid package%2$s with at least %3$s%4$s credits%5$s credits to cover the remaining amount."
+msgstr "Αναθέστε πιστώσεις από τον λογαριασμό σας στο WPML και αγοράστε ένα επιπλέον %1$sπροπληρωμένο πακέτο%2$s με τουλάχιστον %3$s%4$s πιστώσεις%5$s για να καλύψετε το υπόλοιπο ποσό."
+
+msgid "Prepaid credits"
+msgstr "Προπληρωμένες πιστώσεις"
+
+msgid "There are %1$s%2$s available on your WPML account.%3$s"
+msgstr "Υπάρχουν %1$s%2$s διαθέσιμες στον λογαριασμό σας στο WPML.%3$s"
+
+msgid "(Only the WPML account owner can do this.)"
+msgstr "(Μόνο ο κάτοχος του λογαριασμού WPML μπορεί να το κάνει αυτό.)"
+
+msgid "Checking for new credits..."
+msgstr "Έλεγχος για νέες πιστώσεις..."
+
+msgid "Still not enough credits. Refresh again in %d seconds."
+msgstr "Ακόμα δεν υπάρχουν αρκετές πιστώσεις. Ανανεώστε ξανά σε %d δευτερόλεπτα."
+
+msgid "Already assigned?"
+msgstr "Έχει ήδη ανατεθεί;"
+
+msgid "Refresh"
+msgstr "Ανανέωση"
+
+msgid "Connection Error. Please wait a minute and reload this page. If the problem continues, please contact WPML support."
+msgstr "Σφάλμα σύνδεσης. Παρακαλώ περιμένετε ένα λεπτό και ανανεώστε αυτή τη σελίδα. Εάν το πρόβλημα συνεχιστεί, παρακαλώ επικοινωνήστε με την υποστήριξη του WPML."
+
+msgid "Pay-As-You-Go activated"
+msgstr "Το Pay-As-You-Go ενεργοποιήθηκε"
+
+msgid "You can now continue translating your content automatically."
+msgstr "Μπορείτε τώρα να συνεχίσετε την αυτόματη μετάφραση του περιεχομένου σας."
+
+msgid "%s credits assigned to this site."
+msgstr "%s πιστώσεις ανατέθηκαν σε αυτόν τον ιστότοπο."
+
+msgid "You don’t have enough credits to translate this content."
+msgstr "Δεν έχετε αρκετές πιστώσεις για να μεταφράσετε αυτό το περιεχόμενο."
+
+msgid "You have %s credits — %s more are needed to translate this content"
+msgstr "Έχετε %s πιστώσεις — χρειάζονται %s ακόμη για να μεταφραστεί αυτό το περιεχόμενο"
+
+msgid "You’re missing %s credits for the translation jobs in progress — %s are needed in total"
+msgstr "Σας λείπουν %s πιστώσεις για τις εργασίες μετάφρασης σε εξέλιξη — χρειάζονται συνολικά %s"
+
+msgid "Summary:"
+msgstr "Σύνοψη:"
+
+msgid "Credit"
+msgid_plural "Credits"
+msgstr[0] "Πίστωση"
+msgstr[1] "Πιστώσεις"
+
+msgid "€%1$s approximately"
+msgstr "περίπου %1$s€"
+
+msgid "Pricing"
+msgstr "Τιμολόγηση"
+
+msgid "Your Automatic Translation Credits"
+msgstr "Οι πιστώσεις αυτόματης μετάφρασης"
+
+msgid "To proceed with translation, activate Pay-As-You-Go or assign prepaid credits."
+msgstr "Για να προχωρήσετε με τη μετάφραση, ενεργοποιήστε το Pay-As-You-Go ή αναθέστε προπληρωμένες πιστώσεις."
+
+msgid "Leave existing translations as they are"
+msgstr "Αφήστε τις υπάρχουσες μεταφράσεις ως έχουν"
+
+msgid "Overwrite existing translations"
+msgstr "Αντικατάσταση υπαρχουσών μεταφράσεων"
+
+msgid "Some of the content you want to translate is already translated"
+msgstr "Κάποιο από το περιεχόμενο που θέλετε να μεταφράσετε είναι ήδη μεταφρασμένο"
+
+msgid "What do you want to do with the content that's already translated?"
+msgstr "Τι θέλετε να κάνετε με το περιεχόμενο που είναι ήδη μεταφρασμένο;"
+
+msgid "Suggested deadline:"
+msgstr "Προτεινόμενη προθεσμία:"
+
+msgid "Set a batch name and deadline"
+msgstr "Ορίστε ένα όνομα παρτίδας και προθεσμία"
+
+msgid "You can assign a custom name to this batch for easy tracking and suggest a deadline to clarify the priority for translators."
+msgstr "Μπορείτε να εκχωρήσετε ένα προσαρμοσμένο όνομα σε αυτήν την παρτίδα για εύκολη παρακολούθηση και να προτείνετε μια προθεσμία για να διευκρινίσετε την προτεραιότητα για τους μεταφραστές."
+
+msgid "Batch name:"
+msgstr "Όνομα παρτίδας:"
+
+msgid "Default translation engine: "
+msgstr "Προεπιλεγμένη μηχανή μετάφρασης: "
+
+msgid "Change"
+msgstr "Αλλαγή"
+
+msgid "Failed to load engines"
+msgstr "Αποτυχία φόρτωσης μηχανών"
+
+msgid "No engines enabled"
+msgstr "Δεν έχουν ενεργοποιηθεί μηχανές"
+
+msgid "In order to assign yourself as translator, you first need to <add_yourself>add yourself as %s translator</add_yourself> to the site.<br/> Add yourself as %s translator and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Για να ορίσετε τον εαυτό σας ως μεταφραστή, πρέπει πρώτα να <add_yourself>προσθέσετε τον εαυτό σας ως μεταφραστή %s</add_yourself> στον ιστότοπο.<br/> Προσθέστε τον εαυτό σας ως μεταφραστή %s και κάντε κλικ στο <check_again>έλεγχος ξανά</check_again> ή επιλέξτε μια διαφορετική επιλογή μετάφρασης."
+
+msgid "In order to assign yourself as translator, you first need to <add_yourself>add yourself as %s to %s translator</add_yourself> to the site.<br/> Add yourself as %s to %s translator and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Για να ορίσετε τον εαυτό σας ως μεταφραστή, πρέπει πρώτα να <add_yourself>προσθέσετε τον εαυτό σας ως μεταφραστή %s σε %s</add_yourself> στον ιστότοπο.<br/> Προσθέστε τον εαυτό σας ως μεταφραστή %s σε %s και κάντε κλικ στο <check_again>έλεγχος ξανά</check_again> ή επιλέξτε μια διαφορετική επιλογή μετάφρασης."
+
+msgid "Checking"
+msgstr "Έλεγχος"
+
+msgid "In order to assign a translation service, you first need to <activate_ts>activate a translation service</activate_ts>.<br/>Activate a translation service and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Για να αναθέσετε μια υπηρεσία μετάφρασης, πρέπει πρώτα να <activate_ts>ενεργοποιήσετε μια υπηρεσία μετάφρασης</activate_ts>.<br/>Ενεργοποιήστε μια υπηρεσία μετάφρασης και κάντε κλικ στο <check_again>έλεγχος ξανά</check_again> ή επιλέξτε μια διαφορετική επιλογή μετάφρασης."
+
+msgid " Checking "
+msgstr " Έλεγχος "
+
+msgid "In order to translate automatically, you first need to <enable_ate>enable WPML's Advanced Translation Editor</enable_ate>.<br/>Enable the Advanced Translation Editor and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Για να μεταφράσετε αυτόματα, πρέπει πρώτα να <enable_ate>ενεργοποιήσετε τον Προηγμένο Επεξεργαστή Μετάφρασης του WPML</enable_ate>.<br/>Ενεργοποιήστε τον Προηγμένο Επεξεργαστή Μετάφρασης και κάντε κλικ στο <check_again>έλεγχος ξανά</check_again> ή επιλέξτε μια διαφορετική επιλογή μετάφρασης."
+
+msgid "Selected content was translated using the Classic Translation Editor and can't be sent for automatic translation. To allow this, enable \"Use also for old translations\" in <wpmlSettingLink>WPML Settings</wpmlSettingLink> page."
+msgstr "Το επιλεγμένο περιεχόμενο μεταφράστηκε χρησιμοποιώντας τον Κλασικό Επεξεργαστή Μετάφρασης και δεν μπορεί να σταλεί για αυτόματη μετάφραση. Για να το επιτρέψετε αυτό, ενεργοποιήστε την επιλογή “Χρήση και για παλιές μεταφράσεις” στη σελίδα <wpmlSettingLink>Ρυθμίσεις WPML</wpmlSettingLink>."
+
+msgid "Some of the selected content was translated using the Classic Translation Editor and can't be sent for automatic translation. To allow this, enable \"Use also for old translations\" in <wpmlSettingLink>WPML Settings</wpmlSettingLink> page."
+msgstr "Κάποιο από το επιλεγμένο περιεχόμενο μεταφράστηκε χρησιμοποιώντας τον Κλασικό Επεξεργαστή Μετάφρασης και δεν μπορεί να σταλεί για αυτόματη μετάφραση. Για να το επιτρέψετε αυτό, ενεργοποιήστε την επιλογή “Χρήση και για παλιές μεταφράσεις” στη σελίδα <wpmlSettingLink>Ρυθμίσεις WPML</wpmlSettingLink>."
+
+msgid ""
+"Any existing content (translations) will be overwritten when creating duplicates.\n"
+"When duplicating content, please first duplicate parent pages to maintain the site's hierarchy."
+msgstr "Οποιοδήποτε υπάρχον περιεχόμενο (μεταφράσεις) θα αντικατασταθεί κατά τη δημιουργία αντιγράφων.\nΚατά την αναπαραγωγή περιεχομένου, παρακαλούμε πρώτα να αναπαράγετε τις γονικές σελίδες για να διατηρήσετε την ιεραρχία του ιστότοπου."
+
+msgid "Some of the selected content is already being translated. This will cancel any in-progress translations."
+msgstr "Κάποια από τα επιλεγμένα περιεχόμενα μεταφράζονται ήδη. Αυτό θα ακυρώσει τυχόν μεταφράσεις σε εξέλιξη."
+
+msgid "The selected items were translated using the WordPress Editor and will be overwritten with automatic translations."
+msgstr "Τα επιλεγμένα στοιχεία μεταφράστηκαν χρησιμοποιώντας τον Επεξεργαστή του WordPress και θα αντικατασταθούν με αυτόματες μεταφράσεις."
+
+msgid "Some of the selected content was translated using the WordPress Editor and will be overwritten."
+msgstr "Κάποιο από το επιλεγμένο περιεχόμενο μεταφράστηκε χρησιμοποιώντας τον Επεξεργαστή του WordPress και θα αντικατασταθεί."
+
+msgid "In order to assign to a translator, you first need to <add_translators>add %s translators</add_translators> to the site.<br/> Add %s translators and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Για να αναθέσετε σε μεταφραστή, πρέπει πρώτα να <add_translators>προσθέσετε μεταφραστές %s</add_translators> στον ιστότοπο.<br/> Προσθέστε μεταφραστές %s και κάντε κλικ στο <check_again>έλεγχος ξανά</check_again> ή επιλέξτε μια διαφορετική επιλογή μετάφρασης."
+
+msgid "In order to assign to a translator, you first need to <add_translators>add %s to %s translators</add_translators> to the site.<br/> Add %s to %s translators and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Για να αναθέσετε σε μεταφραστή, πρέπει πρώτα να <add_translators>προσθέσετε μεταφραστές %s σε %s</add_translators> στον ιστότοπο.<br/> Προσθέστε μεταφραστές %s σε %s και κάντε κλικ στο <check_again>έλεγχος ξανά</check_again> ή επιλέξτε μια διαφορετική επιλογή μετάφρασης."
+
+msgid "Your site doesn't have any reviewers for %s. This means that you’re the only person who can review these translations."
+msgstr "Ο ιστότοπός σας δεν έχει αναθεωρητές για %s. Αυτό σημαίνει ότι είστε το μόνο άτομο που μπορεί να αναθεωρήσει αυτές τις μεταφράσεις."
+
+msgid "Your site doesn't have any reviewers yet. This means that you’re the only person who can review translations."
+msgstr "Ο ιστότοπός σας δεν έχει ακόμη αναθεωρητές. Αυτό σημαίνει ότι είστε το μόνο άτομο που μπορεί να αναθεωρήσει τις μεταφράσεις."
+
+msgid "If you want other people to review the translations, go to <a>WPML → Translation Dashboard → Translators</a> and add translators. They will be able to both review and translate content for you."
+msgstr "Εάν θέλετε άλλα άτομα να αναθεωρήσουν τις μεταφράσεις, μεταβείτε στο <a>WPML → Πίνακας Ελέγχου Μετάφρασης → Μεταφραστές</a> και προσθέστε μεταφραστές. Θα μπορούν τόσο να αναθεωρούν όσο και να μεταφράζουν περιεχόμενο για εσάς."
+
+msgid "Automatic translation is blocked - payment required"
+msgstr "Η αυτόματη μετάφραση είναι μπλοκαρισμένη - απαιτείται πληρωμή"
+
+msgid "We couldn’t process your payment. Click “Pay now” to retry and resume automatic translation."
+msgstr "Δεν μπορέσαμε να επεξεργαστούμε την πληρωμή σας. Κάντε κλικ στο “Πληρώστε τώρα” για να δοκιμάσετε ξανά και να συνεχίσετε την αυτόματη μετάφραση."
+
+msgid "WPML does not support duplicating strings. Your selection to duplicate strings to %1$s will be ignored if you proceed with the translation."
+msgstr "Το WPML δεν υποστηρίζει την αναπαραγωγή συμβολοσειρών. Η επιλογή σας να αναπαράγετε συμβολοσειρές σε %1$s θα αγνοηθεί εάν προχωρήσετε με τη μετάφραση."
+
+msgid "WPML does not support duplicating %1$s elements. Your selection to duplicate elements to %2$s will be ignored if you proceed with the translation."
+msgstr "Το WPML δεν υποστηρίζει την αναπαραγωγή στοιχείων %1$s. Η επιλογή σας να αναπαράγετε στοιχεία σε %2$s θα αγνοηθεί εάν προχωρήσετε με τη μετάφραση."
+
+msgid "WPML does not support duplicating %1$s elements and strings. Your selection to duplicate elements and strings to %2$s will be ignored if you proceed with the translation."
+msgstr "Το WPML δεν υποστηρίζει την αναπαραγωγή στοιχείων και συμβολοσειρών %1$s. Η επιλογή σας να αναπαράγετε στοιχεία και συμβολοσειρές σε %2$s θα αγνοηθεί εάν προχωρήσετε με τη μετάφραση."
+
+msgid "WPML does not support duplicating strings."
+msgstr "Το WPML δεν υποστηρίζει την αναπαραγωγή συμβολοσειρών."
+
+msgid "WPML does not support duplicating %1$s elements."
+msgstr "Το WPML δεν υποστηρίζει την αναπαραγωγή στοιχείων %1$s."
+
+msgid "WPML does not support duplicating %1$s elements and strings."
+msgstr "Το WPML δεν υποστηρίζει την αναπαραγωγή στοιχείων και συμβολοσειρών %1$s."
+
+msgid "Finish setting up %s on your site"
+msgstr "Ολοκληρώστε τη ρύθμιση του %s στον ιστότοπό σας"
+
+msgid "You need to authenticate %s to send them content for translation.<br/>Visit the <a>Translators tab</a> to finish the setup and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Πρέπει να πιστοποιήσετε το %s για να τους στείλετε περιεχόμενο για μετάφραση.<br/>Επισκεφθείτε την <a>καρτέλα Μεταφραστές</a> για να ολοκληρώσετε τη ρύθμιση και κάντε κλικ στο <check_again>έλεγχος ξανά</check_again> ή επιλέξτε μια διαφορετική επιλογή μετάφρασης."
+
+msgid "You selected multiple translation methods for content across different languages:"
+msgstr "Επιλέξατε πολλαπλές μεθόδους μετάφρασης για περιεχόμενο σε διαφορετικές γλώσσες:"
+
+msgid "Sent for translation"
+msgstr "Στάλθηκε για μετάφραση"
+
+msgid "Sending for translation failed"
+msgstr "Η αποστολή για μετάφραση απέτυχε"
+
+msgid "Ok"
+msgstr "Εντάξει"
+
+msgid "<s>1 item</s> is being translated automatically."
+msgid_plural "<s>%d items</s> are being translated automatically."
+msgstr[0] "<s>1 στοιχείο</s> μεταφράζεται αυτόματα."
+msgstr[1] "<s>%d στοιχεία</s> μεταφράζονται αυτόματα."
+
+msgid "You can track their progress at the top of the page."
+msgstr "Μπορείτε να παρακολουθήσετε την πρόοδό τους στην κορυφή της σελίδας."
+
+msgid "From now on, WPML will automatically translate new content on your site."
+msgstr "Από τώρα και στο εξής, το WPML θα μεταφράζει αυτόματα το νέο περιεχόμενο στον ιστότοπό σας."
+
+msgid "This number might vary because you enabled the Translate Everything Automatically Mode."
+msgstr "Αυτός ο αριθμός ενδέχεται να διαφέρει επειδή ενεργοποιήσατε τη λειτουργία Αυτόματης Μετάφρασης Όλων."
+
+msgid "From now on, WPML will automatically translate your site's content."
+msgstr "Από τώρα και στο εξής, το WPML θα μεταφράζει αυτόματα το περιεχόμενο του ιστοτόπου σας."
+
+msgid "Automatic translations summary"
+msgstr "Σύνοψη αυτόματων μεταφράσεων"
+
+msgid "Some of the content that you selected for translation includes fields that are encoded. Translators will not be able to work on this kind of content, so we removed it from the job."
+msgstr "Κάποιο από το περιεχόμενο που επιλέξατε για μετάφραση περιλαμβάνει πεδία που είναι κωδικοποιημένα. Οι μεταφραστές δεν θα μπορούν να εργαστούν σε αυτό το είδος περιεχομένου, οπότε το αφαιρέσαμε από την εργασία."
+
+msgid "To fix this problem, please contact our support team and describe this issue."
+msgstr "Για να διορθώσετε αυτό το πρόβλημα, επικοινωνήστε με την ομάδα υποστήριξής μας και περιγράψτε το ζήτημα."
+
+msgid "WPML cannot send some fo the content to translation"
+msgstr "Το WPML δεν μπορεί να στείλει μέρος του περιεχομένου για μετάφραση"
+
+msgid "Open support ticket"
+msgstr "Άνοιγμα αιτήματος υποστήριξης"
+
+msgid "<s>1 item</s> has been successfully assigned to you! To check its status, please go to <s>WPML → Translations</s>. <translations_queue/>"
+msgid_plural "<s>%d items</s> have been successfully assigned to you! For status updates, please go to <s>WPML → Translations</s>. <translations_queue/>"
+msgstr[0] "<s>1 στοιχείο</s> έχει ανατεθεί επιτυχώς σε εσάς! Για να ελέγξετε την κατάστασή του, μεταβείτε στο <s>WPML → Μεταφράσεις</s>. <translations_queue/>"
+msgstr[1] "<s>%d στοιχεία</s> έχουν ανατεθεί επιτυχώς σε εσάς! Για ενημερώσεις κατάστασης, μεταβείτε στο <s>WPML → Μεταφράσεις</s>. <translations_queue/>"
+
+msgid "Currently logged in translator summary"
+msgstr "Σύνοψη μεταφραστή που είναι συνδεδεμένος αυτήν τη στιγμή"
+
+msgid "Go to Translations"
+msgstr "Μετάβαση στις μεταφράσεις"
+
+msgid "<s>1 item</s> has been duplicated."
+msgid_plural "<s>%d items</s> have been duplicated."
+msgstr[0] "<s>1 στοιχείο</s> έχει αντιγραφεί."
+msgstr[1] "<s>%d στοιχεία</s> έχουν αντιγραφεί."
+
+msgid "Duplication summary"
+msgstr "Σύνοψη διπλασιασμού"
+
+msgid "There was a problem sending your content for translation."
+msgstr "Προέκυψε πρόβλημα κατά την αποστολή του περιεχομένου σας για μετάφραση."
+
+msgid "Please try again in a few minutes. If the issue persists, please contact our support."
+msgstr "Παρακαλούμε δοκιμάστε ξανά σε λίγα λεπτά. Εάν το πρόβλημα παραμένει, επικοινωνήστε με την υποστήριξή μας."
+
+msgid "See technical details"
+msgstr "Δείτε τεχνικές λεπτομέρειες"
+
+msgid "Hide technical details"
+msgstr "Απόκρυψη τεχνικών λεπτομερειών"
+
+msgid "Some of the selected strings are already registered or translated into %s. Since their source language matches the target language, they cannot be retranslated."
+msgstr "Ορισμένες από τις επιλεγμένες συμβολοσειρές είναι ήδη καταχωρημένες ή μεταφρασμένες σε %s. Δεδομένου ότι η γλώσσα προέλευσής τους ταιριάζει με τη γλώσσα-στόχο, δεν μπορούν να μεταφραστούν ξανά."
+
+msgid "Some of the selected content has already been translated from %s to %s and cannot be re-translated from %s to %s."
+msgstr "Κάποιο από το επιλεγμένο περιεχόμενο έχει ήδη μεταφραστεί από %s σε %s και δεν μπορεί να μεταφραστεί ξανά από %s σε %s."
+
+msgid "Content already translated"
+msgstr "Το περιεχόμενο έχει ήδη μεταφραστεί"
+
+msgid "Some content couldn't be sent to translation."
+msgstr "Κάποιο περιεχόμενο δεν μπόρεσε να σταλεί για μετάφραση."
+
+msgid "WPML did not create translations for some languages because of the following reasons:"
+msgstr "Το WPML δεν δημιούργησε μεταφράσεις για ορισμένες γλώσσες για τους ακόλουθους λόγους:"
+
+msgid "<s>1 item</s> has been successfully sent to translators!"
+msgid_plural "<s>%d items</s> have been successfully sent to translators!"
+msgstr[0] "<s>1 στοιχείο</s> έχει σταλεί επιτυχώς στους μεταφραστές!"
+msgstr[1] "<s>%d στοιχεία</s> έχουν σταλεί επιτυχώς στους μεταφραστές!"
+
+msgid "Local translations summary"
+msgstr "Σύνοψη τοπικών μεταφράσεων"
+
+msgid "You can check their status in WPML → Translation"
+msgstr "Μπορείτε να ελέγξετε την κατάστασή τους στο WPML → Μετάφραση"
+
+msgid "Continue to %s"
+msgstr "Συνέχεια σε %s"
+
+msgid "We were unable to send the following batches for professional translation:"
+msgstr "Δεν μπορέσαμε να στείλουμε τις ακόλουθες παρτίδες για επαγγελματική μετάφραση:"
+
+msgid "<p><a><s>Contact WPML support for help</s></a></p>"
+msgstr "<p><a><s>Επικοινωνήστε με την υποστήριξη του WPML για βοήθεια</s></a></p>"
+
+msgid "Translation Service"
+msgstr "Υπηρεσία μετάφρασης"
+
+msgid "sending for professional translation.."
+msgstr "αποστολή για επαγγελματική μετάφραση.."
+
+msgid "<s>%d item</s> is being sent for translation to %s. Please continue to their site to start the translation."
+msgid_plural "<s>%d items</s> are being sent for translation to %s. Please continue to their site to start the translation."
+msgstr[0] "<s>%d στοιχείο</s> αποστέλλεται για μετάφραση στο %s. Παρακαλούμε συνεχίστε στον ιστότοπό τους για να ξεκινήσετε τη μετάφραση."
+msgstr[1] "<s>%d στοιχεία</s> αποστέλλονται για μετάφραση στο %s. Παρακαλούμε συνεχίστε στον ιστότοπό τους για να ξεκινήσετε τη μετάφραση."
+
+msgid "Translation service translations summary"
+msgstr "Σύνοψη μεταφράσεων υπηρεσίας μετάφρασης"
+
+msgid "One or more assigned translators are invalid. The translator may have been removed or their language permissions changed.<br/> Review your settings on the <translators_page>Translators page</translators_page>."
+msgstr "Ένας ή περισσότεροι εκχωρημένοι μεταφραστές είναι μη έγκυροι. Ο μεταφραστής ενδέχεται να έχει αφαιρεθεί ή να έχουν αλλάξει οι γλωσσικές του άδειες.<br/> Ελέγξτε τις ρυθμίσεις σας στη <translators_page>σελίδα Μεταφραστών</translators_page>."
+
+msgid "The selected translation service is no longer valid. It may have been changed, unauthenticated, or deactivated.<br/> Review your settings on the <translators_page>Translators page</translators_page>."
+msgstr "Η επιλεγμένη υπηρεσία μετάφρασης δεν είναι πλέον έγκυρη. Ενδέχεται να έχει αλλάξει, να μην έχει πιστοποιηθεί ή να έχει απενεργοποιηθεί.<br/> Ελέγξτε τις ρυθμίσεις σας στη <translators_page>σελίδα Μεταφραστών</translators_page>."
+
+msgid "Currently selected translation editor doesn't support automatic translation. You must enable the Advanced Translation Editor to send content for automatic translation.<br/> Check your settings on the <wpml_settings>WPML settings page</wpml_settings>."
+msgstr "Ο επιλεγμένος επεξεργαστής μετάφρασης δεν υποστηρίζει αυτόματη μετάφραση. Πρέπει να ενεργοποιήσετε τον Προηγμένο Επεξεργαστή Μετάφρασης για να στείλετε περιεχόμενο για αυτόματη μετάφραση.<br/> Ελέγξτε τις ρυθμίσεις σας στη <wpml_settings>σελίδα ρυθμίσεων του WPML</wpml_settings>."
+
+msgid "Validation error happened during send to translation."
+msgstr "Προέκυψε σφάλμα επικύρωσης κατά την αποστολή για μετάφραση."
+
+msgid "Translate and Duplicate"
+msgstr "Μετάφραση και διπλασιασμός"
+
+msgid "Duplicate"
+msgstr "Διπλασιασμός"
+
+msgid "Translate content"
+msgstr "Μετάφραση περιεχομένου"
+
+msgid "Please choose one of the available payment options."
+msgstr "Παρακαλούμε επιλέξτε μία από τις διαθέσιμες επιλογές πληρωμής."
+
+msgid "Selected content is already translated"
+msgstr "Το επιλεγμένο περιεχόμενο έχει ήδη μεταφραστεί"
+
+msgid "Please select a review mode"
+msgstr "Παρακαλούμε επιλέξτε έναν τρόπο αναθεώρησης"
+
+msgid "Assign local translator or choose another option"
+msgstr "Αναθέστε τοπικό μεταφραστή ή επιλέξτε άλλη επιλογή"
+
+msgid "Assign yourself or choose another option"
+msgstr "Αναθέστε στον εαυτό σας ή επιλέξτε άλλη επιλογή"
+
+msgid "Activate translation service or choose another option"
+msgstr "Ενεργοποιήστε την υπηρεσία μετάφρασης ή επιλέξτε άλλη επιλογή"
+
+msgid "Activate ATE or choose another option"
+msgstr "Ενεργοποιήστε το ATE ή επιλέξτε άλλη επιλογή"
+
+msgid "Authenticate translation service or choose another option"
+msgstr "Πιστοποιήστε την υπηρεσία μετάφρασης ή επιλέξτε άλλη επιλογή"
+
+msgid "Please provide context to enable translation"
+msgstr "Παρακαλούμε δώστε πλαίσιο για να ενεργοποιήσετε τη μετάφραση"
+
+msgid "Please keep this page open while WPML sends your content for translation. If you leave now, the remaining items won't be sent."
+msgstr "Παρακαλούμε κρατήστε αυτή τη σελίδα ανοιχτή όσο το WPML στέλνει το περιεχόμενό σας για μετάφραση. Αν φύγετε τώρα, τα υπόλοιπα στοιχεία δεν θα σταλούν."
+
+msgid "Sending content to translation"
+msgstr "Αποστολή περιεχομένου για μετάφραση"
+
+msgid "<s>%s</s> cannot process more than <s>%d</s> jobs in a single batch. WPML will automatically split your jobs into separate batches to ensure an error-free delivery to <s>%s</s>. <br/><br/> Do you want to proceed?"
+msgstr "Το <s>%s</s> δεν μπορεί να επεξεργαστεί περισσότερες από <s>%d</s> εργασίες σε μία μόνο παρτίδα. Το WPML θα χωρίσει αυτόματα τις εργασίες σας σε ξεχωριστές παρτίδες για να εξασφαλίσει μια παράδοση χωρίς σφάλματα στο <s>%s</s>. <br/><br/> Θέλετε να προχωρήσετε;"
+
+msgid "WPML will send jobs to %s in separate batches"
+msgstr "Το WPML θα στείλει εργασίες στο %s σε ξεχωριστές παρτίδες"
+
+msgid "Yes, send jobs in separate batches"
+msgstr "Ναι, στείλτε εργασίες σε ξεχωριστές παρτίδες"
+
+msgid "No, I will split jobs myself"
+msgstr "Όχι, θα χωρίσω τις εργασίες μόνος μου"
+
+msgid "This will translate only your future content"
+msgstr "Αυτό θα μεταφράσει μόνο το μελλοντικό σας περιεχόμενο"
+
+msgid "This will translate your entire site"
+msgstr "Αυτό θα μεταφράσει ολόκληρο τον ιστότοπό σας"
+
+msgid "Translate everything automatically from now on, without asking me."
+msgstr "Μεταφράστε τα πάντα αυτόματα από τώρα και στο εξής, χωρίς να με ρωτήσετε."
+
+msgid "Loading options to translate the content"
+msgstr "Φόρτωση επιλογών για τη μετάφραση του περιεχομένου"
+
+msgid "What content do you want to translate?"
+msgstr "Τι περιεχόμενο θέλετε να μεταφράσετε;"
+
+msgid "Translate my entire site"
+msgstr "Μετάφραση ολόκληρου του ιστοτόπου μου"
+
+msgid "WPML will translate all of your site's content, including:"
+msgstr "Το WPML θα μεταφράσει όλο το περιεχόμενο του ιστοτόπου σας, συμπεριλαμβανομένων:"
+
+msgid "Any existing content that hasn’t been translated yet"
+msgstr "Οποιοδήποτε υπάρχον περιεχόμενο που δεν έχει μεταφραστεί ακόμα"
+
+msgid "All new content you create in the future"
+msgstr "Όλο το νέο περιεχόμενο που δημιουργείτε στο μέλλον"
+
+msgid "Translate only future content"
+msgstr "Μετάφραση μόνο μελλοντικού περιεχομένου"
+
+msgid "WPML will translate only the content you create after enabling this translation mode."
+msgstr "Το WPML θα μεταφράσει μόνο το περιεχόμενο που δημιουργείτε μετά την ενεργοποίηση αυτής της λειτουργίας μετάφρασης."
+
+msgid "Existing untranslated content on your side will not be translated."
+msgstr "Το υπάρχον αμετάφραστο περιεχόμενο στην πλευρά σας δεν θα μεταφραστεί."
+
+msgid "WPML Settings"
+msgstr "Ρυθμίσεις WPML"
+
+msgid "Some of your content was translated using the Classic Translation Editor. These translations won’t be included in Translate Everything Automatically."
+msgstr "Κάποιο από το περιεχόμενό σας μεταφράστηκε χρησιμοποιώντας τον Κλασικό Επεξεργαστή Μετάφρασης. Αυτές οι μεταφράσεις δεν θα συμπεριληφθούν στην Αυτόματη Μετάφραση Όλων."
+
+msgid "To include them, enable \"Use also for old translations\" in <wpmlSettingLink/>."
+msgstr "Για να τις συμπεριλάβετε, ενεργοποιήστε το “Χρήση και για παλιές μεταφράσεις” στο <wpmlSettingLink/>."
+
+msgid "Some of your content was translated using the WordPress Editor. These translations won’t be included in Translate Everything Automatically."
+msgstr "Κάποιο από το περιεχόμενό σας μεταφράστηκε χρησιμοποιώντας τον Επεξεργαστή του WordPress. Αυτές οι μεταφράσεις δεν θα συμπεριληφθούν στην Αυτόματη Μετάφραση Όλων."
+
+msgid "Some of your content was translated using the Classic Translation Editor or WordPress Editor. These translations won’t be included in Translate Everything Automatically."
+msgstr "Κάποιο από το περιεχόμενό σας μεταφράστηκε χρησιμοποιώντας τον Κλασικό Επεξεργαστή Μετάφρασης ή τον Επεξεργαστή του WordPress. Αυτές οι μεταφράσεις δεν θα συμπεριληφθούν στην Αυτόματη Μετάφραση Όλων."
+
+msgid "To include Classic Editor translations, enable \"Use also for old translations\" in <wpmlSettingLink/>."
+msgstr "Για να συμπεριλάβετε μεταφράσεις του Κλασικού Επεξεργαστή, ενεργοποιήστε το “Χρήση και για παλιές μεταφράσεις” στο <wpmlSettingLink/>."
+
+msgid "Existing content"
+msgstr "Υπάρχον περιεχόμενο"
+
+msgid "You selected to translate strings that are in %s. Only these strings will be translated to %s."
+msgstr "Επιλέξατε να μεταφράσετε συμβολοσειρές που είναι σε %s. Μόνο αυτές οι συμβολοσειρές θα μεταφραστούν σε %s."
+
+msgid "You selected to translate strings that are in %s and %s. Only these strings will be translated to %s."
+msgstr "Επιλέξατε να μεταφράσετε συμβολοσειρές που είναι σε %s και %s. Μόνο αυτές οι συμβολοσειρές θα μεταφραστούν σε %s."
+
+msgid "Source language"
+msgstr "Γλώσσα προέλευσης"
+
+msgid "Target language"
+msgstr "Γλώσσα-στόχος"
+
+msgid "Words to translate"
+msgstr "Λέξεις προς μετάφραση"
+
+msgid "Credits needed"
+msgstr "Απαιτούμενες μονάδες"
+
+msgid "Automatic translation is not supported for %s."
+msgstr "Η αυτόματη μετάφραση δεν υποστηρίζεται για %s."
+
+msgid "The selected translation engines do not support %s."
+msgstr "Οι επιλεγμένες μηχανές μετάφρασης δεν υποστηρίζουν %s."
+
+msgid "%1sTotal Credits:%2s %3s"
+msgstr "%1sΣύνολο πιστώσεων:%2s %3s"
+
+msgid "Translation service additional options"
+msgstr "Πρόσθετες επιλογές υπηρεσίας μετάφρασης"
+
+msgid "Fetching translation service data..."
+msgstr "Ανάκτηση δεδομένων υπηρεσίας μετάφρασης..."
+
+msgid "-"
+msgstr "-"
+
+msgid "Translate automatically"
+msgstr "Αυτόματη μετάφραση"
+
+msgid "Translate myself"
+msgstr "Μετάφραση από εμένα"
+
+msgid "Assign a translator"
+msgstr "Ανάθεση μεταφραστή"
+
+msgid "Assign translation service"
+msgstr "Ανάθεση υπηρεσίας μετάφρασης"
+
+msgid "Do nothing"
+msgstr "Μην κάνετε τίποτα"
+
+msgid "Please choose"
+msgstr "Παρακαλούμε επιλέξτε"
+
+msgid "Choose a translator"
+msgstr "Επιλέξτε μεταφραστή"
+
+msgid "First available"
+msgstr "Πρώτος διαθέσιμος"
+
+msgid "(Me)"
+msgstr "(εγώ)"
+
+msgid "Step 2"
+msgstr "Βήμα 2"
+
+msgid "Calculating..."
+msgstr "Υπολογισμός..."
+
+msgid "Refining estimation... about %1$d minute remaining"
+msgid_plural "Refining estimation... about %1$d minutes remaining"
+msgstr[0] "Βελτίωση εκτίμησης... περίπου %1$d λεπτό απομένει"
+msgstr[1] "Βελτίωση εκτίμησης... περίπου %1$d λεπτά απομένουν"
+
+msgid "Refining estimation... %d second remaining"
+msgid_plural "Refining estimation... %d seconds remaining"
+msgstr[0] "Βελτίωση εκτίμησης... %d δευτερόλεπτο απομένει"
+msgstr[1] "Βελτίωση εκτίμησης... %d δευτερόλεπτα απομένουν"
+
+msgid "Estimated cost:"
+msgstr "Εκτιμώμενο κόστος:"
+
+msgid "Current estimated cost:"
+msgstr "Τρέχον εκτιμώμενο κόστος:"
+
+msgid "Changing translation engine and recalculating estimate..."
+msgstr "Αλλαγή μηχανής μετάφρασης και επανυπολογισμός εκτίμησης..."
+
+msgid "%s credits"
+msgstr "%s πιστώσεις"
+
+msgid "€%1$s"
+msgstr "%1$s€"
+
+msgid "All content is already translated. New and edited content will be translated automatically."
+msgstr "Όλο το περιεχόμενο είναι ήδη μεταφρασμένο. Το νέο και επεξεργασμένο περιεχόμενο θα μεταφραστεί αυτόματα."
+
+msgid "%1$s and %2$s"
+msgstr "%1$s και %2$s"
+
+msgid "in other types"
+msgstr "σε άλλους τύπους"
+
+msgid "Hide what will be translated"
+msgstr "Απόκρυψη του τι θα μεταφραστεί"
+
+msgid "Show what will be translated"
+msgstr "Εμφάνιση του τι θα μεταφραστεί"
+
+msgid "Calculation complete"
+msgstr "Ο υπολογισμός ολοκληρώθηκε"
+
+msgid "%d of %d analyzed"
+msgstr "%d από %d αναλύθηκαν"
+
+msgid "Automatic translations completed"
+msgstr "Ολοκληρώθηκαν οι αυτόματες μεταφράσεις"
+
+msgid "<s>1 translation</s> has been successfully translated automatically"
+msgid_plural "<s>%d translations</s> have been successfully translated automatically"
+msgstr[0] "<s>1 μετάφραση</s> έχει μεταφραστεί επιτυχώς αυτόματα"
+msgstr[1] "<s>%d μεταφράσεις</s> έχουν μεταφραστεί επιτυχώς αυτόματα"
+
+msgid "Automatic jobs in progress"
+msgstr "Αυτόματες εργασίες σε εξέλιξη"
+
+msgid "<s>%d automatic translation</s> is in progress"
+msgid_plural "<s>%d automatic translations</s> are in progress"
+msgstr[0] "<s>%d αυτόματη μετάφραση</s> βρίσκεται σε εξέλιξη"
+msgstr[1] "<s>%d αυτόματες μεταφράσεις</s> βρίσκονται σε εξέλιξη"
+
+msgid "Remaining time: <s>Less than 1 minute</s>"
+msgstr "Υπολειπόμενος χρόνος: <s>Λιγότερο από 1 λεπτό</s>"
+
+msgid "Remaining time: <s>%d minute</s>"
+msgid_plural "Remaining time: <s>%d minutes</s>"
+msgstr[0] "Υπολειπόμενος χρόνος: <s>%d λεπτό</s>"
+msgstr[1] "Υπολειπόμενος χρόνος: <s>%d λεπτά</s>"
+
+msgid "Your default language, %s, must be mapped to a supported language in order to use automatic translation"
+msgstr "Η προεπιλεγμένη γλώσσα σας, %s, πρέπει να αντιστοιχιστεί σε μια υποστηριζόμενη γλώσσα για να χρησιμοποιήσετε την αυτόματη μετάφραση"
+
+msgid "Map the language"
+msgstr "Αντιστοίχιση της γλώσσας"
+
+msgid "%d translations "
+msgstr "%d μεταφράσεις "
+
+msgid "%d translation "
+msgstr "%d μετάφραση "
+
+msgid "this includes translations from Translate Everything Automatically"
+msgstr "αυτό περιλαμβάνει μεταφράσεις από την Αυτόματη Μετάφραση Όλων"
+
+msgid "are waiting for your review"
+msgstr "περιμένουν την αναθεώρησή σας"
+
+msgid "is waiting for your review"
+msgstr "περιμένει την αναθεώρησή σας"
+
+msgid "Review Translations"
+msgstr "Αναθεώρηση μεταφράσεων"
+
+msgid "Translate existing content"
+msgstr "Μετάφραση υπάρχοντος περιεχομένου"
+
+msgid "Translate now"
+msgstr "Μετάφραση τώρα"
+
+msgid "Starting with version 4.7, WPML will also automatically translate texts (strings) coming from %s."
+msgstr "Ξεκινώντας από την έκδοση 4.7, το WPML θα μεταφράζει αυτόματα και κείμενα (συμβολοσειρές) που προέρχονται από το %s."
+
+msgid "WPML will not translate existing texts of this type but any new ones you create will be automatically translated. If you prefer, you can <button />."
+msgstr "Το WPML δεν θα μεταφράσει υπάρχοντα κείμενα αυτού του τύπου, αλλά οποιαδήποτε νέα δημιουργήσετε θα μεταφραστούν αυτόματα. Εάν προτιμάτε, μπορείτε να <button />."
+
+msgid "Starting with version 4.7, WPML will also automatically translate:"
+msgstr "Ξεκινώντας από την έκδοση 4.7, το WPML θα μεταφράζει αυτόματα επίσης:"
+
+msgid "Content set to \"use translation if available or fallback to default language\": %s."
+msgstr "Περιεχόμενο που έχει οριστεί σε “χρήση μετάφρασης εάν είναι διαθέσιμη ή επιστροφή στην προεπιλεγμένη γλώσσα”: %s."
+
+msgid "Texts (strings) coming from: %s."
+msgstr "Κείμενα (συμβολοσειρές) που προέρχονται από: %s."
+
+msgid "WPML will not translate existing content for these post types and texts but any new content you create will be automatically translated. If you prefer, you can start <button />."
+msgstr "Το WPML δεν θα μεταφράσει υπάρχον περιεχόμενο για αυτούς τους τύπους αναρτήσεων και κειμένων, αλλά οποιοδήποτε νέο περιεχόμενο δημιουργήσετε θα μεταφραστεί αυτόματα. Εάν προτιμάτε, μπορείτε να ξεκινήσετε <button />."
+
+msgid "WPML will not translate existing content for these post types but any new content you create will be automatically translated. If you prefer, you can start <button />."
+msgstr "Το WPML δεν θα μεταφράσει υπάρχον περιεχόμενο για αυτούς τους τύπους αναρτήσεων, αλλά οποιοδήποτε νέο περιεχόμενο δημιουργήσετε θα μεταφραστεί αυτόματα. Εάν προτιμάτε, μπορείτε να ξεκινήσετε <button />."
+
+msgid "start translating existing content now"
+msgstr "ξεκινήστε τη μετάφραση του υπάρχοντος περιεχομένου τώρα"
+
+msgid "The following target languages do not support automatic translations: %s"
+msgstr "Οι ακόλουθες γλώσσες-στόχοι δεν υποστηρίζουν αυτόματες μεταφράσεις: %s"
+
+msgid "To enable automatic translation map them to known languages."
+msgstr "Για να ενεργοποιήσετε την αυτόματη μετάφραση, αντιστοιχίστε τις σε γνωστές γλώσσες."
+
+msgid "Map to known languages"
+msgstr "Αντιστοίχιση σε γνωστές γλώσσες"
+
+msgid "Copied!"
+msgstr "Αντιγράφηκε!"
+
+msgid "Copy All"
+msgstr "Αντιγραφή όλων"
+
+msgid "Error type"
+msgstr "Τύπος σφάλματος"
+
+msgid "Error Message"
+msgstr "Μήνυμα σφάλματος"
+
+msgid "Job ID"
+msgstr "Αναγνωριστικό εργασίας"
+
+msgid "ATE Job ID"
+msgstr "Αναγνωριστικό εργασίας ATE"
+
+msgid "Original ID"
+msgstr "Αρχικό αναγνωριστικό"
+
+msgid "Element ID"
+msgstr "Αναγνωριστικό στοιχείου"
+
+msgid "Copy to clipboard"
+msgstr "Αντιγραφή στο πρόχειρο"
+
+msgid "Hide errors details"
+msgstr "Απόκρυψη λεπτομερειών σφαλμάτων"
+
+msgid "Show errors details"
+msgstr "Εμφάνιση λεπτομερειών σφαλμάτων"
+
+msgid "https://wpml.org/forums/forum/english-support/"
+msgstr "https://wpml.org/forums/forum/english-support/"
+
+msgid "<strong>%d item</strong> couldn't be completed due to an unexpected error. Try resending it for translation. If the issue continues, <a>contact WPML support</a>."
+msgid_plural "<strong>%d items</strong> couldn't be completed due to an unexpected error. Try resending them for translation. If the issue continues, <a>contact WPML support</a>."
+msgstr[0] "<strong>%d στοιχείο</strong> δεν μπόρεσε να ολοκληρωθεί λόγω απροσδόκητου σφάλματος. Δοκιμάστε να το στείλετε ξανά για μετάφραση. Εάν το πρόβλημα συνεχιστεί, <a>επικοινωνήστε με την υποστήριξη του WPML</a>."
+msgstr[1] "<strong>%d στοιχεία</strong> δεν μπόρεσαν να ολοκληρωθούν λόγω απροσδόκητου σφάλματος. Δοκιμάστε να τα στείλετε ξανά για μετάφραση. Εάν το πρόβλημα συνεχιστεί, <a>επικοινωνήστε με την υποστήριξη του WPML</a>."
+
+msgid "Cancelling %d/%d..."
+msgstr "Ακύρωση %d/%d..."
+
+msgid "Cancelling..."
+msgstr "Ακύρωση..."
+
+msgid "Discard jobs"
+msgstr "Απόρριψη εργασιών"
+
+msgid "Resending %d/%d..."
+msgstr "Επανάληψη αποστολής %d/%d..."
+
+msgid "Resending..."
+msgstr "Επανάληψη αποστολής..."
+
+msgid "Resend"
+msgstr "Επανάληψη αποστολής"
+
+msgid "We recommend staying on this page to monitor progress and respond to any issues if they occur. You can leave this page, but you should remain within your WordPress admin area."
+msgstr "Συνιστούμε να παραμείνετε σε αυτή τη σελίδα για να παρακολουθείτε την πρόοδο και να αντιμετωπίζετε τυχόν προβλήματα. Μπορείτε να φύγετε από αυτή τη σελίδα, αλλά θα πρέπει να παραμείνετε στην περιοχή διαχείρισης του WordPress."
+
+msgid "Translation status"
+msgstr "Κατάσταση μετάφρασης"
+
+msgid "Before translating with PTC, please provide context about your website and target audience (one-time thing)."
+msgstr "Πριν μεταφράσετε με το PTC, παρακαλούμε δώστε πλαίσιο σχετικά με τον ιστότοπό σας και το κοινό-στόχο (μία φορά)."
+
+msgid "Provide Context"
+msgstr "Παροχή πλαισίου"
+
+msgid "Default language does not support automatic translations."
+msgstr "Η προεπιλεγμένη γλώσσα δεν υποστηρίζει αυτόματες μεταφράσεις."
+
+msgid "You must enable ATE to activate Translate Everything Automatically."
+msgstr "Πρέπει να ενεργοποιήσετε το ATE για να ενεργοποιήσετε την Αυτόματη Μετάφραση Όλων."
+
+msgid "Select payment method"
+msgstr "Επιλέξτε μέθοδο πληρωμής"
+
+msgid "Credits assigned"
+msgstr "Πιστώσεις που ανατέθηκαν"
+
+msgid "You’re all set."
+msgstr "Είστε έτοιμοι."
+
+msgid "Click Translate Everything Automatically to start translating your entire site."
+msgstr "Κάντε κλικ στο Μετάφραση Όλων Αυτόματα για να ξεκινήσετε τη μετάφραση ολόκληρου του ιστότοπού σας."
+
+msgid "Content to translate"
+msgstr "Περιεχόμενο προς μετάφραση"
+
+msgid "Publishing method"
+msgstr "Μέθοδος δημοσίευσης"
+
+msgid "Payment method"
+msgstr "Μέθοδος πληρωμής"
+
+msgid "Enable Translate Everything Automatically"
+msgstr "Ενεργοποίηση αυτόματης μετάφρασης όλων"
+
+msgid "Go back"
+msgstr "Πίσω"
+
+msgid "Continue"
+msgstr "Συνέχεια"
+
+msgid "Calculating credits for translating existing content. Please wait..."
+msgstr "Υπολογισμός πιστώσεων για τη μετάφραση υπάρχοντος περιεχομένου. Παρακαλούμε περιμένετε..."
+
+msgid "Set Up Translate Everything Automatically"
+msgstr "Ρύθμιση αυτόματης μετάφρασης όλων"
+
+msgid "WPML will translate your content into %d languages"
+msgstr "Το WPML θα μεταφράσει το περιεχόμενό σας σε %d γλώσσες"
+
+msgid "You can start using Translate Everything Automatically after sending some content for translation. We recommend that you review these translations and make sure that they are good before translating your entire site's content."
+msgstr "Μπορείτε να αρχίσετε να χρησιμοποιείτε την Αυτόματη Μετάφραση Όλων αφού στείλετε κάποιο περιεχόμενο για μετάφραση. Σας συνιστούμε να ελέγξετε αυτές τις μεταφράσεις και να βεβαιωθείτε ότι είναι καλές πριν μεταφράσετε ολόκληρο το περιεχόμενο του ιστοτόπου σας."
+
+msgid "Translate Everything Automatically - disabled"
+msgstr "Αυτόματη Μετάφραση Όλων - απενεργοποιημένη"
+
+msgid "Translate Everything Automatically"
+msgstr "Αυτόματη μετάφραση όλων"
+
+msgid "Automatically translate all %s content to %s."
+msgstr "Αυτόματη μετάφραση όλου του περιεχομένου %s σε %s."
+
+msgid "Translate Everything Automatically - pausing"
+msgstr "Αυτόματη Μετάφραση Όλων - σε παύση"
+
+msgid "Translate Everything Automatically is pausing"
+msgstr "Η Αυτόματη Μετάφραση Όλων είναι σε παύση"
+
+msgid "Translate Everything Automatically - paused"
+msgstr "Αυτόματη Μετάφραση Όλων - σε παύση"
+
+msgid "%d translation left in the queue. Preparing more content for translation."
+msgid_plural "%d translations left in the queue. Preparing more content for translation."
+msgstr[0] "%d μετάφραση έχει απομείνει στην ουρά. Προετοιμάζεται περισσότερο περιεχόμενο για μετάφραση."
+msgstr[1] "%d μεταφράσεις έχουν απομείνει στην ουρά. Προετοιμάζεται περισσότερο περιεχόμενο για μετάφραση."
+
+msgid "Preparing content for translation..."
+msgstr "Προετοιμασία περιεχομένου για μετάφραση..."
+
+msgid "%d translation left in the queue..."
+msgid_plural "%d translations left in the queue..."
+msgstr[0] "%d μετάφραση έχει απομείνει στην ουρά..."
+msgstr[1] "%d μεταφράσεις έχουν απομείνει στην ουρά..."
+
+msgid "Translate Everything Automatically has finished translating your content. There are no pending translations in the queue."
+msgstr "Η Αυτόματη Μετάφραση Όλων ολοκλήρωσε τη μετάφραση του περιεχομένου σας. Δεν υπάρχουν εκκρεμείς μεταφράσεις στην ουρά."
+
+msgid "Some items were translated using the Classic Translation Editor and cannot be sent for automatic translation. Please select these items and choose the option to translate them yourself."
+msgstr "Ορισμένα στοιχεία μεταφράστηκαν χρησιμοποιώντας τον Κλασικό Επεξεργαστή Μετάφρασης και δεν μπορούν να σταλούν για αυτόματη μετάφραση. Παρακαλούμε επιλέξτε αυτά τα στοιχεία και επιλέξτε την επιλογή να τα μεταφράσετε μόνοι σας."
+
+msgid "Translate Everything Automatically - enabled"
+msgstr "Αυτόματη Μετάφραση Όλων - ενεργοποιημένη"
+
+msgid "Translate Everything Automatically is enabled"
+msgstr "Η Αυτόματη Μετάφραση Όλων είναι ενεργοποιημένη"
+
+msgid "As you create new content or edit existing content, WPML will automatically translate it, but only from %s to %s."
+msgstr "Καθώς δημιουργείτε νέο περιεχόμενο ή επεξεργάζεστε υπάρχον περιεχόμενο, το WPML θα το μεταφράζει αυτόματα, αλλά μόνο από %s σε %s."
+
+msgid "Translate Everything Automatically is paused — payment required"
+msgstr "Η αυτόματη μετάφραση όλων τέθηκε σε παύση — απαιτείται πληρωμή"
+
+msgid "Automatic translation is paused — payment required"
+msgstr "Η αυτόματη μετάφραση τέθηκε σε παύση — απαιτείται πληρωμή"
+
+msgid "Automatic translation - payment required"
+msgstr "Αυτόματη μετάφραση - απαιτείται πληρωμή"
+
+msgid "We couldn’t process payment for your completed translations. Click “Pay now” to retry and continue using automatic translation."
+msgstr "Δεν μπορέσαμε να επεξεργαστούμε την πληρωμή για τις ολοκληρωμένες μεταφράσεις σας. Κάντε κλικ στο “Πληρώστε τώρα” για να δοκιμάσετε ξανά και να συνεχίσετε να χρησιμοποιείτε την αυτόματη μετάφραση."
+
+msgid "Cancel translation"
+msgstr "Ακύρωση μετάφρασης"
+
+msgid "Translate Everything Automatically is paused — not enough credits"
+msgstr "Η αυτόματη μετάφραση όλων τέθηκε σε παύση — δεν υπάρχουν αρκετές πιστώσεις"
+
+msgid "Automatic translation is paused — not enough credits"
+msgstr "Η αυτόματη μετάφραση τέθηκε σε παύση — δεν υπάρχουν αρκετές πιστώσεις"
+
+msgid "Translation will resume automatically after you assign more credits."
+msgstr "Η μετάφραση θα συνεχιστεί αυτόματα αφού αναθέσετε περισσότερες πιστώσεις."
+
+msgid "This item needs a translation update but can't be translated automatically because it was translated with the Classic Translation Editor."
+msgstr "Αυτό το στοιχείο χρειάζεται ενημέρωση μετάφρασης, αλλά δεν μπορεί να μεταφραστεί αυτόματα επειδή μεταφράστηκε με τον Κλασικό Επεξεργαστή Μετάφρασης."
+
+msgid "This item needs update. Please, select the item and send for translation."
+msgstr "Αυτό το στοιχείο χρειάζεται ενημέρωση. Παρακαλούμε, επιλέξτε το στοιχείο και στείλτε το για μετάφραση."
+
+msgid "Translations completed with the Classic Translation Editor cannot be sent for automatic translation"
+msgstr "Οι μεταφράσεις που ολοκληρώθηκαν με τον Κλασικό Επεξεργαστή Μετάφρασης δεν μπορούν να σταλούν για αυτόματη μετάφραση"
+
+msgid "automatic translation"
+msgstr "αυτόματη μετάφραση"
+
+msgid "unassigned"
+msgstr "μη ανατεθειμένο"
+
+msgid "not translated"
+msgstr "αμετάφραστο"
+
+msgid "waiting for translator"
+msgstr "αναμονή μεταφραστή"
+
+msgid "in progress"
+msgstr "σε εξέλιξη"
+
+msgid "needs update"
+msgstr "χρειάζεται ενημέρωση"
+
+msgid "duplicate"
+msgstr "διπλότυπο"
+
+msgid "complete"
+msgstr "ολοκληρωμένο"
+
+msgid "needs review"
+msgstr "χρειάζεται αναθεώρηση"
+
+msgid "preparing for translation"
+msgstr "προετοιμασία για μετάφραση"
+
+msgid "needs attention"
+msgstr "χρειάζεται προσοχή"
+
+msgid "translation error"
+msgstr "σφάλμα μετάφρασης"
+
+msgid "This item was translated using the WordPress Editor. Switching to the WPML's Translation Editor will overwrite the existing translation."
+msgstr "Αυτό το στοιχείο μεταφράστηκε χρησιμοποιώντας τον Επεξεργαστή του WordPress. Η μετάβαση στον Επεξεργαστή Μετάφρασης του WPML θα αντικαταστήσει την υπάρχουσα μετάφραση."
+
+msgid "This item needs a translation update but was previously translated using the WordPress Editor. Using the WPML's Translation Editor will overwrite the existing translation."
+msgstr "Αυτό το στοιχείο χρειάζεται ενημέρωση μετάφρασης, αλλά είχε προηγουμένως μεταφραστεί χρησιμοποιώντας τον Επεξεργαστή του WordPress. Η χρήση του Επεξεργαστή Μετάφρασης του WPML θα αντικαταστήσει την υπάρχουσα μετάφραση."
+
+msgid "This item hasn't been translated yet and is set to use the WordPress Editor."
+msgstr "Αυτό το στοιχείο δεν έχει μεταφραστεί ακόμα και έχει οριστεί να χρησιμοποιεί τον Επεξεργαστή του WordPress."
+
+msgid "%1$s: %2$s%3$s"
+msgstr "%1$s: %2$s%3$s"
+
+msgid "Could not fetch engines data"
+msgstr "Δεν ήταν δυνατή η ανάκτηση δεδομένων μηχανών"
+
+msgid "Error in fetching currently logged in translator"
+msgstr "Σφάλμα κατά την ανάκτηση του μεταφραστή που είναι συνδεδεμένος αυτήν τη στιγμή"
+
+msgid "Error in fetching local translators"
+msgstr "Σφάλμα κατά την ανάκτηση τοπικών μεταφραστών"
+
+msgid "Published"
+msgstr "Δημοσιευμένο"
+
+msgid "Draft"
+msgstr "Πρόχειρο"
+
+msgid "Trash"
+msgstr "Κάδος"
+
+msgid "Pending"
+msgstr "Εκκρεμεί"
+
+msgid "Private"
+msgstr "Ιδιωτικό"
+
+msgid "Future"
+msgstr "Μελλοντικό"
+
+msgid "Auto Draft"
+msgstr "Αυτόματο πρόχειρο"
+
+msgid "External"
+msgstr "Εξωτερικό"
+
+msgid "Collapse"
+msgstr "Σύμπτυξη"
+
+msgid "Expand"
+msgstr "Ανάπτυξη"
+
+msgid "Select an item"
+msgstr "Επιλέξτε ένα στοιχείο"
+
+msgid "Open dropdown"
+msgstr "Άνοιγμα αναπτυσσόμενου μενού"
+
+msgid "Reset"
+msgstr "Επαναφορά"
+
+msgid "Search"
+msgstr "Αναζήτηση"
+
+msgid "No items found"
+msgstr "Δεν βρέθηκαν στοιχεία"
+
+msgid "OFF"
+msgstr "ΑΝΕΝΕΡΓΟ"
+
+msgid "ON"
+msgstr "ΕΝΕΡΓΟ"
+
+msgid "%1$s Flag"
+msgstr "Σημαία %1$s"
+
+msgid "- Select a review mode -"
+msgstr "- Επιλέξτε έναν τρόπο αναθεώρησης -"
+
+msgid "What would you like to do when WPML finishes translating your content automatically?"
+msgstr "Τι θα θέλατε να κάνετε όταν το WPML ολοκληρώσει την αυτόματη μετάφραση του περιεχομένου σας;"
+
+msgid "What would you like to do after WPML finishes translating your content automatically?"
+msgstr "Τι θα θέλατε να κάνετε αφού το WPML ολοκληρώσει την αυτόματη μετάφραση του περιεχομένου σας;"
+
+msgid "Publish without review"
+msgstr "Δημοσίευση χωρίς αναθεώρηση"
+
+msgid "Recommended with PTC"
+msgstr "Συνιστάται με PTC"
+
+msgid "PTC provides Better Than Human Translations that rarely need improvements, so you can confidently skip the review process. For other translation engines, a human review is recommended to confirm accuracy."
+msgstr "Το PTC παρέχει μεταφράσεις Καλύτερες από Ανθρώπινες που σπάνια χρειάζονται βελτιώσεις, οπότε μπορείτε να παραλείψετε με σιγουριά τη διαδικασία αναθεώρησης. Για άλλες μηχανές μετάφρασης, συνιστάται ανθρώπινη αναθεώρηση για επιβεβαίωση της ακρίβειας."
+
+msgid "WPML publishes translations immediately, skipping the review process."
+msgstr "Το WPML δημοσιεύει τις μεταφράσεις αμέσως, παραλείποντας τη διαδικασία αναθεώρησης."
+
+msgid "Wait for review"
+msgstr "Αναμονή για αναθεώρηση"
+
+msgid "Recommended with DeepL, Google and Microsoft"
+msgstr "Συνιστάται με DeepL, Google και Microsoft"
+
+msgid "DeepL, Google, and Microsoft deliver great translations, but we recommend a human review to confirm they are correct. PTC provides Better Than Human Translations that understand context, so you can confidently skip the review process."
+msgstr "Οι DeepL, Google και Microsoft παρέχουν εξαιρετικές μεταφράσεις, αλλά συνιστούμε ανθρώπινη αναθεώρηση για να επιβεβαιωθεί η ορθότητά τους. Το PTC παρέχει μεταφράσεις Καλύτερες από Ανθρώπινες που κατανοούν το πλαίσιο, οπότε μπορείτε να παραλείψετε με σιγουριά τη διαδικασία αναθεώρησης."
+
+msgid "WPML keeps translations unpublished, so you can review them first."
+msgstr "Το WPML διατηρεί τις μεταφράσεις αδημοσίευτες, ώστε να μπορείτε να τις αναθεωρήσετε πρώτα."
+
+msgid "Your translators review and approve translations before publishing."
+msgstr "Οι μεταφραστές σας αναθεωρούν και εγκρίνουν τις μεταφράσεις πριν από τη δημοσίευση."
+
+msgid "Publish and mark for review"
+msgstr "Δημοσίευση και σήμανση για αναθεώρηση"
+
+msgid "WPML publishes translations immediately but flags them for you to check at your convenience."
+msgstr "Το WPML δημοσιεύει τις μεταφράσεις αμέσως, αλλά τις επισημαίνει για να τις ελέγξετε όποτε σας βολεύει."
+
+msgid "WPML publishes translations immediately but flags them for translators to review later."
+msgstr "Το WPML δημοσιεύει τις μεταφράσεις αμέσως, αλλά τις επισημαίνει για να τις ελέγξουν αργότερα οι μεταφραστές."

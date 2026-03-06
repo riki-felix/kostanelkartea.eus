@@ -1,0 +1,285 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/js/ate/AutoTranslate.js:21
+msgid "Sending for translation"
+msgstr "正在发送以进行翻译"
+
+#: src/js/ate/TranslationDashboardJobsActions.js:23
+msgid ""
+"This content is being automatically translated. If you want to do something "
+"different with it cancel translation jobs first."
+msgstr "此内容正在自动翻译。如果您想对其进行其他操作，请先取消翻译任务。"
+
+#: src/js/ate/enable/init.js:53
+msgid "Connecting to WPML’s Advanced Translation Editor"
+msgstr "正在连接到 WPML 的高级翻译编辑器"
+
+#: src/js/ate/enable/init.js:67
+msgid "Try again"
+msgstr "重试"
+
+#: src/js/ate/review/init.js:17
+msgid "You don't have the rights to review this language"
+msgstr "您没有权限审核此语言"
+
+#: src/js/ate/status-bar/components/AteJobsStatus.js:33
+msgid "translations"
+msgstr "翻译"
+
+#: src/js/ate/status-bar/components/AteJobsStatus.js:34
+msgid "left in the queue"
+msgstr "队列中剩余"
+
+#: src/js/ate/status-bar/components/AteJobsStatus.js:43
+msgid "Translation on hold"
+msgstr "翻译暂停"
+
+#: src/js/ate/status-bar/components/AteJobsStatus.js:45
+#: src/js/ate/status-bar/components/constants.js:16
+msgid "No translations in the queue"
+msgstr "队列中没有翻译"
+
+#: src/js/ate/status-bar/components/AteJobsStatus.js:50
+msgid "%d translations left"
+msgstr "剩余 %d 个翻译"
+
+#: src/js/ate/status-bar/components/StatusBar/Notifications.js:38
+msgid "%d min remaining"
+msgstr "剩余 %d 分钟"
+
+#: src/js/ate/status-bar/components/StatusBar/Notifications.js:39
+msgid "less than 1 min remaining"
+msgstr "剩余时间不足 1 分钟"
+
+#: src/js/ate/status-bar/components/constants.js:105
+#. %d is replaced by the number of jobs to review.
+msgid "%d translation waiting for review"
+msgid_plural "%d translations waiting for review"
+msgstr[0] "有 %d 个翻译等待审核"
+
+#: src/js/ate/status-bar/components/constants.js:119
+msgid "Translate Everything Automatically has unresolved jobs"
+msgstr "自动翻译所有内容有未解决的作业"
+
+#: src/js/ate/status-bar/components/constants.js:121
+msgid "Automatic translation has unresolved jobs"
+msgstr "自动翻译有未解决的作业"
+
+#: src/js/ate/status-bar/components/constants.js:126
+#. %d is replaced by the number of unsolvable jobs.
+msgid "%d job couldn't be completed. Go to Translation Dashboard to review and resolve."
+msgid_plural "%d jobs couldn't be completed. Go to Translation Dashboard to review and resolve."
+msgstr[0] "%d 个作业无法完成。请转到翻译控制面板进行审核和解决。"
+
+#: src/js/ate/status-bar/components/constants.js:14
+#: src/js/ate/translate-everything/components/Status/index.js:50
+msgid "Automatic translation status"
+msgstr "自动翻译状态"
+
+#: src/js/ate/status-bar/components/constants.js:18
+msgid "Translate Everything Automatically"
+msgstr "自动翻译所有内容"
+
+#: src/js/ate/status-bar/components/constants.js:20
+msgid "Translate Everything Automatically is active"
+msgstr "“自动翻译所有内容”已启用"
+
+#: src/js/ate/status-bar/components/constants.js:24
+msgid "Translate Everything Automatically is paused — payment required"
+msgstr "自动翻译所有内容已暂停 — 需要付款"
+
+#: src/js/ate/status-bar/components/constants.js:26
+msgid "Automatic translation is paused — payment required"
+msgstr "自动翻译已暂停 — 需要付款"
+
+#: src/js/ate/status-bar/components/constants.js:28
+msgid ""
+"We couldn’t process your payment. Click “Pay now” to complete the "
+"transaction and resume automatic translation."
+msgstr "我们无法处理您的付款。单击 “立即付款” 以完成交易并恢复自动翻译。"
+
+#: src/js/ate/status-bar/components/constants.js:32
+msgid "Translate Everything automatically is paused - not enough credits"
+msgstr "自动翻译所有内容已暂停 - 积分不足"
+
+#: src/js/ate/status-bar/components/constants.js:34
+msgid "Automatic translation is paused — not enough credits"
+msgstr "自动翻译已暂停 — 积分不足"
+
+#: src/js/ate/status-bar/components/constants.js:36
+msgid "Translation will resume automatically once you assign more credits."
+msgstr "一旦您分配更多积分，翻译将自动恢复。"
+
+#: src/js/ate/status-bar/components/constants.js:38
+msgid "You have %s prepaid translation credit in your WPML account. Assign these credits to this site to resume automatic translation"
+msgid_plural "You have %s prepaid translation credits in your WPML account. Assign these credits to this site to resume automatic translation"
+msgstr[0] "您的 WPML 账户中有 %s 预付翻译积分。将这些积分分配给此网站以恢复自动翻译"
+
+#: src/js/ate/status-bar/components/constants.js:72
+#: src/js/ate/status-bar/components/sending/index.js:10
+msgid "Preparing content for translation"
+msgstr "正在准备内容以进行翻译"
+
+#: src/js/ate/status-bar/components/constants.js:74
+#: src/js/ate/status-bar/components/sending/index.js:9
+msgid "Preparing more content for translation"
+msgstr "正在准备更多内容以进行翻译"
+
+#: src/js/ate/status-bar/components/constants.js:77
+#. %s is replaced by the name of the language.
+msgid ""
+"Your default language, %s, must be mapped to a supported language in order "
+"to use automatic translation."
+msgstr "您的默认语言 %s 必须映射到受支持的语言才能使用自动翻译。"
+
+#: src/js/ate/status-bar/components/constants.js:85
+#. %s is replaced by the language(s) name.
+msgid "Your language, %s, must be mapped to a supported language in order to use automatic translation."
+msgid_plural "The following languages on your site must be mapped to a supported language in order to use automatic translation: %s"
+msgstr[0] "您网站上的以下语言必须映射到受支持的语言才能使用自动翻译：%s"
+
+#: src/js/ate/status-bar/components/constants.js:95
+msgid ""
+"Content in those languages: %s, cannot be automatically translated unless "
+"you map them to a language that's different from the default."
+msgstr "除非您将这些语言映射到与默认语言不同的语言，否则这些语言中的内容：%s 无法自动翻译。"
+
+#: src/js/ate/status-bar/components/credit/index.js:100
+msgid "Account credits used"
+msgstr "已使用的账户积分"
+
+#: src/js/ate/status-bar/components/credit/index.js:110
+msgid ""
+"Once you’ve used all your prepaid credits, we’ll invoice you for any "
+"additional credits you use after the end of the month"
+msgstr "一旦您用完所有预付积分，我们将在月底后向您开具任何额外积分的账单"
+
+#: src/js/ate/status-bar/components/credit/index.js:115
+msgid "Payment limit:"
+msgstr "付款限额："
+
+#: src/js/ate/status-bar/components/credit/index.js:116
+msgid "%s credits"
+msgstr "%s 积分"
+
+#: src/js/ate/status-bar/components/credit/index.js:119
+msgid "Credits used:"
+msgstr "已使用的积分："
+
+#: src/js/ate/status-bar/components/credit/index.js:123
+msgid "Credits left:"
+msgstr "剩余积分："
+
+#: src/js/ate/status-bar/components/credit/index.js:133
+msgid ""
+"The number of credit you will receive an invoice for at the end of the "
+"month. View your pay-as-you-go details in your site’s automatic translation "
+"settings."
+msgstr "您将在月底收到账单的积分数量。在您网站的自动翻译设置中查看您的现收现付详情。"
+
+#: src/js/ate/status-bar/components/credit/index.js:139
+msgid "Calculating"
+msgstr "正在计算"
+
+#: src/js/ate/status-bar/components/credit/index.js:59
+msgid "Remaining prepaid credits that are assigned to this site on WPML.org."
+msgstr "分配给此网站的 WPML.org 剩余预付积分。"
+
+#: src/js/ate/status-bar/components/credit/index.js:73
+msgid "Prepaid credits left"
+msgstr "剩余预付积分"
+
+#: src/js/ate/status-bar/components/credit/index.js:99
+msgid "Pay-as-you-go credits used"
+msgstr "已使用的现收现付积分"
+
+#: src/js/ate/status-bar/components/minimum-requirements/MinimumRequirementsNotification.js:25
+msgid "Your site doesn't meet WPML's minimum requirements"
+msgstr "您的网站不符合 WPML 的最低要求"
+
+#: src/js/ate/status-bar/components/minimum-requirements/MinimumRequirementsNotification.js:31
+msgid "Fix it"
+msgstr "修复"
+
+#: src/js/ate/status-bar/model/notification-center-action-presets.js:17
+msgid "Stop"
+msgstr "停止"
+
+#: src/js/ate/status-bar/model/notification-center-action-presets.js:26
+#: src/js/ate/status-icons/StatusUpdater.js:133
+msgid "Pay now"
+msgstr "立即付款"
+
+#: src/js/ate/status-bar/model/notification-center-action-presets.js:34
+#: src/js/ate/status-icons/StatusUpdater.js:134
+msgid "Get more credits"
+msgstr "获取更多积分"
+
+#: src/js/ate/status-bar/model/notification-center-action-presets.js:42
+msgid "Assign credits"
+msgstr "分配积分"
+
+#: src/js/ate/status-bar/model/notification-center-action-presets.js:50
+msgid "Go to Translation Jobs"
+msgstr "转到翻译作业"
+
+#: src/js/ate/status-bar/model/notification-center-action-presets.js:8
+msgid "Resume"
+msgstr "恢复"
+
+#: src/js/ate/status-icons/StatusUpdater.js:159
+msgid ""
+"This translation couldn't be completed due to an unexpected error. Please "
+"try resending it."
+msgstr "由于意外错误，此翻译无法完成。请尝试重新发送。"
+
+#: src/js/ate/status-icons/StatusUpdater.js:80
+msgid "Refreshing translation status"
+msgstr "正在刷新翻译状态"
+
+#: src/js/ate/translate-everything/components/ManualTranslationStatus/index.js:26
+msgid ""
+"Read more about how to translate your content in the <a>Getting Started "
+"Guide</a>"
+msgstr "在<a>入门指南</a>中阅读有关如何翻译内容的更多信息"
+
+#: src/js/ate/translate-everything/components/ManualTranslationStatus/index.js:36
+msgid "Let's Start Translating!"
+msgstr "开始翻译！"
+
+#: src/js/ate/translate-everything/components/ManualTranslationStatus/index.js:38
+msgid ""
+"Choose your content from the Translation Dashboard below and create your "
+"first translation job!"
+msgstr "从下面的翻译仪表板中选择您的内容并创建您的第一个翻译任务！"
+
+#: src/js/ate/translate-everything/components/Status/index.js:105
+msgid ""
+"Change your <a>automatic translation settings</a> (in-progress translation "
+"jobs will be completed with the current settings)."
+msgstr "更改您的<a>自动翻译设置</a>（正在进行的翻译任务将使用当前设置完成）。"
+
+#: src/js/ate/translate-everything/components/Status/index.js:115
+msgid "Read more about translating your site automatically."
+msgstr "阅读有关自动翻译您网站的更多信息。"
+
+#: src/js/ate/translate-everything/components/Status/index.js:49
+msgid "Your site is being automatically translated!"
+msgstr "您的网站正在自动翻译！"
+
+#: src/js/ate/translate-everything/components/Status/index.js:58
+msgid "Calculating..."
+msgstr "正在计算..."
+
+#: src/js/ate/translate-everything/components/Status/index.js:88
+msgid "Do not close WP admin!"
+msgstr "请勿关闭 WP 管理员！"
+
+#: src/js/ate/translate-everything/components/Status/index.js:96
+msgid "The number of translations"
+msgstr "翻译数量"

@@ -1,0 +1,1513 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-18T16:02:11+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: wpml\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Untranslated strings that I encounter on front-end while logged in"
+msgstr "Các chuỗi chưa dịch mà tôi gặp ở giao diện người dùng khi đăng nhập"
+
+msgid "Untranslated strings that all front-end users encounter"
+msgstr "Các chuỗi chưa dịch mà tất cả người dùng giao diện người dùng gặp phải"
+
+msgid "Disable auto-registration of strings"
+msgstr "Tắt tự động đăng ký chuỗi"
+
+msgid "Plugins"
+msgstr "Plugin"
+
+msgid "Themes"
+msgstr "Giao diện"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "Other"
+msgstr "Khác"
+
+msgid "We cancelled %1$d of %2$d items, but %3$d failed. Please reload the page and try again."
+msgstr "Chúng tôi đã hủy %1$d trong số %2$d mục, nhưng %3$d đã thất bại. Vui lòng tải lại trang và thử lại."
+
+msgid "We resent %1$d of %2$d items, but %3$d failed. Please reload the page and try again."
+msgstr "Chúng tôi đã gửi lại %1$d trong số %2$d mục, nhưng %3$d đã thất bại. Vui lòng tải lại trang và thử lại."
+
+msgid "Error in fetching default translation batch name"
+msgstr "Lỗi khi tìm nạp tên lô dịch mặc định"
+
+msgid "Error in fetching translation editor type."
+msgstr "Lỗi khi tìm nạp loại trình chỉnh sửa bản dịch."
+
+msgid "Error in fetching untranslated types count"
+msgstr "Lỗi khi tìm nạp số lượng loại chưa dịch"
+
+msgid "Error in fetching remote translation service data."
+msgstr "Lỗi khi tìm nạp dữ liệu dịch vụ dịch thuật từ xa."
+
+msgid "Validation failed"
+msgstr "Xác thực không thành công"
+
+msgid "Translation jobs couldn’t be canceled"
+msgstr "Không thể hủy các công việc dịch"
+
+msgid "Reload the page and try again."
+msgstr "Tải lại trang và thử lại."
+
+msgid "All unfinished translation jobs were canceled"
+msgstr "Tất cả các công việc dịch chưa hoàn thành đã bị hủy"
+
+msgid "Please wait until download finishes"
+msgstr "Vui lòng đợi cho đến khi tải xuống hoàn tất"
+
+msgid "You need to wait 5 minutes after the last check"
+msgstr "Bạn cần đợi 5 phút sau lần kiểm tra cuối cùng"
+
+msgid "Check status and get translations"
+msgstr "Kiểm tra trạng thái và nhận bản dịch"
+
+msgid "Status: "
+msgstr "Trạng thái: "
+
+msgid "Downloaded jobs: "
+msgstr "Công việc đã tải xuống: "
+
+msgid "Cancelled jobs: "
+msgstr "Công việc đã hủy: "
+
+msgid "none of your translation jobs have been completed"
+msgstr "không có công việc dịch thuật nào của bạn được hoàn thành"
+
+msgid "Checking translation jobs status. Please don't close this page!"
+msgstr "Đang kiểm tra trạng thái công việc dịch thuật. Vui lòng không đóng trang này!"
+
+msgid " have been sent to remote translators"
+msgstr " đã được gửi đến người dịch từ xa"
+
+msgid " has been sent to remote translators"
+msgstr " đã được gửi đến người dịch từ xa"
+
+msgid "Last check: Never"
+msgstr "Lần kiểm tra cuối: Không bao giờ"
+
+msgid "Filtering is disabled to show all selected items. "
+msgstr "Đã tắt bộ lọc để hiển thị tất cả các mục đã chọn. "
+
+msgid "Apply filters"
+msgstr "Áp dụng bộ lọc"
+
+msgid "%d item selected"
+msgid_plural "%d items selected"
+msgstr[0] "Đã chọn %d mục"
+
+msgid "(%d words to translate)"
+msgstr "(%d từ cần dịch)"
+
+msgid "%s item not showing."
+msgid_plural "%s items not showing."
+msgstr[0] "Không hiển thị %s mục."
+
+msgid "Show all selected items"
+msgstr "Hiển thị tất cả các mục đã chọn"
+
+msgid "Translate your content"
+msgstr "Dịch nội dung của bạn"
+
+msgid "Unselect all"
+msgstr "Bỏ chọn tất cả"
+
+msgid "Source Language:"
+msgstr "Ngôn ngữ nguồn:"
+
+msgid "translated to:"
+msgstr "đã dịch sang:"
+
+msgid "Filter"
+msgstr "Lọc"
+
+msgid "You are about to change the source language filter from %s to %s"
+msgstr "Bạn sắp thay đổi bộ lọc ngôn ngữ nguồn từ %s thành %s"
+
+msgid "Updating the source language filter will clear the items you've selected for translation. Are you sure you want to continue?"
+msgstr "Cập nhật bộ lọc ngôn ngữ nguồn sẽ xóa các mục bạn đã chọn để dịch. Bạn có chắc chắn muốn tiếp tục không?"
+
+msgid "Change source language"
+msgstr "Thay đổi ngôn ngữ nguồn"
+
+msgid "Cancel"
+msgstr "Hủy"
+
+msgid "Filter by publication status"
+msgstr "Lọc theo trạng thái xuất bản"
+
+msgid "All Statuses"
+msgstr "Tất cả trạng thái"
+
+msgid "All languages"
+msgstr "Tất cả ngôn ngữ"
+
+msgid "All translation statuses"
+msgstr "Tất cả trạng thái dịch"
+
+msgid "Not completed"
+msgstr "Chưa hoàn thành"
+
+msgid "Needs updating"
+msgstr "Cần cập nhật"
+
+msgid "Translation in progress"
+msgstr "Đang dịch"
+
+msgid "Translation complete"
+msgstr "Dịch hoàn tất"
+
+msgid "Filter by translation status"
+msgstr "Lọc theo trạng thái dịch"
+
+msgid "Global Filter"
+msgstr "Bộ lọc toàn cầu"
+
+msgid "Parent:"
+msgstr "Cha:"
+
+msgid "Search parent by title"
+msgstr "Tìm kiếm cha theo tiêu đề"
+
+msgid "Search by term title in %s"
+msgstr "Tìm kiếm theo tiêu đề thuật ngữ trong %s"
+
+msgid "All taxonomies"
+msgstr "Tất cả các phân loại"
+
+msgid "Loading"
+msgstr "Đang tải"
+
+msgid "Taxonomy Term:"
+msgstr "Thuật ngữ phân loại:"
+
+msgid "Loading terms"
+msgstr "Đang tải thuật ngữ"
+
+msgid "No terms found"
+msgstr "Không tìm thấy thuật ngữ nào"
+
+msgid "Filter by:"
+msgstr "Lọc theo:"
+
+msgid "Title"
+msgstr "Tiêu đề"
+
+msgid "Automatic translation paused — payment required to continue."
+msgstr "Dịch tự động bị tạm dừng — yêu cầu thanh toán để tiếp tục."
+
+msgid "You have %1s%2s prepaid translation credit in your WPML account%3s. Assign these credits to this site to resume automatic translation"
+msgid_plural "You have %1s%2s prepaid translation credits in your WPML account%3s. Assign these credits to this site to resume automatic translation"
+msgstr[0] "Bạn có %1s%2s tín dụng dịch trả trước trong tài khoản WPML của bạn%3s. Gán các tín dụng này cho trang web này để tiếp tục dịch tự động"
+
+msgid "Not enough credits to continue automatic translation. Add more credits to resume."
+msgstr "Không đủ tín dụng để tiếp tục dịch tự động. Thêm tín dụng để tiếp tục."
+
+msgid "Pay now"
+msgstr "Thanh toán ngay"
+
+msgid "Get more credits"
+msgstr "Nhận thêm tín dụng"
+
+msgid "Assign credits"
+msgstr "Gán tín dụng"
+
+msgid "View"
+msgstr "Xem"
+
+msgid "Edit"
+msgstr "Chỉnh sửa"
+
+msgid "Edit note for the translators"
+msgstr "Chỉnh sửa ghi chú cho người dịch"
+
+msgid "Add note for the translators"
+msgstr "Thêm ghi chú cho người dịch"
+
+msgid "This page is set to be %1$stranslated manually%2$s using the WordPress Editor"
+msgstr "Trang này được đặt là %1$sdịch thủ công%2$s bằng Trình chỉnh sửa WordPress"
+
+msgid "Select %s"
+msgstr "Chọn %s"
+
+msgid "(no title)"
+msgstr "(không có tiêu đề)"
+
+msgid "Image"
+msgstr "Hình ảnh"
+
+msgid "Date / Status"
+msgstr "Ngày / trạng thái"
+
+msgid "Loading items..."
+msgstr "Đang tải mục..."
+
+msgid "%1$d %2$s selected"
+msgstr "%1$d %2$s đã chọn"
+
+msgid "items"
+msgstr "mục"
+
+msgid "Filtering is disabled to show all selected items"
+msgstr "Đã tắt bộ lọc để hiển thị tất cả các mục đã chọn"
+
+msgid "Apply filter"
+msgstr "Áp dụng bộ lọc"
+
+msgid "%1$d %2$s not showing"
+msgstr "%1$d %2$s không hiển thị"
+
+msgid "Show selected items"
+msgstr "Hiển thị các mục đã chọn"
+
+msgid " / page"
+msgstr " / trang"
+
+msgid "Previous"
+msgstr "Trước"
+
+msgid "Next"
+msgstr "Tiếp theo"
+
+msgid "Your site's content is too vast for a single translation batch. Use filters to reduce the selection, then \"select all\"."
+msgstr "Nội dung trang web của bạn quá lớn cho một lô dịch duy nhất. Sử dụng bộ lọc để giảm lựa chọn, sau đó “chọn tất cả”."
+
+msgid "The current filter captures too much content. Narrow it down to enable \"select all\" for translation."
+msgstr "Bộ lọc hiện tại thu thập quá nhiều nội dung. Thu hẹp nó để bật “chọn tất cả” để dịch."
+
+msgid "Select All"
+msgstr "Chọn tất cả"
+
+msgid "All %d items matching criteria are selected"
+msgstr "Tất cả %d mục phù hợp với tiêu chí đã được chọn"
+
+msgid "All %d items in this section are selected"
+msgstr "Tất cả %d mục trong phần này đã được chọn"
+
+msgid "You have too many items to send for translation at once. Apply a filter to narrow down the items to enable this option."
+msgstr "Bạn đã chọn quá nhiều mục để gửi dịch cùng một lúc. Áp dụng bộ lọc để thu hẹp các mục để bật tùy chọn này."
+
+msgid "Clear selection"
+msgstr "Xóa lựa chọn"
+
+msgid "Select all items that match this search"
+msgstr "Chọn tất cả các mục phù hợp với tìm kiếm này"
+
+msgid "Loading..."
+msgstr "Đang tải..."
+
+msgid "Select all %ss"
+msgstr "Chọn tất cả %s"
+
+msgid "Save note"
+msgstr "Lưu ghi chú"
+
+msgid "The following target languages do not support automatic translation: %s. <a>Map to known languages</a> to enable automatic translation."
+msgstr "Các ngôn ngữ đích sau không hỗ trợ dịch tự động: %s. <a>Ánh xạ tới các ngôn ngữ đã biết</a> để bật dịch tự động."
+
+msgid "The site's default language %s doesn't support automatic translation."
+msgstr "Ngôn ngữ mặc định của trang web %s không hỗ trợ dịch tự động."
+
+msgid "Some sections are hidden due to current filter settings or because they have no items. <show_all>Show all translation statuses</show_all>"
+msgstr "Một số phần bị ẩn do cài đặt bộ lọc hiện tại hoặc vì chúng không có mục nào. <show_all>Hiển thị tất cả trạng thái dịch</show_all>"
+
+msgid "Step 1"
+msgstr "Bước 1"
+
+msgid "Select items for translation"
+msgstr "Chọn các mục để dịch"
+
+msgid "Clear filters"
+msgstr "Xóa bộ lọc"
+
+msgid "strings"
+msgstr "chuỗi"
+
+msgid "WPML didn't find any %s matching your criteria."
+msgstr "WPML không tìm thấy bất kỳ %s nào phù hợp với tiêu chí của bạn."
+
+msgid "You have too many items selected to use this feature. Deselect some of the items to enable it."
+msgstr "Bạn đã chọn quá nhiều mục để sử dụng tính năng này. Bỏ chọn một số mục để bật nó."
+
+msgid "Show strings in:"
+msgstr "Hiển thị chuỗi trong:"
+
+msgid "Display Columns"
+msgstr "Hiển thị cột"
+
+msgid "Close modal"
+msgstr "Đóng cửa sổ bật lên"
+
+msgid "Select visible columns"
+msgstr "Chọn các cột hiển thị"
+
+msgid "String"
+msgstr "Chuỗi"
+
+msgid "Name"
+msgstr "Tên"
+
+msgid "Domain"
+msgstr "Miền"
+
+msgid "Source"
+msgstr "Nguồn"
+
+msgid "Type"
+msgstr "Loại"
+
+msgid "Apply"
+msgstr "Áp dụng"
+
+msgid "All domains"
+msgstr "Tất cả các miền"
+
+msgid "All sources"
+msgstr "Tất cả các nguồn"
+
+msgid "Frontend (viewed)"
+msgstr "Giao diện người dùng (đã xem)"
+
+msgid "Backend (viewed)"
+msgstr "Phần phụ trợ (đã xem)"
+
+msgid "Unknown"
+msgstr "Không xác định"
+
+msgid "Search string or a name"
+msgstr "Tìm kiếm chuỗi hoặc tên"
+
+msgid "All Translation Priorities"
+msgstr "Tất cả các ưu tiên dịch"
+
+msgid "This filter is available only if source is set to \"Frontend\" or \"Backend\"."
+msgstr "Bộ lọc này chỉ khả dụng nếu nguồn được đặt thành “Giao diện người dùng” hoặc “Phần phụ trợ”."
+
+msgid "front-end"
+msgstr "giao diện người dùng"
+
+msgid "back-end"
+msgstr "phần phụ trợ"
+
+msgid "viewed"
+msgstr "đã xem"
+
+msgid "Strings in the theme and plugins"
+msgstr "Chuỗi trong giao diện và plugin"
+
+msgid "Translate front-end texts you can customize from the WordPress admin like footer text, copyright notices, plugin options and settings, time format, widget texts, and more."
+msgstr "Dịch các văn bản giao diện người dùng mà bạn có thể tùy chỉnh từ quản trị WordPress như văn bản chân trang, thông báo bản quyền, tùy chọn và cài đặt plugin, định dạng thời gian, văn bản tiện ích, v.v."
+
+msgid "Translating Strings From Admin and Settings"
+msgstr "Dịch chuỗi từ quản trị và cài đặt"
+
+msgid "Translate texts in admin screens"
+msgstr "Dịch văn bản trong màn hình quản trị"
+
+msgid "Translate User Meta Information"
+msgstr "Dịch thông tin meta người dùng"
+
+msgid "Making User Meta Information Translatable"
+msgstr "Làm cho thông tin meta người dùng có thể dịch được"
+
+msgid "Translate user profile strings"
+msgstr "Dịch chuỗi hồ sơ người dùng"
+
+msgid "You need to visit translations on your site's front-end (<a/>) and WPML will identify all untranslated strings and list them here. "
+msgstr "Bạn cần truy cập các bản dịch trên giao diện người dùng của trang web (<a/>) và WPML sẽ xác định tất cả các chuỗi chưa dịch và liệt kê chúng ở đây. "
+
+msgid "hide details"
+msgstr "ẩn chi tiết"
+
+msgid "more details"
+msgstr "thêm chi tiết"
+
+msgid "Still can't find the strings you're looking to translate? Add more strings for translation."
+msgstr "Vẫn không tìm thấy các chuỗi bạn muốn dịch? Thêm nhiều chuỗi hơn để dịch."
+
+msgid "Not seeing strings that you are looking for?"
+msgstr "Không thấy các chuỗi bạn đang tìm kiếm?"
+
+msgid "Enable the autoregistration setting."
+msgstr "Bật cài đặt tự động đăng ký."
+
+msgid "Visit translations on the site's frontend for WPML to see which strings are missing translations. Visiting one language is enough: %s."
+msgstr "Truy cập bản dịch trên giao diện người dùng của trang web cho WPML để xem những chuỗi nào bị thiếu bản dịch. Chỉ cần truy cập một ngôn ngữ là đủ: %s."
+
+msgid "Alternatively, you can register strings manually."
+msgstr "Ngoài ra, bạn có thể đăng ký chuỗi thủ công."
+
+msgid "Translate Everything translates only those strings which are registered in English language"
+msgstr "Dịch mọi thứ chỉ dịch những chuỗi được đăng ký bằng tiếng Anh"
+
+msgid "Most strings from your plugins and theme are in English, so we’re showing them alongside your default language. Use the <b>Source Language</b> filter to view strings in a specific language."
+msgstr "Hầu hết các chuỗi từ plugin và giao diện của bạn đều bằng tiếng Anh, vì vậy chúng tôi hiển thị chúng cùng với ngôn ngữ mặc định của bạn. Sử dụng bộ lọc <b>Ngôn ngữ nguồn</b> để xem các chuỗi bằng một ngôn ngữ cụ thể."
+
+msgid "You’re using <b>%s</b> to cache your site, which may prevent WPML from automatically registering new strings. To fix this, clear your page cache, then visit your translated pages again on the frontend to detect new strings."
+msgstr "Bạn đang sử dụng <b>%s</b> để lưu vào bộ nhớ đệm trang web của mình, điều này có thể ngăn WPML tự động đăng ký các chuỗi mới. Để khắc phục điều này, hãy xóa bộ nhớ đệm trang của bạn, sau đó truy cập lại các trang đã dịch của bạn trên giao diện người dùng để phát hiện các chuỗi mới."
+
+msgid "WPML can detect strings that appear on the site and list them here. This feature helps you identify the strings that actually appear on the site and translate them. To see here only the strings that actually appear on the site, you need to enable this feature."
+msgstr "WPML có thể phát hiện các chuỗi xuất hiện trên trang web và liệt kê chúng ở đây. Tính năng này giúp bạn xác định các chuỗi thực sự xuất hiện trên trang web và dịch chúng. Để chỉ xem các chuỗi thực sự xuất hiện trên trang web ở đây, bạn cần bật tính năng này."
+
+msgid "WPML detects strings that appear on the site and lists them here. This feature helps you identify the strings that actually appear on the site and translate them. To see here all the strings in the site, you need to disable this feature."
+msgstr "WPML phát hiện các chuỗi xuất hiện trên trang web và liệt kê chúng ở đây. Tính năng này giúp bạn xác định các chuỗi thực sự xuất hiện trên trang web và dịch chúng. Để xem tất cả các chuỗi trên trang web ở đây, bạn cần tắt tính năng này."
+
+msgid "Detect untranslated strings"
+msgstr "Phát hiện chuỗi chưa dịch"
+
+msgid "WPML can detect untranslated strings and automatically register them for translation. This happens in real time as you or your visitors browse your website."
+msgstr "WPML có thể phát hiện các chuỗi chưa dịch và tự động đăng ký chúng để dịch. Điều này xảy ra trong thời gian thực khi bạn hoặc khách truy cập của bạn duyệt trang web của bạn."
+
+msgid "Automatically register untranslated strings"
+msgstr "Tự động đăng ký chuỗi chưa dịch"
+
+msgid "Learn how to use auto-registration"
+msgstr "Tìm hiểu cách sử dụng tự động đăng ký"
+
+msgid "recommended"
+msgstr "được đề xuất"
+
+msgid "Also register strings from the website's back-end"
+msgstr "Cũng đăng ký chuỗi từ phần phụ trợ của trang web"
+
+msgid "Save settings"
+msgstr "Lưu cài đặt"
+
+msgid "Request failed because of the network error"
+msgstr "Yêu cầu không thành công do lỗi mạng"
+
+msgid "Try again"
+msgstr "Thử lại"
+
+msgid "Enabled"
+msgstr "Đã bật"
+
+msgid "Disabled"
+msgstr "Đã tắt"
+
+msgid "Modify"
+msgstr "Sửa đổi"
+
+msgid "You can only translate %1$s from the site's default language (%2$s)."
+msgstr "Bạn chỉ có thể dịch %1$s từ ngôn ngữ mặc định của trang web (%2$s)."
+
+msgid "%1sCheck pricing%2s."
+msgstr "%1sKiểm tra giá%2s."
+
+msgid "The current site content costs %1$sapproximately €%2$s%3$s to translate."
+msgstr "Nội dung trang web hiện tại có chi phí dịch khoảng %1$s€%2$s%3$s."
+
+msgid "The selected content costs %1$sapproximately €%2$s%3$s to translate."
+msgstr "Nội dung đã chọn có chi phí dịch khoảng %1$s€%2$s%3$s."
+
+msgid "Pay-As-You-Go"
+msgstr "Trả tiền cho những gì bạn tiêu thụ"
+
+msgid "Activate Pay-As-You-Go to translate automatically with monthly billing."
+msgstr "Kích hoạt Trả tiền cho những gì bạn tiêu thụ để dịch tự động với thanh toán hàng tháng."
+
+msgid "Activate Pay-As-You-Go"
+msgstr "Kích hoạt Trả tiền cho những gì bạn tiêu thụ"
+
+msgid "Already using Pay-As-You-Go on another site?"
+msgstr "Đã sử dụng Trả tiền cho những gì bạn tiêu thụ trên một trang web khác?"
+
+msgid "Connect this site to it"
+msgstr "Kết nối trang web này với nó"
+
+msgid "Buy and assign credits"
+msgstr "Mua và gán tín dụng"
+
+msgid "Buy a %1$sprepaid package%2$s with at least %3$s%4$s credits%5$s and assign them to this site."
+msgstr "Mua một %1$sgói trả trước%2$s với ít nhất %3$s%4$s tín dụng%5$s và gán chúng cho trang web này."
+
+msgid "This amount will cover translation of all your current content."
+msgstr "Số tiền này sẽ bao gồm chi phí dịch tất cả nội dung hiện tại của bạn."
+
+msgid "Assign at least %1$s%2$s credits%3$s to this site to continue."
+msgstr "Gán ít nhất %1$s%2$s tín dụng%3$s cho trang web này để tiếp tục."
+
+msgid "Assign credits from your WPML account and buy an additional %1$sprepaid package%2$s with at least %3$s%4$s credits%5$s credits to cover the remaining amount."
+msgstr "Gán tín dụng từ tài khoản WPML của bạn và mua thêm %1$sgói trả trước%2$s với ít nhất %3$s%4$s tín dụng%5$s để trang trải số tiền còn lại."
+
+msgid "Prepaid credits"
+msgstr "Tín dụng trả trước"
+
+msgid "There are %1$s%2$s available on your WPML account.%3$s"
+msgstr "Có %1$s%2$s có sẵn trong tài khoản WPML của bạn.%3$s"
+
+msgid "(Only the WPML account owner can do this.)"
+msgstr "(Chỉ chủ sở hữu tài khoản WPML mới có thể làm điều này.)"
+
+msgid "Checking for new credits..."
+msgstr "Đang kiểm tra tín dụng mới..."
+
+msgid "Still not enough credits. Refresh again in %d seconds."
+msgstr "Vẫn không đủ tín dụng. Làm mới lại sau %d giây."
+
+msgid "Already assigned?"
+msgstr "Đã được gán?"
+
+msgid "Refresh"
+msgstr "Làm mới"
+
+msgid "Connection Error. Please wait a minute and reload this page. If the problem continues, please contact WPML support."
+msgstr "Lỗi kết nối. Vui lòng đợi một phút và tải lại trang này. Nếu sự cố vẫn tiếp diễn, vui lòng liên hệ với bộ phận hỗ trợ của WPML."
+
+msgid "Pay-As-You-Go activated"
+msgstr "Trả tiền cho những gì bạn tiêu thụ đã được kích hoạt"
+
+msgid "You can now continue translating your content automatically."
+msgstr "Bây giờ bạn có thể tiếp tục dịch nội dung của mình một cách tự động."
+
+msgid "%s credits assigned to this site."
+msgstr "%s tín dụng đã được gán cho trang web này."
+
+msgid "You don’t have enough credits to translate this content."
+msgstr "Bạn không có đủ tín dụng để dịch nội dung này."
+
+msgid "You have %s credits — %s more are needed to translate this content"
+msgstr "Bạn có %s tín dụng — cần thêm %s để dịch nội dung này"
+
+msgid "You’re missing %s credits for the translation jobs in progress — %s are needed in total"
+msgstr "Bạn thiếu %s tín dụng cho các công việc dịch đang tiến hành — tổng cộng cần %s"
+
+msgid "Summary:"
+msgstr "Tóm tắt:"
+
+msgid "Credit"
+msgid_plural "Credits"
+msgstr[0] "Tín dụng"
+
+msgid "€%1$s approximately"
+msgstr "Khoảng €%1$s"
+
+msgid "Pricing"
+msgstr "Giá cả"
+
+msgid "Your Automatic Translation Credits"
+msgstr "Tín dụng dịch tự động của bạn"
+
+msgid "To proceed with translation, activate Pay-As-You-Go or assign prepaid credits."
+msgstr "Để tiếp tục dịch, hãy kích hoạt Trả tiền cho những gì bạn tiêu thụ hoặc gán tín dụng trả trước."
+
+msgid "Leave existing translations as they are"
+msgstr "Giữ nguyên các bản dịch hiện có"
+
+msgid "Overwrite existing translations"
+msgstr "Ghi đè các bản dịch hiện có"
+
+msgid "Some of the content you want to translate is already translated"
+msgstr "Một số nội dung bạn muốn dịch đã được dịch"
+
+msgid "What do you want to do with the content that's already translated?"
+msgstr "Bạn muốn làm gì với nội dung đã được dịch?"
+
+msgid "Suggested deadline:"
+msgstr "Hạn chót đề xuất:"
+
+msgid "Set a batch name and deadline"
+msgstr "Đặt tên lô và hạn chót"
+
+msgid "You can assign a custom name to this batch for easy tracking and suggest a deadline to clarify the priority for translators."
+msgstr "Bạn có thể gán một tên tùy chỉnh cho lô này để dễ dàng theo dõi và đề xuất một hạn chót để làm rõ ưu tiên cho người dịch."
+
+msgid "Batch name:"
+msgstr "Tên lô:"
+
+msgid "Default translation engine: "
+msgstr "Công cụ dịch mặc định: "
+
+msgid "Change"
+msgstr "Thay đổi"
+
+msgid "Failed to load engines"
+msgstr "Không thể tải công cụ"
+
+msgid "No engines enabled"
+msgstr "Không có công cụ nào được bật"
+
+msgid "In order to assign yourself as translator, you first need to <add_yourself>add yourself as %s translator</add_yourself> to the site.<br/> Add yourself as %s translator and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Để tự gán mình làm người dịch, trước tiên bạn cần <add_yourself>thêm mình làm người dịch %s</add_yourself> vào trang web.<br/> Thêm mình làm người dịch %s và nhấp vào <check_again>kiểm tra lại</check_again> hoặc chọn một tùy chọn dịch khác."
+
+msgid "In order to assign yourself as translator, you first need to <add_yourself>add yourself as %s to %s translator</add_yourself> to the site.<br/> Add yourself as %s to %s translator and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Để tự gán mình làm người dịch, trước tiên bạn cần <add_yourself>thêm mình làm người dịch %s sang %s</add_yourself> vào trang web.<br/> Thêm mình làm người dịch %s sang %s và nhấp vào <check_again>kiểm tra lại</check_again> hoặc chọn một tùy chọn dịch khác."
+
+msgid "Checking"
+msgstr "Đang kiểm tra"
+
+msgid "In order to assign a translation service, you first need to <activate_ts>activate a translation service</activate_ts>.<br/>Activate a translation service and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Để gán một dịch vụ dịch thuật, trước tiên bạn cần <activate_ts>kích hoạt một dịch vụ dịch thuật</activate_ts>.<br/>Kích hoạt một dịch vụ dịch thuật và nhấp vào <check_again>kiểm tra lại</check_again> hoặc chọn một tùy chọn dịch khác."
+
+msgid " Checking "
+msgstr " Đang kiểm tra "
+
+msgid "In order to translate automatically, you first need to <enable_ate>enable WPML's Advanced Translation Editor</enable_ate>.<br/>Enable the Advanced Translation Editor and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Để dịch tự động, trước tiên bạn cần <enable_ate>bật Trình chỉnh sửa dịch nâng cao của WPML</enable_ate>.<br/>Bật Trình chỉnh sửa dịch nâng cao và nhấp vào <check_again>kiểm tra lại</check_again> hoặc chọn một tùy chọn dịch khác."
+
+msgid "Selected content was translated using the Classic Translation Editor and can't be sent for automatic translation. To allow this, enable \"Use also for old translations\" in <wpmlSettingLink>WPML Settings</wpmlSettingLink> page."
+msgstr "Nội dung đã chọn được dịch bằng Trình chỉnh sửa dịch cổ điển và không thể gửi để dịch tự động. Để cho phép điều này, hãy bật “Cũng sử dụng cho các bản dịch cũ” trong trang <wpmlSettingLink>Cài đặt WPML</wpmlSettingLink>."
+
+msgid "Some of the selected content was translated using the Classic Translation Editor and can't be sent for automatic translation. To allow this, enable \"Use also for old translations\" in <wpmlSettingLink>WPML Settings</wpmlSettingLink> page."
+msgstr "Một số nội dung đã chọn được dịch bằng Trình chỉnh sửa dịch cổ điển và không thể gửi để dịch tự động. Để cho phép điều này, hãy bật “Cũng sử dụng cho các bản dịch cũ” trong trang <wpmlSettingLink>Cài đặt WPML</wpmlSettingLink>."
+
+msgid ""
+"Any existing content (translations) will be overwritten when creating duplicates.\n"
+"When duplicating content, please first duplicate parent pages to maintain the site's hierarchy."
+msgstr "Bất kỳ nội dung (bản dịch) hiện có nào sẽ bị ghi đè khi tạo bản sao.\nKhi sao chép nội dung, vui lòng sao chép các trang cha trước để duy trì hệ thống phân cấp của trang web."
+
+msgid "Some of the selected content is already being translated. This will cancel any in-progress translations."
+msgstr "Một số nội dung đã chọn đang được dịch. Điều này sẽ hủy bỏ bất kỳ bản dịch đang tiến hành nào."
+
+msgid "The selected items were translated using the WordPress Editor and will be overwritten with automatic translations."
+msgstr "Các mục đã chọn được dịch bằng Trình chỉnh sửa WordPress và sẽ bị ghi đè bằng các bản dịch tự động."
+
+msgid "Some of the selected content was translated using the WordPress Editor and will be overwritten."
+msgstr "Một số nội dung đã chọn được dịch bằng Trình chỉnh sửa WordPress và sẽ bị ghi đè."
+
+msgid "In order to assign to a translator, you first need to <add_translators>add %s translators</add_translators> to the site.<br/> Add %s translators and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Để gán cho một người dịch, trước tiên bạn cần <add_translators>thêm người dịch %s</add_translators> vào trang web.<br/> Thêm người dịch %s và nhấp vào <check_again>kiểm tra lại</check_again> hoặc chọn một tùy chọn dịch khác."
+
+msgid "In order to assign to a translator, you first need to <add_translators>add %s to %s translators</add_translators> to the site.<br/> Add %s to %s translators and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Để gán cho một người dịch, trước tiên bạn cần <add_translators>thêm người dịch %s sang %s</add_translators> vào trang web.<br/> Thêm người dịch %s sang %s và nhấp vào <check_again>kiểm tra lại</check_again> hoặc chọn một tùy chọn dịch khác."
+
+msgid "Your site doesn't have any reviewers for %s. This means that you’re the only person who can review these translations."
+msgstr "Trang web của bạn chưa có người đánh giá cho %s. Điều này có nghĩa là bạn là người duy nhất có thể đánh giá các bản dịch này."
+
+msgid "Your site doesn't have any reviewers yet. This means that you’re the only person who can review translations."
+msgstr "Trang web của bạn chưa có người đánh giá nào. Điều này có nghĩa là bạn là người duy nhất có thể đánh giá các bản dịch."
+
+msgid "If you want other people to review the translations, go to <a>WPML → Translation Dashboard → Translators</a> and add translators. They will be able to both review and translate content for you."
+msgstr "Nếu bạn muốn những người khác đánh giá các bản dịch, hãy truy cập <a>WPML → Bảng điều khiển dịch → Người dịch</a> và thêm người dịch. Họ sẽ có thể vừa đánh giá vừa dịch nội dung cho bạn."
+
+msgid "Automatic translation is blocked - payment required"
+msgstr "Dịch tự động bị chặn - yêu cầu thanh toán"
+
+msgid "We couldn’t process your payment. Click “Pay now” to retry and resume automatic translation."
+msgstr "Chúng tôi không thể xử lý thanh toán của bạn. Nhấp vào “Thanh toán ngay” để thử lại và tiếp tục dịch tự động."
+
+msgid "WPML does not support duplicating strings. Your selection to duplicate strings to %1$s will be ignored if you proceed with the translation."
+msgstr "WPML không hỗ trợ sao chép chuỗi. Lựa chọn sao chép chuỗi của bạn sang %1$s sẽ bị bỏ qua nếu bạn tiếp tục dịch."
+
+msgid "WPML does not support duplicating %1$s elements. Your selection to duplicate elements to %2$s will be ignored if you proceed with the translation."
+msgstr "WPML không hỗ trợ sao chép các phần tử %1$s. Lựa chọn sao chép các phần tử của bạn sang %2$s sẽ bị bỏ qua nếu bạn tiếp tục dịch."
+
+msgid "WPML does not support duplicating %1$s elements and strings. Your selection to duplicate elements and strings to %2$s will be ignored if you proceed with the translation."
+msgstr "WPML không hỗ trợ sao chép các phần tử và chuỗi %1$s. Lựa chọn sao chép các phần tử và chuỗi của bạn sang %2$s sẽ bị bỏ qua nếu bạn tiếp tục dịch."
+
+msgid "WPML does not support duplicating strings."
+msgstr "WPML không hỗ trợ sao chép chuỗi."
+
+msgid "WPML does not support duplicating %1$s elements."
+msgstr "WPML không hỗ trợ sao chép các phần tử %1$s."
+
+msgid "WPML does not support duplicating %1$s elements and strings."
+msgstr "WPML không hỗ trợ sao chép các phần tử và chuỗi %1$s."
+
+msgid "Finish setting up %s on your site"
+msgstr "Hoàn tất thiết lập %s trên trang web của bạn"
+
+msgid "You need to authenticate %s to send them content for translation.<br/>Visit the <a>Translators tab</a> to finish the setup and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "Bạn cần xác thực %s để gửi nội dung cho họ dịch.<br/>Truy cập <a>tab Người dịch</a> để hoàn tất thiết lập và nhấp vào <check_again>kiểm tra lại</check_again> hoặc chọn một tùy chọn dịch khác."
+
+msgid "You selected multiple translation methods for content across different languages:"
+msgstr "Bạn đã chọn nhiều phương pháp dịch cho nội dung trên các ngôn ngữ khác nhau:"
+
+msgid "Sent for translation"
+msgstr "Đã gửi để dịch"
+
+msgid "Sending for translation failed"
+msgstr "Gửi để dịch không thành công"
+
+msgid "Ok"
+msgstr "Ok"
+
+msgid "<s>1 item</s> is being translated automatically."
+msgid_plural "<s>%d items</s> are being translated automatically."
+msgstr[0] "<s>%d mục</s> đang được dịch tự động."
+
+msgid "You can track their progress at the top of the page."
+msgstr "Bạn có thể theo dõi tiến độ của chúng ở đầu trang."
+
+msgid "From now on, WPML will automatically translate new content on your site."
+msgstr "Từ bây giờ, WPML sẽ tự động dịch nội dung mới trên trang web của bạn."
+
+msgid "This number might vary because you enabled the Translate Everything Automatically Mode."
+msgstr "Số này có thể thay đổi vì bạn đã bật Chế độ Dịch mọi thứ tự động."
+
+msgid "From now on, WPML will automatically translate your site's content."
+msgstr "Từ bây giờ, WPML sẽ tự động dịch nội dung trang web của bạn."
+
+msgid "Automatic translations summary"
+msgstr "Tóm tắt bản dịch tự động"
+
+msgid "Some of the content that you selected for translation includes fields that are encoded. Translators will not be able to work on this kind of content, so we removed it from the job."
+msgstr "Một số nội dung bạn đã chọn để dịch bao gồm các trường được mã hóa. Người dịch sẽ không thể làm việc với loại nội dung này, vì vậy chúng tôi đã xóa nó khỏi công việc."
+
+msgid "To fix this problem, please contact our support team and describe this issue."
+msgstr "Để khắc phục sự cố này, vui lòng liên hệ với nhóm hỗ trợ của chúng tôi và mô tả vấn đề này."
+
+msgid "WPML cannot send some fo the content to translation"
+msgstr "WPML không thể gửi một số nội dung để dịch"
+
+msgid "Open support ticket"
+msgstr "Mở phiếu hỗ trợ"
+
+msgid "<s>1 item</s> has been successfully assigned to you! To check its status, please go to <s>WPML → Translations</s>. <translations_queue/>"
+msgid_plural "<s>%d items</s> have been successfully assigned to you! For status updates, please go to <s>WPML → Translations</s>. <translations_queue/>"
+msgstr[0] "<s>%d mục</s> đã được gán thành công cho bạn! Để cập nhật trạng thái, vui lòng truy cập <s>WPML → Bản dịch</s>. <translations_queue/>"
+
+msgid "Currently logged in translator summary"
+msgstr "Tóm tắt người dịch đang đăng nhập"
+
+msgid "Go to Translations"
+msgstr "Đi tới bản dịch"
+
+msgid "<s>1 item</s> has been duplicated."
+msgid_plural "<s>%d items</s> have been duplicated."
+msgstr[0] "<s>%d mục</s> đã được nhân đôi."
+
+msgid "Duplication summary"
+msgstr "Tóm tắt trùng lặp"
+
+msgid "There was a problem sending your content for translation."
+msgstr "Đã xảy ra sự cố khi gửi nội dung của bạn để dịch."
+
+msgid "Please try again in a few minutes. If the issue persists, please contact our support."
+msgstr "Vui lòng thử lại sau vài phút. Nếu sự cố vẫn tiếp diễn, vui lòng liên hệ với bộ phận hỗ trợ của chúng tôi."
+
+msgid "See technical details"
+msgstr "Xem chi tiết kỹ thuật"
+
+msgid "Hide technical details"
+msgstr "Ẩn chi tiết kỹ thuật"
+
+msgid "Some of the selected strings are already registered or translated into %s. Since their source language matches the target language, they cannot be retranslated."
+msgstr "Một số chuỗi đã chọn đã được đăng ký hoặc dịch sang %s. Vì ngôn ngữ nguồn của chúng khớp với ngôn ngữ đích, chúng không thể được dịch lại."
+
+msgid "Some of the selected content has already been translated from %s to %s and cannot be re-translated from %s to %s."
+msgstr "Một số nội dung đã chọn đã được dịch từ %s sang %s và không thể dịch lại từ %s sang %s."
+
+msgid "Content already translated"
+msgstr "Nội dung đã được dịch"
+
+msgid "Some content couldn't be sent to translation."
+msgstr "Một số nội dung không thể gửi để dịch."
+
+msgid "WPML did not create translations for some languages because of the following reasons:"
+msgstr "WPML không tạo bản dịch cho một số ngôn ngữ vì các lý do sau:"
+
+msgid "<s>1 item</s> has been successfully sent to translators!"
+msgid_plural "<s>%d items</s> have been successfully sent to translators!"
+msgstr[0] "<s>%d mục</s> đã được gửi thành công cho người dịch!"
+
+msgid "Local translations summary"
+msgstr "Tóm tắt bản dịch cục bộ"
+
+msgid "You can check their status in WPML → Translation"
+msgstr "Bạn có thể kiểm tra trạng thái của chúng trong WPML → Dịch"
+
+msgid "Continue to %s"
+msgstr "Tiếp tục đến %s"
+
+msgid "We were unable to send the following batches for professional translation:"
+msgstr "Chúng tôi không thể gửi các lô sau để dịch chuyên nghiệp:"
+
+msgid "<p><a><s>Contact WPML support for help</s></a></p>"
+msgstr "<p><a><s>Liên hệ hỗ trợ WPML để được giúp đỡ</s></a></p>"
+
+msgid "Translation Service"
+msgstr "Dịch vụ dịch thuật"
+
+msgid "sending for professional translation.."
+msgstr "đang gửi để dịch chuyên nghiệp.."
+
+msgid "<s>%d item</s> is being sent for translation to %s. Please continue to their site to start the translation."
+msgid_plural "<s>%d items</s> are being sent for translation to %s. Please continue to their site to start the translation."
+msgstr[0] "<s>%d mục</s> đang được gửi để dịch sang %s. Vui lòng tiếp tục truy cập trang web của họ để bắt đầu dịch."
+
+msgid "Translation service translations summary"
+msgstr "Tóm tắt bản dịch của dịch vụ dịch thuật"
+
+msgid "One or more assigned translators are invalid. The translator may have been removed or their language permissions changed.<br/> Review your settings on the <translators_page>Translators page</translators_page>."
+msgstr "Một hoặc nhiều người dịch được chỉ định không hợp lệ. Người dịch có thể đã bị xóa hoặc quyền ngôn ngữ của họ đã thay đổi.<br/> Xem lại cài đặt của bạn trên <translators_page>trang Người dịch</translators_page>."
+
+msgid "The selected translation service is no longer valid. It may have been changed, unauthenticated, or deactivated.<br/> Review your settings on the <translators_page>Translators page</translators_page>."
+msgstr "Dịch vụ dịch thuật đã chọn không còn hợp lệ. Nó có thể đã bị thay đổi, chưa được xác thực hoặc đã bị hủy kích hoạt.<br/> Xem lại cài đặt của bạn trên <translators_page>trang Người dịch</translators_page>."
+
+msgid "Currently selected translation editor doesn't support automatic translation. You must enable the Advanced Translation Editor to send content for automatic translation.<br/> Check your settings on the <wpml_settings>WPML settings page</wpml_settings>."
+msgstr "Trình chỉnh sửa dịch thuật hiện tại không hỗ trợ dịch thuật tự động. Bạn phải bật Trình chỉnh sửa dịch thuật nâng cao để gửi nội dung để dịch thuật tự động.<br/> Kiểm tra cài đặt của bạn trên <wpml_settings>trang cài đặt WPML</wpml_settings>."
+
+msgid "Validation error happened during send to translation."
+msgstr "Lỗi xác thực xảy ra trong quá trình gửi để dịch."
+
+msgid "Translate and Duplicate"
+msgstr "Dịch và nhân bản"
+
+msgid "Duplicate"
+msgstr "Nhân bản"
+
+msgid "Translate content"
+msgstr "Dịch nội dung"
+
+msgid "Please choose one of the available payment options."
+msgstr "Vui lòng chọn một trong các tùy chọn thanh toán có sẵn."
+
+msgid "Selected content is already translated"
+msgstr "Nội dung đã chọn đã được dịch"
+
+msgid "Please select a review mode"
+msgstr "Vui lòng chọn chế độ xem xét"
+
+msgid "Assign local translator or choose another option"
+msgstr "Chỉ định người dịch cục bộ hoặc chọn tùy chọn khác"
+
+msgid "Assign yourself or choose another option"
+msgstr "Tự chỉ định hoặc chọn tùy chọn khác"
+
+msgid "Activate translation service or choose another option"
+msgstr "Kích hoạt dịch vụ dịch thuật hoặc chọn tùy chọn khác"
+
+msgid "Activate ATE or choose another option"
+msgstr "Kích hoạt ATE hoặc chọn tùy chọn khác"
+
+msgid "Authenticate translation service or choose another option"
+msgstr "Xác thực dịch vụ dịch thuật hoặc chọn tùy chọn khác"
+
+msgid "Please provide context to enable translation"
+msgstr "Vui lòng cung cấp ngữ cảnh để bật dịch thuật"
+
+msgid "Please keep this page open while WPML sends your content for translation. If you leave now, the remaining items won't be sent."
+msgstr "Vui lòng giữ trang này mở trong khi WPML gửi nội dung của bạn để dịch. Nếu bạn rời đi bây giờ, các mục còn lại sẽ không được gửi."
+
+msgid "Sending content to translation"
+msgstr "Đang gửi nội dung để dịch"
+
+msgid "<s>%s</s> cannot process more than <s>%d</s> jobs in a single batch. WPML will automatically split your jobs into separate batches to ensure an error-free delivery to <s>%s</s>. <br/><br/> Do you want to proceed?"
+msgstr "<s>%s</s> không thể xử lý nhiều hơn <s>%d</s> công việc trong một lô duy nhất. WPML sẽ tự động chia công việc của bạn thành các lô riêng biệt để đảm bảo việc gửi đến <s>%s</s> không có lỗi. <br/><br/> Bạn có muốn tiếp tục không?"
+
+msgid "WPML will send jobs to %s in separate batches"
+msgstr "WPML sẽ gửi công việc đến %s theo các lô riêng biệt"
+
+msgid "Yes, send jobs in separate batches"
+msgstr "Có, gửi công việc theo các lô riêng biệt"
+
+msgid "No, I will split jobs myself"
+msgstr "Không, tôi sẽ tự chia công việc"
+
+msgid "This will translate only your future content"
+msgstr "Điều này sẽ chỉ dịch nội dung trong tương lai của bạn"
+
+msgid "This will translate your entire site"
+msgstr "Điều này sẽ dịch toàn bộ trang web của bạn"
+
+msgid "Translate everything automatically from now on, without asking me."
+msgstr "Tự động dịch mọi thứ từ bây giờ, không hỏi tôi."
+
+msgid "Loading options to translate the content"
+msgstr "Đang tải tùy chọn để dịch nội dung"
+
+msgid "What content do you want to translate?"
+msgstr "Bạn muốn dịch nội dung nào?"
+
+msgid "Translate my entire site"
+msgstr "Dịch toàn bộ trang web của tôi"
+
+msgid "WPML will translate all of your site's content, including:"
+msgstr "WPML sẽ dịch tất cả nội dung trang web của bạn, bao gồm:"
+
+msgid "Any existing content that hasn’t been translated yet"
+msgstr "Bất kỳ nội dung hiện có nào chưa được dịch"
+
+msgid "All new content you create in the future"
+msgstr "Tất cả nội dung mới bạn tạo trong tương lai"
+
+msgid "Translate only future content"
+msgstr "Chỉ dịch nội dung trong tương lai"
+
+msgid "WPML will translate only the content you create after enabling this translation mode."
+msgstr "WPML sẽ chỉ dịch nội dung bạn tạo sau khi bật chế độ dịch này."
+
+msgid "Existing untranslated content on your side will not be translated."
+msgstr "Nội dung chưa dịch hiện có trên trang của bạn sẽ không được dịch."
+
+msgid "WPML Settings"
+msgstr "Cài đặt WPML"
+
+msgid "Some of your content was translated using the Classic Translation Editor. These translations won’t be included in Translate Everything Automatically."
+msgstr "Một số nội dung của bạn đã được dịch bằng Trình chỉnh sửa dịch thuật cổ điển. Các bản dịch này sẽ không được bao gồm trong Dịch mọi thứ tự động."
+
+msgid "To include them, enable \"Use also for old translations\" in <wpmlSettingLink/>."
+msgstr "Để bao gồm chúng, hãy bật “Sử dụng cho các bản dịch cũ” trong <wpmlSettingLink/>."
+
+msgid "Some of your content was translated using the WordPress Editor. These translations won’t be included in Translate Everything Automatically."
+msgstr "Một số nội dung của bạn đã được dịch bằng Trình chỉnh sửa WordPress. Các bản dịch này sẽ không được bao gồm trong Dịch mọi thứ tự động."
+
+msgid "Some of your content was translated using the Classic Translation Editor or WordPress Editor. These translations won’t be included in Translate Everything Automatically."
+msgstr "Một số nội dung của bạn đã được dịch bằng Trình chỉnh sửa dịch thuật cổ điển hoặc Trình chỉnh sửa WordPress. Các bản dịch này sẽ không được bao gồm trong Dịch mọi thứ tự động."
+
+msgid "To include Classic Editor translations, enable \"Use also for old translations\" in <wpmlSettingLink/>."
+msgstr "Để bao gồm các bản dịch của Trình chỉnh sửa cổ điển, hãy bật “Sử dụng cho các bản dịch cũ” trong <wpmlSettingLink/>."
+
+msgid "Existing content"
+msgstr "Nội dung hiện có"
+
+msgid "You selected to translate strings that are in %s. Only these strings will be translated to %s."
+msgstr "Bạn đã chọn dịch các chuỗi trong %s. Chỉ các chuỗi này sẽ được dịch sang %s."
+
+msgid "You selected to translate strings that are in %s and %s. Only these strings will be translated to %s."
+msgstr "Bạn đã chọn dịch các chuỗi trong %s và %s. Chỉ các chuỗi này sẽ được dịch sang %s."
+
+msgid "Source language"
+msgstr "Ngôn ngữ nguồn"
+
+msgid "Target language"
+msgstr "Ngôn ngữ đích"
+
+msgid "Words to translate"
+msgstr "Số từ cần dịch"
+
+msgid "Credits needed"
+msgstr "Số tín dụng cần thiết"
+
+msgid "Automatic translation is not supported for %s."
+msgstr "Dịch tự động không được hỗ trợ cho %s."
+
+msgid "The selected translation engines do not support %s."
+msgstr "Các công cụ dịch đã chọn không hỗ trợ %s."
+
+msgid "%1sTotal Credits:%2s %3s"
+msgstr "%1sTổng số tín dụng:%2s %3s"
+
+msgid "Translation service additional options"
+msgstr "Tùy chọn bổ sung của dịch vụ dịch thuật"
+
+msgid "Fetching translation service data..."
+msgstr "Đang tìm nạp dữ liệu dịch vụ dịch thuật..."
+
+msgid "-"
+msgstr "-"
+
+msgid "Translate automatically"
+msgstr "Dịch tự động"
+
+msgid "Translate myself"
+msgstr "Tự dịch"
+
+msgid "Assign a translator"
+msgstr "Chỉ định người dịch"
+
+msgid "Assign translation service"
+msgstr "Chỉ định dịch vụ dịch thuật"
+
+msgid "Do nothing"
+msgstr "Không làm gì cả"
+
+msgid "Please choose"
+msgstr "Vui lòng chọn"
+
+msgid "Choose a translator"
+msgstr "Chọn người dịch"
+
+msgid "First available"
+msgstr "Người đầu tiên có sẵn"
+
+msgid "(Me)"
+msgstr "(tôi)"
+
+msgid "Step 2"
+msgstr "Bước 2"
+
+msgid "Calculating..."
+msgstr "Đang tính toán..."
+
+msgid "Refining estimation... about %1$d minute remaining"
+msgid_plural "Refining estimation... about %1$d minutes remaining"
+msgstr[0] "Đang tinh chỉnh ước tính... còn khoảng %1$d phút"
+
+msgid "Refining estimation... %d second remaining"
+msgid_plural "Refining estimation... %d seconds remaining"
+msgstr[0] "Đang tinh chỉnh ước tính... còn %d giây"
+
+msgid "Estimated cost:"
+msgstr "Chi phí ước tính:"
+
+msgid "Current estimated cost:"
+msgstr "Chi phí ước tính hiện tại:"
+
+msgid "Changing translation engine and recalculating estimate..."
+msgstr "Đang thay đổi công cụ dịch và tính toán lại ước tính..."
+
+msgid "%s credits"
+msgstr "%s tín dụng"
+
+msgid "€%1$s"
+msgstr "€%1$s"
+
+msgid "All content is already translated. New and edited content will be translated automatically."
+msgstr "Tất cả nội dung đã được dịch. Nội dung mới và đã chỉnh sửa sẽ được dịch tự động."
+
+msgid "%1$s and %2$s"
+msgstr "%1$s và %2$s"
+
+msgid "in other types"
+msgstr "trong các loại khác"
+
+msgid "Hide what will be translated"
+msgstr "Ẩn những gì sẽ được dịch"
+
+msgid "Show what will be translated"
+msgstr "Hiển thị những gì sẽ được dịch"
+
+msgid "Calculation complete"
+msgstr "Tính toán hoàn tất"
+
+msgid "%d of %d analyzed"
+msgstr "%d trong số %d đã phân tích"
+
+msgid "Automatic translations completed"
+msgstr "Bản dịch tự động đã hoàn tất"
+
+msgid "<s>1 translation</s> has been successfully translated automatically"
+msgid_plural "<s>%d translations</s> have been successfully translated automatically"
+msgstr[0] "<s>%d bản dịch</s> đã được dịch tự động thành công"
+
+msgid "Automatic jobs in progress"
+msgstr "Công việc tự động đang tiến hành"
+
+msgid "<s>%d automatic translation</s> is in progress"
+msgid_plural "<s>%d automatic translations</s> are in progress"
+msgstr[0] "<s>%d bản dịch tự động</s> đang được tiến hành"
+
+msgid "Remaining time: <s>Less than 1 minute</s>"
+msgstr "Thời gian còn lại: <s>Dưới 1 phút</s>"
+
+msgid "Remaining time: <s>%d minute</s>"
+msgid_plural "Remaining time: <s>%d minutes</s>"
+msgstr[0] "Thời gian còn lại: <s>%d phút</s>"
+
+msgid "Your default language, %s, must be mapped to a supported language in order to use automatic translation"
+msgstr "Ngôn ngữ mặc định của bạn, %s, phải được ánh xạ tới một ngôn ngữ được hỗ trợ để sử dụng dịch tự động"
+
+msgid "Map the language"
+msgstr "Ánh xạ ngôn ngữ"
+
+msgid "%d translations "
+msgstr "%d bản dịch "
+
+msgid "%d translation "
+msgstr "%d bản dịch "
+
+msgid "this includes translations from Translate Everything Automatically"
+msgstr "điều này bao gồm các bản dịch từ Dịch mọi thứ tự động"
+
+msgid "are waiting for your review"
+msgstr "đang chờ bạn xem xét"
+
+msgid "is waiting for your review"
+msgstr "đang chờ bạn xem xét"
+
+msgid "Review Translations"
+msgstr "Xem lại bản dịch"
+
+msgid "Translate existing content"
+msgstr "Dịch nội dung hiện có"
+
+msgid "Translate now"
+msgstr "Dịch ngay"
+
+msgid "Starting with version 4.7, WPML will also automatically translate texts (strings) coming from %s."
+msgstr "Bắt đầu từ phiên bản 4.7, WPML cũng sẽ tự động dịch các văn bản (chuỗi) đến từ %s."
+
+msgid "WPML will not translate existing texts of this type but any new ones you create will be automatically translated. If you prefer, you can <button />."
+msgstr "WPML sẽ không dịch các văn bản hiện có thuộc loại này nhưng bất kỳ văn bản mới nào bạn tạo sẽ được dịch tự động. Nếu bạn muốn, bạn có thể <button />."
+
+msgid "Starting with version 4.7, WPML will also automatically translate:"
+msgstr "Bắt đầu từ phiên bản 4.7, WPML cũng sẽ tự động dịch:"
+
+msgid "Content set to \"use translation if available or fallback to default language\": %s."
+msgstr "Nội dung được đặt thành “sử dụng bản dịch nếu có hoặc quay lại ngôn ngữ mặc định”: %s."
+
+msgid "Texts (strings) coming from: %s."
+msgstr "Văn bản (chuỗi) đến từ: %s."
+
+msgid "WPML will not translate existing content for these post types and texts but any new content you create will be automatically translated. If you prefer, you can start <button />."
+msgstr "WPML sẽ không dịch nội dung hiện có cho các loại bài đăng và văn bản này nhưng bất kỳ nội dung mới nào bạn tạo sẽ được dịch tự động. Nếu bạn muốn, bạn có thể bắt đầu <button />."
+
+msgid "WPML will not translate existing content for these post types but any new content you create will be automatically translated. If you prefer, you can start <button />."
+msgstr "WPML sẽ không dịch nội dung hiện có cho các loại bài đăng này nhưng bất kỳ nội dung mới nào bạn tạo sẽ được dịch tự động. Nếu bạn muốn, bạn có thể bắt đầu <button />."
+
+msgid "start translating existing content now"
+msgstr "bắt đầu dịch nội dung hiện có ngay bây giờ"
+
+msgid "The following target languages do not support automatic translations: %s"
+msgstr "Các ngôn ngữ đích sau không hỗ trợ dịch tự động: %s"
+
+msgid "To enable automatic translation map them to known languages."
+msgstr "Để bật dịch tự động, hãy ánh xạ chúng tới các ngôn ngữ đã biết."
+
+msgid "Map to known languages"
+msgstr "Ánh xạ tới các ngôn ngữ đã biết"
+
+msgid "Copied!"
+msgstr "Đã sao chép!"
+
+msgid "Copy All"
+msgstr "Sao chép tất cả"
+
+msgid "Error type"
+msgstr "Loại lỗi"
+
+msgid "Error Message"
+msgstr "Thông báo lỗi"
+
+msgid "Job ID"
+msgstr "ID công việc"
+
+msgid "ATE Job ID"
+msgstr "ID công việc ATE"
+
+msgid "Original ID"
+msgstr "ID gốc"
+
+msgid "Element ID"
+msgstr "ID phần tử"
+
+msgid "Copy to clipboard"
+msgstr "Sao chép vào bảng tạm"
+
+msgid "Hide errors details"
+msgstr "Ẩn chi tiết lỗi"
+
+msgid "Show errors details"
+msgstr "Hiển thị chi tiết lỗi"
+
+msgid "https://wpml.org/forums/forum/english-support/"
+msgstr "https://wpml.org/forums/forum/english-support/"
+
+msgid "<strong>%d item</strong> couldn't be completed due to an unexpected error. Try resending it for translation. If the issue continues, <a>contact WPML support</a>."
+msgid_plural "<strong>%d items</strong> couldn't be completed due to an unexpected error. Try resending them for translation. If the issue continues, <a>contact WPML support</a>."
+msgstr[0] "<strong>%d mục</strong> không thể hoàn thành do lỗi không mong muốn. Hãy thử gửi lại chúng để dịch. Nếu sự cố tiếp diễn, <a>liên hệ hỗ trợ WPML</a>."
+
+msgid "Cancelling %d/%d..."
+msgstr "Đang hủy %d/%d..."
+
+msgid "Cancelling..."
+msgstr "Đang hủy..."
+
+msgid "Discard jobs"
+msgstr "Hủy bỏ công việc"
+
+msgid "Resending %d/%d..."
+msgstr "Đang gửi lại %d/%d..."
+
+msgid "Resending..."
+msgstr "Đang gửi lại..."
+
+msgid "Resend"
+msgstr "Gửi lại"
+
+msgid "We recommend staying on this page to monitor progress and respond to any issues if they occur. You can leave this page, but you should remain within your WordPress admin area."
+msgstr "Chúng tôi khuyên bạn nên ở lại trang này để theo dõi tiến độ và phản hồi bất kỳ vấn đề nào nếu chúng xảy ra. Bạn có thể rời khỏi trang này, nhưng bạn nên ở trong khu vực quản trị WordPress của mình."
+
+msgid "Translation status"
+msgstr "Trạng thái dịch"
+
+msgid "Before translating with PTC, please provide context about your website and target audience (one-time thing)."
+msgstr "Trước khi dịch bằng PTC, vui lòng cung cấp ngữ cảnh về trang web và đối tượng mục tiêu của bạn (chỉ một lần)."
+
+msgid "Provide Context"
+msgstr "Cung cấp ngữ cảnh"
+
+msgid "Default language does not support automatic translations."
+msgstr "Ngôn ngữ mặc định không hỗ trợ dịch tự động."
+
+msgid "You must enable ATE to activate Translate Everything Automatically."
+msgstr "Bạn phải bật ATE để kích hoạt Dịch mọi thứ tự động."
+
+msgid "Select payment method"
+msgstr "Chọn phương thức thanh toán"
+
+msgid "Credits assigned"
+msgstr "Tín dụng đã gán"
+
+msgid "You’re all set."
+msgstr "Bạn đã sẵn sàng."
+
+msgid "Click Translate Everything Automatically to start translating your entire site."
+msgstr "Nhấp vào Dịch mọi thứ tự động để bắt đầu dịch toàn bộ trang web của bạn."
+
+msgid "Content to translate"
+msgstr "Nội dung cần dịch"
+
+msgid "Publishing method"
+msgstr "Phương thức xuất bản"
+
+msgid "Payment method"
+msgstr "Phương thức thanh toán"
+
+msgid "Enable Translate Everything Automatically"
+msgstr "Bật dịch mọi thứ tự động"
+
+msgid "Go back"
+msgstr "Quay lại"
+
+msgid "Continue"
+msgstr "Tiếp tục"
+
+msgid "Calculating credits for translating existing content. Please wait..."
+msgstr "Đang tính toán tín dụng để dịch nội dung hiện có. Vui lòng đợi..."
+
+msgid "Set Up Translate Everything Automatically"
+msgstr "Thiết lập dịch mọi thứ tự động"
+
+msgid "WPML will translate your content into %d languages"
+msgstr "WPML sẽ dịch nội dung của bạn sang %d ngôn ngữ"
+
+msgid "You can start using Translate Everything Automatically after sending some content for translation. We recommend that you review these translations and make sure that they are good before translating your entire site's content."
+msgstr "Bạn có thể bắt đầu sử dụng Dịch mọi thứ tự động sau khi gửi một số nội dung để dịch. Chúng tôi khuyên bạn nên xem xét các bản dịch này và đảm bảo chúng tốt trước khi dịch toàn bộ nội dung trang web của bạn."
+
+msgid "Translate Everything Automatically - disabled"
+msgstr "Dịch mọi thứ tự động - đã tắt"
+
+msgid "Translate Everything Automatically"
+msgstr "Dịch mọi thứ tự động"
+
+msgid "Automatically translate all %s content to %s."
+msgstr "Tự động dịch tất cả %s nội dung sang %s."
+
+msgid "Translate Everything Automatically - pausing"
+msgstr "Dịch mọi thứ tự động - đang tạm dừng"
+
+msgid "Translate Everything Automatically is pausing"
+msgstr "Dịch mọi thứ tự động đang tạm dừng"
+
+msgid "Translate Everything Automatically - paused"
+msgstr "Dịch mọi thứ tự động - đã tạm dừng"
+
+msgid "%d translation left in the queue. Preparing more content for translation."
+msgid_plural "%d translations left in the queue. Preparing more content for translation."
+msgstr[0] "Còn lại %d bản dịch trong hàng đợi. Đang chuẩn bị thêm nội dung để dịch."
+
+msgid "Preparing content for translation..."
+msgstr "Đang chuẩn bị nội dung để dịch..."
+
+msgid "%d translation left in the queue..."
+msgid_plural "%d translations left in the queue..."
+msgstr[0] "Còn lại %d bản dịch trong hàng đợi..."
+
+msgid "Translate Everything Automatically has finished translating your content. There are no pending translations in the queue."
+msgstr "Dịch mọi thứ tự động đã hoàn tất việc dịch nội dung của bạn. Không có bản dịch nào đang chờ xử lý trong hàng đợi."
+
+msgid "Some items were translated using the Classic Translation Editor and cannot be sent for automatic translation. Please select these items and choose the option to translate them yourself."
+msgstr "Một số mục đã được dịch bằng Trình chỉnh sửa dịch thuật cổ điển và không thể gửi để dịch tự động. Vui lòng chọn các mục này và chọn tùy chọn tự dịch chúng."
+
+msgid "Translate Everything Automatically - enabled"
+msgstr "Dịch mọi thứ tự động - đã bật"
+
+msgid "Translate Everything Automatically is enabled"
+msgstr "Dịch mọi thứ tự động đã được bật"
+
+msgid "As you create new content or edit existing content, WPML will automatically translate it, but only from %s to %s."
+msgstr "Khi bạn tạo nội dung mới hoặc chỉnh sửa nội dung hiện có, WPML sẽ tự động dịch nó, nhưng chỉ từ %s sang %s."
+
+msgid "Translate Everything Automatically is paused — payment required"
+msgstr "Dịch mọi thứ tự động bị tạm dừng — yêu cầu thanh toán"
+
+msgid "Automatic translation is paused — payment required"
+msgstr "Dịch tự động bị tạm dừng — yêu cầu thanh toán"
+
+msgid "Automatic translation - payment required"
+msgstr "Dịch tự động - yêu cầu thanh toán"
+
+msgid "We couldn’t process payment for your completed translations. Click “Pay now” to retry and continue using automatic translation."
+msgstr "Chúng tôi không thể xử lý thanh toán cho các bản dịch đã hoàn thành của bạn. Nhấp vào “Thanh toán ngay” để thử lại và tiếp tục sử dụng dịch tự động."
+
+msgid "Cancel translation"
+msgstr "Hủy dịch"
+
+msgid "Translate Everything Automatically is paused — not enough credits"
+msgstr "Dịch mọi thứ tự động bị tạm dừng — không đủ tín dụng"
+
+msgid "Automatic translation is paused — not enough credits"
+msgstr "Dịch tự động bị tạm dừng — không đủ tín dụng"
+
+msgid "Translation will resume automatically after you assign more credits."
+msgstr "Bản dịch sẽ tự động tiếp tục sau khi bạn gán thêm tín dụng."
+
+msgid "This item needs a translation update but can't be translated automatically because it was translated with the Classic Translation Editor."
+msgstr "Mục này cần cập nhật bản dịch nhưng không thể dịch tự động vì nó đã được dịch bằng Trình chỉnh sửa dịch thuật cổ điển."
+
+msgid "This item needs update. Please, select the item and send for translation."
+msgstr "Mục này cần cập nhật. Vui lòng chọn mục và gửi để dịch."
+
+msgid "Translations completed with the Classic Translation Editor cannot be sent for automatic translation"
+msgstr "Các bản dịch được hoàn thành bằng Trình chỉnh sửa dịch thuật cổ điển không thể gửi để dịch tự động"
+
+msgid "automatic translation"
+msgstr "dịch tự động"
+
+msgid "unassigned"
+msgstr "chưa được gán"
+
+msgid "not translated"
+msgstr "chưa được dịch"
+
+msgid "waiting for translator"
+msgstr "đang chờ người dịch"
+
+msgid "in progress"
+msgstr "đang tiến hành"
+
+msgid "needs update"
+msgstr "cần cập nhật"
+
+msgid "duplicate"
+msgstr "trùng lặp"
+
+msgid "complete"
+msgstr "hoàn tất"
+
+msgid "needs review"
+msgstr "cần xem xét"
+
+msgid "preparing for translation"
+msgstr "đang chuẩn bị để dịch"
+
+msgid "needs attention"
+msgstr "cần chú ý"
+
+msgid "translation error"
+msgstr "lỗi dịch"
+
+msgid "This item was translated using the WordPress Editor. Switching to the WPML's Translation Editor will overwrite the existing translation."
+msgstr "Mục này đã được dịch bằng Trình chỉnh sửa WordPress. Chuyển sang Trình chỉnh sửa dịch thuật của WPML sẽ ghi đè bản dịch hiện có."
+
+msgid "This item needs a translation update but was previously translated using the WordPress Editor. Using the WPML's Translation Editor will overwrite the existing translation."
+msgstr "Mục này cần cập nhật bản dịch nhưng trước đây đã được dịch bằng Trình chỉnh sửa WordPress. Sử dụng Trình chỉnh sửa dịch thuật của WPML sẽ ghi đè bản dịch hiện có."
+
+msgid "This item hasn't been translated yet and is set to use the WordPress Editor."
+msgstr "Mục này chưa được dịch và được đặt để sử dụng Trình chỉnh sửa WordPress."
+
+msgid "%1$s: %2$s%3$s"
+msgstr "%1$s: %2$s%3$s"
+
+msgid "Could not fetch engines data"
+msgstr "Không thể tìm nạp dữ liệu công cụ"
+
+msgid "Error in fetching currently logged in translator"
+msgstr "Lỗi khi tìm nạp người dịch đang đăng nhập"
+
+msgid "Error in fetching local translators"
+msgstr "Lỗi khi tìm nạp người dịch cục bộ"
+
+msgid "Published"
+msgstr "Đã xuất bản"
+
+msgid "Draft"
+msgstr "Bản nháp"
+
+msgid "Trash"
+msgstr "Thùng rác"
+
+msgid "Pending"
+msgstr "Đang chờ"
+
+msgid "Private"
+msgstr "Riêng tư"
+
+msgid "Future"
+msgstr "Tương lai"
+
+msgid "Auto Draft"
+msgstr "Bản nháp tự động"
+
+msgid "External"
+msgstr "Bên ngoài"
+
+msgid "Collapse"
+msgstr "Thu gọn"
+
+msgid "Expand"
+msgstr "Mở rộng"
+
+msgid "Select an item"
+msgstr "Chọn một mục"
+
+msgid "Open dropdown"
+msgstr "Mở danh sách thả xuống"
+
+msgid "Reset"
+msgstr "Đặt lại"
+
+msgid "Search"
+msgstr "Tìm kiếm"
+
+msgid "No items found"
+msgstr "Không tìm thấy mục nào"
+
+msgid "OFF"
+msgstr "TẮT"
+
+msgid "ON"
+msgstr "BẬT"
+
+msgid "%1$s Flag"
+msgstr "Cờ %1$s"
+
+msgid "- Select a review mode -"
+msgstr "- Chọn chế độ xem xét -"
+
+msgid "What would you like to do when WPML finishes translating your content automatically?"
+msgstr "Bạn muốn làm gì khi WPML hoàn tất việc dịch nội dung của bạn tự động?"
+
+msgid "What would you like to do after WPML finishes translating your content automatically?"
+msgstr "Bạn muốn làm gì sau khi WPML hoàn tất việc dịch nội dung của bạn tự động?"
+
+msgid "Publish without review"
+msgstr "Xuất bản mà không xem xét"
+
+msgid "Recommended with PTC"
+msgstr "Được khuyến nghị với PTC"
+
+msgid "PTC provides Better Than Human Translations that rarely need improvements, so you can confidently skip the review process. For other translation engines, a human review is recommended to confirm accuracy."
+msgstr "PTC cung cấp Bản dịch tốt hơn con người hiếm khi cần cải thiện, vì vậy bạn có thể tự tin bỏ qua quá trình xem xét. Đối với các công cụ dịch khác, nên xem xét thủ công để xác nhận độ chính xác."
+
+msgid "WPML publishes translations immediately, skipping the review process."
+msgstr "WPML xuất bản bản dịch ngay lập tức, bỏ qua quá trình xem xét."
+
+msgid "Wait for review"
+msgstr "Chờ xem xét"
+
+msgid "Recommended with DeepL, Google and Microsoft"
+msgstr "Được khuyến nghị với DeepL, Google và Microsoft"
+
+msgid "DeepL, Google, and Microsoft deliver great translations, but we recommend a human review to confirm they are correct. PTC provides Better Than Human Translations that understand context, so you can confidently skip the review process."
+msgstr "DeepL, Google và Microsoft cung cấp các bản dịch tuyệt vời, nhưng chúng tôi khuyên bạn nên xem xét thủ công để xác nhận chúng chính xác. PTC cung cấp Bản dịch tốt hơn con người hiểu ngữ cảnh, vì vậy bạn có thể tự tin bỏ qua quá trình xem xét."
+
+msgid "WPML keeps translations unpublished, so you can review them first."
+msgstr "WPML giữ các bản dịch chưa xuất bản, vì vậy bạn có thể xem xét chúng trước."
+
+msgid "Your translators review and approve translations before publishing."
+msgstr "Người dịch của bạn xem xét và phê duyệt bản dịch trước khi xuất bản."
+
+msgid "Publish and mark for review"
+msgstr "Xuất bản và đánh dấu để xem xét"
+
+msgid "WPML publishes translations immediately but flags them for you to check at your convenience."
+msgstr "WPML xuất bản bản dịch ngay lập tức nhưng gắn cờ để bạn kiểm tra khi thuận tiện."
+
+msgid "WPML publishes translations immediately but flags them for translators to review later."
+msgstr "WPML xuất bản bản dịch ngay lập tức nhưng gắn cờ để người dịch xem xét sau."

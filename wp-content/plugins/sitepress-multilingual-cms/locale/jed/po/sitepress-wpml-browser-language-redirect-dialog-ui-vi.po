@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/js/browser-language-redirect-dialog/texts.js:11
+msgid "How Browser Language Redirect Affects Google Indexing"
+msgstr "Cách chuyển hướng ngôn ngữ trình duyệt ảnh hưởng đến việc lập chỉ mục của Google"
+
+#: src/js/browser-language-redirect-dialog/texts.js:12
+msgid "Documentation"
+msgstr "Tài liệu"
+
+#: src/js/browser-language-redirect-dialog/texts.js:3
+msgid "Browser redirect affects Google indexing and search results"
+msgstr "Chuyển hướng trình duyệt ảnh hưởng đến việc lập chỉ mục và kết quả tìm kiếm của Google"
+
+#: src/js/browser-language-redirect-dialog/texts.js:4
+msgid "Got it, activate anyway"
+msgstr "Đã hiểu, vẫn kích hoạt"
+
+#: src/js/browser-language-redirect-dialog/texts.js:5
+msgid "Cancel"
+msgstr "Hủy"
+
+#: src/js/browser-language-redirect-dialog/texts.js:7
+msgid ""
+"When you redirect visitors based on their language, you also redirect "
+"Google. Google wants to see your site exactly like visitors see it, "
+"including any redirects that you apply."
+msgstr "Khi bạn chuyển hướng khách truy cập dựa trên ngôn ngữ của họ, bạn cũng chuyển hướng Google. Google muốn xem trang web của bạn chính xác như khách truy cập nhìn thấy, bao gồm mọi chuyển hướng mà bạn áp dụng."
+
+#: src/js/browser-language-redirect-dialog/texts.js:8
+msgid ""
+"It is OK to redirect visitors based on their language, but you need to "
+"realize that this feature affects SEO."
+msgstr "Việc chuyển hướng khách truy cập dựa trên ngôn ngữ của họ là được, nhưng bạn cần nhận ra rằng tính năng này ảnh hưởng đến SEO."
+
+#: src/js/browser-language-redirect-dialog/texts.js:9
+msgid "Before proceeding, we recommend that you read these two pages:"
+msgstr "Trước khi tiếp tục, chúng tôi khuyên bạn nên đọc hai trang này:"

@@ -1,0 +1,128 @@
+/* Layout */
+.site-header {}
+.site-content {}
+.site-main {}
+
+/* Utility */
+.wp-block-button__link {
+  background-color: var(--color-accent);
+  border: solid var(--color-light) 1px;
+  box-shadow: 0 0 0 3px var(--color-accent);
+  font-size: var(--fs-m);
+  text-transform: uppercase;
+  line-height: 1;
+  padding: var(--sp-m) var(--sp-l) var(--sp-s) var(--sp-l);
+  margin: var(--sp-l) 0;
+  letter-spacing: 0.15rem;
+  font-weight: var(--fw-bold);
+}
+:where(.is-layout-flex) {
+  gap: 0;
+}
+.pd-0 {
+  padding: 0!important;
+}
+.wrapper {
+	max-width: 120.0rem;
+	margin: 0 auto;
+}
+.reading {
+	max-width: 70.0rem;
+	margin: 0 auto;
+}
+.wp-block-cover {
+ align-items: flex-start; 
+}
+/* Header */
+.site-branding {
+  display: inline-block;
+  padding: var(--sp-huge) var(--page-margin) var(--sp-l) var(--page-margin);
+  margin: 0;
+  z-index: 10;
+  width: auto;
+  position: absolute;
+  left: 50%;
+  top: 3.0rem;
+  transform: translateX(-50%);
+  @media (min-width: 750px) {
+	  padding: var(--sp-l) var(--page-margin);
+	  top: 0;  
+  }
+  svg {
+	  fill: var(--color-light);
+	  .page-contacto &,
+	  .page-reservas & {
+	  	fill: var(--color-accent);
+	  }
+	  .page-propietarios & {
+	  	fill: var(--cp-700);
+	  }
+  }
+  
+}
+
+
+.site-title {}
+
+/* Footer */
+.site-footer {
+  position: relative;
+  width: 100%;
+  padding: calc(var(--sp-huge)*2) var(--page-margin);
+  color: var(--color-text);
+  a {
+  	color: var(--color-text);
+	  text-decoration: underline;  
+  }
+  ul {
+	  list-style: none;
+  }
+  h4 {
+	  text-transform: uppercase;
+	  font-family: var(--font-body);
+	  font-weight: 500;
+  }
+  .footer-column-left {}
+  .footer-column-center {
+	  padding: var(--page-margin);
+	  display: flex;
+	  justify-content: flex-end;
+	  align-items: center;
+	  min-height: 20.0rem;
+	  @media (min-width: 750px) {
+		  justify-content: center;  
+	  }
+  }
+  .footer-column-right {
+	  @media (min-width: 750px) {
+		  p,h4,.menu {
+		  	text-align: right;  
+		  }
+	  }
+  }
+}
+
+.p-highlight {
+	font-family: var(--font-heading);
+	font-size: var(--fs-xl);
+}
+#menu-ciudades {
+	display: flex;
+	flex-flow: row wrap;
+	font-family: var(--font-heading);
+	text-transform: uppercase;
+	font-size: var(--fs-xl);
+	gap: 0 var(--sp-xs);
+	a {
+		text-decoration: none;
+		&:hover {
+		color: var(--color-accent);
+		}
+	}
+	li:first-child:before {
+		content:"";
+	}
+	li:before {
+		content:"/ ";
+	}
+}

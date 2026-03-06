@@ -1,0 +1,67 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: pt_PT\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/js/settings/UI/TranslationMethod.js:47
+msgid ""
+"You must use the Advanced Translation Editor if you want to translate your "
+"content automatically."
+msgstr "Deve usar o Editor de Tradução Avançado se quiser traduzir o seu conteúdo automaticamente."
+
+#: src/js/settings/UI/Troubleshooting.js:26
+msgid "Synchronize translators and translation managers with ATE"
+msgstr "Sincronizar tradutores e gestores de tradução com o ATE"
+
+#: src/js/settings/UI/Troubleshooting.js:36
+msgid ""
+"Please try again in a few minutes. If the problem persists, please contact "
+"%sWPML support%s."
+msgstr "Por favor, tente novamente dentro de alguns minutos. Se o problema persistir, por favor, contacte o %ssuporte do WPML%s."
+
+#: src/js/settings/components/ConfirmNewTranslatablePostType.js:104
+msgid "Save"
+msgstr "Guardar"
+
+#: src/js/settings/components/ConfirmNewTranslatablePostType.js:73
+msgid "Please confirm this translation setting"
+msgstr "Por favor, confirme esta definição de tradução"
+
+#: src/js/settings/components/ConfirmNewTranslatablePostType.js:76
+msgid "Your site is set to translate all content automatically. When you make <PostTypesNames /> translatable, WPML will automatically translate the %1$d existing item."
+msgid_plural "Your site is set to translate all content automatically. When you make <PostTypesNames /> translatable, WPML will automatically translate the %1$d existing items."
+msgstr[0] "O seu site está configurado para traduzir todo o conteúdo automaticamente. Ao tornar <PostTypesNames /> traduzíveis, o WPML traduzirá automaticamente o %1$d item existente."
+msgstr[1] "O seu site está configurado para traduzir todo o conteúdo automaticamente. Ao tornar <PostTypesNames /> traduzíveis, o WPML traduzirá automaticamente os %1$d itens existentes."
+
+#: src/js/settings/components/ConfirmNewTranslatablePostType.js:82
+msgid ""
+"Your site is set to translate all content automatically. When you make "
+"<PostTypesNames /> translatable, WPML will automatically translate all "
+"future content."
+msgstr "O seu site está configurado para traduzir todo o conteúdo automaticamente. Ao tornar <PostTypesNames /> traduzíveis, o WPML traduzirá automaticamente todo o conteúdo futuro."
+
+#: src/js/settings/components/ConfirmNewTranslatablePostType.js:88
+msgid "Are you OK with paying for this?"
+msgstr "Concorda em pagar por isto?"
+
+#: src/js/settings/components/ConfirmNewTranslatablePostType.js:90
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: src/js/settings/components/ConfirmNewTranslatablePostType.js:91
+msgid "Make translatable"
+msgstr "Tornar traduzível"
+
+#: src/js/settings/components/ConfirmNewTranslatablePostTypeDialog.js:49
+msgid "Yes, translate <b>existing</b> and <b>future</b> content automatically"
+msgstr "Sim, traduzir conteúdo <b>existente</b> e <b>futuro</b> automaticamente"
+
+#: src/js/settings/components/ConfirmNewTranslatablePostTypeDialog.js:64
+msgid "Yes, but only translate <b>future</b> content automatically"
+msgstr "Sim, mas apenas traduzir conteúdo <b>futuro</b> automaticamente"
+
+#: src/js/settings/components/ConfirmNewTranslatablePostTypeDialog.js:65
+msgid "Yes, translate <b>future</b> content automatically"
+msgstr "Sim, traduzir conteúdo <b>futuro</b> automaticamente"

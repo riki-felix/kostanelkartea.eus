@@ -1,0 +1,68 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+
+#: src/js/translationServices/components/AuthorizeModal.js:22
+msgid "Connect this site to your %s account"
+msgstr "ربط هذا الموقع بحسابك %s"
+
+#: src/js/translationServices/components/AuthorizeModal.js:45
+msgid "Error"
+msgstr "خطأ"
+
+#: src/js/translationServices/components/AuthorizeModal.js:57
+msgid "« Use a different Translation Service"
+msgstr "« استخدام خدمة ترجمة مختلفة"
+
+#: src/js/translationServices/components/AuthorizeModal.js:62
+msgid "Authenticate"
+msgstr "المصادقة"
+
+#: src/js/translationServices/components/Connect.js:22
+msgid ""
+"Visit <link_to_service /> to request an API Token. This token allows WPML "
+"to connect to <service_name /> to send and receive jobs."
+msgstr "تفضل بزيارة <link_to_service /> لطلب رمز API. يسمح هذا الرمز لـ WPML بالاتصال بـ <service_name /> لإرسال واستقبال المهام."
+
+#: src/js/translationServices/components/SearchForm.js:10
+msgid "Search translation services"
+msgstr "البحث عن خدمات الترجمة"
+
+#: src/js/translationServices/components/SearchForm.js:12
+msgid "Search"
+msgstr "بحث"
+
+#: src/js/translationServices/components/Sections.js:16
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: src/js/translationServices/components/Sections.js:42
+msgid ""
+"It’s not currently possible to connect a translation service when WPML is "
+"set to translate your site’s content automatically. To use a translation "
+"service, please change your translation mode on the <LinkToSettingsPage /> "
+"page."
+msgstr "لا يمكن حاليًا ربط خدمة ترجمة عندما يكون WPML مُعدًا لترجمة محتوى موقعك تلقائيًا. لاستخدام خدمة ترجمة، يُرجى تغيير وضع الترجمة الخاص بك في صفحة <LinkToSettingsPage />."
+
+#: src/js/translationServices/components/ServicesList.js:41
+msgid "Documentation"
+msgstr "الوثائق"
+
+#: src/js/translationServices/components/ServicesList.js:57
+msgid "Activate"
+msgstr "تفعيل"
+
+#: src/js/translationServices/components/ServicesList.js:69
+msgid "Name"
+msgstr "الاسم"
+
+#: src/js/translationServices/components/ServicesList.js:74
+msgid "Description"
+msgstr "الوصف"
+
+#: src/js/translationServices/components/ServicesList.js:81
+msgid "Ranking"
+msgstr "الترتيب"

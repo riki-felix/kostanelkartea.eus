@@ -1,0 +1,1530 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-18T16:02:11+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: wpml\n"
+"Language: he_IL\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Untranslated strings that I encounter on front-end while logged in"
+msgstr "מחרוזות לא מתורגמות שאני נתקל בהן בקצה הקדמי כשאני מחובר"
+
+msgid "Untranslated strings that all front-end users encounter"
+msgstr "מחרוזות לא מתורגמות שכל משתמשי הקצה הקדמי נתקלים בהן"
+
+msgid "Disable auto-registration of strings"
+msgstr "השבת רישום אוטומטי של מחרוזות"
+
+msgid "Plugins"
+msgstr "תוספים"
+
+msgid "Themes"
+msgstr "ערכות נושא"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "Other"
+msgstr "אחר"
+
+msgid "We cancelled %1$d of %2$d items, but %3$d failed. Please reload the page and try again."
+msgstr "ביטלנו %1$d מתוך %2$d פריטים, אך %3$d נכשלו. אנא טען מחדש את הדף ונסה שוב."
+
+msgid "We resent %1$d of %2$d items, but %3$d failed. Please reload the page and try again."
+msgstr "שלחנו מחדש %1$d מתוך %2$d פריטים, אך %3$d נכשלו. אנא טען מחדש את הדף ונסה שוב."
+
+msgid "Error in fetching default translation batch name"
+msgstr "שגיאה באחזור שם אצווה תרגום ברירת מחדל"
+
+msgid "Error in fetching translation editor type."
+msgstr "שגיאה באחזור סוג עורך התרגום."
+
+msgid "Error in fetching untranslated types count"
+msgstr "שגיאה באחזור ספירת סוגים לא מתורגמים"
+
+msgid "Error in fetching remote translation service data."
+msgstr "שגיאה באחזור נתוני שירות תרגום מרוחק."
+
+msgid "Validation failed"
+msgstr "האימות נכשל"
+
+msgid "Translation jobs couldn’t be canceled"
+msgstr "לא ניתן לבטל משימות תרגום"
+
+msgid "Reload the page and try again."
+msgstr "טען מחדש את הדף ונסה שוב."
+
+msgid "All unfinished translation jobs were canceled"
+msgstr "כל משימות התרגום הלא גמורות בוטלו"
+
+msgid "Please wait until download finishes"
+msgstr "המתן עד לסיום ההורדה"
+
+msgid "You need to wait 5 minutes after the last check"
+msgstr "עליך להמתין 5 דקות לאחר הבדיקה האחרונה"
+
+msgid "Check status and get translations"
+msgstr "בדוק סטטוס וקבל תרגומים"
+
+msgid "Status: "
+msgstr "סטטוס: "
+
+msgid "Downloaded jobs: "
+msgstr "עבודות שהורדו: "
+
+msgid "Cancelled jobs: "
+msgstr "עבודות שבוטלו: "
+
+msgid "none of your translation jobs have been completed"
+msgstr "אף אחת מעבודות התרגום שלך לא הושלמה"
+
+msgid "Checking translation jobs status. Please don't close this page!"
+msgstr "בודק את סטטוס עבודות התרגום. נא לא לסגור את הדף הזה!"
+
+msgid " have been sent to remote translators"
+msgstr " נשלחו למתרגמים מרוחקים"
+
+msgid " has been sent to remote translators"
+msgstr " נשלח למתרגמים מרוחקים"
+
+msgid "Last check: Never"
+msgstr "בדיקה אחרונה: מעולם לא"
+
+msgid "Filtering is disabled to show all selected items. "
+msgstr "הסינון מושבת כדי להציג את כל הפריטים שנבחרו. "
+
+msgid "Apply filters"
+msgstr "החל מסננים"
+
+msgid "%d item selected"
+msgid_plural "%d items selected"
+msgstr[0] "%d פריט נבחר"
+msgstr[1] "%d פריטים נבחרו"
+
+msgid "(%d words to translate)"
+msgstr "(%d מילים לתרגום)"
+
+msgid "%s item not showing."
+msgid_plural "%s items not showing."
+msgstr[0] "%s פריט לא מוצג."
+msgstr[1] "%s פריטים לא מוצגים."
+
+msgid "Show all selected items"
+msgstr "הצג את כל הפריטים שנבחרו"
+
+msgid "Translate your content"
+msgstr "תרגם את התוכן שלך"
+
+msgid "Unselect all"
+msgstr "בטל בחירה של הכל"
+
+msgid "Source Language:"
+msgstr "שפת מקור:"
+
+msgid "translated to:"
+msgstr "תורגם ל:"
+
+msgid "Filter"
+msgstr "סינון"
+
+msgid "You are about to change the source language filter from %s to %s"
+msgstr "אתה עומד לשנות את מסנן שפת המקור מ-%s ל-%s"
+
+msgid "Updating the source language filter will clear the items you've selected for translation. Are you sure you want to continue?"
+msgstr "עדכון מסנן שפת המקור ינקה את הפריטים שבחרת לתרגום. האם אתה בטוח שברצונך להמשיך?"
+
+msgid "Change source language"
+msgstr "שנה שפת מקור"
+
+msgid "Cancel"
+msgstr "ביטול"
+
+msgid "Filter by publication status"
+msgstr "סנן לפי סטטוס פרסום"
+
+msgid "All Statuses"
+msgstr "כל הסטטוסים"
+
+msgid "All languages"
+msgstr "כל השפות"
+
+msgid "All translation statuses"
+msgstr "כל סטטוסי התרגום"
+
+msgid "Not completed"
+msgstr "לא הושלם"
+
+msgid "Needs updating"
+msgstr "דורש עדכון"
+
+msgid "Translation in progress"
+msgstr "תרגום בתהליך"
+
+msgid "Translation complete"
+msgstr "התרגום הושלם"
+
+msgid "Filter by translation status"
+msgstr "סנן לפי סטטוס תרגום"
+
+msgid "Global Filter"
+msgstr "מסנן גלובלי"
+
+msgid "Parent:"
+msgstr "הורה:"
+
+msgid "Search parent by title"
+msgstr "חפש הורה לפי כותרת"
+
+msgid "Search by term title in %s"
+msgstr "חפש לפי כותרת מונח ב-%s"
+
+msgid "All taxonomies"
+msgstr "כל הטקסונומיות"
+
+msgid "Loading"
+msgstr "טוען"
+
+msgid "Taxonomy Term:"
+msgstr "מונח טקסונומיה:"
+
+msgid "Loading terms"
+msgstr "טוען מונחים"
+
+msgid "No terms found"
+msgstr "לא נמצאו מונחים"
+
+msgid "Filter by:"
+msgstr "סנן לפי:"
+
+msgid "Title"
+msgstr "כותרת"
+
+msgid "Automatic translation paused — payment required to continue."
+msgstr "תרגום אוטומטי מושהה — נדרש תשלום כדי להמשיך."
+
+msgid "You have %1s%2s prepaid translation credit in your WPML account%3s. Assign these credits to this site to resume automatic translation"
+msgid_plural "You have %1s%2s prepaid translation credits in your WPML account%3s. Assign these credits to this site to resume automatic translation"
+msgstr[0] "יש לך %1s%2s קרדיט תרגום ששולם מראש בחשבון ה-WPML שלך%3s. הקצה קרדיטים אלה לאתר זה כדי לחדש את התרגום האוטומטי"
+msgstr[1] "יש לך %1s%2s קרדיטים לתרגום ששולמו מראש בחשבון ה-WPML שלך%3s. הקצה קרדיטים אלה לאתר זה כדי לחדש את התרגום האוטומטי"
+
+msgid "Not enough credits to continue automatic translation. Add more credits to resume."
+msgstr "אין מספיק קרדיטים כדי להמשיך בתרגום אוטומטי. הוסף קרדיטים נוספים כדי לחדש."
+
+msgid "Pay now"
+msgstr "שלם עכשיו"
+
+msgid "Get more credits"
+msgstr "קבל קרדיטים נוספים"
+
+msgid "Assign credits"
+msgstr "הקצה קרדיטים"
+
+msgid "View"
+msgstr "הצג"
+
+msgid "Edit"
+msgstr "ערוך"
+
+msgid "Edit note for the translators"
+msgstr "ערוך הערה למתרגמים"
+
+msgid "Add note for the translators"
+msgstr "הוסף הערה למתרגמים"
+
+msgid "This page is set to be %1$stranslated manually%2$s using the WordPress Editor"
+msgstr "דף זה מוגדר להיות %1$sמתורגם ידנית%2$s באמצעות עורך WordPress"
+
+msgid "Select %s"
+msgstr "בחר %s"
+
+msgid "(no title)"
+msgstr "(ללא כותרת)"
+
+msgid "Image"
+msgstr "תמונה"
+
+msgid "Date / Status"
+msgstr "תאריך / סטטוס"
+
+msgid "Loading items..."
+msgstr "טוען פריטים..."
+
+msgid "%1$d %2$s selected"
+msgstr "%1$d %2$s נבחרו"
+
+msgid "items"
+msgstr "פריטים"
+
+msgid "Filtering is disabled to show all selected items"
+msgstr "הסינון מושבת כדי להציג את כל הפריטים שנבחרו"
+
+msgid "Apply filter"
+msgstr "החל מסנן"
+
+msgid "%1$d %2$s not showing"
+msgstr "%1$d %2$s לא מוצגים"
+
+msgid "Show selected items"
+msgstr "הצג פריטים נבחרים"
+
+msgid " / page"
+msgstr " / עמוד"
+
+msgid "Previous"
+msgstr "קודם"
+
+msgid "Next"
+msgstr "הבא"
+
+msgid "Your site's content is too vast for a single translation batch. Use filters to reduce the selection, then \"select all\"."
+msgstr "תוכן האתר שלך נרחב מדי עבור אצווה תרגום אחת. השתמש במסננים כדי לצמצם את הבחירה, ולאחר מכן \"בחר הכל\"."
+
+msgid "The current filter captures too much content. Narrow it down to enable \"select all\" for translation."
+msgstr "המסנן הנוכחי לוכד יותר מדי תוכן. צמצם אותו כדי לאפשר \"בחר הכל\" לתרגום."
+
+msgid "Select All"
+msgstr "בחר הכל"
+
+msgid "All %d items matching criteria are selected"
+msgstr "כל %d הפריטים התואמים לקריטריונים נבחרו"
+
+msgid "All %d items in this section are selected"
+msgstr "כל %d הפריטים במקטע זה נבחרו"
+
+msgid "You have too many items to send for translation at once. Apply a filter to narrow down the items to enable this option."
+msgstr "בחרת יותר מדי פריטים לשליחה לתרגום בבת אחת. החל מסנן כדי לצמצם את הפריטים כדי לאפשר אפשרות זו."
+
+msgid "Clear selection"
+msgstr "נקה בחירה"
+
+msgid "Select all items that match this search"
+msgstr "בחר את כל הפריטים התואמים לחיפוש זה"
+
+msgid "Loading..."
+msgstr "טוען..."
+
+msgid "Select all %ss"
+msgstr "בחר את כל %s"
+
+msgid "Save note"
+msgstr "שמור הערה"
+
+msgid "The following target languages do not support automatic translation: %s. <a>Map to known languages</a> to enable automatic translation."
+msgstr "שפות היעד הבאות אינן תומכות בתרגום אוטומטי: %s. <a>מפה לשפות ידועות</a> כדי לאפשר תרגום אוטומטי."
+
+msgid "The site's default language %s doesn't support automatic translation."
+msgstr "שפת ברירת המחדל של האתר %s אינה תומכת בתרגום אוטומטי."
+
+msgid "Some sections are hidden due to current filter settings or because they have no items. <show_all>Show all translation statuses</show_all>"
+msgstr "חלק מהמקטעים מוסתרים עקב הגדרות סינון נוכחיות או מכיוון שאין בהם פריטים. <show_all>הצג את כל סטטוסי התרגום</show_all>"
+
+msgid "Step 1"
+msgstr "שלב 1"
+
+msgid "Select items for translation"
+msgstr "בחר פריטים לתרגום"
+
+msgid "Clear filters"
+msgstr "נקה מסננים"
+
+msgid "strings"
+msgstr "מחרוזות"
+
+msgid "WPML didn't find any %s matching your criteria."
+msgstr "WPML לא מצא %s התואמים לקריטריונים שלך."
+
+msgid "You have too many items selected to use this feature. Deselect some of the items to enable it."
+msgstr "בחרת יותר מדי פריטים כדי להשתמש בתכונה זו. בטל בחירה של חלק מהפריטים כדי לאפשר אותה."
+
+msgid "Show strings in:"
+msgstr "הצג מחרוזות ב:"
+
+msgid "Display Columns"
+msgstr "הצג עמודות"
+
+msgid "Close modal"
+msgstr "סגור חלון קופץ"
+
+msgid "Select visible columns"
+msgstr "בחר עמודות גלויות"
+
+msgid "String"
+msgstr "מחרוזת"
+
+msgid "Name"
+msgstr "שם"
+
+msgid "Domain"
+msgstr "דומיין"
+
+msgid "Source"
+msgstr "מקור"
+
+msgid "Type"
+msgstr "סוג"
+
+msgid "Apply"
+msgstr "החל"
+
+msgid "All domains"
+msgstr "כל הדומיינים"
+
+msgid "All sources"
+msgstr "כל המקורות"
+
+msgid "Frontend (viewed)"
+msgstr "קצה קדמי (נצפה)"
+
+msgid "Backend (viewed)"
+msgstr "קצה אחורי (נצפה)"
+
+msgid "Unknown"
+msgstr "לא ידוע"
+
+msgid "Search string or a name"
+msgstr "חפש מחרוזת או שם"
+
+msgid "All Translation Priorities"
+msgstr "כל עדיפויות התרגום"
+
+msgid "This filter is available only if source is set to \"Frontend\" or \"Backend\"."
+msgstr "מסנן זה זמין רק אם המקור מוגדר ל-\"קצה קדמי\" או \"קצה אחורי\"."
+
+msgid "front-end"
+msgstr "קצה קדמי"
+
+msgid "back-end"
+msgstr "קצה אחורי"
+
+msgid "viewed"
+msgstr "נצפה"
+
+msgid "Strings in the theme and plugins"
+msgstr "מחרוזות בערכת הנושא ובתוספים"
+
+msgid "Translate front-end texts you can customize from the WordPress admin like footer text, copyright notices, plugin options and settings, time format, widget texts, and more."
+msgstr "תרגם טקסטים בחזית האתר שניתן להתאים אישית מלוח הניהול של וורדפרס, כגון טקסט תחתון, הודעות זכויות יוצרים, אפשרויות והגדרות תוספים, פורמט זמן, טקסטים של ווידג'טים ועוד."
+
+msgid "Translating Strings From Admin and Settings"
+msgstr "תרגום מחרוזות מממשק הניהול וההגדרות"
+
+msgid "Translate texts in admin screens"
+msgstr "תרגם טקסטים במסכי הניהול"
+
+msgid "Translate User Meta Information"
+msgstr "תרגם מידע מטא של משתמשים"
+
+msgid "Making User Meta Information Translatable"
+msgstr "הפיכת מידע מטא של משתמשים לניתן לתרגום"
+
+msgid "Translate user profile strings"
+msgstr "תרגם מחרוזות פרופיל משתמש"
+
+msgid "You need to visit translations on your site's front-end (<a/>) and WPML will identify all untranslated strings and list them here. "
+msgstr "עליך לבקר בתרגומים בקצה הקדמי של האתר שלך (<a/>) ו-WPML יזהה את כל המחרוזות הלא מתורגמות וירשום אותן כאן. "
+
+msgid "hide details"
+msgstr "הסתר פרטים"
+
+msgid "more details"
+msgstr "פרטים נוספים"
+
+msgid "Still can't find the strings you're looking to translate? Add more strings for translation."
+msgstr "עדיין לא מוצא את המחרוזות שאתה מחפש לתרגם? הוסף מחרוזות נוספות לתרגום."
+
+msgid "Not seeing strings that you are looking for?"
+msgstr "לא רואה את המחרוזות שאתה מחפש?"
+
+msgid "Enable the autoregistration setting."
+msgstr "הפעל את הגדרת הרישום האוטומטי."
+
+msgid "Visit translations on the site's frontend for WPML to see which strings are missing translations. Visiting one language is enough: %s."
+msgstr "בקר בתרגומים בחזית האתר עבור WPML כדי לראות אילו מחרוזות חסרות תרגומים. ביקור בשפה אחת מספיק: %s."
+
+msgid "Alternatively, you can register strings manually."
+msgstr "לחלופין, תוכל לרשום מחרוזות ידנית."
+
+msgid "Translate Everything translates only those strings which are registered in English language"
+msgstr "תרגם הכל מתרגם רק את המחרוזות הרשומות בשפה האנגלית"
+
+msgid "Most strings from your plugins and theme are in English, so we’re showing them alongside your default language. Use the <b>Source Language</b> filter to view strings in a specific language."
+msgstr "רוב המחרוזות מהתוספים והערכה שלך הן באנגלית, ולכן אנו מציגים אותן לצד שפת ברירת המחדל שלך. השתמש במסנן <b>שפת מקור</b> כדי להציג מחרוזות בשפה ספציפית."
+
+msgid "You’re using <b>%s</b> to cache your site, which may prevent WPML from automatically registering new strings. To fix this, clear your page cache, then visit your translated pages again on the frontend to detect new strings."
+msgstr "אתה משתמש ב-<b>%s</b> כדי לשמור את האתר שלך במטמון, מה שעשוי למנוע מ-WPML לרשום מחרוזות חדשות באופן אוטומטי. כדי לתקן זאת, נקה את מטמון הדף שלך, ולאחר מכן בקר שוב בדפים המתורגמים שלך בקצה הקדמי כדי לזהות מחרוזות חדשות."
+
+msgid "WPML can detect strings that appear on the site and list them here. This feature helps you identify the strings that actually appear on the site and translate them. To see here only the strings that actually appear on the site, you need to enable this feature."
+msgstr "WPML יכול לזהות מחרוזות המופיעות באתר ולרשום אותן כאן. תכונה זו עוזרת לך לזהות את המחרוזות שמופיעות בפועל באתר ולתרגם אותן. כדי לראות כאן רק את המחרוזות שמופיעות בפועל באתר, עליך להפעיל תכונה זו."
+
+msgid "WPML detects strings that appear on the site and lists them here. This feature helps you identify the strings that actually appear on the site and translate them. To see here all the strings in the site, you need to disable this feature."
+msgstr "WPML מזהה מחרוזות המופיעות באתר ורושם אותן כאן. תכונה זו עוזרת לך לזהות את המחרוזות שמופיעות בפועל באתר ולתרגם אותן. כדי לראות כאן את כל המחרוזות באתר, עליך להשבית תכונה זו."
+
+msgid "Detect untranslated strings"
+msgstr "זהה מחרוזות לא מתורגמות"
+
+msgid "WPML can detect untranslated strings and automatically register them for translation. This happens in real time as you or your visitors browse your website."
+msgstr "WPML יכול לזהות מחרוזות לא מתורגמות ולרשום אותן אוטומטית לתרגום. זה קורה בזמן אמת כשאתה או המבקרים שלך גולשים באתר שלך."
+
+msgid "Automatically register untranslated strings"
+msgstr "רשום אוטומטית מחרוזות לא מתורגמות"
+
+msgid "Learn how to use auto-registration"
+msgstr "למד כיצד להשתמש ברישום אוטומטי"
+
+msgid "recommended"
+msgstr "מומלץ"
+
+msgid "Also register strings from the website's back-end"
+msgstr "רשום גם מחרוזות מהקצה האחורי של האתר"
+
+msgid "Save settings"
+msgstr "שמור הגדרות"
+
+msgid "Request failed because of the network error"
+msgstr "הבקשה נכשלה עקב שגיאת רשת"
+
+msgid "Try again"
+msgstr "נסה שוב"
+
+msgid "Enabled"
+msgstr "מופעל"
+
+msgid "Disabled"
+msgstr "מושבת"
+
+msgid "Modify"
+msgstr "שנה"
+
+msgid "You can only translate %1$s from the site's default language (%2$s)."
+msgstr "אתה יכול לתרגם רק %1$s משפת ברירת המחדל של האתר (%2$s)."
+
+msgid "%1sCheck pricing%2s."
+msgstr "%1sבדוק מחירים%2s."
+
+msgid "The current site content costs %1$sapproximately €%2$s%3$s to translate."
+msgstr "תרגום תוכן האתר הנוכחי עולה %1$sכ-€%2$s%3$s."
+
+msgid "The selected content costs %1$sapproximately €%2$s%3$s to translate."
+msgstr "תרגום התוכן הנבחר עולה %1$sכ-€%2$s%3$s."
+
+msgid "Pay-As-You-Go"
+msgstr "Pay-As-You-Go"
+
+msgid "Activate Pay-As-You-Go to translate automatically with monthly billing."
+msgstr "הפעל את Pay-As-You-Go כדי לתרגם אוטומטית עם חיוב חודשי."
+
+msgid "Activate Pay-As-You-Go"
+msgstr "הפעל את Pay-As-You-Go"
+
+msgid "Already using Pay-As-You-Go on another site?"
+msgstr "כבר משתמש ב-Pay-As-You-Go באתר אחר?"
+
+msgid "Connect this site to it"
+msgstr "חבר את האתר הזה אליו"
+
+msgid "Buy and assign credits"
+msgstr "קנה והקצה קרדיטים"
+
+msgid "Buy a %1$sprepaid package%2$s with at least %3$s%4$s credits%5$s and assign them to this site."
+msgstr "קנה %1$sחבילה משולמת מראש%2$s עם לפחות %3$s%4$s נקודות זכות%5$s והקצה אותן לאתר זה."
+
+msgid "This amount will cover translation of all your current content."
+msgstr "סכום זה יכסה את תרגום כל התוכן הנוכחי שלך."
+
+msgid "Assign at least %1$s%2$s credits%3$s to this site to continue."
+msgstr "הקצה לפחות %1$s%2$s קרדיטים%3$s לאתר זה כדי להמשיך."
+
+msgid "Assign credits from your WPML account and buy an additional %1$sprepaid package%2$s with at least %3$s%4$s credits%5$s credits to cover the remaining amount."
+msgstr "הקצה נקודות זכות מחשבון ה-WPML שלך וקנה %1$sחבילה משולמת מראש%2$s נוספת עם לפחות %3$s%4$s נקודות זכות%5$s כדי לכסות את הסכום הנותר."
+
+msgid "Prepaid credits"
+msgstr "קרדיטים ששולמו מראש"
+
+msgid "There are %1$s%2$s available on your WPML account.%3$s"
+msgstr "ישנם %1$s%2$s זמינים בחשבון ה-WPML שלך.%3$s"
+
+msgid "(Only the WPML account owner can do this.)"
+msgstr "(רק בעל חשבון ה-WPML יכול לעשות זאת.)"
+
+msgid "Checking for new credits..."
+msgstr "בודק אם יש קרדיטים חדשים..."
+
+msgid "Still not enough credits. Refresh again in %d seconds."
+msgstr "עדיין אין מספיק קרדיטים. רענן שוב בעוד %d שניות."
+
+msgid "Already assigned?"
+msgstr "כבר הוקצה?"
+
+msgid "Refresh"
+msgstr "רענן"
+
+msgid "Connection Error. Please wait a minute and reload this page. If the problem continues, please contact WPML support."
+msgstr "שגיאת חיבור. אנא המתן דקה וטען מחדש את הדף. אם הבעיה נמשכת, אנא צור קשר עם תמיכת WPML."
+
+msgid "Pay-As-You-Go activated"
+msgstr "Pay-As-You-Go הופעל"
+
+msgid "You can now continue translating your content automatically."
+msgstr "כעת תוכל להמשיך לתרגם את התוכן שלך באופן אוטומטי."
+
+msgid "%s credits assigned to this site."
+msgstr "%s קרדיטים הוקצו לאתר זה."
+
+msgid "You don’t have enough credits to translate this content."
+msgstr "אין לך מספיק קרדיטים כדי לתרגם תוכן זה."
+
+msgid "You have %s credits — %s more are needed to translate this content"
+msgstr "יש לך %s קרדיטים — דרושים %s נוספים כדי לתרגם תוכן זה"
+
+msgid "You’re missing %s credits for the translation jobs in progress — %s are needed in total"
+msgstr "חסרים לך %s קרדיטים עבור משימות התרגום המתבצעות — דרושים %s בסך הכל"
+
+msgid "Summary:"
+msgstr "סיכום:"
+
+msgid "Credit"
+msgid_plural "Credits"
+msgstr[0] "קרדיט"
+msgstr[1] "קרדיטים"
+
+msgid "€%1$s approximately"
+msgstr "כ-€%1$s"
+
+msgid "Pricing"
+msgstr "תמחור"
+
+msgid "Your Automatic Translation Credits"
+msgstr "נקודות הזכות שלך לתרגום אוטומטי"
+
+msgid "To proceed with translation, activate Pay-As-You-Go or assign prepaid credits."
+msgstr "כדי להמשיך בתרגום, הפעל את Pay-As-You-Go או הקצה קרדיטים ששולמו מראש."
+
+msgid "Leave existing translations as they are"
+msgstr "השאר תרגומים קיימים כפי שהם"
+
+msgid "Overwrite existing translations"
+msgstr "דרוס תרגומים קיימים"
+
+msgid "Some of the content you want to translate is already translated"
+msgstr "חלק מהתוכן שברצונך לתרגם כבר מתורגם"
+
+msgid "What do you want to do with the content that's already translated?"
+msgstr "מה ברצונך לעשות עם התוכן שכבר תורגם?"
+
+msgid "Suggested deadline:"
+msgstr "מועד אחרון מוצע:"
+
+msgid "Set a batch name and deadline"
+msgstr "הגדר שם אצווה ומועד אחרון"
+
+msgid "You can assign a custom name to this batch for easy tracking and suggest a deadline to clarify the priority for translators."
+msgstr "באפשרותך להקצות שם מותאם אישית לאצווה זו לצורך מעקב קל ולהציע מועד אחרון כדי להבהיר את העדיפות למתרגמים."
+
+msgid "Batch name:"
+msgstr "שם אצווה:"
+
+msgid "Default translation engine: "
+msgstr "מנוע תרגום ברירת מחדל: "
+
+msgid "Change"
+msgstr "שנה"
+
+msgid "Failed to load engines"
+msgstr "טעינת מנועים נכשלה"
+
+msgid "No engines enabled"
+msgstr "לא הופעלו מנועים"
+
+msgid "In order to assign yourself as translator, you first need to <add_yourself>add yourself as %s translator</add_yourself> to the site.<br/> Add yourself as %s translator and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "כדי להקצות את עצמך כמתרגם, עליך קודם כל <add_yourself>להוסיף את עצמך כמתרגם %s</add_yourself> לאתר.<br/> הוסף את עצמך כמתרגם %s ולחץ על <check_again>בדוק שוב</check_again> או בחר אפשרות תרגום אחרת."
+
+msgid "In order to assign yourself as translator, you first need to <add_yourself>add yourself as %s to %s translator</add_yourself> to the site.<br/> Add yourself as %s to %s translator and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "כדי להקצות את עצמך כמתרגם, עליך קודם כל <add_yourself>להוסיף את עצמך כמתרגם %s ל-%s</add_yourself> לאתר.<br/> הוסף את עצמך כמתרגם %s ל-%s ולחץ על <check_again>בדוק שוב</check_again> או בחר אפשרות תרגום אחרת."
+
+msgid "Checking"
+msgstr "בודק"
+
+msgid "In order to assign a translation service, you first need to <activate_ts>activate a translation service</activate_ts>.<br/>Activate a translation service and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "כדי להקצות שירות תרגום, עליך קודם כל <activate_ts>להפעיל שירות תרגום</activate_ts>.<br/>הפעל שירות תרגום ולחץ על <check_again>בדוק שוב</check_again> או בחר אפשרות תרגום אחרת."
+
+msgid " Checking "
+msgstr " בודק "
+
+msgid "In order to translate automatically, you first need to <enable_ate>enable WPML's Advanced Translation Editor</enable_ate>.<br/>Enable the Advanced Translation Editor and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "כדי לתרגם אוטומטית, עליך קודם כל <enable_ate>להפעיל את עורך התרגום המתקדם של WPML</enable_ate>.<br/>הפעל את עורך התרגום המתקדם ולחץ על <check_again>בדוק שוב</check_again> או בחר אפשרות תרגום אחרת."
+
+msgid "Selected content was translated using the Classic Translation Editor and can't be sent for automatic translation. To allow this, enable \"Use also for old translations\" in <wpmlSettingLink>WPML Settings</wpmlSettingLink> page."
+msgstr "התוכן שנבחר תורגם באמצעות עורך התרגום הקלאסי ולא ניתן לשלוח אותו לתרגום אוטומטי. כדי לאפשר זאת, הפעל את \"השתמש גם לתרגומים ישנים\" בדף <wpmlSettingLink>הגדרות WPML</wpmlSettingLink>."
+
+msgid "Some of the selected content was translated using the Classic Translation Editor and can't be sent for automatic translation. To allow this, enable \"Use also for old translations\" in <wpmlSettingLink>WPML Settings</wpmlSettingLink> page."
+msgstr "חלק מהתוכן שנבחר תורגם באמצעות עורך התרגום הקלאסי ולא ניתן לשלוח אותו לתרגום אוטומטי. כדי לאפשר זאת, הפעל את \"השתמש גם לתרגומים ישנים\" בדף <wpmlSettingLink>הגדרות WPML</wpmlSettingLink>."
+
+msgid ""
+"Any existing content (translations) will be overwritten when creating duplicates.\n"
+"When duplicating content, please first duplicate parent pages to maintain the site's hierarchy."
+msgstr "כל תוכן קיים (תרגומים) יידרס בעת יצירת כפילויות.\nבעת שכפול תוכן, אנא שכפל תחילה דפי אב כדי לשמור על היררכיית האתר."
+
+msgid "Some of the selected content is already being translated. This will cancel any in-progress translations."
+msgstr "חלק מהתוכן שנבחר כבר מתורגם. פעולה זו תבטל כל תרגום בתהליך."
+
+msgid "The selected items were translated using the WordPress Editor and will be overwritten with automatic translations."
+msgstr "הפריטים שנבחרו תורגמו באמצעות עורך WordPress ויידרסו עם תרגומים אוטומטיים."
+
+msgid "Some of the selected content was translated using the WordPress Editor and will be overwritten."
+msgstr "חלק מהתוכן שנבחר תורגם באמצעות עורך WordPress ויידרס."
+
+msgid "In order to assign to a translator, you first need to <add_translators>add %s translators</add_translators> to the site.<br/> Add %s translators and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "כדי להקצות למתרגם, עליך קודם <add_translators>להוסיף %s מתרגמים</add_translators> לאתר.<br/> הוסף %s מתרגמים ולחץ על <check_again>בדוק שוב</check_again> או בחר אפשרות תרגום אחרת."
+
+msgid "In order to assign to a translator, you first need to <add_translators>add %s to %s translators</add_translators> to the site.<br/> Add %s to %s translators and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "כדי להקצות למתרגם, עליך קודם <add_translators>להוסיף %s ל-%s מתרגמים</add_translators> לאתר.<br/> הוסף %s ל-%s מתרגמים ולחץ על <check_again>בדוק שוב</check_again> או בחר אפשרות תרגום אחרת."
+
+msgid "Your site doesn't have any reviewers for %s. This means that you’re the only person who can review these translations."
+msgstr "לאתר שלך אין סוקרים עבור %s. משמעות הדבר היא שאתה האדם היחיד שיכול לסקור תרגומים אלה."
+
+msgid "Your site doesn't have any reviewers yet. This means that you’re the only person who can review translations."
+msgstr "לאתר שלך אין עדיין סוקרים. משמעות הדבר היא שאתה האדם היחיד שיכול לסקור תרגומים."
+
+msgid "If you want other people to review the translations, go to <a>WPML → Translation Dashboard → Translators</a> and add translators. They will be able to both review and translate content for you."
+msgstr "אם ברצונך שאנשים אחרים יסקרו את התרגומים, עבור אל <a>WPML ← לוח מחוונים לתרגום ← מתרגמים</a> והוסף מתרגמים. הם יוכלו גם לסקור וגם לתרגם תוכן עבורך."
+
+msgid "Automatic translation is blocked - payment required"
+msgstr "תרגום אוטומטי חסום - נדרש תשלום"
+
+msgid "We couldn’t process your payment. Click “Pay now” to retry and resume automatic translation."
+msgstr "לא הצלחנו לעבד את התשלום שלך. לחץ על \"שלם עכשיו\" כדי לנסות שוב ולחדש את התרגום האוטומטי."
+
+msgid "WPML does not support duplicating strings. Your selection to duplicate strings to %1$s will be ignored if you proceed with the translation."
+msgstr "WPML אינו תומך בשכפול מחרוזות. הבחירה שלך לשכפל מחרוזות ל-%1$s תתעלם אם תמשיך עם התרגום."
+
+msgid "WPML does not support duplicating %1$s elements. Your selection to duplicate elements to %2$s will be ignored if you proceed with the translation."
+msgstr "WPML אינו תומך בשכפול %1$s אלמנטים. הבחירה שלך לשכפל אלמנטים ל-%2$s תתעלם אם תמשיך עם התרגום."
+
+msgid "WPML does not support duplicating %1$s elements and strings. Your selection to duplicate elements and strings to %2$s will be ignored if you proceed with the translation."
+msgstr "WPML אינו תומך בשכפול %1$s אלמנטים ומחרוזות. הבחירה שלך לשכפל אלמנטים ומחרוזות ל-%2$s תתעלם אם תמשיך עם התרגום."
+
+msgid "WPML does not support duplicating strings."
+msgstr "WPML אינו תומך בשכפול מחרוזות."
+
+msgid "WPML does not support duplicating %1$s elements."
+msgstr "WPML אינו תומך בשכפול %1$s אלמנטים."
+
+msgid "WPML does not support duplicating %1$s elements and strings."
+msgstr "WPML אינו תומך בשכפול %1$s אלמנטים ומחרוזות."
+
+msgid "Finish setting up %s on your site"
+msgstr "סיים את הגדרת %s באתר שלך"
+
+msgid "You need to authenticate %s to send them content for translation.<br/>Visit the <a>Translators tab</a> to finish the setup and click <check_again>check again</check_again> or choose a different translation option."
+msgstr "עליך לאמת את %s כדי לשלוח להם תוכן לתרגום.<br/>בקר ב<a>לשונית מתרגמים</a> כדי לסיים את ההגדרה ולחץ על <check_again>בדוק שוב</check_again> או בחר אפשרות תרגום אחרת."
+
+msgid "You selected multiple translation methods for content across different languages:"
+msgstr "בחרת מספר שיטות תרגום לתוכן בשפות שונות:"
+
+msgid "Sent for translation"
+msgstr "נשלח לתרגום"
+
+msgid "Sending for translation failed"
+msgstr "שליחה לתרגום נכשלה"
+
+msgid "Ok"
+msgstr "אישור"
+
+msgid "<s>1 item</s> is being translated automatically."
+msgid_plural "<s>%d items</s> are being translated automatically."
+msgstr[0] "<s>פריט אחד</s> מתורגם אוטומטית."
+msgstr[1] "<s>%d פריטים</s> מתורגמים אוטומטית."
+
+msgid "You can track their progress at the top of the page."
+msgstr "תוכל לעקוב אחר ההתקדמות שלהם בחלק העליון של הדף."
+
+msgid "From now on, WPML will automatically translate new content on your site."
+msgstr "מעתה ואילך, WPML יתרגם אוטומטית תוכן חדש באתר שלך."
+
+msgid "This number might vary because you enabled the Translate Everything Automatically Mode."
+msgstr "מספר זה עשוי להשתנות מכיוון שאפשרת את מצב ”תרגם הכל אוטומטית“."
+
+msgid "From now on, WPML will automatically translate your site's content."
+msgstr "מעתה ואילך, WPML יתרגם אוטומטית את תוכן האתר שלך."
+
+msgid "Automatic translations summary"
+msgstr "סיכום תרגומים אוטומטיים"
+
+msgid "Some of the content that you selected for translation includes fields that are encoded. Translators will not be able to work on this kind of content, so we removed it from the job."
+msgstr "חלק מהתוכן שבחרת לתרגום כולל שדות מקודדים. מתרגמים לא יוכלו לעבוד על תוכן מסוג זה, ולכן הסרנו אותו מהמשימה."
+
+msgid "To fix this problem, please contact our support team and describe this issue."
+msgstr "כדי לפתור בעיה זו, אנא צור קשר עם צוות התמיכה שלנו ותאר את הבעיה."
+
+msgid "WPML cannot send some fo the content to translation"
+msgstr "WPML לא יכול לשלוח חלק מהתוכן לתרגום"
+
+msgid "Open support ticket"
+msgstr "פתח פניית תמיכה"
+
+msgid "<s>1 item</s> has been successfully assigned to you! To check its status, please go to <s>WPML → Translations</s>. <translations_queue/>"
+msgid_plural "<s>%d items</s> have been successfully assigned to you! For status updates, please go to <s>WPML → Translations</s>. <translations_queue/>"
+msgstr[0] "<s>פריט אחד</s> הוקצה לך בהצלחה! כדי לבדוק את הסטטוס שלו, עבור אל <s>WPML ← תרגומים</s>. <translations_queue/>"
+msgstr[1] "<s>%d פריטים</s> הוקצו לך בהצלחה! לעדכוני סטטוס, עבור אל <s>WPML ← תרגומים</s>. <translations_queue/>"
+
+msgid "Currently logged in translator summary"
+msgstr "סיכום מתרגם מחובר כעת"
+
+msgid "Go to Translations"
+msgstr "עבור לתרגומים"
+
+msgid "<s>1 item</s> has been duplicated."
+msgid_plural "<s>%d items</s> have been duplicated."
+msgstr[0] "<s>פריט אחד</s> שוכפל."
+msgstr[1] "<s>%d פריטים</s> שוכפלו."
+
+msgid "Duplication summary"
+msgstr "סיכום שכפול"
+
+msgid "There was a problem sending your content for translation."
+msgstr "אירעה בעיה בשליחת התוכן שלך לתרגום."
+
+msgid "Please try again in a few minutes. If the issue persists, please contact our support."
+msgstr "אנא נסה שוב בעוד כמה דקות. אם הבעיה נמשכת, אנא צור קשר עם התמיכה שלנו."
+
+msgid "See technical details"
+msgstr "הצג פרטים טכניים"
+
+msgid "Hide technical details"
+msgstr "הסתר פרטים טכניים"
+
+msgid "Some of the selected strings are already registered or translated into %s. Since their source language matches the target language, they cannot be retranslated."
+msgstr "חלק מהמחרוזות שנבחרו כבר רשומות או מתורגמות ל-%s. מכיוון ששפת המקור שלהן תואמת את שפת היעד, לא ניתן לתרגם אותן מחדש."
+
+msgid "Some of the selected content has already been translated from %s to %s and cannot be re-translated from %s to %s."
+msgstr "חלק מהתוכן שנבחר כבר תורגם מ-%s ל-%s ולא ניתן לתרגם אותו מחדש מ-%s ל-%s."
+
+msgid "Content already translated"
+msgstr "התוכן כבר תורגם"
+
+msgid "Some content couldn't be sent to translation."
+msgstr "חלק מהתוכן לא נשלח לתרגום."
+
+msgid "WPML did not create translations for some languages because of the following reasons:"
+msgstr "WPML לא יצר תרגומים עבור שפות מסוימות מהסיבות הבאות:"
+
+msgid "<s>1 item</s> has been successfully sent to translators!"
+msgid_plural "<s>%d items</s> have been successfully sent to translators!"
+msgstr[0] "<s>פריט אחד</s> נשלח בהצלחה למתורגמנים!"
+msgstr[1] "<s>%d פריטים</s> נשלחו בהצלחה למתורגמנים!"
+
+msgid "Local translations summary"
+msgstr "סיכום תרגומים מקומיים"
+
+msgid "You can check their status in WPML → Translation"
+msgstr "באפשרותך לבדוק את הסטטוס שלהם ב-WPML ← תרגום"
+
+msgid "Continue to %s"
+msgstr "המשך אל %s"
+
+msgid "We were unable to send the following batches for professional translation:"
+msgstr "לא הצלחנו לשלוח את האצוות הבאות לתרגום מקצועי:"
+
+msgid "<p><a><s>Contact WPML support for help</s></a></p>"
+msgstr "<p><a><s>צור קשר עם תמיכת WPML לקבלת עזרה</s></a></p>"
+
+msgid "Translation Service"
+msgstr "שירות תרגום"
+
+msgid "sending for professional translation.."
+msgstr "שולח לתרגום מקצועי.."
+
+msgid "<s>%d item</s> is being sent for translation to %s. Please continue to their site to start the translation."
+msgid_plural "<s>%d items</s> are being sent for translation to %s. Please continue to their site to start the translation."
+msgstr[0] "<s>%d פריט</s> נשלח לתרגום אל %s. אנא המשך לאתר שלהם כדי להתחיל את התרגום."
+msgstr[1] "<s>%d פריטים</s> נשלחים לתרגום אל %s. אנא המשך לאתר שלהם כדי להתחיל את התרגום."
+
+msgid "Translation service translations summary"
+msgstr "סיכום תרגומי שירות תרגום"
+
+msgid "One or more assigned translators are invalid. The translator may have been removed or their language permissions changed.<br/> Review your settings on the <translators_page>Translators page</translators_page>."
+msgstr "מתרגם אחד או יותר שהוקצו אינם חוקיים. ייתכן שהמתרגם הוסר או שהרשאות השפה שלו השתנו.<br/> עיין בהגדרות שלך ב<translators_page>דף המתרגמים</translators_page>."
+
+msgid "The selected translation service is no longer valid. It may have been changed, unauthenticated, or deactivated.<br/> Review your settings on the <translators_page>Translators page</translators_page>."
+msgstr "שירות התרגום שנבחר אינו חוקי עוד. ייתכן שהוא שונה, לא אומת או הושבת.<br/> עיין בהגדרות שלך ב<translators_page>דף המתרגמים</translators_page>."
+
+msgid "Currently selected translation editor doesn't support automatic translation. You must enable the Advanced Translation Editor to send content for automatic translation.<br/> Check your settings on the <wpml_settings>WPML settings page</wpml_settings>."
+msgstr "עורך התרגום שנבחר כעת אינו תומך בתרגום אוטומטי. עליך להפעיל את עורך התרגום המתקדם כדי לשלוח תוכן לתרגום אוטומטי.<br/> בדוק את ההגדרות שלך ב<wpml_settings>דף הגדרות WPML</wpml_settings>."
+
+msgid "Validation error happened during send to translation."
+msgstr "אירעה שגיאת אימות במהלך השליחה לתרגום."
+
+msgid "Translate and Duplicate"
+msgstr "תרגם ושכפל"
+
+msgid "Duplicate"
+msgstr "שכפל"
+
+msgid "Translate content"
+msgstr "תרגם תוכן"
+
+msgid "Please choose one of the available payment options."
+msgstr "אנא בחר אחת מאפשרויות התשלום הזמינות."
+
+msgid "Selected content is already translated"
+msgstr "התוכן שנבחר כבר תורגם"
+
+msgid "Please select a review mode"
+msgstr "אנא בחר מצב סקירה"
+
+msgid "Assign local translator or choose another option"
+msgstr "הקצה מתרגם מקומי או בחר אפשרות אחרת"
+
+msgid "Assign yourself or choose another option"
+msgstr "הקצה לעצמך או בחר אפשרות אחרת"
+
+msgid "Activate translation service or choose another option"
+msgstr "הפעל שירות תרגום או בחר אפשרות אחרת"
+
+msgid "Activate ATE or choose another option"
+msgstr "הפעל ATE או בחר אפשרות אחרת"
+
+msgid "Authenticate translation service or choose another option"
+msgstr "אמת שירות תרגום או בחר אפשרות אחרת"
+
+msgid "Please provide context to enable translation"
+msgstr "אנא ספק הקשר כדי לאפשר תרגום"
+
+msgid "Please keep this page open while WPML sends your content for translation. If you leave now, the remaining items won't be sent."
+msgstr "אנא השאר דף זה פתוח בזמן ש-WPML שולח את התוכן שלך לתרגום. אם תעזוב עכשיו, הפריטים הנותרים לא יישלחו."
+
+msgid "Sending content to translation"
+msgstr "שולח תוכן לתרגום"
+
+msgid "<s>%s</s> cannot process more than <s>%d</s> jobs in a single batch. WPML will automatically split your jobs into separate batches to ensure an error-free delivery to <s>%s</s>. <br/><br/> Do you want to proceed?"
+msgstr "<s>%s</s> לא יכול לעבד יותר מ-<s>%d</s> משימות באצווה אחת. WPML יפצל אוטומטית את המשימות שלך לאצוות נפרדות כדי להבטיח מסירה ללא שגיאות ל-<s>%s</s>. <br/><br/> האם ברצונך להמשיך?"
+
+msgid "WPML will send jobs to %s in separate batches"
+msgstr "WPML ישלח משימות ל-%s באצוות נפרדות"
+
+msgid "Yes, send jobs in separate batches"
+msgstr "כן, שלח משימות באצוות נפרדות"
+
+msgid "No, I will split jobs myself"
+msgstr "לא, אני אפצל את המשימות בעצמי"
+
+msgid "This will translate only your future content"
+msgstr "פעולה זו תתרגם רק את התוכן העתידי שלך"
+
+msgid "This will translate your entire site"
+msgstr "פעולה זו תתרגם את כל האתר שלך"
+
+msgid "Translate everything automatically from now on, without asking me."
+msgstr "תרגם הכל אוטומטית מעכשיו, בלי לשאול אותי."
+
+msgid "Loading options to translate the content"
+msgstr "טוען אפשרויות לתרגום התוכן"
+
+msgid "What content do you want to translate?"
+msgstr "איזה תוכן ברצונך לתרגם?"
+
+msgid "Translate my entire site"
+msgstr "תרגם את כל האתר שלי"
+
+msgid "WPML will translate all of your site's content, including:"
+msgstr "WPML יתרגם את כל תוכן האתר שלך, כולל:"
+
+msgid "Any existing content that hasn’t been translated yet"
+msgstr "כל תוכן קיים שטרם תורגם"
+
+msgid "All new content you create in the future"
+msgstr "כל תוכן חדש שתיצור בעתיד"
+
+msgid "Translate only future content"
+msgstr "תרגם רק תוכן עתידי"
+
+msgid "WPML will translate only the content you create after enabling this translation mode."
+msgstr "WPML יתרגם רק את התוכן שתיצור לאחר הפעלת מצב תרגום זה."
+
+msgid "Existing untranslated content on your side will not be translated."
+msgstr "תוכן קיים שלא תורגם באתר שלך לא יתורגם."
+
+msgid "WPML Settings"
+msgstr "הגדרות WPML"
+
+msgid "Some of your content was translated using the Classic Translation Editor. These translations won’t be included in Translate Everything Automatically."
+msgstr "חלק מהתוכן שלך תורגם באמצעות עורך התרגום הקלאסי. תרגומים אלה לא ייכללו ב'תרגם הכל אוטומטית'."
+
+msgid "To include them, enable \"Use also for old translations\" in <wpmlSettingLink/>."
+msgstr "כדי לכלול אותם, הפעל את \"השתמש גם לתרגומים ישנים\" ב-<wpmlSettingLink/>."
+
+msgid "Some of your content was translated using the WordPress Editor. These translations won’t be included in Translate Everything Automatically."
+msgstr "חלק מהתוכן שלך תורגם באמצעות עורך וורדפרס. תרגומים אלה לא ייכללו ב'תרגם הכל אוטומטית'."
+
+msgid "Some of your content was translated using the Classic Translation Editor or WordPress Editor. These translations won’t be included in Translate Everything Automatically."
+msgstr "חלק מהתוכן שלך תורגם באמצעות עורך התרגום הקלאסי או עורך וורדפרס. תרגומים אלה לא ייכללו ב'תרגם הכל אוטומטית'."
+
+msgid "To include Classic Editor translations, enable \"Use also for old translations\" in <wpmlSettingLink/>."
+msgstr "כדי לכלול תרגומים של העורך הקלאסי, הפעל את \"השתמש גם לתרגומים ישנים\" ב-<wpmlSettingLink/>."
+
+msgid "Existing content"
+msgstr "תוכן קיים"
+
+msgid "You selected to translate strings that are in %s. Only these strings will be translated to %s."
+msgstr "בחרת לתרגם מחרוזות שנמצאות ב-%s. רק מחרוזות אלו יתורגמו ל-%s."
+
+msgid "You selected to translate strings that are in %s and %s. Only these strings will be translated to %s."
+msgstr "בחרת לתרגם מחרוזות שנמצאות ב-%s וב-%s. רק מחרוזות אלו יתורגמו ל-%s."
+
+msgid "Source language"
+msgstr "שפת מקור"
+
+msgid "Target language"
+msgstr "שפת יעד"
+
+msgid "Words to translate"
+msgstr "מילים לתרגום"
+
+msgid "Credits needed"
+msgstr "נקודות זכות נדרשות"
+
+msgid "Automatic translation is not supported for %s."
+msgstr "תרגום אוטומטי אינו נתמך עבור %s."
+
+msgid "The selected translation engines do not support %s."
+msgstr "מנועי התרגום שנבחרו אינם תומכים ב-%s."
+
+msgid "%1sTotal Credits:%2s %3s"
+msgstr "%1sסה\"כ קרדיטים:%2s %3s"
+
+msgid "Translation service additional options"
+msgstr "אפשרויות נוספות של שירות תרגום"
+
+msgid "Fetching translation service data..."
+msgstr "מאחזר נתוני שירות תרגום..."
+
+msgid "-"
+msgstr "-"
+
+msgid "Translate automatically"
+msgstr "תרגם אוטומטית"
+
+msgid "Translate myself"
+msgstr "אתרגם בעצמי"
+
+msgid "Assign a translator"
+msgstr "הקצה מתרגם"
+
+msgid "Assign translation service"
+msgstr "הקצה שירות תרגום"
+
+msgid "Do nothing"
+msgstr "אל תעשה כלום"
+
+msgid "Please choose"
+msgstr "אנא בחר"
+
+msgid "Choose a translator"
+msgstr "בחר מתרגם"
+
+msgid "First available"
+msgstr "הראשון הזמין"
+
+msgid "(Me)"
+msgstr "(אני)"
+
+msgid "Step 2"
+msgstr "שלב 2"
+
+msgid "Calculating..."
+msgstr "מחשב..."
+
+msgid "Refining estimation... about %1$d minute remaining"
+msgid_plural "Refining estimation... about %1$d minutes remaining"
+msgstr[0] "מחדד הערכה... נותרה כדקה %1$d"
+msgstr[1] "מחדד הערכה... נותרו כ-%1$d דקות"
+
+msgid "Refining estimation... %d second remaining"
+msgid_plural "Refining estimation... %d seconds remaining"
+msgstr[0] "מחדד הערכה... נותרה %d שנייה"
+msgstr[1] "מחדד הערכה... נותרו %d שניות"
+
+msgid "Estimated cost:"
+msgstr "עלות משוערת:"
+
+msgid "Current estimated cost:"
+msgstr "עלות משוערת נוכחית:"
+
+msgid "Changing translation engine and recalculating estimate..."
+msgstr "משנה מנוע תרגום ומחשב מחדש הערכה..."
+
+msgid "%s credits"
+msgstr "%s קרדיטים"
+
+msgid "€%1$s"
+msgstr "€%1$s"
+
+msgid "All content is already translated. New and edited content will be translated automatically."
+msgstr "כל התוכן כבר מתורגם. תוכן חדש וערוך יתורגם אוטומטית."
+
+msgid "%1$s and %2$s"
+msgstr "%1$s ו-%2$s"
+
+msgid "in other types"
+msgstr "בסוגים אחרים"
+
+msgid "Hide what will be translated"
+msgstr "הסתר מה יתורגם"
+
+msgid "Show what will be translated"
+msgstr "הצג מה יתורגם"
+
+msgid "Calculation complete"
+msgstr "החישוב הושלם"
+
+msgid "%d of %d analyzed"
+msgstr "%d מתוך %d נותחו"
+
+msgid "Automatic translations completed"
+msgstr "תרגומים אוטומטיים הושלמו"
+
+msgid "<s>1 translation</s> has been successfully translated automatically"
+msgid_plural "<s>%d translations</s> have been successfully translated automatically"
+msgstr[0] "<s>תרגום אחד</s> תורגם אוטומטית בהצלחה"
+msgstr[1] "<s>%d תרגומים</s> תורגמו אוטומטית בהצלחה"
+
+msgid "Automatic jobs in progress"
+msgstr "משימות אוטומטיות בתהליך"
+
+msgid "<s>%d automatic translation</s> is in progress"
+msgid_plural "<s>%d automatic translations</s> are in progress"
+msgstr[0] "<s>%d תרגום אוטומטי</s> מתבצע"
+msgstr[1] "<s>%d תרגומים אוטומטיים</s> מתבצעים"
+
+msgid "Remaining time: <s>Less than 1 minute</s>"
+msgstr "זמן שנותר: <s>פחות מדקה</s>"
+
+msgid "Remaining time: <s>%d minute</s>"
+msgid_plural "Remaining time: <s>%d minutes</s>"
+msgstr[0] "זמן שנותר: <s>%d דקה</s>"
+msgstr[1] "זמן שנותר: <s>%d דקות</s>"
+
+msgid "Your default language, %s, must be mapped to a supported language in order to use automatic translation"
+msgstr "שפת ברירת המחדל שלך, %s, חייבת להיות ממופה לשפה נתמכת כדי להשתמש בתרגום אוטומטי"
+
+msgid "Map the language"
+msgstr "מפה את השפה"
+
+msgid "%d translations "
+msgstr "%d תרגומים "
+
+msgid "%d translation "
+msgstr "%d תרגום "
+
+msgid "this includes translations from Translate Everything Automatically"
+msgstr "זה כולל תרגומים מ'תרגם הכל אוטומטית'"
+
+msgid "are waiting for your review"
+msgstr "ממתינים לסקירה שלך"
+
+msgid "is waiting for your review"
+msgstr "ממתין לסקירה שלך"
+
+msgid "Review Translations"
+msgstr "סקור תרגומים"
+
+msgid "Translate existing content"
+msgstr "תרגם תוכן קיים"
+
+msgid "Translate now"
+msgstr "תרגם עכשיו"
+
+msgid "Starting with version 4.7, WPML will also automatically translate texts (strings) coming from %s."
+msgstr "החל מגרסה 4.7, WPML יתרגם אוטומטית גם טקסטים (מחרוזות) המגיעים מ-%s."
+
+msgid "WPML will not translate existing texts of this type but any new ones you create will be automatically translated. If you prefer, you can <button />."
+msgstr "WPML לא יתרגם טקסטים קיימים מסוג זה, אך כל טקסט חדש שתיצור יתורגם אוטומטית. אם תעדיף, תוכל <button />."
+
+msgid "Starting with version 4.7, WPML will also automatically translate:"
+msgstr "החל מגרסה 4.7, WPML יתרגם אוטומטית גם:"
+
+msgid "Content set to \"use translation if available or fallback to default language\": %s."
+msgstr "תוכן שהוגדר ל \"השתמש בתרגום אם זמין או חזור לשפת ברירת המחדל\": %s."
+
+msgid "Texts (strings) coming from: %s."
+msgstr "טקסטים (מחרוזות) המגיעים מ: %s."
+
+msgid "WPML will not translate existing content for these post types and texts but any new content you create will be automatically translated. If you prefer, you can start <button />."
+msgstr "WPML לא יתרגם תוכן קיים עבור סוגי פוסטים וטקסטים אלה, אך כל תוכן חדש שתיצור יתורגם אוטומטית. אם תעדיף, תוכל להתחיל <button />."
+
+msgid "WPML will not translate existing content for these post types but any new content you create will be automatically translated. If you prefer, you can start <button />."
+msgstr "WPML לא יתרגם תוכן קיים עבור סוגי פוסטים אלה, אך כל תוכן חדש שתיצור יתורגם אוטומטית. אם תעדיף, תוכל להתחיל <button />."
+
+msgid "start translating existing content now"
+msgstr "התחל לתרגם תוכן קיים עכשיו"
+
+msgid "The following target languages do not support automatic translations: %s"
+msgstr "שפות היעד הבאות אינן תומכות בתרגומים אוטומטיים: %s"
+
+msgid "To enable automatic translation map them to known languages."
+msgstr "כדי להפעיל תרגום אוטומטי, מפה אותן לשפות ידועות."
+
+msgid "Map to known languages"
+msgstr "מפה לשפות ידועות"
+
+msgid "Copied!"
+msgstr "הועתק!"
+
+msgid "Copy All"
+msgstr "העתק הכל"
+
+msgid "Error type"
+msgstr "סוג שגיאה"
+
+msgid "Error Message"
+msgstr "הודעת שגיאה"
+
+msgid "Job ID"
+msgstr "מזהה משימה"
+
+msgid "ATE Job ID"
+msgstr "מזהה משימת ATE"
+
+msgid "Original ID"
+msgstr "מזהה מקורי"
+
+msgid "Element ID"
+msgstr "מזהה רכיב"
+
+msgid "Copy to clipboard"
+msgstr "העתק ללוח"
+
+msgid "Hide errors details"
+msgstr "הסתר פרטי שגיאות"
+
+msgid "Show errors details"
+msgstr "הצג פרטי שגיאות"
+
+msgid "https://wpml.org/forums/forum/english-support/"
+msgstr "https://wpml.org/forums/forum/english-support/"
+
+msgid "<strong>%d item</strong> couldn't be completed due to an unexpected error. Try resending it for translation. If the issue continues, <a>contact WPML support</a>."
+msgid_plural "<strong>%d items</strong> couldn't be completed due to an unexpected error. Try resending them for translation. If the issue continues, <a>contact WPML support</a>."
+msgstr[0] "<strong>%d פריט</strong> לא הושלם עקב שגיאה בלתי צפויה. נסה לשלוח אותו שוב לתרגום. אם הבעיה נמשכת, <a>צור קשר עם תמיכת WPML</a>."
+msgstr[1] "<strong>%d פריטים</strong> לא הושלמו עקב שגיאה בלתי צפויה. נסה לשלוח אותם שוב לתרגום. אם הבעיה נמשכת, <a>צור קשר עם תמיכת WPML</a>."
+
+msgid "Cancelling %d/%d..."
+msgstr "מבטל %d/%d..."
+
+msgid "Cancelling..."
+msgstr "מבטל..."
+
+msgid "Discard jobs"
+msgstr "בטל משימות"
+
+msgid "Resending %d/%d..."
+msgstr "שולח מחדש %d/%d..."
+
+msgid "Resending..."
+msgstr "שולח מחדש..."
+
+msgid "Resend"
+msgstr "שלח מחדש"
+
+msgid "We recommend staying on this page to monitor progress and respond to any issues if they occur. You can leave this page, but you should remain within your WordPress admin area."
+msgstr "אנו ממליצים להישאר בדף זה כדי לעקוב אחר ההתקדמות ולהגיב לכל בעיה אם תתרחש. באפשרותך לעזוב דף זה, אך עליך להישאר באזור הניהול של וורדפרס."
+
+msgid "Translation status"
+msgstr "סטטוס תרגום"
+
+msgid "Before translating with PTC, please provide context about your website and target audience (one-time thing)."
+msgstr "לפני התרגום עם PTC, אנא ספק הקשר לגבי האתר שלך וקהל היעד (פעולה חד פעמית)."
+
+msgid "Provide Context"
+msgstr "ספק הקשר"
+
+msgid "Default language does not support automatic translations."
+msgstr "שפת ברירת המחדל אינה תומכת בתרגומים אוטומטיים."
+
+msgid "You must enable ATE to activate Translate Everything Automatically."
+msgstr "עליך להפעיל את ATE כדי להפעיל את 'תרגם הכל אוטומטית'."
+
+msgid "Select payment method"
+msgstr "בחר אמצעי תשלום"
+
+msgid "Credits assigned"
+msgstr "קרדיטים הוקצו"
+
+msgid "You’re all set."
+msgstr "הכל מוכן."
+
+msgid "Click Translate Everything Automatically to start translating your entire site."
+msgstr "לחץ על תרגם הכל אוטומטית כדי להתחיל לתרגם את כל האתר שלך."
+
+msgid "Content to translate"
+msgstr "תוכן לתרגום"
+
+msgid "Publishing method"
+msgstr "שיטת פרסום"
+
+msgid "Payment method"
+msgstr "אמצעי תשלום"
+
+msgid "Enable Translate Everything Automatically"
+msgstr "הפעל תרגם הכל אוטומטית"
+
+msgid "Go back"
+msgstr "חזור"
+
+msgid "Continue"
+msgstr "המשך"
+
+msgid "Calculating credits for translating existing content. Please wait..."
+msgstr "מחשב קרדיטים לתרגום תוכן קיים. אנא המתן..."
+
+msgid "Set Up Translate Everything Automatically"
+msgstr "הגדר תרגום אוטומטי של הכל"
+
+msgid "WPML will translate your content into %d languages"
+msgstr "WPML יתרגם את התוכן שלך ל-%d שפות"
+
+msgid "You can start using Translate Everything Automatically after sending some content for translation. We recommend that you review these translations and make sure that they are good before translating your entire site's content."
+msgstr "באפשרותך להתחיל להשתמש ב'תרגם הכל אוטומטית' לאחר שליחת תוכן לתרגום. אנו ממליצים שתבדוק תרגומים אלה וודא שהם טובים לפני תרגום כל תוכן האתר שלך."
+
+msgid "Translate Everything Automatically - disabled"
+msgstr "תרגם הכל אוטומטית - מושבת"
+
+msgid "Translate Everything Automatically"
+msgstr "תרגם הכל אוטומטית"
+
+msgid "Automatically translate all %s content to %s."
+msgstr "תרגם אוטומטית את כל התוכן של %s ל-%s."
+
+msgid "Translate Everything Automatically - pausing"
+msgstr "תרגם הכל אוטומטית - מושהה"
+
+msgid "Translate Everything Automatically is pausing"
+msgstr "תרגם הכל אוטומטית מושהה"
+
+msgid "Translate Everything Automatically - paused"
+msgstr "תרגם הכל אוטומטית - מושהה"
+
+msgid "%d translation left in the queue. Preparing more content for translation."
+msgid_plural "%d translations left in the queue. Preparing more content for translation."
+msgstr[0] "נותר תרגום %d בתור. מכין תוכן נוסף לתרגום."
+msgstr[1] "נותרו %d תרגומים בתור. מכין תוכן נוסף לתרגום."
+
+msgid "Preparing content for translation..."
+msgstr "מכין תוכן לתרגום..."
+
+msgid "%d translation left in the queue..."
+msgid_plural "%d translations left in the queue..."
+msgstr[0] "נותר תרגום %d בתור..."
+msgstr[1] "נותרו %d תרגומים בתור..."
+
+msgid "Translate Everything Automatically has finished translating your content. There are no pending translations in the queue."
+msgstr "תרגם הכל אוטומטית סיים לתרגם את התוכן שלך. אין תרגומים ממתינים בתור."
+
+msgid "Some items were translated using the Classic Translation Editor and cannot be sent for automatic translation. Please select these items and choose the option to translate them yourself."
+msgstr "חלק מהפריטים תורגמו באמצעות עורך התרגום הקלאסי ולא ניתן לשלוח אותם לתרגום אוטומטי. אנא בחר פריטים אלה ובחר באפשרות לתרגם אותם בעצמך."
+
+msgid "Translate Everything Automatically - enabled"
+msgstr "תרגם הכל אוטומטית - מופעל"
+
+msgid "Translate Everything Automatically is enabled"
+msgstr "תרגם הכל אוטומטית מופעל"
+
+msgid "As you create new content or edit existing content, WPML will automatically translate it, but only from %s to %s."
+msgstr "כאשר תיצור תוכן חדש או תערוך תוכן קיים, WPML יתרגם אותו אוטומטית, אך רק מ-%s ל-%s."
+
+msgid "Translate Everything Automatically is paused — payment required"
+msgstr "תרגם הכל אוטומטית מושהה — נדרש תשלום"
+
+msgid "Automatic translation is paused — payment required"
+msgstr "תרגום אוטומטי מושהה — נדרש תשלום"
+
+msgid "Automatic translation - payment required"
+msgstr "תרגום אוטומטי - נדרש תשלום"
+
+msgid "We couldn’t process payment for your completed translations. Click “Pay now” to retry and continue using automatic translation."
+msgstr "לא הצלחנו לעבד את התשלום עבור התרגומים שהושלמו. לחץ על \"שלם עכשיו\" כדי לנסות שוב ולהמשיך להשתמש בתרגום אוטומטי."
+
+msgid "Cancel translation"
+msgstr "בטל תרגום"
+
+msgid "Translate Everything Automatically is paused — not enough credits"
+msgstr "תרגם הכל אוטומטית מושהה — אין מספיק קרדיטים"
+
+msgid "Automatic translation is paused — not enough credits"
+msgstr "תרגום אוטומטי מושהה — אין מספיק קרדיטים"
+
+msgid "Translation will resume automatically after you assign more credits."
+msgstr "התרגום יתחדש אוטומטית לאחר שתקצה קרדיטים נוספים."
+
+msgid "This item needs a translation update but can't be translated automatically because it was translated with the Classic Translation Editor."
+msgstr "פריט זה דורש עדכון תרגום אך לא ניתן לתרגם אותו אוטומטית מכיוון שהוא תורגם באמצעות עורך התרגום הקלאסי."
+
+msgid "This item needs update. Please, select the item and send for translation."
+msgstr "פריט זה דורש עדכון. אנא בחר את הפריט ושלח לתרגום."
+
+msgid "Translations completed with the Classic Translation Editor cannot be sent for automatic translation"
+msgstr "תרגומים שהושלמו באמצעות עורך התרגום הקלאסי לא ניתנים לשליחה לתרגום אוטומטי"
+
+msgid "automatic translation"
+msgstr "תרגום אוטומטי"
+
+msgid "unassigned"
+msgstr "לא הוקצה"
+
+msgid "not translated"
+msgstr "לא תורגם"
+
+msgid "waiting for translator"
+msgstr "ממתין למתרגם"
+
+msgid "in progress"
+msgstr "בתהליך"
+
+msgid "needs update"
+msgstr "דורש עדכון"
+
+msgid "duplicate"
+msgstr "כפול"
+
+msgid "complete"
+msgstr "הושלם"
+
+msgid "needs review"
+msgstr "דורש סקירה"
+
+msgid "preparing for translation"
+msgstr "מכין לתרגום"
+
+msgid "needs attention"
+msgstr "דורש תשומת לב"
+
+msgid "translation error"
+msgstr "שגיאת תרגום"
+
+msgid "This item was translated using the WordPress Editor. Switching to the WPML's Translation Editor will overwrite the existing translation."
+msgstr "פריט זה תורגם באמצעות עורך וורדפרס. מעבר לעורך התרגום של WPML יחליף את התרגום הקיים."
+
+msgid "This item needs a translation update but was previously translated using the WordPress Editor. Using the WPML's Translation Editor will overwrite the existing translation."
+msgstr "פריט זה דורש עדכון תרגום אך תורגם בעבר באמצעות עורך וורדפרס. שימוש בעורך התרגום של WPML יחליף את התרגום הקיים."
+
+msgid "This item hasn't been translated yet and is set to use the WordPress Editor."
+msgstr "פריט זה עדיין לא תורגם והוא מוגדר להשתמש בעורך וורדפרס."
+
+msgid "%1$s: %2$s%3$s"
+msgstr "%1$s: %2$s%3$s"
+
+msgid "Could not fetch engines data"
+msgstr "לא ניתן לאחזר נתוני מנועים"
+
+msgid "Error in fetching currently logged in translator"
+msgstr "שגיאה באחזור המתרגם המחובר כעת"
+
+msgid "Error in fetching local translators"
+msgstr "שגיאה באחזור מתרגמים מקומיים"
+
+msgid "Published"
+msgstr "פורסם"
+
+msgid "Draft"
+msgstr "טיוטה"
+
+msgid "Trash"
+msgstr "אשפה"
+
+msgid "Pending"
+msgstr "ממתין"
+
+msgid "Private"
+msgstr "פרטי"
+
+msgid "Future"
+msgstr "עתידי"
+
+msgid "Auto Draft"
+msgstr "טיוטה אוטומטית"
+
+msgid "External"
+msgstr "חיצוני"
+
+msgid "Collapse"
+msgstr "כווץ"
+
+msgid "Expand"
+msgstr "הרחב"
+
+msgid "Select an item"
+msgstr "בחר פריט"
+
+msgid "Open dropdown"
+msgstr "פתח תפריט נפתח"
+
+msgid "Reset"
+msgstr "אפס"
+
+msgid "Search"
+msgstr "חיפוש"
+
+msgid "No items found"
+msgstr "לא נמצאו פריטים"
+
+msgid "OFF"
+msgstr "כבוי"
+
+msgid "ON"
+msgstr "מופעל"
+
+msgid "%1$s Flag"
+msgstr "דגל %1$s"
+
+msgid "- Select a review mode -"
+msgstr "- בחר מצב סקירה -"
+
+msgid "What would you like to do when WPML finishes translating your content automatically?"
+msgstr "מה תרצה לעשות כאשר WPML יסיים לתרגם את התוכן שלך אוטומטית?"
+
+msgid "What would you like to do after WPML finishes translating your content automatically?"
+msgstr "מה תרצה לעשות לאחר ש-WPML יסיים לתרגם את התוכן שלך אוטומטית?"
+
+msgid "Publish without review"
+msgstr "פרסם ללא סקירה"
+
+msgid "Recommended with PTC"
+msgstr "מומלץ עם PTC"
+
+msgid "PTC provides Better Than Human Translations that rarely need improvements, so you can confidently skip the review process. For other translation engines, a human review is recommended to confirm accuracy."
+msgstr "PTC מספק תרגומים טובים יותר מבני אדם, שרק לעיתים רחוקות דורשים שיפורים, כך שתוכל לדלג בביטחון על תהליך הסקירה. עבור מנועי תרגום אחרים, מומלצת סקירה אנושית כדי לאשר דיוק."
+
+msgid "WPML publishes translations immediately, skipping the review process."
+msgstr "WPML מפרסם תרגומים באופן מיידי, תוך דילוג על תהליך הסקירה."
+
+msgid "Wait for review"
+msgstr "המתן לסקירה"
+
+msgid "Recommended with DeepL, Google and Microsoft"
+msgstr "מומלץ עם DeepL, Google ו-Microsoft"
+
+msgid "DeepL, Google, and Microsoft deliver great translations, but we recommend a human review to confirm they are correct. PTC provides Better Than Human Translations that understand context, so you can confidently skip the review process."
+msgstr "DeepL, Google ו-Microsoft מספקים תרגומים מצוינים, אך אנו ממליצים על סקירה אנושית כדי לוודא שהם נכונים. PTC מספק תרגומים טובים יותר מבני אדם, המבינים הקשר, כך שתוכל לדלג בביטחון על תהליך הסקירה."
+
+msgid "WPML keeps translations unpublished, so you can review them first."
+msgstr "WPML משאיר תרגומים לא מפורסמים, כך שתוכל לסקור אותם תחילה."
+
+msgid "Your translators review and approve translations before publishing."
+msgstr "המתרגמים שלך סוקרים ומאשרים תרגומים לפני הפרסום."
+
+msgid "Publish and mark for review"
+msgstr "פרסם וסמן לסקירה"
+
+msgid "WPML publishes translations immediately but flags them for you to check at your convenience."
+msgstr "WPML מפרסם תרגומים באופן מיידי אך מסמן אותם לבדיקתך בזמנך החופשי."
+
+msgid "WPML publishes translations immediately but flags them for translators to review later."
+msgstr "WPML מפרסם תרגומים באופן מיידי אך מסמן אותם למתורגמנים כדי שיבדקו אותם מאוחר יותר."

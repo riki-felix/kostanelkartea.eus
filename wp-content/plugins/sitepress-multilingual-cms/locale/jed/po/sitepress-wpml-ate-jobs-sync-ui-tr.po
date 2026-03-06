@@ -1,0 +1,289 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: src/js/ate/AutoTranslate.js:21
+msgid "Sending for translation"
+msgstr "Çeviriye gönderiliyor"
+
+#: src/js/ate/TranslationDashboardJobsActions.js:23
+msgid ""
+"This content is being automatically translated. If you want to do something "
+"different with it cancel translation jobs first."
+msgstr "Bu içerik otomatik olarak çevriliyor. Farklı bir işlem yapmak isterseniz, önce çeviri işlerini iptal edin."
+
+#: src/js/ate/enable/init.js:53
+msgid "Connecting to WPML’s Advanced Translation Editor"
+msgstr "WPML'in gelişmiş çeviri düzenleyicisine bağlanılıyor"
+
+#: src/js/ate/enable/init.js:67
+msgid "Try again"
+msgstr "Tekrar deneyin"
+
+#: src/js/ate/review/init.js:17
+msgid "You don't have the rights to review this language"
+msgstr "Bu dili inceleme hakkınız yok"
+
+#: src/js/ate/status-bar/components/AteJobsStatus.js:33
+msgid "translations"
+msgstr "çeviriler"
+
+#: src/js/ate/status-bar/components/AteJobsStatus.js:34
+msgid "left in the queue"
+msgstr "kuyrukta kaldı"
+
+#: src/js/ate/status-bar/components/AteJobsStatus.js:43
+msgid "Translation on hold"
+msgstr "Çeviri bekletiliyor"
+
+#: src/js/ate/status-bar/components/AteJobsStatus.js:45
+#: src/js/ate/status-bar/components/constants.js:16
+msgid "No translations in the queue"
+msgstr "Kuyrukta çeviri yok"
+
+#: src/js/ate/status-bar/components/AteJobsStatus.js:50
+msgid "%d translations left"
+msgstr "%d çeviri kaldı"
+
+#: src/js/ate/status-bar/components/StatusBar/Notifications.js:38
+msgid "%d min remaining"
+msgstr "Kalan süre: %d dk"
+
+#: src/js/ate/status-bar/components/StatusBar/Notifications.js:39
+msgid "less than 1 min remaining"
+msgstr "1 dakikadan az kaldı"
+
+#: src/js/ate/status-bar/components/constants.js:105
+#. %d is replaced by the number of jobs to review.
+msgid "%d translation waiting for review"
+msgid_plural "%d translations waiting for review"
+msgstr[0] "İnceleme bekleyen %d çeviri"
+msgstr[1] "İnceleme bekleyen %d çeviri"
+
+#: src/js/ate/status-bar/components/constants.js:119
+msgid "Translate Everything Automatically has unresolved jobs"
+msgstr "Her Şeyi Otomatik Çevir'in çözülmemiş işleri var"
+
+#: src/js/ate/status-bar/components/constants.js:121
+msgid "Automatic translation has unresolved jobs"
+msgstr "Otomatik çevirinin çözülmemiş işleri var"
+
+#: src/js/ate/status-bar/components/constants.js:126
+#. %d is replaced by the number of unsolvable jobs.
+msgid "%d job couldn't be completed. Go to Translation Dashboard to review and resolve."
+msgid_plural "%d jobs couldn't be completed. Go to Translation Dashboard to review and resolve."
+msgstr[0] "%d iş tamamlanamadı. İncelemek ve çözmek için Çeviri Panosu'na gidin."
+msgstr[1] "%d iş tamamlanamadı. İncelemek ve çözmek için Çeviri Panosu'na gidin."
+
+#: src/js/ate/status-bar/components/constants.js:14
+#: src/js/ate/translate-everything/components/Status/index.js:50
+msgid "Automatic translation status"
+msgstr "Otomatik çeviri durumu"
+
+#: src/js/ate/status-bar/components/constants.js:18
+msgid "Translate Everything Automatically"
+msgstr "Her şeyi otomatik çevir"
+
+#: src/js/ate/status-bar/components/constants.js:20
+msgid "Translate Everything Automatically is active"
+msgstr "Her Şeyi Otomatik Çevir etkin"
+
+#: src/js/ate/status-bar/components/constants.js:24
+msgid "Translate Everything Automatically is paused — payment required"
+msgstr "Her Şeyi Otomatik Çevir duraklatıldı — ödeme gerekli"
+
+#: src/js/ate/status-bar/components/constants.js:26
+msgid "Automatic translation is paused — payment required"
+msgstr "Otomatik çeviri duraklatıldı — ödeme gerekli"
+
+#: src/js/ate/status-bar/components/constants.js:28
+msgid ""
+"We couldn’t process your payment. Click “Pay now” to complete the "
+"transaction and resume automatic translation."
+msgstr "Ödemenizi işleyemedik. İşlemi tamamlamak ve otomatik çeviriye devam etmek için “Şimdi öde” seçeneğine tıklayın."
+
+#: src/js/ate/status-bar/components/constants.js:32
+msgid "Translate Everything automatically is paused - not enough credits"
+msgstr "Her Şeyi Otomatik Çevir duraklatıldı - yeterli kredi yok"
+
+#: src/js/ate/status-bar/components/constants.js:34
+msgid "Automatic translation is paused — not enough credits"
+msgstr "Otomatik çeviri duraklatıldı — yeterli kredi yok"
+
+#: src/js/ate/status-bar/components/constants.js:36
+msgid "Translation will resume automatically once you assign more credits."
+msgstr "Daha fazla kredi atadığınızda çeviri otomatik olarak devam edecektir."
+
+#: src/js/ate/status-bar/components/constants.js:38
+msgid "You have %s prepaid translation credit in your WPML account. Assign these credits to this site to resume automatic translation"
+msgid_plural "You have %s prepaid translation credits in your WPML account. Assign these credits to this site to resume automatic translation"
+msgstr[0] "WPML hesabınızda %s ön ödemeli çeviri krediniz var. Otomatik çeviriye devam etmek için bu kredileri bu siteye atayın"
+msgstr[1] "WPML hesabınızda %s ön ödemeli çeviri krediniz var. Otomatik çeviriye devam etmek için bu kredileri bu siteye atayın"
+
+#: src/js/ate/status-bar/components/constants.js:72
+#: src/js/ate/status-bar/components/sending/index.js:10
+msgid "Preparing content for translation"
+msgstr "İçerik çeviri için hazırlanıyor"
+
+#: src/js/ate/status-bar/components/constants.js:74
+#: src/js/ate/status-bar/components/sending/index.js:9
+msgid "Preparing more content for translation"
+msgstr "Daha fazla içerik çeviri için hazırlanıyor"
+
+#: src/js/ate/status-bar/components/constants.js:77
+#. %s is replaced by the name of the language.
+msgid ""
+"Your default language, %s, must be mapped to a supported language in order "
+"to use automatic translation."
+msgstr "Otomatik çeviriyi kullanmak için varsayılan diliniz olan %s, desteklenen bir dille eşleştirilmelidir."
+
+#: src/js/ate/status-bar/components/constants.js:85
+#. %s is replaced by the language(s) name.
+msgid "Your language, %s, must be mapped to a supported language in order to use automatic translation."
+msgid_plural "The following languages on your site must be mapped to a supported language in order to use automatic translation: %s"
+msgstr[0] "Otomatik çeviriyi kullanmak için diliniz olan %s, desteklenen bir dille eşleştirilmelidir."
+msgstr[1] "Otomatik çeviriyi kullanmak için sitenizdeki şu dillerin desteklenen bir dille eşleştirilmesi gerekir: %s"
+
+#: src/js/ate/status-bar/components/constants.js:95
+msgid ""
+"Content in those languages: %s, cannot be automatically translated unless "
+"you map them to a language that's different from the default."
+msgstr "Bu dillerdeki içerik: %s, varsayılandan farklı bir dille eşleştirilmedikçe otomatik olarak çevrilemez."
+
+#: src/js/ate/status-bar/components/credit/index.js:100
+msgid "Account credits used"
+msgstr "Kullanılan hesap kredileri"
+
+#: src/js/ate/status-bar/components/credit/index.js:110
+msgid ""
+"Once you’ve used all your prepaid credits, we’ll invoice you for any "
+"additional credits you use after the end of the month"
+msgstr "Tüm ön ödemeli kredilerinizi kullandıktan sonra, ay sonundan sonra kullandığınız ek krediler için size fatura keseceğiz"
+
+#: src/js/ate/status-bar/components/credit/index.js:115
+msgid "Payment limit:"
+msgstr "Ödeme limiti:"
+
+#: src/js/ate/status-bar/components/credit/index.js:116
+msgid "%s credits"
+msgstr "%s kredi"
+
+#: src/js/ate/status-bar/components/credit/index.js:119
+msgid "Credits used:"
+msgstr "Kullanılan krediler:"
+
+#: src/js/ate/status-bar/components/credit/index.js:123
+msgid "Credits left:"
+msgstr "Kalan krediler:"
+
+#: src/js/ate/status-bar/components/credit/index.js:133
+msgid ""
+"The number of credit you will receive an invoice for at the end of the "
+"month. View your pay-as-you-go details in your site’s automatic translation "
+"settings."
+msgstr "Ay sonunda faturalandırılacak kredi sayısı. Kullandıkça öde ayrıntılarınızı sitenizin otomatik çeviri ayarlarında görüntüleyin."
+
+#: src/js/ate/status-bar/components/credit/index.js:139
+msgid "Calculating"
+msgstr "Hesaplanıyor"
+
+#: src/js/ate/status-bar/components/credit/index.js:59
+msgid "Remaining prepaid credits that are assigned to this site on WPML.org."
+msgstr "WPML.org'da bu siteye atanmış kalan ön ödemeli krediler."
+
+#: src/js/ate/status-bar/components/credit/index.js:73
+msgid "Prepaid credits left"
+msgstr "Kalan ön ödemeli krediler"
+
+#: src/js/ate/status-bar/components/credit/index.js:99
+msgid "Pay-as-you-go credits used"
+msgstr "Kullandıkça öde kredileri kullanıldı"
+
+#: src/js/ate/status-bar/components/minimum-requirements/MinimumRequirementsNotification.js:25
+msgid "Your site doesn't meet WPML's minimum requirements"
+msgstr "Siteniz WPML'in minimum gereksinimlerini karşılamıyor"
+
+#: src/js/ate/status-bar/components/minimum-requirements/MinimumRequirementsNotification.js:31
+msgid "Fix it"
+msgstr "Düzelt"
+
+#: src/js/ate/status-bar/model/notification-center-action-presets.js:17
+msgid "Stop"
+msgstr "Durdur"
+
+#: src/js/ate/status-bar/model/notification-center-action-presets.js:26
+#: src/js/ate/status-icons/StatusUpdater.js:133
+msgid "Pay now"
+msgstr "Şimdi öde"
+
+#: src/js/ate/status-bar/model/notification-center-action-presets.js:34
+#: src/js/ate/status-icons/StatusUpdater.js:134
+msgid "Get more credits"
+msgstr "Daha fazla kredi al"
+
+#: src/js/ate/status-bar/model/notification-center-action-presets.js:42
+msgid "Assign credits"
+msgstr "Kredi ata"
+
+#: src/js/ate/status-bar/model/notification-center-action-presets.js:50
+msgid "Go to Translation Jobs"
+msgstr "Çeviri işlerine git"
+
+#: src/js/ate/status-bar/model/notification-center-action-presets.js:8
+msgid "Resume"
+msgstr "Devam et"
+
+#: src/js/ate/status-icons/StatusUpdater.js:159
+msgid ""
+"This translation couldn't be completed due to an unexpected error. Please "
+"try resending it."
+msgstr "Beklenmeyen bir hata nedeniyle bu çeviri tamamlanamadı. Lütfen tekrar göndermeyi deneyin."
+
+#: src/js/ate/status-icons/StatusUpdater.js:80
+msgid "Refreshing translation status"
+msgstr "Çeviri durumu yenileniyor"
+
+#: src/js/ate/translate-everything/components/ManualTranslationStatus/index.js:26
+msgid ""
+"Read more about how to translate your content in the <a>Getting Started "
+"Guide</a>"
+msgstr "İçeriğinizi nasıl çevireceğiniz hakkında daha fazla bilgi için <a>Başlangıç Kılavuzu</a>'nu okuyun"
+
+#: src/js/ate/translate-everything/components/ManualTranslationStatus/index.js:36
+msgid "Let's Start Translating!"
+msgstr "Çevirmeye başlayalım!"
+
+#: src/js/ate/translate-everything/components/ManualTranslationStatus/index.js:38
+msgid ""
+"Choose your content from the Translation Dashboard below and create your "
+"first translation job!"
+msgstr "Aşağıdaki Çeviri Panosu'ndan içeriğinizi seçin ve ilk çeviri işinizi oluşturun!"
+
+#: src/js/ate/translate-everything/components/Status/index.js:105
+msgid ""
+"Change your <a>automatic translation settings</a> (in-progress translation "
+"jobs will be completed with the current settings)."
+msgstr "<a>Otomatik çeviri ayarlarınızı</a> değiştirin (devam eden çeviri işleri mevcut ayarlarla tamamlanacaktır)."
+
+#: src/js/ate/translate-everything/components/Status/index.js:115
+msgid "Read more about translating your site automatically."
+msgstr "Sitenizi otomatik olarak çevirme hakkında daha fazla bilgi edinin."
+
+#: src/js/ate/translate-everything/components/Status/index.js:49
+msgid "Your site is being automatically translated!"
+msgstr "Siteniz otomatik olarak çevriliyor!"
+
+#: src/js/ate/translate-everything/components/Status/index.js:58
+msgid "Calculating..."
+msgstr "Hesaplanıyor..."
+
+#: src/js/ate/translate-everything/components/Status/index.js:88
+msgid "Do not close WP admin!"
+msgstr "WP yönetici panelini kapatmayın!"
+
+#: src/js/ate/translate-everything/components/Status/index.js:96
+msgid "The number of translations"
+msgstr "Çeviri sayısı"

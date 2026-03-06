@@ -1,0 +1,235 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-18T16:02:20+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: wpml\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/config-admin-pages.php:144
+msgid "Translation Dashboard"
+msgstr "Πίνακας εργαλείων μετάφρασης"
+
+#: src/config-admin-pages.php:341
+msgid "Automatic translation settings"
+msgstr "Ρυθμίσεις αυτόματης μετάφρασης"
+
+#: src/config-admin-pages.php:383
+msgid "WPML Setup"
+msgstr "Ρύθμιση WPML"
+
+#: src/config-admin-pages.php:412
+msgid "WPML Support"
+msgstr "Υποστήριξη WPML"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/DatabaseVersionRequirement.php:27
+msgid "Database Version"
+msgstr "Έκδοση βάσης δεδομένων"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/DatabaseVersionRequirement.php:36
+msgid "Your %sMySQL%s version must be at least %s. Alternatively, you can use %sMariaDb%s version %s or higher."
+msgstr "Η έκδοση %sMySQL%s πρέπει να είναι τουλάχιστον %s. Εναλλακτικά, μπορείτε να χρησιμοποιήσετε την έκδοση %sMariaDb%s %s ή νεότερη."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/DatabaseVersionRequirement.php:53
+msgid "Contact your hosting provider to upgrade MySQL %s or higher."
+msgstr "Επικοινωνήστε με τον πάροχο φιλοξενίας σας για να αναβαθμίσετε το MySQL %s ή νεότερο."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/EvalFunctionRequirement.php:31
+msgid "PHP eval() Function"
+msgstr "Συνάρτηση PHP eval()"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/EvalFunctionRequirement.php:39
+msgid "The PHP eval() function is disabled by the Suhosin extension. WPML requires this function when Suhosin is enabled."
+msgstr "Η συνάρτηση PHP eval() είναι απενεργοποιημένη από την επέκταση Suhosin. Το WPML απαιτεί αυτή τη συνάρτηση όταν το Suhosin είναι ενεργοποιημένο."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/EvalFunctionRequirement.php:47
+msgid "Contact your hosting provider to enable the eval() function in the Suhosin configuration or disable the Suhosin extension."
+msgstr "Επικοινωνήστε με τον πάροχο φιλοξενίας σας για να ενεργοποιήσετε τη συνάρτηση eval() στη διαμόρφωση Suhosin ή να απενεργοποιήσετε την επέκταση Suhosin."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/LibXmlVersionRequirement.php:31
+msgid "libxml PHP Module"
+msgstr "Μονάδα PHP libxml"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/LibXmlVersionRequirement.php:40
+msgid "WPML requires libxml PHP Module version %s or higher to process XML correctly using SimpleXML."
+msgstr "Το WPML απαιτεί τη μονάδα PHP libxml έκδοσης %s ή νεότερης για την σωστή επεξεργασία XML χρησιμοποιώντας το SimpleXML."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/LibXmlVersionRequirement.php:49
+msgid "Contact your hosting provider to upgrade the libxml PHP Module."
+msgstr "Επικοινωνήστε με τον πάροχο φιλοξενίας σας για να αναβαθμίσετε τη μονάδα PHP libxml."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/MbstringExtensionRequirement.php:30
+msgid "Multibyte String Extension"
+msgstr "Επέκταση συμβολοσειράς πολλαπλών byte"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/MbstringExtensionRequirement.php:39
+msgid "The %sMultibyte String extension%s is required to handle non-Latin character sets in WPML."
+msgstr "Η %sεπέκταση συμβολοσειράς πολλαπλών byte%s απαιτείται για τη διαχείριση συνόλων χαρακτήρων εκτός λατινικών στο WPML."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/MbstringExtensionRequirement.php:49
+msgid "Contact your hosting provider to install the Multibyte String (mbstring) PHP extension."
+msgstr "Επικοινωνήστε με τον πάροχο φιλοξενίας σας για να εγκαταστήσετε την επέκταση PHP Multibyte String (mbstring)."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/MemoryLimitRequirement.php:55
+msgid "Memory limit"
+msgstr "Όριο μνήμης"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/MemoryLimitRequirement.php:65
+msgid "Your PHP memory limit is currently %s.  WPML requires at least %s to function properly."
+msgstr "Το όριο μνήμης PHP είναι αυτή τη στιγμή %s. Το WPML απαιτεί τουλάχιστον %s για να λειτουργήσει σωστά."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/MemoryLimitRequirement.php:80
+msgid "To increase the memory limit, add this to the top of your %swp-config.php%s file:"
+msgstr "Για να αυξήσετε το όριο μνήμης, προσθέστε αυτό στην αρχή του αρχείου σας %swp-config.php%s:"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/PHPVersionRequirement.php:25
+msgid "PHP Version"
+msgstr "Έκδοση PHP"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/PHPVersionRequirement.php:34
+msgid "Your PHP version is outdated. WPML requires at least %s."
+msgstr "Η έκδοση PHP είναι παλιά. Το WPML απαιτεί τουλάχιστον %s."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/PHPVersionRequirement.php:44
+msgid "Contact your hosting provider to upgrade PHP to version %s or higher."
+msgstr "Επικοινωνήστε με τον πάροχο φιλοξενίας σας για να αναβαθμίσετε την PHP σε έκδοση %s ή νεότερη."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/RestEnabledRequirement.php:31
+msgid "WordPress REST API"
+msgstr "WordPress REST API"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/RestEnabledRequirement.php:41
+msgid "The WordPress REST API must be enabled for WPML to work correctly."
+msgstr "Το WordPress REST API πρέπει να είναι ενεργοποιημένο για να λειτουργεί σωστά το WPML."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/RestEnabledRequirement.php:49
+msgid "The REST API test endpoint %s is not responding correctly."
+msgstr "Το τελικό σημείο δοκιμής REST API %s δεν ανταποκρίνεται σωστά."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/RestEnabledRequirement.php:58
+msgid "<strong>Common causes:</strong>"
+msgstr "<strong>Συνήθεις αιτίες:</strong>"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/RestEnabledRequirement.php:65
+msgid "• A security or firewall plugin is blocking REST API requests<br>• The REST API has been disabled via the <code>rest_enabled</code> filter<br>• Server configuration (Apache/Nginx) is interfering with query parameters<br>• Custom rewrite rules are conflicting with WordPress routing"
+msgstr "• Ένα πρόσθετο ασφαλείας ή τείχους προστασίας μπλοκάρει τα αιτήματα REST API<br>• Το REST API έχει απενεργοποιηθεί μέσω του φίλτρου <code>rest_enabled</code><br>• Η διαμόρφωση του διακομιστή (Apache/Nginx) παρεμβαίνει στις παραμέτρους ερωτήματος<br>• Οι προσαρμοσμένοι κανόνες επανεγγραφής συγκρούονται με τη δρομολόγηση του WordPress"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/RestEnabledRequirement.php:79
+msgid "<strong>Troubleshooting:</strong> Try accessing %s directly in your browser. It should return a JSON response with <code>\"status\":\"valid\"</code> and <code>\"get_parameters\":\"valid\"</code>."
+msgstr "<strong>Αντιμετώπιση προβλημάτων:</strong> Δοκιμάστε να αποκτήσετε πρόσβαση στο %s απευθείας στο πρόγραμμα περιήγησής σας. Θα πρέπει να επιστρέψει μια απάντηση JSON με <code>“status”:“valid”</code> και <code>“get_parameters”:“valid”</code>."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/RestEnabledRequirement.php:87
+msgid "the test endpoint"
+msgstr "το τελικό σημείο δοκιμής"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/SimpleXMLExtensionRequirement.php:31
+msgid "SimpleXML Extension"
+msgstr "Επέκταση SimpleXML"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/SimpleXMLExtensionRequirement.php:40
+msgid "The %sSimpleXML extension%s is required to use %sXLIFF files%s in WPML. The libxml PHP Module must also be version 2.7.8 or higher."
+msgstr "Η %sεπέκταση SimpleXML%s απαιτείται για τη χρήση %sαρχείων XLIFF%s στο WPML. Η μονάδα PHP libxml πρέπει επίσης να είναι έκδοσης 2.7.8 ή νεότερης."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/SimpleXMLExtensionRequirement.php:55
+msgid "Contact your hosting provider to install the SimpleXML PHP extension."
+msgstr "Επικοινωνήστε με τον πάροχο φιλοξενίας σας για να εγκαταστήσετε την επέκταση PHP SimpleXML."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/StackSizeRequirement.php:39
+msgid "PHP Stack Size"
+msgstr "Μέγεθος στοίβας PHP"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/StackSizeRequirement.php:48
+msgid "WPML requires at least %s KB of PHP stack size on PHP 8.3 or higher."
+msgstr "Το WPML απαιτεί τουλάχιστον %s KB μεγέθους στοίβας PHP σε PHP 8.3 ή νεότερη."
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/StackSizeRequirement.php:58
+msgid "Add this to your %sphp.ini%s and restart your web server to set the required stack size:"
+msgstr "Προσθέστε αυτό στο αρχείο σας %sphp.ini%s και επανεκκινήστε τον διακομιστή ιστού σας για να ορίσετε το απαιτούμενο μέγεθος στοίβας:"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/WordPressVersionRequirement.php:30
+msgid "WordPress Version"
+msgstr "Έκδοση WordPress"
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/WordPressVersionRequirement.php:39
+msgid "Your WordPress version is outdated. WPML requires at least %s. "
+msgstr "Η έκδοση του WordPress είναι παλιά. Το WPML απαιτεί τουλάχιστον %s. "
+
+#: src/Core/Component/MinimumRequirements/Domain/Entity/WordPressVersionRequirement.php:50
+msgid "Please update your WordPress installation to version %s or higher."
+msgstr "Παρακαλούμε ενημερώστε την εγκατάσταση του WordPress στην έκδοση %s ή νεότερη."
+
+#: src/Core/Component/Translation/Application/Service/Dto/SendToTranslationDto.php:147
+msgid "Language pairs cannot be empty"
+msgstr "Τα ζεύγη γλωσσών δεν μπορούν να είναι κενά"
+
+#: src/Core/Component/Translation/Application/Service/Dto/SendToTranslationDto.php:156
+msgid "Batch name cannot be empty"
+msgstr "Το όνομα της παρτίδας δεν μπορεί να είναι κενό"
+
+#: src/Core/Component/Translation/Application/Service/Dto/SendToTranslationDto.php:160
+msgid "Source language code cannot be empty"
+msgstr "Ο κωδικός γλώσσας προέλευσης δεν μπορεί να είναι κενός"
+
+#: src/Core/Component/Translation/Application/Service/Dto/SendToTranslationDto.php:167
+msgid ""
+"Posts, packages and strings cannot be empty.\n"
+"          At least one of those elements must be specified."
+msgstr "Οι αναρτήσεις, τα πακέτα και οι συμβολοσειρές δεν μπορούν να είναι κενά.\n          Πρέπει να καθοριστεί τουλάχιστον ένα από αυτά τα στοιχεία."
+
+#: src/Legacy/Component/ATE/Application/Query/Account.php:23
+msgid "Error getting credits"
+msgstr "Σφάλμα λήψης πιστώσεων"
+
+#: src/Legacy/Component/ATE/Application/Query/Account.php:46
+msgid "Error getting account balances"
+msgstr "Σφάλμα λήψης υπολοίπων λογαριασμών"
+
+#: src/Legacy/Component/ATE/Application/Query/Glossary.php:26
+msgid "Error getting glossary data"
+msgstr "Σφάλμα λήψης δεδομένων γλωσσαρίου"
+
+#: src/Legacy/Component/ATE/Application/Service/EnginesService.php:148
+msgid "Error fetching translation engines"
+msgstr "Σφάλμα ανάκτησης μηχανών μετάφρασης"
+
+#: src/Legacy/Component/ATE/Application/Service/EnginesService.php:171
+msgid "Error fetching available formalities"
+msgstr "Σφάλμα ανάκτησης διαθέσιμων επιπέδων επισημότητας"
+
+#: src/Legacy/Component/Translation/Sender/ErrorMapper/ErrorMapper.php:36
+msgid "The jobs could not be created."
+msgstr "Οι εργασίες δεν μπόρεσαν να δημιουργηθούν."
+
+#: src/Legacy/Component/Translation/Sender/ErrorMapper/TranslationServiceUnavailable.php:34
+msgid "The translation service \"%s\" is not accepting new translation jobs at this moment. Please contact the service support for more information and assistance."
+msgstr "Η υπηρεσία μετάφρασης “%s” δεν δέχεται νέες εργασίες μετάφρασης αυτή τη στιγμή. Παρακαλούμε επικοινωνήστε με την υποστήριξη της υπηρεσίας για περισσότερες πληροφορίες και βοήθεια."
+
+#: src/Legacy/Component/Translation/Sender/ErrorMapper/TranslationServiceUnavailable.php:45
+msgid "The translation service is not accepting new translation jobs at this moment. Please contact the service support for more information and assistance."
+msgstr "Η υπηρεσία μετάφρασης δεν δέχεται νέες εργασίες μετάφρασης αυτή τη στιγμή. Παρακαλούμε επικοινωνήστε με την υποστήριξη της υπηρεσίας για περισσότερες πληροφορίες και βοήθεια."
+
+#: src/Legacy/Component/Translation/Sender/ErrorMapper/UnsupportedLanguagesInTranslationService.php:43
+msgid "The selected translation service doesn't support the following languages: %s"
+msgstr "Η επιλεγμένη υπηρεσία μετάφρασης δεν υποστηρίζει τις ακόλουθες γλώσσες: %s"
+
+#: src/UserInterface/Web/Core/Component/Dashboard/Application/DashboardController.php:318
+#: src/UserInterface/Web/Core/Component/Dashboard/Application/DashboardController.php:319
+#: src/UserInterface/Web/Core/Component/Dashboard/Application/DashboardController.php:320
+msgid "Other texts (Strings)"
+msgstr "Άλλα κείμενα (Συμβολοσειρές)"
+
+#: src/UserInterface/Web/Core/Component/Dashboard/Application/Endpoint/SendToTranslation/SendToTranslationController.php:49
+msgid "The request data for SendToTranslation is not valid: %s"
+msgstr "Τα δεδομένα αιτήματος για το SendToTranslation δεν είναι έγκυρα: %s"
+
+#: src/UserInterface/Web/Core/Component/Dashboard/Application/Endpoint/TranslateEverything/EnableController.php:45
+msgid "In order to translate automatically, you first need to enable WPML's Advanced Translation Editor"
+msgstr "Για να μεταφράσετε αυτόματα, πρέπει πρώτα να ενεργοποιήσετε τον Προηγμένο Επεξεργαστή Μετάφρασης του WPML"

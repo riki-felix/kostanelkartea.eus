@@ -1,0 +1,23 @@
+/*
+Theme Name: Kostan
+Theme URI: https://kostanelkartea.com
+Author: Entretiempo
+Author URI: https://entretiempo.studio
+Description: A modern WordPress theme for Kostan Elkartea, powered by Vite for fast development and optimized assets.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: kostan
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+*/
+
+/* 
+ * Main styles are loaded via Vite
+ * This file is required for WordPress theme recognition
+ */

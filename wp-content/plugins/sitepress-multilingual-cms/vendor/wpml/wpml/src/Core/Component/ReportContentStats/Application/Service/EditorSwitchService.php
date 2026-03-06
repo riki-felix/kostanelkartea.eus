@@ -1,0 +1,41 @@
+<?php
+
+namespace WPML\Core\Component\ReportContentStats\Application\Service;
+
+use WPML\Core\Component\ReportContentStats\Domain\Repository\EventReasonRepositoryInterface;
+use WPML\Core\Component\ReportContentStats\Domain\Repository\LastSentRepositoryInterface;
+
+class EditorSwitchService {
+
+    const SECONDS_IN_DAY       = 86400;
+    const TRIGGER_DAYS_OFFSET  = 29;
+
+    /** @var LastSentRepositoryInterface */
+    private $lastSentRepository;
+
+    /** @var EventReasonRepositoryInterface */
+    private $eventReasonRepository;
+
+
+  public function __construct(
+        LastSentRepositoryInterface $lastSentRepository,
+        EventReasonRepositoryInterface $eventReasonRepository
+    ) {
+      $this->lastSentRepository    = $lastSentRepository;
+      $this->eventReasonRepository = $eventReasonRepository;
+  }
+
+
+    /**
+     * @return void
+     */
+  public function handleEditorSwitch() {
+      // Set timestamp to 29 days ago to trigger send in 1 day
+      $triggerTimestamp = time() - ( self::TRIGGER_DAYS_OFFSET * self::SECONDS_IN_DAY );
+
+      $this->lastSentRepository->update( $triggerTimestamp );
+      $this->eventReasonRepository->set( EventReasonService::REASON_EDITOR_SWITCH );
+  }
+
+
+}

@@ -1,0 +1,811 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: src/js/components/language/LanguagePairs.js:57
+msgid "From:"
+msgstr "Kimden:"
+
+#: src/js/components/language/LanguagePairs.js:69
+msgid "--Choose language--"
+msgstr "--Dil seçin--"
+
+#: src/js/components/language/LanguagePairs.js:81
+msgid "to:"
+msgstr "Kime:"
+
+#: src/js/components/language/LanguagePairs.js:93
+msgid "Select %s"
+msgstr "%s seçin"
+
+#: src/js/components/language/SelectLanguagePairs.js:39
+msgid "Set language pair(s) for Translator %s:"
+msgstr "Çevirmen %s için dil çifti(leri) ayarlayın:"
+
+#: src/js/components/language/SelectLanguagePairs.js:69
+msgid "+ Add more language pairs for this translator"
+msgstr "Bu çevirmen için daha fazla dil çifti ekle"
+
+#: src/js/components/roles/CreateUser.js:100
+msgid "First Name"
+msgstr "Ad"
+
+#: src/js/components/roles/CreateUser.js:101
+msgid "Last Name"
+msgstr "Soyadı"
+
+#: src/js/components/roles/CreateUser.js:105
+msgid "Role"
+msgstr "Rol"
+
+#: src/js/components/roles/CreateUser.js:138
+msgid "(required)"
+msgstr "(gerekli)"
+
+#: src/js/components/roles/CreateUser.js:214
+msgid "Select a role for the user"
+msgstr "Kullanıcı için bir rol seçin"
+
+#: src/js/components/roles/CreateUser.js:46
+msgid ""
+"Make sure that you have provided a correct email address e.g. "
+"name@domain.com"
+msgstr "Lütfen doğru bir e-posta adresi girdiğinizden emin olun, örn: name@domain.com"
+
+#: src/js/components/roles/CreateUser.js:64
+msgid "This field is required"
+msgstr "Bu alan zorunludur"
+
+#: src/js/components/roles/CreateUser.js:84
+msgid "A translator can be any WordPress role."
+msgstr "Bir çevirmen herhangi bir WordPress rolü olabilir."
+
+#: src/js/components/roles/CreateUser.js:98
+msgid "Username"
+msgstr "Kullanıcı adı"
+
+#: src/js/components/roles/CreateUser.js:99
+msgid "Email"
+msgstr "E-posta"
+
+#: src/js/components/roles/ExistingUserSelect.js:46
+#: src/js/translationServices/components/SearchForm.js:12
+msgid "Search"
+msgstr "Ara"
+
+#: src/js/components/translation-managers/AddManagerDialog.js:117
+#: src/js/components/translators/AddTranslatorDialog.js:151
+#: src/js/components/translators/EditLanguagesDialog.js:73
+#: src/js/setup/components/Steps/AddLanguagesModal.js:496
+#: src/js/setup/components/Steps/TranslationSettings/TranslationServices/ListModal.js:32
+msgid "Cancel"
+msgstr "İptal"
+
+#: src/js/components/translation-managers/AddManagerDialog.js:122
+msgid "Add Translation Manager"
+msgstr "Çeviri yöneticisi ekle"
+
+#: src/js/components/translation-managers/AddManagerDialog.js:47
+msgid "user"
+msgstr "kullanıcı"
+
+#: src/js/components/translation-managers/AddManagerDialog.js:47
+msgid "Editor"
+msgstr "Editör"
+
+#: src/js/components/translation-managers/AddManagerDialog.js:71
+msgid "Select an existing %s and set as Translation Manager"
+msgstr "Mevcut bir %s seçin ve Çeviri Yöneticisi olarak ayarlayın"
+
+#: src/js/components/translation-managers/AddManagerDialog.js:96
+msgid "Create a new %s and set as Translation Manager"
+msgstr "Yeni bir %s oluşturun ve Çeviri Yöneticisi olarak ayarlayın"
+
+#: src/js/components/translation-managers/ManagerSection.js:27
+msgid "Add a Translation Manager"
+msgstr "Bir çeviri yöneticisi ekle"
+
+#: src/js/components/translators/AddTranslatorDialog.js:101
+msgid "Select an existing user and set as Translator"
+msgstr "Mevcut bir kullanıcıyı seçin ve Çevirmen olarak ayarlayın"
+
+#: src/js/components/translators/AddTranslatorDialog.js:124
+msgid "Create a new user and set as Translator"
+msgstr "Yeni bir kullanıcı oluşturun ve Çevirmen olarak ayarlayın"
+
+#: src/js/components/translators/AddTranslatorDialog.js:141
+msgid "Set language pair(s)"
+msgstr "Dil çifti(leri) ayarla"
+
+#: src/js/components/translators/AddTranslatorDialog.js:156
+msgid "Previous"
+msgstr "Önceki"
+
+#: src/js/components/translators/AddTranslatorDialog.js:159
+#: src/js/components/translators/EditLanguagesDialog.js:78
+msgid "Save"
+msgstr "Kaydet"
+
+#: src/js/components/translators/AddTranslatorDialog.js:65
+#: src/js/components/translators/UserSection.js:45
+msgid "Add a Translator"
+msgstr "Bir çevirmen ekle"
+
+#: src/js/components/translators/EditLanguagesDialog.js:55
+msgid "Edit language pair(s) for translator"
+msgstr "Çevirmen için dil çifti(leri) düzenle"
+
+#: src/js/components/translators/TranslatorsTable.js:136
+#: src/js/setup/components/Steps/AddLanguagesModal.js:346
+#: src/js/translationServices/components/ServicesList.js:69
+msgid "Name"
+msgstr "Ad"
+
+#: src/js/components/translators/TranslatorsTable.js:148
+msgid "Language Pairs"
+msgstr "Dil çiftleri"
+
+#: src/js/components/translators/TranslatorsTable.js:152
+msgid "You can translate to and from all languages"
+msgstr "Tüm dillerden ve tüm dillere çeviri yapabilirsiniz"
+
+#: src/js/components/translators/TranslatorsTable.js:59
+msgid "Edit language pair(s)"
+msgstr "Dil çifti(leri) düzenle"
+
+#: src/js/components/translators/TranslatorsTable.js:62
+msgid "Delete language pair(s)"
+msgstr "Dil çifti(leri) sil"
+
+#: src/js/setup/components/Steps/AITranslation/ErrorInfo.js:39
+msgid "Failed to enable AI Translation Step"
+msgstr "Yapay Zeka Çeviri Adımı etkinleştirilemedi"
+
+#: src/js/setup/components/Steps/AITranslation/ErrorInfo.js:45
+msgid "AI Translation Activation Failed"
+msgstr "Yapay zeka çevirisi etkinleştirilemedi"
+
+#: src/js/setup/components/Steps/AITranslation/ErrorInfo.js:49
+msgid "Please contact "
+msgstr "Lütfen iletişime geçin "
+
+#: src/js/setup/components/Steps/AITranslation/ErrorInfo.js:51
+msgid "WPML Support"
+msgstr "WPML desteği"
+
+#: src/js/setup/components/Steps/AITranslation/ErrorInfo.js:53
+msgid " and provide the technical details below (use the Copy button to copy them)."
+msgstr " ve aşağıdaki teknik detayları sağlayın (kopyalamak için Kopyala düğmesini kullanın)."
+
+#: src/js/setup/components/Steps/AITranslation/ErrorInfo.js:71
+msgid "Technical Details (for WPML Support)"
+msgstr "Teknik detaylar (WPML desteği için)"
+
+#: src/js/setup/components/Steps/AITranslation/ErrorInfo.js:83
+msgid "Copied!"
+msgstr "Kopyalandı!"
+
+#: src/js/setup/components/Steps/AITranslation/ErrorInfo.js:83
+msgid "Copy"
+msgstr "Kopyala"
+
+#: src/js/setup/components/Steps/AITranslation/index.js:68
+msgid "Loading AI Translation..."
+msgstr "Yapay zeka çevirisi yükleniyor..."
+
+#: src/js/setup/components/Steps/AddLanguages/Flag.js:48
+msgid "%s file upload failed."
+msgstr "%s dosya yüklemesi başarısız oldu."
+
+#: src/js/setup/components/Steps/AddLanguages/Flag.js:69
+msgid "Flag"
+msgstr "Bayrak"
+
+#: src/js/setup/components/Steps/AddLanguages/Flag.js:87
+msgid "Flag file"
+msgstr "Dosyayı işaretle"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:160
+msgid ""
+"You just added  language. Next, select it as the site's default language or "
+"a translation language."
+msgstr "Az önce bir dil eklediniz. Şimdi, onu sitenin varsayılan dili veya bir çeviri dili olarak seçin."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:162
+msgid "Language added"
+msgstr "Dil eklendi"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:192
+msgid "The value \"%s\" already exists"
+msgstr "“%s” değeri zaten mevcut"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:215
+msgid "Add a new language"
+msgstr "Yeni bir dil ekle"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:224
+msgid ""
+"Create a country-specific language by choosing the general language from "
+"the list below. Then, choose the country it should be localized for."
+msgstr "Aşağıdaki listeden genel dili seçerek ülkeye özgü bir dil oluşturun. Ardından, yerelleştirileceği ülkeyi seçin."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:229
+msgid ""
+"By choosing a combination that already exists in the database, WPML can "
+"help fill out the necessary fields. Read more about "
+"<AddingACustomLanguageLink />."
+msgstr "Veritabanında zaten var olan bir kombinasyonu seçerek, WPML gerekli alanları doldurmanıza yardımcı olabilir. <AddingACustomLanguageLink /> hakkında daha fazla bilgi edinin."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:242
+msgid "Cannot find?"
+msgstr "Bulunamadı mı?"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:244
+msgid "Click here"
+msgstr "Buraya tıklayın"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:300
+msgid ""
+"The wrong format. It may contain only small letters and \"-\". E.g: \"fr\" "
+", \"pt-br\", \"zh-hans\""
+msgstr "Yanlış biçim. Yalnızca küçük harfler ve “-” içerebilir. Örn: “fr”, “pt-br”, “zh-hans”"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:308
+msgid "Language"
+msgstr "Dil"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:331
+msgid "Location"
+msgstr "Konum"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:360
+msgid "Code"
+msgstr "Kod"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:374
+msgid "The language will not be supported by automatic translations"
+msgstr "Dil, otomatik çeviriler tarafından desteklenmeyecektir"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:392
+msgid "Language mapping"
+msgstr "Dil eşleme"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:404
+msgid "Don't map this language"
+msgstr "Bu dili eşleme"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:418
+msgid "Default locale"
+msgstr "Varsayılan yerel ayar"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:423
+msgid ""
+"The wrong format. It may contain only small letters and \"_\". E.g: \"de\" "
+", \"de_DE\", \"zh_Hant_TW\""
+msgstr "Yanlış biçim. Yalnızca küçük harfler ve “_” içerebilir. Örn: “de”, “de_DE”, “zh_Hant_TW”"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:435
+msgid "hreflang"
+msgstr "hreflang"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:449
+msgid "Encode url?"
+msgstr "URL'yi kodla?"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:45
+msgid "Flags must be:"
+msgstr "Bayraklar şunlar olmalıdır:"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:453
+msgid "NO"
+msgstr "HAYIR"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:454
+msgid "YES"
+msgstr "EVET"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:460
+msgid " (required)"
+msgstr " (gerekli)"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:483
+msgid "Please fill in the field"
+msgstr "Lütfen alanı doldurun"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:49
+msgid "PNG, SVG, or JPG files"
+msgstr "PNG, SVG veya JPG dosyaları"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:501
+msgid "Save language"
+msgstr "Dili kaydet"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:52
+msgid "18 x 12 pixels"
+msgstr "18 x 12 piksel"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:55
+msgid "Read more about "
+msgstr "Daha fazla bilgi edinin "
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:60
+msgid ""
+"The name of your language as it will appear on your site's language "
+"switcher."
+msgstr "Sitenizin dil değiştiricisinde görünecek dilinizin adı."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:61
+msgid ""
+"A unique value that identifies the language in the database and URL. Once "
+"saved, the language code cannot be changed."
+msgstr "Dili veritabanında ve URL'de tanımlayan benzersiz bir değer. Kaydedildikten sonra dil kodu değiştirilemez."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:62
+msgid ""
+"If your custom language is similar to an existing language, you can use the "
+"existing language's spellcheck and automatic translation. For example, if "
+"your custom language is Swiss-German, you can map to German as the language "
+"to use for spellcheck and automatic translation. If you don't map your "
+"custom language to an existing language, spellcheck and automatic "
+"translation features will be unavailable in that language."
+msgstr "Özel diliniz mevcut bir dile benziyorsa, mevcut dilin yazım denetimini ve otomatik çevirisini kullanabilirsiniz. Örneğin, özel diliniz İsviçre Almancası ise, yazım denetimi ve otomatik çeviri için kullanılacak dil olarak Almancaya eşleyebilirsiniz. Özel dilinizi mevcut bir dile eşlemezseniz, yazım denetimi ve otomatik çeviri özellikleri o dilde kullanılamaz."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:66
+msgid ""
+"The value WPML checks when loading translations from MO and PO files. The "
+"default locale is included in the filenames in your /wp-content/languages/ "
+"folder in your WordPress setup."
+msgstr "WPML'nin MO ve PO dosyalarından çevirileri yüklerken kontrol ettiği değer. Varsayılan yerel ayar, WordPress kurulumunuzdaki /wp-content/languages/ klasörünüzdeki dosya adlarına dahildir."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:69
+msgid ""
+"Google uses the hreflang attribute to direct users to sites in their "
+"relevant language and location. Examples:"
+msgstr "Google, kullanıcıları ilgili dil ve konumdaki sitelere yönlendirmek için hreflang özelliğini kullanır. Örnekler:"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:71
+msgid "All English-speaking users: en"
+msgstr "Tüm İngilizce konuşan kullanıcılar: en"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:72
+msgid "English for UK users: en-gb"
+msgstr "Birleşik Krallık kullanıcıları için İngilizce: en-gb"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:73
+msgid "English for US users: en-us"
+msgstr "ABD kullanıcıları için İngilizce: en-us"
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:81
+msgid ""
+"Determines if URLs in this language are encoded or use ASCII characters (if "
+"unsure, leave it as \"No\")."
+msgstr "Bu dildeki URL'lerin kodlanıp kodlanmayacağını veya ASCII karakterleri kullanıp kullanmayacağını belirler (emin değilseniz, “Hayır” olarak bırakın)."
+
+#: src/js/setup/components/Steps/AddLanguagesModal.js:98
+msgid "adding a custom language"
+msgstr "özel dil ekleme"
+
+#: src/js/setup/components/Steps/Address.js:100
+msgid "A different domain per language"
+msgstr "Dil başına farklı bir alan adı"
+
+#: src/js/setup/components/Steps/Address.js:107
+msgid ""
+"Learn more about required server settings to use a different domain per "
+"language"
+msgstr "Dil başına farklı bir alan adı kullanmak için gerekli sunucu ayarları hakkında daha fazla bilgi edinin"
+
+#: src/js/setup/components/Steps/Address.js:117
+msgid "Language name added as a parameter"
+msgstr "Dil adı parametre olarak eklendi"
+
+#: src/js/setup/components/Steps/Address.js:178
+msgid "I will set up the domains for my secondary languages later."
+msgstr "İkincil dillerim için alan adlarını daha sonra ayarlayacağım."
+
+#: src/js/setup/components/Steps/Address.js:229
+msgid "The domain you have entered is invalid."
+msgstr "Girdiğiniz alan adı geçersiz."
+
+#: src/js/setup/components/Steps/Address.js:231
+msgid "The domain you have entered must be unique."
+msgstr "Girdiğiniz alan adı benzersiz olmalıdır."
+
+#: src/js/setup/components/Steps/Address.js:251
+msgid ""
+"Please Note: Your site won't work in your secondary languages until this is "
+"successfully set up or you switch to a different URL option."
+msgstr "Lütfen Dikkat: Bu başarıyla ayarlanana veya farklı bir URL seçeneğine geçene kadar siteniz ikincil dillerinizde çalışmayacaktır."
+
+#: src/js/setup/components/Steps/Address.js:57
+msgid "Learn more about Language URL Options"
+msgstr "Dil URL seçenekleri hakkında daha fazla bilgi edinin"
+
+#: src/js/setup/components/Steps/Address.js:64
+msgid "How would you like to format your site's URL?"
+msgstr "Sitenizin URL'sini nasıl biçimlendirmek istersiniz?"
+
+#: src/js/setup/components/Steps/Address.js:69
+msgid "Different languages in directories"
+msgstr "Dizinlerde farklı diller"
+
+#: src/js/setup/components/Steps/Address.js:78
+msgid "The URL rewrite is not configured in your server."
+msgstr "URL yeniden yazma sunucunuzda yapılandırılmamış."
+
+#: src/js/setup/components/Steps/Address.js:81
+msgid ""
+"Learn more about required server settings to display languages in "
+"directories"
+msgstr "Dizinlerdeki dilleri görüntülemek için gerekli sunucu ayarları hakkında daha fazla bilgi edinin"
+
+#: src/js/setup/components/Steps/Address.js:86
+msgid "I will fix my server settings to display languages in directories later."
+msgstr "Dizinlerdeki dilleri görüntülemek için sunucu ayarlarımı daha sonra düzelteceğim."
+
+#: src/js/setup/components/Steps/Address.js:88
+msgid "Your server settings do not allow for languages in directories. "
+msgstr "Sunucu ayarlarınız dizinlerdeki dillere izin vermiyor. "
+
+#: src/js/setup/components/Steps/Address.js:91
+msgid "Learn more about the required server settings."
+msgstr "Gerekli sunucu ayarları hakkında daha fazla bilgi edinin."
+
+#: src/js/setup/components/Steps/Finished/ContinueFinishMessage.js:108
+msgid "Translate your pages"
+msgstr "Sayfalarınızı çevirin"
+
+#: src/js/setup/components/Steps/Finished/ContinueFinishMessage.js:113
+msgid "Translate your posts"
+msgstr "Yazılarınızı çevirin"
+
+#: src/js/setup/components/Steps/Finished/ContinueFinishMessage.js:29
+msgid "Next, you need to set-up your multilingual store."
+msgstr "Ardından, çok dilli mağazanızı kurmanız gerekiyor."
+
+#: src/js/setup/components/Steps/Finished/ContinueFinishMessage.js:46
+msgid "Continue to WooCommerce Multilingual Setup"
+msgstr "WooCommerce çok dilli kurulumuna devam et"
+
+#: src/js/setup/components/Steps/Finished/ContinueFinishMessage.js:54
+msgid "Start translating your site by visiting the <s>Translation Dashboard</s>."
+msgstr "<s>Çeviri Paneli</s>'ni ziyaret ederek sitenizi çevirmeye başlayın."
+
+#: src/js/setup/components/Steps/Finished/ContinueFinishMessage.js:72
+msgid "Go to Translation Dashboard"
+msgstr "Çeviri paneline git"
+
+#: src/js/setup/components/Steps/Finished/ContinueFinishMessage.js:80
+msgid "Need help? <a>Using WPML's Plus Icons to Translate Content</a>"
+msgstr "Yardıma mı ihtiyacınız var? <a>WPML'nin Artı Simgelerini İçeriği Çevirmek İçin Kullanma</a>"
+
+#: src/js/setup/components/Steps/Finished/ContinueFinishMessage.js:99
+msgid ""
+"To start translating, look for the \"plus\" icons that WPML introduces next "
+"to content lists and editors. Click the \"plus\" icon under each language "
+"to translate."
+msgstr "Çevirmeye başlamak için, içerik listelerinin ve düzenleyicilerin yanında WPML'nin tanıttığı “artı” simgelerini arayın. Çevirmek için her dilin altındaki “artı” simgesine tıklayın."
+
+#: src/js/setup/components/Steps/Finished/CriticalError.js:10
+msgid "support forum"
+msgstr "destek forumu"
+
+#: src/js/setup/components/Steps/Finished/CriticalError.js:14
+msgid ""
+"There was a critical error setting up WPML. Please contact our "
+"<LinkToSupportForum /> to resolve it."
+msgstr "WPML kurulurken kritik bir hata oluştu. Lütfen çözmek için <LinkToSupportForum /> ile iletişime geçin."
+
+#: src/js/setup/components/Steps/Finished/CriticalError.js:23
+msgid "Hide error message"
+msgstr "Hata mesajını gizle"
+
+#: src/js/setup/components/Steps/Finished/CriticalError.js:23
+msgid "Show error message"
+msgstr "Hata mesajını göster"
+
+#: src/js/setup/components/Steps/Finished/Header.js:12
+msgid "Congratulations, your website is now multilingual with WPML!"
+msgstr "Tebrikler, web siteniz artık WPML ile çok dilli!"
+
+#: src/js/setup/components/Steps/Finished/LanguageSwitcherBox.js:6
+msgid ""
+"For language switcher customization and more language options, navigate to "
+"<a>WPML → Languages</a>."
+msgstr "Dil değiştirici özelleştirmesi ve daha fazla dil seçeneği için <a>WPML → Diller</a>'e gidin."
+
+#: src/js/setup/components/Steps/Languages.js:110
+msgid "What are the languages of your site?"
+msgstr "Sitenizin dilleri nelerdir?"
+
+#: src/js/setup/components/Steps/Languages.js:120
+msgid "Default language"
+msgstr "Varsayılan dil"
+
+#: src/js/setup/components/Steps/Languages.js:122
+msgid "What is the current language of your website?"
+msgstr "Web sitenizin mevcut dili nedir?"
+
+#: src/js/setup/components/Steps/Languages.js:133
+msgid "Translation languages"
+msgstr "Çeviri dilleri"
+
+#: src/js/setup/components/Steps/Languages.js:135
+msgid "Which languages do you want to translate your site into?"
+msgstr "Sitenizi hangi dillere çevirmek istiyorsunuz?"
+
+#: src/js/setup/components/Steps/Languages.js:149
+msgid "If you cannot find languages that you need in the list,"
+msgstr "Listede ihtiyacınız olan dilleri bulamıyorsanız,"
+
+#: src/js/setup/components/Steps/Languages.js:150
+msgid "create a custom language"
+msgstr "özel bir dil oluşturun"
+
+#: src/js/setup/components/Steps/License.js:26
+#. %1$s is <a href="..."> and %2$s is </a>
+msgid ""
+"If you don't have a WPML.org account or a valid subscription, %1$spurchase "
+"one%2$s to get automatic updates, full support, and a 30-day money-back "
+"guarantee."
+msgstr "WPML.org hesabınız veya geçerli bir aboneliğiniz yoksa, otomatik güncellemeler, tam destek ve 30 günlük para iade garantisi almak için %1$sbir tane satın alın%2$s."
+
+#: src/js/setup/components/Steps/License.js:57
+msgid "Already purchased WPML?"
+msgstr "WPML'yi zaten satın aldınız mı?"
+
+#: src/js/setup/components/Steps/License.js:61
+msgid "Enter your site key from your WPML account to receive automatic updates."
+msgstr "Otomatik güncellemeleri almak için WPML hesabınızdan site anahtarınızı girin."
+
+#: src/js/setup/components/Steps/License.js:68
+msgid "Site key"
+msgstr "Site anahtarı"
+
+#: src/js/setup/components/Steps/License.js:75
+msgid "Get a key for this site"
+msgstr "Bu site için bir anahtar alın"
+
+#: src/js/setup/components/Steps/Plugins.js:123
+msgid "Error in activating plugin."
+msgstr "Eklenti etkinleştirilirken hata oluştu."
+
+#: src/js/setup/components/Steps/Plugins.js:125
+msgid "Error in installing plugin."
+msgstr "Eklenti yüklenirken hata oluştu."
+
+#: src/js/setup/components/Steps/Plugins.js:167
+msgid "Improve your site’s translations using helpful plugins"
+msgstr "Yardımcı eklentiler kullanarak sitenizin çevirilerini iyileştirin"
+
+#: src/js/setup/components/Steps/Plugins.js:173
+msgid ""
+"Based on the themes and other plugins running on your site, we recommend "
+"that you enable the following WPML components. These are included with your "
+"WPML purchase and allow you to translate strings, media, admin texts, and "
+"more."
+msgstr "Sitenizde çalışan temalara ve diğer eklentilere dayanarak, aşağıdaki WPML bileşenlerini etkinleştirmenizi öneririz. Bunlar WPML satın alımınıza dahildir ve dizeleri, medyayı, yönetici metinlerini ve daha fazlasını çevirmenize olanak tanır."
+
+#: src/js/setup/components/Steps/Support.js:22
+msgid ""
+"Yes, send this information to wpml.org to improve my site’s maintenance and "
+"support"
+msgstr "Evet, sitenin bakımını ve desteğini iyileştirmek için bu bilgiyi wpml.org'a gönder"
+
+#: src/js/setup/components/Steps/Support.js:25
+msgid "No, don't send this information and skip maintenance alerts"
+msgstr "Hayır, bu bilgiyi gönderme ve bakım uyarılarını atla"
+
+#: src/js/setup/components/Steps/Support.js:34
+msgid "Do you want to get better and faster support?"
+msgstr "Daha iyi ve daha hızlı destek almak ister misiniz?"
+
+#: src/js/setup/components/Steps/Support.js:39
+msgid ""
+"WPML can send information about your site’s plugins, theme and content "
+"stats to wpml.org."
+msgstr "WPML, sitenizin eklentileri, teması ve içerik istatistikleri hakkında bilgileri wpml.org'a gönderebilir."
+
+#: src/js/setup/components/Steps/Support.js:40
+msgid ""
+"This allows our support team to help you much faster and to contact you "
+"about potential problems and their solutions."
+msgstr "Bu, destek ekibimizin size çok daha hızlı yardımcı olmasını ve potansiyel sorunlar ve çözümleri hakkında sizinle iletişime geçmesini sağlar."
+
+#: src/js/setup/components/Steps/Support.js:52
+msgid "Privacy and data usage policy"
+msgstr "Gizlilik ve veri kullanım politikası"
+
+#: src/js/setup/components/Steps/Support.js:60
+msgid "Full details of the info we’re proposing to share"
+msgstr "Paylaşmayı önerdiğimiz bilgilerin tam detayları"
+
+#: src/js/setup/components/Steps/TranslationSettings.js:102
+msgid "Translation Contributors"
+msgstr "Çeviri katkıda bulunanlar"
+
+#: src/js/setup/components/Steps/TranslationSettings.js:116
+msgid "Users of this site"
+msgstr "Bu sitenin kullanıcıları"
+
+#: src/js/setup/components/Steps/TranslationSettings.js:119
+msgid ""
+"You will choose or create new users of this WordPress site as the "
+"translators. You can also choose yourself. This allows you to set up a team "
+"of translators working in different language pairs."
+msgstr "Bu WordPress sitesinin yeni kullanıcılarını çevirmen olarak seçecek veya oluşturacaksınız. Kendinizi de seçebilirsiniz. Bu, farklı dil çiftlerinde çalışan bir çevirmen ekibi kurmanıza olanak tanır."
+
+#: src/js/setup/components/Steps/TranslationSettings.js:129
+msgid "A professional translation service"
+msgstr "Profesyonel bir çeviri hizmeti"
+
+#: src/js/setup/components/Steps/TranslationSettings.js:36
+msgid ""
+"You have preselected %s to translate your content. Finish setting it up by "
+"entering the API token they provided to you."
+msgstr "İçeriğinizi çevirmek için %s'yı önceden seçtiniz. Size sağladıkları API belirtecini girerek kurulumu tamamlayın."
+
+#: src/js/setup/components/Steps/TranslationSettings.js:37
+msgid ""
+"WPML offers tight integration with over 70 translation services. You will "
+"choose the translation service that you prefer and enjoy a streamlined "
+"process for sending jobs and receiving completed translations."
+msgstr "WPML, 70'ten fazla çeviri hizmetiyle sıkı entegrasyon sunar. Tercih ettiğiniz çeviri hizmetini seçecek ve işleri gönderme ve tamamlanmış çevirileri alma için kolaylaştırılmış bir sürecin keyfini çıkaracaksınız."
+
+#: src/js/setup/components/Steps/TranslationSettings.js:67
+#: src/js/setup/store.js:88
+msgid "Human Translation"
+msgstr "İnsan çevirisi"
+
+#: src/js/setup/components/Steps/TranslationSettings.js:73
+msgid ""
+"Besides the AI translation, you can translate yourself, add your own team "
+"of translators and use professional translation services."
+msgstr "Yapay zeka çevirisinin yanı sıra, kendiniz çeviri yapabilir, kendi çevirmen ekibinizi ekleyebilir ve profesyonel çeviri hizmetlerini kullanabilirsiniz."
+
+#: src/js/setup/components/Steps/TranslationSettings.js:80
+msgid "I'd like to set up human translation by:"
+msgstr "İnsan çevirisini şu şekilde kurmak istiyorum:"
+
+#: src/js/setup/components/Steps/TranslationSettings.js:85
+msgid "Only myself"
+msgstr "Sadece ben"
+
+#: src/js/setup/components/Steps/TranslationSettings.js:86
+msgid "You will be the sole translator for this site."
+msgstr "Bu site için tek çevirmen siz olacaksınız."
+
+#: src/js/setup/components/Steps/TranslationSettings.js:93
+msgid "A Translation Manager who will setup the translators for my site"
+msgstr "Sitem için çevirmenleri ayarlayacak bir Çeviri Yöneticisi"
+
+#: src/js/setup/components/Steps/TranslationSettings.js:94
+msgid ""
+"You will choose a user of this site and delegate the setup of translators "
+"to him/her. Choose this option when you are building a website for a "
+"client, who will set up translator users or choose a translation service."
+msgstr "Bu sitenin bir kullanıcısını seçecek ve çevirmenlerin kurulumunu ona devredeceksiniz. Bir müşteri için web sitesi oluştururken, çevirmen kullanıcıları ayarlayacak veya bir çeviri hizmeti seçecek bu seçeneği tercih edin."
+
+#: src/js/setup/components/Steps/TranslationSettings/TranslationServices/Authorize/Actions.js:16
+msgid "Error: %s"
+msgstr "Hata: %s"
+
+#: src/js/setup/components/Steps/TranslationSettings/TranslationServices/Authorize/Actions.js:36
+msgid "Authenticate"
+msgstr "Doğrula"
+
+#: src/js/setup/components/Steps/TranslationSettings/TranslationServices/AuthorizeService.js:24
+msgid ""
+"To send content and receive translations from <service_name />, enter the "
+"credentials you received from them."
+msgstr "<service_name />'den içerik göndermek ve çeviriler almak için, onlardan aldığınız kimlik bilgilerini girin."
+
+#: src/js/setup/components/Steps/TranslationSettings/TranslationServices/AuthorizeService.js:30
+msgid "Need credentials? Contact <link_to_service />"
+msgstr "Kimlik bilgilerine mi ihtiyacınız var? <link_to_service /> ile iletişime geçin"
+
+#: src/js/setup/components/Steps/TranslationSettings/TranslationServices/AuthorizeService.js:34
+msgid ""
+"Success! You can start sending content to %s for translation after you "
+"finish the setup wizard."
+msgstr "Başarılı! Kurulum sihirbazını tamamladıktan sonra %s'ya çeviri için içerik göndermeye başlayabilirsiniz."
+
+#: src/js/setup/components/Steps/TranslationSettings/TranslationServices/AuthorizeService.js:58
+msgid "The credentials are invalid. Please, try again."
+msgstr "Kimlik bilgileri geçersiz. Lütfen tekrar deneyin."
+
+#: src/js/setup/components/Steps/TranslationSettings/TranslationServices/ListModal.js:12
+#: src/js/setup/components/Steps/TranslationSettings/TranslationServices/Main.js:84
+msgid "Choose a Translation Service"
+msgstr "Bir çeviri hizmeti seçin"
+
+#: src/js/setup/components/Steps/TranslationSettings/TranslationServices/Main.js:71
+msgid "Loading"
+msgstr "Yükleniyor"
+
+#: src/js/setup/models/Languages.js:61
+msgid "A new language could not be added correctly"
+msgstr "Yeni bir dil doğru şekilde eklenemedi"
+
+#: src/js/setup/store.js:118
+msgid "Back"
+msgstr "Geri"
+
+#: src/js/setup/store.js:123
+msgid "Continue"
+msgstr "Devam"
+
+#: src/js/setup/store.js:128
+msgid "Skip"
+msgstr "Atla"
+
+#: src/js/setup/store.js:132
+msgid "Install and activate"
+msgstr "Yükle ve etkinleştir"
+
+#: src/js/setup/store.js:137
+msgid "Finish"
+msgstr "Bitir"
+
+#: src/js/setup/store.js:74
+msgid "Languages"
+msgstr "Diller"
+
+#: src/js/setup/store.js:77
+msgid "URL Format"
+msgstr "URL biçimi"
+
+#: src/js/setup/store.js:80
+msgid "Register WPML"
+msgstr "WPML'yi kaydet"
+
+#: src/js/setup/store.js:83
+msgid "AI Translation"
+msgstr "Yapay zeka çevirisi"
+
+#: src/js/setup/store.js:93
+msgid "Support"
+msgstr "Destek"
+
+#: src/js/setup/store.js:96
+msgid "Plugins"
+msgstr "Eklentiler"
+
+#: src/js/setup/store.js:99
+msgid "Finished"
+msgstr "Bitti"
+
+#: src/js/translationServices/components/SearchForm.js:10
+msgid "Search translation services"
+msgstr "Çeviri hizmetlerini ara"
+
+#: src/js/translationServices/components/Sections.js:16
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: src/js/translationServices/components/Sections.js:42
+msgid ""
+"It’s not currently possible to connect a translation service when WPML is "
+"set to translate your site’s content automatically. To use a translation "
+"service, please change your translation mode on the <LinkToSettingsPage /> "
+"page."
+msgstr "WPML sitenizin içeriğini otomatik olarak çevirecek şekilde ayarlandığında bir çeviri hizmeti bağlamak şu anda mümkün değildir. Bir çeviri hizmeti kullanmak için lütfen <LinkToSettingsPage /> sayfasındaki çeviri modunuzu değiştirin."
+
+#: src/js/translationServices/components/ServicesList.js:41
+msgid "Documentation"
+msgstr "Belgeler"
+
+#: src/js/translationServices/components/ServicesList.js:57
+msgid "Activate"
+msgstr "Etkinleştir"
+
+#: src/js/translationServices/components/ServicesList.js:74
+msgid "Description"
+msgstr "Açıklama"
+
+#: src/js/translationServices/components/ServicesList.js:81
+msgid "Ranking"
+msgstr "Sıralama"

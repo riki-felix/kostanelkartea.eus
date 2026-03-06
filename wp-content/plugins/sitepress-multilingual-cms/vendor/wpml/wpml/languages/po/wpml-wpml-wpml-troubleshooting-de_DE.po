@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-18T16:02:19+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: wpml\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Alias Domain"
+msgstr "Alias-Domain"
+
+msgid "If you didn't change your main domain and only logged in through an alias domain, you can register it here. WPML will then use the original domain for API communication with AMS."
+msgstr "Wenn Sie Ihre Hauptdomain nicht geändert und sich nur über eine Alias-Domain angemeldet haben, können Sie diese hier registrieren. WPML verwendet dann die ursprüngliche Domain für die API-Kommunikation mit AMS."
+
+msgid "Something went wrong. Please try again."
+msgstr "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+
+msgid "Registering..."
+msgstr "Wird registriert..."
+
+msgid "Register current domain as alias"
+msgstr "Aktuelle Domain als Alias registrieren"
+
+msgid "The current domain has been registered as an alias domain."
+msgstr "Die aktuelle Domain wurde als Alias-Domain registriert."
+
+msgid "Current alias domains:"
+msgstr "Aktuelle Alias-Domains:"
+
+msgid "This will remove all registered alias domains. If you are accessing this site through an alias domain, the migration banner will appear again."
+msgstr "Dadurch werden alle registrierten Alias-Domains entfernt. Wenn Sie über eine Alias-Domain auf diese Website zugreifen, wird das Migrationsbanner erneut angezeigt."
+
+msgid "Resetting..."
+msgstr "Wird zurückgesetzt..."
+
+msgid "Reset alias domains"
+msgstr "Alias-Domains zurücksetzen"
+
+msgid "Alias domains have been reset."
+msgstr "Alias-Domains wurden zurückgesetzt."
+
+msgid "PostHog Integration"
+msgstr "PostHog-Integration"
+
+msgid "PostHog is running on your site"
+msgstr "PostHog läuft auf Ihrer Website"
+
+msgid "Enable PostHog to help us improve our product"
+msgstr "Aktivieren Sie PostHog, um uns bei der Verbesserung unseres Produkts zu helfen"
+
+msgid "your PostHog session ID is: "
+msgstr "Ihre PostHog-Sitzungs-ID ist: "

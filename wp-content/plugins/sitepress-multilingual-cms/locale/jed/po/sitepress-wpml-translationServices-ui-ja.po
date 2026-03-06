@@ -1,0 +1,68 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/js/translationServices/components/AuthorizeModal.js:22
+msgid "Connect this site to your %s account"
+msgstr "このサイトを%sアカウントに接続"
+
+#: src/js/translationServices/components/AuthorizeModal.js:45
+msgid "Error"
+msgstr "エラー"
+
+#: src/js/translationServices/components/AuthorizeModal.js:57
+msgid "« Use a different Translation Service"
+msgstr "« 別の翻訳サービスを使用する"
+
+#: src/js/translationServices/components/AuthorizeModal.js:62
+msgid "Authenticate"
+msgstr "認証"
+
+#: src/js/translationServices/components/Connect.js:22
+msgid ""
+"Visit <link_to_service /> to request an API Token. This token allows WPML "
+"to connect to <service_name /> to send and receive jobs."
+msgstr "APIトークンをリクエストするには、<link_to_service />にアクセスしてください。このトークンにより、WPMLは<service_name />に接続してジョブを送受信できます。"
+
+#: src/js/translationServices/components/SearchForm.js:10
+msgid "Search translation services"
+msgstr "翻訳サービスを検索"
+
+#: src/js/translationServices/components/SearchForm.js:12
+msgid "Search"
+msgstr "検索"
+
+#: src/js/translationServices/components/Sections.js:16
+msgid "Settings"
+msgstr "設定"
+
+#: src/js/translationServices/components/Sections.js:42
+msgid ""
+"It’s not currently possible to connect a translation service when WPML is "
+"set to translate your site’s content automatically. To use a translation "
+"service, please change your translation mode on the <LinkToSettingsPage /> "
+"page."
+msgstr "WPMLがサイトのコンテンツを自動的に翻訳するように設定されている場合、翻訳サービスを接続することは現在できません。翻訳サービスを使用するには、<LinkToSettingsPage />ページで翻訳モードを変更してください。"
+
+#: src/js/translationServices/components/ServicesList.js:41
+msgid "Documentation"
+msgstr "ドキュメント"
+
+#: src/js/translationServices/components/ServicesList.js:57
+msgid "Activate"
+msgstr "有効化"
+
+#: src/js/translationServices/components/ServicesList.js:69
+msgid "Name"
+msgstr "名前"
+
+#: src/js/translationServices/components/ServicesList.js:74
+msgid "Description"
+msgstr "説明"
+
+#: src/js/translationServices/components/ServicesList.js:81
+msgid "Ranking"
+msgstr "ランキング"

@@ -1,0 +1,54 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-18T16:02:17+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: wpml\n"
+"Language: pl_PL\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "Get More Features with WPML's Advanced Translation Editor"
+msgstr "Uzyskaj więcej funkcji dzięki zaawansowanemu edytorowi tłumaczeń WPML"
+
+msgid "Close banner"
+msgstr "Zamknij baner"
+
+msgid "You're using the Classic Translation Editor, an old legacy tool, and missing out on the many features and efficiency of our Advanced Translation Editor:"
+msgstr "Używasz klasycznego edytora tłumaczeń, starego, przestarzałego narzędzia, i tracisz wiele funkcji i wydajności naszego zaawansowanego edytora tłumaczeń:"
+
+msgid "Translation Memory"
+msgstr "Pamięć tłumaczeniowa"
+
+msgid "HTML Protection"
+msgstr "Ochrona HTML"
+
+msgid "Glossary"
+msgstr "Słownik"
+
+msgid "Spellchecker"
+msgstr "Sprawdzanie pisowni"
+
+msgid "AI Assistant"
+msgstr "Asystent SI"
+
+msgid "Automatic Translation"
+msgstr "Automatyczne tłumaczenie"
+
+msgid "Switch now for a faster, more convenient, and reliable translation experience."
+msgstr "Przełącz się teraz, aby uzyskać szybsze, wygodniejsze i bardziej niezawodne tłumaczenie."
+
+msgid "Switch Now"
+msgstr "Przełącz się teraz"
+
+msgid "Learn more about Advanced Translation Editor"
+msgstr "Dowiedz się więcej o zaawansowanym edytorze tłumaczeń"
+
+msgid "Learn More"
+msgstr "Dowiedz się więcej"

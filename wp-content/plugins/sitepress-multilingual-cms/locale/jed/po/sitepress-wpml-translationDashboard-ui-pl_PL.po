@@ -1,0 +1,298 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: pl_PL\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: src/js/components/translation/TranslationMethod.js:115
+msgid "Your pending automatic translations will be canceled."
+msgstr "Twoje oczekujące automatyczne tłumaczenia zostaną anulowane."
+
+#: src/js/components/translation/TranslationMethod.js:119
+msgid "Save"
+msgstr "Zapisz"
+
+#: src/js/components/translation/TranslationMethod.js:125
+msgid "Go to the <a>Translation Management Dashboard</a> to translate your content."
+msgstr "Przejdź do <a>Panelu zarządzania tłumaczeniami</a>, aby przetłumaczyć swoje treści."
+
+#: src/js/components/translation/TranslationMethod.js:142
+msgid "Review the translations before publishing"
+msgstr "Przejrzyj tłumaczenia przed publikacją"
+
+#: src/js/components/translation/TranslationMethod.js:143
+msgid "Publish translations and review them later"
+msgstr "Opublikuj tłumaczenia i przejrzyj je później"
+
+#: src/js/components/translation/TranslationMethod.js:144
+msgid "Publish translations without reviewing"
+msgstr "Opublikuj tłumaczenia bez recenzji"
+
+#: src/js/components/translation/TranslationMethod.js:69
+msgid "Translate Everything"
+msgstr "Przetłumacz wszystko"
+
+#: src/js/components/translation/TranslationMethod.js:71
+msgid "WPML will automatically translate content that you publish or update"
+msgstr "WPML automatycznie przetłumaczy treści, które opublikujesz lub zaktualizujesz"
+
+#: src/js/components/translation/TranslationMethod.js:74
+msgid "How do you want to translate this site?"
+msgstr "Jak chcesz przetłumaczyć tę witrynę?"
+
+#: src/js/components/translation/TranslationMethod.js:97
+msgid "Translate Some"
+msgstr "Przetłumacz niektóre"
+
+#: src/js/components/translation/TranslationMethod.js:99
+msgid "I want to choose which content to translate"
+msgstr "Chcę wybrać, które treści przetłumaczyć"
+
+#: src/js/translationDashboard/sending-to-translation/components/AllLanguages.js:25
+msgid "All Languages"
+msgstr "Wszystkie języki"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:17
+msgid "Overwrite existing translations"
+msgstr "Nadpisz istniejące tłumaczenia"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:24
+msgid "Some of the content you want to translate is already translated"
+msgstr "Niektóre treści, które chcesz przetłumaczyć, są już przetłumaczone"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:30
+msgid "What do you want to do with the content that’s already translated?"
+msgstr "Co chcesz zrobić z treściami, które są już przetłumaczone?"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:39
+msgid "Leave existing translations as is"
+msgstr "Pozostaw istniejące tłumaczenia bez zmian"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:64
+msgid "You chose to review translations before publishing."
+msgstr "Wybrałeś opcję przeglądania tłumaczeń przed publikacją."
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:65
+msgid ""
+"If you retranslate content that's already published, the changes will be "
+"applied directly to live pages or posts."
+msgstr "Jeśli ponownie przetłumaczysz już opublikowane treści, zmiany zostaną zastosowane bezpośrednio do aktywnych stron lub wpisów."
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:82
+msgid ""
+"This also updates the translation memory for your site. Read more about <a "
+"href=\"%s\" target=\"_blank\" >translation memory</a>"
+msgstr "Aktualizuje to również pamięć tłumaczeniową dla Twojej witryny. Dowiedz się więcej o <a href=\"%s\" target=\"_blank\" >pamięci tłumaczeniowej</a>"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:89
+msgid ""
+"Allows you to re-translate your content and update the translation memory "
+"for your site. Read more about <a href=\"%s\" target=\"_blank\" "
+">translation memory</a>"
+msgstr "Umożliwia ponowne tłumaczenie treści i aktualizację pamięci tłumaczeniowej dla Twojej witryny. Dowiedz się więcej o <a href=\"%s\" target=\"_blank\" >pamięci tłumaczeniowej</a>"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:96
+msgid ""
+"Allows your translators to re-translate your content and update the "
+"translation memory for your site. Read more about <a href=\"%s\" "
+"target=\"_blank\" >translation memory</a>"
+msgstr "Umożliwia tłumaczom ponowne tłumaczenie treści i aktualizację pamięci tłumaczeniowej dla Twojej witryny. Dowiedz się więcej o <a href=\"%s\" target=\"_blank\" >pamięci tłumaczeniowej</a>"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToHandleExistingTranslations.js:98
+msgid ""
+"HINT: You can add a Note for translators in the table above with special "
+"instructions."
+msgstr "WSKAZÓWKA: Możesz dodać notatkę dla tłumaczy w powyższej tabeli ze specjalnymi instrukcjami."
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToTranslate.js:31
+msgid "Translate automatically"
+msgstr "Przetłumacz automatycznie"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToTranslate.js:37
+msgid "How do you want to translate?"
+msgstr "Jak chcesz tłumaczyć?"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToTranslate.js:55
+msgid "Assign to a translator"
+msgstr "Przypisz do tłumacza"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToTranslate.js:55
+msgid "Translate myself"
+msgstr "Przetłumacz samodzielnie"
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToTranslate.js:60
+msgid "You do not need translation credits to translate content yourself."
+msgstr "Nie potrzebujesz kredytów na tłumaczenie, aby samodzielnie tłumaczyć treści."
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToTranslate.js:87
+msgid ""
+"You can only automatically translate content from your site's default "
+"language (English), to your site's other languages. Deselect content in "
+"your site's secondary languages to proceed."
+msgstr "Możesz automatycznie tłumaczyć treści tylko z domyślnego języka Twojej witryny (angielskiego) na inne języki Twojej witryny. Odznacz treści w językach pomocniczych Twojej witryny, aby kontynuować."
+
+#: src/js/translationDashboard/sending-to-translation/components/HowToTranslate.js:92
+#. %s is the name of the default language. </a>
+msgid ""
+"You can only automatically translate content from your primary language "
+"(%s) to other languages. Use the language switcher at the top of this page "
+"to switch to %s."
+msgstr "Możesz automatycznie tłumaczyć treści tylko z języka podstawowego (%s) na inne języki. Użyj przełącznika języków na górze tej strony, aby przełączyć się na %s."
+
+#: src/js/translationDashboard/sending-to-translation/components/LanguageRow.js:49
+msgid ""
+"Selected content includes items that were originally created in this "
+"language. Deselect these items to proceed."
+msgstr "Wybrane treści zawierają elementy, które zostały pierwotnie utworzone w tym języku. Odznacz te elementy, aby kontynuować."
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:100
+msgid "Add to Translation Queue"
+msgstr "Dodaj do kolejki tłumaczeń"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:17
+msgid "Select a post or page to translate"
+msgstr "Wybierz wpis lub stronę do przetłumaczenia"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:18
+msgid "Translate or duplicate content to at least one language"
+msgstr "Przetłumacz lub zduplikuj treści na co najmniej jeden język"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:19
+msgid "Choose how you want to translate your content"
+msgstr "Wybierz, jak chcesz przetłumaczyć swoje treści"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:20
+msgid "Selected content is already translated"
+msgstr "Wybrane treści są już przetłumaczone"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:21
+msgid ""
+"Selected content includes items in a language other than your site's "
+"default language."
+msgstr "Wybrane treści zawierają elementy w języku innym niż domyślny język Twojej witryny."
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:74
+msgid "Choose at least one translation action"
+msgstr "Wybierz co najmniej jedną akcję tłumaczenia"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:78
+msgid "Duplicate"
+msgstr "Duplikuj"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:88
+msgid "Start translating and duplicating"
+msgstr "Rozpocznij tłumaczenie i duplikowanie"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:90
+msgid "Add to Translation Basket and duplicate"
+msgstr "Dodaj do koszyka tłumaczeń i duplikuj"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:92
+msgid "Add to Translation Queue and duplicate"
+msgstr "Dodaj do kolejki tłumaczeń i duplikuj"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:96
+msgid "Start translating"
+msgstr "Rozpocznij tłumaczenie"
+
+#: src/js/translationDashboard/sending-to-translation/components/SendButton.js:98
+msgid "Add to Translation Basket"
+msgstr "Dodaj do koszyka tłumaczeń"
+
+#: src/js/translationDashboard/sending-to-translation/components/TranslationReviewModal.js:37
+msgid "One more thing..."
+msgstr "Jeszcze jedna rzecz..."
+
+#: src/js/translationDashboard/sending-to-translation/components/TranslationReviewModal.js:40
+msgid ""
+"What would you like to do when your content has finished translating "
+"automatically?"
+msgstr "Co chcesz zrobić, gdy Twoje treści zostaną automatycznie przetłumaczone?"
+
+#: src/js/translationDashboard/sending-to-translation/components/TranslationReviewModal.js:51
+msgid "Save settings"
+msgstr "Zapisz ustawienia"
+
+#: src/js/translationDashboard/sending-to-translation/components/TranslationReviewModal.js:61
+msgid ""
+"This setting will apply to all future automatic translations. You can "
+"change this anytime in WPML → Settings."
+msgstr "To ustawienie będzie dotyczyć wszystkich przyszłych automatycznych tłumaczeń. Możesz to zmienić w dowolnym momencie w WPML → Ustawienia."
+
+#: src/js/translationDashboard/sending-to-translation/model/store.js:19
+msgid "Translate"
+msgstr "Przetłumacz"
+
+#: src/js/translationDashboard/sending-to-translation/model/store.js:24
+msgid "Duplicate content"
+msgstr "Duplikuj treści"
+
+#: src/js/translationDashboard/sending-to-translation/model/store.js:29
+msgid "Do nothing"
+msgstr "Nic nie rób"
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:11
+msgid "You need credits to use automatic translation."
+msgstr "Potrzebujesz kredytów, aby korzystać z automatycznego tłumaczenia."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:113
+msgid "Finish setting up %s on your site"
+msgstr "Zakończ konfigurację %s w swojej witrynie"
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:117
+msgid ""
+"You need to authenticate %s to send them content for translation. Visit the "
+"%s to finish the setup."
+msgstr "Musisz uwierzytelnić %s, aby wysyłać im treści do tłumaczenia. Odwiedź %s, aby zakończyć konfigurację."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:14
+msgid ""
+"Connection Error. Please wait a minute and reload this page. If the problem "
+"continues, please <a>contact WPML support</a>."
+msgstr "Błąd połączenia. Poczekaj chwilę i odśwież tę stronę. Jeśli problem będzie się powtarzał, skontaktuj się z <a>pomocą techniczną WPML</a>."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:143
+msgid "Add a translator to use %s."
+msgstr "Dodaj tłumacza, aby używać %s."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:147
+msgid ""
+"To send content to %s for translation, go to the %s to add a translator on "
+"your site."
+msgstr "Aby wysłać treści do %s do tłumaczenia, przejdź do %s, aby dodać tłumacza w swojej witrynie."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:179
+msgid ""
+"Your selected automatic translation engines do not support the following "
+"language(s): %s. Read more about <a>choosing a translation engine</a>."
+msgstr "Wybrane przez Ciebie silniki automatycznego tłumaczenia nie obsługują następujących języków: %s. Dowiedz się więcej o <a>wyborze silnika tłumaczeniowego</a>."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:211
+msgid ""
+"Some of the selected content is already being translated. This will cancel "
+"any in-progress translations."
+msgstr "Niektóre z wybranych treści są już tłumaczone. Spowoduje to anulowanie wszystkich trwających tłumaczeń."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:44
+msgid ""
+"Any existing content (translations) will be overwritten when creating "
+"duplicates."
+msgstr "Wszelkie istniejące treści (tłumaczenia) zostaną nadpisane podczas tworzenia duplikatów."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:45
+msgid ""
+"When duplicating content, please first duplicate parent pages to maintain "
+"the site's hierarchy."
+msgstr "Podczas duplikowania treści najpierw zduplikuj strony nadrzędne, aby zachować hierarchię witryny."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:68
+msgid ""
+"To assign content to a translator, first <a href=\"%s\" "
+"target=\"_blank\">add a translator</a> or <a href=\"%s\" "
+"target=\"_blank\">connect to a translation service</a>."
+msgstr "Aby przypisać treści tłumaczowi, najpierw <a href=\"%s\" target=\"_blank\">dodaj tłumacza</a> lub <a href=\"%s\" target=\"_blank\">połącz się z usługą tłumaczeniową</a>."
+
+#: src/js/translationDashboard/sending-to-translation/model/warningMessages.js:94
+msgid "Translators Tab"
+msgstr "Zakładka Tłumacze"

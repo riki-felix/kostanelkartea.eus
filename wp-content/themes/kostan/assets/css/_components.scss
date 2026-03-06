@@ -1,0 +1,327 @@
+// HUB
+.section-hub {
+  background-color: var(--cp-700);
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0;
+  padding: calc(var(--sp-huge)*2) var(--page-margin);
+  color: var(--color-secondary);
+  @media (min-width: 769px) {
+	  
+  }
+  a {
+  	color: var(--color-secondary);  
+	  &:hover {
+		  color: var(--color-accent);
+	  }
+  }
+  .hubItem {
+	line-height: 1;
+	color: var(--color-secondary);
+	font-family: var(--font-heading);
+	font-size: var(--fs-huge);
+	text-transform: uppercase;
+  }
+}
+//Highlight
+.section-highlight {
+	background-color: var(--cs-700);
+	font-family: var(--font-heading);
+	padding: calc(var(--sp-huge) * 2) var(--page-margin);
+	color: var(--color-text);
+	text-align: center;
+	p {
+		font-size: var(--fs-xxxl);
+		max-width: var(--page-reading);
+		margin: 0 auto;
+		text-transform: uppercase;
+		line-height: 1;
+		text-align: center;
+	}
+}
+//Description
+.section-description {
+	background-color: var(--color-secondary);
+	padding: var(--sp-huge) var(--sp-l);
+	p {
+		max-width: var(--page-reading);
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+//BUTTONS
+.button {}
+.button-cta {
+	display: inline-block;
+	max-width: 30.0rem;
+	text-transform: uppercase;
+	font-size: var(--fs-s);
+	font-weight: 500;
+	padding: var(--sp-xs) var(--sp-m);
+	background-color: var(--color-accent);
+	color: var(--color-text);
+	border: 2px solid var(--cp-700);
+	box-shadow: 0 0 0 2px var(--color-accent);
+	&:hover {
+		background-color: var(--cp-700);
+		color: var(--color-accent);
+		border: 2px solid var(--color-accent);
+		box-shadow: 0 0 0 2px var(--cp-700);
+	}
+	.page-reservas & {
+		display: none;
+	}
+}
+.button-link {
+	font-size: var(--fs-xs);
+	margin: var(--sp-xs) 0 ;
+	display: inline-block;
+	font-weight: 600;
+}
+//GRID
+.section-grid {
+	margin: 0 auto;
+	padding: var(--sp-huge) calc(var(--page-margin)/2);
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	justify-content: center;
+	gap: var(--sp-xl) var(--sp-m);
+	@media (min-width: 750px) {
+		grid-template-columns: 1fr 1fr;	
+	}
+	@media (min-width: 1100px) {
+		grid-template-columns: 1fr 1fr 1fr;	
+	}
+}
+
+//CARD
+.grid-card {
+	background-color: var(--color-light);
+	.card-image {
+		display: block;
+		aspect-ratio: 16/9;
+		overflow: hidden;
+		object-fit: cover;
+		a {
+			display: block;
+			
+		}
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			transition: all .4s ease;
+			&:hover {
+				transform: scale(105%);
+			}
+		}
+	}
+	.card-content {
+		padding: var(--page-margin);
+	}
+	.card-title {
+		text-align: center;
+		text-transform: uppercase;
+		a {
+			color: var(--color-text);
+			&:hover {
+				color: var(--color-accent);
+			}
+		}
+	}
+	.card-subtitle {
+		text-align: center;
+		margin-bottom: var(--sp-m);
+	}
+	.card-features {
+		border-top: 0.5px solid var(--cp-700);
+		text-align: center;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		align-items: baseline;
+		padding: var(--sp-s) var(--sp-s) 0 var(--sp-s);
+		gap: var(--sp-l);
+		margin-bottom: var(--sp-xl);
+		text-transform: uppercase;
+		font-size: var(--fs-xs);
+	}
+	.card-excerpt {
+		margin: var(--sp-s) 0;
+	}
+}
+
+
+//REVIEWS
+.section-reviews {
+	background-color: var(--cs-700);
+	padding: var(--sp-huge) var(--page-margin);
+	border-top: 2px solid var(--color-secondary);
+	.reviews-total {
+		h5 {
+			font-family: var(--font-heading);
+			font-size: var(--fs-huge);
+			line-height: 1;	
+			font-weight: var(--fw-regular);	
+			text-transform: uppercase;
+			@media (min-width: 750px) {
+				font-size: var(--fs-xxxl);  
+			}			
+		}
+	}
+	.reviews-list {
+		display: flex;
+		flex-flow: column wrap;
+		gap: var(--sp-l);
+		padding: var(--sp-xl) 0;
+		@media (min-width: 750px) {
+			padding: 0;
+		}
+	}
+	.reviews-listItem {
+		p {
+			font-size: var(--fs-m);
+		}
+		img {
+			max-width: 12.0rem;
+			width: auto;
+		}
+	}
+}
+
+//GENERAL SECTION
+.section-header {
+	max-width: var(--page-reading);
+	margin: var(--sp-huge) auto 0 auto;
+	padding: 0 var(--page-margin);
+	text-align: center;
+	
+}
+
+//KEY BENEFITS
+.section-benefits {
+	background-color: var(--cs-700);
+	padding: var(--sp-huge) 0;
+	ol {
+		max-width: 40.0rem;
+		font-size: var(--fs-xl);
+		font-family: var(--font-heading);
+		list-style: inside;
+		list-style-type: decimal;
+		counter-reset: item;
+		  list-style: none;
+		  margin: var(--sp-l) auto;
+		  padding: 0 var(--page-margin);
+	}
+	ol li:before {
+	  content: counters(item, ".") " ";
+	  counter-increment: item;
+	  font-weight: var(--fw-bold);
+	  margin-right: 1rem;
+	}
+}
+
+.section-map {
+	mix-blend-mode: multiply;
+	max-width: var(--page-width);
+	margin: var(--sp-huge) auto;
+	.acf-map {
+		height: 500px;
+		border: none;
+		margin: 0;
+	}
+}
+
+// HOSTIFY
+.hfy-wrap.hfy-theme1 {
+	max-width: var(--page-reading);
+	margin: 0 auto;
+	padding: var(--sp-m) var(--page-margin);
+	.single-propiedad & {
+		background-color: #fff;
+		border: 4px solid var(--color-secondary);
+	}
+	.hfy-listing-booking-form {
+		padding: var(--sp-m) 0;
+	}
+	.hfy-search-form-row {
+		margin: var(--sp-xl) auto;
+		background-color: var(--color-light);
+		align-items: stretch;
+		margin: 0;
+		padding: var(--sp-s);
+	}
+	.page-reservas & {
+		max-width: var(--page-width);
+		.hfy-search-form-wrap {
+		}
+	}
+	.hfy-widget-wrap-listings {
+		background-color: var(--color-secondary);
+		padding: 0;
+	}
+	#hotel-datepicker {
+		background-color: #fff;
+		padding: var(--sp-l) var(--sp-m);
+	}
+	.guests-input {
+		background-color: #fff;
+	}
+	
+}
+.hfy-wrap .container {
+	padding-right: 0;
+	padding-left: 0;
+	max-width: var(--page-width);
+	margin-left: 0;
+	margin-right: 0;
+	.col-md-6,
+	.col-lg-6,
+	.col.sm-6 {
+		padding: 0;
+		max-width: none;
+	}
+}
+.page-reservas .hfy-theme1 .hfy-widget-wrap-listings .listing-block {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2px;
+	@media (min-width: 750px) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+.page-reservas .hfy-theme1 .hfy-widget-wrap-listings .list-card .img {
+	border-radius: 0!important;
+}
+.page-reservas .hfy-theme1 .hfy-widget-wrap-listings .list-card {
+	background-color: var(--color-light);
+}
+.page-reservas .hfy-theme1 .hfy-widget-wrap-listings .list-card .info{
+	padding: var(--sp-m);
+}
+
+.hfy-theme1 .hfy-search-form-wrap button, .hfy-theme1 .hfy-search-form-wrap .btn.btn-primary {
+	background-color: var(--color-primary);
+	border-color: var(--color-primary);
+	font-size: var(--fs-m);
+	line-height: 1;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	border-radius: 0;
+	height: 100%;
+	margin: 1rem 0 0 0;
+	padding: var(--sp-s) var(--sp-s);
+	width: 100%;
+	@media (min-width: 750px) {
+		margin: 0;
+		padding: var(--sp-xxs) var(--sp-s);
+		width: auto;
+	}
+	&:hover {
+		background-color: var(--cp-500);
+		border-color: var(--cp-500);
+	}
+}

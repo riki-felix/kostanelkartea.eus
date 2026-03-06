@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: src/js/browser-language-redirect-dialog/texts.js:11
+msgid "How Browser Language Redirect Affects Google Indexing"
+msgstr "Tarayıcı dil yönlendirmesi Google dizinini nasıl etkiler?"
+
+#: src/js/browser-language-redirect-dialog/texts.js:12
+msgid "Documentation"
+msgstr "Dokümantasyon"
+
+#: src/js/browser-language-redirect-dialog/texts.js:3
+msgid "Browser redirect affects Google indexing and search results"
+msgstr "Tarayıcı yönlendirmesi Google dizinini ve arama sonuçlarını etkiler"
+
+#: src/js/browser-language-redirect-dialog/texts.js:4
+msgid "Got it, activate anyway"
+msgstr "Anladım, yine de etkinleştir"
+
+#: src/js/browser-language-redirect-dialog/texts.js:5
+msgid "Cancel"
+msgstr "İptal"
+
+#: src/js/browser-language-redirect-dialog/texts.js:7
+msgid ""
+"When you redirect visitors based on their language, you also redirect "
+"Google. Google wants to see your site exactly like visitors see it, "
+"including any redirects that you apply."
+msgstr "Ziyaretçileri dillerine göre yönlendirdiğinizde, Google'ı da yönlendirmiş olursunuz. Google, sitenizi ziyaretçilerin gördüğü gibi, uyguladığınız tüm yönlendirmeler dahil olmak üzere görmek ister."
+
+#: src/js/browser-language-redirect-dialog/texts.js:8
+msgid ""
+"It is OK to redirect visitors based on their language, but you need to "
+"realize that this feature affects SEO."
+msgstr "Ziyaretçileri dillerine göre yönlendirmek sorun değildir, ancak bu özelliğin SEO'yu etkilediğini bilmeniz gerekir."
+
+#: src/js/browser-language-redirect-dialog/texts.js:9
+msgid "Before proceeding, we recommend that you read these two pages:"
+msgstr "Devam etmeden önce bu iki sayfayı okumanızı öneririz:"

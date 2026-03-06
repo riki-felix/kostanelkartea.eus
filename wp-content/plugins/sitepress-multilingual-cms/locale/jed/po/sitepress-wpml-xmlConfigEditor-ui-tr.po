@@ -1,0 +1,38 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: src/js/xmlConfigEditor/components/Container.js:25
+msgid ""
+"The wpml-config.xml file in the root folder of your theme and plugins tells "
+"WPML which content is translatable. You can override these settings with "
+"your own custom settings by adding them below."
+msgstr "Temanızın ve eklentilerinizin kök klasöründeki wpml-config.xml dosyası, WPML'ye hangi içeriğin çevrilebilir olduğunu bildirir. Bu ayarları aşağıya kendi özel ayarlarınızı ekleyerek geçersiz kılabilirsiniz."
+
+#: src/js/xmlConfigEditor/components/Container.js:29
+msgid "Read more about language configuration files."
+msgstr "Dil yapılandırma dosyaları hakkında daha fazla bilgi edinin."
+
+#: src/js/xmlConfigEditor/components/Controls.js:22
+#: src/js/xmlConfigEditor/hooks/useEditorOptions.js:33
+msgid "Save"
+msgstr "Kaydet"
+
+#: src/js/xmlConfigEditor/components/Messages.js:43
+msgid "Error"
+msgstr "Hata"
+
+#: src/js/xmlConfigEditor/components/SideBar.js:14
+msgid "Shortcuts"
+msgstr "Kısayollar"
+
+#: src/js/xmlConfigEditor/hooks/useEditorOptions.js:19
+msgid "Fold/Unfold code"
+msgstr "Kodu Katla/Aç"
+
+#: src/js/xmlConfigEditor/hooks/useEditorOptions.js:26
+msgid "Auto format"
+msgstr "Otomatik biçimlendirme"

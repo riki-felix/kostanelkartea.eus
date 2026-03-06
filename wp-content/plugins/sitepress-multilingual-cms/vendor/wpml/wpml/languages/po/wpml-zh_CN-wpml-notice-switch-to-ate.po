@@ -1,0 +1,54 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-18T16:02:17+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: wpml\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Get More Features with WPML's Advanced Translation Editor"
+msgstr "使用 WPML 的高级翻译编辑器获取更多功能"
+
+msgid "Close banner"
+msgstr "关闭横幅"
+
+msgid "You're using the Classic Translation Editor, an old legacy tool, and missing out on the many features and efficiency of our Advanced Translation Editor:"
+msgstr "您正在使用经典翻译编辑器，这是一个旧版工具，错过了我们高级翻译编辑器的许多功能和效率："
+
+msgid "Translation Memory"
+msgstr "翻译记忆库"
+
+msgid "HTML Protection"
+msgstr "HTML 保护"
+
+msgid "Glossary"
+msgstr "词汇表"
+
+msgid "Spellchecker"
+msgstr "拼写检查器"
+
+msgid "AI Assistant"
+msgstr "AI 助手"
+
+msgid "Automatic Translation"
+msgstr "自动翻译"
+
+msgid "Switch now for a faster, more convenient, and reliable translation experience."
+msgstr "立即切换，获得更快、更便捷、更可靠的翻译体验。"
+
+msgid "Switch Now"
+msgstr "立即切换"
+
+msgid "Learn more about Advanced Translation Editor"
+msgstr "了解有关高级翻译编辑器的更多信息"
+
+msgid "Learn More"
+msgstr "了解更多"
