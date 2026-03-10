@@ -185,7 +185,9 @@ add_action('init', 'ct_rename_posts_to_actividades');
  * ACF Google Maps API key + ACF Blocks
  */
 function ct_acf_init() {
-    acf_update_setting('google_api_key', 'AIzaSyBI8yavLL50sA9OaXyW3NBRnWsRnh_xtXo');
+    if ( defined('GOOGLE_MAPS_API_KEY') ) {
+        acf_update_setting('google_api_key', GOOGLE_MAPS_API_KEY);
+    }
 
     if ( function_exists('acf_register_block_type') ) {
         acf_register_block_type([
@@ -219,7 +221,7 @@ add_action('acf/init', 'ct_acf_init');
 function ct_enqueue_google_maps() {
     wp_enqueue_script(
         'google-maps',
-        'https://maps.googleapis.com/maps/api/js?key=AIzaSyBI8yavLL50sA9OaXyW3NBRnWsRnh_xtXo',
+        'https://maps.googleapis.com/maps/api/js?key=' . ( defined('GOOGLE_MAPS_API_KEY') ? GOOGLE_MAPS_API_KEY : '' ),
         [],
         null,
         true
