@@ -1,0 +1,80 @@
+# Translation of Plugins - Carousel Slider Block for Gutenberg - Stable (latest release) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - Carousel Slider Block for Gutenberg - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-08-12 07:05:47+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - Carousel Slider Block for Gutenberg - Stable (latest release)\n"
+
+#: build/carousel/block.json
+msgctxt "block title"
+msgid "Carousel Slider v2"
+msgstr "Carrusel de diapositivas v2"
+
+#: admin/class-settings-page.php:140
+msgid "This setting is overridden by a filter."
+msgstr "Este ajuste está anulado por un filtro."
+
+#: admin/class-settings-page.php:134
+msgid "Hide the notice about legacy Carousel Slider blocks in the editor."
+msgstr "Oculta el aviso sobre los bloques de carrusel de diapositivas en el editor."
+
+#: admin/class-settings-page.php:130
+msgid "Show legacy (non-Swiper) Carousel Slider blocks in the editor inserter."
+msgstr "Muestra los bloques heredados (sin desplazamiento) en el insertador del editor."
+
+#: admin/class-settings-page.php:56
+msgid "Hide Legacy Warning Notice"
+msgstr "Ocultar aviso de advertencia de heredados"
+
+#: admin/class-settings-page.php:55
+msgid "Show Old Carousel Blocks"
+msgstr "Mostrar bloques del antiguo carrusel"
+
+#: admin/class-settings-page.php:34 blocks/class-carousel-legacy.php:35
+msgid "Carousel Slider"
+msgstr "Carrusel de diapositivas"
+
+#: admin/class-settings-page.php:33 admin/class-settings-page.php:164
+msgid "Carousel Slider Block Settings"
+msgstr "Ajustes del bloque del carrusel de diapositivas"
+
+#. Author of the plugin
+#: plugin.php
+msgid "Virgiliu Diaconu"
+msgstr "Virgiliu Diaconu"
+
+#: build/slide/block.json
+msgctxt "block description"
+msgid "A single slide within the carousel."
+msgstr "Una sola diapositiva dentro del carrusel."
+
+#: build/slide/block.json
+msgctxt "block title"
+msgid "Slide"
+msgstr "Diapositiva"
+
+#: build/carousel/block.json
+msgctxt "block description"
+msgid "Display a carousel with any blocks in the slides."
+msgstr "Muestra un carrusel con cualquier bloque en las diapositivas."
+
+#. Author URI of the plugin
+#: plugin.php
+msgid "http://virgiliudiaconu.com/"
+msgstr "https://virgiliudiaconu.com/"
+
+#. Plugin URI of the plugin
+#: plugin.php
+msgid "https://wordpress.org/plugins/carousel-block"
+msgstr "https://es.wordpress.org/plugins/carousel-block"
+
+#. Plugin Name of the plugin
+#: plugin.php
+msgid "Carousel Slider Block"
+msgstr "Carousel Slider Block"

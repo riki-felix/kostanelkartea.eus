@@ -1,0 +1,131 @@
+# Translation of Plugins - Block Visibility — Conditional Visibility Control for the Block Editor - Stable (latest release) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - Block Visibility — Conditional Visibility Control for the Block Editor - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-11-10 11:50:16+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - Block Visibility — Conditional Visibility Control for the Block Editor - Stable (latest release)\n"
+
+#: includes/rest-api/controllers/class-block-visibility-rest-variables-controller.php:553
+msgid "All integration related information."
+msgstr "Toda la información relacionada con la integración."
+
+#: includes/rest-api/controllers/class-block-visibility-rest-variables-controller.php:548
+msgid "An indicator to determine if Block Visibility Pro is enabled."
+msgstr "Un indicador para determinar si está activo Block Visibility Pro."
+
+#: includes/rest-api/controllers/class-block-visibility-rest-variables-controller.php:543
+msgid "An indicator to determine if full control mode is enabled."
+msgstr "Un indicador para determinar si el modo de control total está activo."
+
+#: includes/rest-api/controllers/class-block-visibility-rest-variables-controller.php:538
+msgid "An array of plugin variables, such as version number."
+msgstr "Un array de variables del plugin, como por ejemplo el número de la versión."
+
+#: includes/rest-api/controllers/class-block-visibility-rest-variables-controller.php:533
+msgid "The available user roles on the site."
+msgstr "Los perfiles de usuario disponibles en el sitio."
+
+#: includes/rest-api/controllers/class-block-visibility-rest-variables-controller.php:528
+msgid "The roles assigned to the current user."
+msgstr "Los perfiles asignados al usuario actual."
+
+#: includes/rest-api/controllers/class-block-visibility-rest-variables-controller.php:67
+msgid "Saved values."
+msgstr "Valores guardados"
+
+#: includes/rest-api/controllers/class-block-visibility-rest-variables-controller.php:62
+msgid "Search term."
+msgstr "Termino de búsqueda."
+
+#: includes/rest-api/controllers/class-block-visibility-rest-variables-controller.php:57
+msgid "The integration to search."
+msgstr "La integración a buscar."
+
+#: includes/class-block-visibility.php:168
+msgid "Block Visibility Pro is no longer required. All functionality has been moved to Block Visibility, and future enhancements will only be added to the base plugin. It is now safe to deactivate and delete Pro.\t\t\t"
+msgstr "Block Visibility Pro ya no es necesario. Toda la funcionalidad se ha movido a Block Visibility, y las futuras mejoras solo se añadirán al plugin base. Es totalmente seguro desactivar y borrar la versión Pro."
+
+#: includes/presets/register-presets.php:19
+msgid "Preset"
+msgstr "Preajuste"
+
+#: includes/presets/register-presets.php:18 build/block-visibility-editor.js:7
+msgid "Presets"
+msgstr "Preajustes"
+
+#. translators: %1$s star rating.
+#: includes/admin/settings.php:129
+msgid "Thank you for using Block Visibility. Please rate the plugin %1$s on %2$sWordPress.org%3$s to help us spread the word."
+msgstr "Gracias por usar Block Visibility. Por favor, valora el plugin %1$s en %2$sWordPress.org%3$s para ayudarnos a divulgar la palabra."
+
+#: includes/utils/user-functions.php:53
+msgid "None (Logged-out users)"
+msgstr "Ninguno (usuarios desconectados)"
+
+#: includes/admin/plugin-action-links.php:55
+msgid "Navigate to the Block Visibility Getting Started page."
+msgstr "Navega a la página de primeros pasos de Block Visibility."
+
+#: includes/admin/plugin-action-links.php:29
+msgid "Navigate to the Block Visibility settings."
+msgstr "Navega a los ajustes de Block Visibility."
+
+#: includes/rest-api/controllers/class-block-visibility-rest-settings-controller.php:95
+msgid "Something went wrong, the settings could not be updated."
+msgstr "Algo fue mal, no se pudieron actualizar los ajustes."
+
+#: includes/rest-api/controllers/class-block-visibility-rest-settings-controller.php:75
+msgid "Something went wrong, the visibility settings could not be found."
+msgstr "Algo fue mal, no se han podido encontrar los ajustes de visibilidad."
+
+#: includes/register-settings.php:379
+msgid "Settings for the Block Visibility plugin."
+msgstr "Ajustes del plugin Block Visibility."
+
+#. Description of the plugin
+#: block-visibility.php
+msgid "Provides visibility controls and scheduling functionality to all WordPress blocks."
+msgstr "Ofrece controles de visibilidad y funcionalidad de programación a todos los bloques de WordPress."
+
+#. Plugin URI of the plugin
+#: block-visibility.php
+msgid "https://www.blockvisibilitywp.com/"
+msgstr "https://www.blockvisibilitywp.com/"
+
+#: includes/admin/plugin-action-links.php:56
+msgid "Getting Started"
+msgstr "Primeros pasos"
+
+#: includes/admin/plugin-action-links.php:60
+msgid "Leave a Review"
+msgstr "Deja una valoración"
+
+#: includes/admin/plugin-action-links.php:59
+msgid "Review Block Visibility on WordPress.org"
+msgstr "Valora Block Visibility en WordPress.org"
+
+#: includes/admin/plugin-action-links.php:30
+msgid "Settings"
+msgstr "Ajustes"
+
+#. Author URI of the plugin
+#: block-visibility.php
+msgid "https://www.nickdiego.com"
+msgstr "https://www.nickdiego.com"
+
+#. Author of the plugin
+#: block-visibility.php
+msgid "Nick Diego"
+msgstr "Nick Diego"
+
+#. Plugin Name of the plugin
+#: block-visibility.php includes/admin/settings.php:31
+#: includes/admin/settings.php:32 build/block-visibility-settings.js:1
+msgid "Block Visibility"
+msgstr "Block Visibility"

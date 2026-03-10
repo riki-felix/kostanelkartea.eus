@@ -1,0 +1,2 @@
+<?php
+return ['items'=>['Campos de Áreas'=>['saveStringInDb'=>true,'cmp'=>['wpml-string-translation',1],'names'=>['group-group_69aefc724b10e-title-c4e41330bb10dfb17762d58edc1c4c5c'],'urls'=>[]],'Color del área'=>['saveStringInDb'=>true,'cmp'=>['wpml-string-translation',1],'names'=>['field-field_69af1d862f81f-label-8a10f6b9251ea35514b8db0a2b46cde2'],'urls'=>[]],'Símbolo del Área'=>['saveStringInDb'=>true,'cmp'=>['wpml-string-translation',1],'names'=>['field-field_69aefc7273a74-label-e84b5b00edf649826181aa7df99186a2'],'urls'=>[]]]];

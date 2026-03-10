@@ -1,0 +1,2 @@
+<?php
+return ['items'=>['Presets'=>['saveStringInDb'=>true,'cmp'=>['block-visibility',1],'names'=>[],'urls'=>[]],'Preset'=>['saveStringInDb'=>true,'cmp'=>['block-visibility',1],'names'=>[],'urls'=>[]],'Settings for the Block Visibility plugin.'=>['saveStringInDb'=>true,'cmp'=>['block-visibility',1],'names'=>[],'urls'=>[]],'None (Logged-out users)'=>['saveStringInDb'=>true,'cmp'=>['block-visibility',1],'names'=>[],'urls'=>[]]]];

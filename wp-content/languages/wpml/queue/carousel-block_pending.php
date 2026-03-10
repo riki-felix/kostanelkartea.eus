@@ -1,0 +1,2 @@
+<?php
+return ['items'=>['Carousel Slider v2\\4block title'=>['saveStringInDb'=>true,'cmp'=>['carousel-block',1],'names'=>[],'urls'=>[]],'Display a carousel with any blocks in the slides.\\4block description'=>['saveStringInDb'=>true,'cmp'=>['carousel-block',1],'names'=>[],'urls'=>[]],'Slide\\4block title'=>['saveStringInDb'=>true,'cmp'=>['carousel-block',1],'names'=>[],'urls'=>[]],'A single slide within the carousel.\\4block description'=>['saveStringInDb'=>true,'cmp'=>['carousel-block',1],'names'=>[],'urls'=>[]]]];
