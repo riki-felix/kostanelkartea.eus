@@ -6,14 +6,15 @@
 html {
   min-height:100%;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   font-family: var(--font-body);
-  font-size: var(--fs-s);
-  font-weight: var(--fw-regular);
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
   line-height: 1.5;
   color: var(--color-text);
-  background-color: var(--color-secondary);
+  background-color: var(--color---site-background);
   height: 100%;
   &.menu-open {
 	  overflow: hidden;
@@ -24,49 +25,43 @@ body {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   margin-bottom: var(--spacing-small);
-  font-family: "EscrowBannerCond";
+  font-family: var(--font-heading);
   font-weight: 300;
   font-style: normal;
   font-stretch: condensed;
 }
 
-.comp{
-  font-family: "EscrowComp";
-  font-style: normal;
-  font-stretch: extra-condensed;
-  font-weight: 600;
-}
-
 h1,.h1 {
-  font-size: var(--fs-huge);
+  font-size: var(--font-extralarge);
   text-transform: uppercase;
   line-height: 1;
 }
 
 h2,.h2 {
-  font-size: var(--fs-xxxl);
-  font-weight: var(--fw-light);
+  font-size: var(--font-large);
+  font-weight: var(--weight-light);
 }
 
 h3,.h3 {
-  font-size: var(--fs-xl);
-  font-weight: var(--fw-light);
+  font-size: var(--font-medium);
+  font-weight: var(--weight-light);
 }
 
 h4,.h4 {
-  font-size: var(--fs-xs);
+  font-size: var(--font-medium);
+  text-transform: uppercase;
 }
 
 h5 {
-  font-size: var(--fs-s);
+  font-size: var(--font-small);
 }
 
 h6 {
-  font-size: var(--fs-s);
+  font-size: var(--font-small);
 }
 
 p {
-  font-size: var(--fs-m);
+  font-size: var(--font-small);
   margin-bottom: var(--sp-m);
 }
 
@@ -92,4 +87,16 @@ a:hover {
 .entry-content img {
   max-width: 100%;
   height: auto;
+}
+
+/* Wordpress Overrides */
+.wp-block-group.wp-block-group-is-layout-grid {
+  gap: 0;
+  grid-template-columns: 1fr;
+  @media (min-width: 750px) {
+    grid-template-columns: repeat(3,1fr);
+  }
+  @media (min-width: 1600px) {
+    grid-template-columns: repeat(4,1fr);
+  }
 }

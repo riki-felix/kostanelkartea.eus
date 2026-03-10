@@ -11,64 +11,63 @@ $url = 'https://wa.me/?text=' . rawurlencode( $mensaje );
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#012615">
+	<meta name="theme-color" content="#18223A">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://cdn.fonts.net">
-	<script type="text/javascript" src="https://cdn.fonts.net/kit/6d5c73ad-97ed-4f2e-8a71-bb70a8d877d5/6d5c73ad-97ed-4f2e-8a71-bb70a8d877d5_enhanced.js" async></script>
-	<link rel="stylesheet" type="text/css" href="https://cdn.fonts.net/kit/6d5c73ad-97ed-4f2e-8a71-bb70a8d877d5/6d5c73ad-97ed-4f2e-8a71-bb70a8d877d5_enhanced.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&family=Barlow+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-	Kostan
-			</a>    
-		</div>
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="menu-panel" aria-expanded="false">
-				<span class="menu-toggle-icon">
-					MENU
-				</span>
-			</button>
-			<?php do_action('wpml_add_language_selector'); ?>	
-			<div class="actions">
-				<a class="button-whatsapp" href="<?php echo esc_url( $url ); ?>" target="_blank" rel="noopener noreferrer">
-					+34 690º5
+		<div class="site-header__inner container">
+
+			<!-- Primary nav (left) -->
+			<nav id="site-navigation" class="site-header__nav-primary" aria-label="<?php esc_attr_e('Primary navigation', 'kostan'); ?>">
+				<button class="menu-toggle" aria-controls="menu-panel" aria-expanded="false">
+					<span class="menu-toggle__bar"></span>
+					<span class="menu-toggle__bar"></span>
+					<span class="menu-toggle__bar"></span>
+				</button>
+				<?php
+				wp_nav_menu([
+					'theme_location' => 'primary',
+					'menu_id'        => 'primary-menu',
+					'container'      => false,
+					'menu_class'     => 'nav-list',
+					'fallback_cb'    => false,
+					'depth'          => 1,
+				]);
+				?>
+			</nav>
+
+			<!-- Logo (center) -->
+			<div class="site-header__logo">
+				<a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
+					<?php if ( has_custom_logo() ) :
+						the_custom_logo();
+					else : ?>
+						<span class="site-title"><?php bloginfo('name'); ?></span>
+					<?php endif; ?>
 				</a>
-				<a href="/reservas" class="button-cta"><?php _e('Reservar','vh'); ?></a>
 			</div>
-		</nav>
-		<div class="main-cta">
-			<div class="contact-cta">
-					<a class="button-whatsapp" href="<?php echo esc_url( $url ); ?>" target="_blank" rel="noopener noreferrer">
-						+34 690 
-					</a>
-			</div>
-			<a href="/reservas" class="button-cta"><?php _e('Reservar','vh'); ?></a>
-		</div>
-		<div id="menu-panel" class="menu-panel">
-			<button class="menu-toggle" aria-controls="menu-panel" aria-expanded="true"><?php _e('Cerrar','vh');?></button>
-			<span class="nav-kicker"><?php _e('Propiedades','vh');?> </span>
-			<?php
-			wp_nav_menu(array(
-				'menu_id'        => 'Ciudades',
-				'container'      => 'ul',
-				'menu_class'     => 'cities-menu',
-			));
-			?>
-			<?php
-			wp_nav_menu(array(
-				'theme_location' => 'primary',
-				'menu_id'        => 'principal',
-				'container'      => 'ul',
-				'menu_class'     => 'primary-menu',
-			));
-			?>					
+
+			<!-- Actions nav (right) -->
+			<nav class="site-header__nav-actions" aria-label="<?php esc_attr_e('Actions', 'kostan'); ?>">
+				<?php
+				wp_nav_menu([
+					'theme_location' => 'actions',
+					'menu_id'        => 'actions-menu',
+					'container'      => false,
+					'menu_class'     => 'nav-actions',
+					'fallback_cb'    => false,
+					'depth'          => 1,
+				]);
+				?>
+			</nav>
+
 		</div>
 	</header>

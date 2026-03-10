@@ -1,327 +1,727 @@
-// HUB
-.section-hub {
-  background-color: var(--cp-700);
-  text-align: center;
+/* ==============================================
+ * Talks Grid & Card
+ * ============================================== */
+
+/* ── Month group ── */
+.page-talks__month {
+  margin-bottom: var(--sp-xxl);
+
+  h2 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h2);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: var(--sp-l);
+  }
+}
+
+/* ── Grid ── */
+.talks-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--grid-gap);
+
+  @media (min-width: 750px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ── Card ── */
+.talk-card {
   display: flex;
-  flex-flow: column wrap;
-  gap: 0;
-  padding: calc(var(--sp-huge)*2) var(--page-margin);
-  color: var(--color-secondary);
-  @media (min-width: 769px) {
-	  
+  flex-direction: column;
+  background: var(--color-light);
+  border: 1px solid var(--color-primary-300);
+  border-radius: var(--size-xxs);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   }
+}
+
+/* Image (optional, shown when talk has featured image) */
+.talk-card__image {
+  position: relative;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* When image present, overlay content on top */
+  & + .talk-card__content {
+    position: relative;
+    margin-top: -var(--sp-l);
+  }
+}
+
+/* Content area */
+.talk-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-xxs);
+  padding: var(--sp-m);
+  flex: 1;
+}
+
+/* Date */
+.talk-card__date {
+  font-size: var(--fs-micro);
+  color: var(--color-primary-600);
+  letter-spacing: 0.02em;
+}
+
+/* Speakers */
+.talk-card__speakers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-xxxs);
+  font-size: var(--fs-paragraph);
+  font-weight: var(--weight-bold);
+  color: var(--color-primary);
+
   a {
-  	color: var(--color-secondary);  
-	  &:hover {
-		  color: var(--color-accent);
-	  }
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-secondary);
+    }
   }
-  .hubItem {
-	line-height: 1;
-	color: var(--color-secondary);
-	font-family: var(--font-heading);
-	font-size: var(--fs-huge);
-	text-transform: uppercase;
+
+  /* Separator between multiple speakers */
+  a + a::before {
+    content: " eta ";
+    font-weight: var(--weight-regular);
   }
 }
-//Highlight
-.section-highlight {
-	background-color: var(--cs-700);
-	font-family: var(--font-heading);
-	padding: calc(var(--sp-huge) * 2) var(--page-margin);
-	color: var(--color-text);
-	text-align: center;
-	p {
-		font-size: var(--fs-xxxl);
-		max-width: var(--page-reading);
-		margin: 0 auto;
-		text-transform: uppercase;
-		line-height: 1;
-		text-align: center;
-	}
-}
-//Description
-.section-description {
-	background-color: var(--color-secondary);
-	padding: var(--sp-huge) var(--sp-l);
-	p {
-		max-width: var(--page-reading);
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-//BUTTONS
-.button {}
-.button-cta {
-	display: inline-block;
-	max-width: 30.0rem;
-	text-transform: uppercase;
-	font-size: var(--fs-s);
-	font-weight: 500;
-	padding: var(--sp-xs) var(--sp-m);
-	background-color: var(--color-accent);
-	color: var(--color-text);
-	border: 2px solid var(--cp-700);
-	box-shadow: 0 0 0 2px var(--color-accent);
-	&:hover {
-		background-color: var(--cp-700);
-		color: var(--color-accent);
-		border: 2px solid var(--color-accent);
-		box-shadow: 0 0 0 2px var(--cp-700);
-	}
-	.page-reservas & {
-		display: none;
-	}
-}
-.button-link {
-	font-size: var(--fs-xs);
-	margin: var(--sp-xs) 0 ;
-	display: inline-block;
-	font-weight: 600;
-}
-//GRID
-.section-grid {
-	margin: 0 auto;
-	padding: var(--sp-huge) calc(var(--page-margin)/2);
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto;
-	justify-content: center;
-	gap: var(--sp-xl) var(--sp-m);
-	@media (min-width: 750px) {
-		grid-template-columns: 1fr 1fr;	
-	}
-	@media (min-width: 1100px) {
-		grid-template-columns: 1fr 1fr 1fr;	
-	}
+
+/* Title */
+.talk-card__title {
+  font-family: var(--font-body);
+  font-size: var(--fs-paragraph);
+  font-weight: var(--weight-regular);
+  line-height: 1.3;
+  color: var(--color-primary);
+  margin: 0;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
-//CARD
-.grid-card {
-	background-color: var(--color-light);
-	.card-image {
-		display: block;
-		aspect-ratio: 16/9;
-		overflow: hidden;
-		object-fit: cover;
-		a {
-			display: block;
-			
-		}
-		img {
-			display: block;
-			width: 100%;
-			height: auto;
-			transition: all .4s ease;
-			&:hover {
-				transform: scale(105%);
-			}
-		}
-	}
-	.card-content {
-		padding: var(--page-margin);
-	}
-	.card-title {
-		text-align: center;
-		text-transform: uppercase;
-		a {
-			color: var(--color-text);
-			&:hover {
-				color: var(--color-accent);
-			}
-		}
-	}
-	.card-subtitle {
-		text-align: center;
-		margin-bottom: var(--sp-m);
-	}
-	.card-features {
-		border-top: 0.5px solid var(--cp-700);
-		text-align: center;
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: center;
-		align-items: baseline;
-		padding: var(--sp-s) var(--sp-s) 0 var(--sp-s);
-		gap: var(--sp-l);
-		margin-bottom: var(--sp-xl);
-		text-transform: uppercase;
-		font-size: var(--fs-xs);
-	}
-	.card-excerpt {
-		margin: var(--sp-s) 0;
-	}
+/* Tags row (venue + lang) */
+.talk-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-xxs);
+  margin-top: auto;
+  padding-top: var(--sp-xs);
+}
+
+.talk-card__tag {
+  display: inline-block;
+  font-size: var(--fs-micro);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: var(--sp-xxxs) var(--sp-xxs);
+  border: 1px solid currentColor;
+  border-radius: var(--size-xxxs);
+  text-decoration: none;
+  line-height: 1;
+
+  &--venue {
+    color: var(--color-primary);
+  }
+
+  &--lang {
+    color: var(--color-secondary);
+  }
+}
+
+/* Footer (area) */
+.talk-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-m);
+  border-top: 1px solid var(--color-primary-300);
+}
+
+.talk-card__areas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-xs);
+  font-size: var(--fs-micro);
+  color: var(--color-primary-500);
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-secondary);
+    }
+  }
+}
+
+.talk-card__area {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-xxxs);
+}
+
+.talk-card__area-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
 }
 
 
-//REVIEWS
-.section-reviews {
-	background-color: var(--cs-700);
-	padding: var(--sp-huge) var(--page-margin);
-	border-top: 2px solid var(--color-secondary);
-	.reviews-total {
-		h5 {
-			font-family: var(--font-heading);
-			font-size: var(--fs-huge);
-			line-height: 1;	
-			font-weight: var(--fw-regular);	
-			text-transform: uppercase;
-			@media (min-width: 750px) {
-				font-size: var(--fs-xxxl);  
-			}			
-		}
-	}
-	.reviews-list {
-		display: flex;
-		flex-flow: column wrap;
-		gap: var(--sp-l);
-		padding: var(--sp-xl) 0;
+/* ==============================================
+ * Talks month nav (page-ponentziak)
+ * ============================================== */
+
+.talks-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--color-light);
+  border-bottom: 1px solid var(--color-primary-300);
+  padding: var(--sp-m) 0;
+}
+
+.talks-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-xs) var(--sp-l);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.talks-nav__item {
+  a {
+    font-family: var(--font-body);
+    font-size: var(--fs-paragraph);
+    font-weight: var(--weight-regular);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-primary-500);
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &--past {
+    a {
+      opacity: 0.4;
+    }
+  }
+
+  &--current {
+    a {
+      font-weight: var(--weight-bold);
+      color: var(--color-primary);
+    }
+  }
+
+  &--calendar {
+    margin-left: auto;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-xxs);
+      background: var(--color-secondary);
+      color: var(--color-light);
+      font-weight: var(--weight-bold);
+      font-size: var(--fs-micro);
+      text-transform: uppercase;
+      padding: var(--sp-xxs) var(--sp-m);
+      border-radius: 999px;
+      letter-spacing: 0.03em;
+
+      &::before {
+        content: "📅";
+        font-size: 1.4rem;
+      }
+
+      &:hover {
+        background: var(--color-primary);
+        color: var(--color-light);
+      }
+    }
+  }
+}
+
+
+/* ==============================================
+ * Calendar (archive-talks)
+ * ============================================== */
+
+/* ── Header ── */
+.calendar-header {
+  text-align: center;
+  padding: var(--sp-xxl) 0 var(--sp-l);
+}
+
+.calendar-header__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h1);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.calendar-header__season {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--fs-h2);
+  font-weight: var(--weight-regular);
+  color: var(--color-secondary);
+  margin-top: var(--sp-xxs);
+}
+
+/* ── Area legend ── */
+.calendar-legend {
+  padding-bottom: var(--sp-l);
+  border-bottom: 2px solid var(--color-primary-300);
+  margin-bottom: var(--sp-xxl);
+}
+
+.calendar-legend__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-xs) var(--sp-l);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.calendar-legend__item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-xxs);
+  font-size: var(--fs-micro);
+  color: var(--color-primary-500);
+  white-space: nowrap;
+}
+
+.calendar-legend__dot {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--color-primary-400);
+  flex-shrink: 0;
+}
+
+/* ── Calendar grid (months) ── */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-xxl) var(--sp-xl);
+
+  @media (min-width: 750px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.calendar-month {
+  min-width: 0;
+}
+
+.calendar-month__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  font-weight: var(--weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--sp-m);
+  text-transform: capitalize;
+}
+
+.calendar-month__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-xxs);
+}
+
+/* ── Calendar entry (single talk row) ── */
+.calendar-entry {
+  --entry-color: var(--color-primary-400);
+  border: 1px solid var(--color-primary-300);
+  border-right: 4px solid var(--entry-color);
+  border-radius: var(--size-xxxs);
+  background: var(--color-light);
+  transition: box-shadow 0.15s ease;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.calendar-entry__link {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-xs);
+  padding: var(--sp-xs) var(--sp-m);
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.calendar-entry__day {
+  font-size: var(--fs-paragraph);
+  font-weight: var(--weight-bold);
+  flex-shrink: 0;
+  min-width: 2.4rem;
+}
+
+.calendar-entry__title {
+  font-size: var(--fs-paragraph);
+  font-weight: var(--weight-regular);
+  color: var(--color-primary-600);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ==============================================
+ * ACF Block: Venue Info
+ * ============================================== */
+
+.section-venue {
+	background-color: var(--color-primary-300);
+	padding: var(--sp-xxl) 0;
+	.container {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: var(--sp-xxxs);
 		@media (min-width: 750px) {
-			padding: 0;
+			grid-template-columns: repeat(4, 1fr);
 		}
-	}
-	.reviews-listItem {
-		p {
-			font-size: var(--fs-m);
-		}
-		img {
-			max-width: 12.0rem;
-			width: auto;
-		}
-	}
+  	}
 }
 
-//GENERAL SECTION
-.section-header {
-	max-width: var(--page-reading);
-	margin: var(--sp-huge) auto 0 auto;
-	padding: 0 var(--page-margin);
-	text-align: center;
-	
-}
+.venue-block {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--size-xxs);
+  overflow: hidden;
+  background: var(--color-light);
 
-//KEY BENEFITS
-.section-benefits {
-	background-color: var(--cs-700);
-	padding: var(--sp-huge) 0;
-	ol {
-		max-width: 40.0rem;
-		font-size: var(--fs-xl);
-		font-family: var(--font-heading);
-		list-style: inside;
-		list-style-type: decimal;
-		counter-reset: item;
-		  list-style: none;
-		  margin: var(--sp-l) auto;
-		  padding: 0 var(--page-margin);
-	}
-	ol li:before {
-	  content: counters(item, ".") " ";
-	  counter-increment: item;
-	  font-weight: var(--fw-bold);
-	  margin-right: 1rem;
-	}
-}
-
-.section-map {
-	mix-blend-mode: multiply;
-	max-width: var(--page-width);
-	margin: var(--sp-huge) auto;
-	.acf-map {
-		height: 500px;
-		border: none;
-		margin: 0;
-	}
-}
-
-// HOSTIFY
-.hfy-wrap.hfy-theme1 {
-	max-width: var(--page-reading);
-	margin: 0 auto;
-	padding: var(--sp-m) var(--page-margin);
-	.single-propiedad & {
-		background-color: #fff;
-		border: 4px solid var(--color-secondary);
-	}
-	.hfy-listing-booking-form {
-		padding: var(--sp-m) 0;
-	}
-	.hfy-search-form-row {
-		margin: var(--sp-xl) auto;
-		background-color: var(--color-light);
-		align-items: stretch;
-		margin: 0;
-		padding: var(--sp-s);
-	}
-	.page-reservas & {
-		max-width: var(--page-width);
-		.hfy-search-form-wrap {
-		}
-	}
-	.hfy-widget-wrap-listings {
-		background-color: var(--color-secondary);
-		padding: 0;
-	}
-	#hotel-datepicker {
-		background-color: #fff;
-		padding: var(--sp-l) var(--sp-m);
-	}
-	.guests-input {
-		background-color: #fff;
-	}
-	
-}
-.hfy-wrap .container {
-	padding-right: 0;
-	padding-left: 0;
-	max-width: var(--page-width);
-	margin-left: 0;
-	margin-right: 0;
-	.col-md-6,
-	.col-lg-6,
-	.col.sm-6 {
-		padding: 0;
-		max-width: none;
-	}
-}
-.page-reservas .hfy-theme1 .hfy-widget-wrap-listings .listing-block {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 2px;
+  @media (min-width: 750px) {
+  }
+  &:last-child {
 	@media (min-width: 750px) {
-		grid-template-columns: 1fr 1fr 1fr;
+	  grid-column: span 2;
 	}
-}
-.page-reservas .hfy-theme1 .hfy-widget-wrap-listings .list-card .img {
-	border-radius: 0!important;
-}
-.page-reservas .hfy-theme1 .hfy-widget-wrap-listings .list-card {
-	background-color: var(--color-light);
-}
-.page-reservas .hfy-theme1 .hfy-widget-wrap-listings .list-card .info{
-	padding: var(--sp-m);
+  }
 }
 
-.hfy-theme1 .hfy-search-form-wrap button, .hfy-theme1 .hfy-search-form-wrap .btn.btn-primary {
-	background-color: var(--color-primary);
-	border-color: var(--color-primary);
-	font-size: var(--fs-m);
-	line-height: 1;
-	display: flex;
-	flex-flow: row nowrap;
-	align-items: center;
-	border-radius: 0;
-	height: 100%;
-	margin: 1rem 0 0 0;
-	padding: var(--sp-s) var(--sp-s);
-	width: 100%;
-	@media (min-width: 750px) {
-		margin: 0;
-		padding: var(--sp-xxs) var(--sp-s);
-		width: auto;
-	}
-	&:hover {
-		background-color: var(--cp-500);
-		border-color: var(--cp-500);
-	}
+.venue-block__photo {
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (min-width: 750px) {
+  }
+}
+
+.venue-block__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--sp-xs);
+  padding: var(--sp-l);
+}
+
+.venue-block__name {
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.venue-block__address {
+  color: var(--color-primary-600);
+  margin: 0;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-xxs);
+
+    &:hover {
+      color: var(--color-secondary);
+    }
+  }
+}
+
+/* ==============================================
+ * Ekitzak (Blog posts page)
+ * ============================================== */
+
+.page-ekitzak__header {
+  padding: var(--sp-xxl) 0 var(--sp-l);
+
+  h1 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h1);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+}
+
+.ekitzak-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-l);
+
+  @media (min-width: 750px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ekitzak-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-light);
+  border: 1px solid var(--color-primary-300);
+  border-radius: var(--size-xxs);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.ekitzak-card__image {
+  display: block;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+.ekitzak-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-xxs);
+  padding: var(--sp-m);
+}
+
+.ekitzak-card__date {
+  font-size: var(--fs-micro);
+  color: var(--color-primary-600);
+  letter-spacing: 0.02em;
+}
+
+.ekitzak-card__title {
+  font-family: var(--font-body);
+  font-size: var(--fs-paragraph);
+  font-weight: var(--weight-bold);
+  line-height: 1.3;
+  color: var(--color-primary);
+  margin: 0;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-secondary);
+    }
+  }
+}
+
+/* ==============================================
+ * Single Talk
+ * ============================================== */
+
+.single-talk__header {
+  padding: var(--sp-xxl) 0 var(--sp-l);
+}
+
+.single-talk__date {
+  display: block;
+  font-size: var(--fs-small);
+  color: var(--color-primary-600);
+  margin-bottom: var(--sp-xs);
+  text-transform: capitalize;
+}
+
+.single-talk__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h1);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 0 0 var(--sp-m);
+}
+
+.single-talk__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-xxs);
+}
+
+.single-talk__tag {
+  display: inline-block;
+  font-size: var(--fs-micro);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: var(--sp-xxxs) var(--sp-xxs);
+  border: 1px solid currentColor;
+  border-radius: var(--size-xxxs);
+  text-decoration: none;
+  color: var(--color-primary);
+  line-height: 1;
+
+  &--lang {
+    color: var(--color-secondary);
+  }
+
+  &--area {
+    color: var(--color-primary-500);
+  }
+}
+
+.single-talk__image {
+  margin-bottom: var(--sp-xl);
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--size-xxs);
+  }
+}
+
+.single-talk__content {
+  margin-bottom: var(--sp-xxl);
+
+  p {
+    max-width: 72ch;
+  }
+}
+
+/* ── Speakers section ── */
+
+.single-talk__speakers {
+  padding: var(--sp-xxl) 0;
+  border-top: 2px solid var(--color-primary-300);
+
+  h2 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h2);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: var(--sp-l);
+  }
+}
+
+.speakers-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-xl);
+}
+
+.speaker-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-l);
+  background: var(--color-light);
+  border: 1px solid var(--color-primary-300);
+  border-radius: var(--size-xxs);
+  overflow: hidden;
+  padding: var(--sp-l);
+
+  @media (min-width: 750px) {
+    flex-direction: row;
+  }
+}
+
+.speaker-card__image {
+  flex-shrink: 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--size-xxs);
+    object-fit: cover;
+  }
+
+  @media (min-width: 750px) {
+    width: 20rem;
+  }
+}
+
+.speaker-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-xs);
+}
+
+.speaker-card__name {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h3);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 0;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-secondary);
+    }
+  }
+}
+
+.speaker-card__excerpt {
+  font-size: var(--fs-paragraph);
+  font-weight: var(--weight-bold);
+  color: var(--color-primary-600);
+  margin: 0;
+}
+
+.speaker-card__bio {
+  font-size: var(--fs-paragraph);
+  color: var(--color-primary-600);
+
+  p {
+    margin: 0 0 var(--sp-xs);
+    max-width: 72ch;
+  }
 }

@@ -67,7 +67,7 @@ async function build() {
 
 	  browserSync.init({
 		proxy: {
-		  target: 'http://villasandhouses.local',
+		  target: 'http://kostan-elkartea.local/',
 		  proxyReq: [
 			function(proxyReq) {
 			  // Set headers to handle HTTPS -> HTTP proxy
@@ -109,7 +109,7 @@ async function build() {
 		logFileChanges: false, // ← Reduce noise
 		rewriteRules: [
 		  {
-			match: /http:\/\/villasandhouses\.local/g,
+			match: /http:\/\/kostan-elkartea\.local/g,
 			fn: function() {
 			  return `http://${localIP}:3000`;
 			}
@@ -120,7 +120,7 @@ async function build() {
 	  console.log('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
 	  console.log('🚀 Development server started!');
 	  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
-	  console.log('📍 WordPress:       https://villasandhouses.local');
+	  console.log('📍 WordPress:       https://kostan-elkartea.local');
 	  console.log('🖥️  This Computer:   http://localhost:3000');
 	  console.log(`📱 Other Devices:   http://${localIP}:3000`);
 	  console.log(`⚙️  UI:              http://localhost:3001`);
