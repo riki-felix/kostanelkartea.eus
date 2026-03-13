@@ -92,6 +92,7 @@ if ( ! defined( 'WP_DEBUG' ) ) {
 }
 
 define( 'WP_AUTO_UPDATE_CORE', true );
+define('GOOGLE_MAPS_API_KEY', 'AIzaSyBI8yavLL50sA9OaXyW3NBRnWsRnh_xtXo');
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
