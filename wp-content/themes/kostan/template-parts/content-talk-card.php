@@ -20,42 +20,43 @@ $areas     = get_the_terms( get_the_ID(), 'area' );
 
 <article <?php post_class('talk-card'); ?>>
 
-	<?php if ( has_post_thumbnail() ) : ?>
-		<div class="talk-card__image">
-			<?php the_post_thumbnail('medium_large'); ?>
-		</div>
-	<?php endif; ?>
+	<a href="<?php the_permalink(); ?>" class="talk-card__link">
 
-	<div class="talk-card__content">
-
-		<?php if ( $talk_date ) :
-			$dt_obj = DateTime::createFromFormat('d/m/Y g:i a', $talk_date);
-			$ts_val = $dt_obj ? $dt_obj->getTimestamp() : 0;
-		?>
-			<time class="talk-card__date" datetime="<?php echo $dt_obj ? esc_attr( $dt_obj->format('Y-m-d\TH:i') ) : ''; ?>">
-				<?php echo esc_html( date_i18n( get_option('date_format'), $ts_val ) ); ?>
-			</time>
-		<?php endif; ?>
-
-		<?php if ( ! empty( $speakers ) ) : ?>
-			<div class="talk-card__speakers">
-				<?php foreach ( $speakers as $speaker ) :
-					$speaker_id = is_object( $speaker ) ? $speaker->ID : $speaker;
-				?>
-					<a href="<?php echo esc_url( get_permalink( $speaker_id ) ); ?>">
-						<?php echo esc_html( get_the_title( $speaker_id ) ); ?>
-					</a>
-				<?php endforeach; ?>
+		<?php if ( has_post_thumbnail() ) : ?>
+			<div class="talk-card__image">
+				<?php the_post_thumbnail('medium_large'); ?>
 			</div>
 		<?php endif; ?>
 
-		<h3 class="talk-card__title">
-			<a href="<?php the_permalink(); ?>">
-				<?php the_title(); ?>
-			</a>
-		</h3>
+		<div class="talk-card__content">
 
-		<div class="talk-card__tags">
+			<?php if ( $talk_date ) :
+				$dt_obj = DateTime::createFromFormat('d/m/Y g:i a', $talk_date);
+				$ts_val = $dt_obj ? $dt_obj->getTimestamp() : 0;
+			?>
+				<time class="talk-card__date" datetime="<?php echo $dt_obj ? esc_attr( $dt_obj->format('Y-m-d\TH:i') ) : ''; ?>">
+					<?php echo esc_html( date_i18n( get_option('date_format'), $ts_val ) ); ?>
+				</time>
+			<?php endif; ?>
+
+			<?php if ( ! empty( $speakers ) ) : ?>
+				<div class="talk-card__speakers">
+					<?php
+					$speaker_names = [];
+					foreach ( $speakers as $speaker ) :
+						$speaker_id = is_object( $speaker ) ? $speaker->ID : $speaker;
+						$speaker_names[] = esc_html( get_the_title( $speaker_id ) );
+					endforeach;
+					echo implode( ' <span>eta</span> ', $speaker_names );
+					?>
+				</div>
+			<?php endif; ?>
+
+			<h3 class="talk-card__title">
+				<?php the_title(); ?>
+			</h3>
+
+			<div class="talk-card__tags">
 			<?php if ( ! empty( $venues ) && ! is_wp_error( $venues ) ) : ?>
 				<?php foreach ( $venues as $v ) : ?>
 					<a href="<?php echo esc_url( get_term_link( $v ) ); ?>" class="talk-card__tag talk-card__tag--venue">
@@ -67,9 +68,11 @@ $areas     = get_the_terms( get_the_ID(), 'area' );
 			<?php if ( $talk_lang ) : ?>
 				<span class="talk-card__tag talk-card__tag--lang"><?php echo esc_html( $talk_lang ); ?></span>
 			<?php endif; ?>
+			</div>
+
 		</div>
 
-	</div>
+	</a>
 
 	<?php
 	// Show only the first child area with its area_symbol

@@ -1,8 +1,19 @@
+import Swiper from 'swiper';
+import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
+
 document.addEventListener('DOMContentLoaded', () => {
   // Mobile menu toggle
   const menuToggles = document.querySelectorAll('.menu-toggle'); // ← Get ALL buttons
   const menuPanel = document.querySelector('#menu-panel');
   
+  const menuOverlay = document.querySelector('#menu-overlay');
+
+  const closeMenu = () => {
+    menuToggles.forEach(btn => btn.setAttribute('aria-expanded', false));
+    menuPanel.classList.remove('toggled');
+    document.body.classList.remove('menu-open');
+  };
+
   if (menuToggles.length && menuPanel) {
     menuToggles.forEach(button => {
       button.addEventListener('click', () => {
@@ -19,56 +30,37 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Close menu on overlay click
+  if (menuOverlay) {
+    menuOverlay.addEventListener('click', closeMenu);
+  }
   
-  /**
-   * WPML Language Switcher Dropdown
-   */
-  const langSwitchers = document.querySelectorAll('.js-wpml-ls-legacy-dropdown-click');
-  
-  langSwitchers.forEach(switcher => {
-    const toggle = switcher.querySelector('.js-wpml-ls-item-toggle');
-    const submenu = switcher.querySelector('.js-wpml-ls-sub-menu');
-    
-    if (toggle && submenu) {
-      // Toggle dropdown on click
-      toggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        
-        const isOpen = switcher.classList.contains('wpml-ls-opened');
-        
-        // Close all other dropdowns first
-        document.querySelectorAll('.js-wpml-ls-legacy-dropdown-click').forEach(s => {
-          s.classList.remove('wpml-ls-opened');
-        });
-        
-        // Toggle current dropdown
-        if (!isOpen) {
-          switcher.classList.add('wpml-ls-opened');
-          toggle.setAttribute('aria-expanded', 'true');
-        } else {
-          switcher.classList.remove('wpml-ls-opened');
-          toggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-      
-      // Close dropdown when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!switcher.contains(e.target)) {
-          switcher.classList.remove('wpml-ls-opened');
-          toggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-      
-      // Close dropdown on Escape key
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          switcher.classList.remove('wpml-ls-opened');
-          toggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
+  // Sync header spacer height with actual header
+  const header = document.getElementById('masthead');
+  const spacer = document.querySelector('.site-header-spacer');
+  if (header && spacer) {
+    const sync = () => { spacer.style.height = header.offsetHeight + 'px'; };
+    sync();
+    window.addEventListener('resize', sync);
+  }
+
+  // Hero Carousel (Swiper)
+  document.querySelectorAll('.hero-carousel__swiper').forEach(el => {
+    new Swiper(el, {
+      modules: [Autoplay, Pagination, EffectFade],
+      effect: 'fade',
+      fadeEffect: { crossFade: true },
+      loop: true,
+      speed: 800,
+      autoplay: { delay: 5000, disableOnInteraction: false },
+      pagination: {
+        el: el.querySelector('.hero-carousel__pagination'),
+        clickable: true,
+      },
+    });
   });
-  
+
 });
   // // Navigation observer
   // const mainNavigation = document.querySelector('.main-navigation');

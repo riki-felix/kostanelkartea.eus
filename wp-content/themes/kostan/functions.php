@@ -3,6 +3,8 @@ if (!defined('ABSPATH')) exit;
 
 define('ct_THEME_VERSION', wp_get_theme()->get('Version'));
 
+require_once get_template_directory() . '/inc/icons.php';
+
 /**
  * Enqueue assets - Direct output method
  */
@@ -81,6 +83,7 @@ function ct_setup() {
     ]);
     
     add_theme_support('customize-selective-refresh-widgets');
+    add_theme_support('align-wide');
     
     add_theme_support('custom-logo', [
         'height'      => 100,
@@ -90,6 +93,19 @@ function ct_setup() {
     ]);
 }
 add_action('after_setup_theme', 'ct_setup');
+
+/**
+ * Highlight "Ponentziak" menu item on single talks and talks archive.
+ */
+add_filter('nav_menu_css_class', function( $classes, $item ) {
+	if ( $item->object === 'page' ) {
+		$page_slug = get_post_field( 'post_name', $item->object_id );
+		if ( $page_slug === 'ponentziak' && ( is_singular('talks') || is_post_type_archive('talks') ) ) {
+			$classes[] = 'current-menu-item';
+		}
+	}
+	return $classes;
+}, 10, 2);
 
 /**
  * Register widget areas
@@ -211,6 +227,41 @@ function ct_acf_init() {
             'keywords'        => ['talks', 'ponencias', 'mes', 'monthly'],
             'supports'        => ['align' => false, 'multiple' => false],
         ]);
+
+        acf_register_block_type([
+            'name'            => 'hero-carousel',
+            'title'           => __('Hero Carousel', 'kostan'),
+            'description'     => __('Carrusel de imágenes a pantalla completa.', 'kostan'),
+            'render_template' => 'template-parts/blocks/hero-carousel.php',
+            'category'        => 'design',
+            'icon'            => 'images-alt2',
+            'keywords'        => ['carousel', 'hero', 'slider', 'carrusel'],
+            'supports'        => ['align' => ['full'], 'multiple' => false],
+        ]);
+
+        acf_register_block_type([
+            'name'            => 'talk-video',
+            'title'           => __('Bideoa / Vídeo de ponencia', 'kostan'),
+            'description'     => __('Muestra el vídeo de la ponencia (YouTube embed).', 'kostan'),
+            'render_template' => 'template-parts/blocks/talk-video.php',
+            'category'        => 'formatting',
+            'icon'            => 'video-alt3',
+            'keywords'        => ['video', 'bideo', 'youtube', 'ponencia'],
+            'supports'        => ['align' => false, 'multiple' => false],
+            'post_types'      => ['talks'],
+        ]);
+
+        acf_register_block_type([
+            'name'            => 'talk-files',
+            'title'           => __('Apunteak / Archivos de ponencia', 'kostan'),
+            'description'     => __('Muestra los archivos adjuntos de la ponencia.', 'kostan'),
+            'render_template' => 'template-parts/blocks/talk-files.php',
+            'category'        => 'formatting',
+            'icon'            => 'media-document',
+            'keywords'        => ['apunteak', 'archivos', 'files', 'ponencia'],
+            'supports'        => ['align' => false, 'multiple' => false],
+            'post_types'      => ['talks'],
+        ]);
     }
 }
 add_action('acf/init', 'ct_acf_init');
@@ -228,4 +279,16 @@ function ct_enqueue_google_maps() {
     );
 }
 add_action('wp_enqueue_scripts', 'ct_enqueue_google_maps');
+
+/**
+ * Load ACF field groups
+ */
+add_action('acf/init', function() {
+    $fields_dir = get_template_directory() . '/acf-fields';
+    if ( is_dir( $fields_dir ) ) {
+        foreach ( glob( $fields_dir . '/*.php' ) as $file ) {
+            require_once $file;
+        }
+    }
+}, 20);
 

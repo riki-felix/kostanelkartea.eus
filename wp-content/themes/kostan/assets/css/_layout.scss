@@ -1,7 +1,25 @@
 /* Layout */
 .site-header {}
+.site-header-spacer {
+  height: var(--header-height, 12rem);
+}
+
+/* Front page: content starts behind the fixed header */
+body.home .site-header-spacer {
+  display: none;
+}
+
 .site-content {}
 .site-main {}
+
+/* Full-width block alignment */
+.alignfull {
+  width: 100vw;
+  max-width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 /* Utilities */
 .container {
@@ -21,6 +39,7 @@
 
 /* Footer */
 .site-footer {
+	padding: var(--sp-xxxl) 0;
 	.footer-widgets {
 		display: flex;
 		flex-wrap: wrap;

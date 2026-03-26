@@ -54,20 +54,66 @@ $url = 'https://wa.me/?text=' . rawurlencode( $mensaje );
 					<?php endif; ?>
 				</a>
 			</div>
-
-			<!-- Actions nav (right) -->
-			<nav class="site-header__nav-actions" aria-label="<?php esc_attr_e('Actions', 'kostan'); ?>">
+			
+			<div class="site-header__actions">
+				<!-- Language switcher -->
 				<?php
-				wp_nav_menu([
-					'theme_location' => 'actions',
-					'menu_id'        => 'actions-menu',
-					'container'      => false,
-					'menu_class'     => 'nav-actions',
-					'fallback_cb'    => false,
-					'depth'          => 1,
-				]);
-				?>
-			</nav>
-
+				$languages = apply_filters( 'wpml_active_languages', null, 'skip_missing=0' );
+				if ( ! empty( $languages ) && count( $languages ) > 1 ) : ?>
+				<ul class="site-header__lang" aria-label="<?php esc_attr_e( 'Language', 'kostan' ); ?>">
+					<?php foreach ( $languages as $lang ) : ?>
+					<li class="<?php echo $lang['active'] ? 'is-active' : ''; ?>">
+						<?php if ( $lang['active'] ) : ?>
+							<span aria-current="true"><?php echo esc_html( $lang['language_code'] ); ?></span>
+						<?php else : ?>
+							<a href="<?php echo esc_url( $lang['url'] ); ?>" hreflang="<?php echo esc_attr( $lang['language_code'] ); ?>"><?php echo esc_html( $lang['language_code'] ); ?></a>
+						<?php endif; ?>
+					</li>
+					<?php endforeach; ?>
+				</ul>
+				<?php endif; ?>
+				<!-- Actions nav (right) -->
+				<nav class="site-header__nav-actions" aria-label="<?php esc_attr_e('Actions', 'kostan'); ?>">
+					<?php
+					wp_nav_menu([
+						'theme_location' => 'actions',
+						'menu_id'        => 'actions-menu',
+						'container'      => false,
+						'menu_class'     => 'nav-actions',
+						'fallback_cb'    => false,
+						'depth'          => 1,
+					]);
+					?>
+				</nav>
+			</div>
 		</div>
 	</header>
+
+	<!-- Mobile menu overlay -->
+	<div id="menu-overlay" class="menu-overlay"></div>
+
+	<!-- Mobile menu panel -->
+	<div id="menu-panel" class="menu-panel">
+		<nav class="menu-panel__nav" aria-label="<?php esc_attr_e('Mobile navigation', 'kostan'); ?>">
+			<?php
+			wp_nav_menu([
+				'theme_location' => 'primary',
+				'menu_id'        => 'mobile-primary-menu',
+				'container'      => false,
+				'menu_class'     => 'menu-panel__list',
+				'fallback_cb'    => false,
+				'depth'          => 1,
+			]);
+			wp_nav_menu([
+				'theme_location' => 'actions',
+				'menu_id'        => 'mobile-actions-menu',
+				'container'      => false,
+				'menu_class'     => 'menu-panel__list menu-panel__list--actions',
+				'fallback_cb'    => false,
+				'depth'          => 1,
+			]);
+			?>
+		</nav>
+	</div>
+
+	<div class="site-header-spacer" aria-hidden="true"></div>

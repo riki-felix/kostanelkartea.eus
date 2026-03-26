@@ -8,13 +8,23 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+
+/* Mono Icons base */
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2.4rem;
+  height: 2.4rem;
+  flex-shrink: 0;
+  fill: currentColor;
+}
 body {
   font-family: var(--font-body);
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   line-height: 1.5;
   color: var(--color-text);
-  background-color: var(--color---site-background);
+  background-color: var(--site-background);
   height: 100%;
   &.menu-open {
 	  overflow: hidden;
@@ -35,6 +45,8 @@ h1,.h1 {
   font-size: var(--font-extralarge);
   text-transform: uppercase;
   line-height: 1;
+  font-weight: var(--weight-bold);
+  text-align: center;
 }
 
 h2,.h2 {
@@ -77,16 +89,22 @@ a:hover {
   display: none;
 }
 
-.post-thumbnail img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 18px;
-}
+
 
 .entry-content img {
   max-width: 100%;
   height: auto;
+}
+
+.page-width {
+  max-width: var(--page-width-tight);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--page-margin);
+  padding-right: var(--page-margin);
+  margin-bottom: 0;
+  padding-top: var(--sp-xxl);
+  padding-bottom: var(--sp-xxl);
 }
 
 /* Wordpress Overrides */

@@ -78,7 +78,7 @@ $season      = ( $first_year === $last_year ) ? $first_year : $first_year . '-' 
 	<section class="calendar-header">
 		<div class="wrapper">
 			<h1 class="calendar-header__title">
-				<?php post_type_archive_title(); ?>
+				<?php esc_html_e( 'Ponentziaren Egutegia', 'kostan' ); ?>
 				<span class="calendar-header__season"><?php echo esc_html( $season ); ?></span>
 			</h1>
 		</div>

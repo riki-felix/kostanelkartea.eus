@@ -1,0 +1,135 @@
+/* ==============================================
+ * Calendar (archive-talks)
+ * ============================================== */
+
+/* ── Header ── */
+.calendar-header {
+  text-align: center;
+  padding: var(--sp-xxl) 0 var(--sp-l);
+}
+
+.calendar-header__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h1);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.calendar-header__season {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--fs-h2);
+  font-weight: var(--weight-regular);
+  color: var(--color-secondary);
+  margin-top: var(--sp-xxs);
+}
+
+/* ── Area legend ── */
+.calendar-legend {
+  padding-bottom: var(--sp-l);
+  border-bottom: 2px solid var(--color-primary-300);
+  margin-bottom: var(--sp-xxl);
+}
+
+.calendar-legend__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-xs) var(--sp-l);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.calendar-legend__item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-xxs);
+  font-size: var(--fs-micro);
+  color: var(--color-primary-500);
+  white-space: nowrap;
+}
+
+.calendar-legend__dot {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--color-primary-400);
+  flex-shrink: 0;
+}
+
+/* ── Calendar grid (months) ── */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-xxl) var(--sp-xl);
+  max-width: var(--page-width-tight);
+  margin: 0 auto;
+  @media (min-width: 750px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.calendar-month {
+  min-width: 0;
+}
+
+.calendar-month__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  font-weight: var(--weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--sp-m);
+  text-transform: capitalize;
+}
+
+.calendar-month__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-xxs);
+}
+
+/* ── Calendar entry (single talk row) ── */
+.calendar-entry {
+  --entry-color: var(--color-primary-400);
+  border: 1px solid var(--color-primary-300);
+  border-right: 4px solid var(--entry-color);
+  border-radius: var(--size-xxxs);
+  background: var(--color-light);
+  transition: box-shadow 0.15s ease;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.calendar-entry__link {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-xs);
+  padding: var(--sp-xs) var(--sp-m);
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.calendar-entry__day {
+  font-size: var(--fs-paragraph);
+  font-weight: var(--weight-bold);
+  flex-shrink: 0;
+  min-width: 2.4rem;
+}
+
+.calendar-entry__title {
+  font-size: var(--fs-paragraph);
+  font-weight: var(--weight-regular);
+  color: var(--color-primary-600);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

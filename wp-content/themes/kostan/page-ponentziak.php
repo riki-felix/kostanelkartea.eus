@@ -59,13 +59,14 @@ get_header();
 					$is_current = $ym === $current_ym;
 				?>
 					<li class="talks-nav__item<?php echo $is_past ? ' talks-nav__item--past' : ''; ?><?php echo $is_current ? ' talks-nav__item--current' : ''; ?>">
-						<a href="#month-<?php echo esc_attr( $ym ); ?>">
+						<a href="#<?php echo esc_attr( date( 'n-Y', $ts_nav ) ); ?>">
 							<?php echo esc_html( date_i18n( 'F', $ts_nav ) ); ?>
 						</a>
 					</li>
 				<?php endforeach; ?>
 				<li class="talks-nav__item talks-nav__item--calendar">
 					<a href="<?php echo esc_url( get_post_type_archive_link('talks') ); ?>">
+						<?php kostan_the_icon( 'calendar', 16 ); ?>
 						<?php esc_html_e( 'Egutegia', 'kostan' ); ?>
 					</a>
 				</li>
@@ -76,7 +77,7 @@ get_header();
 		<?php foreach ( $grouped as $ym => $post_ids ) :
 			$ts_label = strtotime( $ym . '-01' );
 		?>
-		<section id="month-<?php echo esc_attr( $ym ); ?>" class="page-talks__month">
+		<section id="<?php echo esc_attr( date( 'n-Y', $ts_label ) ); ?>" class="page-talks__month">
 			<div class="container">
 				<h2><?php echo esc_html( date_i18n( 'F Y', $ts_label ) ); ?></h2>
 

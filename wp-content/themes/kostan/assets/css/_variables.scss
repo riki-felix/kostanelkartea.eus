@@ -51,11 +51,19 @@
    * =========================================== */
 
   /* Font sizes — Mobile defaults */
-  --font-micro:       1.2rem;  /* 12px  — Micro */
+  --font-micro:       1.4rem;  /* 12px  — Micro */
   --font-small:       1.8rem;  /* 18px  — Paragraph */
   --font-medium:      2.4rem;  /* 24px  — Heading 3 */
-  --font-large:       3.2rem;  /* 32px  — Heading 2 */
+  --font-large:       4.0rem;  /* 32px  — Heading 2 */
   --font-extralarge:  5.2rem;  /* 52px  — Heading 1 */
+
+  /* Font-size aliases (semantic) */
+  --fs-micro:     var(--font-micro);
+  --fs-small:     var(--font-small);
+  --fs-paragraph: var(--font-small);
+  --fs-h3:        var(--font-medium);
+  --fs-h2:        var(--font-large);
+  --fs-h1:        var(--font-extralarge);
 
   /* Font weights */
   --weight-regular: 400;

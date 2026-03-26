@@ -28,6 +28,7 @@ if ( is_wp_error( $venues ) || empty( $venues ) ) {
 
 <section class="<?php echo esc_attr( $class_name ); ?>">
     <div class="container">
+        
         <?php foreach ( $venues as $venue ) :
             $term_key = 'venue_' . $venue->term_id;
             $photo    = get_field( 'venue_photo', $term_key );

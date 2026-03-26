@@ -12,13 +12,13 @@ get_header();
 
 <main id="primary" class="site-main page-ekitzak">
 	<header class="page-ekitzak__header">
-		<div class="wrapper">
+		<div class="container">
 			<h1><?php single_post_title(); ?></h1>
 		</div>
 	</header>
 
 	<?php if ( have_posts() ) : ?>
-	<div class="wrapper">
+	<div class="container">
 		<div class="ekitzak-grid">
 			<?php while ( have_posts() ) : the_post(); ?>
 			<article <?php post_class( 'ekitzak-card' ); ?>>
@@ -36,6 +36,9 @@ get_header();
 					<h2 class="ekitzak-card__title">
 						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 					</h2>
+					<div class="ekitzak-card__excerpt">
+						<?php the_excerpt(); ?>
+					</div>	
 				</div>
 			</article>
 			<?php endwhile; ?>

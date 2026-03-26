@@ -9,11 +9,45 @@ get_header();
 
 while ( have_posts() ) : the_post();
 
-$talk_date = get_field('talk_date');
-$talk_lang = get_field('talk_lang');
-$speakers  = get_field('talk_speakers');
-$venues    = get_the_terms( get_the_ID(), 'venue' );
-$areas     = get_the_terms( get_the_ID(), 'area' );
+$talk_date    = get_field('talk_date');
+$talk_lang    = get_field('talk_lang');
+$speakers     = get_field('talk_speakers');
+$venues       = get_the_terms( get_the_ID(), 'venue' );
+$areas        = get_the_terms( get_the_ID(), 'area' );
+
+// Parse date
+$dt_obj = null;
+$ts_val = 0;
+if ( $talk_date ) {
+	$dt_obj = DateTime::createFromFormat('d/m/Y g:i a', $talk_date);
+	$ts_val = $dt_obj ? $dt_obj->getTimestamp() : 0;
+}
+
+// Get first child area for GAIA
+$child_area = null;
+if ( ! empty( $areas ) && ! is_wp_error( $areas ) ) {
+	foreach ( $areas as $a ) {
+		if ( $a->parent !== 0 ) {
+			$child_area = $a;
+			break;
+		}
+	}
+}
+
+// Get first venue
+$venue_name = '';
+if ( ! empty( $venues ) && ! is_wp_error( $venues ) ) {
+	$venue_name = $venues[0]->name;
+}
+
+// Speaker names
+$speaker_names = [];
+if ( ! empty( $speakers ) ) {
+	foreach ( $speakers as $speaker ) {
+		$sid = is_object( $speaker ) ? $speaker->ID : $speaker;
+		$speaker_names[] = get_the_title( $sid );
+	}
+}
 ?>
 
 <main id="primary" class="site-main single-talk">
@@ -21,59 +55,76 @@ $areas     = get_the_terms( get_the_ID(), 'area' );
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 		<header class="single-talk__header">
-			<div class="wrapper">
-				<?php if ( $talk_date ) :
-					$dt_obj = DateTime::createFromFormat('d/m/Y g:i a', $talk_date);
-					$ts_val = $dt_obj ? $dt_obj->getTimestamp() : 0;
-				?>
-					<time class="single-talk__date" datetime="<?php echo $dt_obj ? esc_attr( $dt_obj->format('Y-m-d\TH:i') ) : ''; ?>">
-						<?php echo esc_html( date_i18n( 'l, j F Y – H:i', $ts_val ) ); ?>
-					</time>
+			<div class="container">
+
+				<?php if ( ! empty( $speaker_names ) ) : ?>
+					<h1 class="single-talk__speaker-name">
+						<?php echo esc_html( implode( ' eta ', $speaker_names ) ); ?>
+					</h1>
 				<?php endif; ?>
 
-				<?php the_title( '<h1 class="single-talk__title">', '</h1>' ); ?>
+				<p class="single-talk__title"><?php the_title(); ?></p>
 
-				<div class="single-talk__meta">
-					<?php if ( ! empty( $venues ) && ! is_wp_error( $venues ) ) : ?>
-						<?php foreach ( $venues as $v ) : ?>
-							<a href="<?php echo esc_url( get_term_link( $v ) ); ?>" class="single-talk__tag">
-								<?php echo esc_html( $v->name ); ?>
-							</a>
-						<?php endforeach; ?>
-					<?php endif; ?>
+				<div class="single-talk__details">
 
 					<?php if ( $talk_lang ) : ?>
-						<span class="single-talk__tag single-talk__tag--lang"><?php echo esc_html( $talk_lang ); ?></span>
+					<div class="single-talk__detail">
+						<span class="single-talk__detail-icon"><?php kostan_the_icon('flag'); ?></span>
+						<span class="single-talk__detail-label"><?php esc_html_e( 'Hizkuntza', 'kostan' ); ?></span>
+						<span class="single-talk__detail-value"><?php echo esc_html( $talk_lang ); ?></span>
+					</div>
 					<?php endif; ?>
 
-					<?php if ( ! empty( $areas ) && ! is_wp_error( $areas ) ) : ?>
-						<?php foreach ( $areas as $a ) : ?>
-							<a href="<?php echo esc_url( get_term_link( $a ) ); ?>" class="single-talk__tag single-talk__tag--area">
-								<?php echo esc_html( $a->name ); ?>
-							</a>
-						<?php endforeach; ?>
+					<?php if ( $child_area ) : ?>
+					<div class="single-talk__detail">
+						<span class="single-talk__detail-icon"><?php kostan_the_icon('document'); ?></span>
+						<span class="single-talk__detail-label"><?php esc_html_e( 'Gaia', 'kostan' ); ?></span>
+						<span class="single-talk__detail-value"><?php echo esc_html( $child_area->name ); ?></span>
+					</div>
 					<?php endif; ?>
+
+					<?php if ( $dt_obj ) : ?>
+					<div class="single-talk__detail">
+						<span class="single-talk__detail-icon"><?php kostan_the_icon('clock'); ?></span>
+						<span class="single-talk__detail-label"><?php esc_html_e( 'Data', 'kostan' ); ?></span>
+						<span class="single-talk__detail-value">
+							<time datetime="<?php echo esc_attr( $dt_obj->format('Y-m-d\TH:i') ); ?>">
+								<?php echo esc_html( date_i18n( 'Y\k\o F\r\e\n ja\n', $ts_val ) ); ?>
+							</time>
+						</span>
+					</div>
+					<?php endif; ?>
+
+					<?php if ( $venue_name ) : ?>
+					<div class="single-talk__detail">
+						<span class="single-talk__detail-icon"><?php kostan_the_icon('location'); ?></span>
+						<span class="single-talk__detail-label"><?php esc_html_e( 'Lekua', 'kostan' ); ?></span>
+						<span class="single-talk__detail-value"><?php echo esc_html( $venue_name ); ?></span>
+					</div>
+					<?php endif; ?>
+
 				</div>
+
 			</div>
 		</header>
 
 		<?php if ( has_post_thumbnail() ) : ?>
 			<div class="single-talk__image">
-				<div class="wrapper">
+				<div class="container">
 					<?php the_post_thumbnail('large'); ?>
 				</div>
 			</div>
 		<?php endif; ?>
 
 		<div class="single-talk__content">
-			<div class="wrapper">
+			<div class="container">
 				<?php the_content(); ?>
 			</div>
 		</div>
 
 		<?php if ( ! empty( $speakers ) ) : ?>
 		<section class="single-talk__speakers">
-			<div class="wrapper">
+			<div class="container">
 				<h2><?php esc_html_e( 'Hizlariak', 'kostan' ); ?></h2>
 
 				<div class="speakers-grid">

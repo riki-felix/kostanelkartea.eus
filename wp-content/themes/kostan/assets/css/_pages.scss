@@ -2,41 +2,18 @@
 	min-height: 80vh;
 }
 
-/* ==============================================
-* Carousel dissolve (fade) – pure CSS override
-* Add class "is-dissolve" in block Advanced > Additional CSS classes
-* Requires Slides per view: 1
-* ============================================== */
+.section-talks {
+  margin-bottom: 10.0rem;;
+}
 
-.cb-carousel-block.is-dissolve {
-	position: absolute;
-	top: 0;
-	z-index: -1;
-	width: 100vw;
-  .swiper {
-    overflow: hidden;
-  }
+.grid-card__content {
+  padding: var(--sp-l);
+  min-height: 40.0rem;
+}
+.grid-card__header {
+  padding: var(--sp-l);
+}
 
-  .swiper-wrapper {
-    /* Neutralize Swiper's translate movement */
-    transform: none !important;
-  }
-
-  .swiper-slide {
-    /* Stack all slides on top of each other */
-    position: absolute !important;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.8s ease;
-    pointer-events: none;
-
-    &.swiper-slide-active {
-      position: relative !important;
-      opacity: 1;
-      pointer-events: auto;
-    }
-  }
+.section-intro {
+  background-color: var(--color-primary-300);
 }

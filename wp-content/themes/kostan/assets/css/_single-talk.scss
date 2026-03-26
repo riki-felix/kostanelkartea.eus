@@ -1,0 +1,136 @@
+/* ==============================================
+ * Single Talk
+ * ============================================== */
+
+.single-talk__header {
+  padding: var(--sp-xxl) 0 var(--sp-l);
+  text-align: center;
+}
+
+/* Breadcrumb */
+.single-talk__breadcrumb {
+  font-size: var(--fs-small);
+  color: var(--color-primary-400);
+  margin: 0 0 var(--sp-xl);
+  text-align: left;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}
+
+/* Speaker name as main heading */
+.single-talk__speaker-name {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h1);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 0;
+  line-height: 1.1;
+}
+
+/* Talk title */
+.single-talk__title {
+  font-family: var(--font-body);
+  font-size: var(--fs-h2);
+  font-weight: var(--weight-regular);
+  color: var(--color-primary);
+  margin: var(--sp-xs) 0 var(--sp-xl);
+}
+
+/* Details cards row */
+.single-talk__details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-xxxs);
+  text-align: left;
+
+  @media (min-width: 750px) {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+}
+
+.single-talk__detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-xxxs);
+  background: var(--color-light);
+  border: 1px solid var(--color-primary-300);
+  border-radius: var(--size-xxs);
+  padding: var(--sp-m);
+}
+
+.single-talk__detail-icon {
+  color: var(--color-primary-400);
+  line-height: 1;
+}
+
+.single-talk__detail-label {
+  font-size: var(--fs-micro);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-primary-500);
+}
+
+.single-talk__detail-value {
+  font-size: var(--fs-small);
+  font-weight: var(--weight-regular);
+  color: var(--color-primary);
+
+  a {
+    display: block;
+    color: var(--color-secondary);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.single-talk__video {
+  margin-bottom: var(--sp-xl);
+}
+
+.single-talk__video-wrap {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--size-xxs);
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+.single-talk__image {
+  margin-bottom: var(--sp-xl);
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--size-xxs);
+  }
+}
+
+.single-talk__content {
+  margin-bottom: var(--sp-xxl);
+
+  p {
+    max-width: 72ch;
+  }
+}

@@ -2,5 +2,11 @@
 @use 'base';
 @use 'layout';
 @use 'nav';
-@use 'components';
+@use 'talks';
+@use 'calendar';
+@use 'venue';
+@use 'ekitzak';
+@use 'single-talk';
+@use 'speakers';
 @use 'pages';
+@use 'hero-carousel';
