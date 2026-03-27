@@ -108,13 +108,7 @@ if ( ! empty( $speakers ) ) {
 			</div>
 		</header>
 
-		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="single-talk__image">
-				<div class="container">
-					<?php the_post_thumbnail('large'); ?>
-				</div>
-			</div>
-		<?php endif; ?>
+		
 
 		<div class="single-talk__content">
 			<div class="container">

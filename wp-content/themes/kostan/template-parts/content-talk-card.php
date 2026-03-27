@@ -11,24 +11,19 @@
  * @package Kostan
  */
 
-$talk_date = get_field('talk_date');
-$talk_lang = get_field('talk_lang');
-$speakers  = get_field('talk_speakers');
-$venues    = get_the_terms( get_the_ID(), 'venue' );
-$areas     = get_the_terms( get_the_ID(), 'area' );
+$post_id   = get_the_ID();
+$talk_date = get_field( 'talk_date', $post_id );
+$talk_lang = get_field( 'talk_lang', $post_id );
+$speakers  = get_field( 'talk_speakers', $post_id );
+$venues    = get_the_terms( $post_id, 'venue' );
+$areas     = get_the_terms( $post_id, 'area' );
+$thumbnail = get_the_post_thumbnail_url( $post_id, 'large' );
 ?>
 
-<article <?php post_class('talk-card'); ?>>
+<article <?php post_class( 'talk-card' . ( $thumbnail ? ' talk-card--has-thumbnail' : '' ) ); ?>>
 
 	<a href="<?php the_permalink(); ?>" class="talk-card__link">
-
-		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="talk-card__image">
-				<?php the_post_thumbnail('medium_large'); ?>
-			</div>
-		<?php endif; ?>
-
-		<div class="talk-card__content">
+		<div class="talk-card__content"<?php echo $thumbnail ? ' style="--talk-card-image: url(' . esc_url( $thumbnail ) . ');"' : ''; ?>>
 
 			<?php if ( $talk_date ) :
 				$dt_obj = DateTime::createFromFormat('d/m/Y g:i a', $talk_date);

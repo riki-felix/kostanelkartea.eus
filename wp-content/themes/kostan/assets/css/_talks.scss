@@ -48,31 +48,55 @@
   color: inherit;
 }
 
-/* Image (optional, shown when talk has featured image) */
-.talk-card__image {
-  position: relative;
-
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  /* When image present, overlay content on top */
-  & + .talk-card__content {
-    position: relative;
-    margin-top: -var(--sp-l);
-  }
-}
-
 /* Content area */
 .talk-card__content {
+  position: relative;
+  isolation: isolate;
   display: flex;
   flex-direction: column;
   gap: var(--sp-xxs);
   padding: var(--sp-m);
   flex: 1;
+  min-height: 30rem;
+  justify-content: flex-end;
+  background-color: var(--color-primary-100);
+  background-image: var(--talk-card-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(18, 29, 52, 0.08) 0%, rgba(18, 29, 52, 0.82) 100%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.talk-card--has-thumbnail {
+  .talk-card__content {
+    color: var(--color-light);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  .talk-card__date,
+  .talk-card__speakers,
+  .talk-card__title,
+  .talk-card__tag--venue,
+  .talk-card__tag--lang {
+    color: var(--color-light);
+  }
 }
 
 /* Date */
@@ -143,6 +167,7 @@
   justify-content: space-between;
   padding: var(--sp-m);
   border-top: 1px solid var(--color-primary-300);
+  background: var(--color-light);
 }
 
 .talk-card__areas {

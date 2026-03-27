@@ -4,13 +4,14 @@ if (!defined('ABSPATH')) exit;
 define('ct_THEME_VERSION', wp_get_theme()->get('Version'));
 
 require_once get_template_directory() . '/inc/icons.php';
+require_once get_template_directory() . '/acf-fields/hero-carousel.php';
 
 /**
  * Enqueue assets - Direct output method
  */
 function ct_enqueue_assets() {
     $theme_uri = get_template_directory_uri();
-    $version = time(); // Cache busting
+    $version = ct_THEME_VERSION;
     
     // Output CSS directly in head
     add_action('wp_head', function() use ($theme_uri, $version) {
@@ -22,7 +23,7 @@ function ct_enqueue_assets() {
         echo '<script id="vh-script-js" src="' . esc_url($theme_uri . '/dist/js/main.js?ver=' . $version) . '"></script>' . "\n";
     }, 10);
 }
-add_action('init', 'ct_enqueue_assets');
+add_action('wp_enqueue_scripts', 'ct_enqueue_assets');
 
 /**
  * Debug helper
@@ -83,7 +84,6 @@ function ct_setup() {
     ]);
     
     add_theme_support('customize-selective-refresh-widgets');
-    add_theme_support('align-wide');
     
     add_theme_support('custom-logo', [
         'height'      => 100,
@@ -95,31 +95,18 @@ function ct_setup() {
 add_action('after_setup_theme', 'ct_setup');
 
 /**
- * Highlight "Ponentziak" menu item on single talks and talks archive.
- */
-add_filter('nav_menu_css_class', function( $classes, $item ) {
-	if ( $item->object === 'page' ) {
-		$page_slug = get_post_field( 'post_name', $item->object_id );
-		if ( $page_slug === 'ponentziak' && ( is_singular('talks') || is_post_type_archive('talks') ) ) {
-			$classes[] = 'current-menu-item';
-		}
-	}
-	return $classes;
-}, 10, 2);
-
-/**
  * Register widget areas
  */
 function ct_widgets_init() {
     $footer_sidebars = [
-        'footer-1' => __('Footer 1', 'vh'),
+        'footer-1' => __('Footer 1', 'kostan'),
     ];
     
     foreach ($footer_sidebars as $id => $name) {
         register_sidebar([
             'name'          => $name,
             'id'            => $id,
-            'description'   => __('Footer Widgets', 'vh'),
+            'description'   => __('Footer Widgets', 'kostan'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
             'before_title'  => '<h4 class="widget-title">',
@@ -160,14 +147,14 @@ add_filter('upload_mimes', 'ct_allow_svg_uploads');
 /**
  * Fix SVG MIME type detection
  */
-function ct_fix_svg_mime_type($data, $file, $filename, $mimes) {
+function ct_fix_svg_mime_type($data, $file, $filename, $mimes, $real_mime = null) {
     if (pathinfo($filename, PATHINFO_EXTENSION) === 'svg') {
         $data['ext']  = 'svg';
         $data['type'] = 'image/svg+xml';
     }
     return $data;
 }
-add_filter('wp_check_filetype_and_ext', 'ct_fix_svg_mime_type', 10, 4);
+add_filter('wp_check_filetype_and_ext', 'ct_fix_svg_mime_type', 10, 5);
 
 /**
  * Disable WPML language selector CSS
@@ -207,6 +194,17 @@ function ct_acf_init() {
 
     if ( function_exists('acf_register_block_type') ) {
         acf_register_block_type([
+            'name'            => 'hero-carousel',
+            'title'           => __('Carrusel Hero', 'kostan'),
+            'description'     => __('Carrusel de imagenes para la portada.', 'kostan'),
+            'render_template' => 'template-parts/blocks/hero-carousel.php',
+            'category'        => 'formatting',
+            'icon'            => 'images-alt2',
+            'keywords'        => ['hero', 'carousel', 'carrusel', 'slides'],
+            'supports'        => ['align' => ['full'], 'multiple' => false],
+        ]);
+
+        acf_register_block_type([
             'name'            => 'venue-info',
             'title'           => __('Recintos', 'kostan'),
             'description'     => __('Lista los recintos (venue) con su foto, dirección y enlace a Google Maps.', 'kostan'),
@@ -227,41 +225,6 @@ function ct_acf_init() {
             'keywords'        => ['talks', 'ponencias', 'mes', 'monthly'],
             'supports'        => ['align' => false, 'multiple' => false],
         ]);
-
-        acf_register_block_type([
-            'name'            => 'hero-carousel',
-            'title'           => __('Hero Carousel', 'kostan'),
-            'description'     => __('Carrusel de imágenes a pantalla completa.', 'kostan'),
-            'render_template' => 'template-parts/blocks/hero-carousel.php',
-            'category'        => 'design',
-            'icon'            => 'images-alt2',
-            'keywords'        => ['carousel', 'hero', 'slider', 'carrusel'],
-            'supports'        => ['align' => ['full'], 'multiple' => false],
-        ]);
-
-        acf_register_block_type([
-            'name'            => 'talk-video',
-            'title'           => __('Bideoa / Vídeo de ponencia', 'kostan'),
-            'description'     => __('Muestra el vídeo de la ponencia (YouTube embed).', 'kostan'),
-            'render_template' => 'template-parts/blocks/talk-video.php',
-            'category'        => 'formatting',
-            'icon'            => 'video-alt3',
-            'keywords'        => ['video', 'bideo', 'youtube', 'ponencia'],
-            'supports'        => ['align' => false, 'multiple' => false],
-            'post_types'      => ['talks'],
-        ]);
-
-        acf_register_block_type([
-            'name'            => 'talk-files',
-            'title'           => __('Apunteak / Archivos de ponencia', 'kostan'),
-            'description'     => __('Muestra los archivos adjuntos de la ponencia.', 'kostan'),
-            'render_template' => 'template-parts/blocks/talk-files.php',
-            'category'        => 'formatting',
-            'icon'            => 'media-document',
-            'keywords'        => ['apunteak', 'archivos', 'files', 'ponencia'],
-            'supports'        => ['align' => false, 'multiple' => false],
-            'post_types'      => ['talks'],
-        ]);
     }
 }
 add_action('acf/init', 'ct_acf_init');
@@ -270,6 +233,9 @@ add_action('acf/init', 'ct_acf_init');
  * Enqueue Google Maps API on frontend when needed
  */
 function ct_enqueue_google_maps() {
+    if ( ! is_singular() && ! is_page_template() ) {
+        return;
+    }
     wp_enqueue_script(
         'google-maps',
         'https://maps.googleapis.com/maps/api/js?key=' . ( defined('GOOGLE_MAPS_API_KEY') ? GOOGLE_MAPS_API_KEY : '' ),
@@ -279,16 +245,4 @@ function ct_enqueue_google_maps() {
     );
 }
 add_action('wp_enqueue_scripts', 'ct_enqueue_google_maps');
-
-/**
- * Load ACF field groups
- */
-add_action('acf/init', function() {
-    $fields_dir = get_template_directory() . '/acf-fields';
-    if ( is_dir( $fields_dir ) ) {
-        foreach ( glob( $fields_dir . '/*.php' ) as $file ) {
-            require_once $file;
-        }
-    }
-}, 20);
 
