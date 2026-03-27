@@ -1,0 +1,2 @@
+<?php
+return ['items'=>['Campos de Recintos'=>['urls'=>[],'names'=>['group-group_69aefcf96beda-title-a7cf7c9701b529a19efe233a5c84fbb8'],'cmp'=>['wpml-string-translation',1]],'Localización'=>['urls'=>[],'names'=>['field-field_69aefcf9b90cd-label-8fa90e6871c8640c9e25a7db68faac1d'],'cmp'=>['wpml-string-translation',1]],'Foto del recinto'=>['urls'=>[],'names'=>['field-field_69af27074166d-label-48058576d12690b9d080ed88e3203c92'],'cmp'=>['wpml-string-translation',1]]]];

@@ -1,2 +1,0 @@
-<?php
-return ['items'=>['Footer 1'=>['saveStringInDb'=>true,'cmp'=>['kostan',2],'names'=>[],'urls'=>[]],'Footer 2'=>['saveStringInDb'=>true,'cmp'=>['kostan',2],'names'=>[],'urls'=>[]],'Footer 3'=>['saveStringInDb'=>true,'cmp'=>['kostan',2],'names'=>[],'urls'=>[]],'Add widgets here to appear in your footer.'=>['saveStringInDb'=>true,'cmp'=>['kostan',2],'names'=>[],'urls'=>[]],'Footer Widgets'=>['saveStringInDb'=>true,'cmp'=>['kostan',2],'names'=>[],'urls'=>[]]]];

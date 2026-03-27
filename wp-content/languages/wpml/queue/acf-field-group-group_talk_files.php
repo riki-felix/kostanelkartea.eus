@@ -1,0 +1,2 @@
+<?php
+return ['items'=>['Apunteak / Fitxategiak'=>['urls'=>[],'names'=>['group-group_talk_files-title-b4580b06f5cb0271e8f398b3e1cf8a4e'],'cmp'=>['wpml-string-translation',1]],'Fitxategia'=>['urls'=>[],'names'=>['field-field_talk_file-label-0e60612de0a013a2e60ea676e3f2b7da'],'cmp'=>['wpml-string-translation',1]],'Fitxategiak'=>['urls'=>[],'names'=>['field-field_talk_files-label-e075e4a8ef0430a172315a08553d7884'],'cmp'=>['wpml-string-translation',1]]]];

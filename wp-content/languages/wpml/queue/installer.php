@@ -1,0 +1,2 @@
+<?php
+return ['items'=>['Installing %s'=>['urls'=>[],'names'=>[],'cmp'=>['sitepress-multilingual-cms',1]],'Updating %s'=>['urls'=>[],'names'=>[],'cmp'=>['sitepress-multilingual-cms',1]],'Activating %s'=>['urls'=>[],'names'=>[],'cmp'=>['sitepress-multilingual-cms',1]],'This site is registered on %s as a development site. Switch to a production site key to %s.'=>['urls'=>[],'names'=>[],'cmp'=>['sitepress-multilingual-cms',1]]]];
