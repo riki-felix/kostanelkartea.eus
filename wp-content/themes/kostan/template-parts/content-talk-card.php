@@ -16,7 +16,7 @@ $talk_date = get_field( 'talk_date', $post_id );
 $talk_lang = get_field( 'talk_lang', $post_id );
 $speakers  = get_field( 'talk_speakers', $post_id );
 $venues    = get_the_terms( $post_id, 'venue' );
-$areas     = get_the_terms( $post_id, 'area' );
+$areas     = kostan_get_post_areas( $post_id );
 $thumbnail = get_the_post_thumbnail_url( $post_id, 'large' );
 ?>
 
@@ -42,7 +42,7 @@ $thumbnail = get_the_post_thumbnail_url( $post_id, 'large' );
 						$speaker_id = is_object( $speaker ) ? $speaker->ID : $speaker;
 						$speaker_names[] = esc_html( get_the_title( $speaker_id ) );
 					endforeach;
-					echo implode( ' <span>eta</span> ', $speaker_names );
+					echo implode( ' <span>/</span> ', $speaker_names );
 					?>
 				</div>
 			<?php endif; ?>
@@ -53,8 +53,11 @@ $thumbnail = get_the_post_thumbnail_url( $post_id, 'large' );
 
 			<div class="talk-card__tags">
 			<?php if ( ! empty( $venues ) && ! is_wp_error( $venues ) ) : ?>
-				<?php foreach ( $venues as $v ) : ?>
-					<a href="<?php echo esc_url( get_term_link( $v ) ); ?>" class="talk-card__tag talk-card__tag--venue">
+				<?php foreach ( $venues as $v ) :
+					$venue_link = get_term_link( $v );
+					if ( is_wp_error( $venue_link ) ) continue;
+				?>
+					<a href="<?php echo esc_url( $venue_link ); ?>" class="talk-card__tag talk-card__tag--venue">
 						<?php echo esc_html( $v->name ); ?>
 					</a>
 				<?php endforeach; ?>
@@ -72,7 +75,7 @@ $thumbnail = get_the_post_thumbnail_url( $post_id, 'large' );
 	<?php
 	// Show only the first child area with its area_symbol
 	$child_area = null;
-	if ( ! empty( $areas ) && ! is_wp_error( $areas ) ) {
+	if ( ! empty( $areas ) ) {
 		foreach ( $areas as $a ) {
 			if ( $a->parent !== 0 ) {
 				$child_area = $a;
@@ -82,11 +85,14 @@ $thumbnail = get_the_post_thumbnail_url( $post_id, 'large' );
 	}
 	?>
 	<?php if ( $child_area ) :
-		$area_symbol = get_field( 'area_symbol', 'area_' . $child_area->term_id );
+		$area_symbol = kostan_get_area_field( 'area_symbol', $child_area->term_id );
+		if ( is_array( $area_symbol ) ) $area_symbol = $area_symbol['url'] ?? '';
+		$area_link   = get_term_link( $child_area );
+		if ( is_wp_error( $area_link ) ) $area_link = '#';
 	?>
 		<footer class="talk-card__footer">
 			<div class="talk-card__areas">
-				<a href="<?php echo esc_url( get_term_link( $child_area ) ); ?>" class="talk-card__area">
+				<a href="<?php echo esc_url( $area_link ); ?>" class="talk-card__area">
 					<?php if ( $area_symbol ) : ?>
 						<img class="talk-card__area-icon" src="<?php echo esc_url( $area_symbol ); ?>" alt="<?php echo esc_attr( $child_area->name ); ?>" loading="lazy" />
 					<?php endif; ?>

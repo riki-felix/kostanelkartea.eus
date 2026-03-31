@@ -246,3 +246,98 @@ function ct_enqueue_google_maps() {
 }
 add_action('wp_enqueue_scripts', 'ct_enqueue_google_maps');
 
+/**
+ * Get an ACF field from a taxonomy term.
+ * Since symbol/color are shared across languages, always read from the
+ * default-language term to avoid sync issues with WPML + ACF copy.
+ */
+function kostan_get_area_field( $field_name, $term_id, $taxonomy = 'area' ) {
+	$default_lang    = apply_filters( 'wpml_default_language', null );
+	$original_id     = apply_filters( 'wpml_object_id', $term_id, $taxonomy, true, $default_lang );
+	$value = get_field( $field_name, $taxonomy . '_' . ( $original_id ?: $term_id ) );
+	if ( $value ) {
+		return $value;
+	}
+	// If wpml_object_id returned the same id, try the passed one as last resort
+	if ( $original_id && $original_id !== (int) $term_id ) {
+		$value = get_field( $field_name, $taxonomy . '_' . $term_id );
+	}
+	return $value;
+}
+
+/**
+ * Get area terms for a post, falling back to the default-language post's terms
+ * when WPML is active and the translated post has no area associations.
+ * Returns translated term objects for display (names/links in current language).
+ */
+function kostan_get_post_areas( $post_id ) {
+	$terms = get_the_terms( $post_id, 'area' );
+	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+		return $terms;
+	}
+	// Fallback: get terms from the default-language post
+	$default_lang     = apply_filters( 'wpml_default_language', null );
+	$current_lang     = apply_filters( 'wpml_current_language', null );
+	$original_post_id = apply_filters( 'wpml_object_id', $post_id, get_post_type( $post_id ), true, $default_lang );
+	if ( ! $original_post_id || $original_post_id === (int) $post_id ) {
+		return [];
+	}
+	// Switch to default language so WPML doesn't filter out untranslated terms
+	do_action( 'wpml_switch_language', $default_lang );
+	$original_terms = get_the_terms( $original_post_id, 'area' );
+	do_action( 'wpml_switch_language', $current_lang );
+
+	if ( empty( $original_terms ) || is_wp_error( $original_terms ) ) {
+		return [];
+	}
+	// Map each term back to the current language where a translation exists
+	$result = [];
+	foreach ( $original_terms as $t ) {
+		$translated_id   = apply_filters( 'wpml_object_id', $t->term_id, 'area', true, $current_lang );
+		$translated_term = get_term( $translated_id, 'area' );
+		if ( $translated_term && ! is_wp_error( $translated_term ) ) {
+			$result[] = $translated_term;
+		}
+	}
+	return ! empty( $result ) ? $result : $original_terms;
+}
+
+/**
+ * Highlight the parent menu item for CPT singles, archives, and taxonomy pages.
+ */
+function kostan_nav_menu_highlight_parent( $classes, $menu_item ) {
+	// Talks, venues, areas → highlight Ponentziak page
+	if ( is_singular( 'talks' ) || is_post_type_archive( 'talks' ) || is_tax( 'venue' ) || is_tax( 'area' ) ) {
+		$classes = array_diff( $classes, [ 'current_page_parent', 'current-menu-item' ] );
+
+		if ( $menu_item->object === 'page' ) {
+			$tpl = get_page_template_slug( $menu_item->object_id );
+			if ( $tpl === 'page-ponentziak.php' ) {
+				$classes[] = 'current-menu-item';
+			}
+		}
+	}
+
+	// Blog posts → highlight the posts page menu item (Ekintzak)
+	if ( is_singular( 'post' ) ) {
+		$classes = array_diff( $classes, [ 'current_page_parent', 'current-menu-item' ] );
+
+		$blog_page_id = (int) get_option( 'page_for_posts' );
+		if ( $blog_page_id && $menu_item->object === 'page' ) {
+			// Match the blog page or any of its WPML translations
+			$target_id = (int) $menu_item->object_id;
+			if ( $target_id === $blog_page_id ) {
+				$classes[] = 'current-menu-item';
+			} elseif ( function_exists( 'icl_object_id' ) ) {
+				$translated_blog = (int) icl_object_id( $blog_page_id, 'page', false );
+				if ( $translated_blog && $target_id === $translated_blog ) {
+					$classes[] = 'current-menu-item';
+				}
+			}
+		}
+	}
+
+	return $classes;
+}
+add_filter( 'nav_menu_css_class', 'kostan_nav_menu_highlight_parent', 10, 2 );
+

@@ -13,8 +13,6 @@ html {
 .icon {
   display: inline-block;
   vertical-align: middle;
-  width: 2.4rem;
-  height: 2.4rem;
   flex-shrink: 0;
   fill: currentColor;
 }
@@ -42,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1,.h1 {
-  font-size: var(--font-extralarge);
+  font-size: var(--fs-h1);
   text-transform: uppercase;
   line-height: 1;
   font-weight: var(--weight-bold);
@@ -50,30 +48,31 @@ h1,.h1 {
 }
 
 h2,.h2 {
-  font-size: var(--font-large);
-  font-weight: var(--weight-light);
+  font-size: var(--fs-h2);
+  font-weight: var(--weight-regular);
+  line-height: 1;
 }
 
 h3,.h3 {
-  font-size: var(--font-medium);
+  font-size: var(--fs-h3);
   font-weight: var(--weight-light);
 }
 
 h4,.h4 {
-  font-size: var(--font-medium);
+  font-size: var(--fs-h4);
   text-transform: uppercase;
 }
 
 h5 {
-  font-size: var(--font-small);
+  font-size: var(--fs-h5);
 }
 
 h6 {
-  font-size: var(--font-small);
+  font-size: var(--fs-h6);
 }
 
 p {
-  font-size: var(--font-small);
+  font-size: var(--fs-paragraph);
   margin-bottom: var(--sp-m);
 }
 
@@ -98,6 +97,16 @@ a:hover {
 
 .page-width {
   max-width: var(--page-width-tight);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--page-margin);
+  padding-right: var(--page-margin);
+  margin-bottom: 0;
+  padding-top: var(--sp-xxl);
+  padding-bottom: var(--sp-xxl);
+}
+.page-reading {
+  max-width: var(--page-reading);
   margin-left: auto;
   margin-right: auto;
   padding-left: var(--page-margin);

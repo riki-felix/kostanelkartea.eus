@@ -87,33 +87,33 @@ $url = 'https://wa.me/?text=' . rawurlencode( $mensaje );
 				</nav>
 			</div>
 		</div>
+
+		<!-- Mobile menu panel -->
+		<div id="menu-panel" class="menu-panel">
+			<nav class="menu-panel__nav" aria-label="<?php esc_attr_e('Mobile navigation', 'kostan'); ?>">
+				<?php
+				wp_nav_menu([
+					'theme_location' => 'primary',
+					'menu_id'        => 'mobile-primary-menu',
+					'container'      => false,
+					'menu_class'     => 'menu-panel__list',
+					'fallback_cb'    => false,
+					'depth'          => 1,
+				]);
+				wp_nav_menu([
+					'theme_location' => 'actions',
+					'menu_id'        => 'mobile-actions-menu',
+					'container'      => false,
+					'menu_class'     => 'menu-panel__list menu-panel__list--actions',
+					'fallback_cb'    => false,
+					'depth'          => 1,
+				]);
+				?>
+			</nav>
+		</div>
 	</header>
 
 	<!-- Mobile menu overlay -->
 	<div id="menu-overlay" class="menu-overlay"></div>
-
-	<!-- Mobile menu panel -->
-	<div id="menu-panel" class="menu-panel">
-		<nav class="menu-panel__nav" aria-label="<?php esc_attr_e('Mobile navigation', 'kostan'); ?>">
-			<?php
-			wp_nav_menu([
-				'theme_location' => 'primary',
-				'menu_id'        => 'mobile-primary-menu',
-				'container'      => false,
-				'menu_class'     => 'menu-panel__list',
-				'fallback_cb'    => false,
-				'depth'          => 1,
-			]);
-			wp_nav_menu([
-				'theme_location' => 'actions',
-				'menu_id'        => 'mobile-actions-menu',
-				'container'      => false,
-				'menu_class'     => 'menu-panel__list menu-panel__list--actions',
-				'fallback_cb'    => false,
-				'depth'          => 1,
-			]);
-			?>
-		</nav>
-	</div>
 
 	<div class="site-header-spacer" aria-hidden="true"></div>

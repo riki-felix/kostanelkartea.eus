@@ -13,7 +13,7 @@ $talk_date    = get_field('talk_date');
 $talk_lang    = get_field('talk_lang');
 $speakers     = get_field('talk_speakers');
 $venues       = get_the_terms( get_the_ID(), 'venue' );
-$areas        = get_the_terms( get_the_ID(), 'area' );
+$areas        = kostan_get_post_areas( get_the_ID() );
 
 // Parse date
 $dt_obj = null;
@@ -25,7 +25,7 @@ if ( $talk_date ) {
 
 // Get first child area for GAIA
 $child_area = null;
-if ( ! empty( $areas ) && ! is_wp_error( $areas ) ) {
+if ( ! empty( $areas ) ) {
 	foreach ( $areas as $a ) {
 		if ( $a->parent !== 0 ) {
 			$child_area = $a;
@@ -58,12 +58,12 @@ if ( ! empty( $speakers ) ) {
 			<div class="container">
 
 				<?php if ( ! empty( $speaker_names ) ) : ?>
-					<h1 class="single-talk__speaker-name">
-						<?php echo esc_html( implode( ' eta ', $speaker_names ) ); ?>
-					</h1>
+					<h2 class="single-talk__speaker-name">
+						<?php echo esc_html( implode( ' / ', $speaker_names ) ); ?>
+					</h2>
 				<?php endif; ?>
 
-				<p class="single-talk__title"><?php the_title(); ?></p>
+				<h1 class="single-talk__title"><?php the_title(); ?></h1>
 
 				<div class="single-talk__details">
 
@@ -104,6 +104,16 @@ if ( ! empty( $speakers ) ) {
 					<?php endif; ?>
 
 				</div>
+
+				<?php
+				$talk_video = get_field( 'talk_video' );
+				if ( $talk_video && is_user_logged_in() ) : ?>
+				<div class="single-talk__video">
+					<div class="single-talk__video-wrap">
+						<?php echo $talk_video; ?>
+					</div>
+				</div>
+				<?php endif; ?>
 
 			</div>
 		</header>

@@ -40,15 +40,21 @@ body.home .site-header-spacer {
 /* Footer */
 .site-footer {
 	padding: var(--sp-xxxl) 0;
+	background-color: var(--color-primary-400);
 	.footer-widgets {
 		display: flex;
 		flex-wrap: wrap;
 		gap: var(--sp-xxxl);
+		justify-content: center;
 		padding-left: var(--page-margin);
-  		padding-right: var(--page-margin);
+		padding-right: var(--page-margin);
 		margin: var(--sp-xxxl) auto;
+		@media (min-width: 750px) {
+			justify-content: flex-start;
+		}
 		.widget {
 			min-width: 20.0rem;
+			text-align: center;
 			ul {
 				list-style: none;
 				padding: 0;
@@ -57,7 +63,9 @@ body.home .site-header-spacer {
 			a {
 				color: var(--color-primary);
 				text-decoration: none;
-				text-transform: uppercase;
+			}
+			@media (min-width: 750px) {
+				text-align: left;
 			}
 		}
 	}

@@ -20,13 +20,14 @@ $venues = get_terms([
 
 if ( is_wp_error( $venues ) || empty( $venues ) ) {
 	if ( $is_preview ) {
-		echo '<p><em>' . esc_html__( 'No hay recintos disponibles.', 'kostan' ) . '</em></p>';
+		echo '<p><em>' . esc_html__( 'Ez da lekurik eskuragarri.', 'kostan' ) . '</em></p>';
 	}
 	return;
 }
 ?>
 
 <section class="<?php echo esc_attr( $class_name ); ?>">
+    <h2 class="section-venue__title container"><?php esc_html_e( 'Lekuak', 'kostan' ); ?></h2>
     <div class="container">
         
         <?php foreach ( $venues as $venue ) :
@@ -75,7 +76,7 @@ if ( is_wp_error( $venues ) || empty( $venues ) ) {
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0ZM10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2ZM10.293 5.29297C10.6835 4.90244 11.3165 4.90244 11.707 5.29297L15.707 9.29297C16.0976 9.68349 16.0976 10.3165 15.707 10.707L11.707 14.707C11.3165 15.0976 10.6835 15.0976 10.293 14.707C9.90244 14.3165 9.90244 13.6835 10.293 13.293L12.5859 11H5C4.44772 11 4 10.5523 4 10C4 9.44771 4.44772 9 5 9H12.5859L10.293 6.70703C9.90244 6.31651 9.90244 5.68349 10.293 5.29297Z" fill="#269BC6"/>
                         </svg>
-                        <?php esc_html_e( 'Ver detalles', 'kostan' ); ?>
+                        <?php esc_html_e( '', 'kostan' ); ?>
                     </span>
                 </div>
                 </a>

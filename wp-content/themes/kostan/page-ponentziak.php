@@ -1,9 +1,11 @@
 <?php
 /**
+ * Template Name: Ponentziak
+ * Template Post Type: page
+ *
  * Page template: Ponentziak (Talks listing)
  *
  * Displays all talks grouped by month (oldest month first).
- * Uses slug-based page template: page-ponentziak.php
  *
  * @package Kostan
  */
@@ -66,8 +68,8 @@ get_header();
 				<?php endforeach; ?>
 				<li class="talks-nav__item talks-nav__item--calendar">
 					<a href="<?php echo esc_url( get_post_type_archive_link('talks') ); ?>">
-						<?php kostan_the_icon( 'calendar', 16 ); ?>
 						<?php esc_html_e( 'Egutegia', 'kostan' ); ?>
+						<?php kostan_the_icon( 'calendar', 16 ); ?>
 					</a>
 				</li>
 			</ul>

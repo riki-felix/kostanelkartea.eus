@@ -15,6 +15,10 @@
   	}
 }
 
+.section-venue__title {
+  margin: var(--sp-m) auto;
+}
+
 .venue-block {
   display: flex;
   flex-direction: column;
@@ -196,4 +200,50 @@
   color: var(--color-primary);
   text-align: center;
   margin-bottom: var(--sp-xxl);
+}
+
+/* ==============================================
+ * Taxonomy: Area detail page
+ * ============================================== */
+
+.area-header {
+  padding: var(--sp-xxl) 0 var(--sp-l);
+  text-align: center;
+}
+
+.area-header__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-m);
+}
+
+.area-header__icon {
+  width: 6.4rem;
+  height: 6.4rem;
+  object-fit: contain;
+}
+
+.area-header__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h1);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.area-header__description {
+  max-width: 60ch;
+  margin: var(--sp-m) auto 0;
+  color: var(--color-primary-600);
+  line-height: 1.6;
+}
+
+.area-talks {
+  padding-bottom: var(--sp-xxl);
+
+  .container {
+    max-width: var(--page-width-tight);
+  }
 }

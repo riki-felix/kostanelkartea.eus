@@ -37,11 +37,10 @@
 
 /* Talk title */
 .single-talk__title {
-  font-family: var(--font-body);
-  font-size: var(--fs-h2);
   font-weight: var(--weight-regular);
-  color: var(--color-primary);
   margin: var(--sp-xs) 0 var(--sp-xl);
+  line-height: 1.2;
+  text-transform: none;
 }
 
 /* Details cards row */
@@ -58,12 +57,16 @@
 
 .single-talk__detail {
   display: flex;
-  flex-direction: column;
-  gap: var(--sp-xxxs);
+  flex-direction: row;
+  align-items: baseline;
+  gap: var(--sp-xxxs) var(--sp-s);
   background: var(--color-light);
   border: 1px solid var(--color-primary-300);
   border-radius: var(--size-xxs);
   padding: var(--sp-m);
+  @media (min-width: 750px) {
+    flex-direction: column;
+  }
 }
 
 .single-talk__detail-icon {
@@ -96,6 +99,7 @@
 }
 
 .single-talk__video {
+  margin-top: var(--sp-xl);
   margin-bottom: var(--sp-xl);
 }
 
@@ -129,8 +133,8 @@
 
 .single-talk__content {
   margin-bottom: var(--sp-xxl);
-
-  p {
-    max-width: 72ch;
+  .container {
+    max-width: var(--page-reading);
+    margin: 0 auto;
   }
 }

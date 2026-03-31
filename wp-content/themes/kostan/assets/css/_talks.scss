@@ -6,11 +6,13 @@
 .page-talks__month,.section-talks {
   scroll-margin-top: calc(var(--header-height, 12rem) + 8rem);
   margin-bottom: var(--sp-xxl);
+  margin-top: var(--sp-l);
 
   h2 {
     text-transform: uppercase;
     color: var(--color-primary);
     margin-bottom: var(--sp-l);
+    text-align: center;
   }
 }
 
@@ -18,8 +20,7 @@
 .talks-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--grid-gap);
-
+  gap: calc(var(--grid-gap) *2) var(--grid-gap);
   @media (min-width: 750px) {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -59,7 +60,7 @@
   flex: 1;
   min-height: 30rem;
   justify-content: flex-end;
-  background-color: var(--color-primary-100);
+  background-color: var(--color-primary);
   background-image: var(--talk-card-image);
   background-position: center;
   background-repeat: no-repeat;
@@ -70,7 +71,7 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(180deg, rgba(18, 29, 52, 0.08) 0%, rgba(18, 29, 52, 0.82) 100%);
+    background: linear-gradient(180deg, rgba(78, 78, 78, 0.10) 0%, rgba(18, 29, 52, 0.82) 100%);
     opacity: 0;
     transition: opacity 0.2s ease;
   }
@@ -110,7 +111,7 @@
 .talk-card__speakers {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--sp-xxxs);
+  gap: 0 var(--sp-xxxs);
   font-size: var(--fs-paragraph);
   font-weight: var(--weight-bold);
   color: var(--color-primary);
@@ -142,11 +143,10 @@
 .talk-card__tag {
   display: inline-block;
   font-size: var(--fs-micro);
-  font-weight: var(--weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   padding: var(--sp-xxxs) var(--sp-xxs);
-  border: 1px solid currentColor;
+  border: 0.5px solid currentColor;
   border-radius: var(--size-xxxs);
   text-decoration: none;
   line-height: 1;
@@ -165,9 +165,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--sp-m);
-  border-top: 1px solid var(--color-primary-300);
-  background: var(--color-light);
+  padding: var(--sp-s);
+  background: var(--color-primary);
 }
 
 .talk-card__areas {
@@ -175,7 +174,7 @@
   flex-wrap: wrap;
   gap: var(--sp-xs);
   font-size: var(--fs-micro);
-  color: var(--color-primary-500);
+  color: var(--color-light);
 
   a {
     color: inherit;
@@ -190,12 +189,13 @@
 .talk-card__area {
   display: inline-flex;
   align-items: center;
-  gap: var(--sp-xxxs);
+  gap: var(--sp-xs);
+  font-size: var(--fs-paragraph);
 }
 
 .talk-card__area-icon {
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 3rem;
+  height: 3rem;
   object-fit: contain;
 }
 
@@ -211,7 +211,7 @@
   padding-left: var(--page-margin);
   padding-right: var(--page-margin);
   text-align: center;
-  padding-top: var(--sp-xl);
+  padding-top: var(--sp-xxxl);
 }
 
 /* ==============================================
@@ -230,14 +230,16 @@
   margin-left: auto;
   margin-right: auto;
   padding: 0 var(--page-margin);
-  background: var(--color-primary-100);
+  background: var(--color-primary);
   border-radius: 999px;
+  width: fit-content;
+  border: 0.5px solid var(--color-primary-100);
 }
 
 .talks-nav__list {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: first baseline;
   justify-content: center;
   gap: var(--sp-xs) var(--sp-l);
   list-style: none;
@@ -262,25 +264,25 @@
     font-weight: var(--weight-regular);
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--color-primary-500);
+    color: var(--color-primary-100);
     transition: color 0.15s ease;
     line-height: 1;
 
     &:hover {
-      color: var(--color-primary);
+      color: var(--color-light);
     }
   }
 
   &--past {
     a {
-      opacity: 0.4;
+      opacity: 0.8;
     }
   }
 
   &--current {
     a {
       font-weight: var(--weight-bold);
-      color: var(--color-primary);
+      color: var(--color-light);
     }
   }
 
@@ -295,16 +297,17 @@
       display: flex;
       align-items: center;
       gap: var(--sp-xxs);
-      font-weight: var(--weight-bold);
+      font-weight: var(--weight-medium);
       font-size: var(--fs-micro);
       text-transform: uppercase;
-      padding: var(--sp-xxs) 0;
-      border-radius: 999px;
+      padding: var(--sp-xxs);
       letter-spacing: 0.03em;
       line-height: 1;
-
+      @media (min-width: 750px) {
+        border-left: 0.5px solid var(--color-primary-100);
+      }
       &:hover {
-        color: var(--color-primary);
+        color: var(--color-light);
       }
     }
   }

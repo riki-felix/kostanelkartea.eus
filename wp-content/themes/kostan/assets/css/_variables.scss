@@ -16,10 +16,10 @@
 
   /* Colors — Primary scale */
   --color-primary:     #18223A;
-  --color-primary-600: #5E6268;
-  --color-primary-500: #7A8087;
-  --color-primary-400: #93979B;
-  --color-primary-300: #DCE2E8;
+  --color-primary-600: #3E4B63;
+  --color-primary-500: #62708A;
+  --color-primary-400: #8C96AC;
+  --color-primary-300: #BCC5D3;
   --color-primary-100: #F1F4F8;
 
   /* Colors — Secondary scale */
@@ -52,7 +52,7 @@
 
   /* Font sizes — Mobile defaults */
   --font-micro:       1.4rem;  /* 12px  — Micro */
-  --font-small:       1.8rem;  /* 18px  — Paragraph */
+  --font-small:       2.0rem;  /* 18px  — Paragraph */
   --font-medium:      2.4rem;  /* 24px  — Heading 3 */
   --font-large:       4.0rem;  /* 32px  — Heading 2 */
   --font-extralarge:  5.2rem;  /* 52px  — Heading 1 */
@@ -63,8 +63,10 @@
   --fs-paragraph: var(--font-small);
   --fs-h3:        var(--font-medium);
   --fs-h2:        var(--font-large);
-  --fs-h1:        var(--font-extralarge);
-
+  --fs-h1:        var(--font-large);
+  @media (min-width: 750px) {
+    --fs-h1:        var(--font-extralarge);
+  }
   /* Font weights */
   --weight-regular: 400;
   --weight-medium: 500;
@@ -92,8 +94,8 @@
   --page-width:       100%;
   --page-width-tight: 100%;
   --page-reading:     100%;
-  --page-margin:      1.8rem;  /* 18px */
-  --grid-gap:         0.4rem;  /*  4px */
+  --page-margin:      1.0rem;  /* 16px */
+  --grid-gap:         0.6rem;  /*  4px */
 
   /* Desktop overrides */
   @media (min-width: 750px) {

@@ -38,18 +38,31 @@ if ( $all_talks->have_posts() ) :
 		$day       = date('j', $ts);
 
 		/* Get parent area and its color */
-		$post_areas  = get_the_terms( get_the_ID(), 'area' );
+		$post_areas  = kostan_get_post_areas( get_the_ID() );
 		$area_color  = '';
 		$area_name   = '';
-		if ( ! empty( $post_areas ) && ! is_wp_error( $post_areas ) ) {
+		$area_slug   = '';
+		if ( ! empty( $post_areas ) ) {
 			foreach ( $post_areas as $pa ) {
 				$parent = ( $pa->parent ) ? get_term( $pa->parent, 'area' ) : $pa;
-				$color  = get_field( 'area_color', $parent );
+				if ( ! $parent || is_wp_error( $parent ) ) continue;
+				$color  = kostan_get_area_field( 'area_color', $parent->term_id );
 				if ( $color ) {
 					$area_color = $color;
 					$area_name  = $parent->name;
+					$area_slug  = $parent->slug;
 					break;
 				}
+			}
+		}
+
+		/* Speaker names */
+		$speakers     = get_field( 'talk_speakers', get_the_ID() );
+		$speaker_list = [];
+		if ( ! empty( $speakers ) ) {
+			foreach ( $speakers as $speaker ) {
+				$sid = is_object( $speaker ) ? $speaker->ID : $speaker;
+				$speaker_list[] = get_the_title( $sid );
 			}
 		}
 
@@ -60,6 +73,8 @@ if ( $all_talks->have_posts() ) :
 			'permalink'  => get_the_permalink(),
 			'area_color' => $area_color,
 			'area_name'  => $area_name,
+			'area_slug'  => $area_slug,
+			'speakers'   => $speaker_list,
 		];
 	endwhile;
 	wp_reset_postdata();
@@ -77,30 +92,36 @@ $season      = ( $first_year === $last_year ) ? $first_year : $first_year . '-' 
 	<!-- Header -->
 	<section class="calendar-header">
 		<div class="wrapper">
-			<h1 class="calendar-header__title">
-				<?php esc_html_e( 'Ponentziaren Egutegia', 'kostan' ); ?>
-				<span class="calendar-header__season"><?php echo esc_html( $season ); ?></span>
-			</h1>
-		</div>
-	</section>
+			<div class="calendar-header__row">
+				<h1 class="calendar-header__title">
+					<?php esc_html_e( 'Ponentziaren Egutegia', 'kostan' ); ?>
+					<span class="calendar-header__season"><?php echo esc_html( $season ); ?></span>
+				</h1>
 
-	<!-- Area legend -->
-	<?php if ( ! empty( $areas ) && ! is_wp_error( $areas ) ) : ?>
-	<section class="calendar-legend">
-		<div class="wrapper">
-			<ul class="calendar-legend__list">
-				<?php foreach ( $areas as $area ) :
-					$color = get_field( 'area_color', $area );
-				?>
-					<li class="calendar-legend__item">
-						<span class="calendar-legend__dot" <?php if ( $color ) : ?>style="background-color: <?php echo esc_attr( $color ); ?>"<?php endif; ?>></span>
-						<?php echo esc_html( $area->name ); ?>
-					</li>
-				<?php endforeach; ?>
-			</ul>
+				<?php if ( ! empty( $areas ) && ! is_wp_error( $areas ) ) : ?>
+				<div class="calendar-filter" id="calendar-area-filter" aria-expanded="false">
+					<button class="calendar-filter__toggle" type="button" aria-expanded="false">
+						<span class="calendar-filter__label"><?php esc_html_e( 'Area guztiak', 'kostan' ); ?></span>
+						<svg class="calendar-filter__arrow" width="12" height="8" viewBox="0 0 12 8" aria-hidden="true"><path fill="currentColor" d="M1.41.59 6 5.17 10.59.59 12 2 6 8 0 2z"/></svg>
+					</button>
+					<ul class="calendar-filter__list" role="listbox">
+						<li class="calendar-filter__option calendar-filter__option--active" role="option" data-value="">
+							<?php esc_html_e( 'Area guztiak', 'kostan' ); ?>
+						</li>
+						<?php foreach ( $areas as $area ) :
+							$color = kostan_get_area_field( 'area_color', $area->term_id );
+						?>
+						<li class="calendar-filter__option" role="option" data-value="<?php echo esc_attr( $area->slug ); ?>">
+							<span class="calendar-filter__dot" <?php if ( $color ) : ?>style="background-color: <?php echo esc_attr( $color ); ?>"<?php endif; ?>></span>
+							<?php echo esc_html( $area->name ); ?>
+						</li>
+						<?php endforeach; ?>
+					</ul>
+				</div>
+				<?php endif; ?>
+			</div>
 		</div>
 	</section>
-	<?php endif; ?>
 
 	<!-- Calendar grid -->
 	<?php if ( ! empty( $grouped ) ) : ?>
@@ -115,11 +136,14 @@ $season      = ( $first_year === $last_year ) ? $first_year : $first_year . '-' 
 
 					<ul class="calendar-month__list">
 						<?php foreach ( $talks as $talk ) : ?>
-						<li class="calendar-entry" <?php if ( $talk['area_color'] ) : ?>style="--entry-color: <?php echo esc_attr( $talk['area_color'] ); ?>"<?php endif; ?>>
+						<li class="calendar-entry" data-area="<?php echo esc_attr( $talk['area_slug'] ); ?>" <?php if ( $talk['area_color'] ) : ?>style="--entry-color: <?php echo esc_attr( $talk['area_color'] ); ?>"<?php endif; ?>>
 							<a href="<?php echo esc_url( $talk['permalink'] ); ?>" class="calendar-entry__link">
 								<span class="calendar-entry__day"><?php echo esc_html( $talk['day'] ); ?></span>
-								<span class="calendar-entry__title"><?php echo esc_html( $talk['title'] ); ?></span>
-							</a>
+								<div class="calendar-entry__info">
+									<span class="calendar-entry__speakers"><?php echo esc_html( implode( ', ', $talk['speakers'] ) ); ?></span>
+									<span class="calendar-entry__title"><?php echo esc_html( $talk['title'] ); ?></span>							<?php if ( ! empty( $talk['speakers'] ) ) : ?>
+								</div>
+							<?php endif; ?>							</a>
 						</li>
 						<?php endforeach; ?>
 					</ul>
