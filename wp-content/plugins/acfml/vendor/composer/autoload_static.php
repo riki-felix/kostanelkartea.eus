@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitcdc379e7f62c2e4f3d1352712a579aaa
+class ComposerStaticInit4e3acc11c081b4c60f20bde9ab04020e
 {
     public static $classMap = array (
         'ACFML\\Cache\\Flush' => __DIR__ . '/../..' . '/classes/Cache/Flush.php',
@@ -150,7 +150,7 @@ class ComposerStaticInitcdc379e7f62c2e4f3d1352712a579aaa
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInitcdc379e7f62c2e4f3d1352712a579aaa::$classMap;
+            $loader->classMap = ComposerStaticInit4e3acc11c081b4c60f20bde9ab04020e::$classMap;
 
         }, null, ClassLoader::class);
     }

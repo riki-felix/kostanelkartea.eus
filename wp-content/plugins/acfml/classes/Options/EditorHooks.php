@@ -9,6 +9,7 @@ use ACFML\Strings\Factory;
 use ACFML\Strings\Package;
 use ACFML\Tools\AdminUrl;
 use WPML\Element\API\Languages;
+use WPML\FP\Fns;
 use WPML\FP\Obj;
 
 class EditorHooks implements \IWPML_Backend_Action, \IWPML_DIC_Action {
@@ -100,7 +101,7 @@ class EditorHooks implements \IWPML_Backend_Action, \IWPML_DIC_Action {
 		}
 
 		NativeEditorTranslationHooks::loadFieldLockFilters();
-		add_filter( 'acf/load_value', function( $value, $fieldPostId, $field ) use ( $postId ) {
+		add_filter( 'acf/load_value', Fns::withNamedLock( self::class, Fns::identity(), function( $value, $fieldPostId, $field ) use ( $postId ) {
 			if ( ! $this->optionsPageId ) {
 				return $value;
 			}
@@ -131,7 +132,7 @@ class EditorHooks implements \IWPML_Backend_Action, \IWPML_DIC_Action {
 			}
 
 			return $value;
-		}, 10, 3 );
+		} ), 10, 3 );
 		return $fields;
 	}
 

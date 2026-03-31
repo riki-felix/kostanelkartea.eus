@@ -1,0 +1,2 @@
+<?php
+return ['messages'=>['9264ed7d90e732090f3198f7ea030434'=>'El 21 de febrero dimos un paseo por la ribera de los ríos Ego y Deba. Aprovechamos para visitar el MUFOMI (Museo de Fósiles y Minerales de Elgoibar)','Otsailaren 21ean ibilaldi bat egin genuen Ego eta Deba ibaien ertzetik. MUFOMI (Elgoibarko Fosil eta Mineralen Museoa) bisitatzeko aprobetxatu genuen.'=>'El 21 de febrero dimos un paseo por la ribera de los ríos Ego y Deba. Aprovechamos para visitar el MUFOMI (Museo de Fósiles y Minerales de Elgoibar)']];

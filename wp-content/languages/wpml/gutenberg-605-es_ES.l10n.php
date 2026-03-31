@@ -1,0 +1,2 @@
+<?php
+return ['messages'=>['Joan den abenduaren 19an, gure azken klasearen ostean, Aiten-Etxe jatetxera joan ginen urte amaierako bazkari atsegin bat egitera.'=>'El pasado 19 de diciembre tras nuestra última clase nos dirigimos al restaurante Aiten-Etxe para celebrar una agradable comida de fin de año.<br>','fd7b940ae1b24c9cbea8fb313f203a6e'=>'El pasado 19 de diciembre tras nuestra última clase nos dirigimos al restaurante Aiten-Etxe para celebrar una agradable comida de fin de año.<br>']];
