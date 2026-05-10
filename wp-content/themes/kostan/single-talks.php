@@ -89,7 +89,7 @@ if ( ! empty( $speakers ) ) {
 						<span class="single-talk__detail-label"><?php esc_html_e( 'Data', 'kostan' ); ?></span>
 						<span class="single-talk__detail-value">
 							<time datetime="<?php echo esc_attr( $dt_obj->format('Y-m-d\TH:i') ); ?>">
-								<?php echo esc_html( date_i18n( 'Y\k\o F\r\e\n ja\n', $ts_val ) ); ?>
+								<?php echo esc_html( kostan_format_timestamp( $ts_val, 'date' ) ); ?>
 							</time>
 						</span>
 					</div>

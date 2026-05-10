@@ -62,7 +62,7 @@ get_header();
 				?>
 					<li class="talks-nav__item<?php echo $is_past ? ' talks-nav__item--past' : ''; ?><?php echo $is_current ? ' talks-nav__item--current' : ''; ?>">
 						<a href="#<?php echo esc_attr( date( 'n-Y', $ts_nav ) ); ?>">
-							<?php echo esc_html( date_i18n( 'F', $ts_nav ) ); ?>
+							<?php echo esc_html( kostan_format_timestamp( $ts_nav, 'month' ) ); ?>
 						</a>
 					</li>
 				<?php endforeach; ?>
@@ -81,7 +81,7 @@ get_header();
 		?>
 		<section id="<?php echo esc_attr( date( 'n-Y', $ts_label ) ); ?>" class="page-talks__month">
 			<div class="container">
-				<h2><?php echo esc_html( date_i18n( 'F Y', $ts_label ) ); ?></h2>
+				<h2><?php echo esc_html( kostan_format_timestamp( $ts_label, 'month_year' ) ); ?></h2>
 
 				<div class="talks-grid">
 					<?php foreach ( $post_ids as $pid ) :

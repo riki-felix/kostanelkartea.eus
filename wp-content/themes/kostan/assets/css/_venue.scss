@@ -10,7 +10,7 @@
 		grid-template-columns: 1fr;
 		gap: var(--sp-xxxs);
 		@media (min-width: 750px) {
-			grid-template-columns: repeat(4, 1fr);
+			grid-template-columns: repeat(3, 1fr);
 		}
   	}
 }

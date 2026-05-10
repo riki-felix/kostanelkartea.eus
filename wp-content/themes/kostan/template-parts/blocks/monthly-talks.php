@@ -75,7 +75,7 @@ if ( ! empty( $block['className'] ) ) {
 
 <section class="<?php echo esc_attr( $class_name ); ?>">
 	<div class="container">
-		<h2><?php echo esc_html( wp_date( 'F Y', strtotime( $selected_month . '-01' ) ) ); ?></h2>
+		<h2><?php echo esc_html( kostan_format_timestamp( strtotime( $selected_month . '-01' ), 'month_year' ) ); ?></h2>
 
 		<div class="talks-grid">
 			<?php foreach ( $selected_ids as $talk_id ) :

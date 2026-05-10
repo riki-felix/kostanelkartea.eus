@@ -2,7 +2,7 @@
 /**
  * The template for displaying all pages
  *
- * @package V&H
+ * @package Kostan
  */
 
 get_header();

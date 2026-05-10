@@ -13,16 +13,32 @@ if ( ! empty( $block['className'] ) ) {
 	$class_name .= ' ' . $block['className'];
 }
 
-$venues = get_terms([
+// Always fetch venues from the default language so the manual order
+// (by term_id) is consistent across all site languages.
+// Then translate each term to the current language for display.
+$default_lang = apply_filters( 'wpml_default_language', null );
+
+$venues_raw = get_terms([
 	'taxonomy'   => 'venue',
 	'hide_empty' => false,
+	'orderby'    => 'term_id',
+	'order'      => 'ASC',
+	'lang'       => $default_lang ?: '',
 ]);
 
-if ( is_wp_error( $venues ) || empty( $venues ) ) {
+if ( is_wp_error( $venues_raw ) || empty( $venues_raw ) ) {
 	if ( $is_preview ) {
 		echo '<p><em>' . esc_html__( 'Ez da lekurik eskuragarri.', 'kostan' ) . '</em></p>';
 	}
 	return;
+}
+
+// Translate each term to the current language (falls back to original if no translation).
+$venues = [];
+foreach ( $venues_raw as $raw_term ) {
+	$translated_id = (int) apply_filters( 'wpml_object_id', $raw_term->term_id, 'venue', true );
+	$translated    = get_term( $translated_id, 'venue' );
+	$venues[]      = ( $translated && ! is_wp_error( $translated ) ) ? $translated : $raw_term;
 }
 ?>
 

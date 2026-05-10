@@ -82,7 +82,7 @@ endif;
 				$ts_label = strtotime( $ym . '-01' );
 			?>
 			<div class="page-talks__month">
-				<h2><?php echo esc_html( date_i18n( 'F Y', $ts_label ) ); ?></h2>
+				<h2><?php echo esc_html( kostan_format_timestamp( $ts_label, 'month_year' ) ); ?></h2>
 
 				<div class="talks-grid">
 					<?php foreach ( $post_ids as $pid ) :

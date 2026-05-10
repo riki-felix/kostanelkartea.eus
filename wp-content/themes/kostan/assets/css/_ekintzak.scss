@@ -14,6 +14,24 @@
   
 }
 
+/* Context modifier: Berriak list uses 2 columns from tablet up */
+.ctx-berriak .ekintzak-grid {
+  @media (min-width: 750px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    .ekintzak-card:first-child {
+      grid-column: span 3;
+    }
+  }
+  .ekintzak-card__title {
+    font-size: var(--font-medium);
+    line-height: 1.25;
+    font-weight: var(--weight-bold);
+  }
+  .ekintzak-card {
+    grid-template-columns: 1fr;
+  }
+}
+
 .ekintzak-card {
   display: grid;
   grid-template-columns: 1fr;

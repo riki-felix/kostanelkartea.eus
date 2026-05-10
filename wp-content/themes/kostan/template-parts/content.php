@@ -2,7 +2,7 @@
 /**
  * Template part for displaying posts
  *
- * @package V&H
+ * @package Kostan
  */
 
 ?>

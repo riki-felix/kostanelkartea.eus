@@ -30,7 +30,7 @@ $thumbnail = get_the_post_thumbnail_url( $post_id, 'large' );
 				$ts_val = $dt_obj ? $dt_obj->getTimestamp() : 0;
 			?>
 				<time class="talk-card__date" datetime="<?php echo $dt_obj ? esc_attr( $dt_obj->format('Y-m-d\TH:i') ) : ''; ?>">
-					<?php echo esc_html( date_i18n( get_option('date_format'), $ts_val ) ); ?>
+					<?php echo esc_html( kostan_format_timestamp( $ts_val, 'date' ) ); ?>
 				</time>
 			<?php endif; ?>
 

@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
+import { Autoplay, Pagination, EffectFade, Navigation } from 'swiper/modules';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Mobile menu toggle
@@ -61,6 +61,27 @@ document.addEventListener('DOMContentLoaded', () => {
       pagination: {
         el: el.querySelector('.hero-carousel__pagination'),
         clickable: true,
+      },
+    });
+  });
+
+  // Latest News Slider (Swiper)
+  document.querySelectorAll('.latest-news__swiper').forEach(el => {
+    new Swiper(el, {
+      modules: [Autoplay, Pagination],
+      slidesPerView: 1.15,
+      spaceBetween: 12,
+      loop: false,
+      autoplay: { delay: 4000, disableOnInteraction: true },
+      pagination: {
+        el: el.querySelector('.latest-news__pagination'),
+        clickable: true,
+      },
+      breakpoints: {
+        750: {
+          slidesPerView: 3,
+          spaceBetween: 16,
+        },
       },
     });
   });

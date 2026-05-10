@@ -132,7 +132,7 @@ $season      = ( $first_year === $last_year ) ? $first_year : $first_year . '-' 
 					$ts_label = strtotime( $ym . '-01' );
 				?>
 				<div class="calendar-month">
-					<h2 class="calendar-month__title"><?php echo esc_html( date_i18n( 'F', $ts_label ) ); ?></h2>
+					<h2 class="calendar-month__title"><?php echo esc_html( kostan_format_timestamp( $ts_label, 'month' ) ); ?></h2>
 
 					<ul class="calendar-month__list">
 						<?php foreach ( $talks as $talk ) : ?>

@@ -32,6 +32,7 @@ $noticias = new WP_Query([
 	<div class="container">
 		<div class="ekintzak-grid">
 			<?php while ( $noticias->have_posts() ) : $noticias->the_post(); ?>
+			<?php $post_ts = get_post_timestamp( get_the_ID() ); ?>
 			<article <?php post_class( 'ekintzak-card' ); ?>>
 				<?php if ( has_post_thumbnail() ) : ?>
 					<div class="ekintzak-card__image">
@@ -41,14 +42,14 @@ $noticias = new WP_Query([
 
 				<div class="ekintzak-card__content">
 					<time class="ekintzak-card__date" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>">
-						<?php echo esc_html( get_the_date() ); ?>
+						<?php echo esc_html( kostan_format_timestamp( $post_ts, 'date' ) ); ?>
 					</time>
 
 					<h2 class="ekintzak-card__title">
 						<?php the_title(); ?>
 					</h2>
 					<div class="ekintzak-card__excerpt">
-						<?php the_excerpt(); ?>
+						<?php the_content(); ?>
 					</div>
 				</div>
 			</article>

@@ -225,6 +225,17 @@ function ct_acf_init() {
             'keywords'        => ['talks', 'ponencias', 'mes', 'monthly'],
             'supports'        => ['align' => false, 'multiple' => false],
         ]);
+
+        acf_register_block_type([
+            'name'            => 'latest-news',
+            'title'           => __('Últimas noticias', 'kostan'),
+            'description'     => __('Slider con las últimas 5 noticias.', 'kostan'),
+            'render_template' => 'template-parts/blocks/latest-news.php',
+            'category'        => 'formatting',
+            'icon'            => 'megaphone',
+            'keywords'        => ['news', 'noticias', 'slider', 'últimas'],
+            'supports'        => ['align' => false, 'multiple' => false],
+        ]);
     }
 }
 add_action('acf/init', 'ct_acf_init');
@@ -340,4 +351,86 @@ function kostan_nav_menu_highlight_parent( $classes, $menu_item ) {
 	return $classes;
 }
 add_filter( 'nav_menu_css_class', 'kostan_nav_menu_highlight_parent', 10, 2 );
+
+/**
+ * Add page-context body classes for shared templates.
+ *
+ * These classes are language-agnostic and safe with WPML.
+ */
+function kostan_body_context_classes( $classes ) {
+    if ( is_page_template( 'page-noticias.php' ) ) {
+        $classes[] = 'ctx-berriak';
+    }
+
+    return $classes;
+}
+add_filter( 'body_class', 'kostan_body_context_classes' );
+
+/**
+ * Get current language code (WPML-aware).
+ */
+function kostan_get_current_language_code() {
+    if ( has_filter( 'wpml_current_language' ) ) {
+        $lang = apply_filters( 'wpml_current_language', null );
+        if ( ! empty( $lang ) ) {
+            return strtolower( (string) $lang );
+        }
+    }
+
+    $locale = determine_locale();
+    return strtolower( substr( (string) $locale, 0, 2 ) );
+}
+
+/**
+ * Return a language-aware date format for a given context.
+ */
+function kostan_get_localized_date_format( $context = 'date' ) {
+    $lang = kostan_get_current_language_code();
+
+    if ( $lang === 'eu' ) {
+        switch ( $context ) {
+            case 'month':
+                return 'F';
+            case 'month_year':
+                return 'Y\\k\\o F';
+            case 'date':
+            default:
+                return 'Y\\k\\o F\\r\\e\\n j\\a\\n';
+        }
+    }
+
+    if ( $lang === 'es' ) {
+        switch ( $context ) {
+            case 'month':
+                return 'F';
+            case 'month_year':
+                return 'F Y';
+            case 'date':
+            default:
+                return 'j \\d\\e F \\d\\e Y';
+        }
+    }
+
+    switch ( $context ) {
+        case 'month':
+            return 'F';
+        case 'month_year':
+            return 'F Y';
+        case 'date':
+        default:
+            return get_option( 'date_format' );
+    }
+}
+
+/**
+ * Format a timestamp with a localized date format.
+ */
+function kostan_format_timestamp( $timestamp, $context = 'date' ) {
+    $timestamp = (int) $timestamp;
+    if ( $timestamp <= 0 ) {
+        return '';
+    }
+
+    return wp_date( kostan_get_localized_date_format( $context ), $timestamp );
+}
 

@@ -2,7 +2,7 @@
 /**
  * The main template file
  *
- * @package V&H
+ * @package Kostan
  */
 
 get_header();

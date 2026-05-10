@@ -1,2 +1,2 @@
 <?php
-return ['items'=>[]];
+return ['items'=>['Translations'=>['saveStringInDb'=>true,'cmp'=>['sitepress-multilingual-cms',1],'names'=>[],'urls'=>[]],'hide'=>['saveStringInDb'=>true,'cmp'=>['sitepress-multilingual-cms',1],'names'=>[],'urls'=>[]],'show'=>['saveStringInDb'=>true,'cmp'=>['sitepress-multilingual-cms',1],'names'=>[],'urls'=>[]],'Update %s translation'=>['saveStringInDb'=>true,'cmp'=>['sitepress-multilingual-cms',1],'names'=>[],'urls'=>[]],'%s translation assigned to local translator'=>['saveStringInDb'=>true,'cmp'=>['sitepress-multilingual-cms',1],'names'=>[],'urls'=>[]]]];

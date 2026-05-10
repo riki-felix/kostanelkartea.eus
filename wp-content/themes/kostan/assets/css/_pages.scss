@@ -17,3 +17,48 @@
 .section-intro {
   background-color: var(--color-primary-300);
 }
+.section-login {
+  margin-bottom: var(--sp-xxxl);
+  .form-login {
+    padding: var(--page-margin);
+    label {
+      display: block;
+      margin-bottom: var(--sp-xxs);
+      font-size: var(--font-micro);
+    }
+    .input {
+      margin: 0;
+      display: block;
+      width: 100%;
+      padding: var(--sp-xxs) var(--sp-s);
+      font-size: var(--font-paragraph);
+      font-family: var(--font-body);
+    }
+    .login-username {}
+    .login-password {}
+    .login-submit {
+      .button {
+        appearance: none;
+        --webkit-appearance: none;
+        background-color: var(--color-secondary);
+        color: var(--color-light);
+        border: none;
+        font-size: var(--font-paragraph);
+        text-transform: uppercase;
+        padding: var(--sp-s) var(--sp-m);
+        border-radius: var(--size-xxs);
+        cursor: pointer;
+        &:hover {
+          background-color: var(--color-primary);
+        }
+      }
+    }
+  }
+  &--connected {
+    margin-bottom: var(--sp-xxxl);
+    .bank-account {
+      background-color: var(--color-secondary-200);
+      padding: var(--page-margin);
+    }
+  }
+}

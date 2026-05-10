@@ -21,6 +21,7 @@ get_header();
 	<div class="container">
 		<div class="ekintzak-grid">
 			<?php while ( have_posts() ) : the_post(); ?>
+			<?php $post_ts = get_post_timestamp( get_the_ID() ); ?>
 			<article <?php post_class( 'ekintzak-card' ); ?>>
 				<?php if ( has_post_thumbnail() ) : ?>
 					<a href="<?php the_permalink(); ?>" class="ekintzak-card__image">
@@ -30,7 +31,7 @@ get_header();
 
 				<div class="ekintzak-card__content">
 					<time class="ekintzak-card__date" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>">
-						<?php echo esc_html( get_the_date() ); ?>
+						<?php echo esc_html( kostan_format_timestamp( $post_ts, 'date' ) ); ?>
 					</time>
 
 					<h2 class="ekintzak-card__title">

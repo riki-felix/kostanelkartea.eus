@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts
  *
- * @package V&H
+ * @package Kostan
  */
 
 get_header();
