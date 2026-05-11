@@ -382,22 +382,11 @@ function kostan_get_current_language_code() {
 }
 
 /**
- * Return a language-aware date format for a given context.
+ * Return a wp_date() format string for non-Basque languages.
+ * Basque dates are assembled dynamically in kostan_format_timestamp().
  */
 function kostan_get_localized_date_format( $context = 'date' ) {
     $lang = kostan_get_current_language_code();
-
-    if ( $lang === 'eu' ) {
-        switch ( $context ) {
-            case 'month':
-                return 'F';
-            case 'month_year':
-                return 'Y\\k\\o F';
-            case 'date':
-            default:
-                return 'Y\\k\\o F\\r\\e\\n j\\a\\n';
-        }
-    }
 
     if ( $lang === 'es' ) {
         switch ( $context ) {
@@ -423,12 +412,100 @@ function kostan_get_localized_date_format( $context = 'date' ) {
 }
 
 /**
+ * Determine whether a Basque number ends in a consonant or vowel sound.
+ *
+ * Basque morphophonology rules for numbers (relevant for case suffixes):
+ *   - consonant-ending → genitive '-eko', locative '-ean'
+ *   - vowel-ending     → genitive '-ko',  locative '-n'
+ *
+ * Consonant-ending cases:
+ *   units = 5 → "bost" (t)          — always, regardless of tens
+ *   units = 1, even tens → "bat" (t) — e.g. 1, 21, 41, 61, 81
+ *   units = 0, odd  tens → "hamar" (r) — e.g. 10, 30, 50, 70, 90
+ *   last2 = 0 and NOT a round-thousand → "ehun" (n) — e.g. 100, 2100
+ *
+ * Returns 'eko' (consonant) or 'ko' (vowel).
+ */
+function kostan_eu_number_vowel_type( $n ) {
+    $n     = (int) $n;
+    $last2 = $n % 100;
+
+    if ( $last2 === 0 ) {
+        // Round thousands → "mila" ends in 'a' (vowel) → ko
+        // Round hundreds  → "ehun" ends in 'n' (consonant) → eko
+        return ( $n % 1000 === 0 ) ? 'ko' : 'eko';
+    }
+
+    $units = $last2 % 10;
+    $tens  = (int) ( $last2 / 10 );
+
+    if ( $units === 5 ) {
+        return 'eko'; // "bost" → t
+    }
+
+    if ( $units === 1 ) {
+        // even tens (0,2,4,6,8): "bat" → t → eko  e.g. 01, 21, 41, 61, 81
+        // odd  tens (1,3,5,7,9): "hamaika" → a → ko  e.g. 11, 31, 51, 71, 91
+        return ( $tens % 2 === 0 ) ? 'eko' : 'ko';
+    }
+
+    if ( $units === 0 ) {
+        // odd  tens (1,3,5,7,9): "hamar" → r → eko  e.g. 10, 30, 50, 70, 90
+        // even tens (2,4,6,8):   "hogei/berrogei…" → i → ko  e.g. 20, 40, 60, 80
+        return ( $tens % 2 === 1 ) ? 'eko' : 'ko';
+    }
+
+    // 2→bi(i), 3→hiru(u), 4→lau(u), 6→sei(i), 7→zazpi(i), 8→zortzi(i), 9→bederatzi(i)
+    return 'ko';
+}
+
+/**
+ * Return the Basque month name in genitive case.
+ * Standard WP/WPML Basque month names end in -a; genitive replaces -a with -aren.
+ * e.g. "Maiatza" → "Maiatzaren", "Ekaina" → "Ekainaren".
+ */
+function kostan_eu_month_genitive( $timestamp ) {
+    $month = wp_date( 'F', $timestamp );
+    if ( substr( $month, -1 ) === 'a' ) {
+        return substr( $month, 0, -1 ) . 'aren';
+    }
+    // Fallback for non-standard locale month names
+    return $month . 'ren';
+}
+
+/**
  * Format a timestamp with a localized date format.
+ * Basque dates are assembled dynamically to respect morphophonological rules.
  */
 function kostan_format_timestamp( $timestamp, $context = 'date' ) {
     $timestamp = (int) $timestamp;
     if ( $timestamp <= 0 ) {
         return '';
+    }
+
+    if ( kostan_get_current_language_code() === 'eu' ) {
+        $month = wp_date( 'F', $timestamp ); // translated by WP/WPML to Basque
+
+        switch ( $context ) {
+            case 'month':
+                return $month;
+
+            case 'month_year':
+                $year   = (int) wp_date( 'Y', $timestamp );
+                $suffix = kostan_eu_number_vowel_type( $year );
+                return "{$year}{$suffix} {$month}";
+
+            case 'date':
+            default:
+                $year      = (int) wp_date( 'Y', $timestamp );
+                $suffix    = kostan_eu_number_vowel_type( $year );
+                $month_gen = kostan_eu_month_genitive( $timestamp );
+                $day       = (int) wp_date( 'j', $timestamp );
+                $day_loc   = ( kostan_eu_number_vowel_type( $day ) === 'eko' )
+                    ? "{$day}ean"
+                    : "{$day}n";
+                return "{$year}{$suffix} {$month_gen} {$day_loc}";
+        }
     }
 
     return wp_date( kostan_get_localized_date_format( $context ), $timestamp );
