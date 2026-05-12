@@ -416,7 +416,7 @@ function kostan_get_localized_date_format( $context = 'date' ) {
  *
  * Basque morphophonology rules for numbers (relevant for case suffixes):
  *   - consonant-ending → genitive '-eko', locative '-ean'
- *   - vowel-ending     → genitive '-ko',  locative '-n'
+ *   - vowel-ending     → genitive '-ko',  locative '-an'
  *
  * Consonant-ending cases:
  *   units = 5 → "bost" (t)          — always, regardless of tens
@@ -503,7 +503,7 @@ function kostan_format_timestamp( $timestamp, $context = 'date' ) {
                 $day       = (int) wp_date( 'j', $timestamp );
                 $day_loc   = ( kostan_eu_number_vowel_type( $day ) === 'eko' )
                     ? "{$day}ean"
-                    : "{$day}n";
+                    : "{$day}an";
                 return "{$year}{$suffix} {$month_gen} {$day_loc}";
         }
     }
