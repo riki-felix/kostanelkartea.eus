@@ -45,6 +45,7 @@ h1,.h1 {
   line-height: 1;
   font-weight: var(--weight-bold);
   text-align: center;
+  margin-bottom: var(--sp-s);
 }
 
 h2,.h2 {
@@ -69,6 +70,7 @@ h5 {
 
 h6 {
   font-size: var(--fs-h6);
+  margin-bottom: var(--sp-s);
 }
 
 p {
@@ -116,14 +118,6 @@ a:hover {
   padding-bottom: var(--sp-xxl);
 }
 
-/* Wordpress Overrides */
-.wp-block-group.wp-block-group-is-layout-grid {
-  gap: 0;
-  grid-template-columns: 1fr;
-  @media (min-width: 750px) {
-    grid-template-columns: repeat(3,1fr);
-  }
-  @media (min-width: 1600px) {
-    grid-template-columns: repeat(4,1fr);
-  }
+h6.wp-block-heading {
+  mbottoom: var(--sp-s);
 }

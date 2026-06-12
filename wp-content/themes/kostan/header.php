@@ -88,6 +88,13 @@ $url = 'https://wa.me/?text=' . rawurlencode( $mensaje );
 			</div>
 		</div>
 
+		<?php if ( is_user_logged_in() ) : ?>
+		<!-- Session indicator (logged in users, desktop) -->
+		<div class="site-header__session container">
+			<?php ct_render_session_indicator( false ); ?>
+		</div>
+		<?php endif; ?>
+
 		<!-- Mobile menu panel -->
 		<div id="menu-panel" class="menu-panel">
 			<nav class="menu-panel__nav" aria-label="<?php esc_attr_e('Mobile navigation', 'kostan'); ?>">
@@ -109,6 +116,8 @@ $url = 'https://wa.me/?text=' . rawurlencode( $mensaje );
 					'depth'          => 1,
 				]);
 				?>
+				<!-- Session indicator (logged in users) -->
+				<?php ct_render_session_indicator( true ); ?>
 			</nav>
 		</div>
 	</header>

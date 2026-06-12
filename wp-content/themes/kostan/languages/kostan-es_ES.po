@@ -1,0 +1,43 @@
+# Spanish (Spain) translation for Kostan Theme
+# Copyright (C) 2026 Kostan
+# This file is distributed under the same license as the Kostan package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Kostan Theme 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 00:00+0000\n"
+"PO-Revision-Date: 2026-06-11 00:00+0000\n"
+"Last-Translator: Kostan Team\n"
+"Language-Team: Spanish (Spain)\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0\n"
+
+#: header.php
+msgid "Primary navigation"
+msgstr "Navegación principal"
+
+#: header.php
+msgid "Actions"
+msgstr "Acciones"
+
+#: header.php
+msgid "Language"
+msgstr "Idioma"
+
+#: header.php
+msgid "Mobile navigation"
+msgstr "Navegación móvil"
+
+#: functions.php - Session indicator
+msgid "Itxi sesioa"
+msgstr "Cerrar sesión"
+
+#: functions.php - Session greeting
+#, php-format
+msgid "Kaixo %s!"
+msgstr "¡Hola %s!"

@@ -1,0 +1,164 @@
+.deskargak-grid {
+  margin: var(--sp-xl) 0;
+}
+
+.deskargak-grid__items {
+  display: grid;
+  gap: 2.0rem;
+}
+
+.deskargak-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(1.6rem, 2vw, 3.2rem);
+  padding: clamp(2.0rem, 2.8vw, 3.2rem);
+  border-radius: 1.2rem;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(23, 35, 63, 0.08);
+  text-decoration: none;
+  transition: box-shadow .2s ease, transform .2s ease, background-color .2s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(24, 34, 58, 0.08), 0 0 0 1px rgba(23, 35, 63, 0.12);
+    transform: translateY(-1px);
+    outline: none;
+  }
+}
+
+.deskargak-card__content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.deskargak-card__title {
+  margin: 0;
+  color: var(--Primary, #18223A);
+  font-family: var(--Size-Font-Families-Heading, "Barlow Condensed"), sans-serif;
+  font-size: var(--Size-xl, 32px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 115%;
+}
+
+.deskargak-card__filename {
+  margin: 1.6rem 0 0;
+  font-size: 2.0rem;
+  line-height: 1.35;
+  color: #59606b;
+  word-break: break-word;
+}
+
+.deskargak-card__updated {
+  margin: 1.2rem 0 0;
+  color: #8f949d;
+  font-family: var(--Size-Font-Families-Body, Barlow), sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+.deskargak-card__download-label {
+  color: var(--Secondary, #269BC6);
+  font-family: var(--Size-Font-Families-Body, Barlow), sans-serif;
+  font-size: var(--Size-s, 14px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%;
+}
+
+.deskargak-card__arrow {
+  margin: 0 .4rem;
+  color: #59606b;
+}
+
+.deskargak-card__filename-base {
+  color: #59606b;
+}
+
+.deskargak-card__ext {
+  font-weight: 700;
+}
+
+.deskargak-card__ext--pdf {
+  color: #e4332c;
+}
+
+.deskargak-card__ext--zip {
+  color: #e29b19;
+}
+
+.deskargak-card__ext--doc,
+.deskargak-card__ext--xls {
+  color: #2f7cc3;
+}
+
+.deskargak-card__ext--ppt {
+  color: #d5672e;
+}
+
+.deskargak-card__ext--image {
+  color: #8a6ce0;
+}
+
+.deskargak-card__ext--video {
+  color: #d05a83;
+}
+
+.deskargak-card__ext--audio {
+  color: #46b7a4;
+}
+
+.deskargak-card__ext--other {
+  color: #59606b;
+}
+
+.deskargak-card__download {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  color: #2e9cd7;
+  transition: transform .18s ease, color .18s ease;
+}
+
+.deskargak-card__download-icon {
+  display: block;
+  width: clamp(5.6rem, 6vw, 6.6rem);
+  height: auto;
+}
+
+.deskargak-card:hover .deskargak-card__download,
+.deskargak-card:focus-visible .deskargak-card__download {
+  color: #17233f;
+  transform: translateY(.2rem);
+}
+
+@media (max-width: 800px) {
+  .deskargak-card {
+    gap: 1.6rem;
+    padding: 2.0rem;
+  }
+
+  .deskargak-card__title {
+    font-size: 28px;
+  }
+
+  .deskargak-card__filename {
+    margin-top: 1.2rem;
+  }
+
+  .deskargak-card__updated {
+    margin-top: .8rem;
+  }
+
+  .deskargak-card__download-icon {
+    width: 5.2rem;
+  }
+}

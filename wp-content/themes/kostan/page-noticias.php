@@ -10,6 +10,12 @@
 
 get_header();
 
+$search_ui = function_exists( 'kostan_search_ui_strings' ) ? kostan_search_ui_strings() : [
+	'label'       => 'Buscar',
+	'button'      => 'Buscar',
+	'placeholder' => 'Buscar actividades y noticias',
+];
+
 $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 
 $noticias = new WP_Query([
@@ -23,8 +29,21 @@ $noticias = new WP_Query([
 
 <main id="primary" class="site-main page-ekintzak">
 	<header class="page-ekintzak__header">
-		<div class="container">
-			<h1><?php the_title(); ?></h1>
+		<div class="container page-ekintzak__header-inner">
+			<div class="page-ekintzak__header-row">
+				<h1><?php the_title(); ?></h1>
+				<form role="search" method="get" class="content-search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<label class="screen-reader-text" for="search-noticias-input"><?php echo esc_html( $search_ui['label'] ); ?></label>
+					<input id="search-noticias-input" type="search" class="input content-search-form__input" placeholder="<?php echo esc_attr( $search_ui['placeholder'] ); ?>" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" />
+					<input type="hidden" name="post_type[]" value="post" />
+					<input type="hidden" name="post_type[]" value="news" />
+					<button type="submit" class="button content-search-form__button">
+						<?php kostan_the_icon( 'search', 16, 'content-search-form__icon' ); ?>
+						<span><?php echo esc_html( $search_ui['button'] ); ?></span>
+					</button>
+				</form>
+			</div>
+			<?php echo kostan_render_activity_categories_menu(); ?>
 		</div>
 	</header>
 

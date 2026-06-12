@@ -5,6 +5,53 @@ define('ct_THEME_VERSION', wp_get_theme()->get('Version'));
 
 require_once get_template_directory() . '/inc/icons.php';
 require_once get_template_directory() . '/acf-fields/hero-carousel.php';
+require_once get_template_directory() . '/acf-fields/deskargak.php';
+
+/**
+ * Render session indicator (login/logout).
+ * Shows when user is logged in; empty when logged out.
+ * 
+ * @param bool $mobile Whether this is for mobile menu (true) or desktop (false).
+ */
+function ct_render_session_indicator( $mobile = false ) {
+	if ( ! is_user_logged_in() ) {
+		return;
+	}
+
+	$current_user = wp_get_current_user();
+	$user_name    = $current_user->display_name ?: $current_user->user_login;
+	$logout_url   = wp_logout_url( home_url() );
+
+	if ( $mobile ) {
+        // Mobile: same alert style inside menu panel
+		?>
+		<li class="user-session user-session--mobile">
+            <div class="user-session__alert">
+                <span class="user-session__icon" aria-hidden="true"><?php kostan_the_icon( 'lock', 16 ); ?></span>
+                <span class="user-session__greeting"><?php echo esc_html( sprintf( __( 'Kaixo %s!', 'kostan' ), $user_name ) ); ?></span>
+                <a href="<?php echo esc_url( $logout_url ); ?>" class="user-session__logout">
+                    <span class="user-session__logout-text"><?php esc_html_e( 'Itxi sesioa', 'kostan' ); ?></span>
+                    <span class="user-session__logout-icon" aria-hidden="true"><?php kostan_the_icon( 'arrow-right', 16 ); ?></span>
+                </a>
+            </div>
+		</li>
+		<?php
+	} else {
+        // Desktop: alert row below main header bar
+		?>
+		<div class="user-session user-session--desktop">
+			<div class="user-session__alert">
+                <span class="user-session__icon" aria-hidden="true"><?php kostan_the_icon( 'lock', 16 ); ?></span>
+				<span class="user-session__greeting"><?php echo esc_html( sprintf( __( 'Kaixo %s!', 'kostan' ), $user_name ) ); ?></span>
+                <a href="<?php echo esc_url( $logout_url ); ?>" class="user-session__logout">
+                    <span class="user-session__logout-text"><?php esc_html_e( 'Itxi sesioa', 'kostan' ); ?></span>
+                    <span class="user-session__logout-icon" aria-hidden="true"><?php kostan_the_icon( 'arrow-right', 16 ); ?></span>
+                </a>
+			</div>
+		</div>
+		<?php
+	}
+}
 
 /**
  * Enqueue assets - Direct output method
@@ -63,6 +110,8 @@ add_action('wp_footer', 'ct_debug_assets', 999);
  * Theme setup
  */
 function ct_setup() {
+	load_theme_textdomain( 'kostan', get_template_directory() . '/languages' );
+	
     add_theme_support('automatic-feed-links');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
@@ -236,6 +285,31 @@ function ct_acf_init() {
             'keywords'        => ['news', 'noticias', 'slider', 'últimas'],
             'supports'        => ['align' => false, 'multiple' => false],
         ]);
+
+        acf_register_block_type([
+            'name'            => 'deskargak',
+            'title'           => __('Deskargak', 'kostan'),
+            'description'     => __('Contenedor de descargas con items anidados.', 'kostan'),
+            'render_template' => 'template-parts/blocks/deskargak.php',
+            'mode'            => 'preview',
+            'category'        => 'formatting',
+            'icon'            => 'download',
+            'keywords'        => ['deskargak', 'descargas', 'archivos', 'downloads'],
+            'supports'        => ['align' => ['wide'], 'multiple' => true, 'jsx' => true],
+        ]);
+
+        acf_register_block_type([
+            'name'            => 'deskargak-item',
+            'title'           => __('Deskargak Item', 'kostan'),
+            'description'     => __('Elemento individual de descarga.', 'kostan'),
+            'render_template' => 'template-parts/blocks/deskargak-item.php',
+            'mode'            => 'preview',
+            'category'        => 'formatting',
+            'icon'            => 'media-document',
+            'keywords'        => ['deskargak', 'descarga', 'archivo', 'item'],
+            'parent'          => ['acf/deskargak'],
+            'supports'        => ['align' => false, 'multiple' => true],
+        ]);
     }
 }
 add_action('acf/init', 'ct_acf_init');
@@ -256,6 +330,107 @@ function ct_enqueue_google_maps() {
     );
 }
 add_action('wp_enqueue_scripts', 'ct_enqueue_google_maps');
+
+/**
+ * Restrict frontend search results to activities (post) and news.
+ */
+function kostan_limit_search_post_types( $query ) {
+    if ( is_admin() || ! $query->is_main_query() || ! $query->is_search() ) {
+        return;
+    }
+
+    $query->set( 'post_type', [ 'post', 'news' ] );
+}
+add_action( 'pre_get_posts', 'kostan_limit_search_post_types' );
+
+/**
+ * Search UI labels by current language.
+ */
+function kostan_search_ui_strings() {
+    $lang = kostan_get_current_language_code();
+
+    if ( 'eu' === $lang ) {
+        return [
+            'label'             => 'Bilatu',
+            'button'            => 'Bilatu',
+            'placeholder'       => 'Bilatu jarduerak eta berriak',
+            'results_title'     => 'Bilaketa emaitzak',
+            'results_summary'   => '%1$d emaitza "%2$s" bilaketarako',
+            'no_results'        => 'Ez da emaitzarik aurkitu.',
+            'type_news'         => 'Berria',
+            'type_activity'     => 'Jarduera',
+            'no_category'       => 'Kategoriarik gabe',
+        ];
+    }
+
+    return [
+        'label'             => 'Buscar',
+        'button'            => 'Buscar',
+        'placeholder'       => 'Buscar actividades y noticias',
+        'results_title'     => 'Resultados de busqueda',
+        'results_summary'   => '%1$d resultados para "%2$s"',
+        'no_results'        => 'No se han encontrado resultados.',
+        'type_news'         => 'Noticia',
+        'type_activity'     => 'Actividad',
+        'no_category'       => 'Sin categoria',
+    ];
+}
+
+/**
+ * Render the automatic category menu used on Ekintzak pages.
+ */
+function kostan_render_activity_categories_menu() {
+    $term_args = [
+        'taxonomy'   => 'category',
+        'hide_empty' => true,
+        'orderby'    => 'name',
+        'order'      => 'ASC',
+    ];
+
+    $current_lang = kostan_get_current_language_code();
+    if ( has_filter( 'wpml_current_language' ) && ! empty( $current_lang ) ) {
+        $term_args['lang'] = $current_lang;
+    }
+
+    $terms = get_terms( $term_args );
+    if ( is_wp_error( $terms ) || empty( $terms ) ) {
+        return '';
+    }
+
+    $current_term_id = 0;
+    if ( is_category() ) {
+        $current_term_id = (int) get_queried_object_id();
+    }
+
+    $items = [];
+    foreach ( $terms as $term ) {
+        $link = get_term_link( $term );
+        if ( is_wp_error( $link ) ) {
+            continue;
+        }
+
+        $is_active = $current_term_id && (int) $term->term_id === $current_term_id;
+        $items[]   = sprintf(
+            '<li class="page-ekintzak__topic-item%1$s"><a href="%2$s">%3$s</a></li>',
+            $is_active ? ' is-active' : '',
+            esc_url( $link ),
+            esc_html( $term->name )
+        );
+    }
+
+    if ( empty( $items ) ) {
+        return '';
+    }
+
+    $label = 'eu' === $current_lang ? 'Gaiak' : 'Temas';
+
+    return sprintf(
+        '<nav class="page-ekintzak__topics" aria-label="%1$s"><span class="page-ekintzak__topics-label">%2$s</span><ul class="page-ekintzak__topics-list">%3$s</ul></nav>',
+        esc_attr( $label ),
+        esc_html( $label ),
+        implode( '', $items )
+    );
+}
 
 /**
  * Get an ACF field from a taxonomy term.
@@ -367,6 +542,257 @@ function kostan_body_context_classes( $classes ) {
 add_filter( 'body_class', 'kostan_body_context_classes' );
 
 /**
+ * Get onboarding welcome page URL.
+ */
+function kostan_get_onboarding_url( $lang = '' ) {
+    $page = get_page_by_path( 'ongi-etorri' );
+
+    if ( $page ) {
+        $page_id = (int) $page->ID;
+        $lang    = strtolower( (string) $lang );
+
+        if ( $lang && has_filter( 'wpml_object_id' ) ) {
+            $translated = apply_filters( 'wpml_object_id', $page_id, 'page', true, $lang );
+            if ( $translated ) {
+                $page_id = (int) $translated;
+            }
+        }
+
+        return get_permalink( $page_id );
+    }
+
+    return home_url( '/ongi-etorri/' );
+}
+
+/**
+ * Onboarding destination after password change.
+ */
+function kostan_get_members_area_url() {
+    return home_url( '/bazkideak/' );
+}
+
+/**
+ * Get frontend lost-password page URL.
+ */
+function kostan_get_lost_password_page_url( $lang = '' ) {
+    $page = get_page_by_path( 'pasahitza-berreskuratu' );
+
+    if ( ! $page ) {
+        $page = get_page_by_path( 'recuperar-contrasena' );
+    }
+
+    if ( $page ) {
+        $page_id = (int) $page->ID;
+        $lang    = strtolower( (string) $lang );
+
+        if ( $lang && has_filter( 'wpml_object_id' ) ) {
+            $translated = apply_filters( 'wpml_object_id', $page_id, 'page', true, $lang );
+            if ( $translated ) {
+                $page_id = (int) $translated;
+            }
+        }
+
+        return get_permalink( $page_id );
+    }
+
+    return home_url( '/pasahitza-berreskuratu/' );
+}
+
+/**
+ * Check if a user belongs to the Socios/member role set.
+ */
+function kostan_is_socios_user( $user = null ) {
+    if ( ! $user ) {
+        $user = wp_get_current_user();
+    }
+
+    if ( ! ( $user instanceof WP_User ) || empty( $user->roles ) ) {
+        return false;
+    }
+
+    $blocked_roles = apply_filters( 'kostan_socios_roles', [ 'socios', 'socio', 'bazkide', 'bazkideak', 'subscriber' ] );
+    $blocked_roles = array_map( 'strtolower', (array) $blocked_roles );
+    $user_roles    = array_map( 'strtolower', (array) $user->roles );
+
+    return (bool) array_intersect( $blocked_roles, $user_roles );
+}
+
+/**
+ * Determine if user should stay in frontend only.
+ */
+function kostan_is_frontend_only_user( $user = null ) {
+    if ( ! $user ) {
+        $user = wp_get_current_user();
+    }
+
+    if ( ! ( $user instanceof WP_User ) ) {
+        return false;
+    }
+
+    if ( current_user_can( 'manage_options' ) ) {
+        return false;
+    }
+
+    if ( current_user_can( 'edit_posts' ) ) {
+        return false;
+    }
+
+    return kostan_is_socios_user( $user ) || current_user_can( 'read' );
+}
+
+/**
+ * Redirect Socios users away from wp-admin while keeping ajax endpoints available.
+ */
+function kostan_block_socios_admin_access() {
+    if ( ! is_user_logged_in() ) {
+        return;
+    }
+
+    if ( wp_doing_ajax() || wp_doing_cron() ) {
+        return;
+    }
+
+    if ( ! is_admin() ) {
+        return;
+    }
+
+    if ( ! kostan_is_frontend_only_user() ) {
+        return;
+    }
+
+    wp_safe_redirect( kostan_get_members_area_url() );
+    exit;
+}
+add_action( 'admin_init', 'kostan_block_socios_admin_access' );
+
+/**
+ * Send Socios users to members area after login.
+ */
+function kostan_socios_login_redirect( $redirect_to, $requested_redirect_to, $user ) {
+    if ( $user instanceof WP_User && kostan_is_frontend_only_user( $user ) ) {
+        return kostan_get_members_area_url();
+    }
+
+    return $redirect_to;
+}
+add_filter( 'login_redirect', 'kostan_socios_login_redirect', 10, 3 );
+
+/**
+ * Hide admin bar on frontend for Socios users.
+ */
+function kostan_hide_admin_bar_for_socios( $show ) {
+    if ( is_user_logged_in() && kostan_is_frontend_only_user() ) {
+        return false;
+    }
+
+    return $show;
+}
+add_filter( 'show_admin_bar', 'kostan_hide_admin_bar_for_socios' );
+
+/**
+ * Force-hide the admin bar early for frontend-only users.
+ */
+function kostan_force_hide_admin_bar_for_socios() {
+    if ( is_user_logged_in() && kostan_is_frontend_only_user() ) {
+        show_admin_bar( false );
+    }
+}
+add_action( 'after_setup_theme', 'kostan_force_hide_admin_bar_for_socios' );
+
+/**
+ * Add "lost password" link to Gutenberg Login/Logout block login form.
+ */
+function kostan_loginout_add_lost_password_link( $block_content, $block ) {
+    if ( is_admin() || is_user_logged_in() ) {
+        return $block_content;
+    }
+
+    $block_name = $block['blockName'] ?? '';
+    $is_loginout_block = 'core/loginout' === $block_name || false !== strpos( $block_content, 'wp-block-loginout' );
+
+    if ( ! $is_loginout_block ) {
+        return $block_content;
+    }
+
+    if ( false !== strpos( $block_content, 'kostan-login-lost-password' ) ) {
+        return $block_content;
+    }
+
+    $lost_password_url = kostan_get_lost_password_page_url();
+    $lang              = kostan_get_current_language_code();
+    if ( $lang ) {
+        $lost_password_url = add_query_arg( 'wp_lang', $lang, $lost_password_url );
+    }
+    $link_html         = sprintf(
+        '<p class="kostan-login-lost-password"><a href="%1$s">%2$s</a></p>',
+        esc_url( $lost_password_url ),
+        esc_html__( 'Ezin duzu pasahitza gogoratzen? / Has olvidado tu contrasena?', 'kostan' )
+    );
+
+    return $block_content . $link_html;
+}
+add_filter( 'render_block', 'kostan_loginout_add_lost_password_link', 10, 2 );
+
+/**
+ * Redirect wp-login lost-password actions to frontend recovery page.
+ */
+function kostan_redirect_lostpassword_to_frontend() {
+    $lang = isset( $_REQUEST['wp_lang'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['wp_lang'] ) ) : '';
+
+    wp_safe_redirect( kostan_get_lost_password_page_url( $lang ) );
+    exit;
+}
+add_action( 'login_form_lostpassword', 'kostan_redirect_lostpassword_to_frontend' );
+add_action( 'login_form_retrievepassword', 'kostan_redirect_lostpassword_to_frontend' );
+
+/**
+ * Avoid caching the front page for guest users.
+ * Mitigates blank-page incidents caused by poisoned edge/full-page cache entries.
+ */
+function kostan_disable_guest_cache_on_front_page() {
+    if ( is_admin() || is_user_logged_in() || ! is_front_page() ) {
+        return;
+    }
+
+    if ( ! defined( 'DONOTCACHEPAGE' ) ) {
+        define( 'DONOTCACHEPAGE', true );
+    }
+
+    nocache_headers();
+}
+add_action( 'template_redirect', 'kostan_disable_guest_cache_on_front_page', 0 );
+
+/**
+ * Redirect WP reset-password links to onboarding page.
+ */
+function kostan_redirect_reset_to_onboarding() {
+    $login = isset( $_REQUEST['login'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['login'] ) ) : '';
+    $key   = isset( $_REQUEST['key'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['key'] ) ) : '';
+    $lang  = isset( $_REQUEST['wp_lang'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['wp_lang'] ) ) : '';
+
+    if ( '' === $login || '' === $key ) {
+        return;
+    }
+
+    $onboarding_url = add_query_arg(
+        [
+            'login' => $login,
+            'key'   => $key,
+        ],
+        kostan_get_onboarding_url( $lang )
+    );
+
+    if ( $lang ) {
+        $onboarding_url = add_query_arg( 'wp_lang', strtolower( $lang ), $onboarding_url );
+    }
+
+    wp_safe_redirect( $onboarding_url );
+    exit;
+}
+add_action( 'login_form_rp', 'kostan_redirect_reset_to_onboarding' );
+add_action( 'login_form_resetpass', 'kostan_redirect_reset_to_onboarding' );
+
+/**
  * Get current language code (WPML-aware).
  */
 function kostan_get_current_language_code() {
@@ -460,22 +886,23 @@ function kostan_eu_number_vowel_type( $n ) {
 }
 
 /**
- * Return the Basque month name in genitive case.
- * Standard WP/WPML Basque month names end in -a; genitive replaces -a with -aren.
- * e.g. "Maiatza" → "Maiatzaren", "Ekaina" → "Ekainaren".
+ * Return the Basque month name in ergative case.
+ * Standard WP/WPML Basque month names end in -a; ergative appends -k.
+ * e.g. "Martxoa" → "Martxoak", "Maiatza" → "Maiatzak".
  */
-function kostan_eu_month_genitive( $timestamp ) {
+function kostan_eu_month_ergative( $timestamp ) {
     $month = wp_date( 'F', $timestamp );
     if ( substr( $month, -1 ) === 'a' ) {
-        return substr( $month, 0, -1 ) . 'aren';
+        return $month . 'k';
     }
     // Fallback for non-standard locale month names
-    return $month . 'ren';
+    return $month . 'k';
 }
 
 /**
  * Format a timestamp with a localized date format.
  * Basque dates are assembled dynamically to respect morphophonological rules.
+ * Format: "2024ko martxoak 21"
  */
 function kostan_format_timestamp( $timestamp, $context = 'date' ) {
     $timestamp = (int) $timestamp;
@@ -499,12 +926,9 @@ function kostan_format_timestamp( $timestamp, $context = 'date' ) {
             default:
                 $year      = (int) wp_date( 'Y', $timestamp );
                 $suffix    = kostan_eu_number_vowel_type( $year );
-                $month_gen = kostan_eu_month_genitive( $timestamp );
+                $month_erg = kostan_eu_month_ergative( $timestamp );
                 $day       = (int) wp_date( 'j', $timestamp );
-                $day_loc   = ( kostan_eu_number_vowel_type( $day ) === 'eko' )
-                    ? "{$day}ean"
-                    : "{$day}an";
-                return "{$year}{$suffix} {$month_gen} {$day_loc}";
+                return "{$year}{$suffix} {$month_erg} {$day}";
         }
     }
 

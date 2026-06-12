@@ -8,17 +8,22 @@
  * @package Kostan
  */
 
-// suppress_filters bypasses WPML's SQL language filter so news posts show
-// in all site languages regardless of which language they were created in.
+// Respect the active language so each news item is shown only once
+// in the language selected on the current page.
 $current_lang = apply_filters( 'wpml_current_language', null );
 
-$news = new WP_Query([
-	'post_type'        => 'news',
-	'posts_per_page'   => 10,
-	'orderby'          => 'date',
-	'order'            => 'DESC',
-	'suppress_filters' => true,
-]);
+$news_query_args = [
+	'post_type'      => 'news',
+	'posts_per_page' => 10,
+	'orderby'        => 'date',
+	'order'          => 'DESC',
+];
+
+if ( ! empty( $current_lang ) ) {
+	$news_query_args['lang'] = $current_lang;
+}
+
+$news = new WP_Query( $news_query_args );
 
 if ( ! $news->have_posts() ) {
 	if ( ! empty( $is_preview ) ) {

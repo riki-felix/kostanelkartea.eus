@@ -103,7 +103,9 @@ if ( ! empty( $speakers ) ) {
 					</div>
 					<?php endif; ?>
 
+					<?php get_template_part( 'template-parts/blocks/talk-files' ); ?>
 				</div>
+
 
 				<?php
 				$talk_video = get_field( 'talk_video' );

@@ -53,6 +53,16 @@
         }
       }
     }
+
+    .kostan-login-lost-password {
+      margin-top: var(--sp-xs);
+      margin-bottom: 0;
+      font-size: var(--font-micro);
+
+      a {
+        text-decoration: underline;
+      }
+    }
   }
   &--connected {
     margin-bottom: var(--sp-xxxl);
@@ -61,4 +71,107 @@
       padding: var(--page-margin);
     }
   }
+}
+
+.section-onboarding {
+  .page-width {
+    max-width: 68rem;
+  }
+}
+
+.section-recover-password {
+  .page-width {
+    max-width: 68rem;
+  }
+}
+
+.section-recover-password__header {
+  text-align: center;
+  margin-bottom: var(--sp-l);
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.section-login--recover {
+  .form-login {
+    background: var(--color-light);
+    border: 1px solid var(--color-primary-300);
+    border-radius: var(--size-xs);
+  }
+
+  .login-submit {
+    margin-bottom: 0;
+  }
+}
+
+.section-onboarding__header {
+  text-align: center;
+  margin-bottom: var(--sp-l);
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.section-login--onboarding {
+  .form-login {
+    background: var(--color-light);
+    border: 1px solid var(--color-primary-300);
+    border-radius: var(--size-xs);
+  }
+
+  .login-submit {
+    margin-bottom: 0;
+  }
+}
+
+.onboarding-notice {
+  margin-bottom: var(--sp-m);
+  padding: var(--sp-s);
+  border-radius: var(--size-xxs);
+
+  p {
+    margin: 0;
+    font-size: var(--font-micro);
+  }
+}
+
+.onboarding-notice--error {
+  background: #fde7e7;
+  border: 1px solid #e6b0b0;
+  color: #8c1b1b;
+}
+
+.onboarding-notice--success {
+  background: #e4f4ea;
+  border: 1px solid #9dc8aa;
+  color: #1e5a2d;
+}
+
+.onboarding-form__terms {
+  margin-bottom: var(--sp-m);
+}
+
+.onboarding-form__terms-label {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-xxs);
+  font-size: var(--font-micro);
+
+  input[type='checkbox'] {
+    margin-top: 0.2rem;
+  }
+
+  a {
+    display: inline;
+    margin-left: var(--sp-xxs);
+    text-decoration: underline;
+  }
+}
+
+.wp-block-accordion-heading__toggle {
+  border-bottom:1px solid #ccc;
+  margin-bottom: var(--sp-s);
 }

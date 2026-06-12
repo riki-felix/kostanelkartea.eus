@@ -57,14 +57,15 @@ if ( $location ) {
 
 			<?php if ( $address ) : ?>
 			<div class="venue-detail__location">
-				<?php kostan_the_icon( 'location', 32 ); ?>
 				<p class="venue-detail__address">
 					<?php if ( $maps_link ) : ?>
 						<a href="<?php echo esc_url( $maps_link ); ?>" target="_blank" rel="noopener noreferrer">
+							<?php kostan_the_icon( 'location', 32 ); ?>
 							<?php echo nl2br( esc_html( $address ) ); ?>
 						</a>
 					<?php else : ?>
-						<?php echo nl2br( esc_html( $address ) ); ?>
+							<?php kostan_the_icon( 'location', 32 ); ?>
+							<?php echo nl2br( esc_html( $address ) ); ?>
 					<?php endif; ?>
 				</p>
 			</div>
