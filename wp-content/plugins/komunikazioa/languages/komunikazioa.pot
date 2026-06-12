@@ -1,0 +1,288 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Komunikazioa package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Komunikazioa 0.1.0\n"
+"Report-Msgid-Bugs-To: info@kostan-elkartea.local\n"
+"POT-Creation-Date: 2026-06-08 15:51+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:80
+msgid "5 minuturo"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:532
+#, php-format
+msgid ""
+"<div class=\"notice notice-success inline\"><p>%s</p><p><strong>Zerbitzaria:"
+"</strong> %s<br><strong>Ataka:</strong> %s<br><strong>Erabiltzailea:</"
+"strong> %s</p></div>"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:608
+msgid "Izen-emateak"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:609
+msgid "Berritzea"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:616
+msgid "Helburua"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:620
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:915
+msgid "Bazkideak"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:621
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:916
+msgid "Interesdunak"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:628
+msgid "Gaia"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:636
+msgid "Edukia"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:690
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:748
+msgid "Ez duzu orri hau ikusteko baimenik."
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:698
+msgid "Komunikazioa"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:699
+msgid ""
+"Kanpainak, pertsona interesatuak eta programatutako bidalketak kudeatzeko "
+"tresna."
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:703
+msgid "Laburpena"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:705
+msgid "Zirriborroak"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:706
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:930
+msgid "Programatuta"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:707
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:931
+msgid "Bidalita"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:708
+msgid "Hutsekin"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:709
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:758
+msgid "Pertsona interesatuak"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:710
+msgid "Entrega-hutsak"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:715
+msgid "Sarbide azkarrak"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:717
+msgid "Kanpaina berria"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:718
+msgid "Kanpainak ikusi"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:719
+msgid "Interesatuak ikusi"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:759
+msgid "Formulario publikoetatik erregistratutako pertsonak."
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:765
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:799
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1103
+msgid "Data"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:766
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1142
+msgid "Formularioa"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:767
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1143
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1511
+msgid "Izena"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:768
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1144
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1515
+msgid "Email"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:769
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1145
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1519
+msgid "Telefonoa"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:770
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1146
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1522
+msgid "Jaiotze urtea"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:771
+msgid "Baldintzak"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:784
+msgid "Bai"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:784
+msgid "Ez"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:788
+msgid "Oraindik ez dago erregistratutako pertsona interesaturik."
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:795
+msgid "Entrega hutsak"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:800
+msgid "Kanpaina"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:801
+msgid "Hartzailea"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:802
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:900
+msgid "Egoera"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:803
+msgid "Errorea"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:818
+msgid "Oraindik ez dago entrega hutsik."
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:859
+msgid "Izen-emate eskaera"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:863
+msgid "Interes adierazpena"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:899
+msgid "Profila"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:901
+msgid "Programatua"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:929
+msgid "Zirriborroa"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:932
+msgid "Huts egin du"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1015
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1083
+msgid "Nonce baliogabea."
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1079
+msgid "Ez duzu ekintza hau egiteko baimenik."
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1093
+msgid "Sartu baliozko email bat probarako."
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1100
+msgid "Komunikazioa bidalketa proba"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1101
+msgid "Hau Komunikazioatik bidalitako probako mezu bat da."
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1102
+msgid "Gunea"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1116
+msgid "wp_mail-ek false itzuli du proban."
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1136
+#, php-format
+msgid "Pertsona interesatu berri bat: %s"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1140
+msgid "Interesdunak formularioan pertsona interesatu berri bat jaso da"
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1182
+msgid "Ez dago hartzailerik konfiguratuta."
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1295
+msgid "wp_mail-ek false itzuli du."
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1495
+msgid "Eskerrik asko. Zure eskaera jaso dugu."
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1499
+msgid "Errorea bidalketan. Saiatu berriz."
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1528
+msgid "Baldintzak onartzen ditut."
+msgstr ""
+
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1531
+msgid "Bidali"
+msgstr ""

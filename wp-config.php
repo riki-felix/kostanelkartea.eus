@@ -73,6 +73,24 @@ $table_prefix = 'wp_';
 
 /* Add any custom values between this line and the "stop editing" line. */
 
+/*
+ * Komunikazioa SMTP settings.
+ * Define these constants when you want WordPress to send through an external SMTP service.
+ * Recommended for Google Workspace:
+ * - Host: smtp.gmail.com
+ * - Port: 587
+ * - Encryption: tls
+ * - User: full mailbox address
+ * - Password: App Password
+ */
+// define( 'KOMUNIKAZIOA_SMTP_HOST', 'smtp.gmail.com' );
+// define( 'KOMUNIKAZIOA_SMTP_PORT', 587 );
+// define( 'KOMUNIKAZIOA_SMTP_ENCRYPTION', 'tls' );
+// define( 'KOMUNIKAZIOA_SMTP_USER', 'komunikazioa@example.org' );
+// define( 'KOMUNIKAZIOA_SMTP_PASSWORD', 'replace-with-app-password' );
+// define( 'KOMUNIKAZIOA_SMTP_FROM_EMAIL', 'komunikazioa@example.org' );
+// define( 'KOMUNIKAZIOA_SMTP_FROM_NAME', 'Kostan Elkartea' );
+
 
 
 /**

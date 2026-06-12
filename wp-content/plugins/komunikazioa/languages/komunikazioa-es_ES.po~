@@ -1,0 +1,193 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Komunikazioa 0.1.0\n"
+"Report-Msgid-Bugs-To: info@kostan-elkartea.local\n"
+"POT-Creation-Date: 2026-06-08 15:36+0200\n"
+"PO-Revision-Date: 2026-06-08 15:50+0200\n"
+"Last-Translator: Kostan Team <info@kostan-elkartea.local>\n"
+"Language-Team: Spanish\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "5 minuturo"
+msgstr "Cada 5 minutos"
+
+msgid "<div class=\"notice notice-success inline\"><p>%s</p><p><strong>Zerbitzaria:</strong> %s<br><strong>Ataka:</strong> %s<br><strong>Erabiltzailea:</strong> %s</p></div>"
+msgstr "<div class=\"notice notice-success inline\"><p>%s</p><p><strong>Servidor:</strong> %s<br><strong>Puerto:</strong> %s<br><strong>Usuario:</strong> %s</p></div>"
+
+msgid "Bai"
+msgstr "Sí"
+
+msgid "Baldintzak"
+msgstr "Condiciones"
+
+msgid "Baldintzak onartzen ditut."
+msgstr "Acepto las condiciones."
+
+msgid "Bazkideak"
+msgstr "Socios"
+
+msgid "Berritzea"
+msgstr "Renovación"
+
+msgid "Bidali"
+msgstr "Enviar"
+
+msgid "Bidalita"
+msgstr "Enviado"
+
+msgid "Data"
+msgstr "Fecha"
+
+msgid "Edukia"
+msgstr "Contenido"
+
+msgid "Egoera"
+msgstr "Estado"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Entrega hutsak"
+msgstr "Fallos de entrega"
+
+msgid "Entrega-hutsak"
+msgstr "Fallos de entrega"
+
+msgid "Errorea"
+msgstr "Error"
+
+msgid "Errorea bidalketan. Saiatu berriz."
+msgstr "Error en el envío. Inténtalo de nuevo."
+
+msgid "Eskerrik asko. Zure eskaera jaso dugu."
+msgstr "Gracias. Hemos recibido tu solicitud."
+
+msgid "Ez"
+msgstr "No"
+
+msgid "Ez dago hartzailerik konfiguratuta."
+msgstr "No hay destinatarios configurados."
+
+msgid "Ez duzu ekintza hau egiteko baimenik."
+msgstr "No tienes permisos para realizar esta acción."
+
+msgid "Ez duzu orri hau ikusteko baimenik."
+msgstr "No tienes permisos para ver esta página."
+
+msgid "Formulario publikoetatik erregistratutako pertsonak."
+msgstr "Personas registradas desde los formularios públicos."
+
+msgid "Formularioa"
+msgstr "Formulario"
+
+msgid "Gaia"
+msgstr "Asunto"
+
+msgid "Gunea"
+msgstr "Sitio"
+
+msgid "Hartzailea"
+msgstr "Destinatario"
+
+msgid "Hau Komunikazioatik bidalitako probako mezu bat da."
+msgstr "Este es un correo de prueba enviado desde Komunikazioa."
+
+msgid "Helburua"
+msgstr "Destino"
+
+msgid "Huts egin du"
+msgstr "Fallido"
+
+msgid "Hutsekin"
+msgstr "Con fallos"
+
+msgid "Interesdunak"
+msgstr "Interesados"
+
+msgid "Interesdunak formularioan lead berria jaso da"
+msgstr "Nuevo lead recibido desde el formulario de Interesados"
+
+msgid "Interesdunak lead berria: %s"
+msgstr "Nuevo lead Interesados: %s"
+
+msgid "Izen-emateak"
+msgstr "Inscripciones"
+
+msgid "Izena"
+msgstr "Nombre"
+
+msgid "Jaiotze urtea"
+msgstr "Año de nacimiento"
+
+msgid "Kanpaina"
+msgstr "Campaña"
+
+msgid "Kanpaina berria"
+msgstr "Nueva campaña"
+
+msgid "Kanpainak ikusi"
+msgstr "Ver campañas"
+
+msgid "Kanpainak, leadak eta programatutako bidalketak kudeatzeko tresna."
+msgstr "Gestor de campañas, leads y envíos programados."
+
+msgid "Komunikazioa"
+msgstr "Komunikazioa"
+
+msgid "Komunikazioa bidalketa proba"
+msgstr "Prueba de envío Komunikazioa"
+
+msgid "Laburpena"
+msgstr "Resumen"
+
+msgid "Leadak ikusi"
+msgstr "Ver leads"
+
+msgid "Leads"
+msgstr "Leads"
+
+msgid "Leads Interesdunak"
+msgstr "Leads Interesados"
+
+msgid "Nonce baliogabea."
+msgstr "Nonce inválido."
+
+msgid "Oraindik ez dago entrega hutsik."
+msgstr "Todavía no hay fallos de entrega."
+
+msgid "Oraindik ez dago erregistratutako leadsik."
+msgstr "Todavía no hay leads registrados."
+
+msgid "Profila"
+msgstr "Perfil"
+
+msgid "Programatua"
+msgstr "Programado"
+
+msgid "Programatuta"
+msgstr "Programado"
+
+msgid "Sarbide azkarrak"
+msgstr "Accesos rápidos"
+
+msgid "Sartu baliozko email bat probarako."
+msgstr "Introduce un email válido para la prueba."
+
+msgid "Telefonoa"
+msgstr "Teléfono"
+
+msgid "Zirriborroa"
+msgstr "Borrador"
+
+msgid "Zirriborroak"
+msgstr "Borradores"
+
+msgid "wp_mail-ek false itzuli du proban."
+msgstr "wp_mail devolvió false durante la prueba."
+
+msgid "wp_mail-ek false itzuli du."
+msgstr "wp_mail devolvió false."
