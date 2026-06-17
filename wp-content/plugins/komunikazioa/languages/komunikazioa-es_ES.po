@@ -367,14 +367,44 @@ msgstr "Opcional. Estos correos reciben un aviso cuando alguien envía el formul
 msgid "Bazkide hartzaileen profilak"
 msgstr "Perfiles de socios destinatarios"
 
-msgid "SMTP wp-config.php fitxategian konfiguratuta dago."
-msgstr "SMTP configurado desde wp-config.php."
+msgid "SMTP pluginaren ezarpenetan konfiguratuta dago."
+msgstr "SMTP configurado en los ajustes del plugin."
 
-msgid "SMTP ez dago konfiguratuta. Bidalketak WordPressen garraio lehenetsia erabiltzen du."
-msgstr "SMTP no configurado. El envío usa el transporte por defecto de WordPress."
+msgid "SMTP ez dago konfiguratuta. SMTP zerbitzari bat adierazi arte WordPressen garraio lehenetsia erabiltzen da."
+msgstr "SMTP no configurado. El envío usa el transporte por defecto de WordPress hasta que indiquéis un servidor SMTP."
 
-msgid "Google Workspace erabili nahi baduzue, definitu KOMUNIKAZIOA_SMTP_* konstanteak wp-config.php fitxategian."
-msgstr "Si queréis usar Google Workspace, definid las constantes KOMUNIKAZIOA_SMTP_* en wp-config.php."
+msgid "SMTP zerbitzaria"
+msgstr "Servidor SMTP"
+
+msgid "Ataka"
+msgstr "Puerto"
+
+msgid "Zifratzea"
+msgstr "Cifrado"
+
+msgid "Bat ere ez"
+msgstr "Ninguno"
+
+msgid "SMTP erabiltzailea"
+msgstr "Usuario SMTP"
+
+msgid "Postontziaren helbide osoa."
+msgstr "Dirección de correo completa del buzón."
+
+msgid "SMTP pasahitza"
+msgstr "Contraseña SMTP"
+
+msgid "Utzi hutsik gordetzean pasahitza aldatu nahi ez baduzue."
+msgstr "Dejad este campo vacío al guardar si no queréis cambiar la contraseña."
+
+msgid "Igorlea"
+msgstr "Remitente"
+
+msgid "Hartzaileak"
+msgstr "Destinatarios"
+
+msgid "Adibidez: smtp.gmail.com"
+msgstr "Por ejemplo: smtp.gmail.com"
 
 msgid "Erabiltzailerik gabe"
 msgstr "Sin usuario"

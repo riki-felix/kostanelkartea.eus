@@ -19,11 +19,6 @@ class Plugin {
 	private static $mail_error = null;
 
 	/**
-	 * SMTP constants prefix.
-	 */
-	const SMTP_PREFIX = 'KOMUNIKAZIOA_SMTP_';
-
-	/**
 	 * Boot the plugin.
 	 */
 	public static function init() {
@@ -363,12 +358,68 @@ class Plugin {
 				'title'    => self::admin_label( 'Ajustes de Komunikazioa', 'Komunikazioa Ezarpenak' ),
 				'fields'   => array(
 					array(
+						'key'   => 'field_komunikazioa_tab_smtp',
+						'label' => self::admin_label( 'Servidor SMTP', 'SMTP zerbitzaria' ),
+						'type'  => 'tab',
+					),
+					array(
+						'key'          => 'field_komunikazioa_smtp_host',
+						'label'        => self::admin_label( 'Servidor SMTP', 'SMTP zerbitzaria' ),
+						'name'         => 'komunikazioa_smtp_host',
+						'type'         => 'text',
+						'instructions' => self::admin_label( 'Por ejemplo: smtp.gmail.com', 'Adibidez: smtp.gmail.com' ),
+						'placeholder'  => 'smtp.gmail.com',
+					),
+					array(
+						'key'           => 'field_komunikazioa_smtp_port',
+						'label'         => self::admin_label( 'Puerto', 'Ataka' ),
+						'name'          => 'komunikazioa_smtp_port',
+						'type'          => 'number',
+						'default_value' => 587,
+						'min'           => 1,
+						'max'           => 65535,
+						'step'          => 1,
+					),
+					array(
+						'key'           => 'field_komunikazioa_smtp_encryption',
+						'label'         => self::admin_label( 'Cifrado', 'Zifratzea' ),
+						'name'          => 'komunikazioa_smtp_encryption',
+						'type'          => 'select',
+						'choices'       => array(
+							'tls'  => 'TLS',
+							'ssl'  => 'SSL',
+							'none' => self::admin_label( 'Ninguno', 'Bat ere ez' ),
+						),
+						'default_value' => 'tls',
+						'return_format' => 'value',
+						'ui'            => 1,
+					),
+					array(
+						'key'          => 'field_komunikazioa_smtp_user',
+						'label'        => self::admin_label( 'Usuario SMTP', 'SMTP erabiltzailea' ),
+						'name'         => 'komunikazioa_smtp_user',
+						'type'         => 'text',
+						'instructions' => self::admin_label( 'Direccion de correo completa del buzon.', 'Postontziaren helbide osoa.' ),
+					),
+					array(
+						'key'          => 'field_komunikazioa_smtp_password',
+						'label'        => self::admin_label( 'Contrasena SMTP', 'SMTP pasahitza' ),
+						'name'         => 'komunikazioa_smtp_password',
+						'type'         => 'password',
+						'instructions' => self::admin_label( 'Dejad este campo vacio al guardar si no quereis cambiar la contrasena.', 'Utzi hutsik gordetzean pasahitza aldatu nahi ez baduzue.' ),
+					),
+					array(
 						'key'      => 'field_komunikazioa_smtp_status',
 						'label'    => self::admin_label( 'Estado del envio', 'Bidalketaren egoera' ),
 						'name'     => 'komunikazioa_smtp_status',
 						'type'     => 'message',
-						'message'  => self::get_smtp_settings_message(),
+						'message'  => '',
 						'esc_html' => 0,
+					),
+					array(
+						'key'   => 'field_komunikazioa_tab_sender',
+						'label' => self::admin_label( 'Remitente', 'Igorlea' ),
+						'type'  => 'tab',
 					),
 					array(
 						'key'           => 'field_komunikazioa_from_name',
@@ -382,6 +433,11 @@ class Plugin {
 						'label'         => self::admin_label( 'Email del remitente', 'Nondik datorren emaila' ),
 						'name'          => 'komunikazioa_from_email',
 						'type'          => 'email',
+					),
+					array(
+						'key'   => 'field_komunikazioa_tab_audience',
+						'label' => self::admin_label( 'Destinatarios', 'Hartzaileak' ),
+						'type'  => 'tab',
 					),
 					array(
 						'key'           => 'field_komunikazioa_member_roles',
@@ -415,10 +471,45 @@ class Plugin {
 		);
 
 		add_filter( 'acf/load_field/name=komunikazioa_member_roles', array( __CLASS__, 'populate_role_choices' ) );
+		add_filter( 'acf/load_field/name=komunikazioa_smtp_status', array( __CLASS__, 'load_smtp_status_message_field' ) );
+		add_filter( 'acf/update_value/name=komunikazioa_smtp_password', array( __CLASS__, 'preserve_smtp_password' ), 10, 3 );
 	}
 
 	/**
-	 * Configure PHPMailer from wp-config constants when available.
+	 * Refresh the SMTP status message when the settings field loads.
+	 *
+	 * @param array $field Field configuration.
+	 * @return array
+	 */
+	public static function load_smtp_status_message_field( $field ) {
+		$field['message'] = self::get_smtp_settings_message();
+
+		return $field;
+	}
+
+	/**
+	 * Keep the stored SMTP password when the field is left blank on save.
+	 *
+	 * @param mixed  $value   Submitted value.
+	 * @param string $post_id Options post ID.
+	 * @return mixed
+	 */
+	public static function preserve_smtp_password( $value, $post_id ) {
+		if ( self::SETTINGS_POST_ID !== (string) $post_id || '' !== (string) $value ) {
+			return $value;
+		}
+
+		if ( ! function_exists( 'get_field' ) ) {
+			return $value;
+		}
+
+		$existing = get_field( 'komunikazioa_smtp_password', self::SETTINGS_POST_ID, false );
+
+		return $existing ? $existing : $value;
+	}
+
+	/**
+	 * Configure PHPMailer from plugin settings when available.
 	 *
 	 * @param object $phpmailer PHPMailer instance.
 	 * @return void
@@ -433,19 +524,17 @@ class Plugin {
 		$phpmailer->Port = (int) self::get_smtp_config( 'PORT', 587 );
 
 		$encryption = (string) self::get_smtp_config( 'ENCRYPTION', 'tls' );
+		if ( 'none' === $encryption ) {
+			$encryption = '';
+		}
 		if ( '' !== $encryption ) {
 			$phpmailer->SMTPSecure = $encryption;
 		}
 
-		$username  = (string) self::get_smtp_config( 'USER' );
-		$password  = (string) self::get_smtp_config( 'PASSWORD' );
-		$auth_flag = self::get_smtp_config( 'AUTH', '' );
+		$username = (string) self::get_smtp_config( 'USER' );
+		$password = (string) self::get_smtp_config( 'PASSWORD' );
 
-		if ( '' !== $auth_flag ) {
-			$phpmailer->SMTPAuth = filter_var( $auth_flag, FILTER_VALIDATE_BOOLEAN );
-		} else {
-			$phpmailer->SMTPAuth = '' !== $username || '' !== $password;
-		}
+		$phpmailer->SMTPAuth = '' !== $username || '' !== $password;
 
 		if ( '' !== $username ) {
 			$phpmailer->Username = $username;
@@ -464,24 +553,52 @@ class Plugin {
 	}
 
 	/**
-	 * Get a SMTP configuration value from constants.
+	 * Get a SMTP setting stored in the plugin options page.
+	 *
+	 * @param string $field_name ACF field name.
+	 * @param mixed  $default    Default value.
+	 * @return mixed
+	 */
+	private static function get_smtp_setting( $field_name, $default = '' ) {
+		if ( ! function_exists( 'get_field' ) ) {
+			return $default;
+		}
+
+		$value = get_field( $field_name, self::SETTINGS_POST_ID );
+
+		if ( null === $value || false === $value || '' === $value ) {
+			return $default;
+		}
+
+		return $value;
+	}
+
+	/**
+	 * Get a SMTP configuration value from plugin settings.
 	 *
 	 * @param string $key Config suffix.
 	 * @param mixed  $default Default value.
 	 * @return mixed
 	 */
 	private static function get_smtp_config( $key, $default = '' ) {
-		$constant = self::SMTP_PREFIX . strtoupper( (string) $key );
+		$map = array(
+			'HOST'       => 'komunikazioa_smtp_host',
+			'PORT'       => 'komunikazioa_smtp_port',
+			'ENCRYPTION' => 'komunikazioa_smtp_encryption',
+			'USER'       => 'komunikazioa_smtp_user',
+			'PASSWORD'   => 'komunikazioa_smtp_password',
+		);
 
-		if ( defined( $constant ) ) {
-			return constant( $constant );
+		$key = strtoupper( (string) $key );
+		if ( ! isset( $map[ $key ] ) ) {
+			return $default;
 		}
 
-		return $default;
+		return self::get_smtp_setting( $map[ $key ], $default );
 	}
 
 	/**
-	 * Check whether SMTP was configured via constants.
+	 * Check whether SMTP was configured in plugin settings.
 	 *
 	 * @return bool
 	 */
@@ -502,7 +619,7 @@ class Plugin {
 		}
 
 		if ( '' === $from_name ) {
-			$from_name = (string) self::get_smtp_config( 'FROM_NAME', get_bloginfo( 'name' ) );
+			$from_name = get_bloginfo( 'name' );
 		}
 
 		return sanitize_text_field( $from_name );
@@ -521,7 +638,7 @@ class Plugin {
 		}
 
 		if ( '' === $from_email ) {
-			$from_email = (string) self::get_smtp_config( 'FROM_EMAIL', get_bloginfo( 'admin_email' ) );
+			$from_email = get_bloginfo( 'admin_email' );
 		}
 
 		return sanitize_email( $from_email );
@@ -540,7 +657,7 @@ class Plugin {
 
 			return sprintf(
 				__( '<div class="notice notice-success inline"><p>%s</p><p><strong>Zerbitzaria:</strong> %s<br><strong>Ataka:</strong> %s<br><strong>Erabiltzailea:</strong> %s</p></div>', 'komunikazioa' ),
-				esc_html( self::admin_label( 'SMTP configurado desde wp-config.php.', 'SMTP wp-config.php fitxategian konfiguratuta dago.' ) ),
+				esc_html( self::admin_label( 'SMTP configurado en los ajustes del plugin.', 'SMTP pluginaren ezarpenetan konfiguratuta dago.' ) ),
 				$host,
 				$port,
 				$user
@@ -548,9 +665,8 @@ class Plugin {
 		}
 
 		return sprintf(
-			'<div class="notice notice-warning inline"><p>%s</p><p>%s</p></div>',
-			esc_html( self::admin_label( 'SMTP no configurado. El envio usa el transporte por defecto de WordPress.', 'SMTP ez dago konfiguratuta. Bidalketak WordPressen garraio lehenetsia erabiltzen du.' ) ),
-			esc_html( self::admin_label( 'Si quereis usar Google Workspace, definid las constantes KOMUNIKAZIOA_SMTP_* en wp-config.php.', 'Google Workspace erabili nahi baduzue, definitu KOMUNIKAZIOA_SMTP_* konstanteak wp-config.php fitxategian.' ) )
+			'<div class="notice notice-warning inline"><p>%s</p></div>',
+			esc_html( self::admin_label( 'SMTP no configurado. El envio usa el transporte por defecto de WordPress hasta que indiqueis un servidor SMTP.', 'SMTP ez dago konfiguratuta. SMTP zerbitzari bat adierazi arte WordPressen garraio lehenetsia erabiltzen da.' ) )
 		);
 	}
 

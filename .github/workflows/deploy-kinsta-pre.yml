@@ -1,0 +1,60 @@
+name: Deploy to Kinsta (pre)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'wp-content/themes/kostan/**'
+      - 'wp-content/plugins/komunikazioa/**'
+      - 'composer.json'
+      - 'composer.lock'
+      - 'scripts/deploy-to-kinsta.sh'
+      - '.github/workflows/deploy-kinsta-pre.yml'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Dry run (preview changes only)
+        type: boolean
+        default: false
+
+concurrency:
+  group: kinsta-pre
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: wp-content/themes/kostan/package-lock.json
+
+      - name: Setup PHP and Composer
+        uses: php-actions/composer@v6
+        with:
+          php_version: '8.2'
+          args: --no-dev --prefer-dist --optimize-autoloader
+
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Deploy theme and custom plugin
+        env:
+          KINSTA_SSH_HOST: ${{ secrets.KINSTA_SSH_HOST }}
+          KINSTA_SSH_PORT: ${{ secrets.KINSTA_SSH_PORT }}
+          KINSTA_SSH_USER: ${{ secrets.KINSTA_SSH_USER }}
+          KINSTA_SSH_PASSWORD: ${{ secrets.KINSTA_SSH_PASSWORD }}
+          KINSTA_REMOTE_PATH: ${{ secrets.KINSTA_REMOTE_PATH }}
+          DRY_RUN: ${{ inputs.dry_run && 'true' || 'false' }}
+          INSTALL_COMPOSER: 'false'
+          BUILD_THEME: 'true'
+          PURGE_CACHE: 'true'
+        run: bash scripts/deploy-to-kinsta.sh

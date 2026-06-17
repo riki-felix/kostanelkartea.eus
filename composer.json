@@ -1,0 +1,32 @@
+{
+  "name": "kostan/elkartea",
+  "description": "Kostan Elkartea WordPress site — custom theme and plugins",
+  "type": "project",
+  "license": "proprietary",
+  "require": {
+    "php": ">=8.0",
+    "composer/installers": "^2.3",
+    "wpackagist-plugin/block-visibility": "^3.7",
+    "wpackagist-plugin/carousel-block": "^2.0",
+    "wpackagist-plugin/chaty": "^3.4",
+    "wpackagist-plugin/post-type-switcher": "^3.3"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org",
+      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    }
+  ],
+  "extra": {
+    "installer-paths": {
+      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    },
+    "sort-packages": true
+  }
+}

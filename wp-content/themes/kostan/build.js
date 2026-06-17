@@ -33,7 +33,7 @@ const config = {
 	'.woff2': 'file',
 	'.ttf': 'file',
   },
-  publicPath: '/wp-content/themes/Host/dist/',
+  publicPath: '/wp-content/themes/kostan/dist/',
   plugins: [
 	sassPlugin(),
 	{

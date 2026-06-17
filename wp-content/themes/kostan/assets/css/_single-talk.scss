@@ -31,14 +31,12 @@
   font-weight: var(--weight-bold);
   text-transform: uppercase;
   color: var(--color-primary);
-  margin: 0;
   line-height: 1.1;
 }
 
 /* Talk title */
 .single-talk__title {
   font-weight: var(--weight-regular);
-  margin: var(--sp-xs) 0 var(--sp-xl);
   line-height: 1.2;
   text-transform: none;
 }
@@ -91,7 +89,7 @@
     display: block;
     color: var(--color-secondary);
     text-decoration: none;
-
+    fsize: var(--fs-micro);
     &:hover {
       text-decoration: underline;
     }
