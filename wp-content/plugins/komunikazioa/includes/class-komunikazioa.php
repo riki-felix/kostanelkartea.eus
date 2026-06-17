@@ -134,7 +134,7 @@ class Plugin {
 	/**
 	 * Apply lightweight schema upgrades on existing installs.
 	 */
-	private static function maybe_upgrade_tables() {
+	public static function maybe_upgrade_tables() {
 		global $wpdb;
 
 		$table = $wpdb->prefix . self::LEADS_TABLE;
