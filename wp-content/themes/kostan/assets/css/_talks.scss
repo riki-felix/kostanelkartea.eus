@@ -94,8 +94,7 @@
   .talk-card__date,
   .talk-card__speakers,
   .talk-card__title,
-  .talk-card__tag--venue,
-  .talk-card__tag--lang {
+  .talk-card__tag--venue {
     color: var(--color-light);
   }
 }
@@ -131,7 +130,7 @@
   margin: 0;
 }
 
-/* Tags row (venue + lang) */
+/* Tags row (venue) */
 .talk-card__tags {
   display: flex;
   flex-wrap: wrap;
@@ -153,10 +152,6 @@
 
   &--venue {
     color: var(--color-primary);
-  }
-
-  &--lang {
-    color: var(--color-secondary);
   }
 }
 

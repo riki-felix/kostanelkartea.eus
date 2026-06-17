@@ -4,7 +4,7 @@
  *
  * Reusable card for talks grid. Expects the global $post to be set.
  *
- * ACF fields: talk_date, talk_lang
+ * ACF fields: talk_date
  * Relationship: speakers
  * Taxonomies: venue, area
  *
@@ -13,7 +13,6 @@
 
 $post_id   = get_the_ID();
 $talk_date = get_field( 'talk_date', $post_id );
-$talk_lang = get_field( 'talk_lang', $post_id );
 $speakers  = get_field( 'talk_speakers', $post_id );
 $venues    = get_the_terms( $post_id, 'venue' );
 $areas     = kostan_get_post_areas( $post_id );
@@ -61,10 +60,6 @@ $thumbnail = get_the_post_thumbnail_url( $post_id, 'large' );
 						<?php echo esc_html( $v->name ); ?>
 					</a>
 				<?php endforeach; ?>
-			<?php endif; ?>
-
-			<?php if ( $talk_lang ) : ?>
-				<span class="talk-card__tag talk-card__tag--lang"><?php echo esc_html( $talk_lang ); ?></span>
 			<?php endif; ?>
 			</div>
 
