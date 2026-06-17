@@ -25,9 +25,11 @@ class Plugin {
 		self::ensure_administrator_capabilities();
 
 		add_action( 'init', array( __CLASS__, 'register_campaign_cpt' ) );
+		add_action( 'init', array( __CLASS__, 'maybe_upgrade_tables' ) );
 		add_action( 'admin_init', array( __CLASS__, 'redirect_legacy_cpt_urls' ) );
 		add_action( 'admin_menu', array( __CLASS__, 'register_admin_menu' ) );
 		add_action( 'init', array( __CLASS__, 'register_shortcode_compat' ) );
+		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_public_assets' ) );
 		add_action( 'phpmailer_init', array( __CLASS__, 'configure_phpmailer' ) );
 		add_filter( 'cron_schedules', array( __CLASS__, 'register_cron_schedule' ) );
 		add_action( self::CRON_HOOK, array( __CLASS__, 'process_due_campaigns' ) );
@@ -47,6 +49,7 @@ class Plugin {
 	public static function activate() {
 		self::ensure_administrator_capabilities();
 		self::create_tables();
+		self::maybe_upgrade_tables();
 
 		if ( ! wp_next_scheduled( self::CRON_HOOK ) ) {
 			wp_schedule_event( time() + 300, 'komunikazioa_five_minutes', self::CRON_HOOK );
@@ -96,6 +99,7 @@ class Plugin {
 			full_name varchar(190) NOT NULL DEFAULT '',
 			email varchar(190) NOT NULL DEFAULT '',
 			phone varchar(60) NOT NULL DEFAULT '',
+			city varchar(190) NOT NULL DEFAULT '',
 			birth_year varchar(10) NOT NULL DEFAULT '',
 			terms_accepted tinyint(1) NOT NULL DEFAULT 0,
 			source_post_id bigint(20) unsigned NOT NULL DEFAULT 0,
@@ -125,6 +129,41 @@ class Plugin {
 
 		dbDelta( $sql_leads );
 		dbDelta( $sql_logs );
+	}
+
+	/**
+	 * Apply lightweight schema upgrades on existing installs.
+	 */
+	private static function maybe_upgrade_tables() {
+		global $wpdb;
+
+		$table = $wpdb->prefix . self::LEADS_TABLE;
+
+		if ( $wpdb->get_var( $wpdb->prepare( 'SHOW TABLES LIKE %s', $table ) ) !== $table ) {
+			return;
+		}
+
+		$city = $wpdb->get_var( $wpdb->prepare( 'SHOW COLUMNS FROM ' . $table . ' LIKE %s', 'city' ) );
+
+		if ( ! $city ) {
+			$wpdb->query( "ALTER TABLE {$table} ADD COLUMN city varchar(190) NOT NULL DEFAULT '' AFTER phone" );
+		}
+	}
+
+	/**
+	 * Enqueue frontend styles for public lead forms.
+	 */
+	public static function enqueue_public_assets() {
+		if ( is_admin() ) {
+			return;
+		}
+
+		wp_enqueue_style(
+			'komunikazioa-forms',
+			KOMUNIKAZIOA_URL . '/assets/css/forms.css',
+			array(),
+			KOMUNIKAZIOA_VERSION
+		);
 	}
 
 	/**
@@ -893,7 +932,7 @@ class Plugin {
 							<th><?php echo esc_html__( 'Izena', 'komunikazioa' ); ?></th>
 							<th><?php echo esc_html__( 'Email', 'komunikazioa' ); ?></th>
 							<th><?php echo esc_html__( 'Telefonoa', 'komunikazioa' ); ?></th>
-							<th><?php echo esc_html__( 'Jaiotze urtea', 'komunikazioa' ); ?></th>
+							<th><?php echo esc_html__( 'Herria', 'komunikazioa' ); ?></th>
 							<th><?php echo esc_html__( 'Baldintzak', 'komunikazioa' ); ?></th>
 						</tr>
 					</thead>
@@ -906,7 +945,7 @@ class Plugin {
 									<td><?php echo esc_html( $row->full_name ); ?></td>
 									<td><a href="mailto:<?php echo esc_attr( $row->email ); ?>"><?php echo esc_html( $row->email ); ?></a></td>
 									<td><?php echo esc_html( $row->phone ); ?></td>
-									<td><?php echo esc_html( $row->birth_year ); ?></td>
+									<td><?php echo esc_html( isset( $row->city ) ? $row->city : '' ); ?></td>
 									<td><?php echo $row->terms_accepted ? esc_html__( 'Bai', 'komunikazioa' ) : esc_html__( 'Ez', 'komunikazioa' ); ?></td>
 								</tr>
 							<?php endforeach; ?>
@@ -1145,7 +1184,7 @@ class Plugin {
 		$full_name = isset( $_POST['komunikazioa_full_name'] ) ? sanitize_text_field( wp_unslash( $_POST['komunikazioa_full_name'] ) ) : '';
 		$email     = isset( $_POST['komunikazioa_email'] ) ? sanitize_email( wp_unslash( $_POST['komunikazioa_email'] ) ) : '';
 		$phone     = isset( $_POST['komunikazioa_phone'] ) ? sanitize_text_field( wp_unslash( $_POST['komunikazioa_phone'] ) ) : '';
-		$birth_year= isset( $_POST['komunikazioa_birth_year'] ) ? sanitize_text_field( wp_unslash( $_POST['komunikazioa_birth_year'] ) ) : '';
+		$city      = isset( $_POST['komunikazioa_city'] ) ? sanitize_text_field( wp_unslash( $_POST['komunikazioa_city'] ) ) : '';
 		$terms     = ! empty( $_POST['komunikazioa_terms'] ) ? 1 : 0;
 		$source_id = isset( $_POST['komunikazioa_source_post_id'] ) ? absint( wp_unslash( $_POST['komunikazioa_source_post_id'] ) ) : 0;
 		$redirect  = ! empty( $_POST['_wp_http_referer'] ) ? esc_url_raw( wp_unslash( $_POST['_wp_http_referer'] ) ) : home_url( '/' );
@@ -1168,14 +1207,15 @@ class Plugin {
 				'full_name'      => $full_name,
 				'email'          => $email,
 				'phone'          => $phone,
-				'birth_year'     => $birth_year,
+				'city'           => $city,
+				'birth_year'     => '',
 				'terms_accepted' => $terms,
 				'source_post_id' => $source_id,
 				'ip_address'     => isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '',
 				'user_agent'     => isset( $_SERVER['HTTP_USER_AGENT'] ) ? sanitize_textarea_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) ) : '',
 				'created_at'     => current_time( 'mysql' ),
 			),
-			array( '%s', '%s', '%s', '%s', '%s', '%d', '%d', '%s', '%s', '%s' )
+			array( '%s', '%s', '%s', '%s', '%s', '%s', '%d', '%d', '%s', '%s', '%s' )
 		);
 
 		if ( false === $inserted ) {
@@ -1188,7 +1228,7 @@ class Plugin {
 				'full_name'  => $full_name,
 				'email'      => $email,
 				'phone'      => $phone,
-				'birth_year' => $birth_year,
+				'city'       => $city,
 			)
 		);
 
@@ -1269,7 +1309,9 @@ class Plugin {
 		$body .= '<li><strong>' . esc_html__( 'Izena', 'komunikazioa' ) . ':</strong> ' . esc_html( $lead['full_name'] ) . '</li>';
 		$body .= '<li><strong>' . esc_html__( 'Email', 'komunikazioa' ) . ':</strong> ' . esc_html( $lead['email'] ) . '</li>';
 		$body .= '<li><strong>' . esc_html__( 'Telefonoa', 'komunikazioa' ) . ':</strong> ' . esc_html( $lead['phone'] ) . '</li>';
-		$body .= '<li><strong>' . esc_html__( 'Jaiotze urtea', 'komunikazioa' ) . ':</strong> ' . esc_html( $lead['birth_year'] ) . '</li>';
+		if ( ! empty( $lead['city'] ) ) {
+			$body .= '<li><strong>' . esc_html__( 'Herria', 'komunikazioa' ) . ':</strong> ' . esc_html( $lead['city'] ) . '</li>';
+		}
 		$body .= '</ul>';
 
 		self::send_html_mail( $recipients, $subject, $body );
@@ -1609,6 +1651,40 @@ class Plugin {
 	}
 
 	/**
+	 * Build the consent label HTML with the WordPress privacy policy link.
+	 *
+	 * @return string
+	 */
+	private static function get_form_terms_label_html() {
+		$privacy_url = get_privacy_policy_url();
+
+		if ( $privacy_url ) {
+			$link = sprintf(
+				'<a href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>',
+				esc_url( $privacy_url ),
+				esc_html( self::admin_label( 'la politica de privacidad', 'pribatutasun-politika' ) )
+			);
+
+			return wp_kses(
+				sprintf(
+					/* translators: %s: privacy policy link */
+					__( 'Onartzen dut %s.', 'komunikazioa' ),
+					$link
+				),
+				array(
+					'a' => array(
+						'href'   => true,
+						'target' => true,
+						'rel'    => true,
+					),
+				)
+			);
+		}
+
+		return esc_html__( 'Baldintzak onartzen ditut.', 'komunikazioa' );
+	}
+
+	/**
 	 * Render a public lead form.
 	 *
 	 * @param string $type Form type.
@@ -1618,43 +1694,55 @@ class Plugin {
 		$message   = '';
 
 		if ( isset( $_GET['komunikazioa_success'] ) ) {
-			$message = '<p style="margin:0 0 12px;color:#0a7c43;font-weight:600;">' . esc_html__( 'Eskerrik asko. Zure eskaera jaso dugu.', 'komunikazioa' ) . '</p>';
+			$message = '<p class="komunikazioa-form__notice komunikazioa-form__notice--success">' . esc_html__( 'Eskerrik asko. Zure eskaera jaso dugu.', 'komunikazioa' ) . '</p>';
 		}
 
 		if ( isset( $_GET['komunikazioa_error'] ) ) {
-			$message = '<p style="margin:0 0 12px;color:#b42318;font-weight:600;">' . esc_html__( 'Errorea bidalketan. Saiatu berriz.', 'komunikazioa' ) . '</p>';
+			$message = '<p class="komunikazioa-form__notice komunikazioa-form__notice--error">' . esc_html__( 'Errorea bidalketan. Saiatu berriz.', 'komunikazioa' ) . '</p>';
 		}
 
-		echo '<div class="komunikazioa-form komunikazioa-form--' . esc_attr( $type ) . '" style="border:1px solid #d9d2c7;border-radius:16px;padding:20px;background:#fffefc;">';
+		$form_id = 'komunikazioa-form-' . esc_attr( $type );
+
+		echo '<div class="komunikazioa-form komunikazioa-form--' . esc_attr( $type ) . '">';
 		echo wp_kses_post( $message );
-		echo '<form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '" style="display:grid;gap:12px;">';
+		echo '<form id="' . esc_attr( $form_id ) . '" class="komunikazioa-form__form" method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '">';
 		echo '<input type="hidden" name="action" value="komunikazioa_submit_lead" />';
 		echo '<input type="hidden" name="komunikazioa_form_type" value="' . esc_attr( $type ) . '" />';
 		echo '<input type="hidden" name="komunikazioa_source_post_id" value="' . esc_attr( get_the_ID() ? get_the_ID() : 0 ) . '" />';
 		wp_nonce_field( 'komunikazioa_submit_lead', 'komunikazioa_lead_nonce' );
 
 		if ( ! $is_simple ) {
-			echo '<label>' . esc_html__( 'Izena', 'komunikazioa' ) . '</label>';
-			echo '<input required type="text" name="komunikazioa_full_name" style="padding:10px;border:1px solid #cfc7bb;border-radius:10px;" />';
+			echo '<p class="komunikazioa-form__field">';
+			echo '<label class="komunikazioa-form__label" for="' . esc_attr( $form_id ) . '-name">' . esc_html__( 'Izena', 'komunikazioa' ) . '</label>';
+			echo '<input class="komunikazioa-form__input" id="' . esc_attr( $form_id ) . '-name" required type="text" name="komunikazioa_full_name" autocomplete="name" />';
+			echo '</p>';
 		}
 
-		echo '<label>' . esc_html__( 'Email', 'komunikazioa' ) . '</label>';
-		echo '<input required type="email" name="komunikazioa_email" style="padding:10px;border:1px solid #cfc7bb;border-radius:10px;" />';
+		echo '<p class="komunikazioa-form__field">';
+		echo '<label class="komunikazioa-form__label" for="' . esc_attr( $form_id ) . '-email">' . esc_html__( 'Email', 'komunikazioa' ) . '</label>';
+		echo '<input class="komunikazioa-form__input" id="' . esc_attr( $form_id ) . '-email" required type="email" name="komunikazioa_email" autocomplete="email" />';
+		echo '</p>';
 
 		if ( ! $is_simple ) {
-			echo '<label>' . esc_html__( 'Telefonoa', 'komunikazioa' ) . '</label>';
-			echo '<input type="text" name="komunikazioa_phone" style="padding:10px;border:1px solid #cfc7bb;border-radius:10px;" />';
+			echo '<p class="komunikazioa-form__field">';
+			echo '<label class="komunikazioa-form__label" for="' . esc_attr( $form_id ) . '-phone">' . esc_html__( 'Telefonoa', 'komunikazioa' ) . '</label>';
+			echo '<input class="komunikazioa-form__input" id="' . esc_attr( $form_id ) . '-phone" type="text" name="komunikazioa_phone" autocomplete="tel" />';
+			echo '</p>';
 
-			echo '<label>' . esc_html__( 'Jaiotze urtea', 'komunikazioa' ) . '</label>';
-			echo '<input type="text" name="komunikazioa_birth_year" style="padding:10px;border:1px solid #cfc7bb;border-radius:10px;" />';
+			echo '<p class="komunikazioa-form__field">';
+			echo '<label class="komunikazioa-form__label" for="' . esc_attr( $form_id ) . '-city">' . esc_html( self::admin_label( 'Poblacion', 'Herria' ) ) . '</label>';
+			echo '<input class="komunikazioa-form__input" id="' . esc_attr( $form_id ) . '-city" type="text" name="komunikazioa_city" autocomplete="address-level2" />';
+			echo '</p>';
 		}
 
-		echo '<label style="display:flex;gap:8px;align-items:flex-start;">';
-		echo '<input required type="checkbox" name="komunikazioa_terms" value="1" style="margin-top:4px;" />';
-		echo '<span>' . esc_html__( 'Baldintzak onartzen ditut.', 'komunikazioa' ) . '</span>';
+		echo '<p class="komunikazioa-form__terms">';
+		echo '<label class="komunikazioa-form__terms-label" for="' . esc_attr( $form_id ) . '-terms">';
+		echo '<input id="' . esc_attr( $form_id ) . '-terms" required type="checkbox" name="komunikazioa_terms" value="1" />';
+		echo '<span>' . self::get_form_terms_label_html() . '</span>';
 		echo '</label>';
+		echo '</p>';
 
-		echo '<button type="submit" style="background:#18223a;color:#fff;border:none;border-radius:999px;padding:11px 16px;font-weight:600;cursor:pointer;">' . esc_html__( 'Bidali', 'komunikazioa' ) . '</button>';
+		echo '<button type="submit" class="komunikazioa-form__submit">' . esc_html__( 'Bidali', 'komunikazioa' ) . '</button>';
 		echo '</form>';
 		echo '</div>';
 	}

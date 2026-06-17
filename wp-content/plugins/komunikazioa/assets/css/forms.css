@@ -1,0 +1,113 @@
+.komunikazioa-form {
+	background: var(--color-light, #fff);
+	border: 1px solid var(--color-primary-300, #bcc5d3);
+	border-radius: var(--size-xs, 1.2rem);
+	padding: var(--page-margin, 1.6rem);
+	color: var(--color-primary, #18223a);
+}
+
+.komunikazioa-form__form {
+	display: grid;
+	gap: var(--sp-m, 1.8rem);
+	margin: 0;
+}
+
+.komunikazioa-form__notice {
+	margin: 0 0 var(--sp-m, 1.8rem);
+	padding: var(--sp-s, 1.4rem);
+	border-radius: var(--size-xxs, 0.8rem);
+	font-size: var(--font-micro, 1.4rem);
+	font-weight: var(--weight-medium, 500);
+}
+
+.komunikazioa-form__notice--success {
+	background: #e4f4ea;
+	border: 1px solid #9dc8aa;
+	color: #1e5a2d;
+}
+
+.komunikazioa-form__notice--error {
+	background: #fde7e7;
+	border: 1px solid #e6b0b0;
+	color: #8c1b1b;
+}
+
+.komunikazioa-form__field {
+	margin: 0;
+}
+
+.komunikazioa-form__label {
+	display: block;
+	margin-bottom: var(--sp-xxs, 0.8rem);
+	font-size: var(--font-micro, 1.4rem);
+	color: var(--color-primary-600, #3e4b63);
+}
+
+.komunikazioa-form__input {
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: var(--sp-xxs, 0.8rem) var(--sp-s, 1.4rem);
+	font-size: var(--font-paragraph, 2rem);
+	font-family: var(--font-body, inherit);
+	color: var(--color-primary, #18223a);
+	background: var(--color-light, #fff);
+	border: 1px solid var(--color-primary-300, #bcc5d3);
+	border-radius: var(--size-xxs, 0.8rem);
+}
+
+.komunikazioa-form__input:focus {
+	outline: 2px solid var(--color-secondary, #269bc6);
+	outline-offset: 1px;
+	border-color: var(--color-secondary, #269bc6);
+}
+
+.komunikazioa-form__terms {
+	margin: 0;
+}
+
+.komunikazioa-form__terms-label {
+	display: flex;
+	align-items: flex-start;
+	gap: var(--sp-xxs, 0.8rem);
+	font-size: var(--font-micro, 1.4rem);
+	color: var(--color-primary-600, #3e4b63);
+	cursor: pointer;
+}
+
+.komunikazioa-form__terms-label input[type='checkbox'] {
+	margin-top: 0.2rem;
+	flex-shrink: 0;
+}
+
+.komunikazioa-form__terms-label a {
+	color: var(--color-secondary, #269bc6);
+	text-decoration: underline;
+}
+
+.komunikazioa-form__terms-label a:hover {
+	color: var(--color-primary, #18223a);
+}
+
+.komunikazioa-form__submit {
+	appearance: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	margin: 0;
+	padding: var(--sp-s, 1.4rem) var(--sp-m, 1.8rem);
+	font-size: var(--font-paragraph, 2rem);
+	font-family: var(--font-body, inherit);
+	font-weight: var(--weight-medium, 500);
+	text-transform: uppercase;
+	color: var(--color-light, #fff);
+	background: var(--color-secondary, #269bc6);
+	border: none;
+	border-radius: var(--size-xxs, 0.8rem);
+	cursor: pointer;
+}
+
+.komunikazioa-form__submit:hover {
+	background: var(--color-primary, #18223a);
+}

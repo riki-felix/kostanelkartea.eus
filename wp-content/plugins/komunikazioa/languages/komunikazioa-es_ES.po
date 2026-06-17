@@ -406,6 +406,21 @@ msgstr "Destinatarios"
 msgid "Adibidez: smtp.gmail.com"
 msgstr "Por ejemplo: smtp.gmail.com"
 
+msgid "Onartzen dut %s."
+msgstr "Acepto la %s."
+
+msgid "la politica de privacidad"
+msgstr "política de privacidad"
+
+msgid "pribatutasun-politika"
+msgstr "política de privacidad"
+
+msgid "Poblacion"
+msgstr "Población"
+
+msgid "Herria"
+msgstr "Población"
+
 msgid "Erabiltzailerik gabe"
 msgstr "Sin usuario"
 
