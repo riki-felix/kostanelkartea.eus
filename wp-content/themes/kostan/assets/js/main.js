@@ -36,17 +36,35 @@ document.addEventListener('DOMContentLoaded', () => {
     menuOverlay.addEventListener('click', closeMenu);
   }
   
-  // Sync header spacer height with actual header
+  // Sync header spacer and CSS vars for fixed header offsets.
   const header = document.getElementById('masthead');
   const spacer = document.querySelector('.site-header-spacer');
   if (header && spacer) {
-    const sync = () => {
-      const h = header.offsetHeight + 'px';
-      spacer.style.height = h;
-      document.documentElement.style.setProperty('--header-height', h);
+    const syncHeaderMetrics = () => {
+      const adminBar = document.getElementById('wpadminbar');
+      const offsetTop = adminBar ? adminBar.offsetHeight : 0;
+      const headerHeight = header.offsetHeight;
+      const stackHeight = offsetTop + headerHeight;
+
+      spacer.style.height = `${headerHeight}px`;
+      document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+      document.documentElement.style.setProperty('--header-offset-top', `${offsetTop}px`);
+      document.documentElement.style.setProperty('--header-stack-height', `${stackHeight}px`);
     };
-    sync();
-    window.addEventListener('resize', sync);
+
+    syncHeaderMetrics();
+    window.addEventListener('resize', syncHeaderMetrics);
+    window.addEventListener('load', syncHeaderMetrics);
+
+    if (typeof ResizeObserver !== 'undefined') {
+      const headerObserver = new ResizeObserver(syncHeaderMetrics);
+      headerObserver.observe(header);
+
+      const adminBar = document.getElementById('wpadminbar');
+      if (adminBar) {
+        headerObserver.observe(adminBar);
+      }
+    }
   }
 
   // Hero Carousel (Swiper)

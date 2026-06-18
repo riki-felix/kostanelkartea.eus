@@ -315,6 +315,21 @@ function ct_acf_init() {
 add_action('acf/init', 'ct_acf_init');
 
 /**
+ * Add body classes useful for header/session layout.
+ *
+ * @param array $classes Body classes.
+ * @return array
+ */
+function kostan_body_classes( $classes ) {
+    if ( is_user_logged_in() ) {
+        $classes[] = 'has-user-session';
+    }
+
+    return $classes;
+}
+add_filter( 'body_class', 'kostan_body_classes' );
+
+/**
  * Enqueue Google Maps API on frontend when needed
  */
 function ct_enqueue_google_maps() {

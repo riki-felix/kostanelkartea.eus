@@ -4,7 +4,7 @@
 
 /* ── Month group ── */
 .page-talks__month,.section-talks {
-  scroll-margin-top: calc(var(--header-height, 12rem) + 8rem);
+  scroll-margin-top: calc(var(--header-stack-height, var(--header-height, 12rem)) + 8rem);
   margin-bottom: var(--sp-xxl);
   margin-top: var(--sp-l);
 
@@ -215,7 +215,7 @@
 
 .talks-nav {
   position: sticky;
-  top: var(--header-height, 12rem);
+  top: var(--header-stack-height, var(--header-height, 12rem));
   z-index: 10;
   padding: var(--sp-s) 0;
 }

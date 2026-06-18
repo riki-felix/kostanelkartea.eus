@@ -4,6 +4,16 @@
   height: var(--header-height, 12rem);
 }
 
+body.admin-bar .site-header {
+  top: var(--wp-admin--admin-bar--height, 32px);
+}
+
+@media screen and (max-width: 782px) {
+  body.admin-bar .site-header {
+    top: var(--wp-admin--admin-bar--height, 46px);
+  }
+}
+
 /* Front page: content starts behind the fixed header */
 body.home .site-header-spacer {
   display: none;
