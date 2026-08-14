@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'KOSTAN_COURSE_REWRITE_VERSION', '1' );
+define( 'KOSTAN_COURSE_REWRITE_VERSION', '2' );
 define( 'KOSTAN_COURSE_SLUG_PATTERN', '[0-9]{2}-[0-9]{2}' );
 
 /**
@@ -90,10 +90,11 @@ function kostan_get_course_from_datetime( DateTimeInterface $date ) {
 	$end   = $start + 1;
 
 	return array(
-		'start' => $start,
-		'end'   => $end,
-		'slug'  => sprintf( '%02d-%02d', $start % 100, $end % 100 ),
-		'label' => $start . '-' . $end,
+		'start'       => $start,
+		'end'         => $end,
+		'slug'        => sprintf( '%02d-%02d', $start % 100, $end % 100 ),
+		'label'       => $start . '-' . $end,
+		'short_label' => $start . '-' . sprintf( '%02d', $end % 100 ),
 	);
 }
 
@@ -120,10 +121,11 @@ function kostan_get_talk_course( $post_id ) {
 		if ( $terms && ! is_wp_error( $terms ) ) {
 			$term = $terms[0];
 			return array(
-				'start' => 0,
-				'end'   => 0,
-				'slug'  => $term->slug,
-				'label' => $term->name,
+				'start'       => 0,
+				'end'         => 0,
+				'slug'        => $term->slug,
+				'label'       => $term->name,
+				'short_label' => $term->name,
 			);
 		}
 		return null;
@@ -325,7 +327,7 @@ function kostan_get_archived_courses() {
  *
  * @return string
  */
-function kostan_get_ponentziak_url() {
+function kostan_get_ponentziak_page_id() {
 	$query = new WP_Query(
 		array(
 			'post_type'              => 'page',
@@ -340,8 +342,18 @@ function kostan_get_ponentziak_url() {
 		)
 	);
 
-	if ( ! empty( $query->posts ) ) {
-		$url = get_permalink( (int) $query->posts[0] );
+	return ! empty( $query->posts ) ? (int) $query->posts[0] : 0;
+}
+
+/**
+ * URL of the Ponentziak listing page in the current language.
+ *
+ * @return string
+ */
+function kostan_get_ponentziak_url() {
+	$page_id = kostan_get_ponentziak_page_id();
+	if ( $page_id ) {
+		$url = get_permalink( $page_id );
 		if ( $url ) {
 			return $url;
 		}
@@ -352,46 +364,132 @@ function kostan_get_ponentziak_url() {
 }
 
 /**
- * Nav of current + archived courses.
+ * Whether a string is a course slug like 25-26.
  *
- * @param string|null $active_slug Active course slug, or null on the current listing.
+ * @param string $slug Candidate slug.
+ * @return bool
  */
-function kostan_the_courses_nav( $active_slug = null ) {
-	$current  = kostan_get_current_course();
-	$archived = kostan_get_archived_courses();
+function kostan_is_course_slug( $slug ) {
+	return is_string( $slug ) && (bool) preg_match( '/^' . KOSTAN_COURSE_SLUG_PATTERN . '$/', $slug );
+}
 
-	if ( empty( $archived ) ) {
+/**
+ * Course slug requested via pretty URL or ?curso=, defaulting to current.
+ *
+ * @return string
+ */
+function kostan_get_requested_course_slug() {
+	$slug = get_query_var( 'curso' );
+	if ( ! kostan_is_course_slug( $slug ) && isset( $_GET['curso'] ) ) {
+		$slug = sanitize_text_field( wp_unslash( $_GET['curso'] ) );
+	}
+
+	if ( kostan_is_course_slug( $slug ) ) {
+		return $slug;
+	}
+
+	return kostan_get_current_course()['slug'];
+}
+
+/**
+ * Listing URL for a course. Current course stays on /hitzaldiak/.
+ *
+ * @param string|null $slug Course slug.
+ * @return string
+ */
+function kostan_get_course_listing_url( $slug = null ) {
+	$current = kostan_get_current_course()['slug'];
+	$base    = kostan_get_ponentziak_url();
+
+	if ( ! $slug || $slug === $current ) {
+		return $base;
+	}
+
+	return trailingslashit( $base ) . rawurlencode( $slug ) . '/';
+}
+
+/**
+ * Calendar URL for a course.
+ *
+ * @param string|null $slug Course slug.
+ * @return string
+ */
+function kostan_get_course_calendar_url( $slug = null ) {
+	$url = get_post_type_archive_link( 'talks' );
+	if ( ! $url ) {
+		$url = home_url( '/' );
+	}
+
+	$current = kostan_get_current_course()['slug'];
+	if ( ! $slug || $slug === $current ) {
+		return $url;
+	}
+
+	return add_query_arg( 'curso', $slug, $url );
+}
+
+/**
+ * Courses for the switcher: current (even if empty) plus archived terms.
+ *
+ * @return array<int,array{slug:string,label:string}>
+ */
+function kostan_get_nav_courses() {
+	$current = kostan_get_current_course();
+	$items   = array(
+		array(
+			'slug'  => $current['slug'],
+			'label' => $current['label'],
+		),
+	);
+
+	foreach ( kostan_get_archived_courses() as $term ) {
+		$items[] = array(
+			'slug'  => $term->slug,
+			'label' => $term->name,
+		);
+	}
+
+	return $items;
+}
+
+/**
+ * Course dropdown. $context listing|calendar controls the destination URLs.
+ *
+ * @param string $active_slug Active course slug.
+ * @param string $context     listing or calendar.
+ */
+function kostan_the_course_dropdown( $active_slug, $context = 'listing' ) {
+	$courses = kostan_get_nav_courses();
+	if ( empty( $courses ) ) {
 		return;
 	}
 
-	$is_current_view = ( null === $active_slug || $active_slug === $current['slug'] );
+	$active_label = $active_slug;
+	foreach ( $courses as $course ) {
+		if ( $course['slug'] === $active_slug ) {
+			$active_label = $course['label'];
+			break;
+		}
+	}
+
+	$id = ( 'calendar' === $context ) ? 'calendar-course-filter' : 'talks-course-filter';
 	?>
-	<nav class="talks-courses" aria-label="<?php esc_attr_e( 'Cursos academicos', 'kostan' ); ?>">
-		<ul class="talks-courses__list">
-			<li class="talks-courses__item<?php echo $is_current_view ? ' talks-courses__item--active' : ''; ?>">
-				<?php if ( $is_current_view ) : ?>
-					<span><?php echo esc_html( $current['label'] ); ?></span>
-				<?php else : ?>
-					<a href="<?php echo esc_url( kostan_get_ponentziak_url() ); ?>"><?php echo esc_html( $current['label'] ); ?></a>
-				<?php endif; ?>
-			</li>
-			<?php foreach ( $archived as $term ) :
-				$is_active = ( $active_slug === $term->slug );
-				$term_link = get_term_link( $term );
-				if ( is_wp_error( $term_link ) ) {
-					continue;
-				}
+	<div class="calendar-filter js-filter-dropdown<?php echo 'listing' === $context ? ' talks-nav__course' : ''; ?>" id="<?php echo esc_attr( $id ); ?>" aria-expanded="false">
+		<button type="button" class="calendar-filter__toggle" aria-expanded="false" aria-haspopup="listbox">
+			<span class="calendar-filter__label"><?php echo esc_html( $active_label ); ?></span>
+			<svg class="calendar-filter__arrow" width="12" height="8" viewBox="0 0 12 8" aria-hidden="true"><path fill="currentColor" d="M1.41.59 6 5.17 10.59.59 12 2 6 8 0 2z"/></svg>
+		</button>
+		<ul class="calendar-filter__list" role="listbox">
+			<?php foreach ( $courses as $course ) :
+				$url     = ( 'calendar' === $context ) ? kostan_get_course_calendar_url( $course['slug'] ) : kostan_get_course_listing_url( $course['slug'] );
+				$current = ( $course['slug'] === $active_slug );
 				?>
-				<li class="talks-courses__item<?php echo $is_active ? ' talks-courses__item--active' : ''; ?>">
-					<?php if ( $is_active ) : ?>
-						<span><?php echo esc_html( $term->name ); ?></span>
-					<?php else : ?>
-						<a href="<?php echo esc_url( $term_link ); ?>"><?php echo esc_html( $term->name ); ?></a>
-					<?php endif; ?>
+				<li class="calendar-filter__option<?php echo $current ? ' calendar-filter__option--active' : ''; ?>" role="option">
+					<a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $course['label'] ); ?></a>
 				</li>
 			<?php endforeach; ?>
 		</ul>
-	</nav>
+	</div>
 	<?php
 }
 
@@ -484,8 +582,18 @@ add_action( 'init', 'kostan_register_course_taxonomy', 11 );
  */
 function kostan_register_course_rewrites() {
 	add_rewrite_tag( '%kostan_course%', '(' . KOSTAN_COURSE_SLUG_PATTERN . ')' );
+	add_rewrite_tag( '%curso%', '(' . KOSTAN_COURSE_SLUG_PATTERN . ')' );
 
-	foreach ( kostan_get_talks_rewrite_slugs() as $base ) {
+	$slugs = kostan_get_talks_rewrite_slugs();
+	$page_id = kostan_get_ponentziak_page_id();
+	if ( $page_id ) {
+		$page = get_post( $page_id );
+		if ( $page && $page->post_name ) {
+			$slugs[] = $page->post_name;
+		}
+	}
+
+	foreach ( array_unique( array_filter( $slugs ) ) as $base ) {
 		$quoted = preg_quote( $base, '/' );
 
 		add_rewrite_rule(
@@ -496,7 +604,7 @@ function kostan_register_course_rewrites() {
 
 		add_rewrite_rule(
 			$quoted . '/(' . KOSTAN_COURSE_SLUG_PATTERN . ')/?$',
-			'index.php?course=$matches[1]',
+			'index.php?curso=$matches[1]',
 			'top'
 		);
 	}
@@ -511,6 +619,7 @@ add_action( 'init', 'kostan_register_course_rewrites', 12 );
  */
 function kostan_course_query_vars( $vars ) {
 	$vars[] = 'kostan_course';
+	$vars[] = 'curso';
 	return $vars;
 }
 add_filter( 'query_vars', 'kostan_course_query_vars' );
@@ -559,7 +668,7 @@ function kostan_course_term_link( $termlink, $term, $taxonomy ) {
 		return $termlink;
 	}
 
-	$path = kostan_get_talks_base_slug() . '/' . $term->slug;
+	$path = ltrim( wp_parse_url( kostan_get_course_listing_url( $term->slug ), PHP_URL_PATH ), '/' );
 	return home_url( user_trailingslashit( $path ) );
 }
 add_filter( 'term_link', 'kostan_course_term_link', 20, 3 );
@@ -578,13 +687,17 @@ function kostan_course_canonical_redirect() {
 	}
 
 	if ( is_tax( 'course' ) ) {
-		$term    = get_queried_object();
-		$current = kostan_get_current_course();
-		if ( $term instanceof WP_Term && $term->slug === $current['slug'] ) {
-			wp_safe_redirect( kostan_get_ponentziak_url(), 301 );
-			exit;
-		}
-		return;
+		$term = get_queried_object();
+		$slug = ( $term instanceof WP_Term ) ? $term->slug : '';
+		wp_safe_redirect( kostan_get_course_listing_url( $slug ), 301 );
+		exit;
+	}
+
+	$curso   = get_query_var( 'curso' );
+	$current = kostan_get_current_course()['slug'];
+	if ( kostan_is_course_slug( $curso ) && $curso === $current && ! is_post_type_archive( 'talks' ) ) {
+		wp_safe_redirect( kostan_get_ponentziak_url(), 301 );
+		exit;
 	}
 
 	if ( ! is_singular( 'talks' ) ) {
@@ -614,6 +727,66 @@ function kostan_course_canonical_redirect() {
 	}
 }
 add_action( 'template_redirect', 'kostan_course_canonical_redirect', 1 );
+
+/**
+ * Stop redirect_canonical from looping pretty course URLs.
+ *
+ * @param string|false $redirect_url  Canonical URL.
+ * @param string       $requested_url Requested URL.
+ * @return string|false
+ */
+function kostan_course_disable_canonical_loop( $redirect_url, $requested_url ) {
+	if ( get_query_var( 'curso' ) || get_query_var( 'kostan_course' ) || is_tax( 'course' ) ) {
+		return false;
+	}
+
+	return $redirect_url;
+}
+add_filter( 'redirect_canonical', 'kostan_course_disable_canonical_loop', 10, 2 );
+
+/**
+ * Map /hitzaldiak/25-26/ to the Ponentziak page with curso query var.
+ *
+ * @param WP_Query $query Query.
+ */
+function kostan_curso_path_to_ponentziak( $query ) {
+	if ( is_admin() || ! $query->is_main_query() ) {
+		return;
+	}
+
+	if ( $query->get( 'kostan_course' ) || $query->get( 'name' ) ) {
+		return;
+	}
+
+	if ( $query->is_post_type_archive( 'talks' ) || $query->is_page() ) {
+		return;
+	}
+
+	$curso = $query->get( 'curso' );
+	if ( ! kostan_is_course_slug( $curso ) ) {
+		return;
+	}
+
+	$page_id = kostan_get_ponentziak_page_id();
+	if ( ! $page_id ) {
+		return;
+	}
+
+	$query->set( 'page_id', $page_id );
+	$query->set( 'post_type', 'page' );
+	$query->set( 'pagename', '' );
+	$query->queried_object    = get_post( $page_id );
+	$query->queried_object_id = $page_id;
+	$query->is_page               = true;
+	$query->is_singular           = true;
+	$query->is_home               = false;
+	$query->is_front_page         = false;
+	$query->is_archive            = false;
+	$query->is_post_type_archive  = false;
+	$query->is_tax                = false;
+	$query->is_404                = false;
+}
+add_action( 'parse_query', 'kostan_curso_path_to_ponentziak', 1 );
 
 /**
  * Assign course after ACF (and core) saves a talk.

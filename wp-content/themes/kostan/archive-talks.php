@@ -10,6 +10,16 @@
 
 get_header();
 
+$course_slug = kostan_get_requested_course_slug();
+$course_meta = ( $course_slug === kostan_get_current_course()['slug'] )
+	? kostan_get_current_course()
+	: array( 'slug' => $course_slug, 'label' => $course_slug );
+
+$term = get_term_by( 'slug', $course_slug, 'course' );
+if ( $term instanceof WP_Term ) {
+	$course_meta['label'] = $term->name;
+}
+
 /* ── Top-level areas with colors ── */
 $areas = get_terms([
 	'taxonomy'   => 'area',
@@ -17,8 +27,8 @@ $areas = get_terms([
 	'parent'     => 0,
 ]);
 
-/* ── Current-course talks ordered by talk_date ── */
-$all_talks = new WP_Query( kostan_talks_query_args() );
+/* ── Selected-course talks ordered by talk_date ── */
+$all_talks = new WP_Query( kostan_talks_query_args( array(), $course_slug ) );
 
 /* Group talks by Year-Month */
 $grouped = [];
@@ -72,8 +82,6 @@ if ( $all_talks->have_posts() ) :
 	endwhile;
 	wp_reset_postdata();
 endif;
-
-$season = kostan_get_current_course()['label'];
 ?>
 
 <main id="primary" class="site-main archive-talks">
@@ -84,11 +92,13 @@ $season = kostan_get_current_course()['label'];
 			<div class="calendar-header__row">
 				<h1 class="calendar-header__title">
 					<?php esc_html_e( 'Ponentziaren Egutegia', 'kostan' ); ?>
-					<span class="calendar-header__season"><?php echo esc_html( $season ); ?></span>
 				</h1>
 
-				<?php if ( ! empty( $areas ) && ! is_wp_error( $areas ) ) : ?>
-				<div class="calendar-filter" id="calendar-area-filter" aria-expanded="false">
+				<div class="calendar-header__filters">
+					<?php kostan_the_course_dropdown( $course_slug, 'calendar' ); ?>
+
+					<?php if ( ! empty( $areas ) && ! is_wp_error( $areas ) ) : ?>
+				<div class="calendar-filter js-filter-dropdown" id="calendar-area-filter" aria-expanded="false">
 					<button class="calendar-filter__toggle" type="button" aria-expanded="false">
 						<span class="calendar-filter__label"><?php esc_html_e( 'Area guztiak', 'kostan' ); ?></span>
 						<svg class="calendar-filter__arrow" width="12" height="8" viewBox="0 0 12 8" aria-hidden="true"><path fill="currentColor" d="M1.41.59 6 5.17 10.59.59 12 2 6 8 0 2z"/></svg>
@@ -108,6 +118,7 @@ $season = kostan_get_current_course()['label'];
 					</ul>
 				</div>
 				<?php endif; ?>
+				</div>
 			</div>
 		</div>
 	</section>

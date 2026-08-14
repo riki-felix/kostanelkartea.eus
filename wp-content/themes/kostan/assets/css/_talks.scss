@@ -306,6 +306,52 @@
       }
     }
   }
+
+  &--course {
+    display: list-item;
+  }
+}
+
+.talks-nav .talks-nav__course.calendar-filter {
+  min-width: 0;
+  width: auto;
+
+  .calendar-filter__toggle {
+    font-size: var(--fs-micro);
+    font-weight: var(--weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--color-primary-100);
+    background: transparent;
+    border-color: transparent;
+    padding: var(--sp-xxs) var(--sp-xs);
+  }
+
+  .calendar-filter__list {
+    right: 0;
+    left: auto;
+  }
+
+  .calendar-filter__option a {
+    display: block;
+    color: var(--color-primary);
+    text-decoration: none;
+    text-transform: none;
+    font-size: var(--fs-paragraph);
+    font-weight: inherit;
+  }
+}
+
+.page-talks__empty {
+  padding: var(--sp-xxl) 0 var(--sp-xxxl);
+  text-align: center;
+
+  p {
+    max-width: 40em;
+    margin: 0 auto;
+    font-size: var(--fs-paragraph);
+    line-height: 1.6;
+  }
 }
 
 /* ==============================================

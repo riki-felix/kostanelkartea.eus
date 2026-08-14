@@ -33,6 +33,23 @@
   margin: 0;
 }
 
+.calendar-header__filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-s);
+  width: 100%;
+
+  @media (min-width: 750px) {
+    width: auto;
+    justify-content: flex-end;
+  }
+
+  .calendar-filter {
+    min-width: 18rem;
+  }
+}
+
 .calendar-header__season {
   display: block;
   font-family: var(--font-body);
@@ -126,6 +143,13 @@
 
   &--active {
     font-weight: var(--weight-bold);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    width: 100%;
   }
 }
 

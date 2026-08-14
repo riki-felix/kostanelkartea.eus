@@ -104,27 +104,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Calendar area filter (custom dropdown)
-  const filterWrap = document.getElementById('calendar-area-filter');
-  if (filterWrap) {
+  // Calendar / course filter dropdowns
+  document.querySelectorAll('.js-filter-dropdown').forEach((filterWrap) => {
     const toggle = filterWrap.querySelector('.calendar-filter__toggle');
-    const label  = filterWrap.querySelector('.calendar-filter__label');
-    const options = filterWrap.querySelectorAll('.calendar-filter__option');
+    if (!toggle) {
+      return;
+    }
 
-    // Toggle open/close
     toggle.addEventListener('click', () => {
       const open = filterWrap.getAttribute('aria-expanded') === 'true';
-      filterWrap.setAttribute('aria-expanded', !open);
-      toggle.setAttribute('aria-expanded', !open);
+      filterWrap.setAttribute('aria-expanded', String(!open));
+      toggle.setAttribute('aria-expanded', String(!open));
     });
 
-    // Close on click outside
     document.addEventListener('click', (e) => {
       if (!filterWrap.contains(e.target)) {
         filterWrap.setAttribute('aria-expanded', 'false');
         toggle.setAttribute('aria-expanded', 'false');
       }
     });
+  });
+
+  // Calendar area filter (custom dropdown)
+  const filterWrap = document.getElementById('calendar-area-filter');
+  if (filterWrap) {
+    const toggle = filterWrap.querySelector('.calendar-filter__toggle');
+    const label  = filterWrap.querySelector('.calendar-filter__label');
+    const options = filterWrap.querySelectorAll('.calendar-filter__option');
 
     // Option selection
     options.forEach(opt => {
