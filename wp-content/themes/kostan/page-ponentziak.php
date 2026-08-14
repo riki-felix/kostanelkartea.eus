@@ -18,6 +18,7 @@ $is_current     = ( $course_slug === $current_course['slug'] );
 $all_talks      = new WP_Query( kostan_talks_query_args( array(), $course_slug ) );
 $grouped        = kostan_group_talks_by_month( $all_talks );
 $current_ym     = current_time( 'Y-m' );
+$month_keys     = ! empty( $grouped ) ? array_keys( $grouped ) : kostan_get_course_month_keys( $course_slug );
 $calendar_url   = kostan_get_course_calendar_url( $course_slug );
 ?>
 
@@ -32,15 +33,20 @@ $calendar_url   = kostan_get_course_calendar_url( $course_slug );
 	<nav class="talks-nav">
 		<div class="wrapper">
 			<ul class="talks-nav__list">
-				<?php foreach ( $grouped as $ym => $post_ids_nav ) :
+				<?php foreach ( $month_keys as $ym ) :
 					$ts_nav     = strtotime( $ym . '-01' );
 					$is_past    = $ym < $current_ym;
 					$is_current_month = $ym === $current_ym;
+					$has_talks  = ! empty( $grouped[ $ym ] );
 				?>
 					<li class="talks-nav__item<?php echo $is_past ? ' talks-nav__item--past' : ''; ?><?php echo $is_current_month ? ' talks-nav__item--current' : ''; ?>">
-						<a href="#<?php echo esc_attr( date( 'n-Y', $ts_nav ) ); ?>">
-							<?php echo esc_html( kostan_format_timestamp( $ts_nav, 'month' ) ); ?>
-						</a>
+						<?php if ( $has_talks ) : ?>
+							<a href="#<?php echo esc_attr( date( 'n-Y', $ts_nav ) ); ?>">
+								<?php echo esc_html( kostan_format_timestamp( $ts_nav, 'month' ) ); ?>
+							</a>
+						<?php else : ?>
+							<span><?php echo esc_html( kostan_format_timestamp( $ts_nav, 'month' ) ); ?></span>
+						<?php endif; ?>
 					</li>
 				<?php endforeach; ?>
 				<li class="talks-nav__item talks-nav__item--calendar">

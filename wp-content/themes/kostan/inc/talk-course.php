@@ -135,6 +135,39 @@ function kostan_get_talk_course( $post_id ) {
 }
 
 /**
+ * Year-month keys for a course (September–June).
+ *
+ * @param string $slug Course slug like 25-26.
+ * @return string[]
+ */
+function kostan_get_course_month_keys( $slug ) {
+	$start = null;
+	$end   = null;
+
+	if ( preg_match( '/^([0-9]{2})-([0-9]{2})$/', $slug, $matches ) ) {
+		$start = 2000 + (int) $matches[1];
+		$end   = 2000 + (int) $matches[2];
+		if ( $end < $start ) {
+			$end += 100;
+		}
+	} else {
+		$course = kostan_get_current_course();
+		$start  = $course['start'];
+		$end    = $course['end'];
+	}
+
+	$keys = array();
+	for ( $month = 9; $month <= 12; $month++ ) {
+		$keys[] = sprintf( '%04d-%02d', $start, $month );
+	}
+	for ( $month = 1; $month <= 6; $month++ ) {
+		$keys[] = sprintf( '%04d-%02d', $end, $month );
+	}
+
+	return $keys;
+}
+
+/**
  * Whether a talk belongs to the current academic course.
  *
  * @param int $post_id Talk ID.
@@ -472,16 +505,40 @@ function kostan_the_course_dropdown( $active_slug, $context = 'listing' ) {
 		}
 	}
 
-	$id = ( 'calendar' === $context ) ? 'calendar-course-filter' : 'talks-course-filter';
+	if ( 'listing' === $context ) {
+		?>
+		<details class="talks-nav__course">
+			<summary class="talks-nav__course-toggle">
+				<span><?php echo esc_html( $active_label ); ?></span>
+				<svg class="talks-nav__course-chevron" width="10" height="7" viewBox="0 0 12 8" aria-hidden="true"><path fill="currentColor" d="M1.41.59 6 5.17 10.59.59 12 2 6 8 0 2z"/></svg>
+			</summary>
+			<ul class="talks-nav__course-menu">
+				<?php foreach ( $courses as $course ) :
+					$url     = kostan_get_course_listing_url( $course['slug'] );
+					$current = ( $course['slug'] === $active_slug );
+					?>
+					<li>
+						<a href="<?php echo esc_url( $url ); ?>"<?php echo $current ? ' aria-current="page"' : ''; ?>>
+							<?php echo esc_html( $course['label'] ); ?>
+						</a>
+					</li>
+				<?php endforeach; ?>
+			</ul>
+		</details>
+		<?php
+		return;
+	}
+
+	$id = 'calendar-course-filter';
 	?>
-	<div class="calendar-filter js-filter-dropdown<?php echo 'listing' === $context ? ' talks-nav__course' : ''; ?>" id="<?php echo esc_attr( $id ); ?>" aria-expanded="false">
+	<div class="calendar-filter js-filter-dropdown" id="<?php echo esc_attr( $id ); ?>" aria-expanded="false">
 		<button type="button" class="calendar-filter__toggle" aria-expanded="false" aria-haspopup="listbox">
 			<span class="calendar-filter__label"><?php echo esc_html( $active_label ); ?></span>
 			<svg class="calendar-filter__arrow" width="12" height="8" viewBox="0 0 12 8" aria-hidden="true"><path fill="currentColor" d="M1.41.59 6 5.17 10.59.59 12 2 6 8 0 2z"/></svg>
 		</button>
 		<ul class="calendar-filter__list" role="listbox">
 			<?php foreach ( $courses as $course ) :
-				$url     = ( 'calendar' === $context ) ? kostan_get_course_calendar_url( $course['slug'] ) : kostan_get_course_listing_url( $course['slug'] );
+				$url     = kostan_get_course_calendar_url( $course['slug'] );
 				$current = ( $course['slug'] === $active_slug );
 				?>
 				<li class="calendar-filter__option<?php echo $current ? ' calendar-filter__option--active' : ''; ?>" role="option">

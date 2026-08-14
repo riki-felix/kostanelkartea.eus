@@ -104,6 +104,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Course year dropdown in talks nav (native details)
+  document.querySelectorAll('.talks-nav__course').forEach((details) => {
+    document.addEventListener('click', (e) => {
+      if (!details.contains(e.target)) {
+        details.removeAttribute('open');
+      }
+    });
+  });
+
   // Calendar / course filter dropdowns
   document.querySelectorAll('.js-filter-dropdown').forEach((filterWrap) => {
     const toggle = filterWrap.querySelector('.calendar-filter__toggle');
@@ -111,8 +120,18 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    toggle.addEventListener('click', () => {
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       const open = filterWrap.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.js-filter-dropdown').forEach((other) => {
+        if (other !== filterWrap) {
+          other.setAttribute('aria-expanded', 'false');
+          const otherToggle = other.querySelector('.calendar-filter__toggle');
+          if (otherToggle) {
+            otherToggle.setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
       filterWrap.setAttribute('aria-expanded', String(!open));
       toggle.setAttribute('aria-expanded', String(!open));
     });

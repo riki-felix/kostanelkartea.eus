@@ -216,8 +216,9 @@
 .talks-nav {
   position: sticky;
   top: var(--header-stack-height, var(--header-height, 12rem));
-  z-index: 10;
+  z-index: 20;
   padding: var(--sp-s) 0;
+  overflow: visible;
 }
 
 .talks-nav .wrapper {
@@ -229,6 +230,7 @@
   border-radius: 999px;
   width: fit-content;
   border: 0.5px solid var(--color-primary-100);
+  overflow: visible;
 }
 
 .talks-nav__list {
@@ -253,7 +255,8 @@
     display: list-item;
   }
 
-  a {
+  a,
+  span {
     font-family: var(--font-body);
     font-size: var(--fs-micro);
     font-weight: var(--weight-regular);
@@ -262,20 +265,22 @@
     color: var(--color-primary-100);
     transition: color 0.15s ease;
     line-height: 1;
+  }
 
-    &:hover {
-      color: var(--color-light);
-    }
+  a:hover {
+    color: var(--color-light);
   }
 
   &--past {
-    a {
+    a,
+    span {
       opacity: 0.8;
     }
   }
 
   &--current {
-    a {
+    a,
+    span {
       font-weight: var(--weight-bold);
       color: var(--color-light);
     }
@@ -309,36 +314,95 @@
 
   &--course {
     display: list-item;
+    position: relative;
   }
 }
 
-.talks-nav .talks-nav__course.calendar-filter {
-  min-width: 0;
-  width: auto;
+.talks-nav__course {
+  position: relative;
+}
 
-  .calendar-filter__toggle {
+.talks-nav__course-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-xxs);
+  font-family: var(--font-body);
+  font-size: var(--fs-micro);
+  font-weight: var(--weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-primary-100);
+  line-height: 1;
+  padding: var(--sp-xxs);
+  cursor: pointer;
+  list-style: none;
+  background: none;
+  border: 0;
+
+  @media (min-width: 750px) {
+    border-left: 0.5px solid var(--color-primary-100);
+  }
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &:hover {
+    color: var(--color-light);
+  }
+}
+
+.talks-nav__course-chevron {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.talks-nav__course[open] .talks-nav__course-toggle {
+  color: var(--color-light);
+}
+
+.talks-nav__course[open] .talks-nav__course-chevron {
+  transform: rotate(180deg);
+}
+
+.talks-nav__course-menu {
+  position: absolute;
+  top: calc(100% + var(--sp-xxs));
+  right: 0;
+  z-index: 30;
+  min-width: 12rem;
+  margin: 0;
+  padding: var(--sp-xxs) 0;
+  list-style: none;
+  background: var(--color-light);
+  border: 0.5px solid var(--color-primary-100);
+  border-radius: var(--size-xs);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+
+  a,
+  .talks-nav__item & a {
+    display: block;
+    padding: var(--sp-xs) var(--sp-m);
+    font-family: var(--font-body);
     font-size: var(--fs-micro);
-    font-weight: var(--weight-medium);
+    font-weight: var(--weight-regular);
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    color: var(--color-primary-100);
-    background: transparent;
-    border-color: transparent;
-    padding: var(--sp-xxs) var(--sp-xs);
-  }
-
-  .calendar-filter__list {
-    right: 0;
-    left: auto;
-  }
-
-  .calendar-filter__option a {
-    display: block;
-    color: var(--color-primary);
     text-decoration: none;
-    text-transform: none;
-    font-size: var(--fs-paragraph);
-    font-weight: inherit;
+    color: var(--color-primary);
+    line-height: 1.2;
+    white-space: nowrap;
+    border: 0;
+
+    &:hover,
+    &[aria-current="page"] {
+      color: var(--color-primary);
+      background: var(--color-primary-100);
+    }
+
+    &[aria-current="page"] {
+      font-weight: var(--weight-bold);
+    }
   }
 }
 
