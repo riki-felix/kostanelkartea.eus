@@ -226,7 +226,7 @@
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: var(--sp-xxs) var(--sp-m);
+  padding: 0 var(--sp-m);
   background: var(--color-primary);
   border-radius: 999px;
   border: 0.5px solid var(--color-primary-100);
@@ -257,6 +257,33 @@
   }
 }
 
+/* Shared control metrics: one padding owns the pill height */
+.talks-nav__item > a,
+.talks-nav__item > span,
+.talks-nav__course-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-xxs);
+  box-sizing: border-box;
+  font-family: var(--font-body);
+  font-size: var(--fs-micro);
+  font-weight: var(--weight-regular);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--color-primary-100);
+  line-height: 1;
+  padding: var(--sp-xxs) 0;
+  transition: color 0.15s ease;
+
+  .icon,
+  svg {
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+  }
+}
+
 .talks-nav__item {
   display: none;
   flex-shrink: 0;
@@ -266,35 +293,20 @@
     display: flex;
   }
 
-  a,
-  span {
-    display: inline-flex;
-    align-items: center;
-    font-family: var(--font-body);
-    font-size: var(--fs-micro);
-    font-weight: var(--weight-regular);
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--color-primary-100);
-    transition: color 0.15s ease;
-    line-height: 1;
-    padding: var(--sp-xxs) 0;
-  }
-
-  a:hover {
+  > a:hover {
     color: var(--color-light);
   }
 
   &--past {
-    a,
-    span {
+    > a,
+    > span {
       opacity: 0.8;
     }
   }
 
   &--current {
-    a,
-    span {
+    > a,
+    > span {
       font-weight: var(--weight-bold);
       color: var(--color-light);
     }
@@ -307,11 +319,10 @@
       margin-left: auto;
     }
 
-    a {
-      gap: var(--sp-xxs);
+    > a {
       font-weight: var(--weight-medium);
-      padding: var(--sp-xxs);
-      letter-spacing: 0.03em;
+      padding-left: var(--sp-xxs);
+      padding-right: var(--sp-xxs);
 
       @media (min-width: 750px) {
         border-left: 0.5px solid var(--color-primary-100);
@@ -326,21 +337,15 @@
 }
 
 .talks-nav__course {
+  display: flex;
+  align-items: center;
   position: relative;
 }
 
 .talks-nav__course-toggle {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-xxs);
-  font-family: var(--font-body);
-  font-size: var(--fs-micro);
   font-weight: var(--weight-medium);
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  color: var(--color-primary-100);
-  line-height: 1;
-  padding: var(--sp-xxs);
+  padding-left: var(--sp-xxs);
+  padding-right: var(--sp-xxs);
   cursor: pointer;
   list-style: none;
   background: none;
