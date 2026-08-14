@@ -9,8 +9,8 @@ Sitio WordPress de Kostan Elkartea. El repositorio versiona solo el codigo propi
 | `wp-content/themes/kostan/` | Tema personalizado |
 | `wp-content/plugins/komunikazioa/` | Plugin de campanas, leads y SMTP |
 | `composer.json` | Plugins gratuitos instalables por Composer |
-| `scripts/deploy-to-kinsta.sh` | Despliegue por rsync/SSH |
-| `.github/workflows/deploy-kinsta.yml` | CI/CD en push a `main` |
+| `scripts/deploy-to-kinsta.sh` | Despliegue por rsync/SSH a Kinsta LIVE |
+| `.github/workflows/deploy-kinsta-live.yml` | CI/CD a produccion en push a `main` |
 
 ## Requisitos
 
@@ -52,24 +52,38 @@ No estan en git. Instalarlos en cada entorno desde las descargas de vuestras lic
 
 El instalador OTGS (`otgs-installer-plugin`) suele venir con WPML.
 
-## Despliegue a Kinsta
+## Despliegue a Kinsta LIVE (produccion)
 
-### Automatico (recomendado) — entorno PRE en Kinsta LIVE
+No hay entorno PRE ni DEV en Kinsta. Local es DevKinsta; produccion es Kinsta LIVE.
 
-El sitio en Kinsta LIVE (sin dominio final) se trata como **preproduccion**.
+El script sincroniza solo codigo (tema, `komunikazioa` y plugins de Composer). No toca la base de datos, uploads ni `wp-config` del servidor.
 
-1. Configurar secrets en GitHub (ver abajo)
-2. En Kinsta PRE (una sola vez): plugins premium + `composer install` por SSH
-3. Cada `git push` a `main` compila el tema y sincroniza codigo propio + plugins de Composer
+### Automatico (recomendado)
+
+Cada `git push` a `main` dispara `.github/workflows/deploy-kinsta-live.yml`: compila el tema y sincroniza por rsync/SSH.
+
+Secrets en GitHub (Settings > Secrets and variables > Actions), tomados de MyKinsta > Sites > LIVE > Info > SFTP/SSH:
+
+| Secret | Valor |
+| --- | --- |
+| `KINSTA_SSH_HOST` | Host SSH |
+| `KINSTA_SSH_PORT` | Puerto SSH |
+| `KINSTA_SSH_USER` | Usuario SSH |
+| `KINSTA_SSH_PASSWORD` | Contrasena SSH |
+| `KINSTA_REMOTE_PATH` | Ruta absoluta del `public` (Environment details > Path) |
+
+Una sola vez en LIVE: instalar los plugins premium. Los plugins de Composer los instala CI en el runner y los sube por rsync.
+
+Tambien se puede lanzar a mano desde Actions > Deploy to Kinsta (LIVE production) > Run workflow (dry run por defecto).
 
 ### Manual desde local
 
 ```bash
 cp .env.deploy.example .env.deploy
-# Rellenar credenciales SSH de MyKinsta
+# Rellenar credenciales SSH de MyKinsta LIVE
 
 DRY_RUN=true ./scripts/deploy-to-kinsta.sh   # vista previa
-./scripts/deploy-to-kinsta.sh                # despliegue real
+./scripts/deploy-to-kinsta.sh                # despliegue real a produccion
 ```
 
 ## Notas de seguridad

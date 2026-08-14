@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Deploy theme + custom plugin code to Kinsta LIVE (production).
+# This script syncs files only. It does NOT touch the database, uploads or wp-config.
+# Remote WordPress data (pages, users, ACF options, SMTP passwords) always wins.
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -40,6 +43,8 @@ EXCLUDES=(
 if [[ "$DRY_RUN" == "true" ]]; then
 	RSYNC_FLAGS+=(-n)
 	echo "Dry run: no files will be changed on the server."
+else
+	echo "WARNING: Deploying to Kinsta LIVE (production). Code-only sync; DB and uploads are untouched."
 fi
 
 setup_ssh() {

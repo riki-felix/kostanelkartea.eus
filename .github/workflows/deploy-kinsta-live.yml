@@ -1,4 +1,4 @@
-name: Deploy to Kinsta (pre)
+name: Deploy to Kinsta (LIVE production)
 
 on:
   push:
@@ -10,16 +10,16 @@ on:
       - 'composer.json'
       - 'composer.lock'
       - 'scripts/deploy-to-kinsta.sh'
-      - '.github/workflows/deploy-kinsta-pre.yml'
+      - '.github/workflows/deploy-kinsta-live.yml'
   workflow_dispatch:
     inputs:
       dry_run:
         description: Dry run (preview changes only)
         type: boolean
-        default: false
+        default: true
 
 concurrency:
-  group: kinsta-pre
+  group: kinsta-live-production
   cancel-in-progress: false
 
 jobs:
@@ -46,7 +46,7 @@ jobs:
       - name: Install sshpass
         run: sudo apt-get update && sudo apt-get install -y sshpass
 
-      - name: Deploy theme and custom plugin
+      - name: Deploy theme and custom plugin to LIVE
         env:
           KINSTA_SSH_HOST: ${{ secrets.KINSTA_SSH_HOST }}
           KINSTA_SSH_PORT: ${{ secrets.KINSTA_SSH_PORT }}
