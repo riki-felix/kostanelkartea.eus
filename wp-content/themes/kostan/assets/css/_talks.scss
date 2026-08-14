@@ -226,7 +226,7 @@
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 var(--sp-m);
+  padding: var(--sp-xxs) var(--sp-m);
   background: var(--color-primary);
   border-radius: 999px;
   border: 0.5px solid var(--color-primary-100);
@@ -260,13 +260,16 @@
 .talks-nav__item {
   display: none;
   flex-shrink: 0;
+  align-items: center;
 
   @media (min-width: 750px) {
-    display: list-item;
+    display: flex;
   }
 
   a,
   span {
+    display: inline-flex;
+    align-items: center;
     font-family: var(--font-body);
     font-size: var(--fs-micro);
     font-weight: var(--weight-regular);
@@ -275,6 +278,7 @@
     color: var(--color-primary-100);
     transition: color 0.15s ease;
     line-height: 1;
+    padding: var(--sp-xxs) 0;
   }
 
   a:hover {
@@ -297,33 +301,26 @@
   }
 
   &--calendar {
-    display: list-item;
+    display: flex;
 
     @media (min-width: 750px) {
       margin-left: auto;
     }
 
     a {
-      display: flex;
-      align-items: center;
       gap: var(--sp-xxs);
       font-weight: var(--weight-medium);
-      font-size: var(--fs-micro);
-      text-transform: uppercase;
       padding: var(--sp-xxs);
       letter-spacing: 0.03em;
-      line-height: 1;
+
       @media (min-width: 750px) {
         border-left: 0.5px solid var(--color-primary-100);
-      }
-      &:hover {
-        color: var(--color-light);
       }
     }
   }
 
   &--course {
-    display: list-item;
+    display: flex;
     position: relative;
   }
 }
