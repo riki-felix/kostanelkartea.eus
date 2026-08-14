@@ -64,6 +64,7 @@ foreach ( $venues_raw as $raw_term ) {
                     $maps_link = 'https://www.google.com/maps/search/' . urlencode( $address );
                 }
             }
+            $address_display = kostan_format_location_address( $address );
         ?>
             <div class="venue-block">
                 <a href="<?php echo esc_url( get_term_link( $venue ) ); ?>" class="venue-block__link">
@@ -79,12 +80,12 @@ foreach ( $venues_raw as $raw_term ) {
                 <div class="venue-block__content">
                     <h3 class="venue-block__name"><?php echo esc_html( $venue->name ); ?></h3>
 
-                    <?php if ( $address ) : ?>
+                    <?php if ( $address_display ) : ?>
                         <p class="venue-block__address">
                             <?php if ( $maps_link ) : ?>
-                                <?php echo esc_html( $address ); ?>
+                                <?php echo esc_html( $address_display ); ?>
                             <?php else : ?>
-                                <?php echo esc_html( $address ); ?>
+                                <?php echo esc_html( $address_display ); ?>
                             <?php endif; ?>
                         </p>
                     <?php endif; ?>

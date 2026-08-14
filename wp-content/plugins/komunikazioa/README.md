@@ -18,4 +18,17 @@ Recommended values for Google Workspace:
 | Email del remitente | misma dirección del buzón |
 | Nombre del remitente | nombre visible del remitente |
 
-Use the dashboard test email (`Komunikazioa → Resumen`) to verify delivery after saving the settings.
+Use the SMTP test email in **Komunikazioa → Ajustes → Servidor SMTP** to verify delivery after saving the settings.
+
+## Enlaces en correos (dominio público)
+
+Los correos de bienvenida e importación enlazan a `/ongi-etorri/` en el sitio público.
+
+| Entorno | Configuración |
+| --- | --- |
+| **Producción (Kinsta LIVE)** | Dejad vacío **URL pública del sitio** en Ajustes. WordPress usa `https://kostanelkartea.eus` automáticamente. |
+| **Local** | Indicad `https://kostanelkartea.eus` en **Komunikazioa → Ajustes → URL pública del sitio** para que los enlaces de prueba no apunten a `.local`. |
+
+Alternativa en `wp-config.php` local: `define( 'KOMUNIKAZIOA_PUBLIC_SITE_URL', 'https://kostanelkartea.eus' );`
+
+Las páginas `/ongi-etorri/`, `/pasahitza-berreskuratu/` y `/bazkideak/` deben existir en WordPress (ya están en producción).

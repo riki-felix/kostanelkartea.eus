@@ -307,3 +307,43 @@
     }
   }
 }
+
+/* ==============================================
+ * Academic course switcher
+ * ============================================== */
+
+.talks-courses {
+  margin-top: var(--sp-s);
+}
+
+.talks-courses__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--sp-xs) var(--sp-m);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.talks-courses__item {
+  font-family: var(--font-body);
+  font-size: var(--fs-micro);
+  font-weight: var(--weight-regular);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &--active span {
+    font-weight: var(--weight-bold);
+  }
+}

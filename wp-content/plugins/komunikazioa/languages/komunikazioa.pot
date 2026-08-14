@@ -142,6 +142,10 @@ msgstr ""
 msgid "Izena"
 msgstr ""
 
+#: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1790
+msgid "Abizenak"
+msgstr ""
+
 #: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:768
 #: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1144
 #: wp-content/plugins/komunikazioa/includes/class-komunikazioa.php:1515

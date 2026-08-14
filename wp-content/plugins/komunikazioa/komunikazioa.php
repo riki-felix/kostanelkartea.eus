@@ -24,6 +24,24 @@ add_action(
 );
 
 require_once KOMUNIKAZIOA_DIR . '/includes/class-komunikazioa.php';
+require_once KOMUNIKAZIOA_DIR . '/includes/class-user-importer.php';
+
+add_filter(
+	'plugin_locale',
+	static function( $locale, $domain ) {
+		if ( 'komunikazioa' !== $domain ) {
+			return $locale;
+		}
+
+		if ( str_starts_with( strtolower( (string) $locale ), 'es' ) ) {
+			return 'es_ES';
+		}
+
+		return $locale;
+	},
+	10,
+	2
+);
 
 register_activation_hook( KOMUNIKAZIOA_FILE, array( '\Kostan\\Komunikazioa\\Plugin', 'activate' ) );
 register_deactivation_hook( KOMUNIKAZIOA_FILE, array( '\Kostan\\Komunikazioa\\Plugin', 'deactivate' ) );

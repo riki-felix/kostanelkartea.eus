@@ -17,27 +17,13 @@ $talks_by_month  = [
 	$next_month    => [],
 ];
 
-$all_talks = new WP_Query([
-	'post_type'      => 'talks',
-	'posts_per_page' => -1,
-	'meta_key'       => 'talk_date',
-	'orderby'        => 'meta_value',
-	'order'          => 'ASC',
-]);
+$all_talks = new WP_Query( kostan_talks_query_args() );
 
 if ( $all_talks->have_posts() ) {
 	while ( $all_talks->have_posts() ) {
 		$all_talks->the_post();
 
-		$talk_date = get_field( 'talk_date', get_the_ID() );
-		if ( ! $talk_date ) {
-			continue;
-		}
-
-		$dt_obj = DateTime::createFromFormat( 'd/m/Y g:i a', $talk_date );
-		if ( ! $dt_obj ) {
-			$dt_obj = DateTime::createFromFormat( 'd/m/Y H:i', $talk_date );
-		}
+		$dt_obj = kostan_parse_talk_date( get_the_ID() );
 		if ( ! $dt_obj ) {
 			continue;
 		}

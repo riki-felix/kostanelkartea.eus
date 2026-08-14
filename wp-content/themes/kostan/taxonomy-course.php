@@ -1,37 +1,45 @@
 <?php
 /**
- * Template Name: Ponentziak
- * Template Post Type: page
+ * Taxonomy archive: course (academic year)
  *
- * Page template: Ponentziak (Talks listing)
- *
- * Displays current-course talks grouped by month (oldest month first).
+ * Lists talks for an archived course, grouped by month.
  *
  * @package Kostan
  */
 
 get_header();
+
+$term = get_queried_object();
+if ( ! $term instanceof WP_Term ) {
+	get_footer();
+	return;
+}
+
+$all_talks = new WP_Query( kostan_talks_query_args( array(), $term->slug ) );
+$grouped   = kostan_group_talks_by_month( $all_talks );
 ?>
 
-<main id="primary" class="site-main page-talks">
+<main id="primary" class="site-main page-talks page-talks--archive">
 
 	<section class="page-talks__header">
 		<div class="wrapper">
-			<h1><?php the_title(); ?></h1>
-			<?php kostan_the_courses_nav(); ?>
+			<h1>
+				<?php
+				printf(
+					/* translators: %s = academic year label, e.g. 2025-2026 */
+					esc_html__( 'Ponentziak %s', 'kostan' ),
+					esc_html( $term->name )
+				);
+				?>
+			</h1>
+			<?php kostan_the_courses_nav( $term->slug ); ?>
 		</div>
 	</section>
-
-	<?php
-	$all_talks = new WP_Query( kostan_talks_query_args() );
-	$grouped   = kostan_group_talks_by_month( $all_talks );
-	?>
 
 	<?php if ( ! empty( $grouped ) ) :
 		$current_ym = current_time( 'Y-m' );
 	?>
 
-	<!-- Month anchor nav -->
 	<nav class="talks-nav">
 		<div class="wrapper">
 			<ul class="talks-nav__list">
@@ -46,12 +54,6 @@ get_header();
 						</a>
 					</li>
 				<?php endforeach; ?>
-				<li class="talks-nav__item talks-nav__item--calendar">
-					<a href="<?php echo esc_url( get_post_type_archive_link( 'talks' ) ); ?>">
-						<?php esc_html_e( 'Egutegia', 'kostan' ); ?>
-						<?php kostan_the_icon( 'calendar', 16 ); ?>
-					</a>
-				</li>
 			</ul>
 		</div>
 	</nav>

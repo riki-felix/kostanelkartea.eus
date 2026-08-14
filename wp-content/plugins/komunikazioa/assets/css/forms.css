@@ -36,6 +36,18 @@
 	margin: 0;
 }
 
+.komunikazioa-form__name-row {
+	display: grid;
+	gap: var(--sp-m, 1.8rem);
+	grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+	.komunikazioa-form__name-row {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
 .komunikazioa-form__label {
 	display: block;
 	margin-bottom: var(--sp-xxs, 0.8rem);

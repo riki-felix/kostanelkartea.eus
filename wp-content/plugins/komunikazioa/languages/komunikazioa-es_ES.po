@@ -421,6 +421,9 @@ msgstr "Población"
 msgid "Herria"
 msgstr "Población"
 
+msgid "Abizenak"
+msgstr "Apellidos"
+
 msgid "Erabiltzailerik gabe"
 msgstr "Sin usuario"
 

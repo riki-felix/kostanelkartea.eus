@@ -28,6 +28,7 @@ if ( $location ) {
 		$maps_link = 'https://www.google.com/maps/search/' . urlencode( $address );
 	}
 }
+$address_display = kostan_format_location_address( $address );
 ?>
 
 <main id="primary" class="site-main taxonomy-venue">
@@ -55,17 +56,17 @@ if ( $location ) {
 	<section class="venue-detail">
 		<div class="container">
 
-			<?php if ( $address ) : ?>
+			<?php if ( $address_display ) : ?>
 			<div class="venue-detail__location">
 				<p class="venue-detail__address">
 					<?php if ( $maps_link ) : ?>
 						<a href="<?php echo esc_url( $maps_link ); ?>" target="_blank" rel="noopener noreferrer">
 							<?php kostan_the_icon( 'location', 32 ); ?>
-							<?php echo nl2br( esc_html( $address ) ); ?>
+							<?php echo nl2br( esc_html( $address_display ) ); ?>
 						</a>
 					<?php else : ?>
 							<?php kostan_the_icon( 'location', 32 ); ?>
-							<?php echo nl2br( esc_html( $address ) ); ?>
+							<?php echo nl2br( esc_html( $address_display ) ); ?>
 					<?php endif; ?>
 				</p>
 			</div>
@@ -81,34 +82,16 @@ if ( $location ) {
 	</section>
 
 	<?php
-	/* ── Fetch all talks for this venue, ordered by talk_date ── */
-	$venue_talks = new WP_Query([
-		'post_type'      => 'talks',
-		'posts_per_page' => -1,
-		'meta_key'       => 'talk_date',
-		'orderby'        => 'meta_value',
-		'order'          => 'ASC',
-		'tax_query'      => [
+	$venue_talks = new WP_Query( kostan_talks_query_args( [
+		'tax_query' => [
 			[
 				'taxonomy' => 'venue',
 				'field'    => 'term_id',
 				'terms'    => $term->term_id,
 			],
 		],
-	]);
-
-	/* Group by Year-Month */
-	$grouped = [];
-	if ( $venue_talks->have_posts() ) :
-		while ( $venue_talks->have_posts() ) : $venue_talks->the_post();
-			$talk_date = get_field('talk_date');
-			$dt        = $talk_date ? DateTime::createFromFormat('d/m/Y g:i a', $talk_date) : null;
-			$ts        = $dt ? $dt->getTimestamp() : get_the_time('U');
-			$key       = date( 'Y-m', $ts );
-			$grouped[ $key ][] = get_the_ID();
-		endwhile;
-		wp_reset_postdata();
-	endif;
+	] ) );
+	$grouped = kostan_group_talks_by_month( $venue_talks );
 	?>
 
 	<?php if ( ! empty( $grouped ) ) : ?>

@@ -9,19 +9,12 @@ get_header();
 
 while ( have_posts() ) : the_post();
 
-$talk_date    = get_field('talk_date');
-$talk_lang    = get_field('talk_lang');
-$speakers     = get_field('talk_speakers');
-$venues       = get_the_terms( get_the_ID(), 'venue' );
-$areas        = kostan_get_post_areas( get_the_ID() );
-
-// Parse date
-$dt_obj = null;
-$ts_val = 0;
-if ( $talk_date ) {
-	$dt_obj = DateTime::createFromFormat('d/m/Y g:i a', $talk_date);
-	$ts_val = $dt_obj ? $dt_obj->getTimestamp() : 0;
-}
+$talk_lang = get_field( 'talk_lang' );
+$speakers  = get_field( 'talk_speakers' );
+$venues    = get_the_terms( get_the_ID(), 'venue' );
+$areas     = kostan_get_post_areas( get_the_ID() );
+$dt_obj    = kostan_parse_talk_date( get_the_ID() );
+$ts_val    = $dt_obj ? $dt_obj->getTimestamp() : 0;
 
 // Get first child area for GAIA
 $child_area = null;

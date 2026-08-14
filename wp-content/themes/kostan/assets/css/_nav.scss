@@ -147,7 +147,13 @@
     }
   }
 
-  /* Last item styled as CTA */
+  .current-menu-item a,
+  .current_page_item a {
+    background: var(--color-primary);
+    color: var(--color-light);
+    border-color: var(--color-primary);
+    font-weight: var(--weight-bold);
+  }
   // li:last-child a {
   //   background: var(--color-primary-500);
   //   color: var(--color-light);
@@ -358,6 +364,14 @@
       }
     }
 
+    .current-menu-item a,
+    .current_page_item a {
+      background: var(--color-primary);
+      color: var(--color-light);
+      border-color: var(--color-primary);
+      font-weight: var(--weight-bold);
+    }
+
     li:last-child a {
       background: var(--color-light);
 
@@ -365,6 +379,13 @@
         background: var(--color-primary);
         border-color: var(--color-secondary);
       }
+    }
+
+    .current-menu-item:last-child a,
+    .current_page_item:last-child a {
+      background: var(--color-primary);
+      color: var(--color-light);
+      border-color: var(--color-primary);
     }
   }
 }

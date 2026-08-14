@@ -4,6 +4,7 @@ if (!defined('ABSPATH')) exit;
 define('ct_THEME_VERSION', wp_get_theme()->get('Version'));
 
 require_once get_template_directory() . '/inc/icons.php';
+require_once get_template_directory() . '/inc/talk-course.php';
 require_once get_template_directory() . '/acf-fields/hero-carousel.php';
 require_once get_template_directory() . '/acf-fields/deskargak.php';
 
@@ -504,11 +505,42 @@ function kostan_get_post_areas( $post_id ) {
 }
 
 /**
+ * Check whether a menu page item matches the current page (WPML-aware).
+ *
+ * @param int $menu_page_id Menu item page ID.
+ * @return bool
+ */
+function kostan_menu_item_is_current_page( $menu_page_id ) {
+	$menu_page_id = (int) $menu_page_id;
+
+	if ( ! $menu_page_id || ! is_page() ) {
+		return false;
+	}
+
+	$current_id = (int) get_queried_object_id();
+
+	if ( $menu_page_id === $current_id ) {
+		return true;
+	}
+
+	if ( has_filter( 'wpml_object_id' ) ) {
+		$current_lang = apply_filters( 'wpml_current_language', null );
+		$menu_id      = (int) apply_filters( 'wpml_object_id', $menu_page_id, 'page', true, $current_lang );
+
+		if ( $menu_id && $menu_id === $current_id ) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
+/**
  * Highlight the parent menu item for CPT singles, archives, and taxonomy pages.
  */
-function kostan_nav_menu_highlight_parent( $classes, $menu_item ) {
+function kostan_nav_menu_highlight_parent( $classes, $menu_item, $args = null ) {
 	// Talks, venues, areas → highlight Ponentziak page
-	if ( is_singular( 'talks' ) || is_post_type_archive( 'talks' ) || is_tax( 'venue' ) || is_tax( 'area' ) ) {
+	if ( is_singular( 'talks' ) || is_post_type_archive( 'talks' ) || is_tax( 'venue' ) || is_tax( 'area' ) || is_tax( 'course' ) ) {
 		$classes = array_diff( $classes, [ 'current_page_parent', 'current-menu-item' ] );
 
 		if ( $menu_item->object === 'page' ) {
@@ -538,9 +570,15 @@ function kostan_nav_menu_highlight_parent( $classes, $menu_item ) {
 		}
 	}
 
-	return $classes;
+	if ( $args && isset( $args->theme_location ) && 'actions' === $args->theme_location && 'page' === $menu_item->object ) {
+		if ( kostan_menu_item_is_current_page( (int) $menu_item->object_id ) ) {
+			$classes[] = 'current-menu-item';
+		}
+	}
+
+	return array_values( array_unique( $classes ) );
 }
-add_filter( 'nav_menu_css_class', 'kostan_nav_menu_highlight_parent', 10, 2 );
+add_filter( 'nav_menu_css_class', 'kostan_nav_menu_highlight_parent', 10, 3 );
 
 /**
  * Add page-context body classes for shared templates.
@@ -741,7 +779,7 @@ function kostan_loginout_add_lost_password_link( $block_content, $block ) {
     $link_html         = sprintf(
         '<p class="kostan-login-lost-password"><a href="%1$s">%2$s</a></p>',
         esc_url( $lost_password_url ),
-        esc_html__( 'Ezin duzu pasahitza gogoratzen? / Has olvidado tu contrasena?', 'kostan' )
+        esc_html__( 'Ezin duzu pasahitza gogoratzen? / ¿Has olvidado tu contraseña?', 'kostan' )
     );
 
     return $block_content . $link_html;
@@ -912,6 +950,35 @@ function kostan_eu_month_ergative( $timestamp ) {
     }
     // Fallback for non-standard locale month names
     return $month . 'k';
+}
+
+/**
+ * Format an ACF Google Map address for frontend display (without country).
+ *
+ * @param string $address Full address from ACF location field.
+ * @return string
+ */
+function kostan_format_location_address( $address ) {
+    $address = trim( (string) $address );
+    if ( '' === $address ) {
+        return '';
+    }
+
+    $countries = apply_filters(
+        'kostan_location_address_countries_to_strip',
+        array( 'Spain', 'España', 'Espainia', 'ES' )
+    );
+
+    foreach ( (array) $countries as $country ) {
+        $country = trim( (string) $country );
+        if ( '' === $country ) {
+            continue;
+        }
+
+        $address = preg_replace( '/,\s*' . preg_quote( $country, '/' ) . '\s*$/iu', '', $address );
+    }
+
+    return trim( $address, " \t\n\r\0\x0B," );
 }
 
 /**

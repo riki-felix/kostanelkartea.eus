@@ -12,11 +12,12 @@
  */
 
 $post_id   = get_the_ID();
-$talk_date = get_field( 'talk_date', $post_id );
 $speakers  = get_field( 'talk_speakers', $post_id );
 $venues    = get_the_terms( $post_id, 'venue' );
 $areas     = kostan_get_post_areas( $post_id );
 $thumbnail = get_the_post_thumbnail_url( $post_id, 'large' );
+$dt_obj    = kostan_parse_talk_date( $post_id );
+$ts_val    = $dt_obj ? $dt_obj->getTimestamp() : 0;
 ?>
 
 <article <?php post_class( 'talk-card' . ( $thumbnail ? ' talk-card--has-thumbnail' : '' ) ); ?>>
@@ -24,10 +25,7 @@ $thumbnail = get_the_post_thumbnail_url( $post_id, 'large' );
 	<a href="<?php the_permalink(); ?>" class="talk-card__link">
 		<div class="talk-card__content"<?php echo $thumbnail ? ' style="--talk-card-image: url(' . esc_url( $thumbnail ) . ');"' : ''; ?>>
 
-			<?php if ( $talk_date ) :
-				$dt_obj = DateTime::createFromFormat('d/m/Y g:i a', $talk_date);
-				$ts_val = $dt_obj ? $dt_obj->getTimestamp() : 0;
-			?>
+			<?php if ( $dt_obj ) : ?>
 				<time class="talk-card__date" datetime="<?php echo $dt_obj ? esc_attr( $dt_obj->format('Y-m-d\TH:i') ) : ''; ?>">
 					<?php echo esc_html( kostan_format_timestamp( $ts_val, 'date' ) ); ?>
 				</time>

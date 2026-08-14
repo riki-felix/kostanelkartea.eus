@@ -17,25 +17,18 @@ $areas = get_terms([
 	'parent'     => 0,
 ]);
 
-/* ── All talks ordered by talk_date ── */
-$all_talks = new WP_Query([
-	'post_type'      => 'talks',
-	'posts_per_page' => -1,
-	'meta_key'       => 'talk_date',
-	'orderby'        => 'meta_value',
-	'order'          => 'ASC',
-]);
+/* ── Current-course talks ordered by talk_date ── */
+$all_talks = new WP_Query( kostan_talks_query_args() );
 
 /* Group talks by Year-Month */
 $grouped = [];
 
 if ( $all_talks->have_posts() ) :
 	while ( $all_talks->have_posts() ) : $all_talks->the_post();
-		$talk_date = get_field('talk_date');
-		$dt        = $talk_date ? DateTime::createFromFormat('d/m/Y g:i a', $talk_date) : null;
-		$ts        = $dt ? $dt->getTimestamp() : get_the_time('U');
-		$key       = date('Y-m', $ts);
-		$day       = date('j', $ts);
+		$dt  = kostan_parse_talk_date( get_the_ID() );
+		$ts  = $dt ? $dt->getTimestamp() : get_the_time( 'U' );
+		$key = wp_date( 'Y-m', $ts );
+		$day = wp_date( 'j', $ts );
 
 		/* Get parent area and its color */
 		$post_areas  = kostan_get_post_areas( get_the_ID() );
@@ -80,11 +73,7 @@ if ( $all_talks->have_posts() ) :
 	wp_reset_postdata();
 endif;
 
-/* Determine season range for the heading */
-$months_keys = array_keys( $grouped );
-$first_year  = ! empty( $months_keys ) ? substr( reset( $months_keys ), 0, 4 ) : current_time('Y');
-$last_year   = ! empty( $months_keys ) ? substr( end( $months_keys ), 0, 4 ) : current_time('Y');
-$season      = ( $first_year === $last_year ) ? $first_year : $first_year . '-' . $last_year;
+$season = kostan_get_current_course()['label'];
 ?>
 
 <main id="primary" class="site-main archive-talks">

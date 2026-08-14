@@ -23,14 +23,8 @@ if ( ! $parent_term || is_wp_error( $parent_term ) ) {
 }
 $area_color  = kostan_get_area_field( 'area_color', $parent_term->term_id );
 
-/* ── Fetch all talks for this area (including child terms) ── */
-$area_talks = new WP_Query([
-	'post_type'      => 'talks',
-	'posts_per_page' => -1,
-	'meta_key'       => 'talk_date',
-	'orderby'        => 'meta_value',
-	'order'          => 'ASC',
-	'tax_query'      => [
+$area_talks = new WP_Query( kostan_talks_query_args( [
+	'tax_query' => [
 		[
 			'taxonomy'         => 'area',
 			'field'            => 'term_id',
@@ -38,20 +32,8 @@ $area_talks = new WP_Query([
 			'include_children' => true,
 		],
 	],
-]);
-
-/* Group by Year-Month */
-$grouped = [];
-if ( $area_talks->have_posts() ) :
-	while ( $area_talks->have_posts() ) : $area_talks->the_post();
-		$talk_date = get_field('talk_date');
-		$dt        = $talk_date ? DateTime::createFromFormat('d/m/Y g:i a', $talk_date) : null;
-		$ts        = $dt ? $dt->getTimestamp() : get_the_time('U');
-		$key       = date( 'Y-m', $ts );
-		$grouped[ $key ][] = get_the_ID();
-	endwhile;
-	wp_reset_postdata();
-endif;
+] ) );
+$grouped = kostan_group_talks_by_month( $area_talks );
 ?>
 
 <main id="primary" class="site-main taxonomy-area">

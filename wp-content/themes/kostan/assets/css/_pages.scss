@@ -110,8 +110,10 @@
   text-align: center;
   margin-bottom: var(--sp-l);
 
-  p {
+  p,
+  .section-onboarding__intro {
     margin-bottom: 0;
+    line-height: 1.6;
   }
 }
 

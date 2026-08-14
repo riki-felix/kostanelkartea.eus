@@ -14,9 +14,19 @@ class Plugin {
 	const CRON_HOOK = 'komunikazioa_process_campaigns';
 	const SETTINGS_PAGE = 'komunikazioa-settings';
 	const SETTINGS_POST_ID = 'komunikazioa_settings';
+	const IMPORT_PAGE = 'komunikazioa-import-users';
+	const ONBOARDING_LOGO_URL = 'https://kostanelkartea.eus/wp-content/uploads/2026/07/logo_kostan.jpg';
+	const PASSWORD_RESET_EXPIRATION_DAYS = 15;
+	const IMPORT_ROSTER_OPTION = 'komunikazioa_import_roster';
+	const IMPORT_JOB_OPTION = 'komunikazioa_import_job';
+	const IMPORT_BATCH_CRON_HOOK = 'komunikazioa_process_import_batch';
+	const IMPORT_BATCH_LOCK = 'komunikazioa_import_batch_lock';
 
 	/** @var string|null */
 	private static $mail_error = null;
+
+	/** @var bool */
+	private static $applying_plugin_smtp = false;
 
 	/**
 	 * Boot the plugin.
@@ -30,13 +40,19 @@ class Plugin {
 		add_action( 'admin_menu', array( __CLASS__, 'register_admin_menu' ) );
 		add_action( 'init', array( __CLASS__, 'register_shortcode_compat' ) );
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_public_assets' ) );
-		add_action( 'phpmailer_init', array( __CLASS__, 'configure_phpmailer' ) );
 		add_filter( 'cron_schedules', array( __CLASS__, 'register_cron_schedule' ) );
 		add_action( self::CRON_HOOK, array( __CLASS__, 'process_due_campaigns' ) );
 		add_action( 'admin_post_komunikazioa_send_test_email', array( __CLASS__, 'handle_test_email_submit' ) );
+		add_action( 'admin_post_komunikazioa_import_users', array( __CLASS__, 'handle_import_users_submit' ) );
+		add_action( 'admin_post_komunikazioa_send_onboarding_test_email', array( __CLASS__, 'handle_onboarding_test_email_submit' ) );
+		add_action( 'admin_post_komunikazioa_resend_onboarding_mail', array( __CLASS__, 'handle_resend_onboarding_mail_submit' ) );
+		add_action( self::IMPORT_BATCH_CRON_HOOK, array( __CLASS__, 'cron_process_import_batch' ), 10, 1 );
+		add_action( 'wp_ajax_komunikazioa_process_import_batch', array( __CLASS__, 'ajax_process_import_batch' ) );
+		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_import_admin_assets' ) );
+		add_filter( 'password_reset_expiration', array( __CLASS__, 'filter_password_reset_expiration' ) );
+		add_action( 'init', array( __CLASS__, 'register_member_password_notification_filters' ), 20 );
 		add_action( 'admin_post_komunikazioa_submit_lead', array( __CLASS__, 'handle_lead_submit' ) );
 		add_action( 'admin_post_nopriv_komunikazioa_submit_lead', array( __CLASS__, 'handle_lead_submit' ) );
-		add_action( 'wp_mail_failed', array( __CLASS__, 'capture_mail_error' ) );
 		add_action( 'acf/init', array( __CLASS__, 'register_acf_integration' ) );
 		add_action( 'acf/save_post', array( __CLASS__, 'sync_campaign_status_from_acf' ), 20 );
 		add_action( 'manage_' . self::CPT . '_posts_columns', array( __CLASS__, 'filter_campaign_columns' ) );
@@ -64,6 +80,8 @@ class Plugin {
 		if ( $timestamp ) {
 			wp_unschedule_event( $timestamp, self::CRON_HOOK );
 		}
+
+		wp_clear_scheduled_hook( self::IMPORT_BATCH_CRON_HOOK );
 	}
 
 	/**
@@ -97,6 +115,8 @@ class Plugin {
 			id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
 			form_type varchar(40) NOT NULL,
 			full_name varchar(190) NOT NULL DEFAULT '',
+			first_name varchar(100) NOT NULL DEFAULT '',
+			last_name varchar(100) NOT NULL DEFAULT '',
 			email varchar(190) NOT NULL DEFAULT '',
 			phone varchar(60) NOT NULL DEFAULT '',
 			city varchar(190) NOT NULL DEFAULT '',
@@ -148,6 +168,18 @@ class Plugin {
 		if ( ! $city ) {
 			$wpdb->query( "ALTER TABLE {$table} ADD COLUMN city varchar(190) NOT NULL DEFAULT '' AFTER phone" );
 		}
+
+		$first_name = $wpdb->get_var( $wpdb->prepare( 'SHOW COLUMNS FROM ' . $table . ' LIKE %s', 'first_name' ) );
+
+		if ( ! $first_name ) {
+			$wpdb->query( "ALTER TABLE {$table} ADD COLUMN first_name varchar(100) NOT NULL DEFAULT '' AFTER full_name" );
+		}
+
+		$last_name = $wpdb->get_var( $wpdb->prepare( 'SHOW COLUMNS FROM ' . $table . ' LIKE %s', 'last_name' ) );
+
+		if ( ! $last_name ) {
+			$wpdb->query( "ALTER TABLE {$table} ADD COLUMN last_name varchar(100) NOT NULL DEFAULT '' AFTER first_name" );
+		}
 	}
 
 	/**
@@ -181,7 +213,7 @@ class Plugin {
 			'search_items'       => self::admin_label( 'Buscar comunicaciones', 'Mezuak bilatu' ),
 			'not_found'          => self::admin_label( 'No se han encontrado comunicaciones.', 'Ez da mezurik aurkitu' ),
 			'not_found_in_trash' => self::admin_label( 'No se han encontrado comunicaciones en la papelera.', 'Ez da mezurik aurkitu zaborrontzian' ),
-			'menu_name'          => self::admin_label( 'Komunikazioa', 'Komunikazioa' ),
+			'menu_name'          => self::admin_label( 'Comunicaciones', 'Komunikazioa' ),
 		);
 
 		register_post_type(
@@ -291,8 +323,8 @@ class Plugin {
 		}
 
 		add_menu_page(
-			self::admin_label( 'Komunikazioa', 'Komunikazioa' ),
-			self::admin_label( 'Komunikazioa', 'Komunikazioa' ),
+			self::admin_label( 'Comunicaciones', 'Komunikazioa' ),
+			self::admin_label( 'Comunicaciones', 'Komunikazioa' ),
 			'manage_options',
 			'komunikazioa',
 			array( __CLASS__, 'render_dashboard_page' ),
@@ -326,6 +358,15 @@ class Plugin {
 			'manage_options',
 			'komunikazioa-leads',
 			array( __CLASS__, 'render_leads_page' )
+		);
+
+		add_submenu_page(
+			'komunikazioa',
+			self::admin_label( 'Importar usuarios', 'Erabiltzaileak inportatu' ),
+			self::admin_label( 'Importar usuarios', 'Erabiltzaileak inportatu' ),
+			'manage_options',
+			self::IMPORT_PAGE,
+			array( __CLASS__, 'render_import_users_page' )
 		);
 	}
 
@@ -456,6 +497,14 @@ class Plugin {
 						'esc_html' => 0,
 					),
 					array(
+						'key'      => 'field_komunikazioa_smtp_test',
+						'label'    => self::admin_label( 'Correo de prueba', 'Probako mezua' ),
+						'name'     => 'komunikazioa_smtp_test',
+						'type'     => 'message',
+						'message'  => '',
+						'esc_html' => 0,
+					),
+					array(
 						'key'   => 'field_komunikazioa_tab_sender',
 						'label' => self::admin_label( 'Remitente', 'Igorlea' ),
 						'type'  => 'tab',
@@ -472,6 +521,17 @@ class Plugin {
 						'label'         => self::admin_label( 'Email del remitente', 'Nondik datorren emaila' ),
 						'name'          => 'komunikazioa_from_email',
 						'type'          => 'email',
+					),
+					array(
+						'key'          => 'field_komunikazioa_public_site_url',
+						'label'        => self::admin_label( 'URL publica del sitio (enlaces en correos)', 'Gunearen URL publikoa (estekak mezuetan)' ),
+						'name'         => 'komunikazioa_public_site_url',
+						'type'         => 'url',
+						'instructions' => self::admin_label(
+							'Opcional. En produccion dejadlo vacio para usar la URL de WordPress. En local, indicad https://kostanelkartea.eus para que los enlaces de bienvenida apunten al dominio final.',
+							'Aukerakoa. Produkzioan utzi hutsik WordPressen URLa erabiltzeko. Lokallean, idatzi https://kostanelkartea.eus ongietorri estekak azken domeinura joan daitezen.'
+						),
+						'placeholder'  => 'https://kostanelkartea.eus',
 					),
 					array(
 						'key'   => 'field_komunikazioa_tab_audience',
@@ -511,6 +571,7 @@ class Plugin {
 
 		add_filter( 'acf/load_field/name=komunikazioa_member_roles', array( __CLASS__, 'populate_role_choices' ) );
 		add_filter( 'acf/load_field/name=komunikazioa_smtp_status', array( __CLASS__, 'load_smtp_status_message_field' ) );
+		add_filter( 'acf/load_field/name=komunikazioa_smtp_test', array( __CLASS__, 'load_smtp_test_email_field' ) );
 		add_filter( 'acf/update_value/name=komunikazioa_smtp_password', array( __CLASS__, 'preserve_smtp_password' ), 10, 3 );
 	}
 
@@ -524,6 +585,46 @@ class Plugin {
 		$field['message'] = self::get_smtp_settings_message();
 
 		return $field;
+	}
+
+	/**
+	 * Render the SMTP test email form on the settings page.
+	 *
+	 * @param array $field Field configuration.
+	 * @return array
+	 */
+	public static function load_smtp_test_email_field( $field ) {
+		$current_user = wp_get_current_user();
+		$test_email   = $current_user instanceof \WP_User ? $current_user->user_email : get_bloginfo( 'admin_email' );
+
+		$field['message'] = self::get_test_email_notice() . self::render_smtp_test_email_form( $test_email );
+
+		return $field;
+	}
+
+	/**
+	 * Build the SMTP test email form markup.
+	 *
+	 * @param string $test_email Default recipient email.
+	 * @return string
+	 */
+	private static function render_smtp_test_email_form( $test_email ) {
+		ob_start();
+		?>
+		<p><?php echo esc_html( self::admin_label( 'Envia un correo de prueba para verificar la configuracion SMTP actual.', 'Bidali probako mezu bat uneko SMTP konfigurazioa egiaztatzeko.' ) ); ?></p>
+		<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
+			<input type="hidden" name="action" value="komunikazioa_send_test_email">
+			<?php wp_nonce_field( 'komunikazioa_send_test_email', 'komunikazioa_test_email_nonce' ); ?>
+			<p>
+				<label for="komunikazioa_test_email"><strong><?php echo esc_html( self::admin_label( 'Email de prueba', 'Probako emaila' ) ); ?></strong></label><br>
+				<input type="email" class="regular-text" id="komunikazioa_test_email" name="komunikazioa_test_email" value="<?php echo esc_attr( $test_email ); ?>" required>
+			</p>
+			<p>
+				<button type="submit" class="button button-secondary"><?php echo esc_html( self::admin_label( 'Enviar correo de prueba', 'Bidali probako mezua' ) ); ?></button>
+			</p>
+		</form>
+		<?php
+		return (string) ob_get_clean();
 	}
 
 	/**
@@ -554,7 +655,7 @@ class Plugin {
 	 * @return void
 	 */
 	public static function configure_phpmailer( $phpmailer ) {
-		if ( ! self::is_smtp_configured() ) {
+		if ( ! self::$applying_plugin_smtp || ! self::is_smtp_configured() ) {
 			return;
 		}
 
@@ -695,10 +796,13 @@ class Plugin {
 			$user = esc_html( (string) self::get_smtp_config( 'USER', self::admin_label( 'Sin usuario', 'Erabiltzailerik gabe' ) ) );
 
 			return sprintf(
-				__( '<div class="notice notice-success inline"><p>%s</p><p><strong>Zerbitzaria:</strong> %s<br><strong>Ataka:</strong> %s<br><strong>Erabiltzailea:</strong> %s</p></div>', 'komunikazioa' ),
+				'<div class="notice notice-success inline"><p>%s</p><p><strong>%s:</strong> %s<br><strong>%s:</strong> %s<br><strong>%s:</strong> %s</p></div>',
 				esc_html( self::admin_label( 'SMTP configurado en los ajustes del plugin.', 'SMTP pluginaren ezarpenetan konfiguratuta dago.' ) ),
+				esc_html( self::admin_label( 'Servidor', 'Zerbitzaria' ) ),
 				$host,
+				esc_html( self::admin_label( 'Puerto', 'Ataka' ) ),
 				$port,
+				esc_html( self::admin_label( 'Usuario', 'Erabiltzailea' ) ),
 				$user
 			);
 		}
@@ -730,7 +834,7 @@ class Plugin {
 
 		$message = self::admin_label( 'No se pudo enviar el correo de prueba.', 'Ezin izan da probako mezua bidali.' );
 		if ( ! empty( $_GET['message'] ) ) {
-			$message = sanitize_text_field( wp_unslash( $_GET['message'] ) );
+			$message = sanitize_text_field( rawurldecode( wp_unslash( $_GET['message'] ) ) );
 		}
 
 		return sprintf(
@@ -740,13 +844,13 @@ class Plugin {
 	}
 
 	/**
-	 * Get the Komunikazioa dashboard URL.
+	 * Get the Komunikazioa settings page URL.
 	 *
 	 * @param array $args Optional query args.
 	 * @return string
 	 */
-	private static function get_dashboard_url( array $args = array() ) {
-		$url = admin_url( 'admin.php?page=komunikazioa' );
+	private static function get_settings_page_url( array $args = array() ) {
+		$url = admin_url( 'admin.php?page=' . self::SETTINGS_PAGE );
 
 		if ( ! empty( $args ) ) {
 			$url = add_query_arg( $args, $url );
@@ -770,27 +874,27 @@ class Plugin {
 						'name'    => 'komunikazioa_campaign_type',
 						'type'    => 'select',
 						'choices' => array(
-							'inscriptions' => __( 'Izen-emateak', 'komunikazioa' ),
-							'renewal'      => __( 'Berritzea', 'komunikazioa' ),
+							'inscriptions' => self::admin_label( 'Inscripciones', 'Izen-emateak' ),
+							'renewal'      => self::admin_label( 'Renovacion', 'Berritzea' ),
 						),
 						'return_format' => 'value',
 						'ui'            => 1,
 					),
 					array(
 						'key'     => 'field_komunikazioa_target_profile',
-						'label'   => __( 'Helburua', 'komunikazioa' ),
+						'label'   => self::admin_label( 'Destino', 'Helburua' ),
 						'name'    => 'komunikazioa_target_profile',
 						'type'    => 'select',
 						'choices' => array(
-							'socios'      => __( 'Bazkideak', 'komunikazioa' ),
-							'interesdunak' => __( 'Interesdunak', 'komunikazioa' ),
+							'socios'       => self::admin_label( 'Socios', 'Bazkideak' ),
+							'interesdunak' => self::admin_label( 'Interesados', 'Interesdunak' ),
 						),
 						'return_format' => 'value',
 						'ui'            => 1,
 					),
 					array(
 						'key'           => 'field_komunikazioa_subject',
-						'label'         => __( 'Gaia', 'komunikazioa' ),
+						'label'         => self::admin_label( 'Asunto', 'Gaia' ),
 						'name'          => 'komunikazioa_subject',
 						'type'          => 'text',
 						'required'      => 1,
@@ -798,7 +902,7 @@ class Plugin {
 					),
 					array(
 						'key'          => 'field_komunikazioa_body',
-						'label'        => __( 'Edukia', 'komunikazioa' ),
+						'label'        => self::admin_label( 'Contenido', 'Edukia' ),
 						'name'         => 'komunikazioa_body',
 						'type'         => 'wysiwyg',
 						'tabs'         => 'all',
@@ -852,54 +956,25 @@ class Plugin {
 	 */
 	public static function render_dashboard_page() {
 		if ( ! current_user_can( 'manage_options' ) ) {
-			wp_die( esc_html__( 'Ez duzu orri hau ikusteko baimenik.', 'komunikazioa' ) );
+			wp_die( esc_html( self::admin_label( 'No tienes permiso para ver esta pagina.', 'Ez duzu orri hau ikusteko baimenik.' ) ) );
 		}
 
 		$stats = self::get_dashboard_stats();
-		$current_user = wp_get_current_user();
-		$test_email   = $current_user instanceof \WP_User ? $current_user->user_email : get_bloginfo( 'admin_email' );
 		?>
 		<div class="wrap komunikazioa-wrap">
-			<h1><?php echo esc_html__( 'Komunikazioa', 'komunikazioa' ); ?></h1>
-			<p><?php echo esc_html__( 'Kanpainak, pertsona interesatuak eta programatutako bidalketak kudeatzeko tresna.', 'komunikazioa' ); ?></p>
-			<?php echo wp_kses_post( self::get_test_email_notice() ); ?>
+			<h1><?php echo esc_html( self::admin_label( 'Comunicaciones', 'Komunikazioa' ) ); ?></h1>
+			<p><?php echo esc_html( self::admin_label( 'Herramienta para gestionar campanas, personas interesadas y envios programados.', 'Kanpainak, pertsona interesatuak eta programatutako bidalketak kudeatzeko tresna.' ) ); ?></p>
 
 			<div class="card" style="max-width: 820px; margin-top: 20px;">
-				<h2><?php echo esc_html__( 'Laburpena', 'komunikazioa' ); ?></h2>
+				<h2><?php echo esc_html( self::admin_label( 'Resumen', 'Laburpena' ) ); ?></h2>
 				<ul style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;list-style:none;padding:0;margin:0;">
-					<li><strong><?php echo esc_html__( 'Zirriborroak', 'komunikazioa' ); ?>:</strong> <?php echo esc_html( (string) $stats['draft'] ); ?></li>
-					<li><strong><?php echo esc_html__( 'Programatuta', 'komunikazioa' ); ?>:</strong> <?php echo esc_html( (string) $stats['scheduled'] ); ?></li>
-					<li><strong><?php echo esc_html__( 'Bidalita', 'komunikazioa' ); ?>:</strong> <?php echo esc_html( (string) $stats['sent'] ); ?></li>
-					<li><strong><?php echo esc_html__( 'Hutsekin', 'komunikazioa' ); ?>:</strong> <?php echo esc_html( (string) $stats['failed'] ); ?></li>
-					<li><strong><?php echo esc_html__( 'Pertsona interesatuak', 'komunikazioa' ); ?>:</strong> <?php echo esc_html( (string) $stats['leads'] ); ?></li>
-					<li><strong><?php echo esc_html__( 'Entrega-hutsak', 'komunikazioa' ); ?>:</strong> <?php echo esc_html( (string) $stats['failed_deliveries'] ); ?></li>
+					<li><strong><?php echo esc_html( self::admin_label( 'Borradores', 'Zirriborroak' ) ); ?>:</strong> <?php echo esc_html( (string) $stats['draft'] ); ?></li>
+					<li><strong><?php echo esc_html( self::admin_label( 'Programados', 'Programatuta' ) ); ?>:</strong> <?php echo esc_html( (string) $stats['scheduled'] ); ?></li>
+					<li><strong><?php echo esc_html( self::admin_label( 'Enviados', 'Bidalita' ) ); ?>:</strong> <?php echo esc_html( (string) $stats['sent'] ); ?></li>
+					<li><strong><?php echo esc_html( self::admin_label( 'Fallidos', 'Hutsekin' ) ); ?>:</strong> <?php echo esc_html( (string) $stats['failed'] ); ?></li>
+					<li><strong><?php echo esc_html( self::admin_label( 'Personas interesadas', 'Pertsona interesatuak' ) ); ?>:</strong> <?php echo esc_html( (string) $stats['leads'] ); ?></li>
+					<li><strong><?php echo esc_html( self::admin_label( 'Entregas fallidas', 'Entrega-hutsak' ) ); ?>:</strong> <?php echo esc_html( (string) $stats['failed_deliveries'] ); ?></li>
 				</ul>
-			</div>
-
-			<div class="card" style="max-width: 820px; margin-top: 20px;">
-				<h2><?php echo esc_html__( 'Sarbide azkarrak', 'komunikazioa' ); ?></h2>
-				<p>
-					<a class="button button-primary" href="<?php echo esc_url( admin_url( 'post-new.php?post_type=' . self::CPT ) ); ?>"><?php echo esc_html__( 'Kanpaina berria', 'komunikazioa' ); ?></a>
-					<a class="button" href="<?php echo esc_url( admin_url( 'edit.php?post_type=' . self::CPT ) ); ?>"><?php echo esc_html__( 'Kanpainak ikusi', 'komunikazioa' ); ?></a>
-					<a class="button" href="<?php echo esc_url( admin_url( 'admin.php?page=komunikazioa-leads' ) ); ?>"><?php echo esc_html__( 'Interesatuak ikusi', 'komunikazioa' ); ?></a>
-					<a class="button" href="<?php echo esc_url( admin_url( 'admin.php?page=' . self::SETTINGS_PAGE ) ); ?>"><?php echo esc_html( self::admin_label( 'Ajustes', 'Ezarpenak' ) ); ?></a>
-				</p>
-			</div>
-
-			<div class="card" style="max-width: 820px; margin-top: 20px;">
-				<h2><?php echo esc_html( self::admin_label( 'Configuracion de envio', 'Bidalketa konfigurazioa' ) ); ?></h2>
-				<?php echo wp_kses_post( self::get_smtp_settings_message() ); ?>
-				<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" style="margin-top: 16px;">
-					<input type="hidden" name="action" value="komunikazioa_send_test_email">
-					<?php wp_nonce_field( 'komunikazioa_send_test_email', 'komunikazioa_test_email_nonce' ); ?>
-					<p>
-						<label for="komunikazioa_test_email"><strong><?php echo esc_html( self::admin_label( 'Email de prueba', 'Probako emaila' ) ); ?></strong></label><br>
-						<input type="email" class="regular-text" id="komunikazioa_test_email" name="komunikazioa_test_email" value="<?php echo esc_attr( $test_email ); ?>" required>
-					</p>
-					<p>
-						<button type="submit" class="button button-primary"><?php echo esc_html( self::admin_label( 'Enviar correo de prueba', 'Bidali probako mezua' ) ); ?></button>
-					</p>
-				</form>
 			</div>
 		</div>
 		<?php
@@ -910,7 +985,7 @@ class Plugin {
 	 */
 	public static function render_leads_page() {
 		if ( ! current_user_can( 'manage_options' ) ) {
-			wp_die( esc_html__( 'Ez duzu orri hau ikusteko baimenik.', 'komunikazioa' ) );
+			wp_die( esc_html( self::admin_label( 'No tienes permiso para ver esta pagina.', 'Ez duzu orri hau ikusteko baimenik.' ) ) );
 		}
 
 		global $wpdb;
@@ -920,20 +995,21 @@ class Plugin {
 		$attempted_col = self::get_logs_attempted_column();
 		?>
 		<div class="wrap komunikazioa-wrap">
-			<h1><?php echo esc_html__( 'Pertsona interesatuak', 'komunikazioa' ); ?></h1>
-			<p><?php echo esc_html__( 'Formulario publikoetatik erregistratutako pertsonak.', 'komunikazioa' ); ?></p>
+			<h1><?php echo esc_html( self::admin_label( 'Personas interesadas', 'Pertsona interesatuak' ) ); ?></h1>
+			<p><?php echo esc_html( self::admin_label( 'Personas registradas desde los formularios publicos.', 'Formulario publikoetatik erregistratutako pertsonak.' ) ); ?></p>
 
 			<div class="card" style="max-width: 100%; overflow:auto;">
 				<table class="widefat fixed striped">
 					<thead>
 						<tr>
-							<th><?php echo esc_html__( 'Data', 'komunikazioa' ); ?></th>
-							<th><?php echo esc_html__( 'Formularioa', 'komunikazioa' ); ?></th>
-							<th><?php echo esc_html__( 'Izena', 'komunikazioa' ); ?></th>
-							<th><?php echo esc_html__( 'Email', 'komunikazioa' ); ?></th>
-							<th><?php echo esc_html__( 'Telefonoa', 'komunikazioa' ); ?></th>
-							<th><?php echo esc_html__( 'Herria', 'komunikazioa' ); ?></th>
-							<th><?php echo esc_html__( 'Baldintzak', 'komunikazioa' ); ?></th>
+							<th><?php echo esc_html( self::admin_label( 'Fecha', 'Data' ) ); ?></th>
+							<th><?php echo esc_html( self::admin_label( 'Formulario', 'Formularioa' ) ); ?></th>
+							<th><?php echo esc_html( self::admin_label( 'Nombre', 'Izena' ) ); ?></th>
+							<th><?php echo esc_html( self::admin_label( 'Apellidos', 'Abizenak' ) ); ?></th>
+							<th><?php echo esc_html( self::admin_label( 'Email', 'Email' ) ); ?></th>
+							<th><?php echo esc_html( self::admin_label( 'Telefono', 'Telefonoa' ) ); ?></th>
+							<th><?php echo esc_html( self::admin_label( 'Poblacion', 'Herria' ) ); ?></th>
+							<th><?php echo esc_html( self::admin_label( 'Condiciones', 'Baldintzak' ) ); ?></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -942,30 +1018,31 @@ class Plugin {
 								<tr>
 									<td><?php echo esc_html( $row->created_at ); ?></td>
 									<td><?php echo esc_html( self::get_interest_form_type_label( $row->form_type ) ); ?></td>
-									<td><?php echo esc_html( $row->full_name ); ?></td>
+									<td><?php echo esc_html( self::get_lead_first_name( $row ) ); ?></td>
+									<td><?php echo esc_html( self::get_lead_last_name( $row ) ); ?></td>
 									<td><a href="mailto:<?php echo esc_attr( $row->email ); ?>"><?php echo esc_html( $row->email ); ?></a></td>
 									<td><?php echo esc_html( $row->phone ); ?></td>
 									<td><?php echo esc_html( isset( $row->city ) ? $row->city : '' ); ?></td>
-									<td><?php echo $row->terms_accepted ? esc_html__( 'Bai', 'komunikazioa' ) : esc_html__( 'Ez', 'komunikazioa' ); ?></td>
+									<td><?php echo $row->terms_accepted ? esc_html( self::admin_label( 'Si', 'Bai' ) ) : esc_html( self::admin_label( 'No', 'Ez' ) ); ?></td>
 								</tr>
 							<?php endforeach; ?>
 						<?php else : ?>
-							<tr><td colspan="7"><?php echo esc_html__( 'Oraindik ez dago erregistratutako pertsona interesaturik.', 'komunikazioa' ); ?></td></tr>
+							<tr><td colspan="8"><?php echo esc_html( self::admin_label( 'Todavia no hay personas interesadas registradas.', 'Oraindik ez dago erregistratutako pertsona interesaturik.' ) ); ?></td></tr>
 						<?php endif; ?>
 					</tbody>
 				</table>
 			</div>
 
 			<div class="card" style="max-width: 100%; overflow:auto; margin-top: 20px;">
-				<h2><?php echo esc_html__( 'Entrega hutsak', 'komunikazioa' ); ?></h2>
+				<h2><?php echo esc_html( self::admin_label( 'Entregas fallidas', 'Entrega hutsak' ) ); ?></h2>
 				<table class="widefat fixed striped">
 					<thead>
 						<tr>
-							<th><?php echo esc_html__( 'Data', 'komunikazioa' ); ?></th>
-							<th><?php echo esc_html__( 'Kanpaina', 'komunikazioa' ); ?></th>
-							<th><?php echo esc_html__( 'Hartzailea', 'komunikazioa' ); ?></th>
-							<th><?php echo esc_html__( 'Egoera', 'komunikazioa' ); ?></th>
-							<th><?php echo esc_html__( 'Errorea', 'komunikazioa' ); ?></th>
+							<th><?php echo esc_html( self::admin_label( 'Fecha', 'Data' ) ); ?></th>
+							<th><?php echo esc_html( self::admin_label( 'Campana', 'Kanpaina' ) ); ?></th>
+							<th><?php echo esc_html( self::admin_label( 'Destinatario', 'Hartzailea' ) ); ?></th>
+							<th><?php echo esc_html( self::admin_label( 'Estado', 'Egoera' ) ); ?></th>
+							<th><?php echo esc_html( self::admin_label( 'Error', 'Errorea' ) ); ?></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -980,7 +1057,7 @@ class Plugin {
 								</tr>
 							<?php endforeach; ?>
 						<?php else : ?>
-							<tr><td colspan="5"><?php echo esc_html__( 'Oraindik ez dago entrega hutsik.', 'komunikazioa' ); ?></td></tr>
+							<tr><td colspan="5"><?php echo esc_html( self::admin_label( 'Todavia no hay entregas fallidas.', 'Oraindik ez dago entrega hutsik.' ) ); ?></td></tr>
 						<?php endif; ?>
 					</tbody>
 				</table>
@@ -1021,14 +1098,60 @@ class Plugin {
 		$form_type = sanitize_key( (string) $form_type );
 
 		if ( 'full' === $form_type ) {
-			return __( 'Izen-emate eskaera', 'komunikazioa' );
+			return self::admin_label( 'Solicitud de inscripcion', 'Izen-emate eskaera' );
 		}
 
 		if ( 'simple' === $form_type ) {
-			return __( 'Interes adierazpena', 'komunikazioa' );
+			return self::admin_label( 'Manifestacion de interes', 'Interes adierazpena' );
 		}
 
 		return $form_type;
+	}
+
+	/**
+	 * Get the first name stored for a lead row.
+	 *
+	 * @param object $row Lead database row.
+	 * @return string
+	 */
+	private static function get_lead_first_name( $row ) {
+		if ( isset( $row->first_name ) && '' !== trim( (string) $row->first_name ) ) {
+			return (string) $row->first_name;
+		}
+
+		return '';
+	}
+
+	/**
+	 * Get the last name stored for a lead row.
+	 *
+	 * @param object $row Lead database row.
+	 * @return string
+	 */
+	private static function get_lead_last_name( $row ) {
+		if ( isset( $row->last_name ) && '' !== trim( (string) $row->last_name ) ) {
+			return (string) $row->last_name;
+		}
+
+		return '';
+	}
+
+	/**
+	 * Build a display name for a lead row.
+	 *
+	 * @param object $row Lead database row.
+	 * @return string
+	 */
+	private static function get_lead_full_name( $row ) {
+		$first_name = self::get_lead_first_name( $row );
+		$last_name  = self::get_lead_last_name( $row );
+		$full_name  = trim( $first_name . ' ' . $last_name );
+
+		if ( '' !== $full_name ) {
+			return $full_name;
+		}
+
+		return isset( $row->full_name ) ? (string) $row->full_name : '';
 	}
 
 	/**
@@ -1044,14 +1167,36 @@ class Plugin {
 	}
 
 	/**
-	 * Return translatable admin label using Basque as source string.
+	 * Whether the current admin UI should use Spanish labels.
+	 *
+	 * @return bool
+	 */
+	private static function is_spanish_admin_ui() {
+		$locale = is_admin() ? get_user_locale() : determine_locale();
+
+		return str_starts_with( strtolower( (string) $locale ), 'es' );
+	}
+
+	/**
+	 * Return a bilingual admin label.
 	 *
 	 * @param string $es Spanish label.
 	 * @param string $eu Basque label.
 	 * @return string
 	 */
-	private static function admin_label( $es, $eu ) {
-		return __( (string) $eu, 'komunikazioa' );
+	public static function admin_label( $es, $eu ) {
+		return self::is_spanish_admin_ui() ? (string) $es : (string) $eu;
+	}
+
+	/**
+	 * Return an escaped bilingual admin label.
+	 *
+	 * @param string $es Spanish label.
+	 * @param string $eu Basque label.
+	 * @return string
+	 */
+	private static function admin_text( $es, $eu ) {
+		return esc_html( self::admin_label( $es, $eu ) );
 	}
 
 	/**
@@ -1061,9 +1206,9 @@ class Plugin {
 	 * @return array
 	 */
 	public static function filter_campaign_columns( $columns ) {
-		$columns['komunikazioa_target_profile'] = __( 'Profila', 'komunikazioa' );
-		$columns['komunikazioa_state']          = __( 'Egoera', 'komunikazioa' );
-		$columns['komunikazioa_schedule_at']    = __( 'Programatua', 'komunikazioa' );
+		$columns['komunikazioa_target_profile'] = self::admin_label( 'Perfil', 'Profila' );
+		$columns['komunikazioa_state']          = self::admin_label( 'Estado', 'Egoera' );
+		$columns['komunikazioa_schedule_at']    = self::admin_label( 'Programado', 'Programatua' );
 		return $columns;
 	}
 
@@ -1077,8 +1222,8 @@ class Plugin {
 		if ( 'komunikazioa_target_profile' === $column ) {
 			$profile = (string) get_post_meta( $post_id, 'komunikazioa_target_profile', true );
 			$labels  = array(
-				'socios'       => __( 'Bazkideak', 'komunikazioa' ),
-				'interesdunak' => __( 'Interesdunak', 'komunikazioa' ),
+				'socios'       => self::admin_label( 'Socios', 'Bazkideak' ),
+				'interesdunak' => self::admin_label( 'Interesados', 'Interesdunak' ),
 			);
 
 			echo esc_html( isset( $labels[ $profile ] ) ? $labels[ $profile ] : $profile );
@@ -1091,10 +1236,10 @@ class Plugin {
 			}
 
 			$state_labels = array(
-				'draft'     => __( 'Zirriborroa', 'komunikazioa' ),
-				'scheduled' => __( 'Programatuta', 'komunikazioa' ),
-				'sent'      => __( 'Bidalita', 'komunikazioa' ),
-				'failed'    => __( 'Huts egin du', 'komunikazioa' ),
+				'draft'     => self::admin_label( 'Borrador', 'Zirriborroa' ),
+				'scheduled' => self::admin_label( 'Programado', 'Programatuta' ),
+				'sent'      => self::admin_label( 'Enviado', 'Bidalita' ),
+				'failed'    => self::admin_label( 'Fallido', 'Huts egin du' ),
 			);
 
 			echo esc_html( isset( $state_labels[ $state ] ) ? $state_labels[ $state ] : $state );
@@ -1180,9 +1325,11 @@ class Plugin {
 			wp_die( esc_html__( 'Nonce baliogabea.', 'komunikazioa' ) );
 		}
 
-		$form_type = isset( $_POST['komunikazioa_form_type'] ) ? sanitize_key( wp_unslash( $_POST['komunikazioa_form_type'] ) ) : 'full';
-		$full_name = isset( $_POST['komunikazioa_full_name'] ) ? sanitize_text_field( wp_unslash( $_POST['komunikazioa_full_name'] ) ) : '';
-		$email     = isset( $_POST['komunikazioa_email'] ) ? sanitize_email( wp_unslash( $_POST['komunikazioa_email'] ) ) : '';
+		$form_type  = isset( $_POST['komunikazioa_form_type'] ) ? sanitize_key( wp_unslash( $_POST['komunikazioa_form_type'] ) ) : 'full';
+		$first_name = isset( $_POST['komunikazioa_first_name'] ) ? sanitize_text_field( wp_unslash( $_POST['komunikazioa_first_name'] ) ) : '';
+		$last_name  = isset( $_POST['komunikazioa_last_name'] ) ? sanitize_text_field( wp_unslash( $_POST['komunikazioa_last_name'] ) ) : '';
+		$full_name  = trim( $first_name . ' ' . $last_name );
+		$email      = isset( $_POST['komunikazioa_email'] ) ? sanitize_email( wp_unslash( $_POST['komunikazioa_email'] ) ) : '';
 		$phone     = isset( $_POST['komunikazioa_phone'] ) ? sanitize_text_field( wp_unslash( $_POST['komunikazioa_phone'] ) ) : '';
 		$city      = isset( $_POST['komunikazioa_city'] ) ? sanitize_text_field( wp_unslash( $_POST['komunikazioa_city'] ) ) : '';
 		$terms     = ! empty( $_POST['komunikazioa_terms'] ) ? 1 : 0;
@@ -1191,6 +1338,10 @@ class Plugin {
 
 		if ( empty( $email ) || ! is_email( $email ) ) {
 			self::redirect_back( add_query_arg( 'komunikazioa_error', 'invalid-email', $redirect ) );
+		}
+
+		if ( 'full' === $form_type && ( '' === $first_name || '' === $last_name ) ) {
+			self::redirect_back( add_query_arg( 'komunikazioa_error', 'invalid-name', $redirect ) );
 		}
 
 		if ( ! $terms ) {
@@ -1205,6 +1356,8 @@ class Plugin {
 			array(
 				'form_type'      => $form_type,
 				'full_name'      => $full_name,
+				'first_name'     => $first_name,
+				'last_name'      => $last_name,
 				'email'          => $email,
 				'phone'          => $phone,
 				'city'           => $city,
@@ -1215,7 +1368,7 @@ class Plugin {
 				'user_agent'     => isset( $_SERVER['HTTP_USER_AGENT'] ) ? sanitize_textarea_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) ) : '',
 				'created_at'     => current_time( 'mysql' ),
 			),
-			array( '%s', '%s', '%s', '%s', '%s', '%s', '%d', '%d', '%s', '%s', '%s' )
+			array( '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%d', '%d', '%s', '%s', '%s' )
 		);
 
 		if ( false === $inserted ) {
@@ -1226,6 +1379,8 @@ class Plugin {
 			array(
 				'form_type'  => $form_type,
 				'full_name'  => $full_name,
+				'first_name' => $first_name,
+				'last_name'  => $last_name,
 				'email'      => $email,
 				'phone'      => $phone,
 				'city'       => $city,
@@ -1253,33 +1408,33 @@ class Plugin {
 
 		if ( ! $email || ! is_email( $email ) ) {
 			wp_safe_redirect(
-				self::get_dashboard_url(
+				self::get_settings_page_url(
 					array(
 						'komunikazioa_test_email' => 'failed',
-						'message'                 => __( 'Sartu baliozko email bat probarako.', 'komunikazioa' ),
+						'message'                 => rawurlencode( self::admin_label( 'Introduce un email valido.', 'Sartu baliozko email bat.' ) ),
 					)
 				)
 			);
 			exit;
 		}
 
-		$subject = __( 'Komunikazioa bidalketa proba', 'komunikazioa' );
-		$body    = '<p>' . esc_html__( 'Hau Komunikazioatik bidalitako probako mezu bat da.', 'komunikazioa' ) . '</p>';
-		$body   .= '<p><strong>' . esc_html__( 'Gunea', 'komunikazioa' ) . ':</strong> ' . esc_html( get_bloginfo( 'name' ) ) . '</p>';
-		$body   .= '<p><strong>' . esc_html__( 'Data', 'komunikazioa' ) . ':</strong> ' . esc_html( current_time( 'mysql' ) ) . '</p>';
+		$subject = self::admin_label( 'Prueba de envio Komunikazioa', 'Komunikazioa bidalketa proba' );
+		$body    = '<p>' . esc_html( self::admin_label( 'Este es un correo de prueba enviado desde Komunikazioa.', 'Hau Komunikazioatik bidalitako probako mezu bat da.' ) ) . '</p>';
+		$body   .= '<p><strong>' . esc_html( self::admin_label( 'Sitio', 'Gunea' ) ) . ':</strong> ' . esc_html( get_bloginfo( 'name' ) ) . '</p>';
+		$body   .= '<p><strong>' . esc_html( self::admin_label( 'Fecha', 'Data' ) ) . ':</strong> ' . esc_html( current_time( 'mysql' ) ) . '</p>';
 
 		$sent = self::send_html_mail( array( $email ), $subject, $body, '', 0 );
 
 		if ( $sent ) {
-			wp_safe_redirect( self::get_dashboard_url( array( 'komunikazioa_test_email' => 'sent' ) ) );
+			wp_safe_redirect( self::get_settings_page_url( array( 'komunikazioa_test_email' => 'sent' ) ) );
 			exit;
 		}
 
 		wp_safe_redirect(
-			self::get_dashboard_url(
+			self::get_settings_page_url(
 				array(
 					'komunikazioa_test_email' => 'failed',
-					'message'                 => self::$mail_error ? self::$mail_error : __( 'wp_mail-ek false itzuli du proban.', 'komunikazioa' ),
+					'message'                 => rawurlencode( self::$mail_error ? self::$mail_error : self::admin_label( 'wp_mail devolvio false en la prueba.', 'wp_mail-ek false itzuli du proban.' ) ),
 				)
 			)
 		);
@@ -1306,7 +1461,14 @@ class Plugin {
 		$body = '<p><strong>' . esc_html__( 'Interesdunak formularioan pertsona interesatu berri bat jaso da', 'komunikazioa' ) . '</strong></p>';
 		$body .= '<ul>';
 		$body .= '<li><strong>' . esc_html__( 'Formularioa', 'komunikazioa' ) . ':</strong> ' . esc_html( self::get_interest_form_type_label( $lead['form_type'] ) ) . '</li>';
-		$body .= '<li><strong>' . esc_html__( 'Izena', 'komunikazioa' ) . ':</strong> ' . esc_html( $lead['full_name'] ) . '</li>';
+
+		if ( ! empty( $lead['first_name'] ) || ! empty( $lead['last_name'] ) ) {
+			$body .= '<li><strong>' . esc_html__( 'Izena', 'komunikazioa' ) . ':</strong> ' . esc_html( $lead['first_name'] ) . '</li>';
+			$body .= '<li><strong>' . esc_html__( 'Abizenak', 'komunikazioa' ) . ':</strong> ' . esc_html( $lead['last_name'] ) . '</li>';
+		} elseif ( ! empty( $lead['full_name'] ) ) {
+			$body .= '<li><strong>' . esc_html__( 'Izena', 'komunikazioa' ) . ':</strong> ' . esc_html( $lead['full_name'] ) . '</li>';
+		}
+
 		$body .= '<li><strong>' . esc_html__( 'Email', 'komunikazioa' ) . ':</strong> ' . esc_html( $lead['email'] ) . '</li>';
 		$body .= '<li><strong>' . esc_html__( 'Telefonoa', 'komunikazioa' ) . ':</strong> ' . esc_html( $lead['phone'] ) . '</li>';
 		if ( ! empty( $lead['city'] ) ) {
@@ -1452,7 +1614,15 @@ class Plugin {
 		}
 
 		add_filter( 'wp_mail_content_type', array( __CLASS__, 'force_html_mail_content_type' ) );
+		add_action( 'phpmailer_init', array( __CLASS__, 'configure_phpmailer' ) );
+		add_action( 'wp_mail_failed', array( __CLASS__, 'capture_mail_error' ) );
+
+		self::$applying_plugin_smtp = true;
 		$sent = wp_mail( $to, wp_strip_all_tags( $subject ), $body, $headers );
+		self::$applying_plugin_smtp = false;
+
+		remove_action( 'wp_mail_failed', array( __CLASS__, 'capture_mail_error' ) );
+		remove_action( 'phpmailer_init', array( __CLASS__, 'configure_phpmailer' ) );
 		remove_filter( 'wp_mail_content_type', array( __CLASS__, 'force_html_mail_content_type' ) );
 
 		self::log_mail_attempt(
@@ -1606,12 +1776,13 @@ class Plugin {
 	private static function get_lead_recipients() {
 		global $wpdb;
 		$table = $wpdb->prefix . self::LEADS_TABLE;
-		$rows  = $wpdb->get_results( "SELECT full_name, email FROM {$table} WHERE email <> '' ORDER BY created_at DESC" );
+		$rows  = $wpdb->get_results( "SELECT full_name, first_name, last_name, email FROM {$table} WHERE email <> '' ORDER BY created_at DESC" );
 
 		$recipients = array();
 		foreach ( (array) $rows as $row ) {
+			$display_name = self::get_lead_full_name( $row );
 			$recipients[] = array(
-				'name'  => $row->full_name ? $row->full_name : $row->email,
+				'name'  => $display_name ? $display_name : $row->email,
 				'email' => $row->email,
 			);
 		}
@@ -1627,6 +1798,1215 @@ class Plugin {
 	private static function redirect_back( $url ) {
 		wp_safe_redirect( $url );
 		exit;
+	}
+
+	/**
+	 * Get the import users admin URL.
+	 *
+	 * @param array $args Optional query args.
+	 * @return string
+	 */
+	private static function get_import_page_url( array $args = array() ) {
+		$url = admin_url( 'admin.php?page=' . self::IMPORT_PAGE );
+
+		if ( ! empty( $args ) ) {
+			$url = add_query_arg( $args, $url );
+		}
+
+		return $url;
+	}
+
+	/**
+	 * Get the active background import job.
+	 *
+	 * @return array|null
+	 */
+	private static function get_active_import_job() {
+		$job = get_option( self::IMPORT_JOB_OPTION, null );
+
+		return is_array( $job ) ? $job : null;
+	}
+
+	/**
+	 * Save the active import job.
+	 *
+	 * @param array $job Import job.
+	 */
+	private static function save_import_job( array $job ) {
+		update_option( self::IMPORT_JOB_OPTION, $job, false );
+	}
+
+	/**
+	 * Clear the active import job and related cron events.
+	 *
+	 * @param string $job_id Job ID.
+	 */
+	private static function clear_import_job( $job_id = '' ) {
+		delete_option( self::IMPORT_JOB_OPTION );
+
+		if ( $job_id ) {
+			wp_clear_scheduled_hook( self::IMPORT_BATCH_CRON_HOOK, array( $job_id ) );
+		} else {
+			wp_clear_scheduled_hook( self::IMPORT_BATCH_CRON_HOOK );
+		}
+	}
+
+	/**
+	 * Schedule a fallback cron batch if the browser stops polling.
+	 *
+	 * @param string $job_id Job ID.
+	 */
+	private static function schedule_import_batch_fallback( $job_id ) {
+		$job_id = (string) $job_id;
+		if ( '' === $job_id ) {
+			return;
+		}
+
+		if ( ! wp_next_scheduled( self::IMPORT_BATCH_CRON_HOOK, array( $job_id ) ) ) {
+			wp_schedule_single_event( time() + 60, self::IMPORT_BATCH_CRON_HOOK, array( $job_id ) );
+		}
+	}
+
+	/**
+	 * Try to acquire the import batch lock.
+	 *
+	 * @return bool
+	 */
+	private static function acquire_import_batch_lock() {
+		if ( get_transient( self::IMPORT_BATCH_LOCK ) ) {
+			return false;
+		}
+
+		return (bool) set_transient( self::IMPORT_BATCH_LOCK, '1', 120 );
+	}
+
+	/**
+	 * Release the import batch lock.
+	 */
+	private static function release_import_batch_lock() {
+		delete_transient( self::IMPORT_BATCH_LOCK );
+	}
+
+	/**
+	 * Build progress payload for the import UI.
+	 *
+	 * @param array $job Import job.
+	 * @return array
+	 */
+	private static function build_import_job_progress( array $job ) {
+		$total  = isset( $job['total'] ) ? (int) $job['total'] : 0;
+		$cursor = isset( $job['cursor'] ) ? (int) $job['cursor'] : 0;
+		$report = isset( $job['report'] ) && is_array( $job['report'] ) ? $job['report'] : User_Importer::empty_report( 'full' );
+		$stats  = User_Importer::summarize_report( $report );
+		$percent = $total > 0 ? min( 100, (int) round( ( $cursor / $total ) * 100 ) ) : 0;
+
+		return array(
+			'job_id'  => isset( $job['id'] ) ? (string) $job['id'] : '',
+			'status'  => isset( $job['status'] ) ? (string) $job['status'] : 'running',
+			'cursor'  => $cursor,
+			'total'   => $total,
+			'percent' => $percent,
+			'stats'   => $stats,
+		);
+	}
+
+	/**
+	 * Persist the final import report and clear the job.
+	 *
+	 * @param array $job Import job.
+	 */
+	private static function finalize_import_job( array $job ) {
+		$report = isset( $job['report'] ) && is_array( $job['report'] ) ? $job['report'] : User_Importer::empty_report( 'full' );
+		$user_id = isset( $job['started_by'] ) ? (int) $job['started_by'] : get_current_user_id();
+
+		set_transient( self::get_import_report_transient_key( $user_id ), $report, 7 * DAY_IN_SECONDS );
+		self::clear_import_job( isset( $job['id'] ) ? (string) $job['id'] : '' );
+	}
+
+	/**
+	 * Process one import batch and update the stored job.
+	 *
+	 * @param array $job Import job.
+	 * @return array Updated job.
+	 */
+	private static function run_import_batch( array $job ) {
+		if ( empty( $job['status'] ) || 'running' !== $job['status'] ) {
+			return $job;
+		}
+
+		if ( ! self::acquire_import_batch_lock() ) {
+			return $job;
+		}
+
+		if ( function_exists( 'set_time_limit' ) ) {
+			@set_time_limit( 120 ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged
+		}
+
+		User_Importer::process_import_batch( $job );
+		self::save_import_job( $job );
+
+		if ( 'completed' === $job['status'] || 'failed' === $job['status'] ) {
+			self::finalize_import_job( $job );
+		} else {
+			self::schedule_import_batch_fallback( isset( $job['id'] ) ? (string) $job['id'] : '' );
+		}
+
+		self::release_import_batch_lock();
+
+		return $job;
+	}
+
+	/**
+	 * AJAX handler for batched import processing.
+	 */
+	public static function ajax_process_import_batch() {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error(
+				array( 'message' => self::admin_label( 'No tienes permiso para realizar esta accion.', 'Ez duzu ekintza hau egiteko baimenik.' ) ),
+				403
+			);
+		}
+
+		check_ajax_referer( 'komunikazioa_import_batch', 'nonce' );
+
+		$job_id = isset( $_POST['job_id'] ) ? sanitize_text_field( wp_unslash( $_POST['job_id'] ) ) : '';
+		$job    = self::get_active_import_job();
+
+		if ( ! is_array( $job ) || '' === $job_id || ( isset( $job['id'] ) && (string) $job['id'] !== $job_id ) ) {
+			wp_send_json_error(
+				array( 'message' => self::admin_label( 'No hay ninguna importacion activa.', 'Ez dago inportazio aktiborik.' ) ),
+				404
+			);
+		}
+
+		if ( 'running' !== $job['status'] ) {
+			wp_send_json_success(
+				array_merge(
+					self::build_import_job_progress( $job ),
+					array( 'reload' => in_array( $job['status'], array( 'completed', 'failed' ), true ) )
+				)
+			);
+		}
+
+		$job = self::run_import_batch( $job );
+
+		if ( 'running' === $job['status'] ) {
+			$job = self::get_active_import_job();
+		}
+
+		if ( ! is_array( $job ) ) {
+			wp_send_json_success(
+				array(
+					'status'  => 'completed',
+					'cursor'  => 0,
+					'total'   => 0,
+					'percent' => 100,
+					'stats'   => User_Importer::summarize_report( User_Importer::empty_report( 'full' ) ),
+					'reload'  => true,
+				)
+			);
+		}
+
+		wp_send_json_success(
+			array_merge(
+				self::build_import_job_progress( $job ),
+				array( 'reload' => in_array( $job['status'], array( 'completed', 'failed' ), true ) )
+			)
+		);
+	}
+
+	/**
+	 * Cron fallback for batched import processing.
+	 *
+	 * @param string $job_id Job ID.
+	 */
+	public static function cron_process_import_batch( $job_id ) {
+		$job = self::get_active_import_job();
+		if ( ! is_array( $job ) || ( isset( $job['id'] ) && (string) $job['id'] !== (string) $job_id ) ) {
+			return;
+		}
+
+		if ( 'running' !== $job['status'] ) {
+			return;
+		}
+
+		self::run_import_batch( $job );
+	}
+
+	/**
+	 * Enqueue assets for the import batch UI.
+	 *
+	 * @param string $hook Admin page hook.
+	 */
+	public static function enqueue_import_admin_assets( $hook ) {
+		if ( 'komunikazioa_page_' . self::IMPORT_PAGE !== $hook ) {
+			return;
+		}
+
+		$job = self::get_active_import_job();
+		if ( ! is_array( $job ) || 'running' !== $job['status'] ) {
+			return;
+		}
+
+		wp_enqueue_script(
+			'komunikazioa-import-batch',
+			KOMUNIKAZIOA_URL . '/assets/js/import-batch.js',
+			array(),
+			KOMUNIKAZIOA_VERSION,
+			true
+		);
+
+		wp_localize_script(
+			'komunikazioa-import-batch',
+			'komunikazioaImportBatch',
+			array(
+				'ajaxUrl'  => admin_url( 'admin-ajax.php' ),
+				'nonce'    => wp_create_nonce( 'komunikazioa_import_batch' ),
+				'jobId'    => isset( $job['id'] ) ? (string) $job['id'] : '',
+				'progress' => self::build_import_job_progress( $job ),
+				'i18n'     => array(
+					'processing' => self::admin_label( 'Procesando importacion...', 'Inportazioa prozesatzen...' ),
+					'completed'  => self::admin_label( 'Importacion completada. Actualizando informe...', 'Inportazioa osatuta. Txostena eguneratzen...' ),
+					'failed'     => self::admin_label( 'La importacion se detuvo por un error.', 'Inportazioa errore batengatik gelditu da.' ),
+					'waiting'    => self::admin_label( 'Esperando al siguiente lote...', 'Hurrengo zain...' ),
+					'of'         => self::admin_label( 'de', '-' ),
+				),
+			)
+		);
+	}
+
+	/**
+	 * Render the batch import progress panel.
+	 *
+	 * @param array $job Import job.
+	 */
+	private static function render_import_batch_progress( array $job ) {
+		$progress = self::build_import_job_progress( $job );
+		$stats    = $progress['stats'];
+		?>
+		<div class="card" id="komunikazioa-import-progress" style="max-width: 920px; margin-top: 20px;">
+			<h2><?php echo esc_html( self::admin_label( 'Importacion en curso', 'Inportazioa abian' ) ); ?></h2>
+			<p><?php echo esc_html( self::admin_label( 'Los usuarios se crean y se envian los correos en lotes. Puedes dejar esta pagina abierta o volver mas tarde; el proceso continuara en segundo plano.', 'Erabiltzaileak sortu eta mezuak lotetan bidaltzen dira. Orri hau irekia utzi dezakezu edo geroago itzuli; prozesua atzeko planoan jarraituko du.' ) ); ?></p>
+			<progress id="komunikazioa-import-progress-bar" max="100" value="<?php echo esc_attr( (string) $progress['percent'] ); ?>" style="width:100%;height:24px;"></progress>
+			<p id="komunikazioa-import-progress-text" style="margin-top:12px;">
+				<?php
+				echo esc_html(
+					sprintf(
+						'%1$s %2$d %3$s %4$d',
+						self::admin_label( 'Filas procesadas:', 'Prozesatutako errenkadak:' ),
+						(int) $progress['cursor'],
+						self::admin_label( 'de', '/' ),
+						(int) $progress['total']
+					)
+				);
+				?>
+			</p>
+			<ul style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;list-style:none;padding:0;margin:16px 0 0;">
+				<li><strong><?php echo esc_html( self::admin_label( 'Creados', 'Sortuak' ) ); ?>:</strong> <span id="komunikazioa-import-stat-created"><?php echo esc_html( (string) $stats['created'] ); ?></span></li>
+				<li><strong><?php echo esc_html( self::admin_label( 'Omitidos', 'Baztertuak' ) ); ?>:</strong> <span id="komunikazioa-import-stat-skipped"><?php echo esc_html( (string) $stats['skipped'] ); ?></span></li>
+				<li><strong><?php echo esc_html( self::admin_label( 'Correos enviados', 'Bidalitako mezuak' ) ); ?>:</strong> <span id="komunikazioa-import-stat-mailed"><?php echo esc_html( (string) $stats['mailed'] ); ?></span></li>
+				<li><strong><?php echo esc_html( self::admin_label( 'Fallos de envio', 'Bidalketa hutsegiteak' ) ); ?>:</strong> <span id="komunikazioa-import-stat-mail-failed"><?php echo esc_html( (string) $stats['mail_failed'] ); ?></span></li>
+				<li><strong><?php echo esc_html( self::admin_label( 'Errores', 'Erroreak' ) ); ?>:</strong> <span id="komunikazioa-import-stat-errors"><?php echo esc_html( (string) $stats['errors'] ); ?></span></li>
+			</ul>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Render the user import page.
+	 */
+	public static function render_import_users_page() {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_die( esc_html( self::admin_label( 'No tienes permiso para ver esta pagina.', 'Ez duzu orri hau ikusteko baimenik.' ) ) );
+		}
+
+		$current_user = wp_get_current_user();
+		$test_email   = $current_user instanceof \WP_User ? $current_user->user_email : get_bloginfo( 'admin_email' );
+		$preview_email = 'socio@ejemplo.com';
+		$preview_url   = self::get_onboarding_reset_url( 'socio_ejemplo', 'preview-key' );
+		$preview_html  = self::build_onboarding_mail_html( $preview_email, $preview_url, false );
+		$stored_report = get_transient( self::get_import_report_transient_key() );
+		$active_job    = self::get_active_import_job();
+		?>
+		<div class="wrap komunikazioa-wrap">
+			<h1><?php echo esc_html( self::admin_label( 'Importar usuarios', 'Erabiltzaileak inportatu' ) ); ?></h1>
+			<p><?php echo esc_html( self::admin_label( 'Importa socios desde un CSV con email y nombre de usuario. La importacion completa se procesa en lotes para evitar timeouts. Cada usuario recibira un correo de bienvenida para crear su contraseña.', 'Inportatu bazkideak emaila eta erabiltzaile-izena dituen CSV batetik. Inportazio osoa timeoutak saihesteko lotetan prozesatzen da. Erabiltzaile bakoitzak ongietorri mezu bat jasoko du bere pasahitza sortzeko.' ) ); ?></p>
+			<?php echo wp_kses_post( self::get_import_notice() ); ?>
+
+			<?php if ( is_array( $active_job ) && in_array( $active_job['status'], array( 'running', 'failed' ), true ) ) : ?>
+				<?php self::render_import_batch_progress( $active_job ); ?>
+			<?php endif; ?>
+
+			<div class="card" style="max-width: 920px; margin-top: 20px;">
+				<h2><?php echo esc_html( self::admin_label( 'Vista previa del correo de bienvenida', 'Ongietorri mezuaren aurrebista' ) ); ?></h2>
+				<div style="border:1px solid #d8d1c5;border-radius:12px;overflow:hidden;">
+					<?php echo $preview_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+				</div>
+			</div>
+
+			<div class="card" style="max-width: 920px; margin-top: 20px;">
+				<h2><?php echo esc_html( self::admin_label( 'Probar correo de bienvenida', 'Ongietorri mezua probatu' ) ); ?></h2>
+				<p><?php echo esc_html( self::admin_label( 'Envia la plantilla real a tu bandeja sin crear usuarios. El enlace sera funcional para tu cuenta de administrador.', 'Bidali txantiloia zure sarrera-ontzira erabiltzaileak sortu gabe. Esteka zure administratzaile konturako baliagarria izango da.' ) ); ?></p>
+				<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
+					<input type="hidden" name="action" value="komunikazioa_send_onboarding_test_email">
+					<?php wp_nonce_field( 'komunikazioa_send_onboarding_test_email', 'komunikazioa_onboarding_test_nonce' ); ?>
+					<p>
+						<label for="komunikazioa_onboarding_test_email"><strong><?php echo esc_html( self::admin_label( 'Email de prueba', 'Probako emaila' ) ); ?></strong></label><br>
+						<input type="email" class="regular-text" id="komunikazioa_onboarding_test_email" name="komunikazioa_onboarding_test_email" value="<?php echo esc_attr( $test_email ); ?>" required>
+					</p>
+					<p>
+						<button type="submit" class="button"><?php echo esc_html( self::admin_label( 'Enviar correo de prueba', 'Bidali probako mezua' ) ); ?></button>
+					</p>
+				</form>
+			</div>
+
+			<div class="card" style="max-width: 920px; margin-top: 20px;">
+				<h2><?php echo esc_html( self::admin_label( 'Importar CSV', 'CSV inportatu' ) ); ?></h2>
+				<p><?php echo esc_html( self::admin_label( 'Formato: email,user_login (cabecera opcional). Rol asignado: socios. La importacion completa procesa 10 usuarios por lote.', 'Formatua: email,user_login (goiburua aukerakoa). Esleitutako rola: socios. Inportazio osoak 10 erabiltzaile prozesatzen ditu loteko.' ) ); ?></p>
+				<?php if ( is_array( $active_job ) && 'running' === $active_job['status'] ) : ?>
+					<p><em><?php echo esc_html( self::admin_label( 'Hay una importacion en curso. Espera a que finalice para iniciar otra.', 'Inportazio bat abian da. Itxaron amaitu arte beste bat hasteko.' ) ); ?></em></p>
+				<?php endif; ?>
+				<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" enctype="multipart/form-data">
+					<input type="hidden" name="action" value="komunikazioa_import_users">
+					<?php wp_nonce_field( 'komunikazioa_import_users', 'komunikazioa_import_users_nonce' ); ?>
+					<p>
+						<label for="komunikazioa_import_csv"><strong><?php echo esc_html( self::admin_label( 'Archivo CSV', 'CSV fitxategia' ) ); ?></strong></label><br>
+						<input type="file" id="komunikazioa_import_csv" name="komunikazioa_import_csv" accept=".csv,text/csv" required>
+					</p>
+					<p style="display:flex;gap:8px;flex-wrap:wrap;">
+						<button type="submit" class="button" name="komunikazioa_import_mode" value="simulate"><?php echo esc_html( self::admin_label( 'Simular importacion', 'Inportazioa simulatu' ) ); ?></button>
+						<button type="submit" class="button button-secondary" name="komunikazioa_import_mode" value="test"><?php echo esc_html( self::admin_label( 'Probar importacion', 'Inportazioa probatu' ) ); ?></button>
+						<button type="submit" class="button button-primary" name="komunikazioa_import_mode" value="full" <?php disabled( is_array( $active_job ) && 'running' === $active_job['status'] ); ?> onclick="return confirm('<?php echo esc_js( self::admin_label( 'Se importaran todos los usuarios validos del CSV en lotes. ¿Continuar?', 'CSVko erabiltzaile baliozko guztiak lotetan inportatuko dira. Jarraitu?' ) ); ?>');"><?php echo esc_html( self::admin_label( 'Importar todo', 'Dena inportatu' ) ); ?></button>
+					</p>
+				</form>
+			</div>
+
+			<?php if ( is_array( $stored_report ) ) : ?>
+				<div class="card" style="max-width: 920px; margin-top: 20px;">
+					<?php self::render_import_report( $stored_report ); ?>
+				</div>
+			<?php endif; ?>
+
+			<?php
+			$roster = self::get_import_roster();
+			if ( ! empty( $roster ) ) :
+				uasort(
+					$roster,
+					static function ( $a, $b ) {
+						return strcmp( (string) $b['updated_at'], (string) $a['updated_at'] );
+					}
+				);
+				?>
+				<div class="card" style="max-width: 920px; margin-top: 20px;">
+					<h2><?php echo esc_html( self::admin_label( 'Socios importados', 'Inportatutako bazkideak' ) ); ?></h2>
+					<p><?php echo esc_html( self::admin_label( 'Estado de activacion y reenvio del correo de bienvenida. El enlace caduca a los 15 dias.', 'Aktibazio egoera eta ongietorri mezuaren berriro bidalketa. Esteka 15 egunetan iraungitzen da.' ) ); ?></p>
+					<?php self::render_onboarding_users_table( array_keys( $roster ), '', true ); ?>
+				</div>
+			<?php endif; ?>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Handle CSV import submissions.
+	 */
+	public static function handle_import_users_submit() {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_die( esc_html( self::admin_label( 'No tienes permiso para realizar esta accion.', 'Ez duzu ekintza hau egiteko baimenik.' ) ) );
+		}
+
+		if ( empty( $_POST['komunikazioa_import_users_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['komunikazioa_import_users_nonce'] ) ), 'komunikazioa_import_users' ) ) {
+			wp_die( esc_html( self::admin_label( 'Nonce no valido.', 'Nonce baliogabea.' ) ) );
+		}
+
+		$mode = isset( $_POST['komunikazioa_import_mode'] ) ? sanitize_key( wp_unslash( $_POST['komunikazioa_import_mode'] ) ) : 'simulate';
+		if ( ! in_array( $mode, array( 'simulate', 'test', 'full' ), true ) ) {
+			$mode = 'simulate';
+		}
+
+		if ( empty( $_FILES['komunikazioa_import_csv']['tmp_name'] ) ) {
+			wp_safe_redirect( self::get_import_page_url( array( 'komunikazioa_import' => 'failed', 'message' => rawurlencode( self::admin_label( 'Selecciona un archivo CSV.', 'Hautatu CSV fitxategi bat.' ) ) ) ) );
+			exit;
+		}
+
+		$file = $_FILES['komunikazioa_import_csv'];
+		if ( ! empty( $file['error'] ) ) {
+			wp_safe_redirect( self::get_import_page_url( array( 'komunikazioa_import' => 'failed', 'message' => rawurlencode( self::admin_label( 'Error al subir el archivo.', 'Errorea fitxategia igotzean.' ) ) ) ) );
+			exit;
+		}
+
+		if ( (int) $file['size'] > User_Importer::MAX_FILE_BYTES ) {
+			wp_safe_redirect( self::get_import_page_url( array( 'komunikazioa_import' => 'failed', 'message' => rawurlencode( self::admin_label( 'El archivo CSV es demasiado grande.', 'CSV fitxategia handiegia da.' ) ) ) ) );
+			exit;
+		}
+
+		$parsed = User_Importer::parse_csv_file( $file['tmp_name'] );
+		if ( is_wp_error( $parsed ) ) {
+			wp_safe_redirect( self::get_import_page_url( array( 'komunikazioa_import' => 'failed', 'message' => rawurlencode( $parsed->get_error_message() ) ) ) );
+			exit;
+		}
+
+		if ( 'full' === $mode ) {
+			$active_job = self::get_active_import_job();
+			if ( is_array( $active_job ) && 'running' === $active_job['status'] ) {
+				wp_safe_redirect(
+					self::get_import_page_url(
+						array(
+							'komunikazioa_import' => 'failed',
+							'message'             => rawurlencode(
+								self::admin_label(
+									'Ya hay una importacion en curso. Espera a que finalice.',
+									'Inportazio bat abian da dagoeneko. Itxaron amaitu arte.'
+								)
+							),
+						)
+					)
+				);
+				exit;
+			}
+
+			$job = User_Importer::create_import_job( $parsed, get_current_user_id() );
+			update_option( self::IMPORT_JOB_OPTION, $job, false );
+			self::run_import_batch( $job );
+
+			$job = self::get_active_import_job();
+			if ( ! is_array( $job ) ) {
+				wp_safe_redirect( self::get_import_page_url( array( 'komunikazioa_import' => 'done', 'mode' => 'full' ) ) );
+				exit;
+			}
+
+			self::schedule_import_batch_fallback( $job['id'] );
+
+			wp_safe_redirect(
+				self::get_import_page_url(
+					array(
+						'komunikazioa_import' => 'queued',
+						'job'                 => $job['id'],
+					)
+				)
+			);
+			exit;
+		}
+
+		$report = User_Importer::process_rows( $parsed, $mode );
+		set_transient( self::get_import_report_transient_key(), $report, 7 * DAY_IN_SECONDS );
+
+		wp_safe_redirect( self::get_import_page_url( array( 'komunikazioa_import' => 'done', 'mode' => $mode ) ) );
+		exit;
+	}
+
+	/**
+	 * Send a welcome email preview without creating users.
+	 */
+	public static function handle_onboarding_test_email_submit() {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_die( esc_html( self::admin_label( 'No tienes permiso para realizar esta accion.', 'Ez duzu ekintza hau egiteko baimenik.' ) ) );
+		}
+
+		if ( empty( $_POST['komunikazioa_onboarding_test_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['komunikazioa_onboarding_test_nonce'] ) ), 'komunikazioa_send_onboarding_test_email' ) ) {
+			wp_die( esc_html( self::admin_label( 'Nonce no valido.', 'Nonce baliogabea.' ) ) );
+		}
+
+		$email = isset( $_POST['komunikazioa_onboarding_test_email'] ) ? sanitize_email( wp_unslash( $_POST['komunikazioa_onboarding_test_email'] ) ) : '';
+		if ( ! $email || ! is_email( $email ) ) {
+			wp_safe_redirect( self::get_import_page_url( array( 'komunikazioa_onboarding_test' => 'failed', 'message' => rawurlencode( self::admin_label( 'Introduce un email valido.', 'Sartu baliozko email bat.' ) ) ) ) );
+			exit;
+		}
+
+		$sent = self::send_onboarding_test_mail( $email );
+		if ( $sent ) {
+			wp_safe_redirect( self::get_import_page_url( array( 'komunikazioa_onboarding_test' => 'sent' ) ) );
+			exit;
+		}
+
+		wp_safe_redirect(
+			self::get_import_page_url(
+				array(
+					'komunikazioa_onboarding_test' => 'failed',
+					'message'                        => rawurlencode( self::get_last_mail_error_message() ),
+				)
+			)
+		);
+		exit;
+	}
+
+	/**
+	 * Resend onboarding welcome email to an imported user.
+	 */
+	public static function handle_resend_onboarding_mail_submit() {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_die( esc_html( self::admin_label( 'No tienes permiso para realizar esta accion.', 'Ez duzu ekintza hau egiteko baimenik.' ) ) );
+		}
+
+		if ( empty( $_POST['komunikazioa_resend_onboarding_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['komunikazioa_resend_onboarding_nonce'] ) ), 'komunikazioa_resend_onboarding_mail' ) ) {
+			wp_die( esc_html( self::admin_label( 'Nonce no valido.', 'Nonce baliogabea.' ) ) );
+		}
+
+		$user_id = isset( $_POST['user_id'] ) ? absint( $_POST['user_id'] ) : 0;
+		$user    = $user_id ? get_user_by( 'id', $user_id ) : false;
+
+		if ( ! ( $user instanceof \WP_User ) ) {
+			wp_safe_redirect( self::get_import_page_url( array( 'komunikazioa_resend' => 'failed', 'message' => rawurlencode( self::admin_label( 'Usuario no encontrado.', 'Erabiltzailea ez da aurkitu.' ) ) ) ) );
+			exit;
+		}
+
+		if ( self::is_user_onboarding_complete( $user_id ) ) {
+			wp_safe_redirect( self::get_import_page_url( array( 'komunikazioa_resend' => 'already_active' ) ) );
+			exit;
+		}
+
+		$sent = self::send_user_onboarding_mail( $user );
+		if ( $sent ) {
+			self::add_to_import_roster( $user );
+			wp_safe_redirect( self::get_import_page_url( array( 'komunikazioa_resend' => 'sent' ) ) );
+			exit;
+		}
+
+		wp_safe_redirect(
+			self::get_import_page_url(
+				array(
+					'komunikazioa_resend' => 'failed',
+					'message'             => rawurlencode( self::get_last_mail_error_message() ),
+				)
+			)
+		);
+		exit;
+	}
+
+	/**
+	 * Transient key for the latest import report.
+	 *
+	 * @return string
+	 */
+	private static function get_import_report_transient_key( $user_id = 0 ) {
+		if ( ! $user_id ) {
+			$user_id = get_current_user_id();
+		}
+
+		return 'komunikazioa_import_report_' . (int) $user_id;
+	}
+
+	/**
+	 * Build import page notices.
+	 *
+	 * @return string
+	 */
+	private static function get_import_notice() {
+		$html = '';
+
+		if ( ! empty( $_GET['komunikazioa_onboarding_test'] ) ) {
+			$status = sanitize_key( wp_unslash( $_GET['komunikazioa_onboarding_test'] ) );
+			if ( 'sent' === $status ) {
+				$html .= sprintf(
+					'<div class="notice notice-success inline"><p>%s</p></div>',
+					esc_html( self::admin_label( 'Correo de bienvenida de prueba enviado correctamente.', 'Ongietorri probako mezua ondo bidali da.' ) )
+				);
+			} elseif ( 'failed' === $status ) {
+				$message = self::admin_label( 'No se pudo enviar el correo de prueba.', 'Ezin izan da probako mezua bidali.' );
+				if ( ! empty( $_GET['message'] ) ) {
+					$message = sanitize_text_field( wp_unslash( $_GET['message'] ) );
+				}
+				$html .= sprintf( '<div class="notice notice-error inline"><p>%s</p></div>', esc_html( $message ) );
+			}
+		}
+
+		if ( ! empty( $_GET['komunikazioa_import'] ) ) {
+			$status = sanitize_key( wp_unslash( $_GET['komunikazioa_import'] ) );
+			if ( 'done' === $status ) {
+				$mode = ! empty( $_GET['mode'] ) ? sanitize_key( wp_unslash( $_GET['mode'] ) ) : 'simulate';
+				$labels = array(
+					'simulate' => self::admin_label( 'Simulacion completada.', 'Simulazioa osatuta.' ),
+					'test'     => self::admin_label( 'Prueba de importacion completada.', 'Inportazio proba osatuta.' ),
+					'full'     => self::admin_label( 'Importacion completada.', 'Inportazioa osatuta.' ),
+				);
+				$html .= sprintf(
+					'<div class="notice notice-success inline"><p>%s</p></div>',
+					esc_html( isset( $labels[ $mode ] ) ? $labels[ $mode ] : $labels['simulate'] )
+				);
+			} elseif ( 'queued' === $status ) {
+				$html .= sprintf(
+					'<div class="notice notice-info inline"><p>%s</p></div>',
+					esc_html( self::admin_label( 'Importacion iniciada. Procesando usuarios en lotes...', 'Inportazioa hasi da. Erabiltzaileak lotetan prozesatzen...' ) )
+				);
+			} elseif ( 'failed' === $status ) {
+				$message = self::admin_label( 'No se pudo procesar el CSV.', 'Ezin izan da CSVa prozesatu.' );
+				if ( ! empty( $_GET['message'] ) ) {
+					$message = sanitize_text_field( rawurldecode( wp_unslash( $_GET['message'] ) ) );
+				}
+				$html .= sprintf( '<div class="notice notice-error inline"><p>%s</p></div>', esc_html( $message ) );
+			}
+		}
+
+		if ( ! empty( $_GET['komunikazioa_resend'] ) ) {
+			$status = sanitize_key( wp_unslash( $_GET['komunikazioa_resend'] ) );
+			if ( 'sent' === $status ) {
+				$html .= sprintf(
+					'<div class="notice notice-success inline"><p>%s</p></div>',
+					esc_html( self::admin_label( 'Correo de bienvenida reenviado correctamente.', 'Ongietorri mezua ondo berriro bidali da.' ) )
+				);
+			} elseif ( 'already_active' === $status ) {
+				$html .= sprintf(
+					'<div class="notice notice-warning inline"><p>%s</p></div>',
+					esc_html( self::admin_label( 'El usuario ya ha completado el alta y no necesita un nuevo correo.', 'Erabiltzaileak alta osatu du eta ez du mezu berririk behar.' ) )
+				);
+			} elseif ( 'failed' === $status ) {
+				$message = self::admin_label( 'No se pudo reenviar el correo.', 'Ezin izan da mezua berriro bidali.' );
+				if ( ! empty( $_GET['message'] ) ) {
+					$message = sanitize_text_field( rawurldecode( wp_unslash( $_GET['message'] ) ) );
+				}
+				$html .= sprintf( '<div class="notice notice-error inline"><p>%s</p></div>', esc_html( $message ) );
+			}
+		}
+
+		return $html;
+	}
+
+	/**
+	 * Render an import report table.
+	 *
+	 * @param array $report Import report.
+	 */
+	private static function render_import_report( array $report ) {
+		$mode_labels = array(
+			'simulate' => self::admin_label( 'Informe de simulacion', 'Simulazio txostena' ),
+			'test'     => self::admin_label( 'Informe de prueba de importacion', 'Inportazio probaren txostena' ),
+			'full'     => self::admin_label( 'Informe de importacion', 'Inportazio txostena' ),
+		);
+		$mode = isset( $report['mode'] ) ? (string) $report['mode'] : 'simulate';
+		?>
+		<h2><?php echo esc_html( isset( $mode_labels[ $mode ] ) ? $mode_labels[ $mode ] : $mode_labels['simulate'] ); ?></h2>
+		<?php self::render_import_report_section( self::admin_label( 'Validos / creados', 'Baliozkoak / sortuak' ), isset( $report['created'] ) ? $report['created'] : array() ); ?>
+		<?php self::render_import_report_section( self::admin_label( 'Omitidos', 'Baztertuak' ), isset( $report['skipped'] ) ? $report['skipped'] : array() ); ?>
+		<?php self::render_import_report_section( self::admin_label( 'Correos enviados', 'Bidalitako mezuak' ), isset( $report['mailed'] ) ? $report['mailed'] : array() ); ?>
+		<?php self::render_import_report_section( self::admin_label( 'Fallos de envio', 'Bidalketa hutsegiteak' ), isset( $report['mail_failed'] ) ? $report['mail_failed'] : array() ); ?>
+		<?php self::render_import_report_section( self::admin_label( 'Errores', 'Erroreak' ), isset( $report['errors'] ) ? $report['errors'] : array() ); ?>
+		<?php
+		$user_ids = self::collect_report_user_ids( $report );
+		if ( ! empty( $user_ids ) && 'simulate' !== $mode ) {
+			self::render_onboarding_users_table(
+				$user_ids,
+				self::admin_label( 'Seguimiento y reenvio', 'Jarraipena eta berriro bidalketa' ),
+				true
+			);
+		}
+	}
+
+	/**
+	 * Collect unique user IDs from an import report.
+	 *
+	 * @param array $report Import report.
+	 * @return int[]
+	 */
+	private static function collect_report_user_ids( array $report ) {
+		$ids = array();
+
+		foreach ( array( 'created', 'skipped', 'mailed', 'mail_failed' ) as $section ) {
+			if ( empty( $report[ $section ] ) || ! is_array( $report[ $section ] ) ) {
+				continue;
+			}
+
+			foreach ( $report[ $section ] as $row ) {
+				if ( ! empty( $row['user_id'] ) ) {
+					$ids[ (int) $row['user_id'] ] = true;
+				}
+			}
+		}
+
+		return array_keys( $ids );
+	}
+
+	/**
+	 * Render onboarding status table with optional resend action.
+	 *
+	 * @param int[]  $user_ids      User IDs to display.
+	 * @param string $title         Optional section title.
+	 * @param bool   $allow_resend  Whether to show resend buttons.
+	 */
+	private static function render_onboarding_users_table( array $user_ids, $title = '', $allow_resend = true ) {
+		$rows = array();
+
+		foreach ( $user_ids as $user_id ) {
+			$user = get_user_by( 'id', (int) $user_id );
+			if ( ! ( $user instanceof \WP_User ) ) {
+				continue;
+			}
+
+			$rows[] = $user;
+		}
+
+		if ( empty( $rows ) ) {
+			return;
+		}
+
+		if ( $title ) {
+			?>
+			<h3><?php echo esc_html( $title ); ?> (<?php echo esc_html( (string) count( $rows ) ); ?>)</h3>
+			<?php
+		}
+		?>
+		<table class="widefat striped" style="margin-bottom:16px;">
+			<thead>
+				<tr>
+					<th><?php echo esc_html( self::admin_label( 'Email', 'Email' ) ); ?></th>
+					<th><?php echo esc_html( self::admin_label( 'Usuario', 'Erabiltzailea' ) ); ?></th>
+					<th><?php echo esc_html( self::admin_label( 'Estado', 'Egoera' ) ); ?></th>
+					<th><?php echo esc_html( self::admin_label( 'Ultimo correo', 'Azken mezua' ) ); ?></th>
+					<?php if ( $allow_resend ) : ?>
+						<th><?php echo esc_html( self::admin_label( 'Accion', 'Ekintza' ) ); ?></th>
+					<?php endif; ?>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach ( $rows as $user ) : ?>
+					<?php
+					$is_active  = self::is_user_onboarding_complete( $user->ID );
+					$last_mail  = (string) get_user_meta( $user->ID, 'komunikazioa_last_onboarding_mail', true );
+					$status_cls = $is_active ? 'komunikazioa-status-active' : 'komunikazioa-status-pending';
+					?>
+					<tr>
+						<td><?php echo esc_html( $user->user_email ); ?></td>
+						<td><?php echo esc_html( $user->user_login ); ?></td>
+						<td><span class="<?php echo esc_attr( $status_cls ); ?>"><?php echo esc_html( self::get_user_onboarding_status_label( $user->ID ) ); ?></span></td>
+						<td><?php echo $last_mail ? esc_html( $last_mail ) : '—'; ?></td>
+						<?php if ( $allow_resend ) : ?>
+							<td>
+								<?php if ( $is_active ) : ?>
+									<span style="color:#646970;"><?php echo esc_html( self::admin_label( 'Ya activo', 'Dagoeneko aktiboa' ) ); ?></span>
+								<?php else : ?>
+									<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" style="margin:0;">
+										<input type="hidden" name="action" value="komunikazioa_resend_onboarding_mail">
+										<input type="hidden" name="user_id" value="<?php echo esc_attr( (string) $user->ID ); ?>">
+										<?php wp_nonce_field( 'komunikazioa_resend_onboarding_mail', 'komunikazioa_resend_onboarding_nonce' ); ?>
+										<button type="submit" class="button button-small"><?php echo esc_html( self::admin_label( 'Reenviar correo', 'Mezua berriro bidali' ) ); ?></button>
+									</form>
+								<?php endif; ?>
+							</td>
+						<?php endif; ?>
+					</tr>
+				<?php endforeach; ?>
+			</tbody>
+		</table>
+		<?php
+	}
+
+	/**
+	 * Render one import report section.
+	 *
+	 * @param string $title Section title.
+	 * @param array  $rows  Section rows.
+	 */
+	private static function render_import_report_section( $title, array $rows ) {
+		?>
+		<h3><?php echo esc_html( $title ); ?> (<?php echo esc_html( (string) count( $rows ) ); ?>)</h3>
+		<?php if ( empty( $rows ) ) : ?>
+			<p><?php echo esc_html( self::admin_label( 'Sin registros.', 'Erregistrorik gabe.' ) ); ?></p>
+		<?php else : ?>
+			<table class="widefat striped" style="margin-bottom:16px;">
+				<thead>
+					<tr>
+						<th><?php echo esc_html( self::admin_label( 'Linea', 'Lerroa' ) ); ?></th>
+						<th><?php echo esc_html( self::admin_label( 'Email', 'Email' ) ); ?></th>
+						<th><?php echo esc_html( self::admin_label( 'Usuario', 'Erabiltzailea' ) ); ?></th>
+						<th><?php echo esc_html( self::admin_label( 'Detalle', 'Xehetasuna' ) ); ?></th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php foreach ( $rows as $row ) : ?>
+						<tr>
+							<td><?php echo esc_html( isset( $row['line'] ) ? (string) $row['line'] : '' ); ?></td>
+							<td><?php echo esc_html( isset( $row['email'] ) ? (string) $row['email'] : '' ); ?></td>
+							<td><?php echo esc_html( isset( $row['login'] ) ? (string) $row['login'] : '' ); ?></td>
+							<td><?php echo esc_html( isset( $row['message'] ) ? (string) $row['message'] : '' ); ?></td>
+						</tr>
+					<?php endforeach; ?>
+				</tbody>
+			</table>
+		<?php endif; ?>
+		<?php
+	}
+
+	/**
+	 * Get onboarding logo URL.
+	 *
+	 * @return string
+	 */
+	public static function get_onboarding_logo_url() {
+		return apply_filters( 'komunikazioa_onboarding_logo_url', self::ONBOARDING_LOGO_URL );
+	}
+
+	/**
+	 * Build onboarding welcome email HTML.
+	 *
+	 * @param string $email     Recipient email shown in body.
+	 * @param string $reset_url Password setup URL.
+	 * @param bool   $is_test   Whether this is a test email.
+	 * @return string
+	 */
+	public static function build_onboarding_mail_html( $email, $reset_url, $is_test = false ) {
+		$logo_url = esc_url( self::get_onboarding_logo_url() );
+		$email    = sanitize_email( $email );
+		$reset_url = esc_url( $reset_url );
+
+		$html  = '<div style="background:#f4f1ea;padding:32px 16px;font-family:Arial,Helvetica,sans-serif;color:#18223a;">';
+		$html .= '<div style="max-width:560px;margin:0 auto;background:#ffffff;border:1px solid #d8d1c5;border-radius:20px;overflow:hidden;">';
+		$html .= '<div style="padding:32px 32px 16px;text-align:center;">';
+		$html .= '<img src="' . $logo_url . '" alt="Kostan Elkartea" width="120" style="display:block;margin:0 auto 24px;max-width:120px;height:auto;">';
+		$html .= '<h1 style="margin:0 0 16px;font-size:28px;line-height:1.2;font-weight:700;color:#18223a;">Ongi etorri</h1>';
+		$html .= '<p style="margin:0 0 4px;font-size:16px;line-height:1.6;color:#18223a;">Zure emaila / tu email</p>';
+		$html .= '<p style="margin:0 0 8px;font-size:16px;line-height:1.6;color:#18223a;"><strong>' . esc_html( $email ) . '</strong></p>';
+		$html .= '</div>';
+		$html .= '<div style="padding:8px 32px 32px;text-align:center;">';
+		$html .= '<a href="' . $reset_url . '" style="display:inline-block;background:#00b7c6;color:#ffffff;text-decoration:none;font-size:16px;font-weight:700;padding:14px 28px;border-radius:999px;">Crea tu contraseña</a>';
+		$html .= '<p style="margin:24px 0 0;font-size:13px;line-height:1.5;color:#5f6778;">' . esc_html( self::get_password_reset_expiration_mail_text() ) . '</p>';
+
+		if ( $is_test ) {
+			$html .= '<p style="margin:12px 0 0;font-size:13px;line-height:1.5;color:#5f6778;">Probako mezua / Correo de prueba.</p>';
+		}
+
+		$html .= '</div></div></div>';
+
+		return $html;
+	}
+
+	/**
+	 * Get onboarding email subject.
+	 *
+	 * @return string
+	 */
+	public static function get_onboarding_mail_subject() {
+		return 'Ongi etorri — Kostan Elkartea';
+	}
+
+	/**
+	 * Get the public site base URL used in outbound email links.
+	 *
+	 * @return string Empty string to fall back to WordPress URLs.
+	 */
+	private static function get_public_site_base_url() {
+		$url = '';
+
+		if ( function_exists( 'get_field' ) ) {
+			$url = (string) get_field( 'komunikazioa_public_site_url', self::SETTINGS_POST_ID );
+		}
+
+		if ( '' === $url && defined( 'KOMUNIKAZIOA_PUBLIC_SITE_URL' ) ) {
+			$url = (string) KOMUNIKAZIOA_PUBLIC_SITE_URL;
+		}
+
+		$url = apply_filters( 'komunikazioa_public_site_url', $url );
+
+		if ( '' === $url ) {
+			return '';
+		}
+
+		return untrailingslashit( esc_url_raw( $url ) );
+	}
+
+	/**
+	 * Resolve the onboarding page URL for email links.
+	 *
+	 * @return string
+	 */
+	private static function get_onboarding_page_url() {
+		$relative_path = '/ongi-etorri/';
+
+		if ( function_exists( 'kostan_get_onboarding_url' ) ) {
+			$local_url = kostan_get_onboarding_url();
+			$parsed    = wp_parse_url( $local_url, PHP_URL_PATH );
+			if ( is_string( $parsed ) && '' !== $parsed ) {
+				$relative_path = $parsed;
+			}
+		}
+
+		$public_base = self::get_public_site_base_url();
+		if ( $public_base ) {
+			return $public_base . $relative_path;
+		}
+
+		if ( function_exists( 'kostan_get_onboarding_url' ) ) {
+			return kostan_get_onboarding_url();
+		}
+
+		return home_url( '/ongi-etorri/' );
+	}
+
+	/**
+	 * Build onboarding reset URL for email CTA links.
+	 *
+	 * @param string $login User login.
+	 * @param string $key   Reset key.
+	 * @return string
+	 */
+	public static function get_onboarding_reset_url( $login, $key ) {
+		$login = trim( (string) $login );
+		$key   = trim( (string) $key );
+		$base  = self::get_onboarding_page_url();
+
+		return add_query_arg(
+			array(
+				'login' => $login,
+				'key'   => $key,
+			),
+			$base
+		);
+	}
+
+	/**
+	 * Send onboarding welcome email to a newly imported user.
+	 *
+	 * @param \WP_User $user User object.
+	 * @return bool
+	 */
+	public static function send_user_onboarding_mail( $user ) {
+		if ( ! ( $user instanceof \WP_User ) ) {
+			return false;
+		}
+
+		$key = get_password_reset_key( $user );
+		if ( is_wp_error( $key ) ) {
+			self::$mail_error = $key->get_error_message();
+			return false;
+		}
+
+		$reset_url = self::get_onboarding_reset_url( $user->user_login, $key );
+		$body      = self::build_onboarding_mail_html( $user->user_email, $reset_url, false );
+
+		$sent = self::send_html_mail( array( $user->user_email ), self::get_onboarding_mail_subject(), $body, $user->display_name, 0 );
+		if ( $sent ) {
+			update_user_meta( $user->ID, 'komunikazioa_last_onboarding_mail', current_time( 'mysql' ) );
+		}
+
+		return $sent;
+	}
+
+	/**
+	 * Password reset link lifetime in seconds (default 15 days).
+	 *
+	 * @param int $expiration Default expiration from WordPress.
+	 * @return int
+	 */
+	public static function filter_password_reset_expiration( $expiration ) {
+		return self::get_password_reset_expiration_seconds();
+	}
+
+	/**
+	 * Suppress admin emails when socios set or change their password.
+	 */
+	public static function register_member_password_notification_filters() {
+		remove_action( 'after_password_reset', 'wp_password_change_notification' );
+		add_action( 'after_password_reset', array( __CLASS__, 'maybe_send_password_change_notification_to_admin' ), 10, 2 );
+		add_filter( 'wp_password_change_notification_email', array( __CLASS__, 'filter_password_change_notification_email' ), 10, 3 );
+	}
+
+	/**
+	 * Whether the site admin should be notified about this user's password change.
+	 *
+	 * @param mixed $user User object or ID.
+	 * @return bool
+	 */
+	private static function should_suppress_password_change_admin_notice( $user ) {
+		if ( function_exists( 'kostan_is_socios_user' ) ) {
+			return kostan_is_socios_user( $user );
+		}
+
+		if ( ! ( $user instanceof \WP_User ) ) {
+			$user = get_user_by( 'id', $user );
+		}
+
+		if ( ! ( $user instanceof \WP_User ) ) {
+			return false;
+		}
+
+		$member_roles = apply_filters(
+			'komunikazioa_member_password_notice_suppressed_roles',
+			array( User_Importer::IMPORT_ROLE, 'socio', 'bazkide', 'bazkideak', 'subscriber' )
+		);
+		$member_roles = array_map( 'strtolower', (array) $member_roles );
+		$user_roles   = array_map( 'strtolower', (array) $user->roles );
+
+		return (bool) array_intersect( $member_roles, $user_roles );
+	}
+
+	/**
+	 * Notify the site admin after password reset unless the user is a socio.
+	 *
+	 * @param \WP_User $user     User object.
+	 * @param string   $new_pass New password.
+	 */
+	public static function maybe_send_password_change_notification_to_admin( $user, $new_pass ) {
+		unset( $new_pass );
+
+		if ( self::should_suppress_password_change_admin_notice( $user ) ) {
+			return;
+		}
+
+		if ( function_exists( 'wp_password_change_notification' ) ) {
+			wp_password_change_notification( $user );
+		}
+	}
+
+	/**
+	 * Block the admin password-change email for socios (profile updates).
+	 *
+	 * @param array|false $email    Email arguments.
+	 * @param \WP_User    $user     User object.
+	 * @param string      $blogname Site name.
+	 * @return array|false
+	 */
+	public static function filter_password_change_notification_email( $email, $user, $blogname ) {
+		unset( $blogname );
+
+		if ( self::should_suppress_password_change_admin_notice( $user ) ) {
+			return false;
+		}
+
+		return $email;
+	}
+
+	/**
+	 * Password reset link lifetime in days.
+	 *
+	 * @return int
+	 */
+	public static function get_password_reset_expiration_days() {
+		return (int) apply_filters( 'komunikazioa_password_reset_expiration_days', self::PASSWORD_RESET_EXPIRATION_DAYS );
+	}
+
+	/**
+	 * Password reset link lifetime in seconds.
+	 *
+	 * @return int
+	 */
+	public static function get_password_reset_expiration_seconds() {
+		return self::get_password_reset_expiration_days() * DAY_IN_SECONDS;
+	}
+
+	/**
+	 * Bilingual expiry notice for onboarding emails.
+	 *
+	 * @return string
+	 */
+	public static function get_password_reset_expiration_mail_text() {
+		$days = self::get_password_reset_expiration_days();
+
+		return sprintf(
+			'Esteka hau %1$d egunetan iraungiko da. / Este enlace caducará en %1$d días.',
+			$days
+		);
+	}
+
+	/**
+	 * Whether the user completed onboarding (accepted terms / set password).
+	 *
+	 * @param int $user_id User ID.
+	 * @return bool
+	 */
+	public static function is_user_onboarding_complete( $user_id ) {
+		$user_id = (int) $user_id;
+		if ( $user_id <= 0 ) {
+			return false;
+		}
+
+		return '1' === (string) get_user_meta( $user_id, 'kostan_terms_accepted', true );
+	}
+
+	/**
+	 * Human-readable onboarding status for admin tables.
+	 *
+	 * @param int $user_id User ID.
+	 * @return string
+	 */
+	public static function get_user_onboarding_status_label( $user_id ) {
+		if ( self::is_user_onboarding_complete( $user_id ) ) {
+			return self::admin_label( 'Activo', 'Aktiboa' );
+		}
+
+		return self::admin_label( 'Pendiente', 'Zain' );
+	}
+
+	/**
+	 * Remember an imported user for follow-up in the admin UI.
+	 *
+	 * @param \WP_User $user User object.
+	 */
+	public static function add_to_import_roster( $user ) {
+		if ( ! ( $user instanceof \WP_User ) ) {
+			return;
+		}
+
+		$roster = get_option( self::IMPORT_ROSTER_OPTION, array() );
+		if ( ! is_array( $roster ) ) {
+			$roster = array();
+		}
+
+		$user_id = (int) $user->ID;
+		$roster[ $user_id ] = array(
+			'user_id'    => $user_id,
+			'email'      => (string) $user->user_email,
+			'login'      => (string) $user->user_login,
+			'updated_at' => current_time( 'mysql' ),
+		);
+
+		if ( count( $roster ) > 500 ) {
+			uasort(
+				$roster,
+				static function ( $a, $b ) {
+					return strcmp( (string) $a['updated_at'], (string) $b['updated_at'] );
+				}
+			);
+			$roster = array_slice( $roster, -500, null, true );
+		}
+
+		update_option( self::IMPORT_ROSTER_OPTION, $roster, false );
+	}
+
+	/**
+	 * Get persisted import roster entries keyed by user ID.
+	 *
+	 * @return array<int, array<string, mixed>>
+	 */
+	public static function get_import_roster() {
+		$roster = get_option( self::IMPORT_ROSTER_OPTION, array() );
+
+		return is_array( $roster ) ? $roster : array();
+	}
+
+	/**
+	 * Send onboarding template to a test address using the current admin account key.
+	 *
+	 * @param string $email Recipient email.
+	 * @return bool
+	 */
+	private static function send_onboarding_test_mail( $email ) {
+		$admin = wp_get_current_user();
+		if ( ! ( $admin instanceof \WP_User ) || ! $admin->exists() ) {
+			self::$mail_error = self::admin_label( 'No se pudo obtener el usuario administrador.', 'Ezin izan da administratzaile erabiltzailea lortu.' );
+			return false;
+		}
+
+		$key = get_password_reset_key( $admin );
+		if ( is_wp_error( $key ) ) {
+			self::$mail_error = $key->get_error_message();
+			return false;
+		}
+
+		$reset_url = self::get_onboarding_reset_url( $admin->user_login, $key );
+		$body      = self::build_onboarding_mail_html( $email, $reset_url, true );
+
+		return self::send_html_mail( array( $email ), self::get_onboarding_mail_subject() . ' [TEST]', $body, '', 0 );
+	}
+
+	/**
+	 * Get the latest mail error message.
+	 *
+	 * @return string
+	 */
+	public static function get_last_mail_error_message() {
+		if ( self::$mail_error ) {
+			return (string) self::$mail_error;
+		}
+
+		return self::admin_label( 'Error desconocido al enviar el correo.', 'Errore ezezaguna mezua bidaltzean.' );
 	}
 
 	/**
@@ -1712,10 +3092,16 @@ class Plugin {
 		wp_nonce_field( 'komunikazioa_submit_lead', 'komunikazioa_lead_nonce' );
 
 		if ( ! $is_simple ) {
+			echo '<div class="komunikazioa-form__name-row">';
 			echo '<p class="komunikazioa-form__field">';
-			echo '<label class="komunikazioa-form__label" for="' . esc_attr( $form_id ) . '-name">' . esc_html__( 'Izena', 'komunikazioa' ) . '</label>';
-			echo '<input class="komunikazioa-form__input" id="' . esc_attr( $form_id ) . '-name" required type="text" name="komunikazioa_full_name" autocomplete="name" />';
+			echo '<label class="komunikazioa-form__label" for="' . esc_attr( $form_id ) . '-first-name">' . esc_html__( 'Izena', 'komunikazioa' ) . '</label>';
+			echo '<input class="komunikazioa-form__input" id="' . esc_attr( $form_id ) . '-first-name" required type="text" name="komunikazioa_first_name" autocomplete="given-name" />';
 			echo '</p>';
+			echo '<p class="komunikazioa-form__field">';
+			echo '<label class="komunikazioa-form__label" for="' . esc_attr( $form_id ) . '-last-name">' . esc_html__( 'Abizenak', 'komunikazioa' ) . '</label>';
+			echo '<input class="komunikazioa-form__input" id="' . esc_attr( $form_id ) . '-last-name" required type="text" name="komunikazioa_last_name" autocomplete="family-name" />';
+			echo '</p>';
+			echo '</div>';
 		}
 
 		echo '<p class="komunikazioa-form__field">';
@@ -1730,7 +3116,7 @@ class Plugin {
 			echo '</p>';
 
 			echo '<p class="komunikazioa-form__field">';
-			echo '<label class="komunikazioa-form__label" for="' . esc_attr( $form_id ) . '-city">' . esc_html( self::admin_label( 'Poblacion', 'Herria' ) ) . '</label>';
+			echo '<label class="komunikazioa-form__label" for="' . esc_attr( $form_id ) . '-city">' . esc_html__( 'Herria', 'komunikazioa' ) . '</label>';
 			echo '<input class="komunikazioa-form__input" id="' . esc_attr( $form_id ) . '-city" type="text" name="komunikazioa_city" autocomplete="address-level2" />';
 			echo '</p>';
 		}
