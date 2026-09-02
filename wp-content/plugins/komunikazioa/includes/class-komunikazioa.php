@@ -959,7 +959,9 @@ class Plugin {
 			wp_die( esc_html( self::admin_label( 'No tienes permiso para ver esta pagina.', 'Ez duzu orri hau ikusteko baimenik.' ) ) );
 		}
 
-		$stats = self::get_dashboard_stats();
+		$stats        = self::get_dashboard_stats();
+		$import_stats = self::get_import_dashboard_stats();
+		$import_url   = self::get_import_page_url();
 		?>
 		<div class="wrap komunikazioa-wrap">
 			<h1><?php echo esc_html( self::admin_label( 'Comunicaciones', 'Komunikazioa' ) ); ?></h1>
@@ -974,6 +976,20 @@ class Plugin {
 					<li><strong><?php echo esc_html( self::admin_label( 'Fallidos', 'Hutsekin' ) ); ?>:</strong> <?php echo esc_html( (string) $stats['failed'] ); ?></li>
 					<li><strong><?php echo esc_html( self::admin_label( 'Personas interesadas', 'Pertsona interesatuak' ) ); ?>:</strong> <?php echo esc_html( (string) $stats['leads'] ); ?></li>
 					<li><strong><?php echo esc_html( self::admin_label( 'Entregas fallidas', 'Entrega-hutsak' ) ); ?>:</strong> <?php echo esc_html( (string) $stats['failed_deliveries'] ); ?></li>
+				</ul>
+			</div>
+
+			<div class="card" style="max-width: 820px; margin-top: 20px;">
+				<h2><?php echo esc_html( self::admin_label( 'Importacion de socios', 'Bazkideen inportazioa' ) ); ?></h2>
+				<p style="margin-top:0;">
+					<?php echo esc_html( self::admin_label( 'Estado actual de los socios registrados en la importacion.', 'Inportazioan erregistratutako bazkideen uneko egoera.' ) ); ?>
+					<a href="<?php echo esc_url( $import_url ); ?>"><?php echo esc_html( self::admin_label( 'Ver importacion', 'Inportazioa ikusi' ) ); ?></a>
+				</p>
+				<ul style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;list-style:none;padding:0;margin:0;">
+					<li><strong><?php echo esc_html( self::admin_label( 'Emails enviados', 'Bidalitako emailak' ) ); ?>:</strong> <?php echo esc_html( (string) $import_stats['emails_sent'] ); ?></li>
+					<li><strong><?php echo esc_html( self::admin_label( 'Usuarios pendientes', 'Erabiltzaile zain' ) ); ?>:</strong> <?php echo esc_html( (string) $import_stats['pending'] ); ?></li>
+					<li><strong><?php echo esc_html( self::admin_label( 'Usuarios activados', 'Erabiltzaile aktibatuak' ) ); ?>:</strong> <?php echo esc_html( (string) $import_stats['activated'] ); ?></li>
+					<li><strong><?php echo esc_html( self::admin_label( 'Emails no entregados', 'Entregatu gabeko emailak' ) ); ?>:</strong> <?php echo esc_html( (string) $import_stats['undelivered'] ); ?></li>
 				</ul>
 			</div>
 		</div>
@@ -1086,6 +1102,56 @@ class Plugin {
 			'leads'           => (int) $wpdb->get_var( "SELECT COUNT(id) FROM {$leads_table}" ),
 			'failed_deliveries'=> (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(id) FROM {$logs_table} WHERE status = %s", 'failed' ) ),
 		);
+	}
+
+	/**
+	 * Get dashboard stats for imported members onboarding.
+	 *
+	 * Source of truth: komunikazioa_import_roster + user meta.
+	 * - emails_sent: last onboarding mail timestamp present
+	 * - pending / activated: kostan_terms_accepted
+	 * - undelivered: roster users without a successful onboarding mail timestamp
+	 *
+	 * @return array{emails_sent:int,pending:int,activated:int,undelivered:int,total:int}
+	 */
+	private static function get_import_dashboard_stats() {
+		$stats = array(
+			'emails_sent' => 0,
+			'pending'     => 0,
+			'activated'   => 0,
+			'undelivered' => 0,
+			'total'       => 0,
+		);
+
+		$roster = self::get_import_roster();
+		if ( empty( $roster ) ) {
+			return $stats;
+		}
+
+		foreach ( array_keys( $roster ) as $user_id ) {
+			$user_id = (int) $user_id;
+			$user    = get_user_by( 'id', $user_id );
+			if ( ! ( $user instanceof \WP_User ) ) {
+				continue;
+			}
+
+			$stats['total']++;
+
+			$last_mail = (string) get_user_meta( $user_id, 'komunikazioa_last_onboarding_mail', true );
+			if ( '' !== $last_mail ) {
+				$stats['emails_sent']++;
+			} else {
+				$stats['undelivered']++;
+			}
+
+			if ( self::is_user_onboarding_complete( $user_id ) ) {
+				$stats['activated']++;
+			} else {
+				$stats['pending']++;
+			}
+		}
+
+		return $stats;
 	}
 
 	/**

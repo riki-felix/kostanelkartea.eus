@@ -961,3 +961,25 @@ function kostan_course_archive_pre_get_posts( $query ) {
 	$query->set( 'order', 'ASC' );
 }
 add_action( 'pre_get_posts', 'kostan_course_archive_pre_get_posts' );
+
+/**
+ * Default talk_date picker time to 10:00 for new selections only.
+ *
+ * Affects only the admin Date Time Picker UI for the talk_date field.
+ * Does not write or rewrite post meta, so existing talks keep their saved times.
+ *
+ * @param array $args  Time picker args.
+ * @param array $field Field settings.
+ * @return array
+ */
+function kostan_talk_date_default_time_picker_args( $args, $field ) {
+	if ( empty( $field['name'] ) || 'talk_date' !== $field['name'] ) {
+		return $args;
+	}
+
+	$args['hour']   = 10;
+	$args['minute'] = 0;
+
+	return $args;
+}
+add_filter( 'acf/fields/date_time_picker/time_picker_args', 'kostan_talk_date_default_time_picker_args', 10, 2 );

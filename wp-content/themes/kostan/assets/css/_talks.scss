@@ -49,7 +49,7 @@
   color: inherit;
 }
 
-/* Content area */
+/* Content area (image plane) */
 .talk-card__content {
   position: relative;
   isolation: isolate;
@@ -57,8 +57,8 @@
   flex-direction: column;
   gap: var(--sp-xxs);
   padding: var(--sp-m);
-  flex: 1;
-  min-height: 30rem;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   justify-content: flex-end;
   background-color: var(--color-primary);
   background-image: var(--talk-card-image);
