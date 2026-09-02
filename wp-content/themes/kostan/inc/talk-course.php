@@ -963,23 +963,27 @@ function kostan_course_archive_pre_get_posts( $query ) {
 add_action( 'pre_get_posts', 'kostan_course_archive_pre_get_posts' );
 
 /**
- * Default talk_date picker time to 10:00 for new selections only.
+ * Enqueue admin JS so talk_date defaults to 10:00:00 in the ACF picker.
  *
- * Affects only the admin Date Time Picker UI for the talk_date field.
- * Does not write or rewrite post meta, so existing talks keep their saved times.
- *
- * @param array $args  Time picker args.
- * @param array $field Field settings.
- * @return array
+ * Current ACF Pro only exposes date_time_picker_args in JavaScript.
+ * This never writes post meta; empty fields only get picker defaults.
  */
-function kostan_talk_date_default_time_picker_args( $args, $field ) {
-	if ( empty( $field['name'] ) || 'talk_date' !== $field['name'] ) {
-		return $args;
+function kostan_enqueue_talk_date_admin_script( $hook ) {
+	if ( ! in_array( $hook, array( 'post.php', 'post-new.php' ), true ) ) {
+		return;
 	}
 
-	$args['hour']   = 10;
-	$args['minute'] = 0;
+	$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+	if ( ! $screen || 'talks' !== $screen->post_type ) {
+		return;
+	}
 
-	return $args;
+	wp_enqueue_script(
+		'kostan-admin-talk-date',
+		get_template_directory_uri() . '/assets/js/admin-talk-date.js',
+		array( 'acf-input' ),
+		wp_get_theme()->get( 'Version' ),
+		true
+	);
 }
-add_filter( 'acf/fields/date_time_picker/time_picker_args', 'kostan_talk_date_default_time_picker_args', 10, 2 );
+add_action( 'acf/input/admin_enqueue_scripts', 'kostan_enqueue_talk_date_admin_script' );
