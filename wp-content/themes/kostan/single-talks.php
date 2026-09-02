@@ -144,12 +144,6 @@ if ( ! empty( $speakers ) ) {
 								</a>
 							</h3>
 
-							<?php
-							$excerpt = get_the_excerpt( $speaker_id );
-							if ( $excerpt ) : ?>
-								<p class="speaker-card__excerpt"><?php echo esc_html( $excerpt ); ?></p>
-							<?php endif; ?>
-
 							<div class="speaker-card__bio">
 								<?php echo apply_filters( 'the_content', get_post_field( 'post_content', $speaker_id ) ); ?>
 							</div>
