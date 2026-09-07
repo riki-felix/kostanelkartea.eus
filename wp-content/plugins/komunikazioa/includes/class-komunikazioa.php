@@ -1465,6 +1465,15 @@ class Plugin {
 			)
 		);
 
+		self::send_lead_confirmation_email(
+			array(
+				'email'      => $email,
+				'first_name' => $first_name,
+				'full_name'  => $full_name,
+				'lang'       => self::resolve_lead_request_language( $source_id ),
+			)
+		);
+
 		self::redirect_back( add_query_arg( 'komunikazioa_success', '1', $redirect ) );
 	}
 
@@ -1555,6 +1564,119 @@ class Plugin {
 		$body .= '</ul>';
 
 		self::send_html_mail( $recipients, $subject, $body );
+	}
+
+	/**
+	 * Resolve the public language used when the lead form was submitted.
+	 *
+	 * @param int $source_post_id Source page/post ID from the form.
+	 * @return string es|eu
+	 */
+	private static function resolve_lead_request_language( $source_post_id = 0 ) {
+		$raw = isset( $_POST['komunikazioa_lang'] ) ? sanitize_key( wp_unslash( $_POST['komunikazioa_lang'] ) ) : '';
+
+		if ( '' === $raw && $source_post_id && has_filter( 'wpml_post_language_details' ) ) {
+			$details = apply_filters( 'wpml_post_language_details', null, (int) $source_post_id );
+			if ( is_array( $details ) && ! empty( $details['language_code'] ) ) {
+				$raw = (string) $details['language_code'];
+			}
+		}
+
+		if ( '' === $raw && has_filter( 'wpml_current_language' ) ) {
+			$raw = (string) apply_filters( 'wpml_current_language', null );
+		}
+
+		$raw = strtolower( (string) $raw );
+		if ( str_starts_with( $raw, 'es' ) ) {
+			return 'es';
+		}
+
+		return 'eu';
+	}
+
+	/**
+	 * Send a receipt confirmation email to the interested person.
+	 *
+	 * Confirms receipt only — not automatic enrollment.
+	 *
+	 * @param array $lead Lead data with email and lang.
+	 */
+	private static function send_lead_confirmation_email( array $lead ) {
+		$email = isset( $lead['email'] ) ? sanitize_email( (string) $lead['email'] ) : '';
+		if ( ! $email || ! is_email( $email ) ) {
+			return;
+		}
+
+		$lang = isset( $lead['lang'] ) && 'es' === $lead['lang'] ? 'es' : 'eu';
+		$name = '';
+		if ( ! empty( $lead['first_name'] ) ) {
+			$name = sanitize_text_field( (string) $lead['first_name'] );
+		} elseif ( ! empty( $lead['full_name'] ) ) {
+			$name = sanitize_text_field( (string) $lead['full_name'] );
+		}
+
+		$subject = self::get_lead_confirmation_subject( $lang );
+		$body    = self::build_lead_confirmation_mail_html( $email, $name, $lang );
+
+		self::send_html_mail( array( $email ), $subject, $body, $name, 0 );
+	}
+
+	/**
+	 * Subject for the lead receipt confirmation.
+	 *
+	 * @param string $lang es|eu
+	 * @return string
+	 */
+	private static function get_lead_confirmation_subject( $lang ) {
+		if ( 'es' === $lang ) {
+			return 'Hemos recibido tu solicitud — Kostan Elkartea';
+		}
+
+		return 'Zure eskaera jaso dugu — Kostan Elkartea';
+	}
+
+	/**
+	 * Build HTML for the lead receipt confirmation (branded like onboarding mail).
+	 *
+	 * @param string $email Recipient email.
+	 * @param string $name  Optional first/full name.
+	 * @param string $lang  es|eu
+	 * @return string
+	 */
+	public static function build_lead_confirmation_mail_html( $email, $name = '', $lang = 'eu' ) {
+		$logo_url = esc_url( self::get_onboarding_logo_url() );
+		$email    = sanitize_email( $email );
+		$name     = sanitize_text_field( (string) $name );
+		$lang     = 'es' === $lang ? 'es' : 'eu';
+
+		if ( 'es' === $lang ) {
+			$title = 'Hemos recibido tu solicitud';
+			$intro = $name
+				? sprintf( 'Hola %s,', $name )
+				: 'Hola,';
+			$body  = 'Hemos recibido correctamente tu solicitud. Nos pondremos en contacto contigo si es necesario.';
+			$note  = 'Este mensaje es solo una confirmación de recepción; no implica inscripción automática.';
+		} else {
+			$title = 'Zure eskaera jaso dugu';
+			$intro = $name
+				? sprintf( 'Kaixo %s,', $name )
+				: 'Kaixo,';
+			$body  = 'Zure eskaera behar bezala jaso dugu. Beharrezkoa bada, zurekin harremanetan jarriko gara.';
+			$note  = 'Mezu hau jasotze-baieztapena da soilik; ez du izen-emate automatikorik esan nahi.';
+		}
+
+		$html  = '<div style="background:#f4f1ea;padding:32px 16px;font-family:Arial,Helvetica,sans-serif;color:#18223a;">';
+		$html .= '<div style="max-width:560px;margin:0 auto;background:#ffffff;border:1px solid #d8d1c5;border-radius:20px;overflow:hidden;">';
+		$html .= '<div style="padding:32px 32px 16px;text-align:center;">';
+		$html .= '<img src="' . $logo_url . '" alt="Kostan Elkartea" width="120" style="display:block;margin:0 auto 24px;max-width:120px;height:auto;">';
+		$html .= '<h1 style="margin:0 0 16px;font-size:28px;line-height:1.2;font-weight:700;color:#18223a;">' . esc_html( $title ) . '</h1>';
+		$html .= '<p style="margin:0 0 12px;font-size:16px;line-height:1.6;color:#18223a;">' . esc_html( $intro ) . '</p>';
+		$html .= '<p style="margin:0 0 16px;font-size:16px;line-height:1.6;color:#18223a;">' . esc_html( $body ) . '</p>';
+		$html .= '<p style="margin:0 0 8px;font-size:14px;line-height:1.6;color:#5f6778;">' . esc_html( $note ) . '</p>';
+		$html .= '<p style="margin:16px 0 0;font-size:13px;line-height:1.5;color:#5f6778;">' . esc_html( $email ) . '</p>';
+		$html .= '</div></div></div>';
+
+		return $html;
 	}
 
 	/**
@@ -3143,6 +3265,30 @@ class Plugin {
 	}
 
 	/**
+	 * Current public UI language for lead forms (eu|es).
+	 *
+	 * @return string
+	 */
+	private static function get_public_form_language() {
+		$lang = '';
+
+		if ( has_filter( 'wpml_current_language' ) ) {
+			$lang = (string) apply_filters( 'wpml_current_language', null );
+		}
+
+		if ( '' === $lang ) {
+			$locale = function_exists( 'determine_locale' ) ? determine_locale() : get_locale();
+			$lang   = strtolower( (string) $locale );
+		}
+
+		if ( str_starts_with( $lang, 'es' ) ) {
+			return 'es';
+		}
+
+		return 'eu';
+	}
+
+	/**
 	 * Render a public lead form.
 	 *
 	 * @param string $type Form type.
@@ -3167,6 +3313,7 @@ class Plugin {
 		echo '<input type="hidden" name="action" value="komunikazioa_submit_lead" />';
 		echo '<input type="hidden" name="komunikazioa_form_type" value="' . esc_attr( $type ) . '" />';
 		echo '<input type="hidden" name="komunikazioa_source_post_id" value="' . esc_attr( get_the_ID() ? get_the_ID() : 0 ) . '" />';
+		echo '<input type="hidden" name="komunikazioa_lang" value="' . esc_attr( self::get_public_form_language() ) . '" />';
 		wp_nonce_field( 'komunikazioa_submit_lead', 'komunikazioa_lead_nonce' );
 
 		if ( ! $is_simple ) {
