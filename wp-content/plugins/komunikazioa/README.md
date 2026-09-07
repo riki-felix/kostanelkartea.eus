@@ -4,19 +4,38 @@ Plugin base for campaign emails and Interesdunak leads.
 
 ## SMTP
 
-The plugin sends email with `wp_mail()` and can use an external SMTP server configured in **Komunikazioa → Ajustes**.
+The plugin sends email with `wp_mail()` using the server configured in **Komunikazioa → Ajustes**.
 
-Recommended values for Google Workspace:
+### Option A — Google Workspace SMTP relay (recommended, no 2FA on a mailbox)
+
+Use this when the site should send as `@your-domain` without App Passwords.
+
+1. In [admin.google.com](https://admin.google.com): **Apps → Google Workspace → Gmail → Routing → SMTP relay service**.
+2. Allowed senders: only addresses in your domains.
+3. Authentication: **Only accept mail from the specified IP addresses** (add the Kinsta site outbound IPv4). Do **not** require SMTP auth if you want to avoid 2FA.
+4. Require TLS: on.
+5. In **Komunikazioa → Ajustes**:
+
+| Campo | Valor |
+| --- | --- |
+| Servidor SMTP | `smtp-relay.gmail.com` |
+| Puerto | `587` |
+| Cifrado | `TLS` |
+| Usuario SMTP | *(vacío)* |
+| Contraseña SMTP | escribe `CLEAR` una vez y guarda (borra la password antigua) |
+| Email del remitente | una dirección real del dominio Workspace |
+
+Then send the SMTP test email from the same settings screen.
+
+### Option B — Gmail mailbox SMTP (needs 2FA + App Password)
 
 | Campo | Valor |
 | --- | --- |
 | Servidor SMTP | `smtp.gmail.com` |
-| Puerto | `587` |
-| Cifrado | `TLS` |
+| Puerto | `587` (TLS) o `465` (SSL) |
 | Usuario SMTP | dirección completa del buzón |
 | Contraseña SMTP | App Password de Google |
 | Email del remitente | misma dirección del buzón |
-| Nombre del remitente | nombre visible del remitente |
 
 Use the SMTP test email in **Komunikazioa → Ajustes → Servidor SMTP** to verify delivery after saving the settings.
 

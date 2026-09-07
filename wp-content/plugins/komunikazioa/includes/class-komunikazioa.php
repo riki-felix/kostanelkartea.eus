@@ -447,8 +447,8 @@ class Plugin {
 						'label'        => self::admin_label( 'Servidor SMTP', 'SMTP zerbitzaria' ),
 						'name'         => 'komunikazioa_smtp_host',
 						'type'         => 'text',
-						'instructions' => self::admin_label( 'Por ejemplo: smtp.gmail.com', 'Adibidez: smtp.gmail.com' ),
-						'placeholder'  => 'smtp.gmail.com',
+						'instructions' => self::admin_label( 'Gmail usuario: smtp.gmail.com. Relay Workspace (sin 2FA): smtp-relay.gmail.com', 'Gmail erabiltzailea: smtp.gmail.com. Workspace relay (2FAgabe): smtp-relay.gmail.com' ),
+						'placeholder'  => 'smtp-relay.gmail.com',
 					),
 					array(
 						'key'           => 'field_komunikazioa_smtp_port',
@@ -459,6 +459,7 @@ class Plugin {
 						'min'           => 1,
 						'max'           => 65535,
 						'step'          => 1,
+						'instructions'  => self::admin_label( 'Relay Workspace recomendado: 587 con TLS.', 'Workspace relay gomendatua: 587 TLS-rekin.' ),
 					),
 					array(
 						'key'           => 'field_komunikazioa_smtp_encryption',
@@ -479,14 +480,14 @@ class Plugin {
 						'label'        => self::admin_label( 'Usuario SMTP', 'SMTP erabiltzailea' ),
 						'name'         => 'komunikazioa_smtp_user',
 						'type'         => 'text',
-						'instructions' => self::admin_label( 'Direccion de correo completa del buzon.', 'Postontziaren helbide osoa.' ),
+						'instructions' => self::admin_label( 'Dejad vacio para relay por IP (smtp-relay.gmail.com). Solo hace falta con autenticacion SMTP.', 'Utzi hutsik IP bidezko relayrako (smtp-relay.gmail.com). SMTP autentifikazioarekin bakarrik behar da.' ),
 					),
 					array(
 						'key'          => 'field_komunikazioa_smtp_password',
 						'label'        => self::admin_label( 'Contrasena SMTP', 'SMTP pasahitza' ),
 						'name'         => 'komunikazioa_smtp_password',
 						'type'         => 'password',
-						'instructions' => self::admin_label( 'Dejad este campo vacio al guardar si no quereis cambiar la contrasena.', 'Utzi hutsik gordetzean pasahitza aldatu nahi ez baduzue.' ),
+						'instructions' => self::admin_label( 'Dejad vacio para no cambiarla. Escribid CLEAR para borrarla (necesario al pasar a relay por IP).', 'Utzi hutsik ez aldatzeko. Idatzi CLEAR ezabatzeko (IP relayra pasatzean beharrezkoa).' ),
 					),
 					array(
 						'key'      => 'field_komunikazioa_smtp_status',
@@ -629,13 +630,23 @@ class Plugin {
 
 	/**
 	 * Keep the stored SMTP password when the field is left blank on save.
+	 * Submit CLEAR (case-insensitive) to wipe the stored password (relay by IP).
 	 *
 	 * @param mixed  $value   Submitted value.
 	 * @param string $post_id Options post ID.
 	 * @return mixed
 	 */
 	public static function preserve_smtp_password( $value, $post_id ) {
-		if ( self::SETTINGS_POST_ID !== (string) $post_id || '' !== (string) $value ) {
+		if ( self::SETTINGS_POST_ID !== (string) $post_id ) {
+			return $value;
+		}
+
+		$raw = is_string( $value ) ? trim( $value ) : $value;
+		if ( is_string( $raw ) && 'CLEAR' === strtoupper( $raw ) ) {
+			return '';
+		}
+
+		if ( '' !== (string) $raw ) {
 			return $value;
 		}
 
@@ -671,17 +682,18 @@ class Plugin {
 			$phpmailer->SMTPSecure = $encryption;
 		}
 
-		$username = (string) self::get_smtp_config( 'USER' );
+		$username = trim( (string) self::get_smtp_config( 'USER' ) );
 		$password = (string) self::get_smtp_config( 'PASSWORD' );
+		$use_auth = '' !== $username && '' !== $password;
 
-		$phpmailer->SMTPAuth = '' !== $username || '' !== $password;
-
-		if ( '' !== $username ) {
+		// Workspace SMTP relay by IP must not send leftover Gmail credentials.
+		$phpmailer->SMTPAuth = $use_auth;
+		if ( $use_auth ) {
 			$phpmailer->Username = $username;
-		}
-
-		if ( '' !== $password ) {
 			$phpmailer->Password = $password;
+		} else {
+			$phpmailer->Username = '';
+			$phpmailer->Password = '';
 		}
 
 		$from_email = self::get_mail_from_email();
