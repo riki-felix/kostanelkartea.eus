@@ -10,6 +10,11 @@ get_header();
 while ( have_posts() ) : the_post();
 
 $talk_lang = get_field( 'talk_lang' );
+// ACF select may return a string (value/label) or both as an array.
+if ( is_array( $talk_lang ) ) {
+	$talk_lang = isset( $talk_lang['label'] ) ? $talk_lang['label'] : ( $talk_lang['value'] ?? '' );
+}
+$talk_lang = is_string( $talk_lang ) ? $talk_lang : '';
 $speakers  = get_field( 'talk_speakers' );
 $venues    = get_the_terms( get_the_ID(), 'venue' );
 $areas     = kostan_get_post_areas( get_the_ID() );
