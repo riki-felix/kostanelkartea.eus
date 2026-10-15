@@ -12,7 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'KOSTAN_COURSE_REWRITE_VERSION', '2' );
+define( 'KOSTAN_COURSE_DATA_VERSION', '2' );
+define( 'KOSTAN_COURSE_REWRITE_VERSION', '3' );
 define( 'KOSTAN_COURSE_SLUG_PATTERN', '[0-9]{2}-[0-9]{2}' );
 
 /**
@@ -635,27 +636,69 @@ function kostan_register_course_taxonomy() {
 add_action( 'init', 'kostan_register_course_taxonomy', 11 );
 
 /**
+ * Query var used by the talks CPT rewrite.
+ *
+ * @return string
+ */
+function kostan_talks_query_var() {
+	$pto = get_post_type_object( 'talks' );
+	if ( $pto && is_string( $pto->query_var ) && '' !== $pto->query_var ) {
+		return $pto->query_var;
+	}
+
+	return 'talks';
+}
+
+/**
+ * URL bases for course listings and archived talk permalinks.
+ *
+ * Includes the CPT slug in every language and the Ponentziak page slug.
+ *
+ * @return string[]
+ */
+function kostan_get_course_url_bases() {
+	$slugs = kostan_get_talks_rewrite_slugs();
+	$ids   = array();
+
+	$page_id = kostan_get_ponentziak_page_id();
+	if ( $page_id ) {
+		$ids[] = $page_id;
+		$trid  = apply_filters( 'wpml_element_trid', null, $page_id, 'post_page' );
+		$translations = $trid ? apply_filters( 'wpml_get_element_translations', null, $trid, 'post_page' ) : null;
+		if ( is_array( $translations ) ) {
+			foreach ( $translations as $translation ) {
+				if ( is_object( $translation ) && ! empty( $translation->element_id ) ) {
+					$ids[] = (int) $translation->element_id;
+				}
+			}
+		}
+	}
+
+	foreach ( array_unique( $ids ) as $id ) {
+		$page = get_post( $id );
+		if ( $page instanceof WP_Post && '' !== $page->post_name ) {
+			$slugs[] = $page->post_name;
+		}
+	}
+
+	return array_values( array_unique( array_filter( $slugs ) ) );
+}
+
+/**
  * Custom rewrite rules under the talks CPT slug.
  */
 function kostan_register_course_rewrites() {
 	add_rewrite_tag( '%kostan_course%', '(' . KOSTAN_COURSE_SLUG_PATTERN . ')' );
 	add_rewrite_tag( '%curso%', '(' . KOSTAN_COURSE_SLUG_PATTERN . ')' );
 
-	$slugs = kostan_get_talks_rewrite_slugs();
-	$page_id = kostan_get_ponentziak_page_id();
-	if ( $page_id ) {
-		$page = get_post( $page_id );
-		if ( $page && $page->post_name ) {
-			$slugs[] = $page->post_name;
-		}
-	}
+	$talk_var = kostan_talks_query_var();
 
-	foreach ( array_unique( array_filter( $slugs ) ) as $base ) {
+	foreach ( kostan_get_course_url_bases() as $base ) {
 		$quoted = preg_quote( $base, '/' );
 
 		add_rewrite_rule(
 			$quoted . '/(' . KOSTAN_COURSE_SLUG_PATTERN . ')/([^/]+)/?$',
-			'index.php?post_type=talks&name=$matches[2]&kostan_course=$matches[1]',
+			'index.php?' . $talk_var . '=$matches[2]&kostan_course=$matches[1]',
 			'top'
 		);
 
@@ -682,6 +725,228 @@ function kostan_course_query_vars( $vars ) {
 add_filter( 'query_vars', 'kostan_course_query_vars' );
 
 /**
+ * Path of the current front request, without the home directory.
+ *
+ * @return string
+ */
+function kostan_current_request_path() {
+	$uri  = isset( $_SERVER['REQUEST_URI'] ) ? (string) wp_unslash( $_SERVER['REQUEST_URI'] ) : '';
+	$path = (string) wp_parse_url( $uri, PHP_URL_PATH );
+	$path = trim( $path, '/' );
+
+	$home = trim( (string) wp_parse_url( home_url( '/' ), PHP_URL_PATH ), '/' );
+	if ( '' !== $home && ( $path === $home || str_starts_with( $path, $home . '/' ) ) ) {
+		$path = trim( substr( $path, strlen( $home ) ), '/' );
+	}
+
+	return $path;
+}
+
+/**
+ * Course and talk slug from an archived detail path.
+ *
+ * Matches /{base}/{yy-yy}/{slug}/ and a repeated course segment left by an
+ * older permalink. Listings (/base/yy-yy/) are not matches.
+ *
+ * @param string $path Request path without the home directory.
+ * @return array{course:string,slug:string}|null
+ */
+function kostan_archived_talk_from_path( $path ) {
+	$path  = trim( (string) $path, '/' );
+	$bases = kostan_get_course_url_bases();
+	if ( '' === $path || empty( $bases ) ) {
+		return null;
+	}
+
+	$langs = array();
+	$active = apply_filters( 'wpml_active_languages', null, array( 'skip_missing' => 0 ) );
+	if ( is_array( $active ) ) {
+		$langs = array_keys( $active );
+	}
+	if ( $langs ) {
+		$lang_re = implode( '|', array_map( static function ( $code ) {
+			return preg_quote( (string) $code, '#' );
+		}, $langs ) );
+		$path = preg_replace( '#^(?:' . $lang_re . ')/#', '', $path );
+	}
+
+	$base_re = implode( '|', array_map( static function ( $base ) {
+		return preg_quote( $base, '#' );
+	}, $bases ) );
+
+	$matched = preg_match(
+		'#^(?:' . $base_re . ')/((?:' . KOSTAN_COURSE_SLUG_PATTERN . '/)+)([^/]+)/?$#',
+		$path,
+		$matches
+	);
+	if ( ! $matched ) {
+		return null;
+	}
+
+	$slug = $matches[2];
+	if ( in_array( $slug, array( 'feed', 'embed', 'trackback', 'attachment' ), true ) ) {
+		return null;
+	}
+
+	$courses = array_values( array_filter( explode( '/', $matches[1] ) ) );
+	$course  = end( $courses );
+	if ( ! is_string( $course ) || ! kostan_is_course_slug( $course ) ) {
+		return null;
+	}
+
+	return array(
+		'course' => $course,
+		'slug'   => $slug,
+	);
+}
+
+/**
+ * Archived talk parsed from the current request, cached for this request.
+ *
+ * @return array{course:string,slug:string}|null
+ */
+function kostan_get_archived_talk_request() {
+	static $resolved = false;
+	static $talk     = null;
+
+	if ( $resolved ) {
+		return $talk;
+	}
+
+	$resolved = true;
+	$uri      = isset( $_SERVER['REQUEST_URI'] ) ? (string) wp_unslash( $_SERVER['REQUEST_URI'] ) : '';
+	$raw      = trim( (string) wp_parse_url( $uri, PHP_URL_PATH ), '/' );
+
+	// Listings end at the course slug, so they never reach the page lookup.
+	if ( '' === $raw || ! preg_match( '#(?:^|/)' . KOSTAN_COURSE_SLUG_PATTERN . '/#', $raw ) ) {
+		return null;
+	}
+
+	$talk = kostan_archived_talk_from_path( kostan_current_request_path() );
+	return $talk;
+}
+
+/**
+ * Point an archived detail URL at its talk.
+ *
+ * @param array $query_vars Parsed request vars.
+ * @return array
+ */
+function kostan_archived_talk_request( $query_vars ) {
+	static $running = false;
+
+	if ( $running || is_admin() || wp_doing_ajax() ) {
+		return $query_vars;
+	}
+
+	$running = true;
+	$talk    = kostan_get_archived_talk_request();
+	$running = false;
+
+	if ( ! $talk ) {
+		return $query_vars;
+	}
+
+	$talk_var = kostan_talks_query_var();
+
+	$query_vars['post_type']     = 'talks';
+	$query_vars[ $talk_var ]     = $talk['slug'];
+	$query_vars['name']          = $talk['slug'];
+	$query_vars['kostan_course'] = $talk['course'];
+
+	unset(
+		$query_vars['pagename'],
+		$query_vars['page_id'],
+		$query_vars['attachment'],
+		$query_vars['attachment_id'],
+		$query_vars['page'],
+		$query_vars['error'],
+		$query_vars['curso'],
+		$query_vars['course']
+	);
+
+	return $query_vars;
+}
+add_filter( 'request', 'kostan_archived_talk_request', 20 );
+
+/**
+ * Keep the archived detail on the talk after other query parsers run.
+ *
+ * @param WP_Query $query Query.
+ */
+function kostan_archived_talk_parse_query( $query ) {
+	static $running = false;
+
+	if ( $running || is_admin() || ! $query instanceof WP_Query || ! $query->is_main_query() ) {
+		return;
+	}
+
+	$running = true;
+	$talk    = kostan_get_archived_talk_request();
+	$running = false;
+
+	if ( ! $talk || empty( $talk['slug'] ) ) {
+		return;
+	}
+
+	$talk_var = kostan_talks_query_var();
+	$existing = (int) $query->get( 'p' );
+	$is_talk  = 'talks' === $query->get( 'post_type' ) || $query->get( $talk_var ) === $talk['slug'];
+
+	// A resolved talk query (including the old course codes that already 301)
+	// must keep the query vars it already has.
+	if ( $is_talk && ! $query->is_page && ! $query->get( 'pagename' ) && (
+		$query->get( 'name' ) === $talk['slug']
+		|| ( $existing > 0 && 'talks' === get_post_type( $existing ) )
+	) ) {
+		$query->set( 'page', '' );
+		$query->set( 'error', '' );
+		$query->set( 'course', '' );
+		$query->is_404 = false;
+		return;
+	}
+
+	$running = true;
+	$post    = get_page_by_path( $talk['slug'], OBJECT, 'talks' );
+	$running = false;
+
+	if ( ! $post instanceof WP_Post || 'talks' !== $post->post_type ) {
+		return;
+	}
+
+	if ( 'publish' !== $post->post_status && ! current_user_can( 'read_post', $post->ID ) ) {
+		return;
+	}
+
+	$query->set( 'p', $post->ID );
+	$query->set( 'post_type', 'talks' );
+	$query->set( 'name', $post->post_name );
+	$query->set( $talk_var, $post->post_name );
+	$query->set( 'kostan_course', $talk['course'] );
+	$query->set( 'pagename', '' );
+	$query->set( 'page_id', 0 );
+	$query->set( 'page', '' );
+	$query->set( 'attachment', '' );
+	$query->set( 'attachment_id', 0 );
+	$query->set( 'curso', '' );
+	$query->set( 'course', '' );
+	$query->set( 'error', '' );
+
+	$query->is_single            = true;
+	$query->is_singular          = true;
+	$query->is_page              = false;
+	$query->is_attachment        = false;
+	$query->is_archive           = false;
+	$query->is_post_type_archive = false;
+	$query->is_tax               = false;
+	$query->is_home              = false;
+	$query->is_404               = false;
+	$query->queried_object       = $post;
+	$query->queried_object_id    = (int) $post->ID;
+}
+add_action( 'parse_query', 'kostan_archived_talk_parse_query', 100 );
+
+/**
  * Insert the course segment into archived talk permalinks.
  *
  * @param string  $post_link Permalink.
@@ -698,14 +963,32 @@ function kostan_talk_post_type_link( $post_link, $post ) {
 	}
 
 	$course = kostan_get_talk_course( $post->ID );
-	if ( ! $course || '' === $post->post_name ) {
+	if ( ! $course || '' === $post->post_name || empty( $course['slug'] ) ) {
 		return $post_link;
 	}
 
+	$course_q = preg_quote( $course['slug'], '#' );
+	$name_q   = preg_quote( $post->post_name, '#' );
+	$suffix   = '/' . $course['slug'] . '/' . $post->post_name . '/';
+	$count    = 0;
+
+	// Collapse a course segment WPML already inserted, including repeats.
+	$collapsed = preg_replace(
+		'#(?:/' . $course_q . ')+/' . $name_q . '/?$#',
+		$suffix,
+		$post_link,
+		1,
+		$count
+	);
+	if ( $count > 0 && is_string( $collapsed ) ) {
+		return $collapsed;
+	}
+
 	$updated = preg_replace(
-		'#/' . preg_quote( $post->post_name, '#' ) . '/?$#',
-		'/' . $course['slug'] . '/' . $post->post_name . '/',
-		$post_link
+		'#/' . $name_q . '/?$#',
+		$suffix,
+		$post_link,
+		1
 	);
 
 	return is_string( $updated ) ? $updated : $post_link;
@@ -811,7 +1094,7 @@ function kostan_curso_path_to_ponentziak( $query ) {
 		return;
 	}
 
-	if ( $query->get( 'kostan_course' ) || $query->get( 'name' ) ) {
+	if ( $query->get( 'kostan_course' ) || $query->get( 'p' ) || $query->get( kostan_talks_query_var() ) ) {
 		return;
 	}
 
@@ -860,7 +1143,7 @@ add_action( 'save_post_talks', 'kostan_assign_talk_course_on_save', 20 );
  * One-shot assignment for existing talks + rewrite flush.
  */
 function kostan_maybe_migrate_talk_courses() {
-	if ( get_option( 'kostan_talk_courses_migrated' ) === KOSTAN_COURSE_REWRITE_VERSION ) {
+	if ( get_option( 'kostan_talk_courses_migrated' ) === KOSTAN_COURSE_DATA_VERSION ) {
 		kostan_maybe_flush_course_rewrites();
 		return;
 	}
@@ -885,7 +1168,7 @@ function kostan_maybe_migrate_talk_courses() {
 	}
 
 	flush_rewrite_rules( false );
-	update_option( 'kostan_talk_courses_migrated', KOSTAN_COURSE_REWRITE_VERSION );
+	update_option( 'kostan_talk_courses_migrated', KOSTAN_COURSE_DATA_VERSION );
 	update_option( 'kostan_course_rewrite_version', KOSTAN_COURSE_REWRITE_VERSION );
 }
 add_action( 'init', 'kostan_maybe_migrate_talk_courses', 30 );
